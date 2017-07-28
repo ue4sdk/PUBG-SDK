@@ -1,0 +1,130 @@
+#pragma once
+
+// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+
+#ifdef _MSC_VER
+	#pragma pack(push, 0x8)
+#endif
+
+namespace Classes
+{
+//---------------------------------------------------------------------------
+//Enums
+//---------------------------------------------------------------------------
+
+// Enum Slate.ETextFlowDirection
+enum class ETextFlowDirection
+{
+	ETextFlowDirection__Auto       = 0,
+	ETextFlowDirection__LeftToRight = 1,
+	ETextFlowDirection__RightToLeft = 2,
+	ETextFlowDirection__ETextFlowDirection_MAX = 3
+};
+
+
+// Enum Slate.ETextWrappingPolicy
+enum class ETextWrappingPolicy
+{
+	ETextWrappingPolicy__DefaultWrapping = 0,
+	ETextWrappingPolicy__AllowPerCharacterWrapping = 1,
+	ETextWrappingPolicy__ETextWrappingPolicy_MAX = 2
+};
+
+
+// Enum Slate.ETextJustify
+enum class ETextJustify
+{
+	ETextJustify__Left             = 0,
+	ETextJustify__Center           = 1,
+	ETextJustify__Right            = 2,
+	ETextJustify__ETextJustify_MAX = 3
+};
+
+
+// Enum Slate.ETableViewMode
+enum class ETableViewMode
+{
+	ETableViewMode__List           = 0,
+	ETableViewMode__Tile           = 1,
+	ETableViewMode__Tree           = 2,
+	ETableViewMode__ETableViewMode_MAX = 3
+};
+
+
+// Enum Slate.ESelectionMode
+enum class ESelectionMode
+{
+	ESelectionMode__None           = 0,
+	ESelectionMode__Single         = 1,
+	ESelectionMode__SingleToggle   = 2,
+	ESelectionMode__Multi          = 3,
+	ESelectionMode__ESelectionMode_MAX = 4
+};
+
+
+// Enum Slate.EStretch
+enum class EStretch
+{
+	EStretch__None                 = 0,
+	EStretch__Fill                 = 1,
+	EStretch__ScaleToFit           = 2,
+	EStretch__ScaleToFitX          = 3,
+	EStretch__ScaleToFitY          = 4,
+	EStretch__ScaleToFill          = 5,
+	EStretch__ScaleBySafeZone      = 6,
+	EStretch__UserSpecified        = 7,
+	EStretch__EStretch_MAX         = 8
+};
+
+
+// Enum Slate.EStretchDirection
+enum class EStretchDirection
+{
+	EStretchDirection__Both        = 0,
+	EStretchDirection__DownOnly    = 1,
+	EStretchDirection__UpOnly      = 2,
+	EStretchDirection__EStretchDirection_MAX = 3
+};
+
+
+// Enum Slate.EProgressBarFillType
+enum class EProgressBarFillType
+{
+	EProgressBarFillType__LeftToRight = 0,
+	EProgressBarFillType__RightToLeft = 1,
+	EProgressBarFillType__FillFromCenter = 2,
+	EProgressBarFillType__TopToBottom = 3,
+	EProgressBarFillType__BottomToTop = 4,
+	EProgressBarFillType__EProgressBarFillType_MAX = 5
+};
+
+
+
+//---------------------------------------------------------------------------
+//Script Structs
+//---------------------------------------------------------------------------
+
+// ScriptStruct Slate.InputChord
+// 0x0020
+struct FInputChord
+{
+	struct FKey                                        Key;                                                      // 0x0000(0x0018)
+	unsigned char                                      bShift : 1;                                               // 0x0018(0x0001)
+	unsigned char                                      bCtrl : 1;                                                // 0x0018(0x0001)
+	unsigned char                                      bAlt : 1;                                                 // 0x0018(0x0001)
+	unsigned char                                      bCmd : 1;                                                 // 0x0018(0x0001)
+};
+
+// ScriptStruct Slate.Anchors
+// 0x0010
+struct FAnchors
+{
+	class Vector2D                                     Minimum;                                                  // 0x0000(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector2D                                     Maximum;                                                  // 0x0008(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+}
+
+#ifdef _MSC_VER
+	#pragma pack(pop)
+#endif
