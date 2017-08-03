@@ -1,4 +1,4 @@
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.24) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,23 +11,6 @@ namespace Classes
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
-
-// Function GeneralSettingWidget.GeneralSettingWidget_C.InitializeColorblindComboBox
-// (FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
-
-void UGeneralSettingWidget_C::InitializeColorblindComboBox()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function GeneralSettingWidget.GeneralSettingWidget_C.InitializeColorblindComboBox");
-
-	UGeneralSettingWidget_C_InitializeColorblindComboBox_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
 
 // Function GeneralSettingWidget.GeneralSettingWidget_C.ApplyMiniMapType
 // (FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
@@ -47,7 +30,7 @@ void UGeneralSettingWidget_C::ApplyMiniMapType()
 
 
 // Function GeneralSettingWidget.GeneralSettingWidget_C.SettingDefault
-// (FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
 void UGeneralSettingWidget_C::SettingDefault()
 {
@@ -64,11 +47,11 @@ void UGeneralSettingWidget_C::SettingDefault()
 
 
 // Function GeneralSettingWidget.GeneralSettingWidget_C.IsChanged
-// (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure, FUNC_Const)
+// (FUNC_Event, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// bool                           bChanged                       (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-void UGeneralSettingWidget_C::IsChanged(bool* bChanged)
+bool UGeneralSettingWidget_C::IsChanged()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GeneralSettingWidget.GeneralSettingWidget_C.IsChanged");
 
@@ -80,8 +63,7 @@ void UGeneralSettingWidget_C::IsChanged(bool* bChanged)
 
 	fn->FunctionFlags = flags;
 
-	if (bChanged != nullptr)
-		*bChanged = params.bChanged;
+	return params.ReturnValue;
 }
 
 
@@ -163,7 +145,7 @@ void UGeneralSettingWidget_C::Construct()
 
 
 // Function GeneralSettingWidget.GeneralSettingWidget_C.OnApply
-// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// (FUNC_Event, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
 void UGeneralSettingWidget_C::OnApply()
 {
@@ -180,7 +162,7 @@ void UGeneralSettingWidget_C::OnApply()
 
 
 // Function GeneralSettingWidget.GeneralSettingWidget_C.OnDefault
-// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// (FUNC_Event, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
 void UGeneralSettingWidget_C::OnDefault()
 {
@@ -197,7 +179,7 @@ void UGeneralSettingWidget_C::OnDefault()
 
 
 // Function GeneralSettingWidget.GeneralSettingWidget_C.OnReset
-// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// (FUNC_Event, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
 void UGeneralSettingWidget_C::OnReset()
 {

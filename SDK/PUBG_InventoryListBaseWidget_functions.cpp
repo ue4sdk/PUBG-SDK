@@ -1,4 +1,4 @@
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.24) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -423,6 +423,48 @@ bool UInventoryListBaseWidget_C::Up()
 	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.Up");
 
 	UInventoryListBaseWidget_C_Up_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function InventoryListBaseWidget.InventoryListBaseWidget_C.GetScrollAccelation
+// (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+float UInventoryListBaseWidget_C::GetScrollAccelation()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.GetScrollAccelation");
+
+	UInventoryListBaseWidget_C_GetScrollAccelation_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function InventoryListBaseWidget.InventoryListBaseWidget_C.GetMaxScroll
+// (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+float UInventoryListBaseWidget_C::GetMaxScroll()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.GetMaxScroll");
+
+	UInventoryListBaseWidget_C_GetMaxScroll_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -896,6 +938,111 @@ void UInventoryListBaseWidget_C::OnRefreshFocus()
 	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.OnRefreshFocus");
 
 	UInventoryListBaseWidget_C_OnRefreshFocus_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function InventoryListBaseWidget.InventoryListBaseWidget_C.OnAddScroll
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// Parameters:
+// float                          Scale                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UInventoryListBaseWidget_C::OnAddScroll(float Scale)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.OnAddScroll");
+
+	UInventoryListBaseWidget_C_OnAddScroll_Params params;
+	params.Scale = Scale;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function InventoryListBaseWidget.InventoryListBaseWidget_C.OnSlotMoveUpPressed
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UInventoryListBaseWidget_C::OnSlotMoveUpPressed()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.OnSlotMoveUpPressed");
+
+	UInventoryListBaseWidget_C_OnSlotMoveUpPressed_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function InventoryListBaseWidget.InventoryListBaseWidget_C.OnSlotMoveUpReleased
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UInventoryListBaseWidget_C::OnSlotMoveUpReleased()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.OnSlotMoveUpReleased");
+
+	UInventoryListBaseWidget_C_OnSlotMoveUpReleased_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function InventoryListBaseWidget.InventoryListBaseWidget_C.OnSlotMoveDownPressed
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UInventoryListBaseWidget_C::OnSlotMoveDownPressed()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.OnSlotMoveDownPressed");
+
+	UInventoryListBaseWidget_C_OnSlotMoveDownPressed_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function InventoryListBaseWidget.InventoryListBaseWidget_C.OnSlotMoveDownReleased
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UInventoryListBaseWidget_C::OnSlotMoveDownReleased()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.OnSlotMoveDownReleased");
+
+	UInventoryListBaseWidget_C_OnSlotMoveDownReleased_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function InventoryListBaseWidget.InventoryListBaseWidget_C.OnSlotScrollMoving
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UInventoryListBaseWidget_C::OnSlotScrollMoving()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.OnSlotScrollMoving");
+
+	UInventoryListBaseWidget_C_OnSlotScrollMoving_Params params;
 
 	auto flags = fn->FunctionFlags;
 

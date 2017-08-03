@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.24) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -368,6 +368,26 @@ struct UEquipmentWidget_C_BndEvt__Leg_K2Node_ComponentBoundEvent_54_RefreshFocus
 
 // Function EquipmentWidget.EquipmentWidget_C.BndEvt__Feet_K2Node_ComponentBoundEvent_65_RefreshFocus__DelegateSignature
 struct UEquipmentWidget_C_BndEvt__Feet_K2Node_ComponentBoundEvent_65_RefreshFocus__DelegateSignature_Params
+{
+};
+
+// Function EquipmentWidget.EquipmentWidget_C.OnSlotMoveUp
+struct UEquipmentWidget_C_OnSlotMoveUp_Params
+{
+};
+
+// Function EquipmentWidget.EquipmentWidget_C.OnSlotMoveDown
+struct UEquipmentWidget_C_OnSlotMoveDown_Params
+{
+};
+
+// Function EquipmentWidget.EquipmentWidget_C.SlotMoveLeft
+struct UEquipmentWidget_C_SlotMoveLeft_Params
+{
+};
+
+// Function EquipmentWidget.EquipmentWidget_C.OnSlotMoveRight
+struct UEquipmentWidget_C_OnSlotMoveRight_Params
 {
 };
 

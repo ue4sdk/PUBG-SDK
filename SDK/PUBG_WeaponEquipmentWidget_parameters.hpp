@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.24) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -135,6 +135,27 @@ struct UWeaponEquipmentWidget_C_Up_Params
 	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
+// Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.SelfUpAttachmentIndexUp
+struct UWeaponEquipmentWidget_C_SelfUpAttachmentIndexUp_Params
+{
+};
+
+// Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.PutAttachment
+struct UWeaponEquipmentWidget_C_PutAttachment_Params
+{
+};
+
+// Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.StopSelftattachmentPut
+struct UWeaponEquipmentWidget_C_StopSelftattachmentPut_Params
+{
+};
+
+// Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.StartSelfAttachmentPut
+struct UWeaponEquipmentWidget_C_StartSelfAttachmentPut_Params
+{
+	bool                                               bResult;                                                  // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
 // Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.OnChildSlotRefreshFocus
 struct UWeaponEquipmentWidget_C_OnChildSlotRefreshFocus_Params
 {
@@ -258,6 +279,16 @@ struct UWeaponEquipmentWidget_C_BndEvt__Weapon_04_K2Node_ComponentBoundEvent_106
 
 // Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.BndEvt__Weapon_05_K2Node_ComponentBoundEvent_123_RefreshFocus__DelegateSignature
 struct UWeaponEquipmentWidget_C_BndEvt__Weapon_05_K2Node_ComponentBoundEvent_123_RefreshFocus__DelegateSignature_Params
+{
+};
+
+// Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.OnWidgetMoveUp
+struct UWeaponEquipmentWidget_C_OnWidgetMoveUp_Params
+{
+};
+
+// Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.OnWidgetMoveDown
+struct UWeaponEquipmentWidget_C_OnWidgetMoveDown_Params
 {
 };
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.24) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,11 @@ namespace Classes
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function AlivePlayerInfoWidget.AlivePlayerInfoWidget_C.GetGameStateBP
+struct UAlivePlayerInfoWidget_C_GetGameStateBP_Params
+{
+};
 
 // Function AlivePlayerInfoWidget.AlivePlayerInfoWidget_C.Get_SurvivorCount_ColorAndOpacity_1
 struct UAlivePlayerInfoWidget_C_Get_SurvivorCount_ColorAndOpacity_1_Params

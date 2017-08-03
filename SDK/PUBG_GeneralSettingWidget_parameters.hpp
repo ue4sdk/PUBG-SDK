@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.24) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,11 +13,6 @@ namespace Classes
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
-
-// Function GeneralSettingWidget.GeneralSettingWidget_C.InitializeColorblindComboBox
-struct UGeneralSettingWidget_C_InitializeColorblindComboBox_Params
-{
-};
 
 // Function GeneralSettingWidget.GeneralSettingWidget_C.ApplyMiniMapType
 struct UGeneralSettingWidget_C_ApplyMiniMapType_Params
@@ -32,7 +27,7 @@ struct UGeneralSettingWidget_C_SettingDefault_Params
 // Function GeneralSettingWidget.GeneralSettingWidget_C.IsChanged
 struct UGeneralSettingWidget_C_IsChanged_Params
 {
-	bool                                               bChanged;                                                 // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
 // Function GeneralSettingWidget.GeneralSettingWidget_C.GetResolutionEnabled

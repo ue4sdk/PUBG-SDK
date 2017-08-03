@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.24) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -45,6 +45,7 @@ public:
 	void OnHiddenWidget();
 	void CustomEvent_1();
 	void CustomEvent_2();
+	void Tick(struct FGeometry* MyGeometry, float* InDeltaTime);
 	void ExecuteUbergraph_InGameMenuWidget(int EntryPoint);
 	void TestDispatcher__DelegateSignature(bool NewParam);
 };

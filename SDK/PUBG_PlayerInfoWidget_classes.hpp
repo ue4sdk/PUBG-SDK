@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.24) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass PlayerInfoWidget.PlayerInfoWidget_C
-// 0x00AA (0x02EA - 0x0240)
+// 0x00BA (0x02FA - 0x0240)
 class UPlayerInfoWidget_C : public UUserWidget
 {
 public:
@@ -35,12 +35,14 @@ public:
 	class UMaterialInstanceDynamic*                    IconMaterial;                                             // 0x02B8(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	unsigned char                                      bShow : 1;                                                // 0x02C0(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	unsigned char                                      bCachedSelect : 1;                                        // 0x02C1(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x6];                                       // 0x02C2(0x0006) MISSED OFFSET
 	struct FText                                       OldPlayerName;                                            // 0x02C8(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
 	float                                              KickButtonShowTimeCheck;                                  // 0x02E0(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              KickButtonDelayTime;                                      // 0x02E4(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	unsigned char                                      bShowMouseOn : 1;                                         // 0x02E8(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	unsigned char                                      bIsShowKickButton : 1;                                    // 0x02E9(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	class ATslPlayerController*                        PlayerController;                                         // 0x02F0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnTemplate, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      IsLeftCtrlDown : 1;                                       // 0x02F8(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      IsBlink : 1;                                              // 0x02F9(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -49,6 +51,11 @@ public:
 	}
 
 
+	void SetCameraMode_Free();
+	void SetCameraMode_Follow();
+	void SetCameraMode_Spectator();
+	struct FEventReply OnKeyDown(struct FGeometry* MyGeometry, struct FKeyEvent* InKeyEvent);
+	struct FEventReply OnMouseButtonDown_1(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
 	void On_KickButtonLayer_Prepass_1(class UWidget* BoundWidget);
 	void OnPrepass_1(class UWidget* BoundWidget);
 	void On_PlayerName_Prepass_1(class UWidget* BoundWidget);
@@ -58,9 +65,9 @@ public:
 	void On_BoostGauge_Prepass_1(class UWidget* BoundWidget);
 	void On_InfoLayer_Prepass_1(class UWidget* BoundWidget);
 	void UpdateHealthPrepass(class UWidget* BoundWidget);
-	void Construct();
-	void Tick(struct FGeometry* MyGeometry, float* InDeltaTime);
 	void BndEvt__Button_0_K2Node_ComponentBoundEvent_20_OnButtonClickedEvent__DelegateSignature();
+	void Tick(struct FGeometry* MyGeometry, float* InDeltaTime);
+	void Construct();
 	void BndEvt__Button_1_K2Node_ComponentBoundEvent_32_OnButtonClickedEvent__DelegateSignature();
 	void OnMouseEnter(struct FGeometry* MyGeometry, struct FPointerEvent* MouseEvent);
 	void OnMouseLeave(struct FPointerEvent* MouseEvent);

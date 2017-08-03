@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.24) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,6 +25,10 @@ public:
 	}
 
 
+	void STATIC_GetSelfPutAttachment(class UUserWidget* Widget, class UObject* __WorldContext, class UAttachableItem** GamepadadSelectedAttachableItem);
+	void STATIC_CancelSelfAttachmentPutMode(class UUserWidget* Widget, class UObject* __WorldContext);
+	void STATIC_IsSelfAttachmentPutMode(class UUserWidget* Widget, class UObject* __WorldContext, bool* bResult);
+	void STATIC_GetInventoryWidget(class UUserWidget* Widget, class UObject* __WorldContext, class UInventoryWidget_C** InventoryWidget);
 	void STATIC_InventoryFocusingColor(class UObject* __WorldContext, struct FLinearColor* NewParam);
 	void STATIC_IsXBoxOnePlatform(class UObject* __WorldContext, bool* NewParam);
 	void STATIC_GetCharacterLook(class UUserWidget* Widget, class UObject* __WorldContext, class Vector3D* Look);

@@ -1,4 +1,4 @@
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.24) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,46 @@ namespace Classes
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function StackCountHandlingPopupWidget.StackCountHandlingPopupWidget_C.AddStackCount
+// (FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// Parameters:
+// int                            AddCount                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UStackCountHandlingPopupWidget_C::AddStackCount(int AddCount)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function StackCountHandlingPopupWidget.StackCountHandlingPopupWidget_C.AddStackCount");
+
+	UStackCountHandlingPopupWidget_C_AddStackCount_Params params;
+	params.AddCount = AddCount;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function StackCountHandlingPopupWidget.StackCountHandlingPopupWidget_C.OnPrepass_1
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// Parameters:
+// class UWidget*                 BoundWidget                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UStackCountHandlingPopupWidget_C::OnPrepass_1(class UWidget* BoundWidget)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function StackCountHandlingPopupWidget.StackCountHandlingPopupWidget_C.OnPrepass_1");
+
+	UStackCountHandlingPopupWidget_C_OnPrepass_1_Params params;
+	params.BoundWidget = BoundWidget;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function StackCountHandlingPopupWidget.StackCountHandlingPopupWidget_C.FocusOnInputAmountText
 // (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
@@ -440,6 +480,91 @@ void UStackCountHandlingPopupWidget_C::Tick(struct FGeometry* MyGeometry, float*
 	UStackCountHandlingPopupWidget_C_Tick_Params params;
 	params.MyGeometry = MyGeometry;
 	params.InDeltaTime = InDeltaTime;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function StackCountHandlingPopupWidget.StackCountHandlingPopupWidget_C.OnWidgetInputB
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UStackCountHandlingPopupWidget_C::OnWidgetInputB()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function StackCountHandlingPopupWidget.StackCountHandlingPopupWidget_C.OnWidgetInputB");
+
+	UStackCountHandlingPopupWidget_C_OnWidgetInputB_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function StackCountHandlingPopupWidget.StackCountHandlingPopupWidget_C.OnWidgetMoveLeft
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UStackCountHandlingPopupWidget_C::OnWidgetMoveLeft()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function StackCountHandlingPopupWidget.StackCountHandlingPopupWidget_C.OnWidgetMoveLeft");
+
+	UStackCountHandlingPopupWidget_C_OnWidgetMoveLeft_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function StackCountHandlingPopupWidget.StackCountHandlingPopupWidget_C.CustomEvent_3
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UStackCountHandlingPopupWidget_C::CustomEvent_3()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function StackCountHandlingPopupWidget.StackCountHandlingPopupWidget_C.CustomEvent_3");
+
+	UStackCountHandlingPopupWidget_C_CustomEvent_3_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function StackCountHandlingPopupWidget.StackCountHandlingPopupWidget_C.CustomEvent_4
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UStackCountHandlingPopupWidget_C::CustomEvent_4()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function StackCountHandlingPopupWidget.StackCountHandlingPopupWidget_C.CustomEvent_4");
+
+	UStackCountHandlingPopupWidget_C_CustomEvent_4_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function StackCountHandlingPopupWidget.StackCountHandlingPopupWidget_C.CustomEvent_5
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UStackCountHandlingPopupWidget_C::CustomEvent_5()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function StackCountHandlingPopupWidget.StackCountHandlingPopupWidget_C.CustomEvent_5");
+
+	UStackCountHandlingPopupWidget_C_CustomEvent_5_Params params;
 
 	auto flags = fn->FunctionFlags;
 

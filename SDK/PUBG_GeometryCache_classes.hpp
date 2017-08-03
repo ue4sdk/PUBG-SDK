@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.24) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -48,11 +48,11 @@ public:
 
 
 // Class GeometryCache.GeometryCacheActor
-// 0x0008 (0x0398 - 0x0390)
+// 0x0008 (0x03A8 - 0x03A0)
 class AGeometryCacheActor : public AActor
 {
 public:
-	class UGeometryCacheComponent*                     GeometryCacheComponent;                                   // 0x0390(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
+	class UGeometryCacheComponent*                     GeometryCacheComponent;                                   // 0x03A0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -66,19 +66,18 @@ public:
 
 
 // Class GeometryCache.GeometryCacheComponent
-// 0x0080 (0x07F0 - 0x0770)
+// 0x0080 (0x0800 - 0x0780)
 class UGeometryCacheComponent : public UMeshComponent
 {
 public:
-	class UGeometryCache*                              GeometryCache;                                            // 0x0770(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      bRunning : 1;                                             // 0x0778(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      bLooping : 1;                                             // 0x0779(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x2];                                       // 0x077A(0x0002) MISSED OFFSET
-	float                                              StartTimeOffset;                                          // 0x077C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              PlaybackSpeed;                                            // 0x0780(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	int                                                NumTracks;                                                // 0x0784(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
-	float                                              ElapsedTime;                                              // 0x0788(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData01[0x64];                                      // 0x078C(0x0064) MISSED OFFSET
+	class UGeometryCache*                              GeometryCache;                                            // 0x0780(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      bRunning : 1;                                             // 0x0788(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      bLooping : 1;                                             // 0x0789(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              StartTimeOffset;                                          // 0x078C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              PlaybackSpeed;                                            // 0x0790(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                NumTracks;                                                // 0x0794(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
+	float                                              ElapsedTime;                                              // 0x0798(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x64];                                      // 0x079C(0x0064) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

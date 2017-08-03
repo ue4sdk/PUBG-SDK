@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.24) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,11 +13,11 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass TslLobbyGameMode.TSLLobbyGameMode_C
-// 0x0008 (0x0468 - 0x0460)
+// 0x0008 (0x0478 - 0x0470)
 class ATSLLobbyGameMode_C : public ATslEntryGameMode
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0460(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0470(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

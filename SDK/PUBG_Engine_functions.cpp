@@ -1,4 +1,4 @@
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.24) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -4221,6 +4221,27 @@ void USceneComponent::SetIsAttachmentReplicated(bool ShouldReplicate)
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.SceneComponent.SetIsAttachmentReplicated");
 
 	USceneComponent_SetIsAttachmentReplicated_Params params;
+	params.ShouldReplicate = ShouldReplicate;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.SceneComponent.SetIsAttachmentReferenceReplicated
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// bool                           ShouldReplicate                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void USceneComponent::SetIsAttachmentReferenceReplicated(bool ShouldReplicate)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.SceneComponent.SetIsAttachmentReferenceReplicated");
+
+	USceneComponent_SetIsAttachmentReferenceReplicated_Params params;
 	params.ShouldReplicate = ShouldReplicate;
 
 	auto flags = fn->FunctionFlags;
@@ -20657,6 +20678,98 @@ bool UHierarchicalInstancedStaticMeshComponent::RemoveInstances(TArray<int> Inst
 }
 
 
+// Function Engine.LevelScriptActor.WorldOriginLocationChanged
+// (FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
+// Parameters:
+// struct FIntVector              OldOriginLocation              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FIntVector              NewOriginLocation              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void ALevelScriptActor::WorldOriginLocationChanged(const struct FIntVector& OldOriginLocation, const struct FIntVector& NewOriginLocation)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.LevelScriptActor.WorldOriginLocationChanged");
+
+	ALevelScriptActor_WorldOriginLocationChanged_Params params;
+	params.OldOriginLocation = OldOriginLocation;
+	params.NewOriginLocation = NewOriginLocation;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.LevelScriptActor.SetCinematicMode
+// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// bool                           bCinematicMode                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// bool                           bHidePlayer                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// bool                           bAffectsHUD                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// bool                           bAffectsMovement               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// bool                           bAffectsTurning                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void ALevelScriptActor::SetCinematicMode(bool bCinematicMode, bool bHidePlayer, bool bAffectsHUD, bool bAffectsMovement, bool bAffectsTurning)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.LevelScriptActor.SetCinematicMode");
+
+	ALevelScriptActor_SetCinematicMode_Params params;
+	params.bCinematicMode = bCinematicMode;
+	params.bHidePlayer = bHidePlayer;
+	params.bAffectsHUD = bAffectsHUD;
+	params.bAffectsMovement = bAffectsMovement;
+	params.bAffectsTurning = bAffectsTurning;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Engine.LevelScriptActor.RemoteEvent
+// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// struct FName                   EventName                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+bool ALevelScriptActor::RemoteEvent(const struct FName& EventName)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.LevelScriptActor.RemoteEvent");
+
+	ALevelScriptActor_RemoteEvent_Params params;
+	params.EventName = EventName;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.LevelScriptActor.LevelReset
+// (FUNC_BlueprintAuthorityOnly, FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
+
+void ALevelScriptActor::LevelReset()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Engine.LevelScriptActor.LevelReset");
+
+	ALevelScriptActor_LevelReset_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Engine.PlayerCameraManager.StopCameraShake
 // (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 // Parameters:
@@ -23004,98 +23117,6 @@ void AWorldSettings::OnRep_WorldGravityZ()
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.LevelScriptActor.WorldOriginLocationChanged
-// (FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
-// Parameters:
-// struct FIntVector              OldOriginLocation              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// struct FIntVector              NewOriginLocation              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-
-void ALevelScriptActor::WorldOriginLocationChanged(const struct FIntVector& OldOriginLocation, const struct FIntVector& NewOriginLocation)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.LevelScriptActor.WorldOriginLocationChanged");
-
-	ALevelScriptActor_WorldOriginLocationChanged_Params params;
-	params.OldOriginLocation = OldOriginLocation;
-	params.NewOriginLocation = NewOriginLocation;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.LevelScriptActor.SetCinematicMode
-// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
-// Parameters:
-// bool                           bCinematicMode                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// bool                           bHidePlayer                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// bool                           bAffectsHUD                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// bool                           bAffectsMovement               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// bool                           bAffectsTurning                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-
-void ALevelScriptActor::SetCinematicMode(bool bCinematicMode, bool bHidePlayer, bool bAffectsHUD, bool bAffectsMovement, bool bAffectsTurning)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.LevelScriptActor.SetCinematicMode");
-
-	ALevelScriptActor_SetCinematicMode_Params params;
-	params.bCinematicMode = bCinematicMode;
-	params.bHidePlayer = bHidePlayer;
-	params.bAffectsHUD = bAffectsHUD;
-	params.bAffectsMovement = bAffectsMovement;
-	params.bAffectsTurning = bAffectsTurning;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Engine.LevelScriptActor.RemoteEvent
-// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
-// Parameters:
-// struct FName                   EventName                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-
-bool ALevelScriptActor::RemoteEvent(const struct FName& EventName)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.LevelScriptActor.RemoteEvent");
-
-	ALevelScriptActor_RemoteEvent_Params params;
-	params.EventName = EventName;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Engine.LevelScriptActor.LevelReset
-// (FUNC_BlueprintAuthorityOnly, FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
-
-void ALevelScriptActor::LevelReset()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Engine.LevelScriptActor.LevelReset");
-
-	ALevelScriptActor_LevelReset_Params params;
-
-	auto flags = fn->FunctionFlags;
 
 	UObject::ProcessEvent(fn, &params);
 

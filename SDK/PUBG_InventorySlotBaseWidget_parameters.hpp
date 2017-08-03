@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.24) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -297,6 +297,21 @@ struct UInventorySlotBaseWidget_C_UpdateDragDropObject_Params
 struct UInventorySlotBaseWidget_C_SetInventory_Params
 {
 	class UInventoryWidget_C*                          InventoryWidget;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function InventorySlotBaseWidget.InventorySlotBaseWidget_C.Construct
+struct UInventorySlotBaseWidget_C_Construct_Params
+{
+};
+
+// Function InventorySlotBaseWidget.InventorySlotBaseWidget_C.UI_Gamepad_B
+struct UInventorySlotBaseWidget_C_UI_Gamepad_B_Params
+{
+};
+
+// Function InventorySlotBaseWidget.InventorySlotBaseWidget_C.OnWidgetInputX
+struct UInventorySlotBaseWidget_C_OnWidgetInputX_Params
+{
 };
 
 // Function InventorySlotBaseWidget.InventorySlotBaseWidget_C.ExecuteUbergraph_InventorySlotBaseWidget

@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.24) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -22,6 +22,7 @@ class FUObjectItem
 public:
 	UObject* Object;
 	int32_t Flags;
+	int32_t ClusterIndex;
 	int32_t SerialNumber;
 
 	enum class EInternalObjectFlags : int32_t
@@ -115,19 +116,6 @@ public:
 	{
 		return i < Num();
 	}
-
-	inline void Add(T InputData)
-	{
-		Data = (T*)realloc(Data, sizeof(T) * (Count + 1));
-		Data[Count++] = InputData;
-		Max = Count;
-	};
-
-	inline void Clear()
-	{
-		free(Data);
-		Count = Max = 0;
-	};
 
 private:
 	T* Data;

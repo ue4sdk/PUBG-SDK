@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.24) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,7 +25,6 @@ public:
 	struct FFloatRange                                 SelectionRange;                                           // 0x0070(0x0010) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	struct FFloatRange                                 PlaybackRange;                                            // 0x0080(0x0010) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	unsigned char                                      bForceFixedFrameIntervalPlayback : 1;                     // 0x0090(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0091(0x0003) MISSED OFFSET
 	float                                              FixedFrameInterval;                                       // 0x0094(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              InTime;                                                   // 0x0098(0x0004) (CPF_ZeroConstructor, CPF_Deprecated, CPF_IsPlainOldData)
 	float                                              OutTime;                                                  // 0x009C(0x0004) (CPF_ZeroConstructor, CPF_Deprecated, CPF_IsPlainOldData)

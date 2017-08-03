@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.24) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,6 +14,12 @@ namespace Classes
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function SlotBaseWidget.SlotBaseWidget_C.IsPlayCharacterPickupAnim
+struct USlotBaseWidget_C_IsPlayCharacterPickupAnim_Params
+{
+	bool                                               bIsPickup;                                                // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
 // Function SlotBaseWidget.SlotBaseWidget_C.IsCharacterCasting
 struct USlotBaseWidget_C_IsCharacterCasting_Params
 {
@@ -24,6 +30,11 @@ struct USlotBaseWidget_C_IsCharacterCasting_Params
 struct USlotBaseWidget_C_PlaySoundAk_Params
 {
 	class UAkAudioEvent*                               SoundAk;                                                  // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function SlotBaseWidget.SlotBaseWidget_C.Construct
+struct USlotBaseWidget_C_Construct_Params
+{
 };
 
 // Function SlotBaseWidget.SlotBaseWidget_C.OnMouseEnter

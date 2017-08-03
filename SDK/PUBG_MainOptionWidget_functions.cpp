@@ -1,4 +1,4 @@
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.24) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,23 @@ namespace Classes
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function MainOptionWidget.MainOptionWidget_C.ClearOptionButtonsColors
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UMainOptionWidget_C::ClearOptionButtonsColors()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function MainOptionWidget.MainOptionWidget_C.ClearOptionButtonsColors");
+
+	UMainOptionWidget_C_ClearOptionButtonsColors_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function MainOptionWidget.MainOptionWidget_C.PopupButtonClicked
 // (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
@@ -398,6 +415,23 @@ void UMainOptionWidget_C::Destruct()
 	static auto fn = UObject::FindObject<UFunction>("Function MainOptionWidget.MainOptionWidget_C.Destruct");
 
 	UMainOptionWidget_C_Destruct_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function MainOptionWidget.MainOptionWidget_C.BndEvt__OptionButton3_K2Node_ComponentBoundEvent_144_OnClicked__DelegateSignature
+// (FUNC_BlueprintEvent)
+
+void UMainOptionWidget_C::BndEvt__OptionButton3_K2Node_ComponentBoundEvent_144_OnClicked__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function MainOptionWidget.MainOptionWidget_C.BndEvt__OptionButton3_K2Node_ComponentBoundEvent_144_OnClicked__DelegateSignature");
+
+	UMainOptionWidget_C_BndEvt__OptionButton3_K2Node_ComponentBoundEvent_144_OnClicked__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
 
