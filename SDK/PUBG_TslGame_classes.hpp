@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.24) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -499,7 +499,7 @@ public:
 
 
 // Class TslGame.TslPlayerController
-// 0x0300 (0x09D0 - 0x06D0)
+// 0x0308 (0x09D8 - 0x06D0)
 class ATslPlayerController : public ATslBasePlayerController
 {
 public:
@@ -531,9 +531,9 @@ public:
 	TArray<TWeakObjectPtr<class ACarePackageItem>>     ReplicateCarePackageItemList;                             // 0x0890(0x0010) (CPF_ZeroConstructor)
 	unsigned char                                      UnknownData08[0x28];                                      // 0x08A0(0x0028) MISSED OFFSET
 	float                                              DeathResultDelaySeconds;                                  // 0x08C8(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData09[0xAC];                                      // 0x08CC(0x00AC) MISSED OFFSET
-	struct FPingPongSummary                            PingPongSummary;                                          // 0x0978(0x000C) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Net, CPF_Transient)
-	unsigned char                                      UnknownData10[0x4C];                                      // 0x0984(0x004C) MISSED OFFSET
+	unsigned char                                      UnknownData09[0xB4];                                      // 0x08CC(0x00B4) MISSED OFFSET
+	struct FPingPongSummary                            PingPongSummary;                                          // 0x0980(0x000C) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Net, CPF_Transient)
+	unsigned char                                      UnknownData10[0x4C];                                      // 0x098C(0x004C) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -4947,13 +4947,13 @@ public:
 
 
 // Class TslGame.PerfBotPlayerController
-// 0x0060 (0x0A30 - 0x09D0)
+// 0x0060 (0x0A38 - 0x09D8)
 class APerfBotPlayerController : public ATslPlayerController
 {
 public:
-	int                                                AmmoClips;                                                // 0x09D0(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	class UClass*                                      WeaponType;                                               // 0x09D8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x50];                                      // 0x09E0(0x0050) MISSED OFFSET
+	int                                                AmmoClips;                                                // 0x09D8(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	class UClass*                                      WeaponType;                                               // 0x09E0(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x50];                                      // 0x09E8(0x0050) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -4968,11 +4968,11 @@ public:
 
 
 // Class TslGame.TslDemoSpectator
-// 0x0028 (0x09F8 - 0x09D0)
+// 0x0028 (0x0A00 - 0x09D8)
 class ATslDemoSpectator : public ATslPlayerController
 {
 public:
-	unsigned char                                      UnknownData00[0x28];                                      // 0x09D0(0x0028) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x28];                                      // 0x09D8(0x0028) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -4984,7 +4984,7 @@ public:
 
 
 // Class TslGame.TslPlayerController_Menu
-// 0x0000 (0x09D0 - 0x09D0)
+// 0x0000 (0x09D8 - 0x09D8)
 class ATslPlayerController_Menu : public ATslPlayerController
 {
 public:

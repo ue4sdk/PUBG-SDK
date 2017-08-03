@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.24) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -69,7 +69,7 @@ public:
 	void Custom_Event_1();
 	void XBoxOneOk();
 	void Tick(struct FGeometry* MyGeometry, float* InDeltaTime);
-	void OnWidgetInputB();
+	void ONWidgetInputB();
 	void OnWidgetMoveLeft();
 	void CustomEvent_3();
 	void CustomEvent_4();
