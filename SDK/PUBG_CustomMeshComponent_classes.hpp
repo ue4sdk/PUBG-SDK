@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.24) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,11 +13,11 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // Class CustomMeshComponent.CustomMeshComponent
-// 0x0010 (0x0780 - 0x0770)
+// 0x0010 (0x0790 - 0x0780)
 class UCustomMeshComponent : public UMeshComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0770(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0780(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

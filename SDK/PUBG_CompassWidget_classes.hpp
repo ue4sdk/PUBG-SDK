@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.24) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,7 +30,6 @@ public:
 	float                                              DevisonLevel;                                             // 0x02AC(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              Width;                                                    // 0x02B0(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	unsigned char                                      bDirStringMakeClockwise : 1;                              // 0x02B4(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x02B5(0x0003) MISSED OFFSET
 	class UCompassMarkerWidget_C*                      MyCompassMarkerWidget;                                    // 0x02B8(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	TArray<class UCompassMarkerWidget_C*>              TeamMemberCompassMarkerList;                              // 0x02C0(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
 

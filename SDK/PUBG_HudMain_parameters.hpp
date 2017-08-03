@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.24) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,57 @@ namespace Classes
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function HudMain.HudMain_C.InitForReplay
+struct UHudMain_C_InitForReplay_Params
+{
+};
+
+// Function HudMain.HudMain_C.OnToggleOption
+struct UHudMain_C_OnToggleOption_Params
+{
+};
+
+// Function HudMain.HudMain_C.On_Name_Prepass_1
+struct UHudMain_C_On_Name_Prepass_1_Params
+{
+	class UWidget*                                     BoundWidget;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function HudMain.HudMain_C.ShowReplayTimeline
+struct UHudMain_C_ShowReplayTimeline_Params
+{
+};
+
+// Function HudMain.HudMain_C.OnToggleBattleList
+struct UHudMain_C_OnToggleBattleList_Params
+{
+};
+
+// Function HudMain.HudMain_C.OnMapHide
+struct UHudMain_C_OnMapHide_Params
+{
+};
+
+// Function HudMain.HudMain_C.OnMapShow
+struct UHudMain_C_OnMapShow_Params
+{
+};
+
+// Function HudMain.HudMain_C.OnKey_MapReleased
+struct UHudMain_C_OnKey_MapReleased_Params
+{
+};
+
+// Function HudMain.HudMain_C.OnKey_MapPressed
+struct UHudMain_C_OnKey_MapPressed_Params
+{
+};
+
+// Function HudMain.HudMain_C.OnShowCarePackageItemList
+struct UHudMain_C_OnShowCarePackageItemList_Params
+{
+};
 
 // Function HudMain.HudMain_C.GetMiniMapType
 struct UHudMain_C_GetMiniMapType_Params
@@ -189,8 +240,8 @@ struct UHudMain_C_Get_DebugInformation_Text_1_Params
 	struct FText                                       ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 };
 
-// Function HudMain.HudMain_C.OnKey_ToggleMap
-struct UHudMain_C_OnKey_ToggleMap_Params
+// Function HudMain.HudMain_C.OnToggleMap
+struct UHudMain_C_OnToggleMap_Params
 {
 };
 
@@ -239,6 +290,11 @@ struct UHudMain_C_InitializeHUD_Params
 {
 };
 
+// Function HudMain.HudMain_C.Construct
+struct UHudMain_C_Construct_Params
+{
+};
+
 // Function HudMain.HudMain_C.OnShowWidget
 struct UHudMain_C_OnShowWidget_Params
 {
@@ -246,9 +302,26 @@ struct UHudMain_C_OnShowWidget_Params
 	bool                                               bShow;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
-// Function HudMain.HudMain_C.Construct
-struct UHudMain_C_Construct_Params
+// Function HudMain.HudMain_C.HideMapForInitReplay
+struct UHudMain_C_HideMapForInitReplay_Params
 {
+};
+
+// Function HudMain.HudMain_C.CheckReplayTimer
+struct UHudMain_C_CheckReplayTimer_Params
+{
+};
+
+// Function HudMain.HudMain_C.CreateCheckReplayTimer
+struct UHudMain_C_CreateCheckReplayTimer_Params
+{
+};
+
+// Function HudMain.HudMain_C.Tick
+struct UHudMain_C_Tick_Params
+{
+	struct FGeometry*                                  MyGeometry;                                               // (CPF_Parm, CPF_IsPlainOldData)
+	float*                                             InDeltaTime;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // Function HudMain.HudMain_C.ExecuteUbergraph_HudMain

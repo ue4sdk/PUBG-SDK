@@ -1,4 +1,4 @@
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.24) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,26 @@ namespace Classes
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function HudAlwaysOn.HudAlwaysOn_C.On_ReportBotton_Prepass_1
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// Parameters:
+// class UWidget*                 BoundWidget                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UHudAlwaysOn_C::On_ReportBotton_Prepass_1(class UWidget* BoundWidget)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function HudAlwaysOn.HudAlwaysOn_C.On_ReportBotton_Prepass_1");
+
+	UHudAlwaysOn_C_On_ReportBotton_Prepass_1_Params params;
+	params.BoundWidget = BoundWidget;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function HudAlwaysOn.HudAlwaysOn_C.OnPrepass_2
 // (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
@@ -142,6 +162,23 @@ void UHudAlwaysOn_C::Construct()
 	static auto fn = UObject::FindObject<UFunction>("Function HudAlwaysOn.HudAlwaysOn_C.Construct");
 
 	UHudAlwaysOn_C_Construct_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function HudAlwaysOn.HudAlwaysOn_C.BndEvt__ReportBotton_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature
+// (FUNC_BlueprintEvent)
+
+void UHudAlwaysOn_C::BndEvt__ReportBotton_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function HudAlwaysOn.HudAlwaysOn_C.BndEvt__ReportBotton_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature");
+
+	UHudAlwaysOn_C_BndEvt__ReportBotton_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
 

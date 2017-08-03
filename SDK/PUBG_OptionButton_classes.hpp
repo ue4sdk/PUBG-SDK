@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.24) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -29,6 +29,7 @@ public:
 	}
 
 
+	void SetButtonBgColor(const struct FLinearColor& InBackgroundColor);
 	struct FText GetText_1();
 	void BndEvt__Button_1_K2Node_ComponentBoundEvent_103_OnButtonClickedEvent__DelegateSignature();
 	void ExecuteUbergraph_OptionButton(int EntryPoint);

@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.24) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,12 @@ namespace Classes
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function OptionButton.OptionButton_C.SetButtonBgColor
+struct UOptionButton_C_SetButtonBgColor_Params
+{
+	struct FLinearColor                                InBackgroundColor;                                        // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
 
 // Function OptionButton.OptionButton_C.GetText_1
 struct UOptionButton_C_GetText_1_Params

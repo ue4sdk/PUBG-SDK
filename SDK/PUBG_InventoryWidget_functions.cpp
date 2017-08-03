@@ -1,4 +1,4 @@
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.24) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -434,6 +434,26 @@ bool UInventoryWidget_C::Up()
 }
 
 
+// Function InventoryWidget.InventoryWidget_C.OnPrepass_2
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// Parameters:
+// class UWidget*                 BoundWidget                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UInventoryWidget_C::OnPrepass_2(class UWidget* BoundWidget)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function InventoryWidget.InventoryWidget_C.OnPrepass_2");
+
+	UInventoryWidget_C_OnPrepass_2_Params params;
+	params.BoundWidget = BoundWidget;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function InventoryWidget.InventoryWidget_C.On_XBoxHelpTextBorder_Prepass_1
 // (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 // Parameters:
@@ -803,23 +823,6 @@ void UInventoryWidget_C::InitializeWidget(const struct FScriptDelegate& OnInvent
 }
 
 
-// Function InventoryWidget.InventoryWidget_C.Construct
-// (FUNC_BlueprintCosmetic, FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
-
-void UInventoryWidget_C::Construct()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryWidget.InventoryWidget_C.Construct");
-
-	UInventoryWidget_C_Construct_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function InventoryWidget.InventoryWidget_C.Tick
 // (FUNC_BlueprintCosmetic, FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
 // Parameters:
@@ -833,40 +836,6 @@ void UInventoryWidget_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 	UInventoryWidget_C_Tick_Params params;
 	params.MyGeometry = MyGeometry;
 	params.InDeltaTime = InDeltaTime;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function InventoryWidget.InventoryWidget_C.BndEvt__VicinityTitleOn_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature
-// (FUNC_BlueprintEvent)
-
-void UInventoryWidget_C::BndEvt__VicinityTitleOn_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryWidget.InventoryWidget_C.BndEvt__VicinityTitleOn_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature");
-
-	UInventoryWidget_C_BndEvt__VicinityTitleOn_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function InventoryWidget.InventoryWidget_C.BndEvt__VicinityTitleOff_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature
-// (FUNC_BlueprintEvent)
-
-void UInventoryWidget_C::BndEvt__VicinityTitleOff_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryWidget.InventoryWidget_C.BndEvt__VicinityTitleOff_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature");
-
-	UInventoryWidget_C_BndEvt__VicinityTitleOff_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -920,6 +889,23 @@ void UInventoryWidget_C::BndEvt__Backpack_K2Node_ComponentBoundEvent_40_OnChildS
 }
 
 
+// Function InventoryWidget.InventoryWidget_C.Construct
+// (FUNC_BlueprintCosmetic, FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
+
+void UInventoryWidget_C::Construct()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function InventoryWidget.InventoryWidget_C.Construct");
+
+	UInventoryWidget_C_Construct_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function InventoryWidget.InventoryWidget_C.OnPressed
 // (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
@@ -928,40 +914,6 @@ void UInventoryWidget_C::OnPressed()
 	static auto fn = UObject::FindObject<UFunction>("Function InventoryWidget.InventoryWidget_C.OnPressed");
 
 	UInventoryWidget_C_OnPressed_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function InventoryWidget.InventoryWidget_C.OnItemExplorerProxyUpdated
-// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
-
-void UInventoryWidget_C::OnItemExplorerProxyUpdated()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryWidget.InventoryWidget_C.OnItemExplorerProxyUpdated");
-
-	UInventoryWidget_C_OnItemExplorerProxyUpdated_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function InventoryWidget.InventoryWidget_C.OnEquipmentUpdated
-// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
-
-void UInventoryWidget_C::OnEquipmentUpdated()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryWidget.InventoryWidget_C.OnEquipmentUpdated");
-
-	UInventoryWidget_C_OnEquipmentUpdated_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1001,23 +953,6 @@ void UInventoryWidget_C::OnItemSlotFocus(const TScriptInterface<class USlotInter
 	UInventoryWidget_C_OnItemSlotFocus_Params params;
 	params.Slot = Slot;
 	params.SlotContainer = SlotContainer;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function InventoryWidget.InventoryWidget_C.OnInventoryUpdated
-// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
-
-void UInventoryWidget_C::OnInventoryUpdated()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryWidget.InventoryWidget_C.OnInventoryUpdated");
-
-	UInventoryWidget_C_OnInventoryUpdated_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1243,6 +1178,40 @@ void UInventoryWidget_C::OnWidgetInputY()
 }
 
 
+// Function InventoryWidget.InventoryWidget_C.Destruct
+// (FUNC_BlueprintCosmetic, FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
+
+void UInventoryWidget_C::Destruct()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function InventoryWidget.InventoryWidget_C.Destruct");
+
+	UInventoryWidget_C_Destruct_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function InventoryWidget.InventoryWidget_C.OnItemExplorerProxyUpdated
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UInventoryWidget_C::OnItemExplorerProxyUpdated()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function InventoryWidget.InventoryWidget_C.OnItemExplorerProxyUpdated");
+
+	UInventoryWidget_C_OnItemExplorerProxyUpdated_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function InventoryWidget.InventoryWidget_C.OnInputRB
 // (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
@@ -1433,14 +1402,116 @@ void UInventoryWidget_C::MoveTick(float DeltaTime)
 }
 
 
-// Function InventoryWidget.InventoryWidget_C.Destruct
-// (FUNC_BlueprintCosmetic, FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
+// Function InventoryWidget.InventoryWidget_C.BndEvt__VicinityTitleOff_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature
+// (FUNC_BlueprintEvent)
 
-void UInventoryWidget_C::Destruct()
+void UInventoryWidget_C::BndEvt__VicinityTitleOff_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryWidget.InventoryWidget_C.Destruct");
+	static auto fn = UObject::FindObject<UFunction>("Function InventoryWidget.InventoryWidget_C.BndEvt__VicinityTitleOff_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature");
 
-	UInventoryWidget_C_Destruct_Params params;
+	UInventoryWidget_C_BndEvt__VicinityTitleOff_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function InventoryWidget.InventoryWidget_C.BndEvt__VicinityTitleOn_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature
+// (FUNC_BlueprintEvent)
+
+void UInventoryWidget_C::BndEvt__VicinityTitleOn_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function InventoryWidget.InventoryWidget_C.BndEvt__VicinityTitleOn_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature");
+
+	UInventoryWidget_C_BndEvt__VicinityTitleOn_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function InventoryWidget.InventoryWidget_C.OnInteract
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UInventoryWidget_C::OnInteract()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function InventoryWidget.InventoryWidget_C.OnInteract");
+
+	UInventoryWidget_C_OnInteract_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function InventoryWidget.InventoryWidget_C.OnEquipmentUpdated
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UInventoryWidget_C::OnEquipmentUpdated()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function InventoryWidget.InventoryWidget_C.OnEquipmentUpdated");
+
+	UInventoryWidget_C_OnEquipmentUpdated_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function InventoryWidget.InventoryWidget_C.OnInventoryUpdated
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UInventoryWidget_C::OnInventoryUpdated()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function InventoryWidget.InventoryWidget_C.OnInventoryUpdated");
+
+	UInventoryWidget_C_OnInventoryUpdated_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function InventoryWidget.InventoryWidget_C.OnWidgetInputLT
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UInventoryWidget_C::OnWidgetInputLT()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function InventoryWidget.InventoryWidget_C.OnWidgetInputLT");
+
+	UInventoryWidget_C_OnWidgetInputLT_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function InventoryWidget.InventoryWidget_C.OnWidgetInputRT
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UInventoryWidget_C::OnWidgetInputRT()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function InventoryWidget.InventoryWidget_C.OnWidgetInputRT");
+
+	UInventoryWidget_C_OnWidgetInputRT_Params params;
 
 	auto flags = fn->FunctionFlags;
 

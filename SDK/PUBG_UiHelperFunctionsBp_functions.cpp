@@ -1,4 +1,4 @@
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.24) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,106 @@ namespace Classes
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function UiHelperFunctionsBp.UiHelperFunctionsBp_C.GetSelfPutAttachment
+// (FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// class UUserWidget*             Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// class UObject*                 __WorldContext                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// class UAttachableItem*         GamepadadSelectedAttachableItem (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UUiHelperFunctionsBp_C::STATIC_GetSelfPutAttachment(class UUserWidget* Widget, class UObject* __WorldContext, class UAttachableItem** GamepadadSelectedAttachableItem)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UiHelperFunctionsBp.UiHelperFunctionsBp_C.GetSelfPutAttachment");
+
+	UUiHelperFunctionsBp_C_GetSelfPutAttachment_Params params;
+	params.Widget = Widget;
+	params.__WorldContext = __WorldContext;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (GamepadadSelectedAttachableItem != nullptr)
+		*GamepadadSelectedAttachableItem = params.GamepadadSelectedAttachableItem;
+}
+
+
+// Function UiHelperFunctionsBp.UiHelperFunctionsBp_C.CancelSelfAttachmentPutMode
+// (FUNC_Static, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// Parameters:
+// class UUserWidget*             Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// class UObject*                 __WorldContext                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UUiHelperFunctionsBp_C::STATIC_CancelSelfAttachmentPutMode(class UUserWidget* Widget, class UObject* __WorldContext)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UiHelperFunctionsBp.UiHelperFunctionsBp_C.CancelSelfAttachmentPutMode");
+
+	UUiHelperFunctionsBp_C_CancelSelfAttachmentPutMode_Params params;
+	params.Widget = Widget;
+	params.__WorldContext = __WorldContext;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function UiHelperFunctionsBp.UiHelperFunctionsBp_C.IsSelfAttachmentPutMode
+// (FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// class UUserWidget*             Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// class UObject*                 __WorldContext                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// bool                           bResult                        (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UUiHelperFunctionsBp_C::STATIC_IsSelfAttachmentPutMode(class UUserWidget* Widget, class UObject* __WorldContext, bool* bResult)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UiHelperFunctionsBp.UiHelperFunctionsBp_C.IsSelfAttachmentPutMode");
+
+	UUiHelperFunctionsBp_C_IsSelfAttachmentPutMode_Params params;
+	params.Widget = Widget;
+	params.__WorldContext = __WorldContext;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (bResult != nullptr)
+		*bResult = params.bResult;
+}
+
+
+// Function UiHelperFunctionsBp.UiHelperFunctionsBp_C.GetInventoryWidget
+// (FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// class UUserWidget*             Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// class UObject*                 __WorldContext                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// class UInventoryWidget_C*      InventoryWidget                (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UUiHelperFunctionsBp_C::STATIC_GetInventoryWidget(class UUserWidget* Widget, class UObject* __WorldContext, class UInventoryWidget_C** InventoryWidget)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function UiHelperFunctionsBp.UiHelperFunctionsBp_C.GetInventoryWidget");
+
+	UUiHelperFunctionsBp_C_GetInventoryWidget_Params params;
+	params.Widget = Widget;
+	params.__WorldContext = __WorldContext;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (InventoryWidget != nullptr)
+		*InventoryWidget = params.InventoryWidget;
+}
+
 
 // Function UiHelperFunctionsBp.UiHelperFunctionsBp_C.InventoryFocusingColor
 // (FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure, FUNC_Const)

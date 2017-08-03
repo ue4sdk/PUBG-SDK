@@ -1,4 +1,4 @@
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.24) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -1586,6 +1586,116 @@ void UItemSlotWidget_C::Construct()
 	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.Construct");
 
 	UItemSlotWidget_C_Construct_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ItemSlotWidget.ItemSlotWidget_C.OnInputXPressed
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UItemSlotWidget_C::OnInputXPressed()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.OnInputXPressed");
+
+	UItemSlotWidget_C_OnInputXPressed_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ItemSlotWidget.ItemSlotWidget_C.OnInputXReleased
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UItemSlotWidget_C::OnInputXReleased()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.OnInputXReleased");
+
+	UItemSlotWidget_C_OnInputXReleased_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ItemSlotWidget.ItemSlotWidget_C.UI_Gamepad_B_Pressed
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UItemSlotWidget_C::UI_Gamepad_B_Pressed()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.UI_Gamepad_B_Pressed");
+
+	UItemSlotWidget_C_UI_Gamepad_B_Pressed_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ItemSlotWidget.ItemSlotWidget_C.UI_Gamepad_B_Released
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UItemSlotWidget_C::UI_Gamepad_B_Released()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.UI_Gamepad_B_Released");
+
+	UItemSlotWidget_C_UI_Gamepad_B_Released_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ItemSlotWidget.ItemSlotWidget_C.Tick
+// (FUNC_BlueprintCosmetic, FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
+// Parameters:
+// struct FGeometry*              MyGeometry                     (CPF_Parm, CPF_IsPlainOldData)
+// float*                         InDeltaTime                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UItemSlotWidget_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.Tick");
+
+	UItemSlotWidget_C_Tick_Params params;
+	params.MyGeometry = MyGeometry;
+	params.InDeltaTime = InDeltaTime;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ItemSlotWidget.ItemSlotWidget_C.OnButtonClicked
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// Parameters:
+// TEnumAsByte<EPopupButtonID>    ButtonID                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UItemSlotWidget_C::OnButtonClicked(TEnumAsByte<EPopupButtonID> ButtonID)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.OnButtonClicked");
+
+	UItemSlotWidget_C_OnButtonClicked_Params params;
+	params.ButtonID = ButtonID;
 
 	auto flags = fn->FunctionFlags;
 

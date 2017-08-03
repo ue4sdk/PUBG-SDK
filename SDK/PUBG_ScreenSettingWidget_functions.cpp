@@ -1,4 +1,4 @@
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.24) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -52,11 +52,11 @@ void UScreenSettingWidget_C::SettingDefault()
 
 
 // Function ScreenSettingWidget.ScreenSettingWidget_C.IsChanged
-// (FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure, FUNC_Const)
+// (FUNC_Event, FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// bool                           bChanged                       (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-void UScreenSettingWidget_C::IsChanged(bool* bChanged)
+bool UScreenSettingWidget_C::IsChanged()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ScreenSettingWidget.ScreenSettingWidget_C.IsChanged");
 
@@ -68,8 +68,7 @@ void UScreenSettingWidget_C::IsChanged(bool* bChanged)
 
 	fn->FunctionFlags = flags;
 
-	if (bChanged != nullptr)
-		*bChanged = params.bChanged;
+	return params.ReturnValue;
 }
 
 
@@ -151,7 +150,7 @@ void UScreenSettingWidget_C::Construct()
 
 
 // Function ScreenSettingWidget.ScreenSettingWidget_C.OnApply
-// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// (FUNC_Event, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
 void UScreenSettingWidget_C::OnApply()
 {
@@ -168,7 +167,7 @@ void UScreenSettingWidget_C::OnApply()
 
 
 // Function ScreenSettingWidget.ScreenSettingWidget_C.OnDefault
-// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// (FUNC_Event, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
 void UScreenSettingWidget_C::OnDefault()
 {
@@ -185,7 +184,7 @@ void UScreenSettingWidget_C::OnDefault()
 
 
 // Function ScreenSettingWidget.ScreenSettingWidget_C.OnReset
-// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// (FUNC_Event, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
 void UScreenSettingWidget_C::OnReset()
 {

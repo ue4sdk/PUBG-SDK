@@ -1,4 +1,4 @@
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.24) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,26 @@ namespace Classes
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function NewMatchResultWidget.NewMatchResultWidget_C.On_ButtonReportPrepass_1
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// Parameters:
+// class UWidget*                 BoundWidget                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UNewMatchResultWidget_C::On_ButtonReportPrepass_1(class UWidget* BoundWidget)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function NewMatchResultWidget.NewMatchResultWidget_C.On_ButtonReportPrepass_1");
+
+	UNewMatchResultWidget_C_On_ButtonReportPrepass_1_Params params;
+	params.BoundWidget = BoundWidget;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function NewMatchResultWidget.NewMatchResultWidget_C.UpdateObserverMatchResult
 // (FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
@@ -402,6 +422,23 @@ void UNewMatchResultWidget_C::XBoxOnOk()
 	static auto fn = UObject::FindObject<UFunction>("Function NewMatchResultWidget.NewMatchResultWidget_C.XBoxOnOk");
 
 	UNewMatchResultWidget_C_XBoxOnOk_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function NewMatchResultWidget.NewMatchResultWidget_C.BndEvt__ButtonReport_K2Node_ComponentBoundEvent_29_OnButtonClickedEvent__DelegateSignature
+// (FUNC_BlueprintEvent)
+
+void UNewMatchResultWidget_C::BndEvt__ButtonReport_K2Node_ComponentBoundEvent_29_OnButtonClickedEvent__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function NewMatchResultWidget.NewMatchResultWidget_C.BndEvt__ButtonReport_K2Node_ComponentBoundEvent_29_OnButtonClickedEvent__DelegateSignature");
+
+	UNewMatchResultWidget_C_BndEvt__ButtonReport_K2Node_ComponentBoundEvent_29_OnButtonClickedEvent__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
 

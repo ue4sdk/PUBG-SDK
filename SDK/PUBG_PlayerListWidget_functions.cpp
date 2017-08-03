@@ -1,4 +1,4 @@
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.24) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,23 @@ namespace Classes
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function PlayerListWidget.PlayerListWidget_C.InitForReplay
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UPlayerListWidget_C::InitForReplay()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PlayerListWidget.PlayerListWidget_C.InitForReplay");
+
+	UPlayerListWidget_C_InitForReplay_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function PlayerListWidget.PlayerListWidget_C.CheckChangeList
 // (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure, FUNC_Const)
@@ -173,6 +190,23 @@ void UPlayerListWidget_C::RefreshList()
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerListWidget.PlayerListWidget_C.RefreshList");
 
 	UPlayerListWidget_C_RefreshList_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function PlayerListWidget.PlayerListWidget_C.OnGotoTimelineDone_PlayerList
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UPlayerListWidget_C::OnGotoTimelineDone_PlayerList()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PlayerListWidget.PlayerListWidget_C.OnGotoTimelineDone_PlayerList");
+
+	UPlayerListWidget_C_OnGotoTimelineDone_PlayerList_Params params;
 
 	auto flags = fn->FunctionFlags;
 

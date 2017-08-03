@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.24) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -70,6 +70,13 @@ struct UInGameMenuWidget_C_CustomEvent_1_Params
 // Function InGameMenuWidget.InGameMenuWidget_C.CustomEvent_2
 struct UInGameMenuWidget_C_CustomEvent_2_Params
 {
+};
+
+// Function InGameMenuWidget.InGameMenuWidget_C.Tick
+struct UInGameMenuWidget_C_Tick_Params
+{
+	struct FGeometry*                                  MyGeometry;                                               // (CPF_Parm, CPF_IsPlainOldData)
+	float*                                             InDeltaTime;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // Function InGameMenuWidget.InGameMenuWidget_C.ExecuteUbergraph_InGameMenuWidget

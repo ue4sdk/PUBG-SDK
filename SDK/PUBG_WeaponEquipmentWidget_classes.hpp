@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.24) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass WeaponEquipmentWidget.WeaponEquipmentWidget_C
-// 0x0085 (0x02FD - 0x0278)
+// 0x008C (0x0304 - 0x0278)
 class UWeaponEquipmentWidget_C : public UInventoryBaseWidget_C
 {
 public:
@@ -26,14 +26,13 @@ public:
 	class UWeaponEquipmentSlotWidget_C*                Weapon_05;                                                // 0x02A8(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData, CPF_RepSkip, CPF_RepNotify, CPF_Interp, CPF_NonTransactional, CPF_EditorOnly, CPF_NoDestructor, CPF_AutoWeak, CPF_ContainsInstancedReference, CPF_AssetRegistrySearchable, CPF_SimpleDisplay, CPF_AdvancedDisplay, CPF_Protected, CPF_BlueprintCallable, CPF_BlueprintAuthorityOnly, CPF_TextExportTransient, CPF_NonPIEDuplicateTransient, CPF_ExposeOnSpawn, CPF_PersistentInstance, CPF_UObjectWrapper, CPF_HasGetValueTypeHash, CPF_NativeAccessSpecifierPublic, CPF_NativeAccessSpecifierProtected, CPF_NativeAccessSpecifierPrivate)
 	struct FText                                       TitleText;                                                // 0x02B0(0x0018) (CPF_Edit, CPF_BlueprintVisible)
 	int                                                SelectedTabIndex;                                         // 0x02C8(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x02CC(0x0004) MISSED OFFSET
 	class AWeaponProcessor*                            WeaponProcessor;                                          // 0x02D0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnTemplate, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	TArray<class UWeaponEquipmentSlotWidget_C*>        WeaponSlotList;                                           // 0x02D8(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
 	unsigned char                                      Equipment : 1;                                            // 0x02E8(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x02E9(0x0007) MISSED OFFSET
 	class UTslItemDragDropOperation_C*                 TslItemDragDropOperation;                                 // 0x02F0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	int                                                FocusIndex;                                               // 0x02F8(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	unsigned char                                      bWantFocus : 1;                                           // 0x02FC(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	int                                                SelfPuFocusIndex;                                         // 0x0300(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -62,6 +61,10 @@ public:
 	bool Right();
 	bool SetFocus(bool NewFocus);
 	bool Up();
+	void SelfUpAttachmentIndexUp();
+	void PutAttachment();
+	void StopSelftattachmentPut();
+	void StartSelfAttachmentPut(bool* bResult);
 	void OnChildSlotRefreshFocus();
 	void FindFirtFocusableWidgetIndex(int* Index);
 	void GetFocusableDownChildIndex(int* Index);
@@ -83,6 +86,8 @@ public:
 	void BndEvt__Weapon_03_K2Node_ComponentBoundEvent_90_RefreshFocus__DelegateSignature();
 	void BndEvt__Weapon_04_K2Node_ComponentBoundEvent_106_RefreshFocus__DelegateSignature();
 	void BndEvt__Weapon_05_K2Node_ComponentBoundEvent_123_RefreshFocus__DelegateSignature();
+	void OnWidgetMoveUp();
+	void OnWidgetMoveDown();
 	void ExecuteUbergraph_WeaponEquipmentWidget(int EntryPoint);
 };
 
