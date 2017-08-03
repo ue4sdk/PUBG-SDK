@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,19 +13,19 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // Class ArchVisCharacter.ArchVisCharacter
-// 0x0070 (0x0820 - 0x07B0)
+// 0x0070 (0x0830 - 0x07C0)
 class AArchVisCharacter : public ACharacter
 {
 public:
-	struct FString                                     LookUpAxisName;                                           // 0x07B0(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
-	struct FString                                     LookUpAtRateAxisName;                                     // 0x07C0(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
-	struct FString                                     TurnAxisName;                                             // 0x07D0(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
-	struct FString                                     TurnAtRateAxisName;                                       // 0x07E0(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
-	struct FString                                     MoveForwardAxisName;                                      // 0x07F0(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
-	struct FString                                     MoveRightAxisName;                                        // 0x0800(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
-	float                                              MouseSensitivityScale_Pitch;                              // 0x0810(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	float                                              MouseSensitivityScale_Yaw;                                // 0x0814(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0818(0x0008) MISSED OFFSET
+	struct FString                                     LookUpAxisName;                                           // 0x07C0(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
+	struct FString                                     LookUpAtRateAxisName;                                     // 0x07D0(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
+	struct FString                                     TurnAxisName;                                             // 0x07E0(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
+	struct FString                                     TurnAtRateAxisName;                                       // 0x07F0(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
+	struct FString                                     MoveForwardAxisName;                                      // 0x0800(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
+	struct FString                                     MoveRightAxisName;                                        // 0x0810(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
+	float                                              MouseSensitivityScale_Pitch;                              // 0x0820(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	float                                              MouseSensitivityScale_Yaw;                                // 0x0824(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0828(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

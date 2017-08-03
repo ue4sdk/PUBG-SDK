@@ -1,4 +1,4 @@
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,11 +13,11 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // Function SoundOptionWidget.SoundOptionWidget_C.IsKeyUp
-// (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure)
+// (FUNC_Event, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// bool                           Keyup                          (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-void USoundOptionWidget_C::IsKeyUp(bool* Keyup)
+bool USoundOptionWidget_C::IsKeyUp()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SoundOptionWidget.SoundOptionWidget_C.IsKeyUp");
 
@@ -29,17 +29,16 @@ void USoundOptionWidget_C::IsKeyUp(bool* Keyup)
 
 	fn->FunctionFlags = flags;
 
-	if (Keyup != nullptr)
-		*Keyup = params.Keyup;
+	return params.ReturnValue;
 }
 
 
 // Function SoundOptionWidget.SoundOptionWidget_C.IsChanged
-// (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure)
+// (FUNC_Event, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure)
 // Parameters:
-// bool                           bChanged                       (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-void USoundOptionWidget_C::IsChanged(bool* bChanged)
+bool USoundOptionWidget_C::IsChanged()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SoundOptionWidget.SoundOptionWidget_C.IsChanged");
 
@@ -51,13 +50,12 @@ void USoundOptionWidget_C::IsChanged(bool* bChanged)
 
 	fn->FunctionFlags = flags;
 
-	if (bChanged != nullptr)
-		*bChanged = params.bChanged;
+	return params.ReturnValue;
 }
 
 
 // Function SoundOptionWidget.SoundOptionWidget_C.OnApply
-// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// (FUNC_Event, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
 void USoundOptionWidget_C::OnApply()
 {
@@ -74,7 +72,7 @@ void USoundOptionWidget_C::OnApply()
 
 
 // Function SoundOptionWidget.SoundOptionWidget_C.OnDefault
-// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// (FUNC_Event, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
 void USoundOptionWidget_C::OnDefault()
 {
@@ -91,7 +89,7 @@ void USoundOptionWidget_C::OnDefault()
 
 
 // Function SoundOptionWidget.SoundOptionWidget_C.OnReset
-// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// (FUNC_Event, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
 void USoundOptionWidget_C::OnReset()
 {

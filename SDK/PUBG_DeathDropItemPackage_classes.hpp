@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,11 +13,11 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass DeathDropItemPackage.DeathDropItemPackage_C
-// 0x0008 (0x0510 - 0x0508)
+// 0x0008 (0x0520 - 0x0518)
 class ADeathDropItemPackage_C : public AFloorSnapItemPackage
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0508(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_DuplicateTransient)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0518(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_DuplicateTransient)
 
 	static UClass* StaticClass()
 	{

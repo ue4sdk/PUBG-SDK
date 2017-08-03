@@ -1,4 +1,4 @@
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12,12 +12,46 @@ namespace Classes
 //Functions
 //---------------------------------------------------------------------------
 
-// Function ColorOptonWidget.ColorOptonWidget_C.IsChanged
-// (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure, FUNC_Const)
-// Parameters:
-// bool                           bChanged                       (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// Function ColorOptonWidget.ColorOptonWidget_C.InitializeColorBlindComboBox
+// (FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
-void UColorOptonWidget_C::IsChanged(bool* bChanged)
+void UColorOptonWidget_C::InitializeColorBlindComboBox()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ColorOptonWidget.ColorOptonWidget_C.InitializeColorBlindComboBox");
+
+	UColorOptonWidget_C_InitializeColorBlindComboBox_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ColorOptonWidget.ColorOptonWidget_C.SettingDefault
+// (FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UColorOptonWidget_C::SettingDefault()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ColorOptonWidget.ColorOptonWidget_C.SettingDefault");
+
+	UColorOptonWidget_C_SettingDefault_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ColorOptonWidget.ColorOptonWidget_C.IsChanged
+// (FUNC_Event, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+bool UColorOptonWidget_C::IsChanged()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ColorOptonWidget.ColorOptonWidget_C.IsChanged");
 
@@ -29,30 +63,7 @@ void UColorOptonWidget_C::IsChanged(bool* bChanged)
 
 	fn->FunctionFlags = flags;
 
-	if (bChanged != nullptr)
-		*bChanged = params.bChanged;
-}
-
-
-// Function ColorOptonWidget.ColorOptonWidget_C.IsEnableApply
-// (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure)
-// Parameters:
-// bool                           bResult                        (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-
-void UColorOptonWidget_C::IsEnableApply(bool* bResult)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function ColorOptonWidget.ColorOptonWidget_C.IsEnableApply");
-
-	UColorOptonWidget_C_IsEnableApply_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (bResult != nullptr)
-		*bResult = params.bResult;
+	return params.ReturnValue;
 }
 
 
@@ -74,7 +85,7 @@ void UColorOptonWidget_C::Construct()
 
 
 // Function ColorOptonWidget.ColorOptonWidget_C.OnReset
-// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// (FUNC_Event, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
 void UColorOptonWidget_C::OnReset()
 {
@@ -91,7 +102,7 @@ void UColorOptonWidget_C::OnReset()
 
 
 // Function ColorOptonWidget.ColorOptonWidget_C.OnDefault
-// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// (FUNC_Event, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
 void UColorOptonWidget_C::OnDefault()
 {
@@ -108,7 +119,7 @@ void UColorOptonWidget_C::OnDefault()
 
 
 // Function ColorOptonWidget.ColorOptonWidget_C.OnApply
-// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// (FUNC_Event, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
 void UColorOptonWidget_C::OnApply()
 {

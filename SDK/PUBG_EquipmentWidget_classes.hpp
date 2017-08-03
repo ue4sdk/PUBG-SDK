@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -41,16 +41,12 @@ public:
 	class ACharacterStudio*                            CharacterStudio;                                          // 0x0328(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnTemplate, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	unsigned char                                      bMouseDown : 1;                                           // 0x0330(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	unsigned char                                      bRollBackMosueIVsibility : 1;                             // 0x0331(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x2];                                       // 0x0332(0x0002) MISSED OFFSET
 	class Vector2D                                     MouseDownPosition;                                        // 0x0334(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	unsigned char                                      bMouseOn : 1;                                             // 0x033C(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x033D(0x0003) MISSED OFFSET
 	struct FText                                       WeightTooltipText;                                        // 0x0340(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
 	float                                              DisplayingAlphaEnd;                                       // 0x0358(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x035C(0x0004) MISSED OFFSET
 	class UTslItemDragDropOperation_C*                 TslItemDragDropOperation;                                 // 0x0360(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	unsigned char                                      bWantFocus : 1;                                           // 0x0368(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData03[0x7];                                       // 0x0369(0x0007) MISSED OFFSET
 	class UUserWidget*                                 FocusWidget;                                              // 0x0370(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 	static UClass* StaticClass()
@@ -121,6 +117,10 @@ public:
 	void BndEvt__Hands_K2Node_ComponentBoundEvent_44_RefreshFocus__DelegateSignature();
 	void BndEvt__Leg_K2Node_ComponentBoundEvent_54_RefreshFocus__DelegateSignature();
 	void BndEvt__Feet_K2Node_ComponentBoundEvent_65_RefreshFocus__DelegateSignature();
+	void OnSlotMoveUp();
+	void OnSlotMoveDown();
+	void SlotMoveLeft();
+	void OnSlotMoveRight();
 	void ExecuteUbergraph_EquipmentWidget(int EntryPoint);
 };
 

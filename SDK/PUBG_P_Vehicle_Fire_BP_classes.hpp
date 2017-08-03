@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass P_Vehicle_Fire_BP.P_Vehicle_Fire_BP_C
-// 0x0000 (0x03E8 - 0x03E8)
+// 0x0000 (0x03F8 - 0x03F8)
 class AP_Vehicle_Fire_BP_C : public ATslParticle
 {
 public:

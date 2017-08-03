@@ -1,4 +1,4 @@
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -434,6 +434,79 @@ bool UWeaponEquipmentWidget_C::Up()
 }
 
 
+// Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.SelfUpAttachmentIndexUp
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UWeaponEquipmentWidget_C::SelfUpAttachmentIndexUp()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.SelfUpAttachmentIndexUp");
+
+	UWeaponEquipmentWidget_C_SelfUpAttachmentIndexUp_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.PutAttachment
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UWeaponEquipmentWidget_C::PutAttachment()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.PutAttachment");
+
+	UWeaponEquipmentWidget_C_PutAttachment_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.StopSelftattachmentPut
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UWeaponEquipmentWidget_C::StopSelftattachmentPut()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.StopSelftattachmentPut");
+
+	UWeaponEquipmentWidget_C_StopSelftattachmentPut_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.StartSelfAttachmentPut
+// (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// Parameters:
+// bool                           bResult                        (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UWeaponEquipmentWidget_C::StartSelfAttachmentPut(bool* bResult)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.StartSelfAttachmentPut");
+
+	UWeaponEquipmentWidget_C_StartSelfAttachmentPut_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (bResult != nullptr)
+		*bResult = params.bResult;
+}
+
+
 // Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.OnChildSlotRefreshFocus
 // (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
@@ -852,6 +925,40 @@ void UWeaponEquipmentWidget_C::BndEvt__Weapon_05_K2Node_ComponentBoundEvent_123_
 	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.BndEvt__Weapon_05_K2Node_ComponentBoundEvent_123_RefreshFocus__DelegateSignature");
 
 	UWeaponEquipmentWidget_C_BndEvt__Weapon_05_K2Node_ComponentBoundEvent_123_RefreshFocus__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.OnWidgetMoveUp
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UWeaponEquipmentWidget_C::OnWidgetMoveUp()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.OnWidgetMoveUp");
+
+	UWeaponEquipmentWidget_C_OnWidgetMoveUp_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.OnWidgetMoveDown
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UWeaponEquipmentWidget_C::OnWidgetMoveDown()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.OnWidgetMoveDown");
+
+	UWeaponEquipmentWidget_C_OnWidgetMoveDown_Params params;
 
 	auto flags = fn->FunctionFlags;
 

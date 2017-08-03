@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -133,7 +133,6 @@ struct FPaperTerrainMaterialRule
 	float                                              MinimumAngle;                                             // 0x0020(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              MaximumAngle;                                             // 0x0024(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	unsigned char                                      bEnableCollision : 1;                                     // 0x0028(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0029(0x0003) MISSED OFFSET
 	float                                              CollisionOffset;                                          // 0x002C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int                                                DrawOrder;                                                // 0x0030(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
@@ -153,7 +152,6 @@ struct FIntMargin
 struct FSpriteGeometryShape
 {
 	TEnumAsByte<ESpriteShapeType>                      ShapeType;                                                // 0x0000(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
 	TArray<class Vector2D>                             Vertices;                                                 // 0x0008(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 	class Vector2D                                     BoxSize;                                                  // 0x0018(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
 	class Vector2D                                     BoxPosition;                                              // 0x0020(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
@@ -167,11 +165,9 @@ struct FSpriteGeometryCollection
 {
 	TArray<struct FSpriteGeometryShape>                Shapes;                                                   // 0x0000(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 	TEnumAsByte<ESpritePolygonMode>                    GeometryType;                                             // 0x0010(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0011(0x0003) MISSED OFFSET
 	int                                                PixelsPerSubdivisionX;                                    // 0x0014(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int                                                PixelsPerSubdivisionY;                                    // 0x0018(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	unsigned char                                      bAvoidVertexMerging : 1;                                  // 0x001C(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x001D(0x0003) MISSED OFFSET
 	float                                              AlphaThreshold;                                           // 0x0020(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              DetailAmount;                                             // 0x0024(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              SimplifyEpsilon;                                          // 0x0028(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -226,11 +222,10 @@ struct FPaperSpriteAtlasSlot
 struct FSpriteDrawCallRecord
 {
 	class Vector3D                                     Destination;                                              // 0x0000(0x000C) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
 	class UTexture*                                    BaseTexture;                                              // 0x0010(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData01[0x30];                                      // 0x0018(0x0030) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x30];                                      // 0x0018(0x0030) MISSED OFFSET
 	struct FColor                                      Color;                                                    // 0x0048(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData02[0x84];                                      // 0x004C(0x0084) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x84];                                      // 0x004C(0x0084) MISSED OFFSET
 };
 
 }

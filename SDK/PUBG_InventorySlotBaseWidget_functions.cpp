@@ -1,4 +1,4 @@
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -988,6 +988,57 @@ void UInventorySlotBaseWidget_C::SetInventory(class UInventoryWidget_C* Inventor
 
 	UInventorySlotBaseWidget_C_SetInventory_Params params;
 	params.InventoryWidget = InventoryWidget;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function InventorySlotBaseWidget.InventorySlotBaseWidget_C.Construct
+// (FUNC_BlueprintCosmetic, FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
+
+void UInventorySlotBaseWidget_C::Construct()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function InventorySlotBaseWidget.InventorySlotBaseWidget_C.Construct");
+
+	UInventorySlotBaseWidget_C_Construct_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function InventorySlotBaseWidget.InventorySlotBaseWidget_C.UI_Gamepad_B
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UInventorySlotBaseWidget_C::UI_Gamepad_B()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function InventorySlotBaseWidget.InventorySlotBaseWidget_C.UI_Gamepad_B");
+
+	UInventorySlotBaseWidget_C_UI_Gamepad_B_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function InventorySlotBaseWidget.InventorySlotBaseWidget_C.OnWidgetInputX
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UInventorySlotBaseWidget_C::OnWidgetInputX()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function InventorySlotBaseWidget.InventorySlotBaseWidget_C.OnWidgetInputX");
+
+	UInventorySlotBaseWidget_C_OnWidgetInputX_Params params;
 
 	auto flags = fn->FunctionFlags;
 

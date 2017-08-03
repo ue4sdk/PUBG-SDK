@@ -1,4 +1,4 @@
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -107,11 +107,11 @@ void UVoiceSettingWidget_C::GetMyVoiceOptionString(struct FString* OptionString)
 
 
 // Function VoiceSettingWidget.VoiceSettingWidget_C.IsChanged
-// (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure)
+// (FUNC_Event, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure)
 // Parameters:
-// bool                           bChanged                       (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-void UVoiceSettingWidget_C::IsChanged(bool* bChanged)
+bool UVoiceSettingWidget_C::IsChanged()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function VoiceSettingWidget.VoiceSettingWidget_C.IsChanged");
 
@@ -123,8 +123,7 @@ void UVoiceSettingWidget_C::IsChanged(bool* bChanged)
 
 	fn->FunctionFlags = flags;
 
-	if (bChanged != nullptr)
-		*bChanged = params.bChanged;
+	return params.ReturnValue;
 }
 
 
@@ -163,7 +162,7 @@ void UVoiceSettingWidget_C::Construct()
 
 
 // Function VoiceSettingWidget.VoiceSettingWidget_C.OnApply
-// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// (FUNC_Event, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
 void UVoiceSettingWidget_C::OnApply()
 {
@@ -180,7 +179,7 @@ void UVoiceSettingWidget_C::OnApply()
 
 
 // Function VoiceSettingWidget.VoiceSettingWidget_C.OnDefault
-// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// (FUNC_Event, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
 void UVoiceSettingWidget_C::OnDefault()
 {
@@ -197,7 +196,7 @@ void UVoiceSettingWidget_C::OnDefault()
 
 
 // Function VoiceSettingWidget.VoiceSettingWidget_C.OnReset
-// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// (FUNC_Event, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
 void UVoiceSettingWidget_C::OnReset()
 {

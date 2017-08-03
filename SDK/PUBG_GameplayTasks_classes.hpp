@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -118,7 +118,6 @@ class UGameplayTaskResource : public UObject
 public:
 	int                                                ManualResourceID;                                         // 0x0028(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_Config, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	int8_t                                             AutoResourceID;                                           // 0x002C(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x002D(0x0003) MISSED OFFSET
 	unsigned char                                      bManuallySetID : 1;                                       // 0x0030(0x0001) (CPF_Edit, CPF_DisableEditOnInstance)
 
 	static UClass* StaticClass()
@@ -131,18 +130,18 @@ public:
 
 
 // Class GameplayTasks.GameplayTasksComponent
-// 0x0068 (0x0158 - 0x00F0)
+// 0x0068 (0x0160 - 0x00F8)
 class UGameplayTasksComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x00F0(0x0008) MISSED OFFSET
-	TArray<class UGameplayTask*>                       SimulatedTasks;                                           // 0x00F8(0x0010) (CPF_Net, CPF_ZeroConstructor)
-	TArray<class UGameplayTask*>                       TaskPriorityQueue;                                        // 0x0108(0x0010) (CPF_ZeroConstructor)
-	unsigned char                                      UnknownData01[0x10];                                      // 0x0118(0x0010) MISSED OFFSET
-	TArray<class UGameplayTask*>                       TickingTasks;                                             // 0x0128(0x0010) (CPF_ZeroConstructor)
-	unsigned char                                      UnknownData02[0x8];                                       // 0x0138(0x0008) MISSED OFFSET
-	struct FScriptMulticastDelegate                    OnClaimedResourcesChange;                                 // 0x0140(0x0010) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_InstancedReference)
-	unsigned char                                      UnknownData03[0x8];                                       // 0x0150(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x00F8(0x0008) MISSED OFFSET
+	TArray<class UGameplayTask*>                       SimulatedTasks;                                           // 0x0100(0x0010) (CPF_Net, CPF_ZeroConstructor)
+	TArray<class UGameplayTask*>                       TaskPriorityQueue;                                        // 0x0110(0x0010) (CPF_ZeroConstructor)
+	unsigned char                                      UnknownData01[0x10];                                      // 0x0120(0x0010) MISSED OFFSET
+	TArray<class UGameplayTask*>                       TickingTasks;                                             // 0x0130(0x0010) (CPF_ZeroConstructor)
+	unsigned char                                      UnknownData02[0x8];                                       // 0x0140(0x0008) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnClaimedResourcesChange;                                 // 0x0148(0x0010) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_InstancedReference)
+	unsigned char                                      UnknownData03[0x8];                                       // 0x0158(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

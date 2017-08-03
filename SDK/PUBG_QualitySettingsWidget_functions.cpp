@@ -1,4 +1,4 @@
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -135,11 +135,11 @@ void UQualitySettingsWidget_C::GetQualityLevelByComboBox(TEnumAsByte<EQualityTyp
 
 
 // Function QualitySettingsWidget.QualitySettingsWidget_C.IsChanged
-// (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure, FUNC_Const)
+// (FUNC_Event, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// bool                           bChanged                       (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-void UQualitySettingsWidget_C::IsChanged(bool* bChanged)
+bool UQualitySettingsWidget_C::IsChanged()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function QualitySettingsWidget.QualitySettingsWidget_C.IsChanged");
 
@@ -151,8 +151,7 @@ void UQualitySettingsWidget_C::IsChanged(bool* bChanged)
 
 	fn->FunctionFlags = flags;
 
-	if (bChanged != nullptr)
-		*bChanged = params.bChanged;
+	return params.ReturnValue;
 }
 
 
@@ -196,7 +195,7 @@ void UQualitySettingsWidget_C::InitQualitySettingsWidget()
 
 
 // Function QualitySettingsWidget.QualitySettingsWidget_C.OnDefault
-// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// (FUNC_Event, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
 void UQualitySettingsWidget_C::OnDefault()
 {
@@ -213,7 +212,7 @@ void UQualitySettingsWidget_C::OnDefault()
 
 
 // Function QualitySettingsWidget.QualitySettingsWidget_C.OnApply
-// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// (FUNC_Event, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
 void UQualitySettingsWidget_C::OnApply()
 {
@@ -406,7 +405,7 @@ void UQualitySettingsWidget_C::BndEvt__FoliageComboBox_K2Node_ComponentBoundEven
 
 
 // Function QualitySettingsWidget.QualitySettingsWidget_C.OnReset
-// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// (FUNC_Event, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
 void UQualitySettingsWidget_C::OnReset()
 {

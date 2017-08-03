@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,12 @@ namespace Classes
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function HudAlwaysOn.HudAlwaysOn_C.On_ReportBotton_Prepass_1
+struct UHudAlwaysOn_C_On_ReportBotton_Prepass_1_Params
+{
+	class UWidget*                                     BoundWidget;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
 
 // Function HudAlwaysOn.HudAlwaysOn_C.OnPrepass_2
 struct UHudAlwaysOn_C_OnPrepass_2_Params
@@ -52,6 +58,11 @@ struct UHudAlwaysOn_C_OnPrepass_1_Params
 
 // Function HudAlwaysOn.HudAlwaysOn_C.Construct
 struct UHudAlwaysOn_C_Construct_Params
+{
+};
+
+// Function HudAlwaysOn.HudAlwaysOn_C.BndEvt__ReportBotton_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature
+struct UHudAlwaysOn_C_BndEvt__ReportBotton_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature_Params
 {
 };
 

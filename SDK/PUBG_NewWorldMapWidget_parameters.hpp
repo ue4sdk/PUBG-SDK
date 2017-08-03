@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,62 @@ namespace Classes
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function NewWorldMapWidget.NewWorldMapWidget_C.CheckReplayStatus
+struct UNewWorldMapWidget_C_CheckReplayStatus_Params
+{
+};
+
+// Function NewWorldMapWidget.NewWorldMapWidget_C.PadGuideMoveRight
+struct UNewWorldMapWidget_C_PadGuideMoveRight_Params
+{
+	float                                              Add;                                                      // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function NewWorldMapWidget.NewWorldMapWidget_C.PadGuideMoveUp
+struct UNewWorldMapWidget_C_PadGuideMoveUp_Params
+{
+	float                                              Add;                                                      // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function NewWorldMapWidget.NewWorldMapWidget_C.OnPadGuideMoveingReayReleased
+struct UNewWorldMapWidget_C_OnPadGuideMoveingReayReleased_Params
+{
+};
+
+// Function NewWorldMapWidget.NewWorldMapWidget_C.OnPadGuideMoveingReayPressed
+struct UNewWorldMapWidget_C_OnPadGuideMoveingReayPressed_Params
+{
+};
+
+// Function NewWorldMapWidget.NewWorldMapWidget_C.IsInPadGuideInMap
+struct UNewWorldMapWidget_C_IsInPadGuideInMap_Params
+{
+	bool                                               bIsIn;                                                    // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function NewWorldMapWidget.NewWorldMapWidget_C.MapZoomPad
+struct UNewWorldMapWidget_C_MapZoomPad_Params
+{
+	float                                              AdditaionalZoom;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function NewWorldMapWidget.NewWorldMapWidget_C.OnPutMarkerPad
+struct UNewWorldMapWidget_C_OnPutMarkerPad_Params
+{
+};
+
+// Function NewWorldMapWidget.NewWorldMapWidget_C.GetPadGuidePos_MC
+struct UNewWorldMapWidget_C_GetPadGuidePos_MC_Params
+{
+	class Vector2D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function NewWorldMapWidget.NewWorldMapWidget_C.GetPadGuidePos_UC
+struct UNewWorldMapWidget_C_GetPadGuidePos_UC_Params
+{
+	class Vector2D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
 
 // Function NewWorldMapWidget.NewWorldMapWidget_C.OnMarkerDelete
 struct UNewWorldMapWidget_C_OnMarkerDelete_Params
@@ -214,28 +270,8 @@ struct UNewWorldMapWidget_C_UpdateZoom_Params
 	float                                              ZoomOffset;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
-// Function NewWorldMapWidget.NewWorldMapWidget_C.BndEvt__RestoreHelpButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature
-struct UNewWorldMapWidget_C_BndEvt__RestoreHelpButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature_Params
-{
-};
-
-// Function NewWorldMapWidget.NewWorldMapWidget_C.BndEvt__MinimizeHelpButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
-struct UNewWorldMapWidget_C_BndEvt__MinimizeHelpButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature_Params
-{
-};
-
-// Function NewWorldMapWidget.NewWorldMapWidget_C.BndEvt__Button_77_K2Node_ComponentBoundEvent_240_OnButtonClickedEvent__DelegateSignature
-struct UNewWorldMapWidget_C_BndEvt__Button_77_K2Node_ComponentBoundEvent_240_OnButtonClickedEvent__DelegateSignature_Params
-{
-};
-
-// Function NewWorldMapWidget.NewWorldMapWidget_C.StartChangeMapSize
-struct UNewWorldMapWidget_C_StartChangeMapSize_Params
-{
-};
-
-// Function NewWorldMapWidget.NewWorldMapWidget_C.MovePosition
-struct UNewWorldMapWidget_C_MovePosition_Params
+// Function NewWorldMapWidget.NewWorldMapWidget_C.OnMarkerForReplay
+struct UNewWorldMapWidget_C_OnMarkerForReplay_Params
 {
 };
 
@@ -244,6 +280,32 @@ struct UNewWorldMapWidget_C_Tick_Params
 {
 	struct FGeometry*                                  MyGeometry;                                               // (CPF_Parm, CPF_IsPlainOldData)
 	float*                                             InDeltaTime;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function NewWorldMapWidget.NewWorldMapWidget_C.StartChangeMapSize
+struct UNewWorldMapWidget_C_StartChangeMapSize_Params
+{
+	bool                                               bIsPad;                                                   // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function NewWorldMapWidget.NewWorldMapWidget_C.BndEvt__Button_77_K2Node_ComponentBoundEvent_240_OnButtonClickedEvent__DelegateSignature
+struct UNewWorldMapWidget_C_BndEvt__Button_77_K2Node_ComponentBoundEvent_240_OnButtonClickedEvent__DelegateSignature_Params
+{
+};
+
+// Function NewWorldMapWidget.NewWorldMapWidget_C.BndEvt__MinimizeHelpButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
+struct UNewWorldMapWidget_C_BndEvt__MinimizeHelpButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature_Params
+{
+};
+
+// Function NewWorldMapWidget.NewWorldMapWidget_C.BndEvt__RestoreHelpButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature
+struct UNewWorldMapWidget_C_BndEvt__RestoreHelpButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature_Params
+{
+};
+
+// Function NewWorldMapWidget.NewWorldMapWidget_C.MovePosition
+struct UNewWorldMapWidget_C_MovePosition_Params
+{
 };
 
 // Function NewWorldMapWidget.NewWorldMapWidget_C.Construct

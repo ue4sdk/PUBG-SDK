@@ -1,4 +1,4 @@
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -53,6 +53,26 @@ void UWeaponEquipmentSlotWidget_C::GetSlotContainer(TScriptInterface<class USlot
 
 	if (SlotContainer != nullptr)
 		*SlotContainer = params.SlotContainer;
+}
+
+
+// Function WeaponEquipmentSlotWidget.WeaponEquipmentSlotWidget_C.SetGamepadSelfPutAttachmentFocus
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// Parameters:
+// bool                           bFocus                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UWeaponEquipmentSlotWidget_C::SetGamepadSelfPutAttachmentFocus(bool bFocus)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentSlotWidget.WeaponEquipmentSlotWidget_C.SetGamepadSelfPutAttachmentFocus");
+
+	UWeaponEquipmentSlotWidget_C_SetGamepadSelfPutAttachmentFocus_Params params;
+	params.bFocus = bFocus;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
 }
 
 
@@ -1410,6 +1430,181 @@ void UWeaponEquipmentSlotWidget_C::BndEvt__Stock_K2Node_ComponentBoundEvent_28_R
 	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentSlotWidget.WeaponEquipmentSlotWidget_C.BndEvt__Stock_K2Node_ComponentBoundEvent_28_RefreshFocus__DelegateSignature");
 
 	UWeaponEquipmentSlotWidget_C_BndEvt__Stock_K2Node_ComponentBoundEvent_28_RefreshFocus__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function WeaponEquipmentSlotWidget.WeaponEquipmentSlotWidget_C.WidgetInputBPressed
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UWeaponEquipmentSlotWidget_C::WidgetInputBPressed()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentSlotWidget.WeaponEquipmentSlotWidget_C.WidgetInputBPressed");
+
+	UWeaponEquipmentSlotWidget_C_WidgetInputBPressed_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function WeaponEquipmentSlotWidget.WeaponEquipmentSlotWidget_C.OnWidgetInputBReleased
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UWeaponEquipmentSlotWidget_C::OnWidgetInputBReleased()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentSlotWidget.WeaponEquipmentSlotWidget_C.OnWidgetInputBReleased");
+
+	UWeaponEquipmentSlotWidget_C_OnWidgetInputBReleased_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function WeaponEquipmentSlotWidget.WeaponEquipmentSlotWidget_C.Tick
+// (FUNC_BlueprintCosmetic, FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
+// Parameters:
+// struct FGeometry*              MyGeometry                     (CPF_Parm, CPF_IsPlainOldData)
+// float*                         InDeltaTime                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UWeaponEquipmentSlotWidget_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentSlotWidget.WeaponEquipmentSlotWidget_C.Tick");
+
+	UWeaponEquipmentSlotWidget_C_Tick_Params params;
+	params.MyGeometry = MyGeometry;
+	params.InDeltaTime = InDeltaTime;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function WeaponEquipmentSlotWidget.WeaponEquipmentSlotWidget_C.OnSlotMoveUp
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UWeaponEquipmentSlotWidget_C::OnSlotMoveUp()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentSlotWidget.WeaponEquipmentSlotWidget_C.OnSlotMoveUp");
+
+	UWeaponEquipmentSlotWidget_C_OnSlotMoveUp_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function WeaponEquipmentSlotWidget.WeaponEquipmentSlotWidget_C.OnSlotMoveDown
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UWeaponEquipmentSlotWidget_C::OnSlotMoveDown()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentSlotWidget.WeaponEquipmentSlotWidget_C.OnSlotMoveDown");
+
+	UWeaponEquipmentSlotWidget_C_OnSlotMoveDown_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function WeaponEquipmentSlotWidget.WeaponEquipmentSlotWidget_C.SlotMoveLeft
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UWeaponEquipmentSlotWidget_C::SlotMoveLeft()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentSlotWidget.WeaponEquipmentSlotWidget_C.SlotMoveLeft");
+
+	UWeaponEquipmentSlotWidget_C_SlotMoveLeft_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function WeaponEquipmentSlotWidget.WeaponEquipmentSlotWidget_C.OnSlotMoveRight
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UWeaponEquipmentSlotWidget_C::OnSlotMoveRight()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentSlotWidget.WeaponEquipmentSlotWidget_C.OnSlotMoveRight");
+
+	UWeaponEquipmentSlotWidget_C_OnSlotMoveRight_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function WeaponEquipmentSlotWidget.WeaponEquipmentSlotWidget_C.CustomEvent_1
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UWeaponEquipmentSlotWidget_C::CustomEvent_1()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentSlotWidget.WeaponEquipmentSlotWidget_C.CustomEvent_1");
+
+	UWeaponEquipmentSlotWidget_C_CustomEvent_1_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function WeaponEquipmentSlotWidget.WeaponEquipmentSlotWidget_C.OnWidgetInputX
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UWeaponEquipmentSlotWidget_C::OnWidgetInputX()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentSlotWidget.WeaponEquipmentSlotWidget_C.OnWidgetInputX");
+
+	UWeaponEquipmentSlotWidget_C_OnWidgetInputX_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function WeaponEquipmentSlotWidget.WeaponEquipmentSlotWidget_C.CustomEvent_2
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UWeaponEquipmentSlotWidget_C::CustomEvent_2()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentSlotWidget.WeaponEquipmentSlotWidget_C.CustomEvent_2");
+
+	UWeaponEquipmentSlotWidget_C_CustomEvent_2_Params params;
 
 	auto flags = fn->FunctionFlags;
 

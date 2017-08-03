@@ -1,4 +1,4 @@
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,179 @@ namespace Classes
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function HudMain.HudMain_C.InitForReplay
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UHudMain_C::InitForReplay()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function HudMain.HudMain_C.InitForReplay");
+
+	UHudMain_C_InitForReplay_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function HudMain.HudMain_C.OnToggleOption
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UHudMain_C::OnToggleOption()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function HudMain.HudMain_C.OnToggleOption");
+
+	UHudMain_C_OnToggleOption_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function HudMain.HudMain_C.On_Name_Prepass_1
+// (FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// Parameters:
+// class UWidget*                 BoundWidget                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UHudMain_C::On_Name_Prepass_1(class UWidget* BoundWidget)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function HudMain.HudMain_C.On_Name_Prepass_1");
+
+	UHudMain_C_On_Name_Prepass_1_Params params;
+	params.BoundWidget = BoundWidget;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function HudMain.HudMain_C.ShowReplayTimeline
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UHudMain_C::ShowReplayTimeline()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function HudMain.HudMain_C.ShowReplayTimeline");
+
+	UHudMain_C_ShowReplayTimeline_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function HudMain.HudMain_C.OnToggleBattleList
+// (FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UHudMain_C::OnToggleBattleList()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function HudMain.HudMain_C.OnToggleBattleList");
+
+	UHudMain_C_OnToggleBattleList_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function HudMain.HudMain_C.OnMapHide
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UHudMain_C::OnMapHide()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function HudMain.HudMain_C.OnMapHide");
+
+	UHudMain_C_OnMapHide_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function HudMain.HudMain_C.OnMapShow
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UHudMain_C::OnMapShow()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function HudMain.HudMain_C.OnMapShow");
+
+	UHudMain_C_OnMapShow_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function HudMain.HudMain_C.OnKey_MapReleased
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UHudMain_C::OnKey_MapReleased()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function HudMain.HudMain_C.OnKey_MapReleased");
+
+	UHudMain_C_OnKey_MapReleased_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function HudMain.HudMain_C.OnKey_MapPressed
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UHudMain_C::OnKey_MapPressed()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function HudMain.HudMain_C.OnKey_MapPressed");
+
+	UHudMain_C_OnKey_MapPressed_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function HudMain.HudMain_C.OnShowCarePackageItemList
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UHudMain_C::OnShowCarePackageItemList()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function HudMain.HudMain_C.OnShowCarePackageItemList");
+
+	UHudMain_C_OnShowCarePackageItemList_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function HudMain.HudMain_C.GetMiniMapType
 // (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure, FUNC_Const)
@@ -608,14 +781,14 @@ struct FText UHudMain_C::Get_DebugInformation_Text_1()
 }
 
 
-// Function HudMain.HudMain_C.OnKey_ToggleMap
+// Function HudMain.HudMain_C.OnToggleMap
 // (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
-void UHudMain_C::OnKey_ToggleMap()
+void UHudMain_C::OnToggleMap()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function HudMain.HudMain_C.OnKey_ToggleMap");
+	static auto fn = UObject::FindObject<UFunction>("Function HudMain.HudMain_C.OnToggleMap");
 
-	UHudMain_C_OnKey_ToggleMap_Params params;
+	UHudMain_C_OnToggleMap_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -781,6 +954,23 @@ void UHudMain_C::InitializeHUD()
 }
 
 
+// Function HudMain.HudMain_C.Construct
+// (FUNC_BlueprintCosmetic, FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
+
+void UHudMain_C::Construct()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function HudMain.HudMain_C.Construct");
+
+	UHudMain_C_Construct_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function HudMain.HudMain_C.OnShowWidget
 // (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 // Parameters:
@@ -803,14 +993,70 @@ void UHudMain_C::OnShowWidget(const struct FString& WidgetName, bool bShow)
 }
 
 
-// Function HudMain.HudMain_C.Construct
-// (FUNC_BlueprintCosmetic, FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
+// Function HudMain.HudMain_C.HideMapForInitReplay
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
-void UHudMain_C::Construct()
+void UHudMain_C::HideMapForInitReplay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function HudMain.HudMain_C.Construct");
+	static auto fn = UObject::FindObject<UFunction>("Function HudMain.HudMain_C.HideMapForInitReplay");
 
-	UHudMain_C_Construct_Params params;
+	UHudMain_C_HideMapForInitReplay_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function HudMain.HudMain_C.CheckReplayTimer
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UHudMain_C::CheckReplayTimer()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function HudMain.HudMain_C.CheckReplayTimer");
+
+	UHudMain_C_CheckReplayTimer_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function HudMain.HudMain_C.CreateCheckReplayTimer
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UHudMain_C::CreateCheckReplayTimer()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function HudMain.HudMain_C.CreateCheckReplayTimer");
+
+	UHudMain_C_CreateCheckReplayTimer_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function HudMain.HudMain_C.Tick
+// (FUNC_BlueprintCosmetic, FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
+// Parameters:
+// struct FGeometry*              MyGeometry                     (CPF_Parm, CPF_IsPlainOldData)
+// float*                         InDeltaTime                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UHudMain_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function HudMain.HudMain_C.Tick");
+
+	UHudMain_C_Tick_Params params;
+	params.MyGeometry = MyGeometry;
+	params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
 

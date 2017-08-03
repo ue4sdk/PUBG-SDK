@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -27,8 +27,10 @@ public:
 	}
 
 
+	void IsPlayCharacterPickupAnim(bool* bIsPickup);
 	void IsCharacterCasting(bool* IsCasting);
 	void PlaySoundAk(class UAkAudioEvent* SoundAk);
+	void Construct();
 	void OnMouseEnter(struct FGeometry* MyGeometry, struct FPointerEvent* MouseEvent);
 	void ExecuteUbergraph_SlotBaseWidget(int EntryPoint);
 };

@@ -1,4 +1,4 @@
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,198 @@ namespace Classes
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function NewWorldMapWidget.NewWorldMapWidget_C.CheckReplayStatus
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UNewWorldMapWidget_C::CheckReplayStatus()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function NewWorldMapWidget.NewWorldMapWidget_C.CheckReplayStatus");
+
+	UNewWorldMapWidget_C_CheckReplayStatus_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function NewWorldMapWidget.NewWorldMapWidget_C.PadGuideMoveRight
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// Parameters:
+// float                          Add                            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UNewWorldMapWidget_C::PadGuideMoveRight(float Add)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function NewWorldMapWidget.NewWorldMapWidget_C.PadGuideMoveRight");
+
+	UNewWorldMapWidget_C_PadGuideMoveRight_Params params;
+	params.Add = Add;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function NewWorldMapWidget.NewWorldMapWidget_C.PadGuideMoveUp
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// Parameters:
+// float                          Add                            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UNewWorldMapWidget_C::PadGuideMoveUp(float Add)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function NewWorldMapWidget.NewWorldMapWidget_C.PadGuideMoveUp");
+
+	UNewWorldMapWidget_C_PadGuideMoveUp_Params params;
+	params.Add = Add;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function NewWorldMapWidget.NewWorldMapWidget_C.OnPadGuideMoveingReayReleased
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UNewWorldMapWidget_C::OnPadGuideMoveingReayReleased()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function NewWorldMapWidget.NewWorldMapWidget_C.OnPadGuideMoveingReayReleased");
+
+	UNewWorldMapWidget_C_OnPadGuideMoveingReayReleased_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function NewWorldMapWidget.NewWorldMapWidget_C.OnPadGuideMoveingReayPressed
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UNewWorldMapWidget_C::OnPadGuideMoveingReayPressed()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function NewWorldMapWidget.NewWorldMapWidget_C.OnPadGuideMoveingReayPressed");
+
+	UNewWorldMapWidget_C_OnPadGuideMoveingReayPressed_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function NewWorldMapWidget.NewWorldMapWidget_C.IsInPadGuideInMap
+// (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// bool                           bIsIn                          (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UNewWorldMapWidget_C::IsInPadGuideInMap(bool* bIsIn)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function NewWorldMapWidget.NewWorldMapWidget_C.IsInPadGuideInMap");
+
+	UNewWorldMapWidget_C_IsInPadGuideInMap_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (bIsIn != nullptr)
+		*bIsIn = params.bIsIn;
+}
+
+
+// Function NewWorldMapWidget.NewWorldMapWidget_C.MapZoomPad
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// Parameters:
+// float                          AdditaionalZoom                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UNewWorldMapWidget_C::MapZoomPad(float AdditaionalZoom)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function NewWorldMapWidget.NewWorldMapWidget_C.MapZoomPad");
+
+	UNewWorldMapWidget_C_MapZoomPad_Params params;
+	params.AdditaionalZoom = AdditaionalZoom;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function NewWorldMapWidget.NewWorldMapWidget_C.OnPutMarkerPad
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UNewWorldMapWidget_C::OnPutMarkerPad()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function NewWorldMapWidget.NewWorldMapWidget_C.OnPutMarkerPad");
+
+	UNewWorldMapWidget_C_OnPutMarkerPad_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function NewWorldMapWidget.NewWorldMapWidget_C.GetPadGuidePos_MC
+// (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// class Vector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+class Vector2D UNewWorldMapWidget_C::GetPadGuidePos_MC()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function NewWorldMapWidget.NewWorldMapWidget_C.GetPadGuidePos_MC");
+
+	UNewWorldMapWidget_C_GetPadGuidePos_MC_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function NewWorldMapWidget.NewWorldMapWidget_C.GetPadGuidePos_UC
+// (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// class Vector2D                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+class Vector2D UNewWorldMapWidget_C::GetPadGuidePos_UC()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function NewWorldMapWidget.NewWorldMapWidget_C.GetPadGuidePos_UC");
+
+	UNewWorldMapWidget_C_GetPadGuidePos_UC_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
 
 // Function NewWorldMapWidget.NewWorldMapWidget_C.OnMarkerDelete
 // (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
@@ -611,7 +803,7 @@ void UNewWorldMapWidget_C::UpdateMap(const class Vector2D& MapSize)
 
 
 // Function NewWorldMapWidget.NewWorldMapWidget_C.GetMapSize
-// (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure)
+// (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
 // float                          Zoom                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class Vector2D                 MapSize                        (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -679,14 +871,14 @@ void UNewWorldMapWidget_C::UpdateZoom(float ZoomOffset)
 }
 
 
-// Function NewWorldMapWidget.NewWorldMapWidget_C.BndEvt__RestoreHelpButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature
-// (FUNC_BlueprintEvent)
+// Function NewWorldMapWidget.NewWorldMapWidget_C.OnMarkerForReplay
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
-void UNewWorldMapWidget_C::BndEvt__RestoreHelpButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
+void UNewWorldMapWidget_C::OnMarkerForReplay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function NewWorldMapWidget.NewWorldMapWidget_C.BndEvt__RestoreHelpButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature");
+	static auto fn = UObject::FindObject<UFunction>("Function NewWorldMapWidget.NewWorldMapWidget_C.OnMarkerForReplay");
 
-	UNewWorldMapWidget_C_BndEvt__RestoreHelpButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature_Params params;
+	UNewWorldMapWidget_C_OnMarkerForReplay_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -696,14 +888,39 @@ void UNewWorldMapWidget_C::BndEvt__RestoreHelpButton_K2Node_ComponentBoundEvent_
 }
 
 
-// Function NewWorldMapWidget.NewWorldMapWidget_C.BndEvt__MinimizeHelpButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
-// (FUNC_BlueprintEvent)
+// Function NewWorldMapWidget.NewWorldMapWidget_C.Tick
+// (FUNC_BlueprintCosmetic, FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
+// Parameters:
+// struct FGeometry*              MyGeometry                     (CPF_Parm, CPF_IsPlainOldData)
+// float*                         InDeltaTime                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UNewWorldMapWidget_C::BndEvt__MinimizeHelpButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
+void UNewWorldMapWidget_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function NewWorldMapWidget.NewWorldMapWidget_C.BndEvt__MinimizeHelpButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+	static auto fn = UObject::FindObject<UFunction>("Function NewWorldMapWidget.NewWorldMapWidget_C.Tick");
 
-	UNewWorldMapWidget_C_BndEvt__MinimizeHelpButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature_Params params;
+	UNewWorldMapWidget_C_Tick_Params params;
+	params.MyGeometry = MyGeometry;
+	params.InDeltaTime = InDeltaTime;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function NewWorldMapWidget.NewWorldMapWidget_C.StartChangeMapSize
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// Parameters:
+// bool                           bIsPad                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UNewWorldMapWidget_C::StartChangeMapSize(bool bIsPad)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function NewWorldMapWidget.NewWorldMapWidget_C.StartChangeMapSize");
+
+	UNewWorldMapWidget_C_StartChangeMapSize_Params params;
+	params.bIsPad = bIsPad;
 
 	auto flags = fn->FunctionFlags;
 
@@ -730,14 +947,31 @@ void UNewWorldMapWidget_C::BndEvt__Button_77_K2Node_ComponentBoundEvent_240_OnBu
 }
 
 
-// Function NewWorldMapWidget.NewWorldMapWidget_C.StartChangeMapSize
-// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// Function NewWorldMapWidget.NewWorldMapWidget_C.BndEvt__MinimizeHelpButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
+// (FUNC_BlueprintEvent)
 
-void UNewWorldMapWidget_C::StartChangeMapSize()
+void UNewWorldMapWidget_C::BndEvt__MinimizeHelpButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function NewWorldMapWidget.NewWorldMapWidget_C.StartChangeMapSize");
+	static auto fn = UObject::FindObject<UFunction>("Function NewWorldMapWidget.NewWorldMapWidget_C.BndEvt__MinimizeHelpButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
 
-	UNewWorldMapWidget_C_StartChangeMapSize_Params params;
+	UNewWorldMapWidget_C_BndEvt__MinimizeHelpButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function NewWorldMapWidget.NewWorldMapWidget_C.BndEvt__RestoreHelpButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature
+// (FUNC_BlueprintEvent)
+
+void UNewWorldMapWidget_C::BndEvt__RestoreHelpButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function NewWorldMapWidget.NewWorldMapWidget_C.BndEvt__RestoreHelpButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature");
+
+	UNewWorldMapWidget_C_BndEvt__RestoreHelpButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -755,28 +989,6 @@ void UNewWorldMapWidget_C::MovePosition()
 	static auto fn = UObject::FindObject<UFunction>("Function NewWorldMapWidget.NewWorldMapWidget_C.MovePosition");
 
 	UNewWorldMapWidget_C_MovePosition_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function NewWorldMapWidget.NewWorldMapWidget_C.Tick
-// (FUNC_BlueprintCosmetic, FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
-// Parameters:
-// struct FGeometry*              MyGeometry                     (CPF_Parm, CPF_IsPlainOldData)
-// float*                         InDeltaTime                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-
-void UNewWorldMapWidget_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function NewWorldMapWidget.NewWorldMapWidget_C.Tick");
-
-	UNewWorldMapWidget_C_Tick_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
 

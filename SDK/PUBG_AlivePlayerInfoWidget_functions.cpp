@@ -1,4 +1,4 @@
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,23 @@ namespace Classes
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function AlivePlayerInfoWidget.AlivePlayerInfoWidget_C.GetGameStateBP
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UAlivePlayerInfoWidget_C::GetGameStateBP()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AlivePlayerInfoWidget.AlivePlayerInfoWidget_C.GetGameStateBP");
+
+	UAlivePlayerInfoWidget_C_GetGameStateBP_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function AlivePlayerInfoWidget.AlivePlayerInfoWidget_C.Get_SurvivorCount_ColorAndOpacity_1
 // (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure)

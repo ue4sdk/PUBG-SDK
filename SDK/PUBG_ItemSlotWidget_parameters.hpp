@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -475,6 +475,39 @@ struct UItemSlotWidget_C_ShowToolTip_Params
 // Function ItemSlotWidget.ItemSlotWidget_C.Construct
 struct UItemSlotWidget_C_Construct_Params
 {
+};
+
+// Function ItemSlotWidget.ItemSlotWidget_C.OnInputXPressed
+struct UItemSlotWidget_C_OnInputXPressed_Params
+{
+};
+
+// Function ItemSlotWidget.ItemSlotWidget_C.OnInputXReleased
+struct UItemSlotWidget_C_OnInputXReleased_Params
+{
+};
+
+// Function ItemSlotWidget.ItemSlotWidget_C.UI_Gamepad_B_Pressed
+struct UItemSlotWidget_C_UI_Gamepad_B_Pressed_Params
+{
+};
+
+// Function ItemSlotWidget.ItemSlotWidget_C.UI_Gamepad_B_Released
+struct UItemSlotWidget_C_UI_Gamepad_B_Released_Params
+{
+};
+
+// Function ItemSlotWidget.ItemSlotWidget_C.Tick
+struct UItemSlotWidget_C_Tick_Params
+{
+	struct FGeometry*                                  MyGeometry;                                               // (CPF_Parm, CPF_IsPlainOldData)
+	float*                                             InDeltaTime;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function ItemSlotWidget.ItemSlotWidget_C.OnButtonClicked
+struct UItemSlotWidget_C_OnButtonClicked_Params
+{
+	TEnumAsByte<EPopupButtonID>                        ButtonID;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // Function ItemSlotWidget.ItemSlotWidget_C.ExecuteUbergraph_ItemSlotWidget

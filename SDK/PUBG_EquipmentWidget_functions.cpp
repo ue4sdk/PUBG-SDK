@@ -1,4 +1,4 @@
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -1222,6 +1222,74 @@ void UEquipmentWidget_C::BndEvt__Feet_K2Node_ComponentBoundEvent_65_RefreshFocus
 	static auto fn = UObject::FindObject<UFunction>("Function EquipmentWidget.EquipmentWidget_C.BndEvt__Feet_K2Node_ComponentBoundEvent_65_RefreshFocus__DelegateSignature");
 
 	UEquipmentWidget_C_BndEvt__Feet_K2Node_ComponentBoundEvent_65_RefreshFocus__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function EquipmentWidget.EquipmentWidget_C.OnSlotMoveUp
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UEquipmentWidget_C::OnSlotMoveUp()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function EquipmentWidget.EquipmentWidget_C.OnSlotMoveUp");
+
+	UEquipmentWidget_C_OnSlotMoveUp_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function EquipmentWidget.EquipmentWidget_C.OnSlotMoveDown
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UEquipmentWidget_C::OnSlotMoveDown()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function EquipmentWidget.EquipmentWidget_C.OnSlotMoveDown");
+
+	UEquipmentWidget_C_OnSlotMoveDown_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function EquipmentWidget.EquipmentWidget_C.SlotMoveLeft
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UEquipmentWidget_C::SlotMoveLeft()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function EquipmentWidget.EquipmentWidget_C.SlotMoveLeft");
+
+	UEquipmentWidget_C_SlotMoveLeft_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function EquipmentWidget.EquipmentWidget_C.OnSlotMoveRight
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UEquipmentWidget_C::OnSlotMoveRight()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function EquipmentWidget.EquipmentWidget_C.OnSlotMoveRight");
+
+	UEquipmentWidget_C_OnSlotMoveRight_Params params;
 
 	auto flags = fn->FunctionFlags;
 

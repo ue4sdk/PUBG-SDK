@@ -1,4 +1,4 @@
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -209,8 +209,30 @@ void UInGameMenuWidget_C::CustomEvent_2()
 }
 
 
+// Function InGameMenuWidget.InGameMenuWidget_C.Tick
+// (FUNC_BlueprintCosmetic, FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
+// Parameters:
+// struct FGeometry*              MyGeometry                     (CPF_Parm, CPF_IsPlainOldData)
+// float*                         InDeltaTime                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UInGameMenuWidget_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function InGameMenuWidget.InGameMenuWidget_C.Tick");
+
+	UInGameMenuWidget_C_Tick_Params params;
+	params.MyGeometry = MyGeometry;
+	params.InDeltaTime = InDeltaTime;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function InGameMenuWidget.InGameMenuWidget_C.ExecuteUbergraph_InGameMenuWidget
-// ()
+// (FUNC_HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 

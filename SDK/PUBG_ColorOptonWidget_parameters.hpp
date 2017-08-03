@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,16 +14,20 @@ namespace Classes
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function ColorOptonWidget.ColorOptonWidget_C.InitializeColorBlindComboBox
+struct UColorOptonWidget_C_InitializeColorBlindComboBox_Params
+{
+};
+
+// Function ColorOptonWidget.ColorOptonWidget_C.SettingDefault
+struct UColorOptonWidget_C_SettingDefault_Params
+{
+};
+
 // Function ColorOptonWidget.ColorOptonWidget_C.IsChanged
 struct UColorOptonWidget_C_IsChanged_Params
 {
-	bool                                               bChanged;                                                 // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function ColorOptonWidget.ColorOptonWidget_C.IsEnableApply
-struct UColorOptonWidget_C_IsEnableApply_Params
-{
-	bool                                               bResult;                                                  // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
 // Function ColorOptonWidget.ColorOptonWidget_C.Construct

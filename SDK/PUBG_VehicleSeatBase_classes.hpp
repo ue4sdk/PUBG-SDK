@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,15 +13,15 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass VehicleSeatBase.VehicleSeatBase_C
-// 0x0024 (0x0444 - 0x0420)
+// 0x0024 (0x0454 - 0x0430)
 class AVehicleSeatBase_C : public ATslVehicleSeatActor
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0420(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_DuplicateTransient)
-	class USphereComponent*                            VehicleSeatInteractionCollision;                          // 0x0428(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UInteractionComponent*                       Interaction;                                              // 0x0430(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0438(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              LastInteractionTime;                                      // 0x0440(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0430(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_DuplicateTransient)
+	class USphereComponent*                            VehicleSeatInteractionCollision;                          // 0x0438(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UInteractionComponent*                       Interaction;                                              // 0x0440(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0448(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              LastInteractionTime;                                      // 0x0450(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

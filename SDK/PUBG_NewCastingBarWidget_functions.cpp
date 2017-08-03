@@ -1,4 +1,4 @@
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -142,6 +142,23 @@ void UNewCastingBarWidget_C::Destruct()
 	static auto fn = UObject::FindObject<UFunction>("Function NewCastingBarWidget.NewCastingBarWidget_C.Destruct");
 
 	UNewCastingBarWidget_C_Destruct_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function NewCastingBarWidget.NewCastingBarWidget_C.OnInteract
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UNewCastingBarWidget_C::OnInteract()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function NewCastingBarWidget.NewCastingBarWidget_C.OnInteract");
+
+	UNewCastingBarWidget_C_OnInteract_Params params;
 
 	auto flags = fn->FunctionFlags;
 

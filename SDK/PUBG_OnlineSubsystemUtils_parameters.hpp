@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -96,7 +96,7 @@ struct UEndMatchCallbackProxy_EndMatch_Params
 	class UObject*                                     WorldContextObject;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class APlayerController*                           PlayerController;                                         // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	TScriptInterface<class UTurnBasedMatchInterface>   MatchActor;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FString                                     MatchID;                                                  // (CPF_Parm, CPF_ZeroConstructor)
+	struct FString                                     MatchId;                                                  // (CPF_Parm, CPF_ZeroConstructor)
 	TEnumAsByte<EMPMatchOutcome>                       LocalPlayerOutcome;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	TEnumAsByte<EMPMatchOutcome>                       OtherPlayersOutcome;                                      // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class UEndMatchCallbackProxy*                      ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
@@ -107,7 +107,7 @@ struct UEndTurnCallbackProxy_EndTurn_Params
 {
 	class UObject*                                     WorldContextObject;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class APlayerController*                           PlayerController;                                         // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FString                                     MatchID;                                                  // (CPF_Parm, CPF_ZeroConstructor)
+	struct FString                                     MatchId;                                                  // (CPF_Parm, CPF_ZeroConstructor)
 	TScriptInterface<class UTurnBasedMatchInterface>   TurnBasedMatchInterface;                                  // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class UEndTurnCallbackProxy*                       ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
@@ -292,7 +292,7 @@ struct UQuitMatchCallbackProxy_QuitMatch_Params
 {
 	class UObject*                                     WorldContextObject;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class APlayerController*                           PlayerController;                                         // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FString                                     MatchID;                                                  // (CPF_Parm, CPF_ZeroConstructor)
+	struct FString                                     MatchId;                                                  // (CPF_Parm, CPF_ZeroConstructor)
 	TEnumAsByte<EMPMatchOutcome>                       Outcome;                                                  // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int                                                TurnTimeoutInSeconds;                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class UQuitMatchCallbackProxy*                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
@@ -319,7 +319,7 @@ struct UTurnBasedBlueprintLibrary_GetPlayerDisplayName_Params
 {
 	class UObject*                                     WorldContextObject;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class APlayerController*                           PlayerController;                                         // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FString                                     MatchID;                                                  // (CPF_Parm, CPF_ZeroConstructor)
+	struct FString                                     MatchId;                                                  // (CPF_Parm, CPF_ZeroConstructor)
 	int                                                PlayerIndex;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	struct FString                                     PlayerDisplayName;                                        // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor)
 };
@@ -329,7 +329,7 @@ struct UTurnBasedBlueprintLibrary_GetMyPlayerIndex_Params
 {
 	class UObject*                                     WorldContextObject;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class APlayerController*                           PlayerController;                                         // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FString                                     MatchID;                                                  // (CPF_Parm, CPF_ZeroConstructor)
+	struct FString                                     MatchId;                                                  // (CPF_Parm, CPF_ZeroConstructor)
 	int                                                PlayerIndex;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
@@ -338,7 +338,7 @@ struct UTurnBasedBlueprintLibrary_GetIsMyTurn_Params
 {
 	class UObject*                                     WorldContextObject;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class APlayerController*                           PlayerController;                                         // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FString                                     MatchID;                                                  // (CPF_Parm, CPF_ZeroConstructor)
+	struct FString                                     MatchId;                                                  // (CPF_Parm, CPF_ZeroConstructor)
 	bool                                               bIsMyTurn;                                                // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 

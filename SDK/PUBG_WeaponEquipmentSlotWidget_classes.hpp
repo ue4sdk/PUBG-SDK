@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass WeaponEquipmentSlotWidget.WeaponEquipmentSlotWidget_C
-// 0x0180 (0x0470 - 0x02F0)
+// 0x0185 (0x0475 - 0x02F0)
 class UWeaponEquipmentSlotWidget_C : public UInventorySlotBaseWidget_C
 {
 public:
@@ -38,10 +38,8 @@ public:
 	class UTextBlock*                                  WeaponName;                                               // 0x0380(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData, CPF_RepSkip, CPF_RepNotify, CPF_Interp, CPF_NonTransactional, CPF_EditorOnly, CPF_NoDestructor, CPF_AutoWeak, CPF_ContainsInstancedReference, CPF_AssetRegistrySearchable, CPF_SimpleDisplay, CPF_AdvancedDisplay, CPF_Protected, CPF_BlueprintCallable, CPF_BlueprintAuthorityOnly, CPF_TextExportTransient, CPF_NonPIEDuplicateTransient, CPF_ExposeOnSpawn, CPF_PersistentInstance, CPF_UObjectWrapper, CPF_HasGetValueTypeHash, CPF_NativeAccessSpecifierPublic, CPF_NativeAccessSpecifierProtected, CPF_NativeAccessSpecifierPrivate)
 	class UWidgetSwitcher*                             WidgetSwitcher_1;                                         // 0x0388(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData, CPF_RepSkip, CPF_RepNotify, CPF_Interp, CPF_NonTransactional, CPF_EditorOnly, CPF_NoDestructor, CPF_AutoWeak, CPF_ContainsInstancedReference, CPF_AssetRegistrySearchable, CPF_SimpleDisplay, CPF_AdvancedDisplay, CPF_Protected, CPF_BlueprintCallable, CPF_BlueprintAuthorityOnly, CPF_TextExportTransient, CPF_NonPIEDuplicateTransient, CPF_ExposeOnSpawn, CPF_PersistentInstance, CPF_UObjectWrapper, CPF_HasGetValueTypeHash, CPF_NativeAccessSpecifierPublic, CPF_NativeAccessSpecifierProtected, CPF_NativeAccessSpecifierPrivate)
 	int                                                SlotIndex;                                                // 0x0390(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0394(0x0004) MISSED OFFSET
 	struct FScriptMulticastDelegate                    OnReleased;                                               // 0x0398(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_BlueprintAssignable)
 	float                                              IconSize_1;                                               // 0x03A8(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x03AC(0x0004) MISSED OFFSET
 	class AItemStudio*                                 WeaponStudio;                                             // 0x03B0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnTemplate, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	class UTextureRenderTarget2D*                      RenderTargetTexture;                                      // 0x03B8(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class UMaterialInstanceDynamic*                    WeaponCaptureMaterial;                                    // 0x03C0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
@@ -62,8 +60,9 @@ public:
 	class AInventory*                                  Inventory;                                                // 0x0450(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnTemplate, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	class UClass*                                      ItemStudioClass;                                          // 0x0458(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	unsigned char                                      bWantFocus : 1;                                           // 0x0460(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData02[0x7];                                       // 0x0461(0x0007) MISSED OFFSET
 	class UUserWidget*                                 ChildFocusWidget;                                         // 0x0468(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	float                                              PressedBTime;                                             // 0x0470(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      bPressedB : 1;                                            // 0x0474(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -74,6 +73,7 @@ public:
 
 	void GetSlotItem(TScriptInterface<class USlotInterface>* SlotItem);
 	void GetSlotContainer(TScriptInterface<class USlotContainerInterface>* SlotContainer);
+	void SetGamepadSelfPutAttachmentFocus(bool bFocus);
 	bool InputB();
 	void OnChildSlotRefreshFocus();
 	class UUserWidget* GetFocusingChildWidget();
@@ -140,6 +140,16 @@ public:
 	void BndEvt__LowerRail_K2Node_ComponentBoundEvent_19_RefreshFocus__DelegateSignature();
 	void BndEvt__Magazine_K2Node_ComponentBoundEvent_23_RefreshFocus__DelegateSignature();
 	void BndEvt__Stock_K2Node_ComponentBoundEvent_28_RefreshFocus__DelegateSignature();
+	void WidgetInputBPressed();
+	void OnWidgetInputBReleased();
+	void Tick(struct FGeometry* MyGeometry, float* InDeltaTime);
+	void OnSlotMoveUp();
+	void OnSlotMoveDown();
+	void SlotMoveLeft();
+	void OnSlotMoveRight();
+	void CustomEvent_1();
+	void OnWidgetInputX();
+	void CustomEvent_2();
 	void ExecuteUbergraph_WeaponEquipmentSlotWidget(int EntryPoint);
 	void OnDragLeaveWeaponSlot__DelegateSignature(int SlotIndex);
 	void OnDragEnterWeaponSlot__DelegateSignature(int SlotIndex);

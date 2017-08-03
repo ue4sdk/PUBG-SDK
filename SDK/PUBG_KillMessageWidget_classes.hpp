@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass KillMessageWidget.KillMessageWidget_C
-// 0x0300 (0x05E8 - 0x02E8)
+// 0x0301 (0x05E9 - 0x02E8)
 class UKillMessageWidget_C : public UNewSystemMessageWidget_C
 {
 public:
@@ -38,7 +38,6 @@ public:
 	struct FText                                       OptionText;                                               // 0x0490(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
 	struct FText                                       MethodText;                                               // 0x04A8(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
 	unsigned char                                      bNotDisplayKiller : 1;                                    // 0x04C0(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x04C1(0x0003) MISSED OFFSET
 	int                                                tmpInt;                                                   // 0x04C4(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	struct FText                                       MyKillMsg;                                                // 0x04C8(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
 	struct FText                                       KillMsgText;                                              // 0x04E0(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
@@ -48,6 +47,7 @@ public:
 	struct FSlateColor                                 TeamVictimDBNOColor;                                      // 0x0570(0x0028) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
 	struct FSlateColor                                 MyMsgColor;                                               // 0x0598(0x0028) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
 	struct FSlateColor                                 NormalDBNOColor;                                          // 0x05C0(0x0028) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
+	unsigned char                                      bIsStealFriendlyFire : 1;                                 // 0x05E8(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

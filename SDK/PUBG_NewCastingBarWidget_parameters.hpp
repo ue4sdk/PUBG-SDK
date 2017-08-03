@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -52,6 +52,11 @@ struct UNewCastingBarWidget_C_Tick_Params
 
 // Function NewCastingBarWidget.NewCastingBarWidget_C.Destruct
 struct UNewCastingBarWidget_C_Destruct_Params
+{
+};
+
+// Function NewCastingBarWidget.NewCastingBarWidget_C.OnInteract
+struct UNewCastingBarWidget_C_OnInteract_Params
 {
 };
 

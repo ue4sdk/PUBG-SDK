@@ -1,4 +1,4 @@
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -257,12 +257,12 @@ class UDestroySessionCallbackProxy* UDestroySessionCallbackProxy::STATIC_Destroy
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class APlayerController*       PlayerController               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TScriptInterface<class UTurnBasedMatchInterface> MatchActor                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// struct FString                 MatchID                        (CPF_Parm, CPF_ZeroConstructor)
+// struct FString                 MatchId                        (CPF_Parm, CPF_ZeroConstructor)
 // TEnumAsByte<EMPMatchOutcome>   LocalPlayerOutcome             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // TEnumAsByte<EMPMatchOutcome>   OtherPlayersOutcome            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UEndMatchCallbackProxy*  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class UEndMatchCallbackProxy* UEndMatchCallbackProxy::STATIC_EndMatch(class UObject* WorldContextObject, class APlayerController* PlayerController, const TScriptInterface<class UTurnBasedMatchInterface>& MatchActor, const struct FString& MatchID, TEnumAsByte<EMPMatchOutcome> LocalPlayerOutcome, TEnumAsByte<EMPMatchOutcome> OtherPlayersOutcome)
+class UEndMatchCallbackProxy* UEndMatchCallbackProxy::STATIC_EndMatch(class UObject* WorldContextObject, class APlayerController* PlayerController, const TScriptInterface<class UTurnBasedMatchInterface>& MatchActor, const struct FString& MatchId, TEnumAsByte<EMPMatchOutcome> LocalPlayerOutcome, TEnumAsByte<EMPMatchOutcome> OtherPlayersOutcome)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.EndMatchCallbackProxy.EndMatch");
 
@@ -270,7 +270,7 @@ class UEndMatchCallbackProxy* UEndMatchCallbackProxy::STATIC_EndMatch(class UObj
 	params.WorldContextObject = WorldContextObject;
 	params.PlayerController = PlayerController;
 	params.MatchActor = MatchActor;
-	params.MatchID = MatchID;
+	params.MatchId = MatchId;
 	params.LocalPlayerOutcome = LocalPlayerOutcome;
 	params.OtherPlayersOutcome = OtherPlayersOutcome;
 
@@ -290,18 +290,18 @@ class UEndMatchCallbackProxy* UEndMatchCallbackProxy::STATIC_EndMatch(class UObj
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class APlayerController*       PlayerController               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// struct FString                 MatchID                        (CPF_Parm, CPF_ZeroConstructor)
+// struct FString                 MatchId                        (CPF_Parm, CPF_ZeroConstructor)
 // TScriptInterface<class UTurnBasedMatchInterface> TurnBasedMatchInterface        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UEndTurnCallbackProxy*   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class UEndTurnCallbackProxy* UEndTurnCallbackProxy::STATIC_EndTurn(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FString& MatchID, const TScriptInterface<class UTurnBasedMatchInterface>& TurnBasedMatchInterface)
+class UEndTurnCallbackProxy* UEndTurnCallbackProxy::STATIC_EndTurn(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FString& MatchId, const TScriptInterface<class UTurnBasedMatchInterface>& TurnBasedMatchInterface)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.EndTurnCallbackProxy.EndTurn");
 
 	UEndTurnCallbackProxy_EndTurn_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.PlayerController = PlayerController;
-	params.MatchID = MatchID;
+	params.MatchId = MatchId;
 	params.TurnBasedMatchInterface = TurnBasedMatchInterface;
 
 	auto flags = fn->FunctionFlags;
@@ -896,19 +896,19 @@ void ATestBeaconClient::ClientPing()
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class APlayerController*       PlayerController               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// struct FString                 MatchID                        (CPF_Parm, CPF_ZeroConstructor)
+// struct FString                 MatchId                        (CPF_Parm, CPF_ZeroConstructor)
 // TEnumAsByte<EMPMatchOutcome>   Outcome                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            TurnTimeoutInSeconds           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UQuitMatchCallbackProxy* ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-class UQuitMatchCallbackProxy* UQuitMatchCallbackProxy::STATIC_QuitMatch(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FString& MatchID, TEnumAsByte<EMPMatchOutcome> Outcome, int TurnTimeoutInSeconds)
+class UQuitMatchCallbackProxy* UQuitMatchCallbackProxy::STATIC_QuitMatch(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FString& MatchId, TEnumAsByte<EMPMatchOutcome> Outcome, int TurnTimeoutInSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.QuitMatchCallbackProxy.QuitMatch");
 
 	UQuitMatchCallbackProxy_QuitMatch_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.PlayerController = PlayerController;
-	params.MatchID = MatchID;
+	params.MatchId = MatchId;
 	params.Outcome = Outcome;
 	params.TurnTimeoutInSeconds = TurnTimeoutInSeconds;
 
@@ -979,18 +979,18 @@ void UTurnBasedBlueprintLibrary::STATIC_RegisterTurnBasedMatchInterfaceObject(cl
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class APlayerController*       PlayerController               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// struct FString                 MatchID                        (CPF_Parm, CPF_ZeroConstructor)
+// struct FString                 MatchId                        (CPF_Parm, CPF_ZeroConstructor)
 // int                            PlayerIndex                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FString                 PlayerDisplayName              (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor)
 
-void UTurnBasedBlueprintLibrary::STATIC_GetPlayerDisplayName(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FString& MatchID, int PlayerIndex, struct FString* PlayerDisplayName)
+void UTurnBasedBlueprintLibrary::STATIC_GetPlayerDisplayName(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FString& MatchId, int PlayerIndex, struct FString* PlayerDisplayName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.TurnBasedBlueprintLibrary.GetPlayerDisplayName");
 
 	UTurnBasedBlueprintLibrary_GetPlayerDisplayName_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.PlayerController = PlayerController;
-	params.MatchID = MatchID;
+	params.MatchId = MatchId;
 	params.PlayerIndex = PlayerIndex;
 
 	auto flags = fn->FunctionFlags;
@@ -1010,17 +1010,17 @@ void UTurnBasedBlueprintLibrary::STATIC_GetPlayerDisplayName(class UObject* Worl
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class APlayerController*       PlayerController               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// struct FString                 MatchID                        (CPF_Parm, CPF_ZeroConstructor)
+// struct FString                 MatchId                        (CPF_Parm, CPF_ZeroConstructor)
 // int                            PlayerIndex                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UTurnBasedBlueprintLibrary::STATIC_GetMyPlayerIndex(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FString& MatchID, int* PlayerIndex)
+void UTurnBasedBlueprintLibrary::STATIC_GetMyPlayerIndex(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FString& MatchId, int* PlayerIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.TurnBasedBlueprintLibrary.GetMyPlayerIndex");
 
 	UTurnBasedBlueprintLibrary_GetMyPlayerIndex_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.PlayerController = PlayerController;
-	params.MatchID = MatchID;
+	params.MatchId = MatchId;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -1039,17 +1039,17 @@ void UTurnBasedBlueprintLibrary::STATIC_GetMyPlayerIndex(class UObject* WorldCon
 // Parameters:
 // class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class APlayerController*       PlayerController               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// struct FString                 MatchID                        (CPF_Parm, CPF_ZeroConstructor)
+// struct FString                 MatchId                        (CPF_Parm, CPF_ZeroConstructor)
 // bool                           bIsMyTurn                      (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UTurnBasedBlueprintLibrary::STATIC_GetIsMyTurn(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FString& MatchID, bool* bIsMyTurn)
+void UTurnBasedBlueprintLibrary::STATIC_GetIsMyTurn(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FString& MatchId, bool* bIsMyTurn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function OnlineSubsystemUtils.TurnBasedBlueprintLibrary.GetIsMyTurn");
 
 	UTurnBasedBlueprintLibrary_GetIsMyTurn_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.PlayerController = PlayerController;
-	params.MatchID = MatchID;
+	params.MatchId = MatchId;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;

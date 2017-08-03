@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,11 @@ namespace Classes
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function MainOptionWidget.MainOptionWidget_C.ClearOptionButtonsColors
+struct UMainOptionWidget_C_ClearOptionButtonsColors_Params
+{
+};
 
 // Function MainOptionWidget.MainOptionWidget_C.PopupButtonClicked
 struct UMainOptionWidget_C_PopupButtonClicked_Params
@@ -127,6 +132,11 @@ struct UMainOptionWidget_C_XBoxOnOk_Params
 
 // Function MainOptionWidget.MainOptionWidget_C.Destruct
 struct UMainOptionWidget_C_Destruct_Params
+{
+};
+
+// Function MainOptionWidget.MainOptionWidget_C.BndEvt__OptionButton3_K2Node_ComponentBoundEvent_144_OnClicked__DelegateSignature
+struct UMainOptionWidget_C_BndEvt__OptionButton3_K2Node_ComponentBoundEvent_144_OnClicked__DelegateSignature_Params
 {
 };
 

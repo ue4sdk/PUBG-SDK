@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,37 @@ namespace Classes
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function PlayerInfoWidget.PlayerInfoWidget_C.SetCameraMode_Free
+struct UPlayerInfoWidget_C_SetCameraMode_Free_Params
+{
+};
+
+// Function PlayerInfoWidget.PlayerInfoWidget_C.SetCameraMode_Follow
+struct UPlayerInfoWidget_C_SetCameraMode_Follow_Params
+{
+};
+
+// Function PlayerInfoWidget.PlayerInfoWidget_C.SetCameraMode_Spectator
+struct UPlayerInfoWidget_C_SetCameraMode_Spectator_Params
+{
+};
+
+// Function PlayerInfoWidget.PlayerInfoWidget_C.OnKeyDown
+struct UPlayerInfoWidget_C_OnKeyDown_Params
+{
+	struct FGeometry*                                  MyGeometry;                                               // (CPF_Parm, CPF_IsPlainOldData)
+	struct FKeyEvent*                                  InKeyEvent;                                               // (CPF_Parm)
+	struct FEventReply                                 ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
+};
+
+// Function PlayerInfoWidget.PlayerInfoWidget_C.OnMouseButtonDown_1
+struct UPlayerInfoWidget_C_OnMouseButtonDown_1_Params
+{
+	struct FGeometry                                   MyGeometry;                                               // (CPF_Parm, CPF_IsPlainOldData)
+	struct FPointerEvent                               MouseEvent;                                               // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
+	struct FEventReply                                 ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
+};
 
 // Function PlayerInfoWidget.PlayerInfoWidget_C.On_KickButtonLayer_Prepass_1
 struct UPlayerInfoWidget_C_On_KickButtonLayer_Prepass_1_Params
@@ -68,8 +99,8 @@ struct UPlayerInfoWidget_C_UpdateHealthPrepass_Params
 	class UWidget*                                     BoundWidget;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
-// Function PlayerInfoWidget.PlayerInfoWidget_C.Construct
-struct UPlayerInfoWidget_C_Construct_Params
+// Function PlayerInfoWidget.PlayerInfoWidget_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_20_OnButtonClickedEvent__DelegateSignature
+struct UPlayerInfoWidget_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_20_OnButtonClickedEvent__DelegateSignature_Params
 {
 };
 
@@ -80,8 +111,8 @@ struct UPlayerInfoWidget_C_Tick_Params
 	float*                                             InDeltaTime;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
-// Function PlayerInfoWidget.PlayerInfoWidget_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_20_OnButtonClickedEvent__DelegateSignature
-struct UPlayerInfoWidget_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_20_OnButtonClickedEvent__DelegateSignature_Params
+// Function PlayerInfoWidget.PlayerInfoWidget_C.Construct
+struct UPlayerInfoWidget_C_Construct_Params
 {
 };
 

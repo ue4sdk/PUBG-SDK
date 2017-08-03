@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,12 @@ namespace Classes
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function NewMatchResultWidget.NewMatchResultWidget_C.On_ButtonReportPrepass_1
+struct UNewMatchResultWidget_C_On_ButtonReportPrepass_1_Params
+{
+	class UWidget*                                     BoundWidget;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
 
 // Function NewMatchResultWidget.NewMatchResultWidget_C.UpdateObserverMatchResult
 struct UNewMatchResultWidget_C_UpdateObserverMatchResult_Params
@@ -129,6 +135,11 @@ struct UNewMatchResultWidget_C_Custom_Event_1_Params
 
 // Function NewMatchResultWidget.NewMatchResultWidget_C.XBoxOnOk
 struct UNewMatchResultWidget_C_XBoxOnOk_Params
+{
+};
+
+// Function NewMatchResultWidget.NewMatchResultWidget_C.BndEvt__ButtonReport_K2Node_ComponentBoundEvent_29_OnButtonClickedEvent__DelegateSignature
+struct UNewMatchResultWidget_C_BndEvt__ButtonReport_K2Node_ComponentBoundEvent_29_OnButtonClickedEvent__DelegateSignature_Params
 {
 };
 

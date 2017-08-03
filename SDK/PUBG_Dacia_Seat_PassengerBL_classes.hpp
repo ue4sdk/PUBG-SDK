@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Dacia_Seat_PassengerBL.Dacia_Seat_PassengerBL_C
-// 0x0000 (0x0444 - 0x0444)
+// 0x0000 (0x0454 - 0x0454)
 class ADacia_Seat_PassengerBL_C : public AVehicleSeatPassenger_C
 {
 public:

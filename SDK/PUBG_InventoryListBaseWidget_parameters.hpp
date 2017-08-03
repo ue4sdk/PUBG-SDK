@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -133,6 +133,18 @@ struct UInventoryListBaseWidget_C_SetFocus_Params
 struct UInventoryListBaseWidget_C_Up_Params
 {
 	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function InventoryListBaseWidget.InventoryListBaseWidget_C.GetScrollAccelation
+struct UInventoryListBaseWidget_C_GetScrollAccelation_Params
+{
+	float                                              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function InventoryListBaseWidget.InventoryListBaseWidget_C.GetMaxScroll
+struct UInventoryListBaseWidget_C_GetMaxScroll_Params
+{
+	float                                              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
 // Function InventoryListBaseWidget.InventoryListBaseWidget_C.OnChildWidgetRefreshFocus
@@ -274,6 +286,37 @@ struct UInventoryListBaseWidget_C_CustomEvent_1_Params
 
 // Function InventoryListBaseWidget.InventoryListBaseWidget_C.OnRefreshFocus
 struct UInventoryListBaseWidget_C_OnRefreshFocus_Params
+{
+};
+
+// Function InventoryListBaseWidget.InventoryListBaseWidget_C.OnAddScroll
+struct UInventoryListBaseWidget_C_OnAddScroll_Params
+{
+	float                                              Scale;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function InventoryListBaseWidget.InventoryListBaseWidget_C.OnSlotMoveUpPressed
+struct UInventoryListBaseWidget_C_OnSlotMoveUpPressed_Params
+{
+};
+
+// Function InventoryListBaseWidget.InventoryListBaseWidget_C.OnSlotMoveUpReleased
+struct UInventoryListBaseWidget_C_OnSlotMoveUpReleased_Params
+{
+};
+
+// Function InventoryListBaseWidget.InventoryListBaseWidget_C.OnSlotMoveDownPressed
+struct UInventoryListBaseWidget_C_OnSlotMoveDownPressed_Params
+{
+};
+
+// Function InventoryListBaseWidget.InventoryListBaseWidget_C.OnSlotMoveDownReleased
+struct UInventoryListBaseWidget_C_OnSlotMoveDownReleased_Params
+{
+};
+
+// Function InventoryListBaseWidget.InventoryListBaseWidget_C.OnSlotScrollMoving
+struct UInventoryListBaseWidget_C_OnSlotScrollMoving_Params
 {
 };
 

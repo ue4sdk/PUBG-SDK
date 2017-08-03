@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,13 +13,13 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // Class RoadRuntime.CrossActor
-// 0x0030 (0x03D0 - 0x03A0)
+// 0x0030 (0x03E0 - 0x03B0)
 class ACrossActor : public AStaticMeshActor
 {
 public:
-	struct FString                                     UniqueKey;                                                // 0x03A0(0x0010) (CPF_ZeroConstructor)
-	TArray<struct FCrossActorManager>                  SideActors;                                               // 0x03B0(0x0010) (CPF_ZeroConstructor)
-	TArray<struct FCrossMeshManager>                   SideMeshes;                                               // 0x03C0(0x0010) (CPF_ZeroConstructor)
+	struct FString                                     UniqueKey;                                                // 0x03B0(0x0010) (CPF_ZeroConstructor)
+	TArray<struct FCrossActorManager>                  SideActors;                                               // 0x03C0(0x0010) (CPF_ZeroConstructor)
+	TArray<struct FCrossMeshManager>                   SideMeshes;                                               // 0x03D0(0x0010) (CPF_ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -37,24 +37,23 @@ public:
 
 
 // Class RoadRuntime.RoadActor
-// 0x0078 (0x0408 - 0x0390)
+// 0x0078 (0x0418 - 0x03A0)
 class ARoadActor : public AActor
 {
 public:
-	TEnumAsByte<ESplineMeshAxis>                       SplineMeshAxis;                                           // 0x0390(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0391(0x0003) MISSED OFFSET
-	class Vector3D                                     LocalOffset;                                              // 0x0394(0x000C) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class ARoadActor*                                  Father;                                                   // 0x03A0(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	struct FString                                     UniqueKey;                                                // 0x03A8(0x0010) (CPF_ZeroConstructor)
-	class USplineComponent*                            Spline;                                                   // 0x03B8(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_Transient, CPF_InstancedReference, CPF_IsPlainOldData)
-	int                                                Index;                                                    // 0x03C0(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	int                                                Segmentation;                                             // 0x03C4(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	int                                                StepGeneration;                                           // 0x03C8(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              Size;                                                     // 0x03CC(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UStaticMesh*                                 RoadMesh;                                                 // 0x03D0(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TArray<class USplineMeshComponent*>                RoadMeshesComp;                                           // 0x03D8(0x0010) (CPF_ExportObject, CPF_ZeroConstructor)
-	TArray<struct FSideActorManager>                   SideActors;                                               // 0x03E8(0x0010) (CPF_ZeroConstructor)
-	TArray<struct FSideMeshManager>                    SideMeshes;                                               // 0x03F8(0x0010) (CPF_ZeroConstructor)
+	TEnumAsByte<ESplineMeshAxis>                       SplineMeshAxis;                                           // 0x03A0(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     LocalOffset;                                              // 0x03A4(0x000C) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class ARoadActor*                                  Father;                                                   // 0x03B0(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	struct FString                                     UniqueKey;                                                // 0x03B8(0x0010) (CPF_ZeroConstructor)
+	class USplineComponent*                            Spline;                                                   // 0x03C8(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_Transient, CPF_InstancedReference, CPF_IsPlainOldData)
+	int                                                Index;                                                    // 0x03D0(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                Segmentation;                                             // 0x03D4(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                StepGeneration;                                           // 0x03D8(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              Size;                                                     // 0x03DC(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UStaticMesh*                                 RoadMesh;                                                 // 0x03E0(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TArray<class USplineMeshComponent*>                RoadMeshesComp;                                           // 0x03E8(0x0010) (CPF_ExportObject, CPF_ZeroConstructor)
+	TArray<struct FSideActorManager>                   SideActors;                                               // 0x03F8(0x0010) (CPF_ZeroConstructor)
+	TArray<struct FSideMeshManager>                    SideMeshes;                                               // 0x0408(0x0010) (CPF_ZeroConstructor)
 
 	static UClass* StaticClass()
 	{

@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -37,6 +37,7 @@ public:
 	void Construct();
 	void Tick(struct FGeometry* MyGeometry, float* InDeltaTime);
 	void Destruct();
+	void OnInteract();
 	void ExecuteUbergraph_NewCastingBarWidget(int EntryPoint);
 };
 

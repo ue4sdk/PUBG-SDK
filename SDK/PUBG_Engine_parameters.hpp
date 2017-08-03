@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -1283,6 +1283,12 @@ struct USceneComponent_SetRelativeScale3D_Params
 
 // Function Engine.SceneComponent.SetIsAttachmentReplicated
 struct USceneComponent_SetIsAttachmentReplicated_Params
+{
+	bool                                               ShouldReplicate;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function Engine.SceneComponent.SetIsAttachmentReferenceReplicated
+struct USceneComponent_SetIsAttachmentReferenceReplicated_Params
 {
 	bool                                               ShouldReplicate;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
@@ -6109,6 +6115,35 @@ struct UHierarchicalInstancedStaticMeshComponent_RemoveInstances_Params
 	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
+// Function Engine.LevelScriptActor.WorldOriginLocationChanged
+struct ALevelScriptActor_WorldOriginLocationChanged_Params
+{
+	struct FIntVector                                  OldOriginLocation;                                        // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FIntVector                                  NewOriginLocation;                                        // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function Engine.LevelScriptActor.SetCinematicMode
+struct ALevelScriptActor_SetCinematicMode_Params
+{
+	bool                                               bCinematicMode;                                           // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bHidePlayer;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bAffectsHUD;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bAffectsMovement;                                         // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bAffectsTurning;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function Engine.LevelScriptActor.RemoteEvent
+struct ALevelScriptActor_RemoteEvent_Params
+{
+	struct FName                                       EventName;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.LevelScriptActor.LevelReset
+struct ALevelScriptActor_LevelReset_Params
+{
+};
+
 // Function Engine.PlayerCameraManager.StopCameraShake
 struct APlayerCameraManager_StopCameraShake_Params
 {
@@ -6792,35 +6827,6 @@ struct ASkyLight_OnRep_bEnabled_Params
 
 // Function Engine.WorldSettings.OnRep_WorldGravityZ
 struct AWorldSettings_OnRep_WorldGravityZ_Params
-{
-};
-
-// Function Engine.LevelScriptActor.WorldOriginLocationChanged
-struct ALevelScriptActor_WorldOriginLocationChanged_Params
-{
-	struct FIntVector                                  OldOriginLocation;                                        // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FIntVector                                  NewOriginLocation;                                        // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function Engine.LevelScriptActor.SetCinematicMode
-struct ALevelScriptActor_SetCinematicMode_Params
-{
-	bool                                               bCinematicMode;                                           // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bHidePlayer;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bAffectsHUD;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bAffectsMovement;                                         // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bAffectsTurning;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function Engine.LevelScriptActor.RemoteEvent
-struct ALevelScriptActor_RemoteEvent_Params
-{
-	struct FName                                       EventName;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.LevelScriptActor.LevelReset
-struct ALevelScriptActor_LevelReset_Params
 {
 };
 

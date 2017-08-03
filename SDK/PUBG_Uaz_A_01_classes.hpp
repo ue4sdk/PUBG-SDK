@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Uaz_A_01.Uaz_A_01_C
-// 0x0000 (0x0878 - 0x0878)
+// 0x0000 (0x08D0 - 0x08D0)
 class AUaz_A_01_C : public AUaz_C
 {
 public:

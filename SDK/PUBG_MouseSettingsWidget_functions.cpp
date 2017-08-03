@@ -1,4 +1,4 @@
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,27 @@ namespace Classes
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function MouseSettingsWidget.MouseSettingsWidget_C.IsEnableApply
+// (FUNC_Event, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+bool UMouseSettingsWidget_C::IsEnableApply()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function MouseSettingsWidget.MouseSettingsWidget_C.IsEnableApply");
+
+	UMouseSettingsWidget_C_IsEnableApply_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
 
 // Function MouseSettingsWidget.MouseSettingsWidget_C.initailizeMouseSettingsWidget
 // (FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
@@ -33,11 +54,11 @@ void UMouseSettingsWidget_C::initailizeMouseSettingsWidget(bool bIsDefaultSettin
 
 
 // Function MouseSettingsWidget.MouseSettingsWidget_C.IsChanged
-// (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure, FUNC_Const)
+// (FUNC_Event, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// bool                           bChanged                       (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-void UMouseSettingsWidget_C::IsChanged(bool* bChanged)
+bool UMouseSettingsWidget_C::IsChanged()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function MouseSettingsWidget.MouseSettingsWidget_C.IsChanged");
 
@@ -49,13 +70,12 @@ void UMouseSettingsWidget_C::IsChanged(bool* bChanged)
 
 	fn->FunctionFlags = flags;
 
-	if (bChanged != nullptr)
-		*bChanged = params.bChanged;
+	return params.ReturnValue;
 }
 
 
 // Function MouseSettingsWidget.MouseSettingsWidget_C.OnDefault
-// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// (FUNC_Event, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
 void UMouseSettingsWidget_C::OnDefault()
 {
@@ -72,7 +92,7 @@ void UMouseSettingsWidget_C::OnDefault()
 
 
 // Function MouseSettingsWidget.MouseSettingsWidget_C.OnApply
-// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// (FUNC_Event, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
 void UMouseSettingsWidget_C::OnApply()
 {
@@ -106,7 +126,7 @@ void UMouseSettingsWidget_C::Construct()
 
 
 // Function MouseSettingsWidget.MouseSettingsWidget_C.OnReset
-// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// (FUNC_Event, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
 void UMouseSettingsWidget_C::OnReset()
 {

@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -24,6 +24,12 @@ struct UWeaponEquipmentSlotWidget_C_GetSlotItem_Params
 struct UWeaponEquipmentSlotWidget_C_GetSlotContainer_Params
 {
 	TScriptInterface<class USlotContainerInterface>    SlotContainer;                                            // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function WeaponEquipmentSlotWidget.WeaponEquipmentSlotWidget_C.SetGamepadSelfPutAttachmentFocus
+struct UWeaponEquipmentSlotWidget_C_SetGamepadSelfPutAttachmentFocus_Params
+{
+	bool                                               bFocus;                                                   // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // Function WeaponEquipmentSlotWidget.WeaponEquipmentSlotWidget_C.InputB
@@ -421,6 +427,58 @@ struct UWeaponEquipmentSlotWidget_C_BndEvt__Magazine_K2Node_ComponentBoundEvent_
 
 // Function WeaponEquipmentSlotWidget.WeaponEquipmentSlotWidget_C.BndEvt__Stock_K2Node_ComponentBoundEvent_28_RefreshFocus__DelegateSignature
 struct UWeaponEquipmentSlotWidget_C_BndEvt__Stock_K2Node_ComponentBoundEvent_28_RefreshFocus__DelegateSignature_Params
+{
+};
+
+// Function WeaponEquipmentSlotWidget.WeaponEquipmentSlotWidget_C.WidgetInputBPressed
+struct UWeaponEquipmentSlotWidget_C_WidgetInputBPressed_Params
+{
+};
+
+// Function WeaponEquipmentSlotWidget.WeaponEquipmentSlotWidget_C.OnWidgetInputBReleased
+struct UWeaponEquipmentSlotWidget_C_OnWidgetInputBReleased_Params
+{
+};
+
+// Function WeaponEquipmentSlotWidget.WeaponEquipmentSlotWidget_C.Tick
+struct UWeaponEquipmentSlotWidget_C_Tick_Params
+{
+	struct FGeometry*                                  MyGeometry;                                               // (CPF_Parm, CPF_IsPlainOldData)
+	float*                                             InDeltaTime;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function WeaponEquipmentSlotWidget.WeaponEquipmentSlotWidget_C.OnSlotMoveUp
+struct UWeaponEquipmentSlotWidget_C_OnSlotMoveUp_Params
+{
+};
+
+// Function WeaponEquipmentSlotWidget.WeaponEquipmentSlotWidget_C.OnSlotMoveDown
+struct UWeaponEquipmentSlotWidget_C_OnSlotMoveDown_Params
+{
+};
+
+// Function WeaponEquipmentSlotWidget.WeaponEquipmentSlotWidget_C.SlotMoveLeft
+struct UWeaponEquipmentSlotWidget_C_SlotMoveLeft_Params
+{
+};
+
+// Function WeaponEquipmentSlotWidget.WeaponEquipmentSlotWidget_C.OnSlotMoveRight
+struct UWeaponEquipmentSlotWidget_C_OnSlotMoveRight_Params
+{
+};
+
+// Function WeaponEquipmentSlotWidget.WeaponEquipmentSlotWidget_C.CustomEvent_1
+struct UWeaponEquipmentSlotWidget_C_CustomEvent_1_Params
+{
+};
+
+// Function WeaponEquipmentSlotWidget.WeaponEquipmentSlotWidget_C.OnWidgetInputX
+struct UWeaponEquipmentSlotWidget_C_OnWidgetInputX_Params
+{
+};
+
+// Function WeaponEquipmentSlotWidget.WeaponEquipmentSlotWidget_C.CustomEvent_2
+struct UWeaponEquipmentSlotWidget_C_CustomEvent_2_Params
 {
 };
 

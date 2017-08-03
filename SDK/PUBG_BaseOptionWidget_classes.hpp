@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,8 +13,8 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass BaseOptionWidget.BaseOptionWidget_C
-// 0x0000 (0x0240 - 0x0240)
-class UBaseOptionWidget_C : public UUserWidget
+// 0x0000 (0x0278 - 0x0278)
+class UBaseOptionWidget_C : public UTslBaseOptionWidget
 {
 public:
 
@@ -24,13 +24,6 @@ public:
 		return ptr;
 	}
 
-
-	void IsKeyUp(bool* Keyup);
-	void IsEnableApply(bool* bResult);
-	void OnReset();
-	void IsChanged(bool* bChanged);
-	void OnDefault();
-	void OnApply();
 };
 
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass CharacterStudio_Default.CharacterStudio_Default_C
-// 0x0000 (0x0410 - 0x0410)
+// 0x0000 (0x0420 - 0x0420)
 class ACharacterStudio_Default_C : public ACharacterStudio
 {
 public:

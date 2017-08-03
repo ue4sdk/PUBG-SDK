@@ -1,4 +1,4 @@
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,28 @@ namespace Classes
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function SlotBaseWidget.SlotBaseWidget_C.IsPlayCharacterPickupAnim
+// (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// bool                           bIsPickup                      (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void USlotBaseWidget_C::IsPlayCharacterPickupAnim(bool* bIsPickup)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function SlotBaseWidget.SlotBaseWidget_C.IsPlayCharacterPickupAnim");
+
+	USlotBaseWidget_C_IsPlayCharacterPickupAnim_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (bIsPickup != nullptr)
+		*bIsPickup = params.bIsPickup;
+}
+
 
 // Function SlotBaseWidget.SlotBaseWidget_C.IsCharacterCasting
 // (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure)
@@ -45,6 +67,23 @@ void USlotBaseWidget_C::PlaySoundAk(class UAkAudioEvent* SoundAk)
 
 	USlotBaseWidget_C_PlaySoundAk_Params params;
 	params.SoundAk = SoundAk;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function SlotBaseWidget.SlotBaseWidget_C.Construct
+// (FUNC_BlueprintCosmetic, FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
+
+void USlotBaseWidget_C::Construct()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function SlotBaseWidget.SlotBaseWidget_C.Construct");
+
+	USlotBaseWidget_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
 

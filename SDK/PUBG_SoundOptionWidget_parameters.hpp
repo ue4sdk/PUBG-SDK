@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,13 +17,13 @@ namespace Classes
 // Function SoundOptionWidget.SoundOptionWidget_C.IsKeyUp
 struct USoundOptionWidget_C_IsKeyUp_Params
 {
-	bool                                               Keyup;                                                    // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
 // Function SoundOptionWidget.SoundOptionWidget_C.IsChanged
 struct USoundOptionWidget_C_IsChanged_Params
 {
-	bool                                               bChanged;                                                 // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
 // Function SoundOptionWidget.SoundOptionWidget_C.OnApply

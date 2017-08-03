@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,6 +14,12 @@ namespace Classes
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function MouseSettingsWidget.MouseSettingsWidget_C.IsEnableApply
+struct UMouseSettingsWidget_C_IsEnableApply_Params
+{
+	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
 // Function MouseSettingsWidget.MouseSettingsWidget_C.initailizeMouseSettingsWidget
 struct UMouseSettingsWidget_C_initailizeMouseSettingsWidget_Params
 {
@@ -23,7 +29,7 @@ struct UMouseSettingsWidget_C_initailizeMouseSettingsWidget_Params
 // Function MouseSettingsWidget.MouseSettingsWidget_C.IsChanged
 struct UMouseSettingsWidget_C_IsChanged_Params
 {
-	bool                                               bChanged;                                                 // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
 // Function MouseSettingsWidget.MouseSettingsWidget_C.OnDefault

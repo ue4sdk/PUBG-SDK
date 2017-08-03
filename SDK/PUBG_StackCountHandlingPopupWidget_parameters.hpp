@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,18 @@ namespace Classes
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function StackCountHandlingPopupWidget.StackCountHandlingPopupWidget_C.AddStackCount
+struct UStackCountHandlingPopupWidget_C_AddStackCount_Params
+{
+	int                                                AddCount;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function StackCountHandlingPopupWidget.StackCountHandlingPopupWidget_C.OnPrepass_1
+struct UStackCountHandlingPopupWidget_C_OnPrepass_1_Params
+{
+	class UWidget*                                     BoundWidget;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
 
 // Function StackCountHandlingPopupWidget.StackCountHandlingPopupWidget_C.FocusOnInputAmountText
 struct UStackCountHandlingPopupWidget_C_FocusOnInputAmountText_Params
@@ -143,6 +155,31 @@ struct UStackCountHandlingPopupWidget_C_Tick_Params
 {
 	struct FGeometry*                                  MyGeometry;                                               // (CPF_Parm, CPF_IsPlainOldData)
 	float*                                             InDeltaTime;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function StackCountHandlingPopupWidget.StackCountHandlingPopupWidget_C.OnWidgetInputB
+struct UStackCountHandlingPopupWidget_C_OnWidgetInputB_Params
+{
+};
+
+// Function StackCountHandlingPopupWidget.StackCountHandlingPopupWidget_C.OnWidgetMoveLeft
+struct UStackCountHandlingPopupWidget_C_OnWidgetMoveLeft_Params
+{
+};
+
+// Function StackCountHandlingPopupWidget.StackCountHandlingPopupWidget_C.CustomEvent_3
+struct UStackCountHandlingPopupWidget_C_CustomEvent_3_Params
+{
+};
+
+// Function StackCountHandlingPopupWidget.StackCountHandlingPopupWidget_C.CustomEvent_4
+struct UStackCountHandlingPopupWidget_C_CustomEvent_4_Params
+{
+};
+
+// Function StackCountHandlingPopupWidget.StackCountHandlingPopupWidget_C.CustomEvent_5
+struct UStackCountHandlingPopupWidget_C_CustomEvent_5_Params
+{
 };
 
 // Function StackCountHandlingPopupWidget.StackCountHandlingPopupWidget_C.ExecuteUbergraph_StackCountHandlingPopupWidget
