@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.39) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,11 @@ namespace Classes
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function NewWorldMapWidget.NewWorldMapWidget_C.OnHideWorldMap
+struct UNewWorldMapWidget_C_OnHideWorldMap_Params
+{
+};
 
 // Function NewWorldMapWidget.NewWorldMapWidget_C.CheckReplayStatus
 struct UNewWorldMapWidget_C_CheckReplayStatus_Params

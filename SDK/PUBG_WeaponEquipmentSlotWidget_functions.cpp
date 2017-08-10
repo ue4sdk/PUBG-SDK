@@ -1,4 +1,4 @@
-// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.39) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -1605,6 +1605,23 @@ void UWeaponEquipmentSlotWidget_C::CustomEvent_2()
 	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentSlotWidget.WeaponEquipmentSlotWidget_C.CustomEvent_2");
 
 	UWeaponEquipmentSlotWidget_C_CustomEvent_2_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function WeaponEquipmentSlotWidget.WeaponEquipmentSlotWidget_C.OnInputWidgetInputB
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UWeaponEquipmentSlotWidget_C::OnInputWidgetInputB()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentSlotWidget.WeaponEquipmentSlotWidget_C.OnInputWidgetInputB");
+
+	UWeaponEquipmentSlotWidget_C_OnInputWidgetInputB_Params params;
 
 	auto flags = fn->FunctionFlags;
 

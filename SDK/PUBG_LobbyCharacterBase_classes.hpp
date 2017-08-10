@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds (2.4.22) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass LobbyCharacterBase.LobbyCharacterBase_C
-// 0x0000 (0x0810 - 0x0810)
+// 0x0000 (0x0820 - 0x0820)
 class ALobbyCharacterBase_C : public ALobbyCharacter
 {
 public:

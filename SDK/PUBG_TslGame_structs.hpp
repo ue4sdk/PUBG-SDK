@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.39) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -898,22 +898,6 @@ enum class ETeamVehicleType
 };
 
 
-// Enum TslGame.EMarkPosition
-enum class EMarkPosition
-{
-	EMarkPosition__Mid             = 0,
-	EMarkPosition__Top             = 1,
-	EMarkPosition__Right           = 2,
-	EMarkPosition__Left            = 3,
-	EMarkPosition__Bottom          = 4,
-	EMarkPosition__TopRight        = 5,
-	EMarkPosition__TopLeft         = 6,
-	EMarkPosition__BottomLeft      = 7,
-	EMarkPosition__BottomRight     = 8,
-	EMarkPosition__EMarkPosition_MAX = 9
-};
-
-
 // Enum TslGame.EWheelContactType
 enum class EWheelContactType
 {
@@ -1040,6 +1024,34 @@ enum class EEquipableItemIconVisibility
 	EEquipableItemIconVisibility__Always = 0,
 	EEquipableItemIconVisibility__WhenEquipped = 1,
 	EEquipableItemIconVisibility__EEquipableItemIconVisibility_MAX = 2
+};
+
+
+// Enum TslGame.EMarkStates
+enum class EMarkStates
+{
+	EMarkStates__Normal            = 0,
+	EMarkStates__Groggy            = 1,
+	EMarkStates__Dead              = 2,
+	EMarkStates__Vehicle           = 3,
+	EMarkStates__Parachute         = 4,
+	EMarkStates__EMarkStates_MAX   = 5
+};
+
+
+// Enum TslGame.EMarkPosition
+enum class EMarkPosition
+{
+	EMarkPosition__Mid             = 0,
+	EMarkPosition__Top             = 1,
+	EMarkPosition__Right           = 2,
+	EMarkPosition__Left            = 3,
+	EMarkPosition__Bottom          = 4,
+	EMarkPosition__TopRight        = 5,
+	EMarkPosition__TopLeft         = 6,
+	EMarkPosition__BottomLeft      = 7,
+	EMarkPosition__BottomRight     = 8,
+	EMarkPosition__EMarkPosition_MAX = 9
 };
 
 
@@ -2060,12 +2072,16 @@ struct FReplayKillEventItem
 };
 
 // ScriptStruct TslGame.ReplayItem
-// 0x0028
+// 0x0040
 struct FReplayItem
 {
 	struct FString                                     FriendlyName;                                             // 0x0000(0x0010) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor)
 	struct FString                                     Name;                                                     // 0x0010(0x0010) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor)
 	unsigned char                                      bIsLive : 1;                                              // 0x0020(0x0001) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FDateTime                                   Date;                                                     // 0x0028(0x0008) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor)
+	int                                                SizeInBytes;                                              // 0x0030(0x0004) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                LengthInMS;                                               // 0x0034(0x0004) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                NumViewers;                                               // 0x0038(0x0004) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // ScriptStruct TslGame.MatchPreparerClass

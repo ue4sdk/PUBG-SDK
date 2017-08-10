@@ -510,6 +510,11 @@ struct UItemSlotWidget_C_OnButtonClicked_Params
 	TEnumAsByte<EPopupButtonID>                        ButtonID;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
+// Function ItemSlotWidget.ItemSlotWidget_C.OnInputWidgetInputB
+struct UItemSlotWidget_C_OnInputWidgetInputB_Params
+{
+};
+
 // Function ItemSlotWidget.ItemSlotWidget_C.ExecuteUbergraph_ItemSlotWidget
 struct UItemSlotWidget_C_ExecuteUbergraph_ItemSlotWidget_Params
 {

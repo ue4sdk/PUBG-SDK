@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.39) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -311,6 +311,11 @@ struct UInventorySlotBaseWidget_C_UI_Gamepad_B_Params
 
 // Function InventorySlotBaseWidget.InventorySlotBaseWidget_C.OnWidgetInputX
 struct UInventorySlotBaseWidget_C_OnWidgetInputX_Params
+{
+};
+
+// Function InventorySlotBaseWidget.InventorySlotBaseWidget_C.OnInputWidgetInputB
+struct UInventorySlotBaseWidget_C_OnInputWidgetInputB_Params
 {
 };
 

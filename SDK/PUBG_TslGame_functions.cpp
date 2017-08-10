@@ -1,4 +1,4 @@
-// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.39) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19365,50 +19365,6 @@ float ATeam::GetGroggyHealth()
 }
 
 
-// Function TslGame.TeamMarkWidget.SetCharacterIconPosition_UC
-// (FUNC_Event, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintEvent)
-// Parameters:
-// class Vector2D                 Pos_UC                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// bool                           OutRange                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// float                          Angle                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// bool                           IsHidden                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-
-void UTeamMarkWidget::SetCharacterIconPosition_UC(const class Vector2D& Pos_UC, bool OutRange, float Angle, bool IsHidden)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TeamMarkWidget.SetCharacterIconPosition_UC");
-
-	UTeamMarkWidget_SetCharacterIconPosition_UC_Params params;
-	params.Pos_UC = Pos_UC;
-	params.OutRange = OutRange;
-	params.Angle = Angle;
-	params.IsHidden = IsHidden;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function TslGame.TeamMarkWidget.InitializeTeamMarkGrid
-// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
-
-void UTeamMarkWidget::InitializeTeamMarkGrid()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TeamMarkWidget.InitializeTeamMarkGrid");
-
-	UTeamMarkWidget_InitializeTeamMarkGrid_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function TslGame.TslAccessoryComponent.SetPhysicsSimulation
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 // Parameters:
@@ -23626,6 +23582,24 @@ bool UTslGameInstance::UnPause()
 }
 
 
+// Function TslGame.TslGameInstance.ShowLoadingScreen
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+
+void UTslGameInstance::ShowLoadingScreen()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslGameInstance.ShowLoadingScreen");
+
+	UTslGameInstance_ShowLoadingScreen_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function TslGame.TslGameInstance.SetReplayTimeSpeed
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 // Parameters:
@@ -23658,6 +23632,29 @@ void UTslGameInstance::ReplayJump(float TimelinePercentage)
 
 	UTslGameInstance_ReplayJump_Params params;
 	params.TimelinePercentage = TimelinePercentage;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function TslGame.TslGameInstance.PlayReplayBPByRegionOrLocal
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// struct FString                 RegionOrLocal                  (CPF_Parm, CPF_ZeroConstructor)
+// struct FString                 SessionOrFriendlyName          (CPF_Parm, CPF_ZeroConstructor)
+
+void UTslGameInstance::PlayReplayBPByRegionOrLocal(const struct FString& RegionOrLocal, const struct FString& SessionOrFriendlyName)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslGameInstance.PlayReplayBPByRegionOrLocal");
+
+	UTslGameInstance_PlayReplayBPByRegionOrLocal_Params params;
+	params.RegionOrLocal = RegionOrLocal;
+	params.SessionOrFriendlyName = SessionOrFriendlyName;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -23777,6 +23774,28 @@ bool UTslGameInstance::IsPaused()
 }
 
 
+// Function TslGame.TslGameInstance.IsESports
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// bool                           ReturnValue                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+bool UTslGameInstance::IsESports()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslGameInstance.IsESports");
+
+	UTslGameInstance_IsESports_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // DelegateFunction TslGame.TslGameInstance.GotoTimelineDoneDelegate__DelegateSignature
 // (FUNC_MulticastDelegate, FUNC_Public, FUNC_Delegate)
 
@@ -23864,6 +23883,24 @@ float UTslGameInstance::GetReplayTotalTime()
 }
 
 
+// Function TslGame.TslGameInstance.GetReplayListLocal
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+
+void UTslGameInstance::GetReplayListLocal()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslGameInstance.GetReplayListLocal");
+
+	UTslGameInstance_GetReplayListLocal_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // DelegateFunction TslGame.TslGameInstance.GetReplayListDoneDelegate__DelegateSignature
 // (FUNC_MulticastDelegate, FUNC_Public, FUNC_Delegate)
 
@@ -23874,6 +23911,27 @@ void UTslGameInstance::GetReplayListDoneDelegate__DelegateSignature()
 	UTslGameInstance_GetReplayListDoneDelegate__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function TslGame.TslGameInstance.GetReplayListByRegionOrLocal
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// struct FString                 RegionOrLocal                  (CPF_Parm, CPF_ZeroConstructor)
+
+void UTslGameInstance::GetReplayListByRegionOrLocal(const struct FString& RegionOrLocal)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslGameInstance.GetReplayListByRegionOrLocal");
+
+	UTslGameInstance_GetReplayListByRegionOrLocal_Params params;
+	params.RegionOrLocal = RegionOrLocal;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -25395,6 +25453,30 @@ bool UTslGameOption::STATIC_IsUISoundMute()
 	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslGameOption.IsUISoundMute");
 
 	UTslGameOption_IsUISoundMute_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function TslGame.TslGameOption.IsMouseWheelInput
+// (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintPure)
+// Parameters:
+// struct FTslInputKey            InInputedKey                   (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+bool UTslGameOption::STATIC_IsMouseWheelInput(const struct FTslInputKey& InInputedKey)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslGameOption.IsMouseWheelInput");
+
+	UTslGameOption_IsMouseWheelInput_Params params;
+	params.InInputedKey = InInputedKey;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -30959,6 +31041,24 @@ void UMapGridWidget::AddCenter_UC(const class Vector2D& Offset_UC)
 
 	UMapGridWidget_AddCenter_UC_Params params;
 	params.Offset_UC = Offset_UC;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function TslGame.TeamMarkWidget.InitializeTeamMarkGrid
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+
+void UTeamMarkWidget::InitializeTeamMarkGrid()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TeamMarkWidget.InitializeTeamMarkGrid");
+
+	UTeamMarkWidget_InitializeTeamMarkGrid_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;

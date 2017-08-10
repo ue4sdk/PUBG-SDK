@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.39) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -49,25 +49,9 @@ struct UBP_TeamMarkWidget_C_Get_PlayerName_Text_1_Params
 	struct FText                                       ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 };
 
-// Function BP_TeamMarkWidget.BP_TeamMarkWidget_C.SetCharacterIconPosition_UC
-struct UBP_TeamMarkWidget_C_SetCharacterIconPosition_UC_Params
-{
-	class Vector2D*                                    Pos_UC;                                                   // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool*                                              OutRange;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float*                                             Angle;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool*                                              IsHidden;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
 // Function BP_TeamMarkWidget.BP_TeamMarkWidget_C.Construct
 struct UBP_TeamMarkWidget_C_Construct_Params
 {
-};
-
-// Function BP_TeamMarkWidget.BP_TeamMarkWidget_C.Tick
-struct UBP_TeamMarkWidget_C_Tick_Params
-{
-	struct FGeometry*                                  MyGeometry;                                               // (CPF_Parm, CPF_IsPlainOldData)
-	float*                                             InDeltaTime;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // Function BP_TeamMarkWidget.BP_TeamMarkWidget_C.ExecuteUbergraph_BP_TeamMarkWidget

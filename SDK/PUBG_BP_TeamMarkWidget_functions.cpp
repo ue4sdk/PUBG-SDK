@@ -1,4 +1,4 @@
-// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.39) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -133,32 +133,6 @@ struct FText UBP_TeamMarkWidget_C::Get_PlayerName_Text_1()
 }
 
 
-// Function BP_TeamMarkWidget.BP_TeamMarkWidget_C.SetCharacterIconPosition_UC
-// (FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
-// Parameters:
-// class Vector2D*                Pos_UC                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// bool*                          OutRange                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// float*                         Angle                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// bool*                          IsHidden                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-
-void UBP_TeamMarkWidget_C::SetCharacterIconPosition_UC(class Vector2D* Pos_UC, bool* OutRange, float* Angle, bool* IsHidden)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_TeamMarkWidget.BP_TeamMarkWidget_C.SetCharacterIconPosition_UC");
-
-	UBP_TeamMarkWidget_C_SetCharacterIconPosition_UC_Params params;
-	params.Pos_UC = Pos_UC;
-	params.OutRange = OutRange;
-	params.Angle = Angle;
-	params.IsHidden = IsHidden;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_TeamMarkWidget.BP_TeamMarkWidget_C.Construct
 // (FUNC_BlueprintCosmetic, FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
 
@@ -176,30 +150,8 @@ void UBP_TeamMarkWidget_C::Construct()
 }
 
 
-// Function BP_TeamMarkWidget.BP_TeamMarkWidget_C.Tick
-// (FUNC_BlueprintCosmetic, FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
-// Parameters:
-// struct FGeometry*              MyGeometry                     (CPF_Parm, CPF_IsPlainOldData)
-// float*                         InDeltaTime                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-
-void UBP_TeamMarkWidget_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_TeamMarkWidget.BP_TeamMarkWidget_C.Tick");
-
-	UBP_TeamMarkWidget_C_Tick_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InDeltaTime = InDeltaTime;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_TeamMarkWidget.BP_TeamMarkWidget_C.ExecuteUbergraph_BP_TeamMarkWidget
-// (FUNC_HasDefaults)
+// ()
 // Parameters:
 // int                            EntryPoint                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 

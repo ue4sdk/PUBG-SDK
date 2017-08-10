@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.39) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -252,13 +252,6 @@ struct UInventoryWidget_C_InitializeWidget_Params
 	struct FScriptDelegate                             OnItemSlotFocus;                                          // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
 };
 
-// Function InventoryWidget.InventoryWidget_C.Tick
-struct UInventoryWidget_C_Tick_Params
-{
-	struct FGeometry*                                  MyGeometry;                                               // (CPF_Parm, CPF_IsPlainOldData)
-	float*                                             InDeltaTime;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
 // Function InventoryWidget.InventoryWidget_C.BndEvt__Vicinity_K2Node_ComponentBoundEvent_36_OnChildSlotFocus__DelegateSignature
 struct UInventoryWidget_C_BndEvt__Vicinity_K2Node_ComponentBoundEvent_36_OnChildSlotFocus__DelegateSignature_Params
 {
@@ -365,11 +358,6 @@ struct UInventoryWidget_C_Destruct_Params
 {
 };
 
-// Function InventoryWidget.InventoryWidget_C.OnItemExplorerProxyUpdated
-struct UInventoryWidget_C_OnItemExplorerProxyUpdated_Params
-{
-};
-
 // Function InventoryWidget.InventoryWidget_C.OnInputRB
 struct UInventoryWidget_C_OnInputRB_Params
 {
@@ -426,6 +414,16 @@ struct UInventoryWidget_C_MoveTick_Params
 	float                                              DeltaTime;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
+// Function InventoryWidget.InventoryWidget_C.OnItemExplorerProxyUpdated
+struct UInventoryWidget_C_OnItemExplorerProxyUpdated_Params
+{
+};
+
+// Function InventoryWidget.InventoryWidget_C.OnEquipmentUpdated
+struct UInventoryWidget_C_OnEquipmentUpdated_Params
+{
+};
+
 // Function InventoryWidget.InventoryWidget_C.BndEvt__VicinityTitleOff_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature
 struct UInventoryWidget_C_BndEvt__VicinityTitleOff_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature_Params
 {
@@ -436,13 +434,15 @@ struct UInventoryWidget_C_BndEvt__VicinityTitleOn_K2Node_ComponentBoundEvent_0_O
 {
 };
 
-// Function InventoryWidget.InventoryWidget_C.OnInteract
-struct UInventoryWidget_C_OnInteract_Params
+// Function InventoryWidget.InventoryWidget_C.Tick
+struct UInventoryWidget_C_Tick_Params
 {
+	struct FGeometry*                                  MyGeometry;                                               // (CPF_Parm, CPF_IsPlainOldData)
+	float*                                             InDeltaTime;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
-// Function InventoryWidget.InventoryWidget_C.OnEquipmentUpdated
-struct UInventoryWidget_C_OnEquipmentUpdated_Params
+// Function InventoryWidget.InventoryWidget_C.OnInteract
+struct UInventoryWidget_C_OnInteract_Params
 {
 };
 
@@ -458,6 +458,11 @@ struct UInventoryWidget_C_OnWidgetInputLT_Params
 
 // Function InventoryWidget.InventoryWidget_C.OnWidgetInputRT
 struct UInventoryWidget_C_OnWidgetInputRT_Params
+{
+};
+
+// Function InventoryWidget.InventoryWidget_C.CustomEvent_1
+struct UInventoryWidget_C_CustomEvent_1_Params
 {
 };
 

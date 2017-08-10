@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.39) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -5498,20 +5498,6 @@ struct ATeam_GetGroggyHealth_Params
 	float                                              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
-// Function TslGame.TeamMarkWidget.SetCharacterIconPosition_UC
-struct UTeamMarkWidget_SetCharacterIconPosition_UC_Params
-{
-	class Vector2D                                     Pos_UC;                                                   // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               OutRange;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              Angle;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               IsHidden;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function TslGame.TeamMarkWidget.InitializeTeamMarkGrid
-struct UTeamMarkWidget_InitializeTeamMarkGrid_Params
-{
-};
-
 // Function TslGame.TslAccessoryComponent.SetPhysicsSimulation
 struct UTslAccessoryComponent_SetPhysicsSimulation_Params
 {
@@ -6727,6 +6713,11 @@ struct UTslGameInstance_UnPause_Params
 	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
+// Function TslGame.TslGameInstance.ShowLoadingScreen
+struct UTslGameInstance_ShowLoadingScreen_Params
+{
+};
+
 // Function TslGame.TslGameInstance.SetReplayTimeSpeed
 struct UTslGameInstance_SetReplayTimeSpeed_Params
 {
@@ -6737,6 +6728,13 @@ struct UTslGameInstance_SetReplayTimeSpeed_Params
 struct UTslGameInstance_ReplayJump_Params
 {
 	float                                              TimelinePercentage;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function TslGame.TslGameInstance.PlayReplayBPByRegionOrLocal
+struct UTslGameInstance_PlayReplayBPByRegionOrLocal_Params
+{
+	struct FString                                     RegionOrLocal;                                            // (CPF_Parm, CPF_ZeroConstructor)
+	struct FString                                     SessionOrFriendlyName;                                    // (CPF_Parm, CPF_ZeroConstructor)
 };
 
 // Function TslGame.TslGameInstance.PlayReplayBP
@@ -6769,6 +6767,12 @@ struct UTslGameInstance_IsPaused_Params
 	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
+// Function TslGame.TslGameInstance.IsESports
+struct UTslGameInstance_IsESports_Params
+{
+	bool                                               ReturnValue;                                              // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
 // DelegateFunction TslGame.TslGameInstance.GotoTimelineDoneDelegate__DelegateSignature
 struct UTslGameInstance_GotoTimelineDoneDelegate__DelegateSignature_Params
 {
@@ -6794,9 +6798,20 @@ struct UTslGameInstance_GetReplayTotalTime_Params
 	float                                              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
+// Function TslGame.TslGameInstance.GetReplayListLocal
+struct UTslGameInstance_GetReplayListLocal_Params
+{
+};
+
 // DelegateFunction TslGame.TslGameInstance.GetReplayListDoneDelegate__DelegateSignature
 struct UTslGameInstance_GetReplayListDoneDelegate__DelegateSignature_Params
 {
+};
+
+// Function TslGame.TslGameInstance.GetReplayListByRegionOrLocal
+struct UTslGameInstance_GetReplayListByRegionOrLocal_Params
+{
+	struct FString                                     RegionOrLocal;                                            // (CPF_Parm, CPF_ZeroConstructor)
 };
 
 // Function TslGame.TslGameInstance.GetReplayList
@@ -7237,6 +7252,13 @@ struct UTslGameOption_IsVoiceInputMute_Params
 // Function TslGame.TslGameOption.IsUISoundMute
 struct UTslGameOption_IsUISoundMute_Params
 {
+	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function TslGame.TslGameOption.IsMouseWheelInput
+struct UTslGameOption_IsMouseWheelInput_Params
+{
+	struct FTslInputKey                                InInputedKey;                                             // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
 	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
@@ -8875,6 +8897,11 @@ struct UMapGridWidget_ClampPosition_UC_Params
 struct UMapGridWidget_AddCenter_UC_Params
 {
 	class Vector2D                                     Offset_UC;                                                // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+};
+
+// Function TslGame.TeamMarkWidget.InitializeTeamMarkGrid
+struct UTeamMarkWidget_InitializeTeamMarkGrid_Params
+{
 };
 
 // Function TslGame.TslBaseOptionWidget.OnReset
