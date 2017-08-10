@@ -1,4 +1,4 @@
-// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.24) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.39 Test Server) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,23 @@ namespace Classes
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function HudMain.HudMain_C.OnKey_ReplayMenuOrEscape
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UHudMain_C::OnKey_ReplayMenuOrEscape()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function HudMain.HudMain_C.OnKey_ReplayMenuOrEscape");
+
+	UHudMain_C_OnKey_ReplayMenuOrEscape_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function HudMain.HudMain_C.InitForReplay
 // (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)

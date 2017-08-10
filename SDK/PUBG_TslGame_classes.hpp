@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.39 Test Server) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -2493,11 +2493,11 @@ public:
 	float                                              LeanOffset_Stand;                                         // 0x0A78(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              LeanOffset_Crouch;                                        // 0x0A7C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              LeanOffset_Prone;                                         // 0x0A80(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData06[0xC];                                       // 0x0A84(0x000C) MISSED OFFSET
-	float                                              Sprint_MaxSpeed;                                          // 0x0A90(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	float                                              Sprint_MinSpeed;                                          // 0x0A94(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	float                                              SprintingFOV;                                             // 0x0A98(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	float                                              MinimumBreathToHold;                                      // 0x0AA0(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData06[0x10];                                      // 0x0A84(0x0010) MISSED OFFSET
+	float                                              Sprint_MaxSpeed;                                          // 0x0A94(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	float                                              Sprint_MinSpeed;                                          // 0x0A98(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	float                                              SprintingFOV;                                             // 0x0A9C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	float                                              MinimumBreathToHold;                                      // 0x0AA4(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	struct FName                                       SwimPoint;                                                // 0x0AA8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              SwimableWaterDepth;                                       // 0x0AB0(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              CrouchWaterDepth;                                         // 0x0AB4(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
@@ -4009,36 +4009,6 @@ public:
 	float GetHealth();
 	float GetGroggyHealthMax();
 	float GetGroggyHealth();
-};
-
-
-// Class TslGame.TeamMarkWidget
-// 0x0050 (0x0290 - 0x0240)
-class UTeamMarkWidget : public UUserWidget
-{
-public:
-	class ATeam*                                       TeamMember;                                               // 0x0240(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              OffsetZ;                                                  // 0x0248(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              VehicleOffsetZ;                                           // 0x024C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              ImageSize;                                                // 0x0250(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              TopMarkGapDistance;                                       // 0x0254(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              BottomMarkGapDistance;                                    // 0x0258(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              LeftRightMarkGapDistance;                                 // 0x025C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              DiagonalPercent;                                          // 0x0260(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              DeadMarkInvisibleTime;                                    // 0x0264(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              DeadMarkInvisibleDistance;                                // 0x0268(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TEnumAsByte<EMarkPosition>                         TeamMarkPosition;                                         // 0x026C(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x23];                                      // 0x026D(0x0023) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class TslGame.TeamMarkWidget");
-		return ptr;
-	}
-
-
-	void SetCharacterIconPosition_UC(const class Vector2D& Pos_UC, bool OutRange, float Angle, bool IsHidden);
-	void InitializeTeamMarkGrid();
 };
 
 
@@ -5691,7 +5661,7 @@ public:
 
 
 // Class TslGame.TslSettings
-// 0x02F8 (0x0320 - 0x0028)
+// 0x0300 (0x0328 - 0x0028)
 class UTslSettings : public UObject
 {
 public:
@@ -5711,73 +5681,76 @@ public:
 	float                                              RepVehicle_SpawnDistance;                                 // 0x005C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 	float                                              RepVehicle_UnspawnDistance;                               // 0x0060(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 	struct FRigidBodyErrorCorrection                   RepVehicle_PhysicErrorCorrection;                         // 0x0064(0x001C) (CPF_Edit, CPF_Config)
-	unsigned char                                      bBattlEyeEnabled : 1;                                     // 0x0080(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	unsigned char                                      bBattlEyeEnabledInPIE : 1;                                // 0x0081(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	float                                              BattlEyeReliablePacketIntervalOnClient;                   // 0x0084(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	float                                              BattlEyeReliablePacketIntervalOnServer;                   // 0x0088(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	float                                              GameStateLogInterval;                                     // 0x008C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	float                                              ServerStatLogInterval;                                    // 0x0090(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	float                                              CharacterPositionLogInterval;                             // 0x0094(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	float                                              DestructibleComponentMaxDrawDistance;                     // 0x0098(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	class UClass*                                      CharacterClassToPlay;                                     // 0x00A0(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	TArray<struct FBoneBinding>                        BoneMapping;                                              // 0x00A8(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
-	TArray<class UClass*>                              TestVehicleClasses;                                       // 0x00B8(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
-	TArray<class UClass*>                              TestFloatingVehicleClasses;                               // 0x00C8(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
-	float                                              StoppedWheeledVehicleSpeedThreshold;                      // 0x00D8(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	float                                              StoppedFloatingVehicleSpeedThreshold;                     // 0x00DC(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	float                                              LastDriverDuration;                                       // 0x00E0(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	float                                              InteractableDistanceToleranceOnDedicatedServer;           // 0x00E4(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	float                                              InteractableDistance_ItemDefault;                         // 0x00E8(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	float                                              InteractableSpeed_ItemDefault;                            // 0x00EC(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	struct FInteractionCollisionData                   InteractionCollisionForFPS;                               // 0x00F0(0x0014) (CPF_Edit, CPF_Config)
-	struct FInteractionCollisionData                   InteractionCollisionForTPS;                               // 0x0104(0x0014) (CPF_Edit, CPF_Config)
-	unsigned char                                      bPreventFinishMatchInPIE : 1;                             // 0x0118(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	unsigned char                                      bEnableInitialItemDonator : 1;                            // 0x0119(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	float                                              InventoryMaxSpaceDefault;                                 // 0x011C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	class UTexture*                                    ErrorIconTexture;                                         // 0x0120(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UTexture*                                    LoadingIconTexture;                                       // 0x0128(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TArray<class UObject*>                             AssetsForPackageIntegrity;                                // 0x0130(0x0010) (CPF_ZeroConstructor)
-	float                                              UICrosshairDistance;                                      // 0x0140(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	float                                              UICrosshairInterpSpeed;                                   // 0x0144(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	float                                              UICrosshairDisableDistance;                               // 0x0148(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	float                                              GameTimeMultiplier;                                       // 0x014C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	unsigned char                                      AimOffsetRayCast : 1;                                     // 0x0150(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	float                                              MeleeWeaponPitchMin;                                      // 0x0154(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	float                                              MeleeWeaponPitchMax;                                      // 0x0158(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	unsigned char                                      FullRecoilRecovery : 1;                                   // 0x015C(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	struct FLevelLoadingBoostParameters                LevelLoadingBoostParameters;                              // 0x0160(0x0010) (CPF_Edit, CPF_Config)
-	TArray<struct FNearClippingValue>                  NearClippingValues;                                       // 0x0170(0x0010) (CPF_ZeroConstructor, CPF_Config)
-	TArray<struct FTslGame_FCustomizableCategoryData>  CustomizableCategoryData;                                 // 0x0180(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
-	TArray<struct FCustomizableActionName>             CustomizableActionNames;                                  // 0x0190(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
-	TArray<struct FTslGame_FCustomizableAxisName>      CustomizableAxisNames;                                    // 0x01A0(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
-	TArray<struct FCustomizableMouseSensitiveName>     CustomizableMouseSensitiveNames;                          // 0x01B0(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
-	TArray<struct FSurportQualityLevel>                SupportedQualityLevels;                                   // 0x01C0(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
-	TArray<struct FScreenResolution>                   SupportedScreenResolutions;                               // 0x01D0(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
-	struct FStringAssetReference                       MouseSensitivityCurve;                                    // 0x01E0(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
-	struct FStringAssetReference                       GammaCurve;                                               // 0x01F0(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
-	TArray<struct FString>                             CultureNames;                                             // 0x0200(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
-	TArray<struct FColorBlindType>                     ColorBlindTypes;                                          // 0x0210(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
-	TArray<struct FKeyInputModeName>                   KeyInputModeNames;                                        // 0x0220(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
-	TArray<struct FUiType>                             MiniMapTypeList;                                          // 0x0230(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
-	float                                              MinimumScreenResolutionRatio;                             // 0x0240(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	struct FScreenResolution                           MinimumScreenResolution;                                  // 0x0244(0x0008) (CPF_Edit, CPF_Config)
-	TArray<struct FColorBlindColorSet>                 OverrideMarkerColors;                                     // 0x0250(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
-	float                                              PunchClientHitLeeway_Attacker;                            // 0x0260(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	float                                              PunchClientHitLeeway_Victim;                              // 0x0264(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	float                                              ClientSideHitLeeway;                                      // 0x0268(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	float                                              LogClientSideHitLeeway;                                   // 0x026C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	float                                              ClientSideOriginDistanceLeeway;                           // 0x0270(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	float                                              TravelDistanceLeeway;                                     // 0x0274(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	float                                              AllowedHitLag;                                            // 0x0278(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	float                                              LogMinHitLag;                                             // 0x027C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	TArray<struct FOverrideScalability>                OverrideScalabilities;                                    // 0x0280(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
-	float                                              FakeDoorBlockMaxY;                                        // 0x0290(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	TArray<struct FReportCauseData>                    ReportCauses;                                             // 0x0298(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
-	TArray<struct FSubjectToReport>                    SubjectToReport;                                          // 0x02A8(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
-	float                                              FreelookRecoveryInterpSpeed;                              // 0x02B8(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x54];                                      // 0x02BC(0x0054) MISSED OFFSET
-	class UCurveFloat*                                 LoadedMouseSensitivityCurve;                              // 0x0310(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	class UCurveFloat*                                 LoadedGammaCurve;                                         // 0x0318(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	float                                              CharacterCorrection_MaxSpeed;                             // 0x0080(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	float                                              CharacterCorrection_MaxSpeedPositionError;                // 0x0084(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	float                                              CharacterCorrection_ZeroSpeedPositionError;               // 0x0088(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	unsigned char                                      bBattlEyeEnabled : 1;                                     // 0x008C(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	unsigned char                                      bBattlEyeEnabledInPIE : 1;                                // 0x008D(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	float                                              BattlEyeReliablePacketIntervalOnClient;                   // 0x0090(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	float                                              BattlEyeReliablePacketIntervalOnServer;                   // 0x0094(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	float                                              GameStateLogInterval;                                     // 0x0098(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	float                                              ServerStatLogInterval;                                    // 0x009C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	float                                              CharacterPositionLogInterval;                             // 0x00A0(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	float                                              DestructibleComponentMaxDrawDistance;                     // 0x00A4(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	class UClass*                                      CharacterClassToPlay;                                     // 0x00A8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	TArray<struct FBoneBinding>                        BoneMapping;                                              // 0x00B0(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
+	TArray<class UClass*>                              TestVehicleClasses;                                       // 0x00C0(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
+	TArray<class UClass*>                              TestFloatingVehicleClasses;                               // 0x00D0(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
+	float                                              StoppedWheeledVehicleSpeedThreshold;                      // 0x00E0(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	float                                              StoppedFloatingVehicleSpeedThreshold;                     // 0x00E4(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	float                                              LastDriverDuration;                                       // 0x00E8(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	float                                              InteractableDistanceToleranceOnDedicatedServer;           // 0x00EC(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	float                                              InteractableDistance_ItemDefault;                         // 0x00F0(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	float                                              InteractableSpeed_ItemDefault;                            // 0x00F4(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	struct FInteractionCollisionData                   InteractionCollisionForFPS;                               // 0x00F8(0x0014) (CPF_Edit, CPF_Config)
+	struct FInteractionCollisionData                   InteractionCollisionForTPS;                               // 0x010C(0x0014) (CPF_Edit, CPF_Config)
+	unsigned char                                      bPreventFinishMatchInPIE : 1;                             // 0x0120(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	unsigned char                                      bEnableInitialItemDonator : 1;                            // 0x0121(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	float                                              InventoryMaxSpaceDefault;                                 // 0x0124(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	class UTexture*                                    ErrorIconTexture;                                         // 0x0128(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UTexture*                                    LoadingIconTexture;                                       // 0x0130(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TArray<class UObject*>                             AssetsForPackageIntegrity;                                // 0x0138(0x0010) (CPF_ZeroConstructor)
+	float                                              UICrosshairDistance;                                      // 0x0148(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	float                                              UICrosshairInterpSpeed;                                   // 0x014C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	float                                              UICrosshairDisableDistance;                               // 0x0150(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	float                                              GameTimeMultiplier;                                       // 0x0154(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	unsigned char                                      AimOffsetRayCast : 1;                                     // 0x0158(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	float                                              MeleeWeaponPitchMin;                                      // 0x015C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	float                                              MeleeWeaponPitchMax;                                      // 0x0160(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	unsigned char                                      FullRecoilRecovery : 1;                                   // 0x0164(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	struct FLevelLoadingBoostParameters                LevelLoadingBoostParameters;                              // 0x0168(0x0010) (CPF_Edit, CPF_Config)
+	TArray<struct FNearClippingValue>                  NearClippingValues;                                       // 0x0178(0x0010) (CPF_ZeroConstructor, CPF_Config)
+	TArray<struct FTslGame_FCustomizableCategoryData>  CustomizableCategoryData;                                 // 0x0188(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
+	TArray<struct FCustomizableActionName>             CustomizableActionNames;                                  // 0x0198(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
+	TArray<struct FTslGame_FCustomizableAxisName>      CustomizableAxisNames;                                    // 0x01A8(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
+	TArray<struct FCustomizableMouseSensitiveName>     CustomizableMouseSensitiveNames;                          // 0x01B8(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
+	TArray<struct FSurportQualityLevel>                SupportedQualityLevels;                                   // 0x01C8(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
+	TArray<struct FScreenResolution>                   SupportedScreenResolutions;                               // 0x01D8(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
+	struct FStringAssetReference                       MouseSensitivityCurve;                                    // 0x01E8(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
+	struct FStringAssetReference                       GammaCurve;                                               // 0x01F8(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
+	TArray<struct FString>                             CultureNames;                                             // 0x0208(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
+	TArray<struct FColorBlindType>                     ColorBlindTypes;                                          // 0x0218(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
+	TArray<struct FKeyInputModeName>                   KeyInputModeNames;                                        // 0x0228(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
+	TArray<struct FUiType>                             MiniMapTypeList;                                          // 0x0238(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
+	float                                              MinimumScreenResolutionRatio;                             // 0x0248(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	struct FScreenResolution                           MinimumScreenResolution;                                  // 0x024C(0x0008) (CPF_Edit, CPF_Config)
+	TArray<struct FColorBlindColorSet>                 OverrideMarkerColors;                                     // 0x0258(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
+	float                                              PunchClientHitLeeway_Attacker;                            // 0x0268(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	float                                              PunchClientHitLeeway_Victim;                              // 0x026C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	float                                              ClientSideHitLeeway;                                      // 0x0270(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	float                                              LogClientSideHitLeeway;                                   // 0x0274(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	float                                              ClientSideOriginDistanceLeeway;                           // 0x0278(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	float                                              TravelDistanceLeeway;                                     // 0x027C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	float                                              AllowedHitLag;                                            // 0x0280(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	float                                              LogMinHitLag;                                             // 0x0284(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	TArray<struct FOverrideScalability>                OverrideScalabilities;                                    // 0x0288(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
+	float                                              FakeDoorBlockMaxY;                                        // 0x0298(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	TArray<struct FReportCauseData>                    ReportCauses;                                             // 0x02A0(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
+	TArray<struct FSubjectToReport>                    SubjectToReport;                                          // 0x02B0(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
+	float                                              FreelookRecoveryInterpSpeed;                              // 0x02C0(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x54];                                      // 0x02C4(0x0054) MISSED OFFSET
+	class UCurveFloat*                                 LoadedMouseSensitivityCurve;                              // 0x0318(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	class UCurveFloat*                                 LoadedGammaCurve;                                         // 0x0320(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -5791,30 +5764,32 @@ public:
 
 
 // Class TslGame.TslGameInstance
-// 0x0450 (0x0540 - 0x00F0)
+// 0x0470 (0x0560 - 0x00F0)
 class UTslGameInstance : public UGameInstance
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x00F0(0x0008) MISSED OFFSET
 	unsigned char                                      bUseLobbyWidget : 1;                                      // 0x00F8(0x0001) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 	int                                                LobbyWidgetZOrder;                                        // 0x00FC(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	class ULobbyLink*                                  LobbyLink;                                                // 0x0100(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	class UVivoxManager*                               VivoxManager;                                             // 0x0108(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	struct FTslStartParameter                          StartParamter;                                            // 0x0110(0x0080)
-	unsigned char                                      UnknownData01[0x180];                                     // 0x0190(0x0180) MISSED OFFSET
-	class UClass*                                      LobbyWidgetClass;                                         // 0x0310(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData02[0x118];                                     // 0x0318(0x0118) MISSED OFFSET
-	class ULobbyWidget*                                LobbyWidget;                                              // 0x0430(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData03[0x68];                                      // 0x0438(0x0068) MISSED OFFSET
-	TArray<struct FReplayKillEventItem>                ReplayKillEventItems;                                     // 0x04A0(0x0010) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor)
-	struct FScriptMulticastDelegate                    OnEnumerateReplayKillEventsDone;                          // 0x04B0(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
-	TArray<struct FReplayItem>                         ReplayItemList;                                           // 0x04C0(0x0010) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor)
-	unsigned char                                      UnknownData04[0x38];                                      // 0x04D0(0x0038) MISSED OFFSET
-	struct FScriptMulticastDelegate                    OnGetReplayListDone;                                      // 0x0508(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnGotoTimelineDone;                                       // 0x0518(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
-	unsigned char                                      UnknownData05[0x8];                                       // 0x0528(0x0008) MISSED OFFSET
-	class UGameEventObserver*                          GameEventObserver;                                        // 0x0530(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData06[0x8];                                       // 0x0538(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x8];                                       // 0x0100(0x0008) MISSED OFFSET
+	class ULobbyLink*                                  LobbyLink;                                                // 0x0108(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	class UVivoxManager*                               VivoxManager;                                             // 0x0110(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	struct FTslStartParameter                          StartParamter;                                            // 0x0118(0x0080)
+	unsigned char                                      UnknownData02[0x180];                                     // 0x0198(0x0180) MISSED OFFSET
+	class UClass*                                      LobbyWidgetClass;                                         // 0x0318(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData03[0x120];                                     // 0x0320(0x0120) MISSED OFFSET
+	class ULobbyWidget*                                LobbyWidget;                                              // 0x0440(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData04[0x68];                                      // 0x0448(0x0068) MISSED OFFSET
+	TArray<struct FReplayKillEventItem>                ReplayKillEventItems;                                     // 0x04B0(0x0010) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor)
+	struct FScriptMulticastDelegate                    OnEnumerateReplayKillEventsDone;                          // 0x04C0(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
+	unsigned char                                      UnknownData05[0x10];                                      // 0x04D0(0x0010) MISSED OFFSET
+	TArray<struct FReplayItem>                         ReplayItemList;                                           // 0x04E0(0x0010) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor)
+	unsigned char                                      UnknownData06[0x38];                                      // 0x04F0(0x0038) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnGetReplayListDone;                                      // 0x0528(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnGotoTimelineDone;                                       // 0x0538(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
+	unsigned char                                      UnknownData07[0x8];                                       // 0x0548(0x0008) MISSED OFFSET
+	class UGameEventObserver*                          GameEventObserver;                                        // 0x0550(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData08[0x8];                                       // 0x0558(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -5825,18 +5800,23 @@ public:
 
 	bool UseLobbyWidget();
 	bool UnPause();
+	void ShowLoadingScreen();
 	void SetReplayTimeSpeed(float TimeSpeed);
 	void ReplayJump(float TimelinePercentage);
+	void PlayReplayBPByRegionOrLocal(const struct FString& RegionOrLocal, const struct FString& SessionOrFriendlyName);
 	void PlayReplayBP(const struct FString& SessionOrFriendlyName);
 	bool Pause();
 	bool IsReplaying();
 	bool IsRecording();
 	bool IsPaused();
+	bool IsESports();
 	void GotoTimelineDoneDelegate__DelegateSignature();
 	struct FString GetStartParameterStringValue(const struct FString& Key, const struct FString& NotFoundValue);
 	struct FTslStartParameter GetStartParameter();
 	float GetReplayTotalTime();
+	void GetReplayListLocal();
 	void GetReplayListDoneDelegate__DelegateSignature();
+	void GetReplayListByRegionOrLocal(const struct FString& RegionOrLocal);
 	void GetReplayList();
 	void GetReplayKill__DelegateSignature();
 	float GetReplayCurrentTime();
@@ -5847,7 +5827,7 @@ public:
 
 
 // Class TslGame.TslGameMode
-// 0x0320 (0x0790 - 0x0470)
+// 0x0328 (0x0798 - 0x0470)
 class ATslGameMode : public AGameMode
 {
 public:
@@ -5862,46 +5842,47 @@ public:
 	unsigned char                                      PlayerRespawn : 1;                                        // 0x04B2(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int                                                PostMatchWaitingTime;                                     // 0x04B4(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 	int                                                CustomGamePostMatchWaitingTime;                           // 0x04B8(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	int                                                ServerQuitAfterLeavingMapTime;                            // 0x04BC(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	int                                                MinPlayers;                                               // 0x04C0(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	int                                                PlayerSpawnTryMaxCount;                                   // 0x04C4(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	unsigned char                                      bEnablePerfBotInPIE : 1;                                  // 0x04C8(0x0001) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	unsigned char                                      bEnablePerfBotLogin : 1;                                  // 0x04C9(0x0001) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	unsigned char                                      bIsPerfBotSpawnToRandomPosition : 1;                      // 0x04CA(0x0001) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	unsigned char                                      bCanRestartPerfBot : 1;                                   // 0x04CB(0x0001) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	unsigned char                                      bEnableObserverInPIE : 1;                                 // 0x04CC(0x0001) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	unsigned char                                      IsBattleRoyale : 1;                                       // 0x04CD(0x0001) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	unsigned char                                      bStartPlayerAtMatchStart : 1;                             // 0x04CE(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      bShouldSpawnAtStartSpot : 1;                              // 0x04CF(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      bIsCustomGame : 1;                                        // 0x04D1(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	unsigned char                                      bCanAllSpectate : 1;                                      // 0x04D2(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	struct FCustomGameUpdateCharacterInfo              CustomGameUpdateCharacterInfo;                            // 0x04D4(0x0014) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Config)
-	TArray<struct FLimitCustomStringParameter>         LimitCustomStringParameters;                              // 0x04E8(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_Config)
-	float                                              MultiplierBlueZone;                                       // 0x04F8(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	float                                              BlueZoneCentralizationFactor;                             // 0x04FC(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	float                                              MultiplierCarePackage;                                    // 0x0500(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	struct FRedZoneCustomOption                        RedZoneCustomOption;                                      // 0x0504(0x001C) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Config)
-	int                                                WarmupTime;                                               // 0x0520(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	int                                                EditorTestTeamMemberCount;                                // 0x0524(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	TMap<struct FString, class URewardData*>           RewardDataMap;                                            // 0x0528(0x0050) (CPF_Edit, CPF_ZeroConstructor)
-	class URewardData*                                 RewardData;                                               // 0x0578(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class ATslPlayerState*                             WinnerPlayerState;                                        // 0x0580(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	int                                                WinnerTeam;                                               // 0x0588(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UClass*                                      ItemSpawnProcessorClass;                                  // 0x0590(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UClass*                                      ThingSpawnProcessorClass;                                 // 0x0598(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UClass*                                      BasicBeltItemClassForNoBelt;                              // 0x05A0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x05A8(0x0008) MISSED OFFSET
-	class UItemSpawnProcessor*                         ItemSpawnProcessor;                                       // 0x05B0(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	class UThingSpawnProcessor*                        ThingSpawnProcessor;                                      // 0x05B8(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	class UGeneralItemSpawner*                         InitialItemDonator;                                       // 0x05C0(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	class UMatchPreparer*                              MatchPreparer;                                            // 0x05C8(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	class AModeController*                             ModeController;                                           // 0x05D0(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	class ADroppedItemGridManager*                     DroppedItemGridManager;                                   // 0x05D8(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	TArray<class AModeController*>                     AdditinalModeControllers;                                 // 0x05E0(0x0010) (CPF_ZeroConstructor, CPF_Transient)
-	unsigned char                                      UnknownData01[0x98];                                      // 0x05F0(0x0098) MISSED OFFSET
-	TMap<struct FString, class APlayerState*>          JoinedUserPlayerStateMap;                                 // 0x0688(0x0050) (CPF_ZeroConstructor, CPF_Transient)
-	TArray<struct FTeams>                              Teams;                                                    // 0x06D8(0x0010) (CPF_ZeroConstructor, CPF_Transient)
-	unsigned char                                      UnknownData02[0xA8];                                      // 0x06E8(0x00A8) MISSED OFFSET
+	int                                                ESportsPostMatchWaitingTime;                              // 0x04BC(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	int                                                ServerQuitAfterLeavingMapTime;                            // 0x04C0(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	int                                                MinPlayers;                                               // 0x04C4(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	int                                                PlayerSpawnTryMaxCount;                                   // 0x04C8(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	unsigned char                                      bEnablePerfBotInPIE : 1;                                  // 0x04CC(0x0001) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	unsigned char                                      bEnablePerfBotLogin : 1;                                  // 0x04CD(0x0001) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	unsigned char                                      bIsPerfBotSpawnToRandomPosition : 1;                      // 0x04CE(0x0001) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	unsigned char                                      bCanRestartPerfBot : 1;                                   // 0x04CF(0x0001) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	unsigned char                                      bEnableObserverInPIE : 1;                                 // 0x04D0(0x0001) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	unsigned char                                      IsBattleRoyale : 1;                                       // 0x04D1(0x0001) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	unsigned char                                      bStartPlayerAtMatchStart : 1;                             // 0x04D2(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      bShouldSpawnAtStartSpot : 1;                              // 0x04D3(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      bIsCustomGame : 1;                                        // 0x04D5(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	unsigned char                                      bCanAllSpectate : 1;                                      // 0x04D6(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	struct FCustomGameUpdateCharacterInfo              CustomGameUpdateCharacterInfo;                            // 0x04D8(0x0014) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Config)
+	TArray<struct FLimitCustomStringParameter>         LimitCustomStringParameters;                              // 0x04F0(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_Config)
+	float                                              MultiplierBlueZone;                                       // 0x0500(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	float                                              BlueZoneCentralizationFactor;                             // 0x0504(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	float                                              MultiplierCarePackage;                                    // 0x0508(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	struct FRedZoneCustomOption                        RedZoneCustomOption;                                      // 0x050C(0x001C) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Config)
+	int                                                WarmupTime;                                               // 0x0528(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	int                                                EditorTestTeamMemberCount;                                // 0x052C(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	TMap<struct FString, class URewardData*>           RewardDataMap;                                            // 0x0530(0x0050) (CPF_Edit, CPF_ZeroConstructor)
+	class URewardData*                                 RewardData;                                               // 0x0580(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class ATslPlayerState*                             WinnerPlayerState;                                        // 0x0588(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	int                                                WinnerTeam;                                               // 0x0590(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UClass*                                      ItemSpawnProcessorClass;                                  // 0x0598(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UClass*                                      ThingSpawnProcessorClass;                                 // 0x05A0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UClass*                                      BasicBeltItemClassForNoBelt;                              // 0x05A8(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x05B0(0x0008) MISSED OFFSET
+	class UItemSpawnProcessor*                         ItemSpawnProcessor;                                       // 0x05B8(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	class UThingSpawnProcessor*                        ThingSpawnProcessor;                                      // 0x05C0(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	class UGeneralItemSpawner*                         InitialItemDonator;                                       // 0x05C8(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	class UMatchPreparer*                              MatchPreparer;                                            // 0x05D0(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	class AModeController*                             ModeController;                                           // 0x05D8(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	class ADroppedItemGridManager*                     DroppedItemGridManager;                                   // 0x05E0(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	TArray<class AModeController*>                     AdditinalModeControllers;                                 // 0x05E8(0x0010) (CPF_ZeroConstructor, CPF_Transient)
+	unsigned char                                      UnknownData01[0x98];                                      // 0x05F8(0x0098) MISSED OFFSET
+	TMap<struct FString, class APlayerState*>          JoinedUserPlayerStateMap;                                 // 0x0690(0x0050) (CPF_ZeroConstructor, CPF_Transient)
+	TArray<struct FTeams>                              Teams;                                                    // 0x06E0(0x0010) (CPF_ZeroConstructor, CPF_Transient)
+	unsigned char                                      UnknownData02[0xA8];                                      // 0x06F0(0x00A8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -5990,6 +5971,7 @@ public:
 	bool STATIC_IsVoiceOutputMute();
 	bool STATIC_IsVoiceInputMute();
 	bool STATIC_IsUISoundMute();
+	bool STATIC_IsMouseWheelInput(const struct FTslInputKey& InInputedKey);
 	bool STATIC_IsModifierKey(const struct FTslInputKey& Key);
 	bool STATIC_IsMasterSoundMute();
 	bool STATIC_IsKeyValid(const struct FTslInputKey& Key);
@@ -6598,7 +6580,7 @@ public:
 	unsigned char                                      bQuitter : 1;                                             // 0x0524(0x0001)
 	unsigned char                                      UnknownData02[0xDB];                                      // 0x0525(0x00DB) MISSED OFFSET
 	float                                              LastHitTime;                                              // 0x0600(0x0004) (CPF_BlueprintVisible, CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class ATslPlayerState*                             CurrentAttackedPlayerState;                               // 0x0608(0x0008) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     CurrentAttackedPlayerLocation;                            // 0x0604(0x000C) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Net)
 
 	static UClass* StaticClass()
 	{
@@ -7567,6 +7549,41 @@ public:
 };
 
 
+// Class TslGame.TeamMarkWidget
+// 0x00E0 (0x0358 - 0x0278)
+class UTeamMarkWidget : public UUmgBaseWidget
+{
+public:
+	class ATeam*                                       TeamMember;                                               // 0x0278(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              OffsetZ;                                                  // 0x0280(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              VehicleOffsetZ;                                           // 0x0284(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              ImageSize;                                                // 0x0288(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              TopMarkGapDistance;                                       // 0x028C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              BottomMarkGapDistance;                                    // 0x0290(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              LeftRightMarkGapDistance;                                 // 0x0294(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              DiagonalPercent;                                          // 0x0298(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              DeadMarkInvisibleTime;                                    // 0x029C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              DeadMarkInvisibleDistance;                                // 0x02A0(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TEnumAsByte<EMarkPosition>                         TeamMarkPosition;                                         // 0x02A4(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FUmgWidgetBinder_Gerneral                   StateSwitcherBinder;                                      // 0x02A8(0x0020) (CPF_Edit, CPF_DisableEditOnInstance)
+	struct FUmgWidgetBinder_Gerneral                   PlayerNameTextBinder;                                     // 0x02C8(0x0020) (CPF_Edit, CPF_DisableEditOnInstance)
+	struct FUmgWidgetBinder_Gerneral                   NormalImageBinder;                                        // 0x02E8(0x0020) (CPF_Edit, CPF_DisableEditOnInstance)
+	struct FUmgWidgetBinder_UserWidget                 GroggyCircleBinder;                                       // 0x0308(0x0020) (CPF_Edit, CPF_DisableEditOnInstance)
+	class UTexture*                                    OutScreenImage;                                           // 0x0328(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	class UTexture*                                    InScreenImage;                                            // 0x0330(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x20];                                      // 0x0338(0x0020) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class TslGame.TeamMarkWidget");
+		return ptr;
+	}
+
+
+	void InitializeTeamMarkGrid();
+};
+
+
 // Class TslGame.TslBaseOptionWidget
 // 0x0000 (0x0278 - 0x0278)
 class UTslBaseOptionWidget : public UUmgBaseWidget
@@ -7697,6 +7714,73 @@ public:
 };
 
 
+// Class TslGame.TslCompassMarkerWidget
+// 0x0038 (0x02B0 - 0x0278)
+class UTslCompassMarkerWidget : public UUmgBaseWidget
+{
+public:
+	struct FUmgWidgetBinder_Image                      CompassMarkerImageBinder;                                 // 0x0278(0x0028) (CPF_Edit, CPF_DisableEditOnInstance)
+	int                                                MarkerNumber;                                             // 0x02A0(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              XViewSize;                                                // 0x02A4(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      bShow : 1;                                                // 0x02A8(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class TslGame.TslCompassMarkerWidget");
+		return ptr;
+	}
+
+};
+
+
+// Class TslGame.TslCompassWidget
+// 0x00D8 (0x0350 - 0x0278)
+class UTslCompassWidget : public UUmgBaseWidget
+{
+public:
+	class UMaterialInterface*                          MI_Compass;                                               // 0x0278(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	class UMaterialInstanceDynamic*                    MID_Compass;                                              // 0x0280(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FUmgWidgetBinder_Image                      CompassImageBinder;                                       // 0x0288(0x0028) (CPF_Edit, CPF_DisableEditOnInstance)
+	struct FUmgWidgetBinder_Image                      MarkerImageBinder;                                        // 0x02B0(0x0028) (CPF_Edit, CPF_DisableEditOnInstance)
+	struct FUmgWidgetBinder_Overlay                    MyOverlayBinder;                                          // 0x02D8(0x0020) (CPF_Edit, CPF_DisableEditOnInstance)
+	struct FUmgWidgetBinder_Overlay                    TeamOverlayBinder;                                        // 0x02F8(0x0020) (CPF_Edit, CPF_DisableEditOnInstance)
+	class UClass*                                      CompassMarkerWidgetClass;                                 // 0x0318(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	class UTslCompassMarkerWidget*                     MyCompassMarkerWidget;                                    // 0x0320(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TArray<class UTslCompassMarkerWidget*>             TeamMarkerWidgetOfTeam;                                   // 0x0328(0x0010) (CPF_ZeroConstructor)
+	float                                              DivisionLevel;                                            // 0x0338(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              Offset;                                                   // 0x033C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      bClockwise : 1;                                           // 0x0340(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              Width;                                                    // 0x0344(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      bIsInitilzed : 1;                                         // 0x0348(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class TslGame.TslCompassWidget");
+		return ptr;
+	}
+
+};
+
+
+// Class TslGame.TslGroggyCircleWidget
+// 0x0060 (0x02D8 - 0x0278)
+class UTslGroggyCircleWidget : public UUmgBaseWidget
+{
+public:
+	class UMaterialInstanceDynamic*                    MID_ProgressCircle;                                       // 0x0278(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UMaterialInterface*                          MI_ProgressCircle;                                        // 0x0280(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	struct FUmgWidgetBinder_Image                      CircleImageBinder;                                        // 0x0288(0x0028) (CPF_Edit, CPF_DisableEditOnInstance)
+	struct FUmgWidgetBinder_Image                      CrossImageBinder;                                         // 0x02B0(0x0028) (CPF_Edit, CPF_DisableEditOnInstance)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class TslGame.TslGroggyCircleWidget");
+		return ptr;
+	}
+
+};
+
+
 // Class TslGame.TslKeyReceiverWidget
 // 0x00A0 (0x0318 - 0x0278)
 class UTslKeyReceiverWidget : public UUmgBaseWidget
@@ -7781,6 +7865,23 @@ public:
 	void OnVoiceChat(bool InbSpeaking, float InMeterEnergy);
 	void DecideTeamNameColor();
 	void BindVoiceChatIfNeed();
+};
+
+
+// Class TslGame.TslTeamWidget
+// 0x0018 (0x0290 - 0x0278)
+class UTslTeamWidget : public UUmgBaseWidget
+{
+public:
+	TArray<class UTeamMarkWidget*>                     TeamMarkWidgets;                                          // 0x0278(0x0010) (CPF_ZeroConstructor)
+	class UClass*                                      TeamMarkWidgetClass;                                      // 0x0288(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class TslGame.TslTeamWidget");
+		return ptr;
+	}
+
 };
 
 

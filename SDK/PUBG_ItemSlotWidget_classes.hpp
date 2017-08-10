@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.24) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.39 Test Server) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -154,6 +154,7 @@ public:
 	void UI_Gamepad_B_Released();
 	void Tick(struct FGeometry* MyGeometry, float* InDeltaTime);
 	void OnButtonClicked(TEnumAsByte<EPopupButtonID> ButtonID);
+	void OnInputWidgetInputB();
 	void ExecuteUbergraph_ItemSlotWidget(int EntryPoint);
 	void RefreshFocus__DelegateSignature();
 	void OnRefreshInnerList__DelegateSignature();

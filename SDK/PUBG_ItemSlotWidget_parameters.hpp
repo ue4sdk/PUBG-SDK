@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.24) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.39 Test Server) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -508,6 +508,11 @@ struct UItemSlotWidget_C_Tick_Params
 struct UItemSlotWidget_C_OnButtonClicked_Params
 {
 	TEnumAsByte<EPopupButtonID>                        ButtonID;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function ItemSlotWidget.ItemSlotWidget_C.OnInputWidgetInputB
+struct UItemSlotWidget_C_OnInputWidgetInputB_Params
+{
 };
 
 // Function ItemSlotWidget.ItemSlotWidget_C.ExecuteUbergraph_ItemSlotWidget

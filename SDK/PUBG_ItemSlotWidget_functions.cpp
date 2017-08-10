@@ -1,4 +1,4 @@
-// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.24) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.39 Test Server) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -1696,6 +1696,23 @@ void UItemSlotWidget_C::OnButtonClicked(TEnumAsByte<EPopupButtonID> ButtonID)
 
 	UItemSlotWidget_C_OnButtonClicked_Params params;
 	params.ButtonID = ButtonID;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ItemSlotWidget.ItemSlotWidget_C.OnInputWidgetInputB
+// (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UItemSlotWidget_C::OnInputWidgetInputB()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.OnInputWidgetInputB");
+
+	UItemSlotWidget_C_OnInputWidgetInputB_Params params;
 
 	auto flags = fn->FunctionFlags;
 

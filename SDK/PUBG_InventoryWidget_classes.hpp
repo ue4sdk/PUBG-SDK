@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.39 Test Server) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -125,7 +125,6 @@ public:
 	void UpdateDragDroppingObject(class UWidget* BoundWidget);
 	void FinalizeWidget(const struct FScriptDelegate& OnInventoryUpdated, const struct FScriptDelegate& OnEquipmentUpdated);
 	void InitializeWidget(const struct FScriptDelegate& OnInventoryUpdated, const struct FScriptDelegate& OnEquipmentUpdated, const struct FScriptDelegate& OnUpdateItemList, const struct FScriptDelegate& OnItemSlotFocus);
-	void Tick(struct FGeometry* MyGeometry, float* InDeltaTime);
 	void BndEvt__Vicinity_K2Node_ComponentBoundEvent_36_OnChildSlotFocus__DelegateSignature(const TScriptInterface<class USlotInterface>& Slot, const TScriptInterface<class USlotContainerInterface>& SlotContainer);
 	void BndEvt__Backpack_K2Node_ComponentBoundEvent_40_OnChildSlotFocus__DelegateSignature(const TScriptInterface<class USlotInterface>& Slot, const TScriptInterface<class USlotContainerInterface>& SlotContainer);
 	void Construct();
@@ -141,11 +140,10 @@ public:
 	void OnUp();
 	void OnDown();
 	void OnWidgetInputA();
-	void ONWidgetInputB();
+	void OnWidgetInputB();
 	void OnWidgetInputX();
 	void OnWidgetInputY();
 	void Destruct();
-	void OnItemExplorerProxyUpdated();
 	void OnInputRB();
 	void OnInputRT();
 	void BndEvt__Character_K2Node_ComponentBoundEvent_88_RefreshFocus__DelegateSignature();
@@ -157,13 +155,16 @@ public:
 	void OnUpRelease();
 	void OnDownRelease();
 	void MoveTick(float DeltaTime);
+	void OnItemExplorerProxyUpdated();
+	void OnEquipmentUpdated();
 	void BndEvt__VicinityTitleOff_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature();
 	void BndEvt__VicinityTitleOn_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature();
+	void Tick(struct FGeometry* MyGeometry, float* InDeltaTime);
 	void OnInteract();
-	void OnEquipmentUpdated();
 	void OnInventoryUpdated();
 	void OnWidgetInputLT();
 	void OnWidgetInputRT();
+	void CustomEvent_1();
 	void ExecuteUbergraph_InventoryWidget(int EntryPoint);
 };
 

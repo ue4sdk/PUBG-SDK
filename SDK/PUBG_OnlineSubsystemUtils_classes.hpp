@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.24) SDK
+// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.39 Test Server) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -292,14 +292,14 @@ public:
 
 
 // Class OnlineSubsystemUtils.IpNetDriver
-// 0x0020 (0x0428 - 0x0408)
+// 0x0020 (0x0438 - 0x0418)
 class UIpNetDriver : public UNetDriver
 {
 public:
-	unsigned char                                      LogPortUnreach : 1;                                       // 0x0408(0x0001) (CPF_Config)
-	unsigned char                                      AllowPlayerPortUnreach : 1;                               // 0x0408(0x0001) (CPF_Config)
-	uint32_t                                           MaxPortCountToTry;                                        // 0x040C(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0410(0x0018) MISSED OFFSET
+	unsigned char                                      LogPortUnreach : 1;                                       // 0x0418(0x0001) (CPF_Config)
+	unsigned char                                      AllowPlayerPortUnreach : 1;                               // 0x0418(0x0001) (CPF_Config)
+	uint32_t                                           MaxPortCountToTry;                                        // 0x041C(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0420(0x0018) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
