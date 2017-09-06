@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
+// PlayerUnknown's Battlegrounds (2.5.39.19) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,12 @@ namespace Classes
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function ScreenSettingWidget.ScreenSettingWidget_C.IsEnable
+struct UScreenSettingWidget_C_IsEnable_Params
+{
+	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
 
 // Function ScreenSettingWidget.ScreenSettingWidget_C.GetSelectedFullScreenMode
 struct UScreenSettingWidget_C_GetSelectedFullScreenMode_Params

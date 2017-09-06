@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.39) SDK
+// PlayerUnknown's Battlegrounds (2.5.39.19) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -3062,7 +3062,6 @@ struct ATslCharacter_SetLaunchEvent_Params
 	struct FAttackId                                   AttackId;                                                 // (CPF_Parm)
 	class ATslPlayerState*                             InPlayerState;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class AActor*                                      Causer;                                                   // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UTslDamageType*                              DamageType;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // Function TslGame.TslCharacter.SetJumpStartLocationAndFallheight
@@ -3449,6 +3448,12 @@ struct ATslCharacter_OnRep_BoostGauge_Params
 struct ATslCharacter_OnRep_AimOffsets_Params
 {
 	class Vector3D                                     PrevAimOffsets;                                           // (CPF_Parm)
+};
+
+// Function TslGame.TslCharacter.OnMoveToVehicleSeat
+struct ATslCharacter_OnMoveToVehicleSeat_Params
+{
+	unsigned char                                      idx;                                                      // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // Function TslGame.TslCharacter.OnInteractBy
@@ -4606,6 +4611,12 @@ struct UObserverTagWidget_IsTeamMember_Params
 struct UObserverTagWidget_IsLastSpectatedCharacter_Params
 {
 	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function TslGame.TslVehicleInterface.OnMoveToVehicleSeat
+struct UTslVehicleInterface_OnMoveToVehicleSeat_Params
+{
+	unsigned char                                      idx;                                                      // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // Function TslGame.TslVehicleInterface.GetVehicleMeshComponent
@@ -6695,6 +6706,18 @@ struct UTslFocusableWidgetInterface_Down_Params
 	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
+// Function TslGame.TslSettings.IsForChineseLicensing
+struct UTslSettings_IsForChineseLicensing_Params
+{
+	bool                                               ReturnValue;                                              // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function TslGame.TslSettings.IsESports
+struct UTslSettings_IsESports_Params
+{
+	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
 // Function TslGame.TslSettings.GetTslSettings
 struct UTslSettings_GetTslSettings_Params
 {
@@ -6765,12 +6788,6 @@ struct UTslGameInstance_IsRecording_Params
 struct UTslGameInstance_IsPaused_Params
 {
 	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function TslGame.TslGameInstance.IsESports
-struct UTslGameInstance_IsESports_Params
-{
-	bool                                               ReturnValue;                                              // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
 // DelegateFunction TslGame.TslGameInstance.GotoTimelineDoneDelegate__DelegateSignature
@@ -7147,6 +7164,12 @@ struct UTslGameOption_SetEffectSoundMute_Params
 	bool                                               bIsMute;                                                  // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
+// Function TslGame.TslGameOption.SetCurrentProvider
+struct UTslGameOption_SetCurrentProvider_Params
+{
+	struct FString                                     ProviderName;                                             // (CPF_Parm, CPF_ZeroConstructor)
+};
+
 // Function TslGame.TslGameOption.SetCurrentCultureName
 struct UTslGameOption_SetCurrentCultureName_Params
 {
@@ -7500,6 +7523,12 @@ struct UTslGameOption_GetDefaultCultureName_Params
 	struct FString                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 };
 
+// Function TslGame.TslGameOption.GetCurrentProvider
+struct UTslGameOption_GetCurrentProvider_Params
+{
+	struct FString                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
+};
+
 // Function TslGame.TslGameOption.GetCurrentCultureName
 struct UTslGameOption_GetCurrentCultureName_Params
 {
@@ -7550,6 +7579,18 @@ struct UTslGameOption_GetAxisKey_Params
 	bool                                               bWantAnyKey;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	TEnumAsByte<EKeyBindingSlot>                       eKeySlot;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	struct FTslInputKey                                ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
+};
+
+// Function TslGame.TslGameOption.GetAvailableProviderNames
+struct UTslGameOption_GetAvailableProviderNames_Params
+{
+	TArray<struct FString>                             ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
+};
+
+// Function TslGame.TslGameOption.GetAvailableProviderDisplayNames
+struct UTslGameOption_GetAvailableProviderDisplayNames_Params
+{
+	TArray<struct FText>                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 };
 
 // Function TslGame.TslGameOption.GetAutoQualityLevels
@@ -8417,6 +8458,12 @@ struct UTslStatics_IsLastInputGamepad_Params
 
 // Function TslGame.TslStatics.IsGamepadConnected
 struct UTslStatics_IsGamepadConnected_Params
+{
+	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function TslGame.TslStatics.IsESports
+struct UTslStatics_IsESports_Params
 {
 	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };

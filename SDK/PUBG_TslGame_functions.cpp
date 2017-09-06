@@ -1,4 +1,4 @@
-// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.39) SDK
+// PlayerUnknown's Battlegrounds (2.5.39.19) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -2404,7 +2404,7 @@ void ATslPlayerController::OnRep_CameraViewBehaviour()
 
 
 // Function TslGame.TslPlayerController.OnMoveToVehicleSeat
-// (FUNC_Final, FUNC_Native, FUNC_Private)
+// (FUNC_Final, FUNC_Native, FUNC_Public)
 // Parameters:
 // unsigned char                  idx                            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
@@ -10727,9 +10727,8 @@ void ATslCharacter::SetMovementEnabled(bool IsEnabled)
 // struct FAttackId               AttackId                       (CPF_Parm)
 // class ATslPlayerState*         InPlayerState                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class AActor*                  Causer                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class UTslDamageType*          DamageType                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void ATslCharacter::SetLaunchEvent(const struct FAttackId& AttackId, class ATslPlayerState* InPlayerState, class AActor* Causer, class UTslDamageType* DamageType)
+void ATslCharacter::SetLaunchEvent(const struct FAttackId& AttackId, class ATslPlayerState* InPlayerState, class AActor* Causer)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslCharacter.SetLaunchEvent");
 
@@ -10737,7 +10736,6 @@ void ATslCharacter::SetLaunchEvent(const struct FAttackId& AttackId, class ATslP
 	params.AttackId = AttackId;
 	params.InPlayerState = InPlayerState;
 	params.Causer = Causer;
-	params.DamageType = DamageType;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -12075,6 +12073,27 @@ void ATslCharacter::OnRep_AimOffsets(const class Vector3D& PrevAimOffsets)
 
 	ATslCharacter_OnRep_AimOffsets_Params params;
 	params.PrevAimOffsets = PrevAimOffsets;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function TslGame.TslCharacter.OnMoveToVehicleSeat
+// (FUNC_Native, FUNC_Public)
+// Parameters:
+// unsigned char                  idx                            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void ATslCharacter::OnMoveToVehicleSeat(unsigned char idx)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslCharacter.OnMoveToVehicleSeat");
+
+	ATslCharacter_OnMoveToVehicleSeat_Params params;
+	params.idx = idx;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -16258,6 +16277,27 @@ bool UObserverTagWidget::IsLastSpectatedCharacter()
 	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
+}
+
+
+// Function TslGame.TslVehicleInterface.OnMoveToVehicleSeat
+// (FUNC_Native, FUNC_Protected)
+// Parameters:
+// unsigned char                  idx                            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UTslVehicleInterface::OnMoveToVehicleSeat(unsigned char idx)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslVehicleInterface.OnMoveToVehicleSeat");
+
+	UTslVehicleInterface_OnMoveToVehicleSeat_Params params;
+	params.idx = idx;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
 }
 
 
@@ -23516,6 +23556,50 @@ bool UTslFocusableWidgetInterface::Down()
 }
 
 
+// Function TslGame.TslSettings.IsForChineseLicensing
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// bool                           ReturnValue                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+bool UTslSettings::IsForChineseLicensing()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslSettings.IsForChineseLicensing");
+
+	UTslSettings_IsForChineseLicensing_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function TslGame.TslSettings.IsESports
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+bool UTslSettings::IsESports()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslSettings.IsESports");
+
+	UTslSettings_IsESports_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function TslGame.TslSettings.GetTslSettings
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_BlueprintCallable)
 // Parameters:
@@ -23762,28 +23846,6 @@ bool UTslGameInstance::IsPaused()
 	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslGameInstance.IsPaused");
 
 	UTslGameInstance_IsPaused_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function TslGame.TslGameInstance.IsESports
-// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
-// Parameters:
-// bool                           ReturnValue                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-
-bool UTslGameInstance::IsESports()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslGameInstance.IsESports");
-
-	UTslGameInstance_IsESports_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -25100,6 +25162,27 @@ void UTslGameOption::STATIC_SetEffectSoundMute(bool bIsMute)
 }
 
 
+// Function TslGame.TslGameOption.SetCurrentProvider
+// (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// struct FString                 ProviderName                   (CPF_Parm, CPF_ZeroConstructor)
+
+void UTslGameOption::STATIC_SetCurrentProvider(const struct FString& ProviderName)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslGameOption.SetCurrentProvider");
+
+	UTslGameOption_SetCurrentProvider_Params params;
+	params.ProviderName = ProviderName;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function TslGame.TslGameOption.SetCurrentCultureName
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_BlueprintCallable)
 // Parameters:
@@ -26345,6 +26428,28 @@ struct FString UTslGameOption::STATIC_GetDefaultCultureName()
 }
 
 
+// Function TslGame.TslGameOption.GetCurrentProvider
+// (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure)
+// Parameters:
+// struct FString                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
+
+struct FString UTslGameOption::STATIC_GetCurrentProvider()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslGameOption.GetCurrentProvider");
+
+	UTslGameOption_GetCurrentProvider_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function TslGame.TslGameOption.GetCurrentCultureName
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure)
 // Parameters:
@@ -26507,6 +26612,50 @@ struct FTslInputKey UTslGameOption::STATIC_GetAxisKey(const struct FName& AxisNa
 	params.bDefault = bDefault;
 	params.bWantAnyKey = bWantAnyKey;
 	params.eKeySlot = eKeySlot;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function TslGame.TslGameOption.GetAvailableProviderNames
+// (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure)
+// Parameters:
+// TArray<struct FString>         ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
+
+TArray<struct FString> UTslGameOption::STATIC_GetAvailableProviderNames()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslGameOption.GetAvailableProviderNames");
+
+	UTslGameOption_GetAvailableProviderNames_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function TslGame.TslGameOption.GetAvailableProviderDisplayNames
+// (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure)
+// Parameters:
+// TArray<struct FText>           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
+
+TArray<struct FText> UTslGameOption::STATIC_GetAvailableProviderDisplayNames()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslGameOption.GetAvailableProviderDisplayNames");
+
+	UTslGameOption_GetAvailableProviderDisplayNames_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -29443,6 +29592,28 @@ bool UTslStatics::STATIC_IsGamepadConnected()
 	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslStatics.IsGamepadConnected");
 
 	UTslStatics_IsGamepadConnected_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function TslGame.TslStatics.IsESports
+// (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure)
+// Parameters:
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+bool UTslStatics::STATIC_IsESports()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslStatics.IsESports");
+
+	UTslStatics_IsESports_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;

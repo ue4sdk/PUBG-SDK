@@ -1,4 +1,4 @@
-// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
+// PlayerUnknown's Battlegrounds (2.5.39.19) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,72 @@ namespace Classes
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function NewMatchResultWidget.NewMatchResultWidget_C.GetAliveTeamMemberCount
+// (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure)
+// Parameters:
+// int                            Count                          (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UNewMatchResultWidget_C::GetAliveTeamMemberCount(int* Count)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function NewMatchResultWidget.NewMatchResultWidget_C.GetAliveTeamMemberCount");
+
+	UNewMatchResultWidget_C_GetAliveTeamMemberCount_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Count != nullptr)
+		*Count = params.Count;
+}
+
+
+// Function NewMatchResultWidget.NewMatchResultWidget_C.GetTslGameState
+// (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure)
+// Parameters:
+// class ATslGameState*           TslGameState                   (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UNewMatchResultWidget_C::GetTslGameState(class ATslGameState** TslGameState)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function NewMatchResultWidget.NewMatchResultWidget_C.GetTslGameState");
+
+	UNewMatchResultWidget_C_GetTslGameState_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (TslGameState != nullptr)
+		*TslGameState = params.TslGameState;
+}
+
+
+// Function NewMatchResultWidget.NewMatchResultWidget_C.GetTslPlayerState
+// (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure)
+// Parameters:
+// class ATslPlayerState*         PlayerState                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UNewMatchResultWidget_C::GetTslPlayerState(class ATslPlayerState** PlayerState)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function NewMatchResultWidget.NewMatchResultWidget_C.GetTslPlayerState");
+
+	UNewMatchResultWidget_C_GetTslPlayerState_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (PlayerState != nullptr)
+		*PlayerState = params.PlayerState;
+}
+
 
 // Function NewMatchResultWidget.NewMatchResultWidget_C.On_ButtonReportPrepass_1
 // (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
@@ -341,45 +407,6 @@ void UNewMatchResultWidget_C::BndEvt__ButtonLobby_K2Node_ComponentBoundEvent_10_
 }
 
 
-// Function NewMatchResultWidget.NewMatchResultWidget_C.Tick
-// (FUNC_BlueprintCosmetic, FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
-// Parameters:
-// struct FGeometry*              MyGeometry                     (CPF_Parm, CPF_IsPlainOldData)
-// float*                         InDeltaTime                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-
-void UNewMatchResultWidget_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function NewMatchResultWidget.NewMatchResultWidget_C.Tick");
-
-	UNewMatchResultWidget_C_Tick_Params params;
-	params.MyGeometry = MyGeometry;
-	params.InDeltaTime = InDeltaTime;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function NewMatchResultWidget.NewMatchResultWidget_C.Construct
-// (FUNC_BlueprintCosmetic, FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
-
-void UNewMatchResultWidget_C::Construct()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function NewMatchResultWidget.NewMatchResultWidget_C.Construct");
-
-	UNewMatchResultWidget_C_Construct_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function NewMatchResultWidget.NewMatchResultWidget_C.BndEvt__Button_1_K2Node_ComponentBoundEvent_19_OnButtonClickedEvent__DelegateSignature
 // (FUNC_BlueprintEvent)
 
@@ -439,6 +466,45 @@ void UNewMatchResultWidget_C::BndEvt__ButtonReport_K2Node_ComponentBoundEvent_29
 	static auto fn = UObject::FindObject<UFunction>("Function NewMatchResultWidget.NewMatchResultWidget_C.BndEvt__ButtonReport_K2Node_ComponentBoundEvent_29_OnButtonClickedEvent__DelegateSignature");
 
 	UNewMatchResultWidget_C_BndEvt__ButtonReport_K2Node_ComponentBoundEvent_29_OnButtonClickedEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function NewMatchResultWidget.NewMatchResultWidget_C.Tick
+// (FUNC_BlueprintCosmetic, FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
+// Parameters:
+// struct FGeometry*              MyGeometry                     (CPF_Parm, CPF_IsPlainOldData)
+// float*                         InDeltaTime                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UNewMatchResultWidget_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function NewMatchResultWidget.NewMatchResultWidget_C.Tick");
+
+	UNewMatchResultWidget_C_Tick_Params params;
+	params.MyGeometry = MyGeometry;
+	params.InDeltaTime = InDeltaTime;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function NewMatchResultWidget.NewMatchResultWidget_C.Construct
+// (FUNC_BlueprintCosmetic, FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
+
+void UNewMatchResultWidget_C::Construct()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function NewMatchResultWidget.NewMatchResultWidget_C.Construct");
+
+	UNewMatchResultWidget_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
 

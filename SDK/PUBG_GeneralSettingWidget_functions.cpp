@@ -1,4 +1,4 @@
-// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
+// PlayerUnknown's Battlegrounds (2.5.39.19) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,49 @@ namespace Classes
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function GeneralSettingWidget.GeneralSettingWidget_C.IsChangeVideoCapture
+// (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// bool                           IsChange                       (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UGeneralSettingWidget_C::IsChangeVideoCapture(bool* IsChange)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function GeneralSettingWidget.GeneralSettingWidget_C.IsChangeVideoCapture");
+
+	UGeneralSettingWidget_C_IsChangeVideoCapture_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (IsChange != nullptr)
+		*IsChange = params.IsChange;
+}
+
+
+// Function GeneralSettingWidget.GeneralSettingWidget_C.IsEnable_VideoCapture
+// (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure)
+// Parameters:
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+bool UGeneralSettingWidget_C::IsEnable_VideoCapture()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function GeneralSettingWidget.GeneralSettingWidget_C.IsEnable_VideoCapture");
+
+	UGeneralSettingWidget_C_IsEnable_VideoCapture_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
 
 // Function GeneralSettingWidget.GeneralSettingWidget_C.ApplyMiniMapType
 // (FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
@@ -112,12 +155,15 @@ void UGeneralSettingWidget_C::GetLanguageCultureName(struct FString* CultureName
 
 // Function GeneralSettingWidget.GeneralSettingWidget_C.InitializeResolutionIWidget
 // (FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// Parameters:
+// bool                           bConstruct                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UGeneralSettingWidget_C::InitializeResolutionIWidget()
+void UGeneralSettingWidget_C::InitializeResolutionIWidget(bool bConstruct)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function GeneralSettingWidget.GeneralSettingWidget_C.InitializeResolutionIWidget");
 
 	UGeneralSettingWidget_C_InitializeResolutionIWidget_Params params;
+	params.bConstruct = bConstruct;
 
 	auto flags = fn->FunctionFlags;
 

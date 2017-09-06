@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
+// PlayerUnknown's Battlegrounds (2.5.39.19) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass NewMatchResultWidget.NewMatchResultWidget_C
-// 0x0275 (0x04FD - 0x0288)
+// 0x0265 (0x04ED - 0x0288)
 class UNewMatchResultWidget_C : public UInputHookingWidget_C
 {
 public:
@@ -50,32 +50,30 @@ public:
 	class UVerticalBox*                                VerticalBox_2;                                            // 0x0378(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData, CPF_RepSkip, CPF_RepNotify, CPF_Interp, CPF_NonTransactional, CPF_EditorOnly, CPF_NoDestructor, CPF_AutoWeak, CPF_ContainsInstancedReference, CPF_AssetRegistrySearchable, CPF_SimpleDisplay, CPF_AdvancedDisplay, CPF_Protected, CPF_BlueprintCallable, CPF_BlueprintAuthorityOnly, CPF_TextExportTransient, CPF_NonPIEDuplicateTransient, CPF_ExposeOnSpawn, CPF_PersistentInstance, CPF_UObjectWrapper, CPF_HasGetValueTypeHash, CPF_NativeAccessSpecifierPublic, CPF_NativeAccessSpecifierProtected, CPF_NativeAccessSpecifierPrivate)
 	class UWidgetSwitcher*                             WidgetSwitcher_1;                                         // 0x0380(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData, CPF_RepSkip, CPF_RepNotify, CPF_Interp, CPF_NonTransactional, CPF_EditorOnly, CPF_NoDestructor, CPF_AutoWeak, CPF_ContainsInstancedReference, CPF_AssetRegistrySearchable, CPF_SimpleDisplay, CPF_AdvancedDisplay, CPF_Protected, CPF_BlueprintCallable, CPF_BlueprintAuthorityOnly, CPF_TextExportTransient, CPF_NonPIEDuplicateTransient, CPF_ExposeOnSpawn, CPF_PersistentInstance, CPF_UObjectWrapper, CPF_HasGetValueTypeHash, CPF_NativeAccessSpecifierPublic, CPF_NativeAccessSpecifierProtected, CPF_NativeAccessSpecifierPrivate)
 	class ATslGameState*                               refTSLGameState;                                          // 0x0388(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnTemplate, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	class ATslPlayerController*                        refTSLPlayerController;                                   // 0x0390(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnTemplate, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	class ATslPlayerState*                             refTSLPlayerState;                                        // 0x0398(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnTemplate, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	struct FText                                       PlayerName;                                               // 0x03A0(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
-	struct FText                                       Rank;                                                     // 0x03B8(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
-	struct FText                                       KillCount;                                                // 0x03D0(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
-	struct FText                                       RewardTotal;                                              // 0x03E8(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
-	struct FText                                       WinRating;                                                // 0x0400(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
-	struct FText                                       KillRating;                                               // 0x0418(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
-	struct FText                                       TotalPlayerCount;                                         // 0x0430(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
-	struct FText                                       RewardRank;                                               // 0x0448(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
-	struct FText                                       RewardKill;                                               // 0x0460(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
-	struct FText                                       RewardHit;                                                // 0x0478(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
-	struct FText                                       ResultMessage;                                            // 0x0490(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
-	struct FText                                       PlayerText;                                               // 0x04A8(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
-	int                                                AliveTeamMemberCount;                                     // 0x04C0(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      bIsSpectatingButtonVanishing : 1;                         // 0x04C4(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      bISBigRankBoxVanishing : 1;                               // 0x04C5(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      bIsDetailScoreLayerVanishing : 1;                         // 0x04C6(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      bIsResultLayerVanishing : 1;                              // 0x04C7(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      isTeamPlaySession : 1;                                    // 0x04C8(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	int                                                RankNum;                                                  // 0x04CC(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      bIsGameOver : 1;                                          // 0x04D0(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	TArray<int>                                        AddedTeamList;                                            // 0x04D8(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
-	TArray<class UObserverMatchResultNameGroupWidget_C*> PlayerMatchResultGroup;                                   // 0x04E8(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
-	int                                                LastPlayerInfoNums;                                       // 0x04F8(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      bIsReportButtonVanishing : 1;                             // 0x04FC(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	class ATslPlayerState*                             refTSLPlayerState;                                        // 0x0390(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnTemplate, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	struct FText                                       PlayerName;                                               // 0x0398(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
+	struct FText                                       Rank;                                                     // 0x03B0(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
+	struct FText                                       KillCount;                                                // 0x03C8(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
+	struct FText                                       RewardTotal;                                              // 0x03E0(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
+	struct FText                                       WinRating;                                                // 0x03F8(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
+	struct FText                                       KillRating;                                               // 0x0410(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
+	struct FText                                       TotalPlayerCount;                                         // 0x0428(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
+	struct FText                                       RewardRank;                                               // 0x0440(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
+	struct FText                                       RewardKill;                                               // 0x0458(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
+	struct FText                                       RewardHit;                                                // 0x0470(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
+	struct FText                                       ResultMessage;                                            // 0x0488(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
+	struct FText                                       PlayerText;                                               // 0x04A0(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
+	unsigned char                                      bIsSpectatingButtonVanishing : 1;                         // 0x04B8(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      bISBigRankBoxVanishing : 1;                               // 0x04B9(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      bIsDetailScoreLayerVanishing : 1;                         // 0x04BA(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      bIsResultLayerVanishing : 1;                              // 0x04BB(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      isTeamPlaySession : 1;                                    // 0x04BC(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	int                                                RankNum;                                                  // 0x04C0(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      bIsGameOver : 1;                                          // 0x04C4(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	TArray<int>                                        AddedTeamList;                                            // 0x04C8(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
+	TArray<class UObserverMatchResultNameGroupWidget_C*> PlayerMatchResultGroup;                                   // 0x04D8(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
+	int                                                LastPlayerInfoNums;                                       // 0x04E8(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      bIsReportButtonVanishing : 1;                             // 0x04EC(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -84,6 +82,9 @@ public:
 	}
 
 
+	void GetAliveTeamMemberCount(int* Count);
+	void GetTslGameState(class ATslGameState** TslGameState);
+	void GetTslPlayerState(class ATslPlayerState** PlayerState);
 	void On_ButtonReportPrepass_1(class UWidget* BoundWidget);
 	void UpdateObserverMatchResult();
 	void IsGameOver(bool* return_value);
@@ -102,12 +103,12 @@ public:
 	void BndEvt__Button_0_K2Node_ComponentBoundEvent_18_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__ButtonSpectator_K2Node_ComponentBoundEvent_65_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__ButtonLobby_K2Node_ComponentBoundEvent_10_OnButtonClickedEvent__DelegateSignature();
-	void Tick(struct FGeometry* MyGeometry, float* InDeltaTime);
-	void Construct();
 	void BndEvt__Button_1_K2Node_ComponentBoundEvent_19_OnButtonClickedEvent__DelegateSignature();
 	void Custom_Event_1();
 	void XBoxOnOk();
 	void BndEvt__ButtonReport_K2Node_ComponentBoundEvent_29_OnButtonClickedEvent__DelegateSignature();
+	void Tick(struct FGeometry* MyGeometry, float* InDeltaTime);
+	void Construct();
 	void ExecuteUbergraph_NewMatchResultWidget(int EntryPoint);
 };
 

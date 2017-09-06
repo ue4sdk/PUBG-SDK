@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
+// PlayerUnknown's Battlegrounds (2.5.39.19) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,24 @@ namespace Classes
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function NewMatchResultWidget.NewMatchResultWidget_C.GetAliveTeamMemberCount
+struct UNewMatchResultWidget_C_GetAliveTeamMemberCount_Params
+{
+	int                                                Count;                                                    // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function NewMatchResultWidget.NewMatchResultWidget_C.GetTslGameState
+struct UNewMatchResultWidget_C_GetTslGameState_Params
+{
+	class ATslGameState*                               TslGameState;                                             // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function NewMatchResultWidget.NewMatchResultWidget_C.GetTslPlayerState
+struct UNewMatchResultWidget_C_GetTslPlayerState_Params
+{
+	class ATslPlayerState*                             PlayerState;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
 
 // Function NewMatchResultWidget.NewMatchResultWidget_C.On_ButtonReportPrepass_1
 struct UNewMatchResultWidget_C_On_ButtonReportPrepass_1_Params
@@ -111,18 +129,6 @@ struct UNewMatchResultWidget_C_BndEvt__ButtonLobby_K2Node_ComponentBoundEvent_10
 {
 };
 
-// Function NewMatchResultWidget.NewMatchResultWidget_C.Tick
-struct UNewMatchResultWidget_C_Tick_Params
-{
-	struct FGeometry*                                  MyGeometry;                                               // (CPF_Parm, CPF_IsPlainOldData)
-	float*                                             InDeltaTime;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function NewMatchResultWidget.NewMatchResultWidget_C.Construct
-struct UNewMatchResultWidget_C_Construct_Params
-{
-};
-
 // Function NewMatchResultWidget.NewMatchResultWidget_C.BndEvt__Button_1_K2Node_ComponentBoundEvent_19_OnButtonClickedEvent__DelegateSignature
 struct UNewMatchResultWidget_C_BndEvt__Button_1_K2Node_ComponentBoundEvent_19_OnButtonClickedEvent__DelegateSignature_Params
 {
@@ -140,6 +146,18 @@ struct UNewMatchResultWidget_C_XBoxOnOk_Params
 
 // Function NewMatchResultWidget.NewMatchResultWidget_C.BndEvt__ButtonReport_K2Node_ComponentBoundEvent_29_OnButtonClickedEvent__DelegateSignature
 struct UNewMatchResultWidget_C_BndEvt__ButtonReport_K2Node_ComponentBoundEvent_29_OnButtonClickedEvent__DelegateSignature_Params
+{
+};
+
+// Function NewMatchResultWidget.NewMatchResultWidget_C.Tick
+struct UNewMatchResultWidget_C_Tick_Params
+{
+	struct FGeometry*                                  MyGeometry;                                               // (CPF_Parm, CPF_IsPlainOldData)
+	float*                                             InDeltaTime;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function NewMatchResultWidget.NewMatchResultWidget_C.Construct
+struct UNewMatchResultWidget_C_Construct_Params
 {
 };
 
