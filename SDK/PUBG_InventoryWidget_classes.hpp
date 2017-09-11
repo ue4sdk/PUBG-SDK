@@ -140,7 +140,7 @@ public:
 	void OnUp();
 	void OnDown();
 	void OnWidgetInputA();
-	void OnWidgetInputB();
+	void ONWidgetInputB();
 	void OnWidgetInputX();
 	void OnWidgetInputY();
 	void Destruct();

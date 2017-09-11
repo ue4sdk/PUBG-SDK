@@ -338,8 +338,8 @@ struct UInventoryWidget_C_OnWidgetInputA_Params
 {
 };
 
-// Function InventoryWidget.InventoryWidget_C.OnWidgetInputB
-struct UInventoryWidget_C_OnWidgetInputB_Params
+// Function InventoryWidget.InventoryWidget_C.ONWidgetInputB
+struct UInventoryWidget_C_ONWidgetInputB_Params
 {
 };
 

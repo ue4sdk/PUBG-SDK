@@ -69,7 +69,7 @@ public:
 	void Custom_Event_1();
 	void XBoxOneOk();
 	void Tick(struct FGeometry* MyGeometry, float* InDeltaTime);
-	void OnWidgetInputB();
+	void ONWidgetInputB();
 	void OnWidgetMoveLeft();
 	void CustomEvent_3();
 	void CustomEvent_4();

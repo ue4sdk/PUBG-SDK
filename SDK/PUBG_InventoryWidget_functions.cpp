@@ -1105,14 +1105,14 @@ void UInventoryWidget_C::OnWidgetInputA()
 }
 
 
-// Function InventoryWidget.InventoryWidget_C.OnWidgetInputB
+// Function InventoryWidget.InventoryWidget_C.ONWidgetInputB
 // (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
-void UInventoryWidget_C::OnWidgetInputB()
+void UInventoryWidget_C::ONWidgetInputB()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryWidget.InventoryWidget_C.OnWidgetInputB");
+	static auto fn = UObject::FindObject<UFunction>("Function InventoryWidget.InventoryWidget_C.ONWidgetInputB");
 
-	UInventoryWidget_C_OnWidgetInputB_Params params;
+	UInventoryWidget_C_ONWidgetInputB_Params params;
 
 	auto flags = fn->FunctionFlags;
 

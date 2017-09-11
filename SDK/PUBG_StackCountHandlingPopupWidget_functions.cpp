@@ -489,14 +489,14 @@ void UStackCountHandlingPopupWidget_C::Tick(struct FGeometry* MyGeometry, float*
 }
 
 
-// Function StackCountHandlingPopupWidget.StackCountHandlingPopupWidget_C.OnWidgetInputB
+// Function StackCountHandlingPopupWidget.StackCountHandlingPopupWidget_C.ONWidgetInputB
 // (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
-void UStackCountHandlingPopupWidget_C::OnWidgetInputB()
+void UStackCountHandlingPopupWidget_C::ONWidgetInputB()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StackCountHandlingPopupWidget.StackCountHandlingPopupWidget_C.OnWidgetInputB");
+	static auto fn = UObject::FindObject<UFunction>("Function StackCountHandlingPopupWidget.StackCountHandlingPopupWidget_C.ONWidgetInputB");
 
-	UStackCountHandlingPopupWidget_C_OnWidgetInputB_Params params;
+	UStackCountHandlingPopupWidget_C_ONWidgetInputB_Params params;
 
 	auto flags = fn->FunctionFlags;
 
