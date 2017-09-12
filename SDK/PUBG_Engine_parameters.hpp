@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.39 Test Server) SDK
+// PlayerUnknown's Battlegrounds (2.6.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -4020,6 +4020,340 @@ struct UWheeledVehicleMovementComponent_GetCurrentGear_Params
 	int                                                ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
+// Function Engine.CharacterMovementComponent.SeverAddRotationVelocity
+struct UCharacterMovementComponent_SeverAddRotationVelocity_Params
+{
+	class Vector3D                                     RotationVelocity;                                         // (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.CharacterMovementComponent.SetWalkableFloorZ
+struct UCharacterMovementComponent_SetWalkableFloorZ_Params
+{
+	float                                              InWalkableFloorZ;                                         // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function Engine.CharacterMovementComponent.SetWalkableFloorAngle
+struct UCharacterMovementComponent_SetWalkableFloorAngle_Params
+{
+	float                                              InWalkableFloorAngle;                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function Engine.CharacterMovementComponent.SetProneWalkableFloorAngle
+struct UCharacterMovementComponent_SetProneWalkableFloorAngle_Params
+{
+	float                                              InWalkableFloorAngle;                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function Engine.CharacterMovementComponent.SetMovementMode
+struct UCharacterMovementComponent_SetMovementMode_Params
+{
+	TEnumAsByte<EMovementMode>                         NewMovementMode;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      NewCustomMode;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function Engine.CharacterMovementComponent.SetGroupsToIgnoreMask
+struct UCharacterMovementComponent_SetGroupsToIgnoreMask_Params
+{
+	struct FNavAvoidanceMask                           GroupMask;                                                // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.CharacterMovementComponent.SetGroupsToIgnore
+struct UCharacterMovementComponent_SetGroupsToIgnore_Params
+{
+	int                                                GroupFlags;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function Engine.CharacterMovementComponent.SetGroupsToAvoidMask
+struct UCharacterMovementComponent_SetGroupsToAvoidMask_Params
+{
+	struct FNavAvoidanceMask                           GroupMask;                                                // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.CharacterMovementComponent.SetGroupsToAvoid
+struct UCharacterMovementComponent_SetGroupsToAvoid_Params
+{
+	int                                                GroupFlags;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function Engine.CharacterMovementComponent.SetAvoidanceGroupMask
+struct UCharacterMovementComponent_SetAvoidanceGroupMask_Params
+{
+	struct FNavAvoidanceMask                           GroupMask;                                                // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.CharacterMovementComponent.SetAvoidanceGroup
+struct UCharacterMovementComponent_SetAvoidanceGroup_Params
+{
+	int                                                GroupFlags;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function Engine.CharacterMovementComponent.SetAvoidanceEnabled
+struct UCharacterMovementComponent_SetAvoidanceEnabled_Params
+{
+	bool                                               bEnable;                                                  // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function Engine.CharacterMovementComponent.ServerMoveOld
+struct UCharacterMovementComponent_ServerMoveOld_Params
+{
+	float                                              OldTimeStamp;                                             // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector_NetQuantize10                       OldAccel;                                                 // (CPF_Parm)
+	unsigned char                                      OldMoveFlags;                                             // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function Engine.CharacterMovementComponent.ServerMoveDualHybridRootMotion
+struct UCharacterMovementComponent_ServerMoveDualHybridRootMotion_Params
+{
+	float                                              TimeStamp0;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector_NetQuantize10                       InAccel0;                                                 // (CPF_Parm)
+	unsigned char                                      PendingFlags;                                             // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	uint32_t                                           View0;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              TimeStamp;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector_NetQuantize10                       InAccel;                                                  // (CPF_Parm)
+	struct FVector_NetQuantize100                      ClientLoc;                                                // (CPF_Parm)
+	unsigned char                                      NewFlags;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      ClientRoll;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	uint32_t                                           View;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UPrimitiveComponent*                         ClientMovementBase;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+	struct FName                                       ClientBaseBoneName;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      ClientMovementMode;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function Engine.CharacterMovementComponent.ServerMoveDual
+struct UCharacterMovementComponent_ServerMoveDual_Params
+{
+	float                                              TimeStamp0;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector_NetQuantize10                       InAccel0;                                                 // (CPF_Parm)
+	unsigned char                                      PendingFlags;                                             // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	uint32_t                                           View0;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              TimeStamp;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector_NetQuantize10                       InAccel;                                                  // (CPF_Parm)
+	struct FVector_NetQuantize100                      ClientLoc;                                                // (CPF_Parm)
+	unsigned char                                      NewFlags;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      ClientRoll;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	uint32_t                                           View;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UPrimitiveComponent*                         ClientMovementBase;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+	struct FName                                       ClientBaseBoneName;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      ClientMovementMode;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function Engine.CharacterMovementComponent.ServerMove
+struct UCharacterMovementComponent_ServerMove_Params
+{
+	float                                              TimeStamp;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FVector_NetQuantize10                       InAccel;                                                  // (CPF_Parm)
+	struct FVector_NetQuantize100                      ClientLoc;                                                // (CPF_Parm)
+	unsigned char                                      CompressedMoveFlags;                                      // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      ClientRoll;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	uint32_t                                           View;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UPrimitiveComponent*                         ClientMovementBase;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+	struct FName                                       ClientBaseBoneName;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      ClientMovementMode;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function Engine.CharacterMovementComponent.K2_GetWalkableFloorZ
+struct UCharacterMovementComponent_K2_GetWalkableFloorZ_Params
+{
+	float                                              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.CharacterMovementComponent.K2_GetWalkableFloorAngle
+struct UCharacterMovementComponent_K2_GetWalkableFloorAngle_Params
+{
+	float                                              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.CharacterMovementComponent.K2_GetModifiedMaxAcceleration
+struct UCharacterMovementComponent_K2_GetModifiedMaxAcceleration_Params
+{
+	float                                              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.CharacterMovementComponent.K2_FindFloor
+struct UCharacterMovementComponent_K2_FindFloor_Params
+{
+	class Vector3D                                     CapsuleLocation;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FFindFloorResult                            FloorResult;                                              // (CPF_Parm, CPF_OutParm)
+};
+
+// Function Engine.CharacterMovementComponent.K2_ComputeFloorDist
+struct UCharacterMovementComponent_K2_ComputeFloorDist_Params
+{
+	class Vector3D                                     CapsuleLocation;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              LineDistance;                                             // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              SweepDistance;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              SweepRadius;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FFindFloorResult                            FloorResult;                                              // (CPF_Parm, CPF_OutParm)
+};
+
+// Function Engine.CharacterMovementComponent.IsWalking
+struct UCharacterMovementComponent_IsWalking_Params
+{
+	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.CharacterMovementComponent.IsWalkable
+struct UCharacterMovementComponent_IsWalkable_Params
+{
+	struct FHitResult                                  Hit;                                                      // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
+	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.CharacterMovementComponent.GetValidPerchRadius
+struct UCharacterMovementComponent_GetValidPerchRadius_Params
+{
+	float                                              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.CharacterMovementComponent.GetPerchRadiusThreshold
+struct UCharacterMovementComponent_GetPerchRadiusThreshold_Params
+{
+	float                                              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.CharacterMovementComponent.GetMovementBase
+struct UCharacterMovementComponent_GetMovementBase_Params
+{
+	class UPrimitiveComponent*                         ReturnValue;                                              // (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
+};
+
+// Function Engine.CharacterMovementComponent.GetMaxJumpHeight
+struct UCharacterMovementComponent_GetMaxJumpHeight_Params
+{
+	float                                              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.CharacterMovementComponent.GetMaxAcceleration
+struct UCharacterMovementComponent_GetMaxAcceleration_Params
+{
+	float                                              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.CharacterMovementComponent.GetImpartedMovementBaseVelocity
+struct UCharacterMovementComponent_GetImpartedMovementBaseVelocity_Params
+{
+	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.CharacterMovementComponent.GetCurrentAcceleration
+struct UCharacterMovementComponent_GetCurrentAcceleration_Params
+{
+	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.CharacterMovementComponent.GetCharacterOwner
+struct UCharacterMovementComponent_GetCharacterOwner_Params
+{
+	class ACharacter*                                  ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.CharacterMovementComponent.GetAnalogInputModifier
+struct UCharacterMovementComponent_GetAnalogInputModifier_Params
+{
+	float                                              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.CharacterMovementComponent.DisableMovement
+struct UCharacterMovementComponent_DisableMovement_Params
+{
+};
+
+// Function Engine.CharacterMovementComponent.ClientVeryShortAdjustPosition
+struct UCharacterMovementComponent_ClientVeryShortAdjustPosition_Params
+{
+	float                                              TimeStamp;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     NewLoc;                                                   // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UPrimitiveComponent*                         NewBase;                                                  // (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+	struct FName                                       NewBaseBoneName;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bHasBase;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bBaseRelativePosition;                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      ServerMovementMode;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function Engine.CharacterMovementComponent.ClientAdjustRootMotionSourcePosition
+struct UCharacterMovementComponent_ClientAdjustRootMotionSourcePosition_Params
+{
+	float                                              TimeStamp;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FRootMotionSourceGroup                      ServerRootMotion;                                         // (CPF_Parm)
+	bool                                               bHasAnimRootMotion;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              ServerMontageTrackPosition;                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     ServerLoc;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     ServerRotation;                                           // (CPF_Parm)
+	float                                              ServerVelZ;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UPrimitiveComponent*                         ServerBase;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+	struct FName                                       ServerBoneName;                                           // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bHasBase;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bBaseRelativePosition;                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      ServerMovementMode;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function Engine.CharacterMovementComponent.ClientAdjustRootMotionPosition
+struct UCharacterMovementComponent_ClientAdjustRootMotionPosition_Params
+{
+	float                                              TimeStamp;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              ServerMontageTrackPosition;                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     ServerLoc;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     ServerRotation;                                           // (CPF_Parm)
+	float                                              ServerVelZ;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UPrimitiveComponent*                         ServerBase;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+	struct FName                                       ServerBoneName;                                           // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bHasBase;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bBaseRelativePosition;                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      ServerMovementMode;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function Engine.CharacterMovementComponent.ClientAdjustPosition
+struct UCharacterMovementComponent_ClientAdjustPosition_Params
+{
+	float                                              TimeStamp;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     NewLoc;                                                   // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     NewVel;                                                   // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UPrimitiveComponent*                         NewBase;                                                  // (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+	struct FName                                       NewBaseBoneName;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bHasBase;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bBaseRelativePosition;                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      ServerMovementMode;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function Engine.CharacterMovementComponent.ClientAckGoodMove
+struct UCharacterMovementComponent_ClientAckGoodMove_Params
+{
+	float                                              TimeStamp;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function Engine.CharacterMovementComponent.CapsuleTouched
+struct UCharacterMovementComponent_CapsuleTouched_Params
+{
+	class UPrimitiveComponent*                         OverlappedComp;                                           // (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+	class AActor*                                      Other;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UPrimitiveComponent*                         OtherComp;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+	int                                                OtherBodyIndex;                                           // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bFromSweep;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FHitResult                                  SweepResult;                                              // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.CharacterMovementComponent.CalcVelocity
+struct UCharacterMovementComponent_CalcVelocity_Params
+{
+	float                                              DeltaTime;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              Friction;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bFluid;                                                   // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              BrakingDeceleration;                                      // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function Engine.CharacterMovementComponent.AddImpulse
+struct UCharacterMovementComponent_AddImpulse_Params
+{
+	class Vector3D                                     Impulse;                                                  // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bVelocityChange;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function Engine.CharacterMovementComponent.AddForce
+struct UCharacterMovementComponent_AddForce_Params
+{
+	class Vector3D                                     Force;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
 // Function Engine.VehicleWheel.GetSuspensionOffset
 struct UVehicleWheel_GetSuspensionOffset_Params
 {
@@ -4525,340 +4859,6 @@ struct UCameraComponent_AddOrUpdateBlendable_Params
 {
 	TScriptInterface<class UBlendableInterface>        InBlendableObject;                                        // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              InWeight;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function Engine.CharacterMovementComponent.SeverAddRotationVelocity
-struct UCharacterMovementComponent_SeverAddRotationVelocity_Params
-{
-	class Vector3D                                     RotationVelocity;                                         // (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.CharacterMovementComponent.SetWalkableFloorZ
-struct UCharacterMovementComponent_SetWalkableFloorZ_Params
-{
-	float                                              InWalkableFloorZ;                                         // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function Engine.CharacterMovementComponent.SetWalkableFloorAngle
-struct UCharacterMovementComponent_SetWalkableFloorAngle_Params
-{
-	float                                              InWalkableFloorAngle;                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function Engine.CharacterMovementComponent.SetProneWalkableFloorAngle
-struct UCharacterMovementComponent_SetProneWalkableFloorAngle_Params
-{
-	float                                              InWalkableFloorAngle;                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function Engine.CharacterMovementComponent.SetMovementMode
-struct UCharacterMovementComponent_SetMovementMode_Params
-{
-	TEnumAsByte<EMovementMode>                         NewMovementMode;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      NewCustomMode;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function Engine.CharacterMovementComponent.SetGroupsToIgnoreMask
-struct UCharacterMovementComponent_SetGroupsToIgnoreMask_Params
-{
-	struct FNavAvoidanceMask                           GroupMask;                                                // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.CharacterMovementComponent.SetGroupsToIgnore
-struct UCharacterMovementComponent_SetGroupsToIgnore_Params
-{
-	int                                                GroupFlags;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function Engine.CharacterMovementComponent.SetGroupsToAvoidMask
-struct UCharacterMovementComponent_SetGroupsToAvoidMask_Params
-{
-	struct FNavAvoidanceMask                           GroupMask;                                                // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.CharacterMovementComponent.SetGroupsToAvoid
-struct UCharacterMovementComponent_SetGroupsToAvoid_Params
-{
-	int                                                GroupFlags;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function Engine.CharacterMovementComponent.SetAvoidanceGroupMask
-struct UCharacterMovementComponent_SetAvoidanceGroupMask_Params
-{
-	struct FNavAvoidanceMask                           GroupMask;                                                // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.CharacterMovementComponent.SetAvoidanceGroup
-struct UCharacterMovementComponent_SetAvoidanceGroup_Params
-{
-	int                                                GroupFlags;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function Engine.CharacterMovementComponent.SetAvoidanceEnabled
-struct UCharacterMovementComponent_SetAvoidanceEnabled_Params
-{
-	bool                                               bEnable;                                                  // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function Engine.CharacterMovementComponent.ServerMoveOld
-struct UCharacterMovementComponent_ServerMoveOld_Params
-{
-	float                                              OldTimeStamp;                                             // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FVector_NetQuantize10                       OldAccel;                                                 // (CPF_Parm)
-	unsigned char                                      OldMoveFlags;                                             // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function Engine.CharacterMovementComponent.ServerMoveDualHybridRootMotion
-struct UCharacterMovementComponent_ServerMoveDualHybridRootMotion_Params
-{
-	float                                              TimeStamp0;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FVector_NetQuantize10                       InAccel0;                                                 // (CPF_Parm)
-	unsigned char                                      PendingFlags;                                             // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	uint32_t                                           View0;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              TimeStamp;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FVector_NetQuantize10                       InAccel;                                                  // (CPF_Parm)
-	struct FVector_NetQuantize100                      ClientLoc;                                                // (CPF_Parm)
-	unsigned char                                      NewFlags;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      ClientRoll;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	uint32_t                                           View;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UPrimitiveComponent*                         ClientMovementBase;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
-	struct FName                                       ClientBaseBoneName;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      ClientMovementMode;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function Engine.CharacterMovementComponent.ServerMoveDual
-struct UCharacterMovementComponent_ServerMoveDual_Params
-{
-	float                                              TimeStamp0;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FVector_NetQuantize10                       InAccel0;                                                 // (CPF_Parm)
-	unsigned char                                      PendingFlags;                                             // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	uint32_t                                           View0;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              TimeStamp;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FVector_NetQuantize10                       InAccel;                                                  // (CPF_Parm)
-	struct FVector_NetQuantize100                      ClientLoc;                                                // (CPF_Parm)
-	unsigned char                                      NewFlags;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      ClientRoll;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	uint32_t                                           View;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UPrimitiveComponent*                         ClientMovementBase;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
-	struct FName                                       ClientBaseBoneName;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      ClientMovementMode;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function Engine.CharacterMovementComponent.ServerMove
-struct UCharacterMovementComponent_ServerMove_Params
-{
-	float                                              TimeStamp;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FVector_NetQuantize10                       InAccel;                                                  // (CPF_Parm)
-	struct FVector_NetQuantize100                      ClientLoc;                                                // (CPF_Parm)
-	unsigned char                                      CompressedMoveFlags;                                      // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      ClientRoll;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	uint32_t                                           View;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UPrimitiveComponent*                         ClientMovementBase;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
-	struct FName                                       ClientBaseBoneName;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      ClientMovementMode;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function Engine.CharacterMovementComponent.K2_GetWalkableFloorZ
-struct UCharacterMovementComponent_K2_GetWalkableFloorZ_Params
-{
-	float                                              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.CharacterMovementComponent.K2_GetWalkableFloorAngle
-struct UCharacterMovementComponent_K2_GetWalkableFloorAngle_Params
-{
-	float                                              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.CharacterMovementComponent.K2_GetModifiedMaxAcceleration
-struct UCharacterMovementComponent_K2_GetModifiedMaxAcceleration_Params
-{
-	float                                              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.CharacterMovementComponent.K2_FindFloor
-struct UCharacterMovementComponent_K2_FindFloor_Params
-{
-	class Vector3D                                     CapsuleLocation;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FFindFloorResult                            FloorResult;                                              // (CPF_Parm, CPF_OutParm)
-};
-
-// Function Engine.CharacterMovementComponent.K2_ComputeFloorDist
-struct UCharacterMovementComponent_K2_ComputeFloorDist_Params
-{
-	class Vector3D                                     CapsuleLocation;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              LineDistance;                                             // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              SweepDistance;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              SweepRadius;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FFindFloorResult                            FloorResult;                                              // (CPF_Parm, CPF_OutParm)
-};
-
-// Function Engine.CharacterMovementComponent.IsWalking
-struct UCharacterMovementComponent_IsWalking_Params
-{
-	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.CharacterMovementComponent.IsWalkable
-struct UCharacterMovementComponent_IsWalkable_Params
-{
-	struct FHitResult                                  Hit;                                                      // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
-	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.CharacterMovementComponent.GetValidPerchRadius
-struct UCharacterMovementComponent_GetValidPerchRadius_Params
-{
-	float                                              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.CharacterMovementComponent.GetPerchRadiusThreshold
-struct UCharacterMovementComponent_GetPerchRadiusThreshold_Params
-{
-	float                                              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.CharacterMovementComponent.GetMovementBase
-struct UCharacterMovementComponent_GetMovementBase_Params
-{
-	class UPrimitiveComponent*                         ReturnValue;                                              // (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
-};
-
-// Function Engine.CharacterMovementComponent.GetMaxJumpHeight
-struct UCharacterMovementComponent_GetMaxJumpHeight_Params
-{
-	float                                              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.CharacterMovementComponent.GetMaxAcceleration
-struct UCharacterMovementComponent_GetMaxAcceleration_Params
-{
-	float                                              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.CharacterMovementComponent.GetImpartedMovementBaseVelocity
-struct UCharacterMovementComponent_GetImpartedMovementBaseVelocity_Params
-{
-	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.CharacterMovementComponent.GetCurrentAcceleration
-struct UCharacterMovementComponent_GetCurrentAcceleration_Params
-{
-	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.CharacterMovementComponent.GetCharacterOwner
-struct UCharacterMovementComponent_GetCharacterOwner_Params
-{
-	class ACharacter*                                  ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.CharacterMovementComponent.GetAnalogInputModifier
-struct UCharacterMovementComponent_GetAnalogInputModifier_Params
-{
-	float                                              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.CharacterMovementComponent.DisableMovement
-struct UCharacterMovementComponent_DisableMovement_Params
-{
-};
-
-// Function Engine.CharacterMovementComponent.ClientVeryShortAdjustPosition
-struct UCharacterMovementComponent_ClientVeryShortAdjustPosition_Params
-{
-	float                                              TimeStamp;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     NewLoc;                                                   // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UPrimitiveComponent*                         NewBase;                                                  // (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
-	struct FName                                       NewBaseBoneName;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bHasBase;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bBaseRelativePosition;                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      ServerMovementMode;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function Engine.CharacterMovementComponent.ClientAdjustRootMotionSourcePosition
-struct UCharacterMovementComponent_ClientAdjustRootMotionSourcePosition_Params
-{
-	float                                              TimeStamp;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FRootMotionSourceGroup                      ServerRootMotion;                                         // (CPF_Parm)
-	bool                                               bHasAnimRootMotion;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              ServerMontageTrackPosition;                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     ServerLoc;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     ServerRotation;                                           // (CPF_Parm)
-	float                                              ServerVelZ;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UPrimitiveComponent*                         ServerBase;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
-	struct FName                                       ServerBoneName;                                           // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bHasBase;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bBaseRelativePosition;                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      ServerMovementMode;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function Engine.CharacterMovementComponent.ClientAdjustRootMotionPosition
-struct UCharacterMovementComponent_ClientAdjustRootMotionPosition_Params
-{
-	float                                              TimeStamp;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              ServerMontageTrackPosition;                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     ServerLoc;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     ServerRotation;                                           // (CPF_Parm)
-	float                                              ServerVelZ;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UPrimitiveComponent*                         ServerBase;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
-	struct FName                                       ServerBoneName;                                           // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bHasBase;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bBaseRelativePosition;                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      ServerMovementMode;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function Engine.CharacterMovementComponent.ClientAdjustPosition
-struct UCharacterMovementComponent_ClientAdjustPosition_Params
-{
-	float                                              TimeStamp;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     NewLoc;                                                   // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     NewVel;                                                   // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UPrimitiveComponent*                         NewBase;                                                  // (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
-	struct FName                                       NewBaseBoneName;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bHasBase;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bBaseRelativePosition;                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      ServerMovementMode;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function Engine.CharacterMovementComponent.ClientAckGoodMove
-struct UCharacterMovementComponent_ClientAckGoodMove_Params
-{
-	float                                              TimeStamp;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function Engine.CharacterMovementComponent.CapsuleTouched
-struct UCharacterMovementComponent_CapsuleTouched_Params
-{
-	class UPrimitiveComponent*                         OverlappedComp;                                           // (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
-	class AActor*                                      Other;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UPrimitiveComponent*                         OtherComp;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
-	int                                                OtherBodyIndex;                                           // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bFromSweep;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FHitResult                                  SweepResult;                                              // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.CharacterMovementComponent.CalcVelocity
-struct UCharacterMovementComponent_CalcVelocity_Params
-{
-	float                                              DeltaTime;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              Friction;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bFluid;                                                   // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              BrakingDeceleration;                                      // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function Engine.CharacterMovementComponent.AddImpulse
-struct UCharacterMovementComponent_AddImpulse_Params
-{
-	class Vector3D                                     Impulse;                                                  // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bVelocityChange;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function Engine.CharacterMovementComponent.AddForce
-struct UCharacterMovementComponent_AddForce_Params
-{
-	class Vector3D                                     Force;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // Function Engine.CheatManager.Walk
@@ -6465,6 +6465,621 @@ struct ADefaultPawn_LookUp_Params
 	float                                              Val;                                                      // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
+// Function Engine.SplineComponent.UpdateSpline
+struct USplineComponent_UpdateSpline_Params
+{
+};
+
+// Function Engine.SplineComponent.SetWorldLocationAtSplinePoint
+struct USplineComponent_SetWorldLocationAtSplinePoint_Params
+{
+	int                                                PointIndex;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     InLocation;                                               // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.SetUpVectorAtSplinePoint
+struct USplineComponent_SetUpVectorAtSplinePoint_Params
+{
+	int                                                PointIndex;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     InUpVector;                                               // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bUpdateSpline;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.SetUnselectedSplineSegmentColor
+struct USplineComponent_SetUnselectedSplineSegmentColor_Params
+{
+	struct FLinearColor                                SegmentColor;                                             // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.SetTangentsAtSplinePoint
+struct USplineComponent_SetTangentsAtSplinePoint_Params
+{
+	int                                                PointIndex;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     InArriveTangent;                                          // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+	class Vector3D                                     InLeaveTangent;                                           // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bUpdateSpline;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.SetTangentAtSplinePoint
+struct USplineComponent_SetTangentAtSplinePoint_Params
+{
+	int                                                PointIndex;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     InTangent;                                                // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bUpdateSpline;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.SetSplineWorldPoints
+struct USplineComponent_SetSplineWorldPoints_Params
+{
+	TArray<class Vector3D>                             Points;                                                   // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
+};
+
+// Function Engine.SplineComponent.SetSplinePointType
+struct USplineComponent_SetSplinePointType_Params
+{
+	int                                                PointIndex;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TEnumAsByte<ESplinePointType>                      Type;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bUpdateSpline;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.SetSplinePoints
+struct USplineComponent_SetSplinePoints_Params
+{
+	TArray<class Vector3D>                             Points;                                                   // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
+	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bUpdateSpline;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.SetSplineLocalPoints
+struct USplineComponent_SetSplineLocalPoints_Params
+{
+	TArray<class Vector3D>                             Points;                                                   // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
+};
+
+// Function Engine.SplineComponent.SetSelectedSplineSegmentColor
+struct USplineComponent_SetSelectedSplineSegmentColor_Params
+{
+	struct FLinearColor                                SegmentColor;                                             // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.SetLocationAtSplinePoint
+struct USplineComponent_SetLocationAtSplinePoint_Params
+{
+	int                                                PointIndex;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     InLocation;                                               // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bUpdateSpline;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.SetDrawDebug
+struct USplineComponent_SetDrawDebug_Params
+{
+	bool                                               bShow;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.SetDefaultUpVector
+struct USplineComponent_SetDefaultUpVector_Params
+{
+	class Vector3D                                     UpVector;                                                 // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.SetClosedLoopAtPosition
+struct USplineComponent_SetClosedLoopAtPosition_Params
+{
+	bool                                               bInClosedLoop;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              Key;                                                      // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bUpdateSpline;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.SetClosedLoop
+struct USplineComponent_SetClosedLoop_Params
+{
+	bool                                               bInClosedLoop;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bUpdateSpline;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.RemoveSplinePoint
+struct USplineComponent_RemoveSplinePoint_Params
+{
+	int                                                Index;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bUpdateSpline;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.IsClosedLoop
+struct USplineComponent_IsClosedLoop_Params
+{
+	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.GetWorldTangentAtDistanceAlongSpline
+struct USplineComponent_GetWorldTangentAtDistanceAlongSpline_Params
+{
+	float                                              Distance;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.GetWorldRotationAtTime
+struct USplineComponent_GetWorldRotationAtTime_Params
+{
+	float                                              Time;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bUseConstantVelocity;                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Rotator                                      ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.GetWorldRotationAtDistanceAlongSpline
+struct USplineComponent_GetWorldRotationAtDistanceAlongSpline_Params
+{
+	float                                              Distance;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Rotator                                      ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.GetWorldLocationAtTime
+struct USplineComponent_GetWorldLocationAtTime_Params
+{
+	float                                              Time;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bUseConstantVelocity;                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.GetWorldLocationAtSplinePoint
+struct USplineComponent_GetWorldLocationAtSplinePoint_Params
+{
+	int                                                PointIndex;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.GetWorldLocationAtDistanceAlongSpline
+struct USplineComponent_GetWorldLocationAtDistanceAlongSpline_Params
+{
+	float                                              Distance;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.GetWorldDirectionAtTime
+struct USplineComponent_GetWorldDirectionAtTime_Params
+{
+	float                                              Time;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bUseConstantVelocity;                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.GetWorldDirectionAtDistanceAlongSpline
+struct USplineComponent_GetWorldDirectionAtDistanceAlongSpline_Params
+{
+	float                                              Distance;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.GetUpVectorAtTime
+struct USplineComponent_GetUpVectorAtTime_Params
+{
+	float                                              Time;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bUseConstantVelocity;                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.GetUpVectorAtSplinePoint
+struct USplineComponent_GetUpVectorAtSplinePoint_Params
+{
+	int                                                PointIndex;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.GetUpVectorAtDistanceAlongSpline
+struct USplineComponent_GetUpVectorAtDistanceAlongSpline_Params
+{
+	float                                              Distance;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.GetTransformAtTime
+struct USplineComponent_GetTransformAtTime_Params
+{
+	float                                              Time;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bUseConstantVelocity;                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bUseScale;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FTransform                                  ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.GetTransformAtSplinePoint
+struct USplineComponent_GetTransformAtSplinePoint_Params
+{
+	int                                                PointIndex;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bUseScale;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FTransform                                  ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.GetTransformAtDistanceAlongSpline
+struct USplineComponent_GetTransformAtDistanceAlongSpline_Params
+{
+	float                                              Distance;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bUseScale;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FTransform                                  ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.GetTangentAtTime
+struct USplineComponent_GetTangentAtTime_Params
+{
+	float                                              Time;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bUseConstantVelocity;                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.GetTangentAtSplinePoint
+struct USplineComponent_GetTangentAtSplinePoint_Params
+{
+	int                                                PointIndex;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.GetTangentAtDistanceAlongSpline
+struct USplineComponent_GetTangentAtDistanceAlongSpline_Params
+{
+	float                                              Distance;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.GetSplinePointType
+struct USplineComponent_GetSplinePointType_Params
+{
+	int                                                PointIndex;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TEnumAsByte<ESplinePointType>                      ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.GetSplineLength
+struct USplineComponent_GetSplineLength_Params
+{
+	float                                              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.GetScaleAtTime
+struct USplineComponent_GetScaleAtTime_Params
+{
+	float                                              Time;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bUseConstantVelocity;                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.GetScaleAtSplinePoint
+struct USplineComponent_GetScaleAtSplinePoint_Params
+{
+	int                                                PointIndex;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.GetScaleAtDistanceAlongSpline
+struct USplineComponent_GetScaleAtDistanceAlongSpline_Params
+{
+	float                                              Distance;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.GetRotationAtTime
+struct USplineComponent_GetRotationAtTime_Params
+{
+	float                                              Time;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bUseConstantVelocity;                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Rotator                                      ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.GetRotationAtSplinePoint
+struct USplineComponent_GetRotationAtSplinePoint_Params
+{
+	int                                                PointIndex;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Rotator                                      ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.GetRotationAtDistanceAlongSpline
+struct USplineComponent_GetRotationAtDistanceAlongSpline_Params
+{
+	float                                              Distance;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Rotator                                      ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.GetRollAtTime
+struct USplineComponent_GetRollAtTime_Params
+{
+	float                                              Time;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bUseConstantVelocity;                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.GetRollAtSplinePoint
+struct USplineComponent_GetRollAtSplinePoint_Params
+{
+	int                                                PointIndex;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.GetRollAtDistanceAlongSpline
+struct USplineComponent_GetRollAtDistanceAlongSpline_Params
+{
+	float                                              Distance;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.GetRightVectorAtTime
+struct USplineComponent_GetRightVectorAtTime_Params
+{
+	float                                              Time;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bUseConstantVelocity;                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.GetRightVectorAtSplinePoint
+struct USplineComponent_GetRightVectorAtSplinePoint_Params
+{
+	int                                                PointIndex;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.GetRightVectorAtDistanceAlongSpline
+struct USplineComponent_GetRightVectorAtDistanceAlongSpline_Params
+{
+	float                                              Distance;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.GetNumberOfSplinePoints
+struct USplineComponent_GetNumberOfSplinePoints_Params
+{
+	int                                                ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.GetLocationAtTime
+struct USplineComponent_GetLocationAtTime_Params
+{
+	float                                              Time;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bUseConstantVelocity;                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.GetLocationAtSplinePoint
+struct USplineComponent_GetLocationAtSplinePoint_Params
+{
+	int                                                PointIndex;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.GetLocationAtDistanceAlongSpline
+struct USplineComponent_GetLocationAtDistanceAlongSpline_Params
+{
+	float                                              Distance;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.GetLocationAndTangentAtSplinePoint
+struct USplineComponent_GetLocationAndTangentAtSplinePoint_Params
+{
+	int                                                PointIndex;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     Location;                                                 // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     Tangent;                                                  // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.GetLocalLocationAndTangentAtSplinePoint
+struct USplineComponent_GetLocalLocationAndTangentAtSplinePoint_Params
+{
+	int                                                PointIndex;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     LocalLocation;                                            // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     LocalTangent;                                             // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.GetLeaveTangentAtSplinePoint
+struct USplineComponent_GetLeaveTangentAtSplinePoint_Params
+{
+	int                                                PointIndex;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.GetInputKeyAtDistanceAlongSpline
+struct USplineComponent_GetInputKeyAtDistanceAlongSpline_Params
+{
+	float                                              Distance;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.GetDistanceAlongSplineAtSplinePoint
+struct USplineComponent_GetDistanceAlongSplineAtSplinePoint_Params
+{
+	int                                                PointIndex;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.GetDirectionAtTime
+struct USplineComponent_GetDirectionAtTime_Params
+{
+	float                                              Time;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bUseConstantVelocity;                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.GetDirectionAtSplinePoint
+struct USplineComponent_GetDirectionAtSplinePoint_Params
+{
+	int                                                PointIndex;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.GetDirectionAtDistanceAlongSpline
+struct USplineComponent_GetDirectionAtDistanceAlongSpline_Params
+{
+	float                                              Distance;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.GetDefaultUpVector
+struct USplineComponent_GetDefaultUpVector_Params
+{
+	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.GetArriveTangentAtSplinePoint
+struct USplineComponent_GetArriveTangentAtSplinePoint_Params
+{
+	int                                                PointIndex;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.FindUpVectorClosestToWorldLocation
+struct USplineComponent_FindUpVectorClosestToWorldLocation_Params
+{
+	class Vector3D                                     WorldLocation;                                            // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.FindTransformClosestToWorldLocation
+struct USplineComponent_FindTransformClosestToWorldLocation_Params
+{
+	class Vector3D                                     WorldLocation;                                            // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bUseScale;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FTransform                                  ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.FindTangentClosestToWorldLocation
+struct USplineComponent_FindTangentClosestToWorldLocation_Params
+{
+	class Vector3D                                     WorldLocation;                                            // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.FindScaleClosestToWorldLocation
+struct USplineComponent_FindScaleClosestToWorldLocation_Params
+{
+	class Vector3D                                     WorldLocation;                                            // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.FindRotationClosestToWorldLocation
+struct USplineComponent_FindRotationClosestToWorldLocation_Params
+{
+	class Vector3D                                     WorldLocation;                                            // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Rotator                                      ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.FindRollClosestToWorldLocation
+struct USplineComponent_FindRollClosestToWorldLocation_Params
+{
+	class Vector3D                                     WorldLocation;                                            // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.FindRightVectorClosestToWorldLocation
+struct USplineComponent_FindRightVectorClosestToWorldLocation_Params
+{
+	class Vector3D                                     WorldLocation;                                            // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.FindLocationClosestToWorldLocation
+struct USplineComponent_FindLocationClosestToWorldLocation_Params
+{
+	class Vector3D                                     WorldLocation;                                            // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.FindInputKeyClosestToWorldLocation
+struct USplineComponent_FindInputKeyClosestToWorldLocation_Params
+{
+	class Vector3D                                     WorldLocation;                                            // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+	float                                              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.FindDirectionClosestToWorldLocation
+struct USplineComponent_FindDirectionClosestToWorldLocation_Params
+{
+	class Vector3D                                     WorldLocation;                                            // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.ClearSplinePoints
+struct USplineComponent_ClearSplinePoints_Params
+{
+	bool                                               bUpdateSpline;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.AddSplineWorldPoint
+struct USplineComponent_AddSplineWorldPoint_Params
+{
+	class Vector3D                                     Position;                                                 // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.AddSplinePointAtIndex
+struct USplineComponent_AddSplinePointAtIndex_Params
+{
+	class Vector3D                                     Position;                                                 // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+	int                                                Index;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bUpdateSpline;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.AddSplinePoint
+struct USplineComponent_AddSplinePoint_Params
+{
+	class Vector3D                                     Position;                                                 // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bUpdateSpline;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.AddSplineLocalPoint
+struct USplineComponent_AddSplineLocalPoint_Params
+{
+	class Vector3D                                     Position;                                                 // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.AddPoints
+struct USplineComponent_AddPoints_Params
+{
+	TArray<struct FSplinePoint>                        Points;                                                   // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
+	bool                                               bUpdateSpline;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function Engine.SplineComponent.AddPoint
+struct USplineComponent_AddPoint_Params
+{
+	struct FSplinePoint                                Point;                                                    // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
+	bool                                               bUpdateSpline;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
 // Function Engine.MaterialInterface.GetPhysicalMaterial
 struct UMaterialInterface_GetPhysicalMaterial_Params
 {
@@ -7581,621 +8196,6 @@ struct UApplicationLifecycleComponent_ApplicationLifetimeDelegate__DelegateSigna
 {
 };
 
-// Function Engine.SplineComponent.UpdateSpline
-struct USplineComponent_UpdateSpline_Params
-{
-};
-
-// Function Engine.SplineComponent.SetWorldLocationAtSplinePoint
-struct USplineComponent_SetWorldLocationAtSplinePoint_Params
-{
-	int                                                PointIndex;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     InLocation;                                               // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.SetUpVectorAtSplinePoint
-struct USplineComponent_SetUpVectorAtSplinePoint_Params
-{
-	int                                                PointIndex;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     InUpVector;                                               // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bUpdateSpline;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.SetUnselectedSplineSegmentColor
-struct USplineComponent_SetUnselectedSplineSegmentColor_Params
-{
-	struct FLinearColor                                SegmentColor;                                             // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.SetTangentsAtSplinePoint
-struct USplineComponent_SetTangentsAtSplinePoint_Params
-{
-	int                                                PointIndex;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     InArriveTangent;                                          // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-	class Vector3D                                     InLeaveTangent;                                           // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bUpdateSpline;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.SetTangentAtSplinePoint
-struct USplineComponent_SetTangentAtSplinePoint_Params
-{
-	int                                                PointIndex;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     InTangent;                                                // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bUpdateSpline;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.SetSplineWorldPoints
-struct USplineComponent_SetSplineWorldPoints_Params
-{
-	TArray<class Vector3D>                             Points;                                                   // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
-};
-
-// Function Engine.SplineComponent.SetSplinePointType
-struct USplineComponent_SetSplinePointType_Params
-{
-	int                                                PointIndex;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TEnumAsByte<ESplinePointType>                      Type;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bUpdateSpline;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.SetSplinePoints
-struct USplineComponent_SetSplinePoints_Params
-{
-	TArray<class Vector3D>                             Points;                                                   // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
-	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bUpdateSpline;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.SetSplineLocalPoints
-struct USplineComponent_SetSplineLocalPoints_Params
-{
-	TArray<class Vector3D>                             Points;                                                   // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
-};
-
-// Function Engine.SplineComponent.SetSelectedSplineSegmentColor
-struct USplineComponent_SetSelectedSplineSegmentColor_Params
-{
-	struct FLinearColor                                SegmentColor;                                             // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.SetLocationAtSplinePoint
-struct USplineComponent_SetLocationAtSplinePoint_Params
-{
-	int                                                PointIndex;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     InLocation;                                               // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bUpdateSpline;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.SetDrawDebug
-struct USplineComponent_SetDrawDebug_Params
-{
-	bool                                               bShow;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.SetDefaultUpVector
-struct USplineComponent_SetDefaultUpVector_Params
-{
-	class Vector3D                                     UpVector;                                                 // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.SetClosedLoopAtPosition
-struct USplineComponent_SetClosedLoopAtPosition_Params
-{
-	bool                                               bInClosedLoop;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              Key;                                                      // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bUpdateSpline;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.SetClosedLoop
-struct USplineComponent_SetClosedLoop_Params
-{
-	bool                                               bInClosedLoop;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bUpdateSpline;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.RemoveSplinePoint
-struct USplineComponent_RemoveSplinePoint_Params
-{
-	int                                                Index;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bUpdateSpline;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.IsClosedLoop
-struct USplineComponent_IsClosedLoop_Params
-{
-	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.GetWorldTangentAtDistanceAlongSpline
-struct USplineComponent_GetWorldTangentAtDistanceAlongSpline_Params
-{
-	float                                              Distance;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.GetWorldRotationAtTime
-struct USplineComponent_GetWorldRotationAtTime_Params
-{
-	float                                              Time;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bUseConstantVelocity;                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Rotator                                      ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.GetWorldRotationAtDistanceAlongSpline
-struct USplineComponent_GetWorldRotationAtDistanceAlongSpline_Params
-{
-	float                                              Distance;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Rotator                                      ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.GetWorldLocationAtTime
-struct USplineComponent_GetWorldLocationAtTime_Params
-{
-	float                                              Time;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bUseConstantVelocity;                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.GetWorldLocationAtSplinePoint
-struct USplineComponent_GetWorldLocationAtSplinePoint_Params
-{
-	int                                                PointIndex;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.GetWorldLocationAtDistanceAlongSpline
-struct USplineComponent_GetWorldLocationAtDistanceAlongSpline_Params
-{
-	float                                              Distance;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.GetWorldDirectionAtTime
-struct USplineComponent_GetWorldDirectionAtTime_Params
-{
-	float                                              Time;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bUseConstantVelocity;                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.GetWorldDirectionAtDistanceAlongSpline
-struct USplineComponent_GetWorldDirectionAtDistanceAlongSpline_Params
-{
-	float                                              Distance;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.GetUpVectorAtTime
-struct USplineComponent_GetUpVectorAtTime_Params
-{
-	float                                              Time;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bUseConstantVelocity;                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.GetUpVectorAtSplinePoint
-struct USplineComponent_GetUpVectorAtSplinePoint_Params
-{
-	int                                                PointIndex;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.GetUpVectorAtDistanceAlongSpline
-struct USplineComponent_GetUpVectorAtDistanceAlongSpline_Params
-{
-	float                                              Distance;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.GetTransformAtTime
-struct USplineComponent_GetTransformAtTime_Params
-{
-	float                                              Time;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bUseConstantVelocity;                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bUseScale;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FTransform                                  ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.GetTransformAtSplinePoint
-struct USplineComponent_GetTransformAtSplinePoint_Params
-{
-	int                                                PointIndex;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bUseScale;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FTransform                                  ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.GetTransformAtDistanceAlongSpline
-struct USplineComponent_GetTransformAtDistanceAlongSpline_Params
-{
-	float                                              Distance;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bUseScale;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FTransform                                  ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.GetTangentAtTime
-struct USplineComponent_GetTangentAtTime_Params
-{
-	float                                              Time;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bUseConstantVelocity;                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.GetTangentAtSplinePoint
-struct USplineComponent_GetTangentAtSplinePoint_Params
-{
-	int                                                PointIndex;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.GetTangentAtDistanceAlongSpline
-struct USplineComponent_GetTangentAtDistanceAlongSpline_Params
-{
-	float                                              Distance;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.GetSplinePointType
-struct USplineComponent_GetSplinePointType_Params
-{
-	int                                                PointIndex;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TEnumAsByte<ESplinePointType>                      ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.GetSplineLength
-struct USplineComponent_GetSplineLength_Params
-{
-	float                                              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.GetScaleAtTime
-struct USplineComponent_GetScaleAtTime_Params
-{
-	float                                              Time;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bUseConstantVelocity;                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.GetScaleAtSplinePoint
-struct USplineComponent_GetScaleAtSplinePoint_Params
-{
-	int                                                PointIndex;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.GetScaleAtDistanceAlongSpline
-struct USplineComponent_GetScaleAtDistanceAlongSpline_Params
-{
-	float                                              Distance;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.GetRotationAtTime
-struct USplineComponent_GetRotationAtTime_Params
-{
-	float                                              Time;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bUseConstantVelocity;                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Rotator                                      ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.GetRotationAtSplinePoint
-struct USplineComponent_GetRotationAtSplinePoint_Params
-{
-	int                                                PointIndex;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Rotator                                      ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.GetRotationAtDistanceAlongSpline
-struct USplineComponent_GetRotationAtDistanceAlongSpline_Params
-{
-	float                                              Distance;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Rotator                                      ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.GetRollAtTime
-struct USplineComponent_GetRollAtTime_Params
-{
-	float                                              Time;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bUseConstantVelocity;                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.GetRollAtSplinePoint
-struct USplineComponent_GetRollAtSplinePoint_Params
-{
-	int                                                PointIndex;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.GetRollAtDistanceAlongSpline
-struct USplineComponent_GetRollAtDistanceAlongSpline_Params
-{
-	float                                              Distance;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.GetRightVectorAtTime
-struct USplineComponent_GetRightVectorAtTime_Params
-{
-	float                                              Time;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bUseConstantVelocity;                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.GetRightVectorAtSplinePoint
-struct USplineComponent_GetRightVectorAtSplinePoint_Params
-{
-	int                                                PointIndex;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.GetRightVectorAtDistanceAlongSpline
-struct USplineComponent_GetRightVectorAtDistanceAlongSpline_Params
-{
-	float                                              Distance;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.GetNumberOfSplinePoints
-struct USplineComponent_GetNumberOfSplinePoints_Params
-{
-	int                                                ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.GetLocationAtTime
-struct USplineComponent_GetLocationAtTime_Params
-{
-	float                                              Time;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bUseConstantVelocity;                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.GetLocationAtSplinePoint
-struct USplineComponent_GetLocationAtSplinePoint_Params
-{
-	int                                                PointIndex;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.GetLocationAtDistanceAlongSpline
-struct USplineComponent_GetLocationAtDistanceAlongSpline_Params
-{
-	float                                              Distance;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.GetLocationAndTangentAtSplinePoint
-struct USplineComponent_GetLocationAndTangentAtSplinePoint_Params
-{
-	int                                                PointIndex;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     Location;                                                 // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     Tangent;                                                  // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.GetLocalLocationAndTangentAtSplinePoint
-struct USplineComponent_GetLocalLocationAndTangentAtSplinePoint_Params
-{
-	int                                                PointIndex;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     LocalLocation;                                            // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     LocalTangent;                                             // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.GetLeaveTangentAtSplinePoint
-struct USplineComponent_GetLeaveTangentAtSplinePoint_Params
-{
-	int                                                PointIndex;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.GetInputKeyAtDistanceAlongSpline
-struct USplineComponent_GetInputKeyAtDistanceAlongSpline_Params
-{
-	float                                              Distance;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.GetDistanceAlongSplineAtSplinePoint
-struct USplineComponent_GetDistanceAlongSplineAtSplinePoint_Params
-{
-	int                                                PointIndex;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.GetDirectionAtTime
-struct USplineComponent_GetDirectionAtTime_Params
-{
-	float                                              Time;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bUseConstantVelocity;                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.GetDirectionAtSplinePoint
-struct USplineComponent_GetDirectionAtSplinePoint_Params
-{
-	int                                                PointIndex;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.GetDirectionAtDistanceAlongSpline
-struct USplineComponent_GetDirectionAtDistanceAlongSpline_Params
-{
-	float                                              Distance;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.GetDefaultUpVector
-struct USplineComponent_GetDefaultUpVector_Params
-{
-	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.GetArriveTangentAtSplinePoint
-struct USplineComponent_GetArriveTangentAtSplinePoint_Params
-{
-	int                                                PointIndex;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.FindUpVectorClosestToWorldLocation
-struct USplineComponent_FindUpVectorClosestToWorldLocation_Params
-{
-	class Vector3D                                     WorldLocation;                                            // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.FindTransformClosestToWorldLocation
-struct USplineComponent_FindTransformClosestToWorldLocation_Params
-{
-	class Vector3D                                     WorldLocation;                                            // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bUseScale;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FTransform                                  ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.FindTangentClosestToWorldLocation
-struct USplineComponent_FindTangentClosestToWorldLocation_Params
-{
-	class Vector3D                                     WorldLocation;                                            // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.FindScaleClosestToWorldLocation
-struct USplineComponent_FindScaleClosestToWorldLocation_Params
-{
-	class Vector3D                                     WorldLocation;                                            // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.FindRotationClosestToWorldLocation
-struct USplineComponent_FindRotationClosestToWorldLocation_Params
-{
-	class Vector3D                                     WorldLocation;                                            // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Rotator                                      ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.FindRollClosestToWorldLocation
-struct USplineComponent_FindRollClosestToWorldLocation_Params
-{
-	class Vector3D                                     WorldLocation;                                            // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.FindRightVectorClosestToWorldLocation
-struct USplineComponent_FindRightVectorClosestToWorldLocation_Params
-{
-	class Vector3D                                     WorldLocation;                                            // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.FindLocationClosestToWorldLocation
-struct USplineComponent_FindLocationClosestToWorldLocation_Params
-{
-	class Vector3D                                     WorldLocation;                                            // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.FindInputKeyClosestToWorldLocation
-struct USplineComponent_FindInputKeyClosestToWorldLocation_Params
-{
-	class Vector3D                                     WorldLocation;                                            // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-	float                                              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.FindDirectionClosestToWorldLocation
-struct USplineComponent_FindDirectionClosestToWorldLocation_Params
-{
-	class Vector3D                                     WorldLocation;                                            // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.ClearSplinePoints
-struct USplineComponent_ClearSplinePoints_Params
-{
-	bool                                               bUpdateSpline;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.AddSplineWorldPoint
-struct USplineComponent_AddSplineWorldPoint_Params
-{
-	class Vector3D                                     Position;                                                 // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.AddSplinePointAtIndex
-struct USplineComponent_AddSplinePointAtIndex_Params
-{
-	class Vector3D                                     Position;                                                 // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-	int                                                Index;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bUpdateSpline;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.AddSplinePoint
-struct USplineComponent_AddSplinePoint_Params
-{
-	class Vector3D                                     Position;                                                 // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-	TEnumAsByte<ESplineCoordinateSpace>                CoordinateSpace;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bUpdateSpline;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.AddSplineLocalPoint
-struct USplineComponent_AddSplineLocalPoint_Params
-{
-	class Vector3D                                     Position;                                                 // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.AddPoints
-struct USplineComponent_AddPoints_Params
-{
-	TArray<struct FSplinePoint>                        Points;                                                   // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
-	bool                                               bUpdateSpline;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function Engine.SplineComponent.AddPoint
-struct USplineComponent_AddPoint_Params
-{
-	struct FSplinePoint                                Point;                                                    // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
-	bool                                               bUpdateSpline;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
 // Function Engine.InterpToMovementComponent.StopSimulating
 struct UInterpToMovementComponent_StopSimulating_Params
 {
@@ -8876,8 +8876,20 @@ struct UDecalComponent_CreateDynamicMaterialInstance_Params
 	class UMaterialInstanceDynamic*                    ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
+// Function Engine.ExponentialHeightFogComponent.SetUpDensity
+struct UExponentialHeightFogComponent_SetUpDensity_Params
+{
+	float                                              Value;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
 // Function Engine.ExponentialHeightFogComponent.SetStartDistance
 struct UExponentialHeightFogComponent_SetStartDistance_Params
+{
+	float                                              Value;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function Engine.ExponentialHeightFogComponent.SetIntensity
+struct UExponentialHeightFogComponent_SetIntensity_Params
 {
 	float                                              Value;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
@@ -8902,6 +8914,42 @@ struct UExponentialHeightFogComponent_SetFogHeightFalloff_Params
 
 // Function Engine.ExponentialHeightFogComponent.SetFogDensity
 struct UExponentialHeightFogComponent_SetFogDensity_Params
+{
+	float                                              Value;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function Engine.ExponentialHeightFogComponent.SetExtendedHeightFallOff
+struct UExponentialHeightFogComponent_SetExtendedHeightFallOff_Params
+{
+	float                                              Value;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function Engine.ExponentialHeightFogComponent.SetExtendedHeight
+struct UExponentialHeightFogComponent_SetExtendedHeight_Params
+{
+	float                                              Value;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function Engine.ExponentialHeightFogComponent.SetExtendedFogStartFalloffDistance
+struct UExponentialHeightFogComponent_SetExtendedFogStartFalloffDistance_Params
+{
+	float                                              Value;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function Engine.ExponentialHeightFogComponent.SetExtendedFogStartDistance
+struct UExponentialHeightFogComponent_SetExtendedFogStartDistance_Params
+{
+	float                                              Value;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function Engine.ExponentialHeightFogComponent.SetExtendedFogDensity
+struct UExponentialHeightFogComponent_SetExtendedFogDensity_Params
+{
+	float                                              Value;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function Engine.ExponentialHeightFogComponent.SetDownDensity
+struct UExponentialHeightFogComponent_SetDownDensity_Params
 {
 	float                                              Value;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };

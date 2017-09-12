@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.39 Test Server) SDK
+// PlayerUnknown's Battlegrounds (2.6.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass BreatheBarWidget.BreatheBarWidget_C
-// 0x005D (0x029D - 0x0240)
+// 0x005E (0x029E - 0x0240)
 class UBreatheBarWidget_C : public UUserWidget
 {
 public:
@@ -31,6 +31,7 @@ public:
 	class ATslCharacter*                               RefCharacter;                                             // 0x0290(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnTemplate, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              BreathRatio;                                              // 0x0298(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	unsigned char                                      isCooldown : 1;                                           // 0x029C(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      bEventBindig : 1;                                         // 0x029D(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -39,12 +40,15 @@ public:
 	}
 
 
+	void IsUnderwater(bool* bIsWater);
+	void GetTslCharacter(class ATslCharacter** TslCharacter);
 	void GetBreathImageColor(float Ratio, struct FLinearColor* Color);
 	void OnPrepass_1(class UWidget* BoundWidget);
 	void UpdateBreathGauge(class UWidget* BoundWidget);
 	void GetBreathRatio(float* Breath);
-	void Construct();
 	void OnStartBuff(const struct FName& BuffName, bool bStart);
+	void Construct();
+	void Tick(struct FGeometry* MyGeometry, float* InDeltaTime);
 	void ExecuteUbergraph_BreatheBarWidget(int EntryPoint);
 };
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.39 Test Server) SDK
+// PlayerUnknown's Battlegrounds (2.6.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -18,20 +18,6 @@ enum class EPopupButtonID
 	EPopupButtonID__Cancel_Or_No   = 0,
 	EPopupButtonID__Yes_Or_OK      = 1,
 	EPopupButtonID__EPopupButtonID_MAX = 2
-};
-
-
-// Enum TslGame.EPowerUpType
-enum class EPowerUpType
-{
-	PowerUp_None                   = 0,
-	PowerUp_Bandage                = 1,
-	PowerUp_FirstAid               = 2,
-	PowerUp_MedKit                 = 3,
-	PowerUp_EnergyDrink            = 4,
-	PowerUp_Painkillers            = 5,
-	PowerUp_Adrenaline             = 6,
-	PowerUp_MAX                    = 7
 };
 
 
@@ -80,6 +66,30 @@ enum class EDamageTypeCategory
 	Damage_Instant_Fall            = 13,
 	Damage_Drown                   = 14,
 	Damage_MAX                     = 15
+};
+
+
+// Enum TslGame.EThrownWeaponType
+enum class EThrownWeaponType
+{
+	Thrown_Grenade                 = 0,
+	Thrown_Molotov                 = 1,
+	Thrown_Other                   = 2,
+	Thrown_MAX                     = 3
+};
+
+
+// Enum TslGame.EPowerUpType
+enum class EPowerUpType
+{
+	PowerUp_None                   = 0,
+	PowerUp_Bandage                = 1,
+	PowerUp_FirstAid               = 2,
+	PowerUp_MedKit                 = 3,
+	PowerUp_EnergyDrink            = 4,
+	PowerUp_Painkillers            = 5,
+	PowerUp_Adrenaline             = 6,
+	PowerUp_MAX                    = 7
 };
 
 
@@ -186,6 +196,24 @@ enum class EUiShowType
 };
 
 
+// Enum TslGame.ETslInputModes
+enum class ETslInputModes
+{
+	ETslInputModes__Toggle         = 0,
+	ETslInputModes__Hold           = 1,
+	ETslInputModes__DoubleTap      = 2,
+	ETslInputModes__ETslInputModes_MAX = 3
+};
+
+
+// Enum TslGame.EGameplayFunctionalities
+enum class EGameplayFunctionalities
+{
+	EGameplayFunctionalities__FreeLookInterp = 0,
+	EGameplayFunctionalities__EGameplayFunctionalities_MAX = 1
+};
+
+
 // Enum TslGame.EInputModeSettingActions
 enum class EInputModeSettingActions
 {
@@ -197,7 +225,8 @@ enum class EInputModeSettingActions
 	EInputModeSettingActions__HoldBreath = 5,
 	EInputModeSettingActions__Peek = 6,
 	EInputModeSettingActions__Map  = 7,
-	EInputModeSettingActions__EInputModeSettingActions_MAX = 8
+	EInputModeSettingActions__ADS  = 8,
+	EInputModeSettingActions__EInputModeSettingActions_MAX = 9
 };
 
 
@@ -561,7 +590,8 @@ enum class EHackDetectionType
 	WEAPON_INVALID_HITLAG          = 4,
 	WEAPON_INVALID_AMMO            = 5,
 	WEAPON_WALL_CHECK              = 6,
-	WEAPON_MAX                     = 7
+	IGNORE_WALL                    = 7,
+	EHackDetectionType_MAX         = 8
 };
 
 
@@ -685,16 +715,6 @@ enum class EWeaponClass
 	Class_Melee                    = 8,
 	Class_Throwable                = 9,
 	Class_MAX                      = 10
-};
-
-
-// Enum TslGame.EThrownWeaponType
-enum class EThrownWeaponType
-{
-	Thrown_Grenade                 = 0,
-	Thrown_Molotov                 = 1,
-	Thrown_Other                   = 2,
-	Thrown_MAX                     = 3
 };
 
 
@@ -844,6 +864,44 @@ enum class ERiderType
 };
 
 
+// Enum TslGame.EVaultAnimType
+enum class EVaultAnimType
+{
+	VaultNone                      = 0,
+	Vault200_Stationary            = 1,
+	Vault200_Mobile                = 2,
+	Vault160_Stationary            = 3,
+	Vault160_Mobile                = 4,
+	Vault120_Stationary            = 5,
+	Vault120_Mobile                = 6,
+	Vault120_Slide                 = 7,
+	Vault120_Narrow                = 8,
+	Vault90_Stationary             = 9,
+	Vault90_Mobile                 = 10,
+	Vault90_Slide                  = 11,
+	Vault90_Narrow                 = 12,
+	Climb200_Stationary            = 13,
+	Climb200_Mobile                = 14,
+	Climb200_Slide                 = 15,
+	Climb200_Narrow                = 16,
+	Climb160_Stationary            = 17,
+	Climb160_Mobile                = 18,
+	Climb160_Slide                 = 19,
+	Climb160_Narrow                = 20,
+	Climb120_Stationary            = 21,
+	Climb120_Mobile                = 22,
+	Climb120_Slide                 = 23,
+	Climb120_Narrow                = 24,
+	Climb90_Stationary             = 25,
+	Climb90_Mobile                 = 26,
+	Climb90_Slide                  = 27,
+	Climb90_Narrow                 = 28,
+	Vault90Roll                    = 29,
+	Vault120Window                 = 30,
+	EVaultAnimType_MAX             = 31
+};
+
+
 // Enum TslGame.EPunchDamageType
 enum class EPunchDamageType
 {
@@ -875,6 +933,17 @@ enum class EMovementType
 	M_UnderwaterSwim               = 16,
 	M_DBNO                         = 17,
 	M_MAX                          = 18
+};
+
+
+// Enum TslGame.EDoorState
+enum class EDoorState
+{
+	Closed                         = 0,
+	Closing                        = 1,
+	Opened                         = 2,
+	Opening                        = 3,
+	EDoorState_MAX                 = 4
 };
 
 
@@ -1035,7 +1104,8 @@ enum class EMarkStates
 	EMarkStates__Dead              = 2,
 	EMarkStates__Vehicle           = 3,
 	EMarkStates__Parachute         = 4,
-	EMarkStates__EMarkStates_MAX   = 5
+	EMarkStates__Quitter           = 5,
+	EMarkStates__EMarkStates_MAX   = 6
 };
 
 
@@ -1108,10 +1178,10 @@ enum class EHitCheckType
 enum class EThrowableState
 {
 	Idle                           = 0,
-	Ready                          = 1,
-	PinOff                         = 2,
+	PinOff                         = 1,
+	Cooking                        = 2,
 	Throw                          = 3,
-	Destroy                        = 4,
+	Dropped                        = 4,
 	EThrowableState_MAX            = 5
 };
 
@@ -1154,8 +1224,9 @@ enum class EVivoxChannelJoinState
 {
 	EVivoxChannelJoinState__NotJoined = 0,
 	EVivoxChannelJoinState__Joining = 1,
-	EVivoxChannelJoinState__Joined = 2,
-	EVivoxChannelJoinState__EVivoxChannelJoinState_MAX = 3
+	EVivoxChannelJoinState__Leaving = 2,
+	EVivoxChannelJoinState__Joined = 3,
+	EVivoxChannelJoinState__EVivoxChannelJoinState_MAX = 4
 };
 
 
@@ -1219,14 +1290,16 @@ struct FAnimSpeedInfo
 };
 
 // ScriptStruct TslGame.AnimInfo
-// 0x0058
+// 0x0068
 struct FAnimInfo
 {
 	class UBlendSpace*                                 BlendSpaceRef;                                            // 0x0000(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	class UBlendSpace*                                 BlendSpaceFPPRef;                                         // 0x0008(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	struct FAnimSpeedInfo                              AnimSpeed_Walk;                                           // 0x0010(0x0020) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	struct FAnimSpeedInfo                              AnimSpeed_Run;                                            // 0x0030(0x0020) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	float                                              AnimSpeed_Sprint;                                         // 0x0050(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	class UBlendSpace*                                 BlendSpaceRelaxedRef;                                     // 0x0010(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	class UBlendSpace*                                 BlendSpaceRelaxedFPPRef;                                  // 0x0018(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	struct FAnimSpeedInfo                              AnimSpeed_Walk;                                           // 0x0020(0x0020) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	struct FAnimSpeedInfo                              AnimSpeed_Run;                                            // 0x0040(0x0020) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	float                                              AnimSpeed_Sprint;                                         // 0x0060(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 };
 
 // ScriptStruct TslGame.NearClippingLevelOverZ
@@ -1343,7 +1416,7 @@ struct FCastConfig
 };
 
 // ScriptStruct TslGame.WeaponAttachmentData
-// 0x0098
+// 0x00B8
 struct FWeaponAttachmentData
 {
 	TEnumAsByte<EWeaponAttachmentSlotID>               AttachmentSlotID;                                         // 0x0000(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
@@ -1372,15 +1445,19 @@ struct FWeaponAttachmentData
 	class Rotator                                      IKHandRotation;                                           // 0x007C(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	TEnumAsByte<EWeaponGripLeftHand>                   WeaponGripLeft;                                           // 0x0088(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	class UAkAudioEvent*                               MuzzleSound;                                              // 0x0090(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	class UAnimMontage*                                CharacterReloadTactical;                                  // 0x0098(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	class UAnimMontage*                                WeaponReloadTactical;                                     // 0x00A0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	class UAnimMontage*                                CharacterReloadCharge;                                    // 0x00A8(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	class UAnimMontage*                                WeaponReloadCharge;                                       // 0x00B0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 };
 
 // ScriptStruct TslGame.WeaponAttachmentWeaponTagData
-// 0x00C0
+// 0x00E0
 struct FWeaponAttachmentWeaponTagData
 {
 	struct FName                                       WeaponTag;                                                // 0x0000(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	TAssetPtr<class UStaticMesh>                       AttachmentMeshAsset;                                      // 0x0008(0x0020) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_DisableEditOnInstance)
-	struct FWeaponAttachmentData                       AttachmentData;                                           // 0x0028(0x0098) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_DisableEditOnInstance)
+	struct FWeaponAttachmentData                       AttachmentData;                                           // 0x0028(0x00B8) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_DisableEditOnInstance)
 };
 
 // ScriptStruct TslGame.WeaponData
@@ -1547,7 +1624,7 @@ struct FBattleRoyalePoisionGasData
 };
 
 // ScriptStruct TslGame.WeaponGunData
-// 0x0080
+// 0x0090
 struct FWeaponGunData
 {
 	class UClass*                                      AmmoItemClass;                                            // 0x0000(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
@@ -1574,9 +1651,10 @@ struct FWeaponGunData
 	float                                              TraceAdditiveZ;                                           // 0x0064(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	unsigned char                                      DebugWeaponCollision : 1;                                 // 0x0068(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	class Vector3D                                     HandWeaponOffset;                                         // 0x006C(0x000C) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      bManualCycleAfterShot : 1;                                // 0x0078(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      bManualCycleInitialStateReady : 1;                        // 0x0079(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	float                                              LongTailDelay;                                            // 0x007C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	class Vector3D                                     HandWeaponOffsetFPP;                                      // 0x0078(0x000C) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      bManualCycleAfterShot : 1;                                // 0x0084(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      bManualCycleInitialStateReady : 1;                        // 0x0085(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	float                                              LongTailDelay;                                            // 0x0088(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 };
 
 // ScriptStruct TslGame.WeaponDeviationData
@@ -1796,6 +1874,21 @@ struct FTslImpactSoundInfo
 	class UAkAudioEvent*                               MudSoundAk;                                               // 0x0058(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 };
 
+// ScriptStruct TslGame.VaultingTask
+// 0x0040
+struct FVaultingTask
+{
+	class Vector3D                                     V_Start;                                                  // 0x0000(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	class Vector3D                                     V_Apex;                                                   // 0x000C(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	class Vector3D                                     V_ApexAdditive;                                           // 0x0018(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	class Vector3D                                     V_End;                                                    // 0x0024(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	TEnumAsByte<EVaultAnimType>                        InVaultType;                                              // 0x0030(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      bEndToFall : 1;                                           // 0x0031(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	float                                              Direction;                                                // 0x0034(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	float                                              PlayerSpeed;                                              // 0x0038(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	float                                              DistanceFromObject;                                       // 0x003C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+};
+
 // ScriptStruct TslGame.DamageRatioInfo
 // 0x0008
 struct FDamageRatioInfo
@@ -1986,6 +2079,15 @@ struct FColorBlindType
 {
 	TEnumAsByte<EColorBlindType>                       Key;                                                      // 0x0000(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	struct FText                                       DisplayName;                                              // 0x0008(0x0018) (CPF_Edit, CPF_BlueprintVisible)
+};
+
+// ScriptStruct TslGame.PresetColor
+// 0x0038
+struct FPresetColor
+{
+	struct FLinearColor                                Color;                                                    // 0x0000(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FText                                       DisplayName;                                              // 0x0010(0x0018) (CPF_Edit, CPF_BlueprintVisible)
+	struct FString                                     ColorString;                                              // 0x0028(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
 };
 
 // ScriptStruct TslGame.KeyInputModeName
@@ -2293,16 +2395,17 @@ struct FProjectileWeaponData
 };
 
 // ScriptStruct TslGame.ProjectileData
-// 0x0028
+// 0x0030
 struct FProjectileData
 {
 	float                                              ProjectileLife;                                           // 0x0000(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	int                                                ExplosionDamage;                                          // 0x0004(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              ExplosionRadius;                                          // 0x0008(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	float                                              MinImpactVelocityForSound;                                // 0x000C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	float                                              TimeBetweenImpactSound;                                   // 0x0010(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	class UClass*                                      DamageType;                                               // 0x0018(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      DestroyAtExplosion : 1;                                   // 0x0020(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	class UCurveFloat*                                 DamageCurve;                                              // 0x0010(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	float                                              MinImpactVelocityForSound;                                // 0x0018(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	float                                              TimeBetweenImpactSound;                                   // 0x001C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	class UClass*                                      DamageType;                                               // 0x0020(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      DestroyAtExplosion : 1;                                   // 0x0028(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 };
 
 // ScriptStruct TslGame.DoorBreakingState
@@ -2577,7 +2680,8 @@ struct FRecoilInfo
 	float                                              RecoilModifier_Stand;                                     // 0x0050(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              RecoilModifier_Crouch;                                    // 0x0054(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              RecoilModifier_Prone;                                     // 0x0058(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0xC];                                       // 0x005C(0x000C) MISSED OFFSET
+	float                                              RecoilHorizontalMinScalar;                                // 0x005C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0060(0x0008) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.MeleeWeaponAnim
@@ -2589,29 +2693,34 @@ struct FMeleeWeaponAnim
 };
 
 // ScriptStruct TslGame.ThrowableAnim
-// 0x0010
+// 0x0018
 struct FThrowableAnim
 {
 	class UAnimMontage*                                PinOff;                                                   // 0x0000(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	class UAnimMontage*                                Release;                                                  // 0x0008(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	class UAnimMontage*                                Cooking;                                                  // 0x0008(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	class UAnimMontage*                                Release;                                                  // 0x0010(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 };
 
 // ScriptStruct TslGame.ThrowableWeaponData
-// 0x0068
+// 0x0098
 struct FThrowableWeaponData
 {
 	class UClass*                                      ProjectileClass;                                          // 0x0000(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	class UClass*                                      PinOffEffectClass;                                        // 0x0008(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	TEnumAsByte<EProjectileExplosionStartType>         ExplosionStartType;                                       // 0x0010(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	float                                              ExplosionDelay;                                           // 0x0014(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	float                                              FireDelay;                                                // 0x0018(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	float                                              ActivationTimeLimit;                                      // 0x001C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	struct FThrowableAnim                              StandAnim;                                                // 0x0020(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	struct FThrowableAnim                              CrouchAnim;                                               // 0x0030(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	struct FThrowableAnim                              ProneAnim;                                                // 0x0040(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	class UCurveFloat*                                 SpeedCurve;                                               // 0x0050(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	class UCurveFloat*                                 PitchCurve;                                               // 0x0058(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	float                                              ThrowTime;                                                // 0x0060(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	class UClass*                                      Ring;                                                     // 0x0010(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	struct FName                                       RingAttachSocket;                                         // 0x0018(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	TEnumAsByte<EProjectileExplosionStartType>         ExplosionStartType;                                       // 0x0020(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	float                                              ExplosionDelay;                                           // 0x0024(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	float                                              FireDelay;                                                // 0x0028(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	float                                              ActivationTimeLimit;                                      // 0x002C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	struct FThrowableAnim                              StandAnim;                                                // 0x0030(0x0018) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	struct FThrowableAnim                              CrouchAnim;                                               // 0x0048(0x0018) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	struct FThrowableAnim                              ProneAnim;                                                // 0x0060(0x0018) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	class UCurveFloat*                                 SpeedCurve;                                               // 0x0078(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	class UCurveFloat*                                 PitchCurve;                                               // 0x0080(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	float                                              ThrowTime;                                                // 0x0088(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	float                                              ThrowCooldownDuration;                                    // 0x008C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      bCanBeCooked : 1;                                         // 0x0090(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 };
 
 // ScriptStruct TslGame.VivoxConnectionInfo
@@ -2874,6 +2983,16 @@ struct FWuLogCharacter
 	float                                              Health;                                                   // 0x0024(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class Vector3D                                     Location;                                                 // 0x0028(0x000C) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int                                                Ranking;                                                  // 0x0034(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// ScriptStruct TslGame.WuLogHackDetection_IgnoreWall
+// 0x0040 (0x0068 - 0x0028)
+struct FWuLogHackDetection_IgnoreWall : public FLogBase
+{
+	struct FWuLogCharacter                             Character;                                                // 0x0028(0x0038)
+	float                                              Reason_Distance;                                          // 0x0060(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      IsBanned : 1;                                             // 0x0064(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      IsBlockedHit : 1;                                         // 0x0065(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // ScriptStruct TslGame.WuLogHackDetection_Ammo
@@ -3202,10 +3321,13 @@ struct FWuLogPlayerAttack : public FLogBase
 };
 
 // ScriptStruct TslGame.WuLogPlayerPosition
-// 0x0038 (0x0060 - 0x0028)
+// 0x0048 (0x0070 - 0x0028)
 struct FWuLogPlayerPosition : public FLogBase
 {
 	struct FWuLogCharacter                             Character;                                                // 0x0028(0x0038)
+	float                                              ElapsedTime;                                              // 0x0060(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                NumAlivePlayers;                                          // 0x0064(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              ClientFPS;                                                // 0x0068(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // ScriptStruct TslGame.WuLogPlayerKicked

@@ -1,4 +1,4 @@
-// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.39 Test Server) SDK
+// PlayerUnknown's Battlegrounds (2.6.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,23 @@ namespace Classes
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function ReplayTimeline.ReplayTimeline_C.ClearKillEventItems
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UReplayTimeline_C::ClearKillEventItems()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ReplayTimeline.ReplayTimeline_C.ClearKillEventItems");
+
+	UReplayTimeline_C_ClearKillEventItems_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function ReplayTimeline.ReplayTimeline_C.CreateGetKillEventsTimer
 // (FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent)

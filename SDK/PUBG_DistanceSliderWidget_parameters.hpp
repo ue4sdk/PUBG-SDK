@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.39 Test Server) SDK
+// PlayerUnknown's Battlegrounds (2.6.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,23 @@ namespace Classes
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function DistanceSliderWidget.DistanceSliderWidget_C.ChangeDistance_Delegate
+struct UDistanceSliderWidget_C_ChangeDistance_Delegate_Params
+{
+	float                                              Value;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function DistanceSliderWidget.DistanceSliderWidget_C.SetDistanceFunc
+struct UDistanceSliderWidget_C_SetDistanceFunc_Params
+{
+};
+
+// Function DistanceSliderWidget.DistanceSliderWidget_C.ChangeDistance_Slider
+struct UDistanceSliderWidget_C_ChangeDistance_Slider_Params
+{
+	float                                              Value;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
 
 // Function DistanceSliderWidget.DistanceSliderWidget_C.SetValue
 struct UDistanceSliderWidget_C_SetValue_Params
@@ -36,6 +53,11 @@ struct UDistanceSliderWidget_C_GetDistance_Params
 struct UDistanceSliderWidget_C_BndEvt__DistanceSlider_K2Node_ComponentBoundEvent_64_OnFloatValueChangedEvent__DelegateSignature_Params
 {
 	float                                              Value;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function DistanceSliderWidget.DistanceSliderWidget_C.Construct
+struct UDistanceSliderWidget_C_Construct_Params
+{
 };
 
 // Function DistanceSliderWidget.DistanceSliderWidget_C.ExecuteUbergraph_DistanceSliderWidget

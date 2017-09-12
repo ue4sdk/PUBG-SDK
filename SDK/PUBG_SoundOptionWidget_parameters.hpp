@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.39 Test Server) SDK
+// PlayerUnknown's Battlegrounds (2.6.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,12 @@ namespace Classes
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function SoundOptionWidget.SoundOptionWidget_C.IsEnable_VoiceSetting
+struct USoundOptionWidget_C_IsEnable_VoiceSetting_Params
+{
+	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
 
 // Function SoundOptionWidget.SoundOptionWidget_C.IsKeyUp
 struct USoundOptionWidget_C_IsKeyUp_Params
@@ -38,6 +44,11 @@ struct USoundOptionWidget_C_OnDefault_Params
 
 // Function SoundOptionWidget.SoundOptionWidget_C.OnReset
 struct USoundOptionWidget_C_OnReset_Params
+{
+};
+
+// Function SoundOptionWidget.SoundOptionWidget_C.Construct
+struct USoundOptionWidget_C_Construct_Params
 {
 };
 

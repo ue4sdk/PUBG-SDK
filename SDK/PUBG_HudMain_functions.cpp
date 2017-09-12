@@ -1,4 +1,4 @@
-// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.39 Test Server) SDK
+// PlayerUnknown's Battlegrounds (2.6.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,23 @@ namespace Classes
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function HudMain.HudMain_C.BindEventForMapClosing
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UHudMain_C::BindEventForMapClosing()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function HudMain.HudMain_C.BindEventForMapClosing");
+
+	UHudMain_C_BindEventForMapClosing_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function HudMain.HudMain_C.OnKey_ReplayMenuOrEscape
 // (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
@@ -956,12 +973,15 @@ void UHudMain_C::OnPossessPawnChange()
 
 // Function HudMain.HudMain_C.InitializeHUD
 // (FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// Parameters:
+// bool                           bIsReplaying                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UHudMain_C::InitializeHUD()
+void UHudMain_C::InitializeHUD(bool bIsReplaying)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HudMain.HudMain_C.InitializeHUD");
 
 	UHudMain_C_InitializeHUD_Params params;
+	params.bIsReplaying = bIsReplaying;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1010,14 +1030,14 @@ void UHudMain_C::OnShowWidget(const struct FString& WidgetName, bool bShow)
 }
 
 
-// Function HudMain.HudMain_C.HideMapForInitReplay
+// Function HudMain.HudMain_C.HideMapForReplay
 // (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
-void UHudMain_C::HideMapForInitReplay()
+void UHudMain_C::HideMapForReplay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function HudMain.HudMain_C.HideMapForInitReplay");
+	static auto fn = UObject::FindObject<UFunction>("Function HudMain.HudMain_C.HideMapForReplay");
 
-	UHudMain_C_HideMapForInitReplay_Params params;
+	UHudMain_C_HideMapForReplay_Params params;
 
 	auto flags = fn->FunctionFlags;
 

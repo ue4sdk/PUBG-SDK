@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.39 Test Server) SDK
+// PlayerUnknown's Battlegrounds (2.6.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,18 @@ namespace Classes
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function GeneralSettingWidget.GeneralSettingWidget_C.IsChangeVideoCapture
+struct UGeneralSettingWidget_C_IsChangeVideoCapture_Params
+{
+	bool                                               IsChange;                                                 // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function GeneralSettingWidget.GeneralSettingWidget_C.IsEnable_VideoCapture
+struct UGeneralSettingWidget_C_IsEnable_VideoCapture_Params
+{
+	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
 
 // Function GeneralSettingWidget.GeneralSettingWidget_C.ApplyMiniMapType
 struct UGeneralSettingWidget_C_ApplyMiniMapType_Params
@@ -45,6 +57,7 @@ struct UGeneralSettingWidget_C_GetLanguageCultureName_Params
 // Function GeneralSettingWidget.GeneralSettingWidget_C.InitializeResolutionIWidget
 struct UGeneralSettingWidget_C_InitializeResolutionIWidget_Params
 {
+	bool                                               bConstruct;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // Function GeneralSettingWidget.GeneralSettingWidget_C.Construct

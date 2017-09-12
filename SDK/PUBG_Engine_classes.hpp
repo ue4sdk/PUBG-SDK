@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.39 Test Server) SDK
+// PlayerUnknown's Battlegrounds (2.6.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -41,7 +41,7 @@ public:
 	struct FRepMovement                                ReplicatedMovement;                                       // 0x00B8(0x0034) (CPF_Edit, CPF_Net, CPF_DisableEditOnInstance)
 	struct FRepAttachment                              AttachmentReplication;                                    // 0x00F0(0x0040) (CPF_Net, CPF_Transient)
 	TEnumAsByte<ENetRole>                              Role;                                                     // 0x0130(0x0001) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TEnumAsByte<EAutoReceiveInput>                     AutoReceiveInput;                                         // 0x0132(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TEnumAsByte<EAutoReceiveInput>                     AutoReceiveInput;                                         // 0x0133(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int                                                InputPriority;                                            // 0x0134(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class UInputComponent*                             InputComponent;                                           // 0x0138(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 	TEnumAsByte<EInputConsumeOptions>                  InputConsumeOption;                                       // 0x0140(0x0001) (CPF_ZeroConstructor, CPF_Deprecated, CPF_IsPlainOldData)
@@ -1481,213 +1481,6 @@ public:
 };
 
 
-// Class Engine.VehicleWheel
-// 0x00D8 (0x0100 - 0x0028)
-class UVehicleWheel : public UObject
-{
-public:
-	class UStaticMesh*                                 CollisionMesh;                                            // 0x0028(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      bDontCreateShape : 1;                                     // 0x0030(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      bAutoAdjustCollisionSize : 1;                             // 0x0031(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     Offset;                                                   // 0x0034(0x000C) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              ShapeRadius;                                              // 0x0040(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              ShapeWidth;                                               // 0x0044(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              Mass;                                                     // 0x0048(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              DampingRate;                                              // 0x004C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              SteerAngle;                                               // 0x0050(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      bAffectedByHandbrake : 1;                                 // 0x0054(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UTireType*                                   TireType;                                                 // 0x0058(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              LatStiffMaxLoad;                                          // 0x0060(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              LatStiffValue;                                            // 0x0064(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              LongStiffValue;                                           // 0x0068(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              SuspensionForceOffset;                                    // 0x006C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              SuspensionForceOffsetX;                                   // 0x0070(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     SuspensionTravelDir;                                      // 0x0074(0x000C) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     TireForceOffset;                                          // 0x0080(0x000C) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              SuspensionMaxRaise;                                       // 0x008C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              SuspensionMaxDrop;                                        // 0x0090(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              SuspensionNaturalFrequency;                               // 0x0094(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              SuspensionDampingRatio;                                   // 0x0098(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              MaxBrakeTorque;                                           // 0x009C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              MaxHandBrakeTorque;                                       // 0x00A0(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TEnumAsByte<ECollisionChannel>                     QueryChannel;                                             // 0x00A4(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	class UWheeledVehicleMovementComponent*            VehicleSim;                                               // 0x00A8(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_Transient, CPF_InstancedReference, CPF_IsPlainOldData)
-	int                                                WheelIndex;                                               // 0x00B0(0x0004) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	float                                              DebugLongSlip;                                            // 0x00B4(0x0004) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	float                                              DebugLatSlip;                                             // 0x00B8(0x0004) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	float                                              DebugNormalizedTireLoad;                                  // 0x00BC(0x0004) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	float                                              DebugWheelTorque;                                         // 0x00C4(0x0004) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	float                                              DebugLongForce;                                           // 0x00C8(0x0004) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	float                                              DebugLatForce;                                            // 0x00CC(0x0004) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	class Vector3D                                     Location;                                                 // 0x00D0(0x000C) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	class Vector3D                                     OldLocation;                                              // 0x00DC(0x000C) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	class Vector3D                                     Velocity;                                                 // 0x00E8(0x000C) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0xC];                                       // 0x00F4(0x000C) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Engine.VehicleWheel");
-		return ptr;
-	}
-
-
-	float GetSuspensionOffset();
-	float GetSteerAngle();
-	float GetRotationAngle();
-	float GetLongitudinalSlip();
-	float GetLateralSlip();
-};
-
-
-// Class Engine.AnimInstance
-// 0x0470 (0x0498 - 0x0028)
-class UAnimInstance : public UObject
-{
-public:
-	float                                              DeltaTime;                                                // 0x0028(0x0004) (CPF_ZeroConstructor, CPF_Deprecated, CPF_IsPlainOldData)
-	class USkeleton*                                   CurrentSkeleton;                                          // 0x0030(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x40];                                      // 0x0038(0x0040) MISSED OFFSET
-	TEnumAsByte<ERootMotionMode>                       RootMotionMode;                                           // 0x0078(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      bRunUpdatesInWorkerThreads : 1;                           // 0x0079(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      bCanUseParallelUpdateAnimation : 1;                       // 0x007A(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      bWarnAboutBlueprintUsage : 1;                             // 0x007B(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	struct FScriptMulticastDelegate                    OnMontageBlendingOut;                                     // 0x0080(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnMontageStarted;                                         // 0x0090(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnMontageEnded;                                           // 0x00A0(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
-	unsigned char                                      UnknownData01[0x70];                                      // 0x00B0(0x0070) MISSED OFFSET
-	unsigned char                                      bQueueMontageEvents : 1;                                  // 0x0120(0x0001) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData02[0x18F];                                     // 0x0121(0x018F) MISSED OFFSET
-	TArray<struct FAnimNotifyEvent>                    ActiveAnimNotifyState;                                    // 0x02B0(0x0010) (CPF_ZeroConstructor, CPF_Transient)
-	unsigned char                                      UnknownData03[0x1D8];                                     // 0x02C0(0x01D8) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Engine.AnimInstance");
-		return ptr;
-	}
-
-
-	void UnlockAIResources(bool bUnlockMovement, bool UnlockAILogic);
-	class APawn* TryGetPawnOwner();
-	void StopSlotAnimation(float InBlendOutTime, const struct FName& SlotNodeName);
-	void SetRootMotionMode(TEnumAsByte<ERootMotionMode> Value);
-	void SetMorphTarget(const struct FName& MorphTargetName, float Value);
-	class UAnimMontage* PlaySlotAnimationAsDynamicMontage(class UAnimSequenceBase* Asset, const struct FName& SlotNodeName, float BlendInTime, float BlendOutTime, float InPlayRate, int LoopCount, float BlendOutTriggerTime, float InTimeToStartMontageAt);
-	float PlaySlotAnimation(class UAnimSequenceBase* Asset, const struct FName& SlotNodeName, float BlendInTime, float BlendOutTime, float InPlayRate, int LoopCount);
-	void Montage_Stop(float InBlendOutTime, class UAnimMontage* Montage);
-	void Montage_SetPlayRate(class UAnimMontage* Montage, float NewPlayRate);
-	void Montage_SetNextSection(const struct FName& SectionNameToChange, const struct FName& NextSection, class UAnimMontage* Montage);
-	void Montage_Resume(class UAnimMontage* Montage);
-	float Montage_Play(class UAnimMontage* MontageToPlay, float InPlayRate, TEnumAsByte<EMontagePlayReturnType> ReturnValueType, float InTimeToStartMontageAt);
-	void Montage_Pause(class UAnimMontage* Montage);
-	void Montage_JumpToSectionsEnd(const struct FName& SectionName, class UAnimMontage* Montage);
-	void Montage_JumpToSection(const struct FName& SectionName, class UAnimMontage* Montage);
-	bool Montage_IsPlaying(class UAnimMontage* Montage);
-	bool Montage_IsActive(class UAnimMontage* Montage);
-	struct FName Montage_GetCurrentSection(class UAnimMontage* Montage);
-	void LockAIResources(bool bLockMovement, bool LockAILogic);
-	bool IsSyncGroupBetweenMarkers(const struct FName& InSyncGroupName, const struct FName& PreviousMarker, const struct FName& NextMarker, bool bRespectMarkerOrder);
-	bool IsPlayingSlotAnimation(class UAnimSequenceBase* Asset, const struct FName& SlotNodeName);
-	bool HasMarkerBeenHitThisFrame(const struct FName& SyncGroup, const struct FName& MarkerName);
-	bool GetTimeToClosestMarker(const struct FName& SyncGroup, const struct FName& MarkerName, float* OutMarkerTime);
-	struct FMarkerSyncAnimPosition GetSyncGroupPosition(const struct FName& InSyncGroupName);
-	float GetStateWeight(int MachineIndex, int StateIndex);
-	float GetRelevantAnimTimeRemainingFraction(int MachineIndex, int StateIndex);
-	float GetRelevantAnimTimeRemaining(int MachineIndex, int StateIndex);
-	float GetRelevantAnimTimeFraction(int MachineIndex, int StateIndex);
-	float GetRelevantAnimTime(int MachineIndex, int StateIndex);
-	float GetRelevantAnimLength(int MachineIndex, int StateIndex);
-	class USkeletalMeshComponent* GetOwningComponent();
-	class AActor* GetOwningActor();
-	float GetInstanceTransitionTimeElapsedFraction(int MachineIndex, int TransitionIndex);
-	float GetInstanceTransitionTimeElapsed(int MachineIndex, int TransitionIndex);
-	float GetInstanceTransitionCrossfadeDuration(int MachineIndex, int TransitionIndex);
-	float GetInstanceStateWeight(int MachineIndex, int StateIndex);
-	float GetInstanceMachineWeight(int MachineIndex);
-	float GetInstanceCurrentStateElapsedTime(int MachineIndex);
-	float GetInstanceAssetPlayerTimeFromEndFraction(int AssetPlayerIndex);
-	float GetInstanceAssetPlayerTimeFromEnd(int AssetPlayerIndex);
-	float GetInstanceAssetPlayerTimeFraction(int AssetPlayerIndex);
-	float GetInstanceAssetPlayerTime(int AssetPlayerIndex);
-	float GetInstanceAssetPlayerLength(int AssetPlayerIndex);
-	float GetCurveValue(const struct FName& CurveName);
-	struct FName GetCurrentStateName(int MachineIndex);
-	float GetCurrentStateElapsedTime(int MachineIndex);
-	float STATIC_GetAnimAssetPlayerTimeFromEndFraction(class UAnimationAsset* AnimAsset, float CurrentTime);
-	float GetAnimAssetPlayerTimeFromEnd(class UAnimationAsset* AnimAsset, float CurrentTime);
-	float STATIC_GetAnimAssetPlayerTimeFraction(class UAnimationAsset* AnimAsset, float CurrentTime);
-	float STATIC_GetAnimAssetPlayerLength(class UAnimationAsset* AnimAsset);
-	void ClearMorphTargets();
-	float CalculateDirection(const class Vector3D& Velocity, const class Rotator& BaseRotation);
-	void BlueprintUpdateAnimation(float DeltaTimeX);
-	void BlueprintPostEvaluateAnimation();
-	void BlueprintInitializeAnimation();
-};
-
-
-// Class Engine.DamageType
-// 0x0018 (0x0040 - 0x0028)
-class UDamageType : public UObject
-{
-public:
-	unsigned char                                      bCausedByWorld : 1;                                       // 0x0028(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
-	unsigned char                                      bScaleMomentumByMass : 1;                                 // 0x0028(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
-	unsigned char                                      bRadialDamageVelChange : 1;                               // 0x0028(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
-	float                                              DamageImpulse;                                            // 0x002C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              DestructibleImpulse;                                      // 0x0030(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              DestructibleDamageSpreadScale;                            // 0x0034(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              DamageFalloff;                                            // 0x0038(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Engine.DamageType");
-		return ptr;
-	}
-
-};
-
-
-// Class Engine.CameraComponent
-// 0x0560 (0x0860 - 0x0300)
-class UCameraComponent : public USceneComponent
-{
-public:
-	float                                              FieldOfView;                                              // 0x0300(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              OrthoWidth;                                               // 0x0304(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              OrthoNearClipPlane;                                       // 0x0308(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              OrthoFarClipPlane;                                        // 0x030C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              AspectRatio;                                              // 0x0310(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      bConstrainAspectRatio : 1;                                // 0x0314(0x0001) (CPF_Edit, CPF_BlueprintVisible)
-	unsigned char                                      bUseFieldOfViewForLOD : 1;                                // 0x0314(0x0001) (CPF_Edit, CPF_BlueprintVisible)
-	unsigned char                                      bLockToHmd : 1;                                           // 0x0314(0x0001) (CPF_Edit, CPF_BlueprintVisible)
-	unsigned char                                      bUsePawnControlRotation : 1;                              // 0x0314(0x0001) (CPF_Edit, CPF_BlueprintVisible)
-	TEnumAsByte<ECameraProjectionMode>                 ProjectionMode;                                           // 0x0318(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              PostProcessBlendWeight;                                   // 0x031C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FPostProcessSettings                        PostProcessSettings;                                      // 0x0320(0x04E0) (CPF_Edit, CPF_BlueprintVisible)
-	unsigned char                                      UnknownData00[0x58];                                      // 0x0800(0x0058) MISSED OFFSET
-	unsigned char                                      bUseControllerViewRotation : 1;                           // 0x0858(0x0001) (CPF_Deprecated)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Engine.CameraComponent");
-		return ptr;
-	}
-
-
-	void SetUseFieldOfViewForLOD(bool bInUseFieldOfViewForLOD);
-	void SetProjectionMode(TEnumAsByte<ECameraProjectionMode> InProjectionMode);
-	void SetPostProcessBlendWeight(float InPostProcessBlendWeight);
-	void SetOrthoWidth(float InOrthoWidth);
-	void SetOrthoNearClipPlane(float InOrthoNearClipPlane);
-	void SetOrthoFarClipPlane(float InOrthoFarClipPlane);
-	void SetFieldOfView(float InFieldOfView);
-	void SetConstraintAspectRatio(bool bInConstrainAspectRatio);
-	void SetAspectRatio(float InAspectRatio);
-	void GetCameraView(float DeltaTime, struct FMinimalViewInfo* DesiredView);
-	void AddOrUpdateBlendable(const TScriptInterface<class UBlendableInterface>& InBlendableObject, float InWeight);
-};
-
-
 // Class Engine.CharacterMovementComponent
 // 0x05D0 (0x0750 - 0x0180)
 class UCharacterMovementComponent : public UPawnMovementComponent
@@ -1896,6 +1689,213 @@ public:
 };
 
 
+// Class Engine.VehicleWheel
+// 0x00D8 (0x0100 - 0x0028)
+class UVehicleWheel : public UObject
+{
+public:
+	class UStaticMesh*                                 CollisionMesh;                                            // 0x0028(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      bDontCreateShape : 1;                                     // 0x0030(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      bAutoAdjustCollisionSize : 1;                             // 0x0031(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     Offset;                                                   // 0x0034(0x000C) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              ShapeRadius;                                              // 0x0040(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              ShapeWidth;                                               // 0x0044(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              Mass;                                                     // 0x0048(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              DampingRate;                                              // 0x004C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              SteerAngle;                                               // 0x0050(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      bAffectedByHandbrake : 1;                                 // 0x0054(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class UTireType*                                   TireType;                                                 // 0x0058(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              LatStiffMaxLoad;                                          // 0x0060(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              LatStiffValue;                                            // 0x0064(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              LongStiffValue;                                           // 0x0068(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              SuspensionForceOffset;                                    // 0x006C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              SuspensionForceOffsetX;                                   // 0x0070(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     SuspensionTravelDir;                                      // 0x0074(0x000C) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     TireForceOffset;                                          // 0x0080(0x000C) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              SuspensionMaxRaise;                                       // 0x008C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              SuspensionMaxDrop;                                        // 0x0090(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              SuspensionNaturalFrequency;                               // 0x0094(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              SuspensionDampingRatio;                                   // 0x0098(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              MaxBrakeTorque;                                           // 0x009C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              MaxHandBrakeTorque;                                       // 0x00A0(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TEnumAsByte<ECollisionChannel>                     QueryChannel;                                             // 0x00A4(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	class UWheeledVehicleMovementComponent*            VehicleSim;                                               // 0x00A8(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_Transient, CPF_InstancedReference, CPF_IsPlainOldData)
+	int                                                WheelIndex;                                               // 0x00B0(0x0004) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	float                                              DebugLongSlip;                                            // 0x00B4(0x0004) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	float                                              DebugLatSlip;                                             // 0x00B8(0x0004) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	float                                              DebugNormalizedTireLoad;                                  // 0x00BC(0x0004) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	float                                              DebugWheelTorque;                                         // 0x00C4(0x0004) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	float                                              DebugLongForce;                                           // 0x00C8(0x0004) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	float                                              DebugLatForce;                                            // 0x00CC(0x0004) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	class Vector3D                                     Location;                                                 // 0x00D0(0x000C) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	class Vector3D                                     OldLocation;                                              // 0x00DC(0x000C) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	class Vector3D                                     Velocity;                                                 // 0x00E8(0x000C) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0xC];                                       // 0x00F4(0x000C) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Engine.VehicleWheel");
+		return ptr;
+	}
+
+
+	float GetSuspensionOffset();
+	float GetSteerAngle();
+	float GetRotationAngle();
+	float GetLongitudinalSlip();
+	float GetLateralSlip();
+};
+
+
+// Class Engine.AnimInstance
+// 0x0470 (0x0498 - 0x0028)
+class UAnimInstance : public UObject
+{
+public:
+	float                                              DeltaTime;                                                // 0x0028(0x0004) (CPF_ZeroConstructor, CPF_Deprecated, CPF_IsPlainOldData)
+	class USkeleton*                                   CurrentSkeleton;                                          // 0x0030(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x40];                                      // 0x0038(0x0040) MISSED OFFSET
+	TEnumAsByte<ERootMotionMode>                       RootMotionMode;                                           // 0x0078(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      bRunUpdatesInWorkerThreads : 1;                           // 0x0079(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      bCanUseParallelUpdateAnimation : 1;                       // 0x007A(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      bWarnAboutBlueprintUsage : 1;                             // 0x007B(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	struct FScriptMulticastDelegate                    OnMontageBlendingOut;                                     // 0x0080(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnMontageStarted;                                         // 0x0090(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnMontageEnded;                                           // 0x00A0(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
+	unsigned char                                      UnknownData01[0x70];                                      // 0x00B0(0x0070) MISSED OFFSET
+	unsigned char                                      bQueueMontageEvents : 1;                                  // 0x0120(0x0001) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData02[0x18F];                                     // 0x0121(0x018F) MISSED OFFSET
+	TArray<struct FAnimNotifyEvent>                    ActiveAnimNotifyState;                                    // 0x02B0(0x0010) (CPF_ZeroConstructor, CPF_Transient)
+	unsigned char                                      UnknownData03[0x1D8];                                     // 0x02C0(0x01D8) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Engine.AnimInstance");
+		return ptr;
+	}
+
+
+	void UnlockAIResources(bool bUnlockMovement, bool UnlockAILogic);
+	class APawn* TryGetPawnOwner();
+	void StopSlotAnimation(float InBlendOutTime, const struct FName& SlotNodeName);
+	void SetRootMotionMode(TEnumAsByte<ERootMotionMode> Value);
+	void SetMorphTarget(const struct FName& MorphTargetName, float Value);
+	class UAnimMontage* PlaySlotAnimationAsDynamicMontage(class UAnimSequenceBase* Asset, const struct FName& SlotNodeName, float BlendInTime, float BlendOutTime, float InPlayRate, int LoopCount, float BlendOutTriggerTime, float InTimeToStartMontageAt);
+	float PlaySlotAnimation(class UAnimSequenceBase* Asset, const struct FName& SlotNodeName, float BlendInTime, float BlendOutTime, float InPlayRate, int LoopCount);
+	void Montage_Stop(float InBlendOutTime, class UAnimMontage* Montage);
+	void Montage_SetPlayRate(class UAnimMontage* Montage, float NewPlayRate);
+	void Montage_SetNextSection(const struct FName& SectionNameToChange, const struct FName& NextSection, class UAnimMontage* Montage);
+	void Montage_Resume(class UAnimMontage* Montage);
+	float Montage_Play(class UAnimMontage* MontageToPlay, float InPlayRate, TEnumAsByte<EMontagePlayReturnType> ReturnValueType, float InTimeToStartMontageAt);
+	void Montage_Pause(class UAnimMontage* Montage);
+	void Montage_JumpToSectionsEnd(const struct FName& SectionName, class UAnimMontage* Montage);
+	void Montage_JumpToSection(const struct FName& SectionName, class UAnimMontage* Montage);
+	bool Montage_IsPlaying(class UAnimMontage* Montage);
+	bool Montage_IsActive(class UAnimMontage* Montage);
+	struct FName Montage_GetCurrentSection(class UAnimMontage* Montage);
+	void LockAIResources(bool bLockMovement, bool LockAILogic);
+	bool IsSyncGroupBetweenMarkers(const struct FName& InSyncGroupName, const struct FName& PreviousMarker, const struct FName& NextMarker, bool bRespectMarkerOrder);
+	bool IsPlayingSlotAnimation(class UAnimSequenceBase* Asset, const struct FName& SlotNodeName);
+	bool HasMarkerBeenHitThisFrame(const struct FName& SyncGroup, const struct FName& MarkerName);
+	bool GetTimeToClosestMarker(const struct FName& SyncGroup, const struct FName& MarkerName, float* OutMarkerTime);
+	struct FMarkerSyncAnimPosition GetSyncGroupPosition(const struct FName& InSyncGroupName);
+	float GetStateWeight(int MachineIndex, int StateIndex);
+	float GetRelevantAnimTimeRemainingFraction(int MachineIndex, int StateIndex);
+	float GetRelevantAnimTimeRemaining(int MachineIndex, int StateIndex);
+	float GetRelevantAnimTimeFraction(int MachineIndex, int StateIndex);
+	float GetRelevantAnimTime(int MachineIndex, int StateIndex);
+	float GetRelevantAnimLength(int MachineIndex, int StateIndex);
+	class USkeletalMeshComponent* GetOwningComponent();
+	class AActor* GetOwningActor();
+	float GetInstanceTransitionTimeElapsedFraction(int MachineIndex, int TransitionIndex);
+	float GetInstanceTransitionTimeElapsed(int MachineIndex, int TransitionIndex);
+	float GetInstanceTransitionCrossfadeDuration(int MachineIndex, int TransitionIndex);
+	float GetInstanceStateWeight(int MachineIndex, int StateIndex);
+	float GetInstanceMachineWeight(int MachineIndex);
+	float GetInstanceCurrentStateElapsedTime(int MachineIndex);
+	float GetInstanceAssetPlayerTimeFromEndFraction(int AssetPlayerIndex);
+	float GetInstanceAssetPlayerTimeFromEnd(int AssetPlayerIndex);
+	float GetInstanceAssetPlayerTimeFraction(int AssetPlayerIndex);
+	float GetInstanceAssetPlayerTime(int AssetPlayerIndex);
+	float GetInstanceAssetPlayerLength(int AssetPlayerIndex);
+	float GetCurveValue(const struct FName& CurveName);
+	struct FName GetCurrentStateName(int MachineIndex);
+	float GetCurrentStateElapsedTime(int MachineIndex);
+	float STATIC_GetAnimAssetPlayerTimeFromEndFraction(class UAnimationAsset* AnimAsset, float CurrentTime);
+	float GetAnimAssetPlayerTimeFromEnd(class UAnimationAsset* AnimAsset, float CurrentTime);
+	float STATIC_GetAnimAssetPlayerTimeFraction(class UAnimationAsset* AnimAsset, float CurrentTime);
+	float STATIC_GetAnimAssetPlayerLength(class UAnimationAsset* AnimAsset);
+	void ClearMorphTargets();
+	float CalculateDirection(const class Vector3D& Velocity, const class Rotator& BaseRotation);
+	void BlueprintUpdateAnimation(float DeltaTimeX);
+	void BlueprintPostEvaluateAnimation();
+	void BlueprintInitializeAnimation();
+};
+
+
+// Class Engine.DamageType
+// 0x0018 (0x0040 - 0x0028)
+class UDamageType : public UObject
+{
+public:
+	unsigned char                                      bCausedByWorld : 1;                                       // 0x0028(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
+	unsigned char                                      bScaleMomentumByMass : 1;                                 // 0x0028(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
+	unsigned char                                      bRadialDamageVelChange : 1;                               // 0x0028(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
+	float                                              DamageImpulse;                                            // 0x002C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              DestructibleImpulse;                                      // 0x0030(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              DestructibleDamageSpreadScale;                            // 0x0034(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              DamageFalloff;                                            // 0x0038(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Engine.DamageType");
+		return ptr;
+	}
+
+};
+
+
+// Class Engine.CameraComponent
+// 0x0560 (0x0860 - 0x0300)
+class UCameraComponent : public USceneComponent
+{
+public:
+	float                                              FieldOfView;                                              // 0x0300(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              OrthoWidth;                                               // 0x0304(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              OrthoNearClipPlane;                                       // 0x0308(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              OrthoFarClipPlane;                                        // 0x030C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              AspectRatio;                                              // 0x0310(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      bConstrainAspectRatio : 1;                                // 0x0314(0x0001) (CPF_Edit, CPF_BlueprintVisible)
+	unsigned char                                      bUseFieldOfViewForLOD : 1;                                // 0x0314(0x0001) (CPF_Edit, CPF_BlueprintVisible)
+	unsigned char                                      bLockToHmd : 1;                                           // 0x0314(0x0001) (CPF_Edit, CPF_BlueprintVisible)
+	unsigned char                                      bUsePawnControlRotation : 1;                              // 0x0314(0x0001) (CPF_Edit, CPF_BlueprintVisible)
+	TEnumAsByte<ECameraProjectionMode>                 ProjectionMode;                                           // 0x0318(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              PostProcessBlendWeight;                                   // 0x031C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FPostProcessSettings                        PostProcessSettings;                                      // 0x0320(0x04E0) (CPF_Edit, CPF_BlueprintVisible)
+	unsigned char                                      UnknownData00[0x58];                                      // 0x0800(0x0058) MISSED OFFSET
+	unsigned char                                      bUseControllerViewRotation : 1;                           // 0x0858(0x0001) (CPF_Deprecated)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Engine.CameraComponent");
+		return ptr;
+	}
+
+
+	void SetUseFieldOfViewForLOD(bool bInUseFieldOfViewForLOD);
+	void SetProjectionMode(TEnumAsByte<ECameraProjectionMode> InProjectionMode);
+	void SetPostProcessBlendWeight(float InPostProcessBlendWeight);
+	void SetOrthoWidth(float InOrthoWidth);
+	void SetOrthoNearClipPlane(float InOrthoNearClipPlane);
+	void SetOrthoFarClipPlane(float InOrthoFarClipPlane);
+	void SetFieldOfView(float InFieldOfView);
+	void SetConstraintAspectRatio(bool bInConstrainAspectRatio);
+	void SetAspectRatio(float InAspectRatio);
+	void GetCameraView(float DeltaTime, struct FMinimalViewInfo* DesiredView);
+	void AddOrUpdateBlendable(const TScriptInterface<class UBlendableInterface>& InBlendableObject, float InWeight);
+};
+
+
 // Class Engine.CheatManager
 // 0x0050 (0x0078 - 0x0028)
 class UCheatManager : public UObject
@@ -1968,7 +1968,7 @@ public:
 
 
 // Class Engine.Engine
-// 0x0C88 (0x0CB0 - 0x0028)
+// 0x0CD8 (0x0D00 - 0x0028)
 class UEngine : public UObject
 {
 public:
@@ -2100,84 +2100,84 @@ public:
 	unsigned char                                      UnknownData02[0x8];                                       // 0x05E8(0x0008) MISSED OFFSET
 	class UGameViewportClient*                         GameViewport;                                             // 0x05F0(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	TArray<struct FString>                             DeferredCommands;                                         // 0x05F8(0x0010) (CPF_ZeroConstructor)
-	unsigned char                                      UnknownData03[0x18];                                      // 0x0608(0x0018) MISSED OFFSET
-	int                                                TickCycles;                                               // 0x0620(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	int                                                GameCycles;                                               // 0x0624(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	int                                                ClientCycles;                                             // 0x0628(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              NearClipPlane;                                            // 0x062C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	unsigned char                                      bHardwareSurveyEnabled : 1;                               // 0x0630(0x0001) (CPF_Deprecated)
-	unsigned char                                      bSubtitlesEnabled : 1;                                    // 0x0630(0x0001) (CPF_Edit, CPF_Config)
-	unsigned char                                      bSubtitlesForcedOff : 1;                                  // 0x0630(0x0001) (CPF_Edit, CPF_Config)
-	int                                                MaximumLoopIterationCount;                                // 0x0634(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	unsigned char                                      bCanBlueprintsTickByDefault : 1;                          // 0x0638(0x0001) (CPF_Edit, CPF_Config)
-	unsigned char                                      bOptimizeAnimBlueprintMemberVariableAccess : 1;           // 0x0638(0x0001) (CPF_Edit, CPF_Config)
-	unsigned char                                      bEnableEditorPSysRealtimeLOD : 1;                         // 0x0638(0x0001) (CPF_Config)
-	unsigned char                                      bSmoothFrameRate : 1;                                     // 0x0638(0x0001) (CPF_Edit, CPF_Config)
-	unsigned char                                      bUseFixedFrameRate : 1;                                   // 0x0638(0x0001) (CPF_Edit, CPF_Config)
-	float                                              FixedFrameRate;                                           // 0x063C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	struct FFloatRange                                 SmoothedFrameRateRange;                                   // 0x0640(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	unsigned char                                      bCheckForMultiplePawnsSpawnedInAFrame : 1;                // 0x0650(0x0001) (CPF_Config)
-	int                                                NumPawnsAllowedToBeSpawnedInAFrame;                       // 0x0654(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	unsigned char                                      bShouldGenerateLowQualityLightmaps : 1;                   // 0x0658(0x0001) (CPF_Config, CPF_GlobalConfig, CPF_Deprecated)
-	struct FColor                                      C_WorldBox;                                               // 0x065C(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FColor                                      C_BrushWire;                                              // 0x0660(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FColor                                      C_AddWire;                                                // 0x0664(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FColor                                      C_SubtractWire;                                           // 0x0668(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FColor                                      C_SemiSolidWire;                                          // 0x066C(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FColor                                      C_NonSolidWire;                                           // 0x0670(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FColor                                      C_WireBackground;                                         // 0x0674(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FColor                                      C_ScaleBoxHi;                                             // 0x0678(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FColor                                      C_VolumeCollision;                                        // 0x067C(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FColor                                      C_BSPCollision;                                           // 0x0680(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FColor                                      C_OrthoBackground;                                        // 0x0684(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FColor                                      C_Volume;                                                 // 0x0688(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FColor                                      C_BrushShape;                                             // 0x068C(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              StreamingDistanceFactor;                                  // 0x0690(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TEnumAsByte<ETransitionType>                       TransitionType;                                           // 0x0694(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FString                                     TransitionDescription;                                    // 0x0698(0x0010) (CPF_ZeroConstructor)
-	struct FString                                     TransitionGameMode;                                       // 0x06A8(0x0010) (CPF_ZeroConstructor)
-	float                                              MeshLODRange;                                             // 0x06B8(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	unsigned char                                      bAllowMatureLanguage : 1;                                 // 0x06BC(0x0001) (CPF_Config)
-	float                                              CameraRotationThreshold;                                  // 0x06C0(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	float                                              CameraTranslationThreshold;                               // 0x06C4(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	float                                              PrimitiveProbablyVisibleTime;                             // 0x06C8(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	float                                              MaxOcclusionPixelsFraction;                               // 0x06CC(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	unsigned char                                      bPauseOnLossOfFocus : 1;                                  // 0x06D0(0x0001) (CPF_Config)
-	int                                                MaxParticleResize;                                        // 0x06D4(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	int                                                MaxParticleResizeWarn;                                    // 0x06D8(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	TArray<struct FDropNoteInfo>                       PendingDroppedNotes;                                      // 0x06E0(0x0010) (CPF_ZeroConstructor, CPF_Transient)
-	struct FRigidBodyErrorCorrection                   PhysicErrorCorrection;                                    // 0x06F0(0x001C) (CPF_Config)
-	float                                              NetClientTicksPerSecond;                                  // 0x070C(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_GlobalConfig, CPF_IsPlainOldData)
-	float                                              DisplayGamma;                                             // 0x0710(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	float                                              MinDesiredFrameRate;                                      // 0x0714(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	struct FLinearColor                                DefaultSelectedMaterialColor;                             // 0x0718(0x0010) (CPF_ZeroConstructor, CPF_Config, CPF_GlobalConfig, CPF_IsPlainOldData)
-	struct FLinearColor                                SelectedMaterialColor;                                    // 0x0728(0x0010) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	struct FLinearColor                                SelectionOutlineColor;                                    // 0x0738(0x0010) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	struct FLinearColor                                SubduedSelectionOutlineColor;                             // 0x0748(0x0010) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	struct FLinearColor                                SelectedMaterialColorOverride;                            // 0x0758(0x0010) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	unsigned char                                      bIsOverridingSelectedColor : 1;                           // 0x0768(0x0001) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	unsigned char                                      bEnableOnScreenDebugMessages : 1;                         // 0x076C(0x0001) (CPF_Config, CPF_GlobalConfig)
-	unsigned char                                      bEnableOnScreenDebugMessagesDisplay : 1;                  // 0x076C(0x0001) (CPF_Transient)
-	unsigned char                                      bSuppressMapWarnings : 1;                                 // 0x076C(0x0001) (CPF_Config, CPF_GlobalConfig)
-	unsigned char                                      bDisableAILogging : 1;                                    // 0x076C(0x0001) (CPF_Config, CPF_GlobalConfig)
-	uint32_t                                           bEnableVisualLogRecordingOnStart;                         // 0x0770(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_GlobalConfig, CPF_IsPlainOldData)
-	int                                                ScreenSaverInhibitorSemaphore;                            // 0x0778(0x0004) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	unsigned char                                      bLockReadOnlyLevels : 1;                                  // 0x077C(0x0001) (CPF_Transient)
-	struct FString                                     ParticleEventManagerClassPath;                            // 0x0780(0x0010) (CPF_ZeroConstructor, CPF_Config, CPF_GlobalConfig)
-	unsigned char                                      UnknownData04[0x10];                                      // 0x0790(0x0010) MISSED OFFSET
-	float                                              SelectionHighlightIntensity;                              // 0x07A0(0x0004) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	float                                              SelectionMeshSectionHighlightIntensity;                   // 0x07A4(0x0004) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	float                                              BSPSelectionHighlightIntensity;                           // 0x07A8(0x0004) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	float                                              HoverHighlightIntensity;                                  // 0x07AC(0x0004) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	float                                              SelectionHighlightIntensityBillboards;                    // 0x07B0(0x0004) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData05[0x3DC];                                     // 0x07B4(0x03DC) MISSED OFFSET
-	TArray<struct FNetDriverDefinition>                NetDriverDefinitions;                                     // 0x0B90(0x0010) (CPF_ZeroConstructor, CPF_Transient, CPF_Config)
-	TArray<struct FString>                             ServerActors;                                             // 0x0BA0(0x0010) (CPF_ZeroConstructor, CPF_Config)
-	TArray<struct FString>                             RuntimeServerActors;                                      // 0x0BB0(0x0010) (CPF_ZeroConstructor)
-	unsigned char                                      bStartedLoadMapMovie : 1;                                 // 0x0BC0(0x0001) (CPF_Transient)
-	unsigned char                                      UnknownData06[0x17];                                      // 0x0BC1(0x0017) MISSED OFFSET
-	int                                                NextWorldContextHandle;                                   // 0x0BD8(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData07[0xD4];                                      // 0x0BDC(0x00D4) MISSED OFFSET
+	unsigned char                                      UnknownData03[0x68];                                      // 0x0608(0x0068) MISSED OFFSET
+	int                                                TickCycles;                                               // 0x0670(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                GameCycles;                                               // 0x0674(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                ClientCycles;                                             // 0x0678(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              NearClipPlane;                                            // 0x067C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	unsigned char                                      bHardwareSurveyEnabled : 1;                               // 0x0680(0x0001) (CPF_Deprecated)
+	unsigned char                                      bSubtitlesEnabled : 1;                                    // 0x0680(0x0001) (CPF_Edit, CPF_Config)
+	unsigned char                                      bSubtitlesForcedOff : 1;                                  // 0x0680(0x0001) (CPF_Edit, CPF_Config)
+	int                                                MaximumLoopIterationCount;                                // 0x0684(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	unsigned char                                      bCanBlueprintsTickByDefault : 1;                          // 0x0688(0x0001) (CPF_Edit, CPF_Config)
+	unsigned char                                      bOptimizeAnimBlueprintMemberVariableAccess : 1;           // 0x0688(0x0001) (CPF_Edit, CPF_Config)
+	unsigned char                                      bEnableEditorPSysRealtimeLOD : 1;                         // 0x0688(0x0001) (CPF_Config)
+	unsigned char                                      bSmoothFrameRate : 1;                                     // 0x0688(0x0001) (CPF_Edit, CPF_Config)
+	unsigned char                                      bUseFixedFrameRate : 1;                                   // 0x0688(0x0001) (CPF_Edit, CPF_Config)
+	float                                              FixedFrameRate;                                           // 0x068C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	struct FFloatRange                                 SmoothedFrameRateRange;                                   // 0x0690(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	unsigned char                                      bCheckForMultiplePawnsSpawnedInAFrame : 1;                // 0x06A0(0x0001) (CPF_Config)
+	int                                                NumPawnsAllowedToBeSpawnedInAFrame;                       // 0x06A4(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	unsigned char                                      bShouldGenerateLowQualityLightmaps : 1;                   // 0x06A8(0x0001) (CPF_Config, CPF_GlobalConfig, CPF_Deprecated)
+	struct FColor                                      C_WorldBox;                                               // 0x06AC(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FColor                                      C_BrushWire;                                              // 0x06B0(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FColor                                      C_AddWire;                                                // 0x06B4(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FColor                                      C_SubtractWire;                                           // 0x06B8(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FColor                                      C_SemiSolidWire;                                          // 0x06BC(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FColor                                      C_NonSolidWire;                                           // 0x06C0(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FColor                                      C_WireBackground;                                         // 0x06C4(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FColor                                      C_ScaleBoxHi;                                             // 0x06C8(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FColor                                      C_VolumeCollision;                                        // 0x06CC(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FColor                                      C_BSPCollision;                                           // 0x06D0(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FColor                                      C_OrthoBackground;                                        // 0x06D4(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FColor                                      C_Volume;                                                 // 0x06D8(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FColor                                      C_BrushShape;                                             // 0x06DC(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              StreamingDistanceFactor;                                  // 0x06E0(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TEnumAsByte<ETransitionType>                       TransitionType;                                           // 0x06E4(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FString                                     TransitionDescription;                                    // 0x06E8(0x0010) (CPF_ZeroConstructor)
+	struct FString                                     TransitionGameMode;                                       // 0x06F8(0x0010) (CPF_ZeroConstructor)
+	float                                              MeshLODRange;                                             // 0x0708(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	unsigned char                                      bAllowMatureLanguage : 1;                                 // 0x070C(0x0001) (CPF_Config)
+	float                                              CameraRotationThreshold;                                  // 0x0710(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	float                                              CameraTranslationThreshold;                               // 0x0714(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	float                                              PrimitiveProbablyVisibleTime;                             // 0x0718(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	float                                              MaxOcclusionPixelsFraction;                               // 0x071C(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	unsigned char                                      bPauseOnLossOfFocus : 1;                                  // 0x0720(0x0001) (CPF_Config)
+	int                                                MaxParticleResize;                                        // 0x0724(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	int                                                MaxParticleResizeWarn;                                    // 0x0728(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	TArray<struct FDropNoteInfo>                       PendingDroppedNotes;                                      // 0x0730(0x0010) (CPF_ZeroConstructor, CPF_Transient)
+	struct FRigidBodyErrorCorrection                   PhysicErrorCorrection;                                    // 0x0740(0x001C) (CPF_Config)
+	float                                              NetClientTicksPerSecond;                                  // 0x075C(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_GlobalConfig, CPF_IsPlainOldData)
+	float                                              DisplayGamma;                                             // 0x0760(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	float                                              MinDesiredFrameRate;                                      // 0x0764(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	struct FLinearColor                                DefaultSelectedMaterialColor;                             // 0x0768(0x0010) (CPF_ZeroConstructor, CPF_Config, CPF_GlobalConfig, CPF_IsPlainOldData)
+	struct FLinearColor                                SelectedMaterialColor;                                    // 0x0778(0x0010) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	struct FLinearColor                                SelectionOutlineColor;                                    // 0x0788(0x0010) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	struct FLinearColor                                SubduedSelectionOutlineColor;                             // 0x0798(0x0010) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	struct FLinearColor                                SelectedMaterialColorOverride;                            // 0x07A8(0x0010) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	unsigned char                                      bIsOverridingSelectedColor : 1;                           // 0x07B8(0x0001) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	unsigned char                                      bEnableOnScreenDebugMessages : 1;                         // 0x07BC(0x0001) (CPF_Config, CPF_GlobalConfig)
+	unsigned char                                      bEnableOnScreenDebugMessagesDisplay : 1;                  // 0x07BC(0x0001) (CPF_Transient)
+	unsigned char                                      bSuppressMapWarnings : 1;                                 // 0x07BC(0x0001) (CPF_Config, CPF_GlobalConfig)
+	unsigned char                                      bDisableAILogging : 1;                                    // 0x07BC(0x0001) (CPF_Config, CPF_GlobalConfig)
+	uint32_t                                           bEnableVisualLogRecordingOnStart;                         // 0x07C0(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_GlobalConfig, CPF_IsPlainOldData)
+	int                                                ScreenSaverInhibitorSemaphore;                            // 0x07C8(0x0004) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	unsigned char                                      bLockReadOnlyLevels : 1;                                  // 0x07CC(0x0001) (CPF_Transient)
+	struct FString                                     ParticleEventManagerClassPath;                            // 0x07D0(0x0010) (CPF_ZeroConstructor, CPF_Config, CPF_GlobalConfig)
+	unsigned char                                      UnknownData04[0x10];                                      // 0x07E0(0x0010) MISSED OFFSET
+	float                                              SelectionHighlightIntensity;                              // 0x07F0(0x0004) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	float                                              SelectionMeshSectionHighlightIntensity;                   // 0x07F4(0x0004) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	float                                              BSPSelectionHighlightIntensity;                           // 0x07F8(0x0004) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	float                                              HoverHighlightIntensity;                                  // 0x07FC(0x0004) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	float                                              SelectionHighlightIntensityBillboards;                    // 0x0800(0x0004) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData05[0x3DC];                                     // 0x0804(0x03DC) MISSED OFFSET
+	TArray<struct FNetDriverDefinition>                NetDriverDefinitions;                                     // 0x0BE0(0x0010) (CPF_ZeroConstructor, CPF_Transient, CPF_Config)
+	TArray<struct FString>                             ServerActors;                                             // 0x0BF0(0x0010) (CPF_ZeroConstructor, CPF_Config)
+	TArray<struct FString>                             RuntimeServerActors;                                      // 0x0C00(0x0010) (CPF_ZeroConstructor)
+	unsigned char                                      bStartedLoadMapMovie : 1;                                 // 0x0C10(0x0001) (CPF_Transient)
+	unsigned char                                      UnknownData06[0x17];                                      // 0x0C11(0x0017) MISSED OFFSET
+	int                                                NextWorldContextHandle;                                   // 0x0C28(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData07[0xD4];                                      // 0x0C2C(0x00D4) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -2366,12 +2366,12 @@ public:
 
 
 // Class Engine.GameEngine
-// 0x0050 (0x0D00 - 0x0CB0)
+// 0x0050 (0x0D50 - 0x0D00)
 class UGameEngine : public UEngine
 {
 public:
-	class UGameInstance*                               GameInstance;                                             // 0x0CB0(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x48];                                      // 0x0CB8(0x0048) MISSED OFFSET
+	class UGameInstance*                               GameInstance;                                             // 0x0D00(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x48];                                      // 0x0D08(0x0048) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -3165,6 +3165,119 @@ public:
 		return ptr;
 	}
 
+};
+
+
+// Class Engine.SplineComponent
+// 0x00E0 (0x07B0 - 0x06D0)
+class USplineComponent : public UPrimitiveComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x58];                                      // 0x06D0(0x0058) MISSED OFFSET
+	struct FInterpCurveVector                          SplineInfo;                                               // 0x0728(0x0018) (CPF_ZeroConstructor, CPF_Deprecated)
+	struct FInterpCurveQuat                            SplineRotInfo;                                            // 0x0740(0x0018) (CPF_ZeroConstructor, CPF_Deprecated)
+	struct FInterpCurveVector                          SplineScaleInfo;                                          // 0x0758(0x0018) (CPF_ZeroConstructor, CPF_Deprecated)
+	struct FInterpCurveFloat                           SplineReparamTable;                                       // 0x0770(0x0018) (CPF_ZeroConstructor, CPF_Deprecated)
+	unsigned char                                      bAllowSplineEditingPerInstance : 1;                       // 0x0788(0x0001) (CPF_ZeroConstructor, CPF_Deprecated, CPF_IsPlainOldData)
+	int                                                ReparamStepsPerSegment;                                   // 0x078C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              Duration;                                                 // 0x0790(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      bStationaryEndpoints : 1;                                 // 0x0794(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      bSplineHasBeenEdited : 1;                                 // 0x0795(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      bModifiedByConstructionScript : 1;                        // 0x0796(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      bInputSplinePointsToConstructionScript : 1;               // 0x0797(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      bDrawDebug : 1;                                           // 0x0798(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      bClosedLoop : 1;                                          // 0x0799(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      bLoopPositionOverride : 1;                                // 0x079A(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              LoopPosition;                                             // 0x079C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     DefaultUpVector;                                          // 0x07A0(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Engine.SplineComponent");
+		return ptr;
+	}
+
+
+	void UpdateSpline();
+	void SetWorldLocationAtSplinePoint(int PointIndex, const class Vector3D& InLocation);
+	void SetUpVectorAtSplinePoint(int PointIndex, const class Vector3D& InUpVector, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUpdateSpline);
+	void SetUnselectedSplineSegmentColor(const struct FLinearColor& SegmentColor);
+	void SetTangentsAtSplinePoint(int PointIndex, const class Vector3D& InArriveTangent, const class Vector3D& InLeaveTangent, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUpdateSpline);
+	void SetTangentAtSplinePoint(int PointIndex, const class Vector3D& InTangent, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUpdateSpline);
+	void SetSplineWorldPoints(TArray<class Vector3D> Points);
+	void SetSplinePointType(int PointIndex, TEnumAsByte<ESplinePointType> Type, bool bUpdateSpline);
+	void SetSplinePoints(TArray<class Vector3D> Points, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUpdateSpline);
+	void SetSplineLocalPoints(TArray<class Vector3D> Points);
+	void SetSelectedSplineSegmentColor(const struct FLinearColor& SegmentColor);
+	void SetLocationAtSplinePoint(int PointIndex, const class Vector3D& InLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUpdateSpline);
+	void SetDrawDebug(bool bShow);
+	void SetDefaultUpVector(const class Vector3D& UpVector, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
+	void SetClosedLoopAtPosition(bool bInClosedLoop, float Key, bool bUpdateSpline);
+	void SetClosedLoop(bool bInClosedLoop, bool bUpdateSpline);
+	void RemoveSplinePoint(int Index, bool bUpdateSpline);
+	bool IsClosedLoop();
+	class Vector3D GetWorldTangentAtDistanceAlongSpline(float Distance);
+	class Rotator GetWorldRotationAtTime(float Time, bool bUseConstantVelocity);
+	class Rotator GetWorldRotationAtDistanceAlongSpline(float Distance);
+	class Vector3D GetWorldLocationAtTime(float Time, bool bUseConstantVelocity);
+	class Vector3D GetWorldLocationAtSplinePoint(int PointIndex);
+	class Vector3D GetWorldLocationAtDistanceAlongSpline(float Distance);
+	class Vector3D GetWorldDirectionAtTime(float Time, bool bUseConstantVelocity);
+	class Vector3D GetWorldDirectionAtDistanceAlongSpline(float Distance);
+	class Vector3D GetUpVectorAtTime(float Time, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseConstantVelocity);
+	class Vector3D GetUpVectorAtSplinePoint(int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
+	class Vector3D GetUpVectorAtDistanceAlongSpline(float Distance, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
+	struct FTransform GetTransformAtTime(float Time, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseConstantVelocity, bool bUseScale);
+	struct FTransform GetTransformAtSplinePoint(int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseScale);
+	struct FTransform GetTransformAtDistanceAlongSpline(float Distance, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseScale);
+	class Vector3D GetTangentAtTime(float Time, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseConstantVelocity);
+	class Vector3D GetTangentAtSplinePoint(int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
+	class Vector3D GetTangentAtDistanceAlongSpline(float Distance, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
+	TEnumAsByte<ESplinePointType> GetSplinePointType(int PointIndex);
+	float GetSplineLength();
+	class Vector3D GetScaleAtTime(float Time, bool bUseConstantVelocity);
+	class Vector3D GetScaleAtSplinePoint(int PointIndex);
+	class Vector3D GetScaleAtDistanceAlongSpline(float Distance);
+	class Rotator GetRotationAtTime(float Time, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseConstantVelocity);
+	class Rotator GetRotationAtSplinePoint(int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
+	class Rotator GetRotationAtDistanceAlongSpline(float Distance, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
+	float GetRollAtTime(float Time, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseConstantVelocity);
+	float GetRollAtSplinePoint(int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
+	float GetRollAtDistanceAlongSpline(float Distance, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
+	class Vector3D GetRightVectorAtTime(float Time, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseConstantVelocity);
+	class Vector3D GetRightVectorAtSplinePoint(int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
+	class Vector3D GetRightVectorAtDistanceAlongSpline(float Distance, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
+	int GetNumberOfSplinePoints();
+	class Vector3D GetLocationAtTime(float Time, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseConstantVelocity);
+	class Vector3D GetLocationAtSplinePoint(int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
+	class Vector3D GetLocationAtDistanceAlongSpline(float Distance, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
+	void GetLocationAndTangentAtSplinePoint(int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, class Vector3D* Location, class Vector3D* Tangent);
+	void GetLocalLocationAndTangentAtSplinePoint(int PointIndex, class Vector3D* LocalLocation, class Vector3D* LocalTangent);
+	class Vector3D GetLeaveTangentAtSplinePoint(int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
+	float GetInputKeyAtDistanceAlongSpline(float Distance);
+	float GetDistanceAlongSplineAtSplinePoint(int PointIndex);
+	class Vector3D GetDirectionAtTime(float Time, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseConstantVelocity);
+	class Vector3D GetDirectionAtSplinePoint(int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
+	class Vector3D GetDirectionAtDistanceAlongSpline(float Distance, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
+	class Vector3D GetDefaultUpVector(TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
+	class Vector3D GetArriveTangentAtSplinePoint(int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
+	class Vector3D FindUpVectorClosestToWorldLocation(const class Vector3D& WorldLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
+	struct FTransform FindTransformClosestToWorldLocation(const class Vector3D& WorldLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseScale);
+	class Vector3D FindTangentClosestToWorldLocation(const class Vector3D& WorldLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
+	class Vector3D FindScaleClosestToWorldLocation(const class Vector3D& WorldLocation);
+	class Rotator FindRotationClosestToWorldLocation(const class Vector3D& WorldLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
+	float FindRollClosestToWorldLocation(const class Vector3D& WorldLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
+	class Vector3D FindRightVectorClosestToWorldLocation(const class Vector3D& WorldLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
+	class Vector3D FindLocationClosestToWorldLocation(const class Vector3D& WorldLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
+	float FindInputKeyClosestToWorldLocation(const class Vector3D& WorldLocation);
+	class Vector3D FindDirectionClosestToWorldLocation(const class Vector3D& WorldLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
+	void ClearSplinePoints(bool bUpdateSpline);
+	void AddSplineWorldPoint(const class Vector3D& Position);
+	void AddSplinePointAtIndex(const class Vector3D& Position, int Index, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUpdateSpline);
+	void AddSplinePoint(const class Vector3D& Position, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUpdateSpline);
+	void AddSplineLocalPoint(const class Vector3D& Position);
+	void AddPoints(TArray<struct FSplinePoint> Points, bool bUpdateSpline);
+	void AddPoint(const struct FSplinePoint& Point, bool bUpdateSpline);
 };
 
 
@@ -5898,119 +6011,6 @@ public:
 };
 
 
-// Class Engine.SplineComponent
-// 0x00E0 (0x07B0 - 0x06D0)
-class USplineComponent : public UPrimitiveComponent
-{
-public:
-	unsigned char                                      UnknownData00[0x58];                                      // 0x06D0(0x0058) MISSED OFFSET
-	struct FInterpCurveVector                          SplineInfo;                                               // 0x0728(0x0018) (CPF_ZeroConstructor, CPF_Deprecated)
-	struct FInterpCurveQuat                            SplineRotInfo;                                            // 0x0740(0x0018) (CPF_ZeroConstructor, CPF_Deprecated)
-	struct FInterpCurveVector                          SplineScaleInfo;                                          // 0x0758(0x0018) (CPF_ZeroConstructor, CPF_Deprecated)
-	struct FInterpCurveFloat                           SplineReparamTable;                                       // 0x0770(0x0018) (CPF_ZeroConstructor, CPF_Deprecated)
-	unsigned char                                      bAllowSplineEditingPerInstance : 1;                       // 0x0788(0x0001) (CPF_ZeroConstructor, CPF_Deprecated, CPF_IsPlainOldData)
-	int                                                ReparamStepsPerSegment;                                   // 0x078C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              Duration;                                                 // 0x0790(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      bStationaryEndpoints : 1;                                 // 0x0794(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      bSplineHasBeenEdited : 1;                                 // 0x0795(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      bModifiedByConstructionScript : 1;                        // 0x0796(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      bInputSplinePointsToConstructionScript : 1;               // 0x0797(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      bDrawDebug : 1;                                           // 0x0798(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      bClosedLoop : 1;                                          // 0x0799(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      bLoopPositionOverride : 1;                                // 0x079A(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              LoopPosition;                                             // 0x079C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     DefaultUpVector;                                          // 0x07A0(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Engine.SplineComponent");
-		return ptr;
-	}
-
-
-	void UpdateSpline();
-	void SetWorldLocationAtSplinePoint(int PointIndex, const class Vector3D& InLocation);
-	void SetUpVectorAtSplinePoint(int PointIndex, const class Vector3D& InUpVector, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUpdateSpline);
-	void SetUnselectedSplineSegmentColor(const struct FLinearColor& SegmentColor);
-	void SetTangentsAtSplinePoint(int PointIndex, const class Vector3D& InArriveTangent, const class Vector3D& InLeaveTangent, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUpdateSpline);
-	void SetTangentAtSplinePoint(int PointIndex, const class Vector3D& InTangent, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUpdateSpline);
-	void SetSplineWorldPoints(TArray<class Vector3D> Points);
-	void SetSplinePointType(int PointIndex, TEnumAsByte<ESplinePointType> Type, bool bUpdateSpline);
-	void SetSplinePoints(TArray<class Vector3D> Points, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUpdateSpline);
-	void SetSplineLocalPoints(TArray<class Vector3D> Points);
-	void SetSelectedSplineSegmentColor(const struct FLinearColor& SegmentColor);
-	void SetLocationAtSplinePoint(int PointIndex, const class Vector3D& InLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUpdateSpline);
-	void SetDrawDebug(bool bShow);
-	void SetDefaultUpVector(const class Vector3D& UpVector, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
-	void SetClosedLoopAtPosition(bool bInClosedLoop, float Key, bool bUpdateSpline);
-	void SetClosedLoop(bool bInClosedLoop, bool bUpdateSpline);
-	void RemoveSplinePoint(int Index, bool bUpdateSpline);
-	bool IsClosedLoop();
-	class Vector3D GetWorldTangentAtDistanceAlongSpline(float Distance);
-	class Rotator GetWorldRotationAtTime(float Time, bool bUseConstantVelocity);
-	class Rotator GetWorldRotationAtDistanceAlongSpline(float Distance);
-	class Vector3D GetWorldLocationAtTime(float Time, bool bUseConstantVelocity);
-	class Vector3D GetWorldLocationAtSplinePoint(int PointIndex);
-	class Vector3D GetWorldLocationAtDistanceAlongSpline(float Distance);
-	class Vector3D GetWorldDirectionAtTime(float Time, bool bUseConstantVelocity);
-	class Vector3D GetWorldDirectionAtDistanceAlongSpline(float Distance);
-	class Vector3D GetUpVectorAtTime(float Time, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseConstantVelocity);
-	class Vector3D GetUpVectorAtSplinePoint(int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
-	class Vector3D GetUpVectorAtDistanceAlongSpline(float Distance, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
-	struct FTransform GetTransformAtTime(float Time, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseConstantVelocity, bool bUseScale);
-	struct FTransform GetTransformAtSplinePoint(int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseScale);
-	struct FTransform GetTransformAtDistanceAlongSpline(float Distance, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseScale);
-	class Vector3D GetTangentAtTime(float Time, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseConstantVelocity);
-	class Vector3D GetTangentAtSplinePoint(int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
-	class Vector3D GetTangentAtDistanceAlongSpline(float Distance, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
-	TEnumAsByte<ESplinePointType> GetSplinePointType(int PointIndex);
-	float GetSplineLength();
-	class Vector3D GetScaleAtTime(float Time, bool bUseConstantVelocity);
-	class Vector3D GetScaleAtSplinePoint(int PointIndex);
-	class Vector3D GetScaleAtDistanceAlongSpline(float Distance);
-	class Rotator GetRotationAtTime(float Time, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseConstantVelocity);
-	class Rotator GetRotationAtSplinePoint(int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
-	class Rotator GetRotationAtDistanceAlongSpline(float Distance, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
-	float GetRollAtTime(float Time, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseConstantVelocity);
-	float GetRollAtSplinePoint(int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
-	float GetRollAtDistanceAlongSpline(float Distance, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
-	class Vector3D GetRightVectorAtTime(float Time, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseConstantVelocity);
-	class Vector3D GetRightVectorAtSplinePoint(int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
-	class Vector3D GetRightVectorAtDistanceAlongSpline(float Distance, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
-	int GetNumberOfSplinePoints();
-	class Vector3D GetLocationAtTime(float Time, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseConstantVelocity);
-	class Vector3D GetLocationAtSplinePoint(int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
-	class Vector3D GetLocationAtDistanceAlongSpline(float Distance, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
-	void GetLocationAndTangentAtSplinePoint(int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, class Vector3D* Location, class Vector3D* Tangent);
-	void GetLocalLocationAndTangentAtSplinePoint(int PointIndex, class Vector3D* LocalLocation, class Vector3D* LocalTangent);
-	class Vector3D GetLeaveTangentAtSplinePoint(int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
-	float GetInputKeyAtDistanceAlongSpline(float Distance);
-	float GetDistanceAlongSplineAtSplinePoint(int PointIndex);
-	class Vector3D GetDirectionAtTime(float Time, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseConstantVelocity);
-	class Vector3D GetDirectionAtSplinePoint(int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
-	class Vector3D GetDirectionAtDistanceAlongSpline(float Distance, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
-	class Vector3D GetDefaultUpVector(TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
-	class Vector3D GetArriveTangentAtSplinePoint(int PointIndex, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
-	class Vector3D FindUpVectorClosestToWorldLocation(const class Vector3D& WorldLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
-	struct FTransform FindTransformClosestToWorldLocation(const class Vector3D& WorldLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUseScale);
-	class Vector3D FindTangentClosestToWorldLocation(const class Vector3D& WorldLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
-	class Vector3D FindScaleClosestToWorldLocation(const class Vector3D& WorldLocation);
-	class Rotator FindRotationClosestToWorldLocation(const class Vector3D& WorldLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
-	float FindRollClosestToWorldLocation(const class Vector3D& WorldLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
-	class Vector3D FindRightVectorClosestToWorldLocation(const class Vector3D& WorldLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
-	class Vector3D FindLocationClosestToWorldLocation(const class Vector3D& WorldLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
-	float FindInputKeyClosestToWorldLocation(const class Vector3D& WorldLocation);
-	class Vector3D FindDirectionClosestToWorldLocation(const class Vector3D& WorldLocation, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace);
-	void ClearSplinePoints(bool bUpdateSpline);
-	void AddSplineWorldPoint(const class Vector3D& Position);
-	void AddSplinePointAtIndex(const class Vector3D& Position, int Index, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUpdateSpline);
-	void AddSplinePoint(const class Vector3D& Position, TEnumAsByte<ESplineCoordinateSpace> CoordinateSpace, bool bUpdateSpline);
-	void AddSplineLocalPoint(const class Vector3D& Position);
-	void AddPoints(TArray<struct FSplinePoint> Points, bool bUpdateSpline);
-	void AddPoint(const struct FSplinePoint& Point, bool bUpdateSpline);
-};
-
-
 // Class Engine.InterpToMovementComponent
 // 0x00A0 (0x01E0 - 0x0140)
 class UInterpToMovementComponent : public UMovementComponent
@@ -6682,7 +6682,7 @@ public:
 
 
 // Class Engine.ExponentialHeightFogComponent
-// 0x0050 (0x0350 - 0x0300)
+// 0x0070 (0x0370 - 0x0300)
 class UExponentialHeightFogComponent : public USceneComponent
 {
 public:
@@ -6695,6 +6695,15 @@ public:
 	float                                              FogHeightFalloff;                                         // 0x0340(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              FogMaxOpacity;                                            // 0x0344(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              StartDistance;                                            // 0x0348(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      bUseExtendedFog : 1;                                      // 0x034C(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              ExtendedFogStartDistance;                                 // 0x0350(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              ExtendedFogStartFalloffDistance;                          // 0x0354(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              ExtendedHeight;                                           // 0x0358(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              ExtendedFallOff;                                          // 0x035C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              ExtendedFogDensity;                                       // 0x0360(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              UpDensity;                                                // 0x0364(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              DownDensity;                                              // 0x0368(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              Intensity;                                                // 0x036C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -6703,11 +6712,19 @@ public:
 	}
 
 
+	void SetUpDensity(float Value);
 	void SetStartDistance(float Value);
+	void SetIntensity(float Value);
 	void SetFogMaxOpacity(float Value);
 	void SetFogInscatteringColor(const struct FLinearColor& Value);
 	void SetFogHeightFalloff(float Value);
 	void SetFogDensity(float Value);
+	void SetExtendedHeightFallOff(float Value);
+	void SetExtendedHeight(float Value);
+	void SetExtendedFogStartFalloffDistance(float Value);
+	void SetExtendedFogStartDistance(float Value);
+	void SetExtendedFogDensity(float Value);
+	void SetDownDensity(float Value);
 	void SetDirectionalInscatteringStartDistance(float Value);
 	void SetDirectionalInscatteringExponent(float Value);
 	void SetDirectionalInscatteringColor(const struct FLinearColor& Value);
@@ -6715,7 +6732,7 @@ public:
 
 
 // Class Engine.DirectionalLightComponent
-// 0x0070 (0x0490 - 0x0420)
+// 0x0080 (0x04A0 - 0x0420)
 class UDirectionalLightComponent : public ULightComponent
 {
 public:
@@ -6740,7 +6757,9 @@ public:
 	unsigned char                                      bCastModulatedShadows : 1;                                // 0x047C(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
 	struct FColor                                      ModulatedShadowColor;                                     // 0x0480(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	unsigned char                                      bUsedAsAtmosphereSunLight : 1;                            // 0x0484(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
-	unsigned char                                      UnknownData00[0xB];                                       // 0x0485(0x000B) MISSED OFFSET
+	unsigned char                                      bUseGridShadow : 1;                                       // 0x0484(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
+	TArray<struct FGridShadowSplitSettings>            GridShadowSplitSettings;                                  // 0x0488(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0498(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -8701,18 +8720,17 @@ public:
 class UPlatformGameInstance : public UGameInstance
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x00F0(0x0008) MISSED OFFSET
-	struct FScriptMulticastDelegate                    ApplicationHasReactivatedDelegate;                        // 0x00F8(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
-	struct FScriptMulticastDelegate                    ApplicationWillEnterBackgroundDelegate;                   // 0x0108(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
-	struct FScriptMulticastDelegate                    ApplicationHasEnteredForegroundDelegate;                  // 0x0118(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
-	struct FScriptMulticastDelegate                    ApplicationWillTerminateDelegate;                         // 0x0128(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
-	struct FScriptMulticastDelegate                    ApplicationRegisteredForRemoteNotificationsDelegate;      // 0x0138(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
-	struct FScriptMulticastDelegate                    ApplicationRegisteredForUserNotificationsDelegate;        // 0x0148(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
-	struct FScriptMulticastDelegate                    ApplicationFailedToRegisterForRemoteNotificationsDelegate;// 0x0158(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
-	struct FScriptMulticastDelegate                    ApplicationReceivedRemoteNotificationDelegate;            // 0x0168(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
-	struct FScriptMulticastDelegate                    ApplicationReceivedLocalNotificationDelegate;             // 0x0178(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
-	struct FScriptMulticastDelegate                    ApplicationReceivedScreenOrientationChangedNotificationDelegate;// 0x0188(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0198(0x0008) MISSED OFFSET
+	struct FScriptMulticastDelegate                    ApplicationWillDeactivateDelegate;                        // 0x00F0(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
+	struct FScriptMulticastDelegate                    ApplicationHasReactivatedDelegate;                        // 0x0100(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
+	struct FScriptMulticastDelegate                    ApplicationWillEnterBackgroundDelegate;                   // 0x0110(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
+	struct FScriptMulticastDelegate                    ApplicationHasEnteredForegroundDelegate;                  // 0x0120(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
+	struct FScriptMulticastDelegate                    ApplicationWillTerminateDelegate;                         // 0x0130(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
+	struct FScriptMulticastDelegate                    ApplicationRegisteredForRemoteNotificationsDelegate;      // 0x0140(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
+	struct FScriptMulticastDelegate                    ApplicationRegisteredForUserNotificationsDelegate;        // 0x0150(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
+	struct FScriptMulticastDelegate                    ApplicationFailedToRegisterForRemoteNotificationsDelegate;// 0x0160(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
+	struct FScriptMulticastDelegate                    ApplicationReceivedRemoteNotificationDelegate;            // 0x0170(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
+	struct FScriptMulticastDelegate                    ApplicationReceivedLocalNotificationDelegate;             // 0x0180(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
+	struct FScriptMulticastDelegate                    ApplicationReceivedScreenOrientationChangedNotificationDelegate;// 0x0190(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 
 	static UClass* StaticClass()
 	{

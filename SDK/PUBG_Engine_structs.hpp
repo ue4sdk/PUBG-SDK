@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.39 Test Server) SDK
+// PlayerUnknown's Battlegrounds (2.6.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -4631,6 +4631,62 @@ struct FVehicleTransmissionData
 	float                                              ClutchStrength;                                           // 0x0028(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
+// ScriptStruct Engine.Vector_NetQuantize
+// 0x0000 (0x000C - 0x000C)
+struct FVector_NetQuantize : public FVector
+{
+
+};
+
+// ScriptStruct Engine.Vector_NetQuantizeNormal
+// 0x0000 (0x000C - 0x000C)
+struct FVector_NetQuantizeNormal : public FVector
+{
+
+};
+
+// ScriptStruct Engine.HitResult
+// 0x0088
+struct FHitResult
+{
+	unsigned char                                      bBlockingHit : 1;                                         // 0x0000(0x0001)
+	unsigned char                                      bStartPenetrating : 1;                                    // 0x0000(0x0001)
+	float                                              Time;                                                     // 0x0004(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              Distance;                                                 // 0x0008(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class Vector3D                                     Location;                                                 // 0x000C(0x000C)
+	class Vector3D                                     ImpactPoint;                                              // 0x0018(0x000C)
+	class Vector3D                                     Normal;                                                   // 0x0024(0x000C)
+	class Vector3D                                     ImpactNormal;                                             // 0x0030(0x000C)
+	class Vector3D                                     TraceStart;                                               // 0x003C(0x000C)
+	class Vector3D                                     TraceEnd;                                                 // 0x0048(0x000C)
+	float                                              PenetrationDepth;                                         // 0x0054(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                Item;                                                     // 0x0058(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TWeakObjectPtr<class UPhysicalMaterial>            PhysMaterial;                                             // 0x005C(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TWeakObjectPtr<class AActor>                       Actor;                                                    // 0x0064(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TWeakObjectPtr<class UPrimitiveComponent>          Component;                                                // 0x006C(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
+	struct FName                                       BoneName;                                                 // 0x0078(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                FaceIndex;                                                // 0x0080(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// ScriptStruct Engine.FindFloorResult
+// 0x0098
+struct FFindFloorResult
+{
+	unsigned char                                      bBlockingHit : 1;                                         // 0x0000(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_DisableEditOnTemplate, CPF_EditConst)
+	unsigned char                                      bWalkableFloor : 1;                                       // 0x0000(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_DisableEditOnTemplate, CPF_EditConst)
+	unsigned char                                      bLineTrace : 1;                                           // 0x0000(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_DisableEditOnTemplate, CPF_EditConst)
+	float                                              FloorDist;                                                // 0x0004(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnTemplate, CPF_EditConst, CPF_IsPlainOldData)
+	float                                              LineDist;                                                 // 0x0008(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnTemplate, CPF_EditConst, CPF_IsPlainOldData)
+	struct FHitResult                                  HitResult;                                                // 0x0010(0x0088) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_DisableEditOnTemplate, CPF_EditConst, CPF_IsPlainOldData)
+};
+
+// ScriptStruct Engine.CharacterMovementComponentPostPhysicsTickFunction
+// 0x0008 (0x0058 - 0x0050)
+struct FCharacterMovementComponentPostPhysicsTickFunction : public FTickFunction
+{
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0050(0x0008) MISSED OFFSET
+};
+
 // ScriptStruct Engine.AnimLinkableElement
 // 0x0030
 struct FAnimLinkableElement
@@ -4990,62 +5046,6 @@ struct FPostProcessSettings
 	unsigned char                                      UnknownData01[0x8];                                       // 0x04D8(0x0008) MISSED OFFSET
 };
 
-// ScriptStruct Engine.Vector_NetQuantize
-// 0x0000 (0x000C - 0x000C)
-struct FVector_NetQuantize : public FVector
-{
-
-};
-
-// ScriptStruct Engine.Vector_NetQuantizeNormal
-// 0x0000 (0x000C - 0x000C)
-struct FVector_NetQuantizeNormal : public FVector
-{
-
-};
-
-// ScriptStruct Engine.HitResult
-// 0x0088
-struct FHitResult
-{
-	unsigned char                                      bBlockingHit : 1;                                         // 0x0000(0x0001)
-	unsigned char                                      bStartPenetrating : 1;                                    // 0x0000(0x0001)
-	float                                              Time;                                                     // 0x0004(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              Distance;                                                 // 0x0008(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class Vector3D                                     Location;                                                 // 0x000C(0x000C)
-	class Vector3D                                     ImpactPoint;                                              // 0x0018(0x000C)
-	class Vector3D                                     Normal;                                                   // 0x0024(0x000C)
-	class Vector3D                                     ImpactNormal;                                             // 0x0030(0x000C)
-	class Vector3D                                     TraceStart;                                               // 0x003C(0x000C)
-	class Vector3D                                     TraceEnd;                                                 // 0x0048(0x000C)
-	float                                              PenetrationDepth;                                         // 0x0054(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	int                                                Item;                                                     // 0x0058(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TWeakObjectPtr<class UPhysicalMaterial>            PhysMaterial;                                             // 0x005C(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TWeakObjectPtr<class AActor>                       Actor;                                                    // 0x0064(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TWeakObjectPtr<class UPrimitiveComponent>          Component;                                                // 0x006C(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
-	struct FName                                       BoneName;                                                 // 0x0078(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	int                                                FaceIndex;                                                // 0x0080(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// ScriptStruct Engine.FindFloorResult
-// 0x0098
-struct FFindFloorResult
-{
-	unsigned char                                      bBlockingHit : 1;                                         // 0x0000(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_DisableEditOnTemplate, CPF_EditConst)
-	unsigned char                                      bWalkableFloor : 1;                                       // 0x0000(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_DisableEditOnTemplate, CPF_EditConst)
-	unsigned char                                      bLineTrace : 1;                                           // 0x0000(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_DisableEditOnTemplate, CPF_EditConst)
-	float                                              FloorDist;                                                // 0x0004(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnTemplate, CPF_EditConst, CPF_IsPlainOldData)
-	float                                              LineDist;                                                 // 0x0008(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnTemplate, CPF_EditConst, CPF_IsPlainOldData)
-	struct FHitResult                                  HitResult;                                                // 0x0010(0x0088) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_DisableEditOnTemplate, CPF_EditConst, CPF_IsPlainOldData)
-};
-
-// ScriptStruct Engine.CharacterMovementComponentPostPhysicsTickFunction
-// 0x0008 (0x0058 - 0x0050)
-struct FCharacterMovementComponentPostPhysicsTickFunction : public FTickFunction
-{
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0050(0x0008) MISSED OFFSET
-};
-
 // ScriptStruct Engine.StatColorMapEntry
 // 0x0008
 struct FStatColorMapEntry
@@ -5226,6 +5226,16 @@ struct FEngineShowFlagsSetting
 {
 	struct FString                                     ShowFlagName;                                             // 0x0000(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
 	unsigned char                                      Enabled : 1;                                              // 0x0010(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// ScriptStruct Engine.SplineCurves
+// 0x0060
+struct FSplineCurves
+{
+	struct FInterpCurveVector                          Position;                                                 // 0x0000(0x0018) (CPF_ZeroConstructor)
+	struct FInterpCurveQuat                            Rotation;                                                 // 0x0018(0x0018) (CPF_ZeroConstructor)
+	struct FInterpCurveVector                          Scale;                                                    // 0x0030(0x0018) (CPF_ZeroConstructor)
+	struct FInterpCurveFloat                           ReparamTable;                                             // 0x0048(0x0018) (CPF_ZeroConstructor)
 };
 
 // ScriptStruct Engine.LightmassMaterialInterfaceSettings
@@ -5967,16 +5977,6 @@ struct FSingleAnimationPlayData
 	float                                              SavedPlayRate;                                            // 0x0010(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
-// ScriptStruct Engine.SplineCurves
-// 0x0060
-struct FSplineCurves
-{
-	struct FInterpCurveVector                          Position;                                                 // 0x0000(0x0018) (CPF_ZeroConstructor)
-	struct FInterpCurveQuat                            Rotation;                                                 // 0x0018(0x0018) (CPF_ZeroConstructor)
-	struct FInterpCurveVector                          Scale;                                                    // 0x0030(0x0018) (CPF_ZeroConstructor)
-	struct FInterpCurveFloat                           ReparamTable;                                             // 0x0048(0x0018) (CPF_ZeroConstructor)
-};
-
 // ScriptStruct Engine.InterpControlPoint
 // 0x001C
 struct FInterpControlPoint
@@ -6098,6 +6098,14 @@ struct FLightmassLightSettings
 struct FLightmassDirectionalLightSettings : public FLightmassLightSettings
 {
 	float                                              LightSourceAngle;                                         // 0x000C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// ScriptStruct Engine.GridShadowSplitSettings
+// 0x0008
+struct FGridShadowSplitSettings
+{
+	float                                              CellSize;                                                 // 0x0000(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              MaxRadius;                                                // 0x0004(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // ScriptStruct Engine.LightmassPointLightSettings

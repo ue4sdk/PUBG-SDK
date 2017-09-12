@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.39 Test Server) SDK
+// PlayerUnknown's Battlegrounds (2.6.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass DistanceSliderWidget.DistanceSliderWidget_C
-// 0x0034 (0x0274 - 0x0240)
+// 0x0040 (0x0280 - 0x0240)
 class UDistanceSliderWidget_C : public UUserWidget
 {
 public:
@@ -24,6 +24,7 @@ public:
 	struct FScriptMulticastDelegate                    ChagedDistance;                                           // 0x0258(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_BlueprintAssignable)
 	class UCurveFloat*                                 DistanceCurve;                                            // 0x0268(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              Position;                                                 // 0x0270(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	class ATslSpectatorPawn*                           TslSpectatorPawn;                                         // 0x0278(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnTemplate, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -32,10 +33,14 @@ public:
 	}
 
 
+	void ChangeDistance_Delegate(float Value);
+	void SetDistanceFunc();
+	void ChangeDistance_Slider(float Value);
 	void SetValue(float Pos);
 	void SetDistance(float Value);
 	void GetDistance(float* Distance);
 	void BndEvt__DistanceSlider_K2Node_ComponentBoundEvent_64_OnFloatValueChangedEvent__DelegateSignature(float Value);
+	void Construct();
 	void ExecuteUbergraph_DistanceSliderWidget(int EntryPoint);
 	void ChagedDistance__DelegateSignature(float NewDistance, float Value);
 };

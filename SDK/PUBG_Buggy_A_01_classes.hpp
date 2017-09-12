@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.39 Test Server) SDK
+// PlayerUnknown's Battlegrounds (2.6.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Buggy_A_01.Buggy_A_01_C
-// 0x0000 (0x08A8 - 0x08A8)
+// 0x0000 (0x08B8 - 0x08B8)
 class ABuggy_A_01_C : public ABuggy_C
 {
 public:

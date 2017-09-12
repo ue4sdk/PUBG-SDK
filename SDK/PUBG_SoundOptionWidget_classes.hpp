@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.39 Test Server) SDK
+// PlayerUnknown's Battlegrounds (2.6.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -28,11 +28,13 @@ public:
 	}
 
 
+	bool IsEnable_VoiceSetting();
 	bool IsKeyUp();
 	bool IsChanged();
 	void OnApply();
 	void OnDefault();
 	void OnReset();
+	void Construct();
 	void ExecuteUbergraph_SoundOptionWidget(int EntryPoint);
 };
 

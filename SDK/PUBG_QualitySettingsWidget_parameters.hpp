@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.39 Test Server) SDK
+// PlayerUnknown's Battlegrounds (2.6.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,12 @@ namespace Classes
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function QualitySettingsWidget.QualitySettingsWidget_C.GetbIsEnabled_1
+struct UQualitySettingsWidget_C_GetbIsEnabled_1_Params
+{
+	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
 
 // Function QualitySettingsWidget.QualitySettingsWidget_C.SettingDefautl
 struct UQualitySettingsWidget_C_SettingDefautl_Params

@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.39 Test Server) SDK
+// PlayerUnknown's Battlegrounds (2.6.18) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -47,11 +47,6 @@ struct UGameplayOptionWidget_BP_C_InitializeWidgets_Params
 {
 };
 
-// Function GameplayOptionWidget_BP.GameplayOptionWidget_BP_C.Construct
-struct UGameplayOptionWidget_BP_C_Construct_Params
-{
-};
-
 // Function GameplayOptionWidget_BP.GameplayOptionWidget_BP_C.OnReset
 struct UGameplayOptionWidget_BP_C_OnReset_Params
 {
@@ -64,6 +59,11 @@ struct UGameplayOptionWidget_BP_C_OnDefault_Params
 
 // Function GameplayOptionWidget_BP.GameplayOptionWidget_BP_C.OnApply
 struct UGameplayOptionWidget_BP_C_OnApply_Params
+{
+};
+
+// Function GameplayOptionWidget_BP.GameplayOptionWidget_BP_C.Construct
+struct UGameplayOptionWidget_BP_C_Construct_Params
 {
 };
 
