@@ -1,6 +1,6 @@
 #pragma once
 
-// PlayerUnknown's Battlegrounds (2.5.39.19) SDK
+// PLAYERUNKNOWN BattleGrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,11 @@ namespace Classes
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function ReplayTimeline.ReplayTimeline_C.ClearKillEventItems
+struct UReplayTimeline_C_ClearKillEventItems_Params
+{
+};
 
 // Function ReplayTimeline.ReplayTimeline_C.CreateGetKillEventsTimer
 struct UReplayTimeline_C_CreateGetKillEventsTimer_Params

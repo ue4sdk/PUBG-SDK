@@ -1,6 +1,6 @@
 #pragma once
 
-// PlayerUnknown's Battlegrounds (2.5.39.19) SDK
+// PLAYERUNKNOWN BattleGrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -54,11 +54,6 @@ struct UScreenSettingWidget_C_InitializeResolutionIWidget_Params
 {
 };
 
-// Function ScreenSettingWidget.ScreenSettingWidget_C.Construct
-struct UScreenSettingWidget_C_Construct_Params
-{
-};
-
 // Function ScreenSettingWidget.ScreenSettingWidget_C.OnApply
 struct UScreenSettingWidget_C_OnApply_Params
 {
@@ -71,6 +66,11 @@ struct UScreenSettingWidget_C_OnDefault_Params
 
 // Function ScreenSettingWidget.ScreenSettingWidget_C.OnReset
 struct UScreenSettingWidget_C_OnReset_Params
+{
+};
+
+// Function ScreenSettingWidget.ScreenSettingWidget_C.Construct
+struct UScreenSettingWidget_C_Construct_Params
 {
 };
 

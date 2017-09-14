@@ -1,6 +1,6 @@
 #pragma once
 
-// PlayerUnknown's Battlegrounds (2.5.39.19) SDK
+// PLAYERUNKNOWN BattleGrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -157,8 +157,8 @@ struct UStackCountHandlingPopupWidget_C_Tick_Params
 	float*                                             InDeltaTime;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
-// Function StackCountHandlingPopupWidget.StackCountHandlingPopupWidget_C.ONWidgetInputB
-struct UStackCountHandlingPopupWidget_C_ONWidgetInputB_Params
+// Function StackCountHandlingPopupWidget.StackCountHandlingPopupWidget_C.OnWidgetInputB
+struct UStackCountHandlingPopupWidget_C_OnWidgetInputB_Params
 {
 };
 

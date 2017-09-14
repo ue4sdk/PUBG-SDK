@@ -1,6 +1,6 @@
 #pragma once
 
-// PlayerUnknown's Battlegrounds (2.5.39.19) SDK
+// PLAYERUNKNOWN BattleGrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,11 @@ namespace Classes
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function HudMain.HudMain_C.BindEventForMapClosing
+struct UHudMain_C_BindEventForMapClosing_Params
+{
+};
 
 // Function HudMain.HudMain_C.OnKey_ReplayMenuOrEscape
 struct UHudMain_C_OnKey_ReplayMenuOrEscape_Params
@@ -293,6 +298,7 @@ struct UHudMain_C_OnPossessPawnChange_Params
 // Function HudMain.HudMain_C.InitializeHUD
 struct UHudMain_C_InitializeHUD_Params
 {
+	bool                                               bIsReplaying;                                             // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // Function HudMain.HudMain_C.Construct
@@ -307,8 +313,8 @@ struct UHudMain_C_OnShowWidget_Params
 	bool                                               bShow;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
-// Function HudMain.HudMain_C.HideMapForInitReplay
-struct UHudMain_C_HideMapForInitReplay_Params
+// Function HudMain.HudMain_C.HideMapForReplay
+struct UHudMain_C_HideMapForReplay_Params
 {
 };
 

@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.5.39.19) SDK
+// PLAYERUNKNOWN BattleGrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,50 @@ namespace Classes
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function BreatheBarWidget.BreatheBarWidget_C.IsUnderwater
+// (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// bool                           bIsWater                       (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UBreatheBarWidget_C::IsUnderwater(bool* bIsWater)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BreatheBarWidget.BreatheBarWidget_C.IsUnderwater");
+
+	UBreatheBarWidget_C_IsUnderwater_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (bIsWater != nullptr)
+		*bIsWater = params.bIsWater;
+}
+
+
+// Function BreatheBarWidget.BreatheBarWidget_C.GetTslCharacter
+// (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// class ATslCharacter*           TslCharacter                   (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UBreatheBarWidget_C::GetTslCharacter(class ATslCharacter** TslCharacter)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BreatheBarWidget.BreatheBarWidget_C.GetTslCharacter");
+
+	UBreatheBarWidget_C_GetTslCharacter_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (TslCharacter != nullptr)
+		*TslCharacter = params.TslCharacter;
+}
+
 
 // Function BreatheBarWidget.BreatheBarWidget_C.GetBreathImageColor
 // (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure, FUNC_Const)
@@ -98,23 +142,6 @@ void UBreatheBarWidget_C::GetBreathRatio(float* Breath)
 }
 
 
-// Function BreatheBarWidget.BreatheBarWidget_C.Construct
-// (FUNC_BlueprintCosmetic, FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
-
-void UBreatheBarWidget_C::Construct()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BreatheBarWidget.BreatheBarWidget_C.Construct");
-
-	UBreatheBarWidget_C_Construct_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BreatheBarWidget.BreatheBarWidget_C.OnStartBuff
 // (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 // Parameters:
@@ -137,8 +164,47 @@ void UBreatheBarWidget_C::OnStartBuff(const struct FName& BuffName, bool bStart)
 }
 
 
+// Function BreatheBarWidget.BreatheBarWidget_C.Construct
+// (FUNC_BlueprintCosmetic, FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
+
+void UBreatheBarWidget_C::Construct()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BreatheBarWidget.BreatheBarWidget_C.Construct");
+
+	UBreatheBarWidget_C_Construct_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BreatheBarWidget.BreatheBarWidget_C.Tick
+// (FUNC_BlueprintCosmetic, FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
+// Parameters:
+// struct FGeometry*              MyGeometry                     (CPF_Parm, CPF_IsPlainOldData)
+// float*                         InDeltaTime                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UBreatheBarWidget_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BreatheBarWidget.BreatheBarWidget_C.Tick");
+
+	UBreatheBarWidget_C_Tick_Params params;
+	params.MyGeometry = MyGeometry;
+	params.InDeltaTime = InDeltaTime;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BreatheBarWidget.BreatheBarWidget_C.ExecuteUbergraph_BreatheBarWidget
-// ()
+// (FUNC_HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 

@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.5.39.19) SDK
+// PLAYERUNKNOWN BattleGrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -126,23 +126,6 @@ void UGameplayOptionWidget_BP_C::InitializeWidgets()
 }
 
 
-// Function GameplayOptionWidget_BP.GameplayOptionWidget_BP_C.Construct
-// (FUNC_BlueprintCosmetic, FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
-
-void UGameplayOptionWidget_BP_C::Construct()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function GameplayOptionWidget_BP.GameplayOptionWidget_BP_C.Construct");
-
-	UGameplayOptionWidget_BP_C_Construct_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function GameplayOptionWidget_BP.GameplayOptionWidget_BP_C.OnReset
 // (FUNC_Event, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
@@ -185,6 +168,23 @@ void UGameplayOptionWidget_BP_C::OnApply()
 	static auto fn = UObject::FindObject<UFunction>("Function GameplayOptionWidget_BP.GameplayOptionWidget_BP_C.OnApply");
 
 	UGameplayOptionWidget_BP_C_OnApply_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function GameplayOptionWidget_BP.GameplayOptionWidget_BP_C.Construct
+// (FUNC_BlueprintCosmetic, FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
+
+void UGameplayOptionWidget_BP_C::Construct()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function GameplayOptionWidget_BP.GameplayOptionWidget_BP_C.Construct");
+
+	UGameplayOptionWidget_BP_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
 

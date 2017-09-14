@@ -1,6 +1,6 @@
 #pragma once
 
-// PlayerUnknown's Battlegrounds (2.5.39.19) SDK
+// PLAYERUNKNOWN BattleGrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,12 @@ namespace Classes
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function HudAlwaysOn.HudAlwaysOn_C.TeamInfoPrepass
+struct UHudAlwaysOn_C_TeamInfoPrepass_Params
+{
+	class UWidget*                                     BoundWidget;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
 
 // Function HudAlwaysOn.HudAlwaysOn_C.On_ReportBotton_Prepass_1
 struct UHudAlwaysOn_C_On_ReportBotton_Prepass_1_Params
@@ -30,12 +36,6 @@ struct UHudAlwaysOn_C_OnPrepass_2_Params
 struct UHudAlwaysOn_C_On_CharacterCanvas_Prepass_1_Params
 {
 	class UWidget*                                     BoundWidget;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function HudAlwaysOn.HudAlwaysOn_C.GetVersionText_1
-struct UHudAlwaysOn_C_GetVersionText_1_Params
-{
-	struct FText                                       ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 };
 
 // Function HudAlwaysOn.HudAlwaysOn_C.GetVisibilityOnMatchState

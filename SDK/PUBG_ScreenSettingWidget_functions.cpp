@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.5.39.19) SDK
+// PLAYERUNKNOWN BattleGrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -153,23 +153,6 @@ void UScreenSettingWidget_C::InitializeResolutionIWidget()
 }
 
 
-// Function ScreenSettingWidget.ScreenSettingWidget_C.Construct
-// (FUNC_BlueprintCosmetic, FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
-
-void UScreenSettingWidget_C::Construct()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function ScreenSettingWidget.ScreenSettingWidget_C.Construct");
-
-	UScreenSettingWidget_C_Construct_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function ScreenSettingWidget.ScreenSettingWidget_C.OnApply
 // (FUNC_Event, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
@@ -212,6 +195,23 @@ void UScreenSettingWidget_C::OnReset()
 	static auto fn = UObject::FindObject<UFunction>("Function ScreenSettingWidget.ScreenSettingWidget_C.OnReset");
 
 	UScreenSettingWidget_C_OnReset_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function ScreenSettingWidget.ScreenSettingWidget_C.Construct
+// (FUNC_BlueprintCosmetic, FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
+
+void UScreenSettingWidget_C::Construct()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function ScreenSettingWidget.ScreenSettingWidget_C.Construct");
+
+	UScreenSettingWidget_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
 

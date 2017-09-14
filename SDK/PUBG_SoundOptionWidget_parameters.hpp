@@ -1,6 +1,6 @@
 #pragma once
 
-// PlayerUnknown's Battlegrounds (2.5.39.19) SDK
+// PLAYERUNKNOWN BattleGrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -44,6 +44,11 @@ struct USoundOptionWidget_C_OnDefault_Params
 
 // Function SoundOptionWidget.SoundOptionWidget_C.OnReset
 struct USoundOptionWidget_C_OnReset_Params
+{
+};
+
+// Function SoundOptionWidget.SoundOptionWidget_C.Construct
+struct USoundOptionWidget_C_Construct_Params
 {
 };
 

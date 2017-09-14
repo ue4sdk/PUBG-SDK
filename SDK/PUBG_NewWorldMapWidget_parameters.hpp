@@ -1,6 +1,6 @@
 #pragma once
 
-// PlayerUnknown's Battlegrounds (2.5.39.19) SDK
+// PLAYERUNKNOWN BattleGrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,23 @@ namespace Classes
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function NewWorldMapWidget.NewWorldMapWidget_C.GetMoveMapGridViewCenterToMyIconCenterDir
+struct UNewWorldMapWidget_C_GetMoveMapGridViewCenterToMyIconCenterDir_Params
+{
+	class Vector2D                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function NewWorldMapWidget.NewWorldMapWidget_C.OnMoveMapGridViewCenterToMyIconCenter
+struct UNewWorldMapWidget_C_OnMoveMapGridViewCenterToMyIconCenter_Params
+{
+};
+
+// Function NewWorldMapWidget.NewWorldMapWidget_C.SetMapGridPositoin
+struct UNewWorldMapWidget_C_SetMapGridPositoin_Params
+{
+	class Vector2D                                     Position;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
 
 // Function NewWorldMapWidget.NewWorldMapWidget_C.OnHideWorldMap
 struct UNewWorldMapWidget_C_OnHideWorldMap_Params
@@ -333,6 +350,11 @@ struct UNewWorldMapWidget_C_OnInputAxis_Params
 struct UNewWorldMapWidget_C_ExecuteUbergraph_NewWorldMapWidget_Params
 {
 	int                                                EntryPoint;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function NewWorldMapWidget.NewWorldMapWidget_C.OnHideMyself__DelegateSignature
+struct UNewWorldMapWidget_C_OnHideMyself__DelegateSignature_Params
+{
 };
 
 }

@@ -1,6 +1,6 @@
 #pragma once
 
-// PlayerUnknown's Battlegrounds (2.5.39.19) SDK
+// PLAYERUNKNOWN BattleGrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -118,6 +118,7 @@ class UGameplayTaskResource : public UObject
 public:
 	int                                                ManualResourceID;                                         // 0x0028(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_Config, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	int8_t                                             AutoResourceID;                                           // 0x002C(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x002D(0x0003) MISSED OFFSET
 	unsigned char                                      bManuallySetID : 1;                                       // 0x0030(0x0001) (CPF_Edit, CPF_DisableEditOnInstance)
 
 	static UClass* StaticClass()

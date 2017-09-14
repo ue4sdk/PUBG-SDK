@@ -1,4 +1,4 @@
-// PLAYERUNKNOWN'S BATTLEGROUNDS (2.5.26) SDK
+// PLAYERUNKNOWN BattleGrounds () SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)

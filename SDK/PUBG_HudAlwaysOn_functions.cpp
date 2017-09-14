@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.5.39.19) SDK
+// PLAYERUNKNOWN BattleGrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,26 @@ namespace Classes
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function HudAlwaysOn.HudAlwaysOn_C.TeamInfoPrepass
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// Parameters:
+// class UWidget*                 BoundWidget                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UHudAlwaysOn_C::TeamInfoPrepass(class UWidget* BoundWidget)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function HudAlwaysOn.HudAlwaysOn_C.TeamInfoPrepass");
+
+	UHudAlwaysOn_C_TeamInfoPrepass_Params params;
+	params.BoundWidget = BoundWidget;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function HudAlwaysOn.HudAlwaysOn_C.On_ReportBotton_Prepass_1
 // (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
@@ -69,27 +89,6 @@ void UHudAlwaysOn_C::On_CharacterCanvas_Prepass_1(class UWidget* BoundWidget)
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
-}
-
-
-// Function HudAlwaysOn.HudAlwaysOn_C.GetVersionText_1
-// (FUNC_Public, FUNC_HasOutParms, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure)
-// Parameters:
-// struct FText                   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
-
-struct FText UHudAlwaysOn_C::GetVersionText_1()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function HudAlwaysOn.HudAlwaysOn_C.GetVersionText_1");
-
-	UHudAlwaysOn_C_GetVersionText_1_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
 }
 
 

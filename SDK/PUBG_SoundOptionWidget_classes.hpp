@@ -1,6 +1,6 @@
 #pragma once
 
-// PlayerUnknown's Battlegrounds (2.5.39.19) SDK
+// PLAYERUNKNOWN BattleGrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -34,6 +34,7 @@ public:
 	void OnApply();
 	void OnDefault();
 	void OnReset();
+	void Construct();
 	void ExecuteUbergraph_SoundOptionWidget(int EntryPoint);
 };
 

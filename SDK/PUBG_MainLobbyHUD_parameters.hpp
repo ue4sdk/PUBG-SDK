@@ -1,6 +1,6 @@
 #pragma once
 
-// PlayerUnknown's Battlegrounds (2.5.39.19) SDK
+// PLAYERUNKNOWN BattleGrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,31 @@ namespace Classes
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function MainLobbyHUD.MainLobbyHUD_C.GetNameTagWidget
+struct UMainLobbyHUD_C_GetNameTagWidget_Params
+{
+	int                                                SlotIndex;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	class ULobbyVoiceChat_C*                           Widget;                                                   // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function MainLobbyHUD.MainLobbyHUD_C.OnDestroyCharacter
+struct UMainLobbyHUD_C_OnDestroyCharacter_Params
+{
+	int                                                SlotIndex;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function MainLobbyHUD.MainLobbyHUD_C.OnCreateCharacter
+struct UMainLobbyHUD_C_OnCreateCharacter_Params
+{
+	int                                                SlotIndex;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function MainLobbyHUD.MainLobbyHUD_C.On_NameTag_Prepass_1
+struct UMainLobbyHUD_C_On_NameTag_Prepass_1_Params
+{
+	class UWidget*                                     BoundWidget;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
 
 // Function MainLobbyHUD.MainLobbyHUD_C.CloseWebPopupByID
 struct UMainLobbyHUD_C_CloseWebPopupByID_Params

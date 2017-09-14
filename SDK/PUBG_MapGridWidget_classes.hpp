@@ -1,6 +1,6 @@
 #pragma once
 
-// PlayerUnknown's Battlegrounds (2.5.39.19) SDK
+// PLAYERUNKNOWN BattleGrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,7 +13,7 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass MapGridWidget.MapGridWidget_C
-// 0x0000 (0x05F8 - 0x05F8)
+// 0x0000 (0x0628 - 0x0628)
 class UMapGridWidget_C : public UMapGridWidget
 {
 public:
