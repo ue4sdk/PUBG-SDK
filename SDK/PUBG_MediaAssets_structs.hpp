@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds SDK
+// PlayerUnknown's Battlegrounds (2.6.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -43,9 +43,7 @@ struct FMediaSubtitle
 struct FMediaPlayerOverlay
 {
 	unsigned char                                      HasPosition : 1;                                          // 0x0000(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
 	class Vector2D                                     Position;                                                 // 0x0004(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
 	struct FText                                       Text;                                                     // 0x0010(0x0018)
 };
 

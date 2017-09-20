@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds SDK
+// PlayerUnknown's Battlegrounds (2.6.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -45,13 +45,10 @@ public:
 	float                                              BrakeLightIntensity_Off;                                  // 0x0758(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              ExplosionRadius_Inner;                                    // 0x075C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              ExplosionRadius_Outer;                                    // 0x0760(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0764(0x0004) MISSED OFFSET
 	class UCurveFloat*                                 DamageCurve;                                              // 0x0768(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              Throttle;                                                 // 0x0770(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0774(0x0004) MISSED OFFSET
 	class UCurveFloat*                                 FuelConsumptionCurve;                                     // 0x0778(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              FuelEfficiency;                                           // 0x0780(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x0784(0x0004) MISSED OFFSET
 	class UTslWheeledVehicleMovement*                  TslWheeledVehicleMovementRef;                             // 0x0788(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	class ATslPlayerController*                        DriveControllerrRef;                                      // 0x0790(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnTemplate, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	TArray<float>                                      WheelsLatSlip_1;                                          // 0x0798(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
@@ -70,23 +67,18 @@ public:
 	unsigned char                                      TestThrottlingAKEvent_prev : 1;                           // 0x0817(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	unsigned char                                      TestSteeringAKEvent : 1;                                  // 0x0818(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	unsigned char                                      TestSteeringAKEvent_prev : 1;                             // 0x0819(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData03[0x2];                                       // 0x081A(0x0002) MISSED OFFSET
 	float                                              Brake_1;                                                  // 0x081C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	unsigned char                                      TestBrakingAKEvent : 1;                                   // 0x0820(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData04[0x7];                                       // 0x0821(0x0007) MISSED OFFSET
 	TArray<class UPhysicalMaterial*>                   TestWheelsContactSurface_prev_1;                          // 0x0828(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
 	unsigned char                                      TestBrakingAKEvent_prev : 1;                              // 0x0838(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData05[0x7];                                       // 0x0839(0x0007) MISSED OFFSET
 	TArray<float>                                      WheelsSuspensionOffsetNorm;                               // 0x0840(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
 	TArray<float>                                      WheelsWaterDepth_1;                                       // 0x0850(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
 	float                                              FlatTireCount_1;                                          // 0x0860(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	unsigned char                                      bUseDynamicCamera : 1;                                    // 0x0864(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData06[0x3];                                       // 0x0865(0x0003) MISSED OFFSET
 	class Vector3D                                     LastVelocity;                                             // 0x0868(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	class Vector3D                                     Acceleration;                                             // 0x0874(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	unsigned char                                      bTickFuelIndicator : 1;                                   // 0x0880(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	unsigned char                                      bTickBoostIndicator : 1;                                  // 0x0881(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData07[0x2];                                       // 0x0882(0x0002) MISSED OFFSET
 	float                                              LowFuelLevel;                                             // 0x0884(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              LastFuelConsumptionTime;                                  // 0x0888(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 

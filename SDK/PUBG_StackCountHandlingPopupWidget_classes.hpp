@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds SDK
+// PlayerUnknown's Battlegrounds (2.6.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -34,7 +34,6 @@ public:
 	TScriptInterface<class USlotContainerInterface>    Container;                                                // 0x0300(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	TScriptInterface<class USlotInterface>             ItemSlot;                                                 // 0x0310(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	unsigned char                                      bIsDropping : 1;                                          // 0x0320(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0321(0x0007) MISSED OFFSET
 	struct FText                                       AmountText;                                               // 0x0328(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
 	struct FText                                       OkText;                                                   // 0x0340(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
 
@@ -70,7 +69,7 @@ public:
 	void Custom_Event_1();
 	void XBoxOneOk();
 	void Tick(struct FGeometry* MyGeometry, float* InDeltaTime);
-	void OnWidgetInputB();
+	void ONWidgetInputB();
 	void OnWidgetMoveLeft();
 	void CustomEvent_3();
 	void CustomEvent_4();

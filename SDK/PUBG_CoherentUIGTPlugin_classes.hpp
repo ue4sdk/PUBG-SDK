@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds SDK
+// PlayerUnknown's Battlegrounds (2.6.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -34,7 +34,6 @@ public:
 	unsigned char                                      bReceiveInputWhenTransparent : 1;                         // 0x024A(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	unsigned char                                      bGammaCorrectedMaterial : 1;                              // 0x024B(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	unsigned char                                      AllowPerformanceWarnings : 1;                             // 0x024C(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x024D(0x0003) MISSED OFFSET
 	float                                              ExecuteJSTimersThresholdMs;                               // 0x0250(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              UpdateStylesAndLayoutThresholdMs;                         // 0x0254(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              RecordRenderingCommandsThresholdMs;                       // 0x0258(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -43,11 +42,11 @@ public:
 	int                                                LayerWidthThreshold;                                      // 0x0264(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int                                                LayerHeightThreshold;                                     // 0x0268(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	unsigned char                                      bEnableAdditionalDefaultStyles : 1;                       // 0x026C(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData03[0x1D3];                                     // 0x026D(0x01D3) MISSED OFFSET
+	unsigned char                                      UnknownData02[0x1D3];                                     // 0x026D(0x01D3) MISSED OFFSET
 	struct FString                                     URL;                                                      // 0x0440(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
 	float                                              ClickThroughAlphaThreshold;                               // 0x0450(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	unsigned char                                      Transparent : 1;                                          // 0x0454(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData04[0xB];                                       // 0x0455(0x000B) MISSED OFFSET
+	unsigned char                                      UnknownData03[0xB];                                       // 0x0455(0x000B) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -183,7 +182,6 @@ class UCoherentUIGTSettings : public UObject
 {
 public:
 	unsigned char                                      EnableLiveReload : 1;                                     // 0x0028(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0029(0x0003) MISSED OFFSET
 	int                                                InspectorPort;                                            // 0x002C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 	unsigned char                                      EnableWebSecurity : 1;                                    // 0x0030(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 	unsigned char                                      EnableLocalization : 1;                                   // 0x0031(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
@@ -194,7 +192,6 @@ public:
 	TEnumAsByte<ECoherentUIGTSettingsSeverity>         LogSeverity;                                              // 0x0036(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 	unsigned char                                      bRespectTitleSafeZone : 1;                                // 0x0037(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 	unsigned char                                      bRespectLetterboxing : 1;                                 // 0x0038(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0039(0x0007) MISSED OFFSET
 	struct FString                                     HUDMaterialName;                                          // 0x0040(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
 	struct FString                                     CoUIResourcesRoot;                                        // 0x0050(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
 	unsigned char                                      TickWhileGameIsPaused : 1;                                // 0x0060(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)

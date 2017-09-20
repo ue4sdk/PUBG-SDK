@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds SDK
+// PlayerUnknown's Battlegrounds (2.6.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -23,7 +23,6 @@ public:
 	UObject* Object;
 	int32_t Flags;
 	int32_t SerialNumber;
-	void* unk;
 
 	enum class EInternalObjectFlags : int32_t
 	{
@@ -116,19 +115,6 @@ public:
 	{
 		return i < Num();
 	}
-
-	inline void Add(T InputData)
-	{
-		Data = (T*)realloc(Data, sizeof(T) * (Count + 1));
-		Data[Count++] = InputData;
-		Max = Count;
-	};
-
-	inline void Clear()
-	{
-		free(Data);
-		Count = Max = 0;
-	};
 
 private:
 	T* Data;
@@ -295,7 +281,7 @@ struct FString : private TArray<wchar_t>
 
 	FString(const wchar_t* other)
 	{
-		Max = Count = *other ? (int32_t)std::wcslen(other) + 1 : 0;
+		Max = Count = *other ? std::wcslen(other) + 1 : 0;
 
 		if (Count)
 		{
@@ -498,7 +484,7 @@ class TPersistentObjectPtr
 {
 public:
 	FWeakObjectPtr WeakPtr;
-	int64_t TagAtLastTest;
+	int32_t TagAtLastTest;
 	TObjectID ObjectID;
 };
 

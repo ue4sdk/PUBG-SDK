@@ -1,4 +1,4 @@
-// PLAYERUNKNOWN BattleGrounds SDK
+// PlayerUnknown's Battlegrounds (2.6.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -52,7 +52,7 @@ std::string UObject::GetFullName() const
 
 bool UObject::IsA(UClass* cmp) const
 {
-	for (auto super = Class; super; super = (UClass*)super->SuperField)
+	for (auto super = Class; super; super = static_cast<UClass*>(super->SuperField))
 	{
 		if (super == cmp)
 		{

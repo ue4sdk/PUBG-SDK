@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds SDK
+// PlayerUnknown's Battlegrounds (2.6.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,6 @@ class UBuildPatchManifest : public UObject
 public:
 	unsigned char                                      ManifestFileVersion;                                      // 0x0028(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	unsigned char                                      bIsFileData : 1;                                          // 0x0029(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x2];                                       // 0x002A(0x0002) MISSED OFFSET
 	uint32_t                                           AppID;                                                    // 0x002C(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	struct FString                                     AppName;                                                  // 0x0030(0x0010) (CPF_ZeroConstructor)
 	struct FString                                     BuildVersion;                                             // 0x0040(0x0010) (CPF_ZeroConstructor)

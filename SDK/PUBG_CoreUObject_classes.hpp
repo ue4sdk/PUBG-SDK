@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds SDK
+// PlayerUnknown's Battlegrounds (2.6.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -24,11 +24,6 @@ public:
 	class UClass*                                      Class;                                                    // 0x0000(0x0000) NOT AUTO-GENERATED PROPERTY
 	FName                                              Name;                                                     // 0x0000(0x0000) NOT AUTO-GENERATED PROPERTY
 	class UObject*                                     Outer;                                                    // 0x0000(0x0000) NOT AUTO-GENERATED PROPERTY
-
-	inline void ProcessEvent(class UFunction* function, void* parms)
-	{
-		return GetVFunction<void(*)(UObject*, class UFunction*, void*)>(this, 57)(this, function, parms);
-	}
 
 	static inline TUObjectArray& GetGlobalObjects()
 	{
@@ -62,6 +57,12 @@ public:
 	static UClass* FindClass(const std::string& name)
 	{
 		return FindObject<UClass>(name);
+	}
+
+	template<typename T>
+	static T* GetObjectCasted(std::size_t index)
+	{
+		return static_cast<T*>(GetGlobalObjects().GetByIndex(index));
 	}
 
 	bool IsA(UClass* cmp) const;

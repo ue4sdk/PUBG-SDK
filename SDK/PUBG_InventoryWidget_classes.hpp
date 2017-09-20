@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds SDK
+// PlayerUnknown's Battlegrounds (2.6.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -56,7 +56,6 @@ public:
 	class UItem*                                       DragDroppingItem;                                         // 0x03B0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	unsigned char                                      wasVicinityEmpty : 1;                                     // 0x03B8(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	unsigned char                                      willDropToVicinity : 1;                                   // 0x03B9(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x6];                                       // 0x03BA(0x0006) MISSED OFFSET
 	TScriptInterface<class USlotInterface>             MouseOverSlot;                                            // 0x03C0(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	TScriptInterface<class USlotContainerInterface>    SlotContainer;                                            // 0x03D0(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	class UItem*                                       MouseOverItem;                                            // 0x03E0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -65,7 +64,6 @@ public:
 	struct FSlateColor                                 SelectColor;                                              // 0x03F8(0x0028) (CPF_Edit, CPF_BlueprintVisible)
 	struct FSlateColor                                 DefaultColor;                                             // 0x0420(0x0028) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
 	int                                                SelectIndex;                                              // 0x0448(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x044C(0x0004) MISSED OFFSET
 	TArray<class UUserWidget*>                         FocusableWidgetLis;                                       // 0x0450(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
 	unsigned char                                      bLeft : 1;                                                // 0x0460(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	unsigned char                                      bright : 1;                                               // 0x0461(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
@@ -142,7 +140,7 @@ public:
 	void OnUp();
 	void OnDown();
 	void OnWidgetInputA();
-	void OnWidgetInputB();
+	void ONWidgetInputB();
 	void OnWidgetInputX();
 	void OnWidgetInputY();
 	void Destruct();

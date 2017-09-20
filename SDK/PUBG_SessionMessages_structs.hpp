@@ -1,6 +1,6 @@
 #pragma once
 
-// PLAYERUNKNOWN BattleGrounds SDK
+// PlayerUnknown's Battlegrounds (2.6.26) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -42,13 +42,11 @@ struct FSessionServiceLog
 struct FSessionServicePong
 {
 	unsigned char                                      Authorized : 1;                                           // 0x0000(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
 	struct FString                                     BuildDate;                                                // 0x0008(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 	struct FString                                     DeviceName;                                               // 0x0018(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 	struct FGuid                                       InstanceId;                                               // 0x0028(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	struct FString                                     InstanceName;                                             // 0x0038(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 	unsigned char                                      IsConsoleBuild : 1;                                       // 0x0048(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0049(0x0007) MISSED OFFSET
 	struct FString                                     PlatformName;                                             // 0x0050(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 	struct FGuid                                       SessionId;                                                // 0x0060(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	struct FString                                     SessionName;                                              // 0x0070(0x0010) (CPF_Edit, CPF_ZeroConstructor)
