@@ -1,6 +1,6 @@
 #pragma once
 
-// PlayerUnknown's Battlegrounds (2.6.18) SDK
+// PlayerUnknown's Battlegrounds (2.6.30.2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -1932,7 +1932,7 @@ struct FDoorBreakingStateLegacy
 // 0x0028
 struct FDecalEffectData
 {
-	class UMaterial*                                   Material;                                                 // 0x0000(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	class UMaterial*                                   Material;                                                 // 0x0000(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	struct FFloatRange                                 Size;                                                     // 0x0008(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              FadeScreenSize;                                           // 0x0018(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              FadeStartDelay;                                           // 0x001C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
@@ -1954,7 +1954,7 @@ struct FDecalEffectDataSet
 	struct FDecalEffectData                            WoodDecal;                                                // 0x00C8(0x0028) (CPF_Edit, CPF_DisableEditOnInstance)
 	struct FDecalEffectData                            GlassDecal;                                               // 0x00F0(0x0028) (CPF_Edit, CPF_DisableEditOnInstance)
 	struct FDecalEffectData                            GrassDecal;                                               // 0x0118(0x0028) (CPF_Edit, CPF_DisableEditOnInstance)
-	struct FDecalEffectData                            FleshDecal;                                               // 0x0140(0x0028) (CPF_Edit, CPF_DisableEditOnInstance)
+	struct FDecalEffectData                            FleshDecal;                                               // 0x0140(0x0028) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
 };
 
 // ScriptStruct TslGame.VehicleReactionData
@@ -2226,6 +2226,17 @@ struct FRedZoneCustomOption
 	float                                              MultiplierRedZoneExplosionDelay;                          // 0x0010(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              MultiplierRedZoneDuration;                                // 0x0014(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              MultiplierRedZoneArea;                                    // 0x0018(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// ScriptStruct TslGame.BlueZoneCustomOption
+// 0x0014
+struct FBlueZoneCustomOption
+{
+	int                                                PhaseNum;                                                 // 0x0000(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              WarningDuration;                                          // 0x0004(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              ReleaseDuration;                                          // 0x0008(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              PoisonGasDamagePerSecond;                                 // 0x000C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              RadiusRate;                                               // 0x0010(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // ScriptStruct TslGame.Teams
@@ -2983,6 +2994,16 @@ struct FWuLogCharacter
 	float                                              Health;                                                   // 0x0024(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class Vector3D                                     Location;                                                 // 0x0028(0x000C) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int                                                Ranking;                                                  // 0x0034(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// ScriptStruct TslGame.WuLogHackDetection_ContinuousKill
+// 0x0048 (0x0070 - 0x0028)
+struct FWuLogHackDetection_ContinuousKill : public FLogBase
+{
+	struct FWuLogCharacter                             Character;                                                // 0x0028(0x0038)
+	float                                              Reason_DistVics;                                          // 0x0060(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              Reason_DistKiller;                                        // 0x0064(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      IsBanned : 1;                                             // 0x0068(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // ScriptStruct TslGame.WuLogHackDetection_IgnoreWall
