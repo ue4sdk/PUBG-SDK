@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.26) SDK
+// PlayerUnknown's Battlegrounds (2.6.30.2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -1105,14 +1105,14 @@ void UInventoryWidget_C::OnWidgetInputA()
 }
 
 
-// Function InventoryWidget.InventoryWidget_C.ONWidgetInputB
+// Function InventoryWidget.InventoryWidget_C.OnWidgetInputB
 // (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
-void UInventoryWidget_C::ONWidgetInputB()
+void UInventoryWidget_C::OnWidgetInputB()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryWidget.InventoryWidget_C.ONWidgetInputB");
+	static auto fn = UObject::FindObject<UFunction>("Function InventoryWidget.InventoryWidget_C.OnWidgetInputB");
 
-	UInventoryWidget_C_ONWidgetInputB_Params params;
+	UInventoryWidget_C_OnWidgetInputB_Params params;
 
 	auto flags = fn->FunctionFlags;
 

@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.26) SDK
+// PlayerUnknown's Battlegrounds (2.6.30.2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -489,14 +489,14 @@ void UStackCountHandlingPopupWidget_C::Tick(struct FGeometry* MyGeometry, float*
 }
 
 
-// Function StackCountHandlingPopupWidget.StackCountHandlingPopupWidget_C.ONWidgetInputB
+// Function StackCountHandlingPopupWidget.StackCountHandlingPopupWidget_C.OnWidgetInputB
 // (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
-void UStackCountHandlingPopupWidget_C::ONWidgetInputB()
+void UStackCountHandlingPopupWidget_C::OnWidgetInputB()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function StackCountHandlingPopupWidget.StackCountHandlingPopupWidget_C.ONWidgetInputB");
+	static auto fn = UObject::FindObject<UFunction>("Function StackCountHandlingPopupWidget.StackCountHandlingPopupWidget_C.OnWidgetInputB");
 
-	UStackCountHandlingPopupWidget_C_ONWidgetInputB_Params params;
+	UStackCountHandlingPopupWidget_C_OnWidgetInputB_Params params;
 
 	auto flags = fn->FunctionFlags;
 

@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.26) SDK
+// PlayerUnknown's Battlegrounds (2.6.30.2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -7877,6 +7877,28 @@ float ABattleRoyaleModeController::GetPoisonGasDamagePerSecond()
 }
 
 
+// Function TslGame.BattleRoyaleModeController.GetMaxPhaseCount
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+int ABattleRoyaleModeController::GetMaxPhaseCount()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TslGame.BattleRoyaleModeController.GetMaxPhaseCount");
+
+	ABattleRoyaleModeController_GetMaxPhaseCount_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function TslGame.CarePackageController.SpawnAircraftCarePackage
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
@@ -11925,6 +11947,27 @@ void ATslCharacter::ServerSetHoldingBreath(bool bNewHoldingBreath)
 
 	ATslCharacter_ServerSetHoldingBreath_Params params;
 	params.bNewHoldingBreath = bNewHoldingBreath;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function TslGame.TslCharacter.ServerSetGunDirectionSway
+// (FUNC_Net, FUNC_Native, FUNC_Event, FUNC_Public, FUNC_NetServer, FUNC_HasDefaults, FUNC_NetValidate)
+// Parameters:
+// class Rotator                  InGunDirectionSway             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void ATslCharacter::ServerSetGunDirectionSway(const class Rotator& InGunDirectionSway)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslCharacter.ServerSetGunDirectionSway");
+
+	ATslCharacter_ServerSetGunDirectionSway_Params params;
+	params.InGunDirectionSway = InGunDirectionSway;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -16283,7 +16326,7 @@ float ATslCharacter::GetCurrentWaterDepth()
 
 
 // Function TslGame.TslCharacter.GetCurrentSway
-// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
 // Parameters:
 // class Rotator                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
@@ -26285,6 +26328,27 @@ struct FText UTslGameOption::STATIC_WheelAxisNameToWheelActionName(const struct 
 }
 
 
+// Function TslGame.TslGameOption.SetWorldMapZoomLevel
+// (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// int                            NewZoomLevel                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UTslGameOption::STATIC_SetWorldMapZoomLevel(int NewZoomLevel)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslGameOption.SetWorldMapZoomLevel");
+
+	UTslGameOption_SetWorldMapZoomLevel_Params params;
+	params.NewZoomLevel = NewZoomLevel;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function TslGame.TslGameOption.SetVSyncEnabled
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_BlueprintCallable)
 // Parameters:
@@ -27712,6 +27776,28 @@ bool UTslGameOption::STATIC_IsBGMSoundMute()
 	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslGameOption.IsBGMSoundMute");
 
 	UTslGameOption_IsBGMSoundMute_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function TslGame.TslGameOption.GetWorldMapZoomSpeedLevel
+// (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure)
+// Parameters:
+// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+int UTslGameOption::STATIC_GetWorldMapZoomSpeedLevel()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslGameOption.GetWorldMapZoomSpeedLevel");
+
+	UTslGameOption_GetWorldMapZoomSpeedLevel_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;

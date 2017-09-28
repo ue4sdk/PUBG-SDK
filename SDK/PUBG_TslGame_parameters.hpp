@@ -1,6 +1,6 @@
 #pragma once
 
-// PlayerUnknown's Battlegrounds (2.6.26) SDK
+// PlayerUnknown's Battlegrounds (2.6.30.2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -2263,6 +2263,12 @@ struct ABattleRoyaleModeController_GetPoisonGasDamagePerSecond_Params
 	float                                              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
+// Function TslGame.BattleRoyaleModeController.GetMaxPhaseCount
+struct ABattleRoyaleModeController_GetMaxPhaseCount_Params
+{
+	int                                                ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
 // Function TslGame.CarePackageController.SpawnAircraftCarePackage
 struct ACarePackageController_SpawnAircraftCarePackage_Params
 {
@@ -3403,6 +3409,12 @@ struct ATslCharacter_ServerSetPeekLeft_Params
 struct ATslCharacter_ServerSetHoldingBreath_Params
 {
 	bool                                               bNewHoldingBreath;                                        // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function TslGame.TslCharacter.ServerSetGunDirectionSway
+struct ATslCharacter_ServerSetGunDirectionSway_Params
+{
+	class Rotator                                      InGunDirectionSway;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // Function TslGame.TslCharacter.ServerSetAimOffsets
@@ -7482,6 +7494,12 @@ struct UTslGameOption_WheelAxisNameToWheelActionName_Params
 	struct FText                                       ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 };
 
+// Function TslGame.TslGameOption.SetWorldMapZoomLevel
+struct UTslGameOption_SetWorldMapZoomLevel_Params
+{
+	int                                                NewZoomLevel;                                             // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
 // Function TslGame.TslGameOption.SetVSyncEnabled
 struct UTslGameOption_SetVSyncEnabled_Params
 {
@@ -7897,6 +7915,12 @@ struct UTslGameOption_IsDefaultFunctionalityEnabled_Params
 struct UTslGameOption_IsBGMSoundMute_Params
 {
 	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function TslGame.TslGameOption.GetWorldMapZoomSpeedLevel
+struct UTslGameOption_GetWorldMapZoomSpeedLevel_Params
+{
+	int                                                ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
 // Function TslGame.TslGameOption.GetVoiceOutputVolume

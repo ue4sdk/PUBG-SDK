@@ -1,6 +1,6 @@
 #pragma once
 
-// PlayerUnknown's Battlegrounds (2.6.26) SDK
+// PlayerUnknown's Battlegrounds (2.6.30.2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -69,7 +69,7 @@ public:
 	void Custom_Event_1();
 	void XBoxOneOk();
 	void Tick(struct FGeometry* MyGeometry, float* InDeltaTime);
-	void ONWidgetInputB();
+	void OnWidgetInputB();
 	void OnWidgetMoveLeft();
 	void CustomEvent_3();
 	void CustomEvent_4();
