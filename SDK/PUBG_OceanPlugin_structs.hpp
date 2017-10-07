@@ -13,7 +13,7 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // Enum OceanPlugin.EFollowMethod
-enum class EFollowMethod
+enum class EFollowMethod : uint8_t
 {
 	LookAtLocation                 = 0,
 	FollowCamera                   = 1,

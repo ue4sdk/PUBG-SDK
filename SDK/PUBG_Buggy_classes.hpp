@@ -17,6 +17,7 @@ namespace Classes
 class ABuggy_C : public AVehicleBase_C
 {
 public:
+	unsigned char                                      UnknownData00[0x4];                                       // 0x088C(0x0004) MISSED OFFSET
 	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0890(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_DuplicateTransient)
 	class USphereComponent*                            Sphere1;                                                  // 0x0898(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class USphereComponent*                            Sphere;                                                   // 0x08A0(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)

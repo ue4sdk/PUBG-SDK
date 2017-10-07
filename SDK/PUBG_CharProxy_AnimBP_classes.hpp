@@ -70,6 +70,7 @@ public:
 	struct FAnimNode_BlendSpacePlayer                  AnimGraphNode_BlendSpacePlayer_50CC758845EBAE09DFE0FFA151BC45A3;// 0x1D10(0x0120)
 	struct FAnimationNode_TwoWayBlend                  AnimGraphNode_TwoWayBlend_F55B74BC41101BEBCB2E1FB32E00F62E;// 0x1E30(0x0070)
 	TEnumAsByte<EAnimWeaponType>                       AnimWeaponType;                                           // 0x1EA0(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x1EA1(0x0007) MISSED OFFSET
 	class UBlendSpaceBase*                             GripBlendSpace;                                           // 0x1EA8(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              Yaw;                                                      // 0x1EB0(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              Pitch;                                                    // 0x1EB4(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
@@ -79,7 +80,9 @@ public:
 	float                                              GripType;                                                 // 0x1ECC(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              BlinkAlpha;                                               // 0x1ED0(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	TEnumAsByte<EWeaponClass>                          WeaponClassEnum;                                          // 0x1ED4(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x1ED5(0x0003) MISSED OFFSET
 	float                                              LH_GripIndex;                                             // 0x1ED8(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData03[0x4];                                       // 0x1EDC(0x0004) MISSED OFFSET
 	class UBlendSpaceBase*                             LH_GripBS;                                                // 0x1EE0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
 	static UClass* StaticClass()

@@ -3981,7 +3981,7 @@ struct UWheeledVehicleMovementComponent_ServerUpdateState_Params
 // Function Engine.WheeledVehicleMovementComponent.OnRep_TirePunctured
 struct UWheeledVehicleMovementComponent_OnRep_TirePunctured_Params
 {
-	TArray<unsigned char>                              LastTirePunctured;                                        // (CPF_Parm, CPF_ZeroConstructor)
+	TArray<bool>                                       LastTirePunctured;                                        // (CPF_Parm, CPF_ZeroConstructor)
 };
 
 // Function Engine.WheeledVehicleMovementComponent.GetUseAutoGears

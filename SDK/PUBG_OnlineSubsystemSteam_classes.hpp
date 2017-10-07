@@ -17,7 +17,8 @@ namespace Classes
 class USteamNetConnection : public UIpConnection
 {
 public:
-	unsigned char                                      bIsPassthrough : 1;                                       // 0x33708(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bIsPassthrough;                                           // 0x33708(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x33709(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

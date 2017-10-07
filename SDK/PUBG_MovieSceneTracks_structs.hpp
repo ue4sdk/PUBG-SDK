@@ -13,7 +13,7 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // Enum MovieSceneTracks.MovieScene3DPathSection_Axis
-enum class EMovieScene3DPathSection_Axis
+enum class EMovieScene3DPathSection_Axis : uint8_t
 {
 	MovieScene3DPathSection_Axis__X = 0,
 	MovieScene3DPathSection_Axis__Y = 1,
@@ -26,7 +26,7 @@ enum class EMovieScene3DPathSection_Axis
 
 
 // Enum MovieSceneTracks.EShow3DTrajectory
-enum class EShow3DTrajectory
+enum class EShow3DTrajectory : uint8_t
 {
 	EShow3DTrajectory__EST_OnlyWhenSelected = 0,
 	EShow3DTrajectory__EST_Always  = 1,
@@ -36,7 +36,7 @@ enum class EShow3DTrajectory
 
 
 // Enum MovieSceneTracks.ELevelVisibility
-enum class ELevelVisibility
+enum class ELevelVisibility : uint8_t
 {
 	ELevelVisibility__Visible      = 0,
 	ELevelVisibility__Hidden       = 1,
@@ -45,7 +45,7 @@ enum class ELevelVisibility
 
 
 // Enum MovieSceneTracks.EParticleKey
-enum class EParticleKey
+enum class EParticleKey : uint8_t
 {
 	EParticleKey__Activate         = 0,
 	EParticleKey__Deactivate       = 1,
@@ -65,6 +65,7 @@ struct FScalarParameterNameAndCurve
 {
 	struct FName                                       ParameterName;                                            // 0x0000(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int                                                Index;                                                    // 0x0008(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
 	struct FRichCurve                                  ParameterCurve;                                           // 0x0010(0x0078)
 };
 
@@ -74,6 +75,7 @@ struct FVectorParameterNameAndCurves
 {
 	struct FName                                       ParameterName;                                            // 0x0000(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int                                                Index;                                                    // 0x0008(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
 	struct FRichCurve                                  XCurve;                                                   // 0x0010(0x0078)
 	struct FRichCurve                                  YCurve;                                                   // 0x0088(0x0078)
 	struct FRichCurve                                  ZCurve;                                                   // 0x0100(0x0078)
@@ -85,6 +87,7 @@ struct FColorParameterNameAndCurves
 {
 	struct FName                                       ParameterName;                                            // 0x0000(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int                                                Index;                                                    // 0x0008(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
 	struct FRichCurve                                  RedCurve;                                                 // 0x0010(0x0078)
 	struct FRichCurve                                  GreenCurve;                                               // 0x0088(0x0078)
 	struct FRichCurve                                  BlueCurve;                                                // 0x0100(0x0078)
@@ -153,6 +156,7 @@ struct FMovieSceneVector4KeyStruct : public FMovieSceneVectorKeyStructBase
 struct FMovieSceneVectorKeyStruct : public FMovieSceneVectorKeyStructBase
 {
 	class Vector3D                                     Vector;                                                   // 0x0048(0x000C) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0054(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct MovieSceneTracks.MovieSceneVector2DKeyStruct

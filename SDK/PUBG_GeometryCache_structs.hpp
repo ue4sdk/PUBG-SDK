@@ -12,16 +12,16 @@ namespace Classes
 //Script Structs
 //---------------------------------------------------------------------------
 
-// ScriptStruct GeometryCache.TrackRenderData
+// ScriptStruct GeometryCache.GeometryCacheMeshData
 // 0x0050
-struct FTrackRenderData
+struct FGeometryCacheMeshData
 {
 	unsigned char                                      UnknownData00[0x50];                                      // 0x0000(0x0050) MISSED OFFSET
 };
 
-// ScriptStruct GeometryCache.GeometryCacheMeshData
+// ScriptStruct GeometryCache.TrackRenderData
 // 0x0050
-struct FGeometryCacheMeshData
+struct FTrackRenderData
 {
 	unsigned char                                      UnknownData00[0x50];                                      // 0x0000(0x0050) MISSED OFFSET
 };

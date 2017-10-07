@@ -202,6 +202,7 @@ public:
 	TArray<struct FString>                             GameplayTags;                                             // 0x0028(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
 	TArray<struct FString>                             CommonlyReplicatedTags;                                   // 0x0038(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
 	int                                                NetIndexFirstBitSegment;                                  // 0x0048(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x004C(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

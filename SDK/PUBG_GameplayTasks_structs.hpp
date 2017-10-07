@@ -13,7 +13,7 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // Enum GameplayTasks.ETaskResourceOverlapPolicy
-enum class ETaskResourceOverlapPolicy
+enum class ETaskResourceOverlapPolicy : uint8_t
 {
 	ETaskResourceOverlapPolicy__StartOnTop = 0,
 	ETaskResourceOverlapPolicy__StartAtEnd = 1,
@@ -22,7 +22,7 @@ enum class ETaskResourceOverlapPolicy
 
 
 // Enum GameplayTasks.EGameplayTaskState
-enum class EGameplayTaskState
+enum class EGameplayTaskState : uint8_t
 {
 	EGameplayTaskState__Uninitialized = 0,
 	EGameplayTaskState__AwaitingActivation = 1,
@@ -34,7 +34,7 @@ enum class EGameplayTaskState
 
 
 // Enum GameplayTasks.EGameplayTaskRunResult
-enum class EGameplayTaskRunResult
+enum class EGameplayTaskRunResult : uint8_t
 {
 	EGameplayTaskRunResult__Error  = 0,
 	EGameplayTaskRunResult__Failed = 1,
@@ -54,7 +54,7 @@ enum class EGameplayTaskRunResult
 // 0x0002
 struct FGameplayResourceSet
 {
-
+	unsigned char                                      UnknownData00[0x2];                                       // 0x0000(0x0002) MISSED OFFSET
 };
 
 }

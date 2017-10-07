@@ -17,14 +17,17 @@ namespace Classes
 struct FStructSerializerNumericTestStruct
 {
 	int8_t                                             Int8;                                                     // 0x0000(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0001(0x0001) MISSED OFFSET
 	int16_t                                            Int16;                                                    // 0x0002(0x0002) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int                                                Int32;                                                    // 0x0004(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int64_t                                            Int64;                                                    // 0x0008(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	unsigned char                                      UInt8;                                                    // 0x0010(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x1];                                       // 0x0011(0x0001) MISSED OFFSET
 	uint16_t                                           UInt16;                                                   // 0x0012(0x0002) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	uint32_t                                           UInt32;                                                   // 0x0014(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	uint64_t                                           UInt64;                                                   // 0x0018(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              Float;                                                    // 0x0020(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x0024(0x0004) MISSED OFFSET
 	double                                             Double;                                                   // 0x0028(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
@@ -32,8 +35,9 @@ struct FStructSerializerNumericTestStruct
 // 0x0008
 struct FStructSerializerBooleanTestStruct
 {
-	unsigned char                                      BoolFalse : 1;                                            // 0x0000(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      BoolTrue : 1;                                             // 0x0001(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               BoolFalse;                                                // 0x0000(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               BoolTrue;                                                 // 0x0001(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x0002(0x0002) MISSED OFFSET
 	uint32_t                                           Bitfield;                                                 // 0x0004(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
@@ -53,8 +57,10 @@ struct FStructSerializerBuiltinTestStruct
 	struct FName                                       Name;                                                     // 0x0010(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	struct FString                                     String;                                                   // 0x0018(0x0010) (CPF_ZeroConstructor)
 	class Rotator                                      Rotator;                                                  // 0x0028(0x000C) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
 	struct FText                                       Text;                                                     // 0x0038(0x0018)
 	class Vector3D                                     Vector;                                                   // 0x0050(0x000C) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x005C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct Serialization.StructSerializerArrayTestStruct
@@ -65,6 +71,7 @@ struct FStructSerializerArrayTestStruct
 	int                                                StaticSingleElement;                                      // 0x0010(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int                                                StaticInt32Array[0x3];                                    // 0x0014(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              StaticFloatArray[0x3];                                    // 0x0020(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
 	TArray<class Vector3D>                             VectorArray;                                              // 0x0030(0x0010) (CPF_ZeroConstructor)
 };
 

@@ -19,6 +19,7 @@ struct FCrossActorManager
 	class UClass*                                      Prototype;                                                // 0x0000(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class AActor*                                      SideActor;                                                // 0x0008(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int                                                SocketIndex;                                              // 0x0010(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct RoadRuntime.CrossMeshManager
@@ -29,6 +30,7 @@ struct FCrossMeshManager
 	class AActor*                                      Owner;                                                    // 0x0008(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class UStaticMeshComponent*                        SideMesh;                                                 // 0x0010(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 	int                                                SocketIndex;                                              // 0x0018(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct RoadRuntime.SideActorManager
@@ -38,6 +40,7 @@ struct FSideActorManager
 	class UClass*                                      Prototype;                                                // 0x0000(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	TArray<class AActor*>                              SideActors;                                               // 0x0008(0x0010) (CPF_ZeroConstructor)
 	int                                                SocketIndex;                                              // 0x0018(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct RoadRuntime.SideMeshManager
@@ -48,6 +51,7 @@ struct FSideMeshManager
 	class AActor*                                      Owner;                                                    // 0x0008(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class UHierarchicalInstancedStaticMeshComponent*   SideMeshes;                                               // 0x0010(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 	int                                                SocketIndex;                                              // 0x0018(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct RoadRuntime.CurbsManager

@@ -13,7 +13,7 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // Enum CoreUObject.EInterpCurveMode
-enum class EInterpCurveMode
+enum class EInterpCurveMode : uint8_t
 {
 	CIM_Linear                     = 0,
 	CIM_CurveAuto                  = 1,
@@ -26,7 +26,7 @@ enum class EInterpCurveMode
 
 
 // Enum CoreUObject.ERangeBoundTypes
-enum class ERangeBoundTypes
+enum class ERangeBoundTypes : uint8_t
 {
 	ERangeBoundTypes__Exclusive    = 0,
 	ERangeBoundTypes__Inclusive    = 1,
@@ -36,7 +36,7 @@ enum class ERangeBoundTypes
 
 
 // Enum CoreUObject.EUnit
-enum class EUnit
+enum class EUnit : uint8_t
 {
 	EUnit__Micrometers             = 0,
 	EUnit__Millimeters             = 1,
@@ -92,7 +92,7 @@ enum class EUnit
 
 
 // Enum CoreUObject.EMouseCursor
-enum class EMouseCursor
+enum class EMouseCursor : uint8_t
 {
 	EMouseCursor__None             = 0,
 	EMouseCursor__Default          = 1,
@@ -113,7 +113,7 @@ enum class EMouseCursor
 
 
 // Enum CoreUObject.EPixelFormat
-enum class EPixelFormat
+enum class EPixelFormat : uint8_t
 {
 	PF_Unknown                     = 0,
 	PF_A32B32G32R32F               = 1,
@@ -178,7 +178,7 @@ enum class EPixelFormat
 
 
 // Enum CoreUObject.EAxis
-enum class EAxis
+enum class EAxis : uint8_t
 {
 	EAxis__None                    = 0,
 	EAxis__X                       = 1,
@@ -189,7 +189,7 @@ enum class EAxis
 
 
 // Enum CoreUObject.ELogTimes
-enum class ELogTimes
+enum class ELogTimes : uint8_t
 {
 	ELogTimes__None                = 0,
 	ELogTimes__UTC                 = 1,
@@ -199,7 +199,7 @@ enum class ELogTimes
 
 
 // Enum CoreUObject.ESearchDir
-enum class ESearchDir
+enum class ESearchDir : uint8_t
 {
 	ESearchDir__FromStart          = 0,
 	ESearchDir__FromEnd            = 1,
@@ -208,7 +208,7 @@ enum class ESearchDir
 
 
 // Enum CoreUObject.ESearchCase
-enum class ESearchCase
+enum class ESearchCase : uint8_t
 {
 	ESearchCase__CaseSensitive     = 0,
 	ESearchCase__IgnoreCase        = 1,
@@ -217,7 +217,7 @@ enum class ESearchCase
 
 
 // Enum CoreUObject.ELifetimeCondition
-enum class ELifetimeCondition
+enum class ELifetimeCondition : uint8_t
 {
 	COND_None                      = 0,
 	COND_InitialOnly               = 1,
@@ -246,19 +246,20 @@ enum class ELifetimeCondition
 struct FJoinabilitySettings
 {
 	struct FName                                       SessionName;                                              // 0x0000(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      bPublicSearchable : 1;                                    // 0x0008(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      bAllowInvites : 1;                                        // 0x0009(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      bJoinViaPresence : 1;                                     // 0x000A(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      bJoinViaPresenceFriendsOnly : 1;                          // 0x000B(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bPublicSearchable;                                        // 0x0008(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bAllowInvites;                                            // 0x0009(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bJoinViaPresence;                                         // 0x000A(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bJoinViaPresenceFriendsOnly;                              // 0x000B(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int                                                MaxPlayers;                                               // 0x000C(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int                                                MaxPartySize;                                             // 0x0010(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct CoreUObject.UniqueNetIdWrapper
 // 0x0001
 struct FUniqueNetIdWrapper
 {
-
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 };
 
 // ScriptStruct CoreUObject.Guid
@@ -423,6 +424,7 @@ struct FBox
 	class Vector3D                                     Min;                                                      // 0x0000(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_SaveGame, CPF_IsPlainOldData)
 	class Vector3D                                     Max;                                                      // 0x000C(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_SaveGame, CPF_IsPlainOldData)
 	unsigned char                                      IsValid;                                                  // 0x0018(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0019(0x0003) MISSED OFFSET
 };
 
 // ScriptStruct CoreUObject.Box2D
@@ -432,6 +434,7 @@ struct FBox2D
 	class Vector2D                                     Min;                                                      // 0x0000(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_SaveGame, CPF_IsPlainOldData)
 	class Vector2D                                     Max;                                                      // 0x0008(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_SaveGame, CPF_IsPlainOldData)
 	unsigned char                                      IsValid;                                                  // 0x0010(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0011(0x0003) MISSED OFFSET
 };
 
 // ScriptStruct CoreUObject.BoxSphereBounds
@@ -475,6 +478,7 @@ struct FInterpCurvePointFloat
 	float                                              ArriveTangent;                                            // 0x0008(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              LeaveTangent;                                             // 0x000C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	TEnumAsByte<EInterpCurveMode>                      InterpMode;                                               // 0x0010(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0011(0x0003) MISSED OFFSET
 };
 
 // ScriptStruct CoreUObject.InterpCurveFloat
@@ -482,7 +486,8 @@ struct FInterpCurvePointFloat
 struct FInterpCurveFloat
 {
 	TArray<struct FInterpCurvePointFloat>              Points;                                                   // 0x0000(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
-	unsigned char                                      bIsLooped : 1;                                            // 0x0010(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bIsLooped;                                                // 0x0010(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0011(0x0003) MISSED OFFSET
 	float                                              LoopKeyOffset;                                            // 0x0014(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
@@ -495,6 +500,7 @@ struct FInterpCurvePointVector2D
 	class Vector2D                                     ArriveTangent;                                            // 0x000C(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class Vector2D                                     LeaveTangent;                                             // 0x0014(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	TEnumAsByte<EInterpCurveMode>                      InterpMode;                                               // 0x001C(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x001D(0x0003) MISSED OFFSET
 };
 
 // ScriptStruct CoreUObject.InterpCurveVector2D
@@ -502,7 +508,8 @@ struct FInterpCurvePointVector2D
 struct FInterpCurveVector2D
 {
 	TArray<struct FInterpCurvePointVector2D>           Points;                                                   // 0x0000(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
-	unsigned char                                      bIsLooped : 1;                                            // 0x0010(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bIsLooped;                                                // 0x0010(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0011(0x0003) MISSED OFFSET
 	float                                              LoopKeyOffset;                                            // 0x0014(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
@@ -515,6 +522,7 @@ struct FInterpCurvePointVector
 	class Vector3D                                     ArriveTangent;                                            // 0x0010(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class Vector3D                                     LeaveTangent;                                             // 0x001C(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	TEnumAsByte<EInterpCurveMode>                      InterpMode;                                               // 0x0028(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0029(0x0003) MISSED OFFSET
 };
 
 // ScriptStruct CoreUObject.InterpCurveVector
@@ -522,7 +530,8 @@ struct FInterpCurvePointVector
 struct FInterpCurveVector
 {
 	TArray<struct FInterpCurvePointVector>             Points;                                                   // 0x0000(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
-	unsigned char                                      bIsLooped : 1;                                            // 0x0010(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bIsLooped;                                                // 0x0010(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0011(0x0003) MISSED OFFSET
 	float                                              LoopKeyOffset;                                            // 0x0014(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
@@ -544,7 +553,8 @@ struct FInterpCurvePointQuat
 struct FInterpCurveQuat
 {
 	TArray<struct FInterpCurvePointQuat>               Points;                                                   // 0x0000(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
-	unsigned char                                      bIsLooped : 1;                                            // 0x0010(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bIsLooped;                                                // 0x0010(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0011(0x0003) MISSED OFFSET
 	float                                              LoopKeyOffset;                                            // 0x0014(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
@@ -557,6 +567,7 @@ struct FInterpCurvePointTwoVectors
 	struct FTwoVectors                                 ArriveTangent;                                            // 0x001C(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	struct FTwoVectors                                 LeaveTangent;                                             // 0x0034(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	TEnumAsByte<EInterpCurveMode>                      InterpMode;                                               // 0x004C(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x004D(0x0003) MISSED OFFSET
 };
 
 // ScriptStruct CoreUObject.InterpCurveTwoVectors
@@ -564,7 +575,8 @@ struct FInterpCurvePointTwoVectors
 struct FInterpCurveTwoVectors
 {
 	TArray<struct FInterpCurvePointTwoVectors>         Points;                                                   // 0x0000(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
-	unsigned char                                      bIsLooped : 1;                                            // 0x0010(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bIsLooped;                                                // 0x0010(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0011(0x0003) MISSED OFFSET
 	float                                              LoopKeyOffset;                                            // 0x0014(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
@@ -577,6 +589,7 @@ struct FInterpCurvePointLinearColor
 	struct FLinearColor                                ArriveTangent;                                            // 0x0014(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	struct FLinearColor                                LeaveTangent;                                             // 0x0024(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	TEnumAsByte<EInterpCurveMode>                      InterpMode;                                               // 0x0034(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0035(0x0003) MISSED OFFSET
 };
 
 // ScriptStruct CoreUObject.InterpCurveLinearColor
@@ -584,7 +597,8 @@ struct FInterpCurvePointLinearColor
 struct FInterpCurveLinearColor
 {
 	TArray<struct FInterpCurvePointLinearColor>        Points;                                                   // 0x0000(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
-	unsigned char                                      bIsLooped : 1;                                            // 0x0010(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bIsLooped;                                                // 0x0010(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0011(0x0003) MISSED OFFSET
 	float                                              LoopKeyOffset;                                            // 0x0014(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
@@ -594,7 +608,9 @@ struct alignas(16) FTransform
 {
 	struct FQuat                                       Rotation;                                                 // 0x0000(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_SaveGame, CPF_IsPlainOldData)
 	class Vector3D                                     Translation;                                              // 0x0010(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_SaveGame, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
 	class Vector3D                                     Scale3D;                                                  // 0x0020(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_SaveGame, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct CoreUObject.RandomStream
@@ -637,7 +653,7 @@ struct FStringClassReference : public FStringAssetReference
 // 0x0001
 struct FFallbackStruct
 {
-
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 };
 
 // ScriptStruct CoreUObject.FloatRangeBound
@@ -645,6 +661,7 @@ struct FFallbackStruct
 struct FFloatRangeBound
 {
 	TEnumAsByte<ERangeBoundTypes>                      Type;                                                     // 0x0000(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
 	float                                              Value;                                                    // 0x0004(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
@@ -661,6 +678,7 @@ struct FFloatRange
 struct FInt32RangeBound
 {
 	TEnumAsByte<ERangeBoundTypes>                      Type;                                                     // 0x0000(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
 	int                                                Value;                                                    // 0x0004(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 

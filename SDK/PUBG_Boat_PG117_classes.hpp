@@ -17,6 +17,7 @@ namespace Classes
 class ABoat_PG117_C : public ABoatBase_C
 {
 public:
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0514(0x0004) MISSED OFFSET
 	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0518(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_DuplicateTransient)
 	class USphereComponent*                            Sphere4;                                                  // 0x0520(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class UVehicleSeatInteractionComponent*            PassengerBCSeat;                                          // 0x0528(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)

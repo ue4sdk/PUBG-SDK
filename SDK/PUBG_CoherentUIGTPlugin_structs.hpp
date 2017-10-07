@@ -13,7 +13,7 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // Enum CoherentUIGTPlugin.ECoherentUIGTMSAA
-enum class ECoherentUIGTMSAA
+enum class ECoherentUIGTMSAA : uint8_t
 {
 	ECoherentUIGTMSAA__MSAA_1x     = 0,
 	ECoherentUIGTMSAA__MSAA_2x     = 1,
@@ -23,7 +23,7 @@ enum class ECoherentUIGTMSAA
 
 
 // Enum CoherentUIGTPlugin.ECoherentUIGTSettingsSeverity
-enum class ECoherentUIGTSettingsSeverity
+enum class ECoherentUIGTSettingsSeverity : uint8_t
 {
 	ECoherentUIGTSettingsSeverity__Trace = 0,
 	ECoherentUIGTSettingsSeverity__Debug = 1,
@@ -36,7 +36,7 @@ enum class ECoherentUIGTSettingsSeverity
 
 
 // Enum CoherentUIGTPlugin.ECoherentUIGTInputPropagationBehaviour
-enum class ECoherentUIGTInputPropagationBehaviour
+enum class ECoherentUIGTInputPropagationBehaviour : uint8_t
 {
 	ECoherentUIGTInputPropagationBehaviour__None = 0,
 	ECoherentUIGTInputPropagationBehaviour__Keyboard = 1,
@@ -47,7 +47,7 @@ enum class ECoherentUIGTInputPropagationBehaviour
 
 
 // Enum CoherentUIGTPlugin.EGamepadBehaviourOnFocusLost
-enum class EGamepadBehaviourOnFocusLost
+enum class EGamepadBehaviourOnFocusLost : uint8_t
 {
 	ResetState                     = 0,
 	UseCurrentState                = 1,
@@ -57,7 +57,7 @@ enum class EGamepadBehaviourOnFocusLost
 
 
 // Enum CoherentUIGTPlugin.EGTInputWidgetLineTraceMode
-enum class EGTInputWidgetLineTraceMode
+enum class EGTInputWidgetLineTraceMode : uint8_t
 {
 	GTInputLineTrace_Single        = 0,
 	GTInputLineTrace_Multi         = 1,
@@ -66,7 +66,7 @@ enum class EGTInputWidgetLineTraceMode
 
 
 // Enum CoherentUIGTPlugin.EGTInputWidgetRaycastQuality
-enum class EGTInputWidgetRaycastQuality
+enum class EGTInputWidgetRaycastQuality : uint8_t
 {
 	RaycastQuality_Fast            = 0,
 	RaycastQuality_Balanced        = 1,
@@ -86,7 +86,8 @@ struct FCoherentUIGTViewInfo
 {
 	int                                                Width;                                                    // 0x0000(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int                                                Height;                                                   // 0x0004(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      IsTransparent : 1;                                        // 0x0008(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               IsTransparent;                                            // 0x0008(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0009(0x0003) MISSED OFFSET
 	float                                              ClickThroughAlphaThreshold;                               // 0x000C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              AnimationFrameDefer;                                      // 0x0010(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };

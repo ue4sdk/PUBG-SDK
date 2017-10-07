@@ -18,8 +18,9 @@ class UMotionControllerComponent : public UPrimitiveComponent
 {
 public:
 	unsigned char                                      bDisableLowLatencyUpdate : 1;                             // 0x06D0(0x0001) (CPF_Edit, CPF_BlueprintVisible)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x06D1(0x0003) MISSED OFFSET
 	TEnumAsByte<ETrackingStatus>                       CurrentTrackingStatus;                                    // 0x06D4(0x0001) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x1B];                                      // 0x06D5(0x001B) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x1B];                                      // 0x06D5(0x001B) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

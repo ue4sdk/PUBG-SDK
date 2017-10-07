@@ -13,7 +13,7 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // Enum ProceduralMeshComponent.EProcMeshSliceCapOption
-enum class EProcMeshSliceCapOption
+enum class EProcMeshSliceCapOption : uint8_t
 {
 	EProcMeshSliceCapOption__NoCap = 0,
 	EProcMeshSliceCapOption__CreateNewSectionForCap = 1,
@@ -32,7 +32,8 @@ enum class EProcMeshSliceCapOption
 struct FProcMeshTangent
 {
 	class Vector3D                                     TangentX;                                                 // 0x0000(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      bFlipTangentY : 1;                                        // 0x000C(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bFlipTangentY;                                            // 0x000C(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x000D(0x0003) MISSED OFFSET
 };
 
 // ScriptStruct ProceduralMeshComponent.ProcMeshVertex
@@ -53,8 +54,9 @@ struct FProcMeshSection
 	TArray<struct FProcMeshVertex>                     ProcVertexBuffer;                                         // 0x0000(0x0010) (CPF_ZeroConstructor)
 	TArray<int>                                        ProcIndexBuffer;                                          // 0x0010(0x0010) (CPF_ZeroConstructor)
 	struct FBox                                        SectionLocalBox;                                          // 0x0020(0x001C) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      bEnableCollision : 1;                                     // 0x003C(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      bSectionVisible : 1;                                      // 0x003D(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bEnableCollision;                                         // 0x003C(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bSectionVisible;                                          // 0x003D(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x003E(0x0002) MISSED OFFSET
 };
 
 }

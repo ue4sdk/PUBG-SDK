@@ -13413,9 +13413,9 @@ void UWheeledVehicleMovementComponent::ServerUpdateState(float InSteeringInput, 
 // Function Engine.WheeledVehicleMovementComponent.OnRep_TirePunctured
 // (FUNC_Native, FUNC_Public)
 // Parameters:
-// TArray<unsigned char>          LastTirePunctured              (CPF_Parm, CPF_ZeroConstructor)
+// TArray<bool>                   LastTirePunctured              (CPF_Parm, CPF_ZeroConstructor)
 
-void UWheeledVehicleMovementComponent::OnRep_TirePunctured(TArray<unsigned char> LastTirePunctured)
+void UWheeledVehicleMovementComponent::OnRep_TirePunctured(TArray<bool> LastTirePunctured)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Engine.WheeledVehicleMovementComponent.OnRep_TirePunctured");
 

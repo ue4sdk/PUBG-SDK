@@ -29,6 +29,7 @@ struct FLightPropagationVolumeSettings
 	unsigned char                                      bOverride_LPVGeometryVolumeBias : 1;                      // 0x0001(0x0001) (CPF_Edit, CPF_BlueprintVisible)
 	unsigned char                                      bOverride_LPVVplInjectionBias : 1;                        // 0x0001(0x0001) (CPF_Edit, CPF_BlueprintVisible)
 	unsigned char                                      bOverride_LPVEmissiveInjectionIntensity : 1;              // 0x0001(0x0001) (CPF_Edit, CPF_BlueprintVisible)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x0002(0x0002) MISSED OFFSET
 	float                                              LPVIntensity;                                             // 0x0004(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              LPVVplInjectionBias;                                      // 0x0008(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              LPVSize;                                                  // 0x000C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)

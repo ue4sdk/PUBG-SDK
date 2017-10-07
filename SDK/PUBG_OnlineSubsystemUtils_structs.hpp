@@ -13,7 +13,7 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // Enum OnlineSubsystemUtils.EBeaconConnectionState
-enum class EBeaconConnectionState
+enum class EBeaconConnectionState : uint8_t
 {
 	EBeaconConnectionState__Invalid = 0,
 	EBeaconConnectionState__Closed = 1,
@@ -24,7 +24,7 @@ enum class EBeaconConnectionState
 
 
 // Enum OnlineSubsystemUtils.EPartyReservationResult
-enum class EPartyReservationResult
+enum class EPartyReservationResult : uint8_t
 {
 	EPartyReservationResult__NoResult = 0,
 	EPartyReservationResult__RequestPending = 1,
@@ -45,7 +45,7 @@ enum class EPartyReservationResult
 
 
 // Enum OnlineSubsystemUtils.EClientRequestType
-enum class EClientRequestType
+enum class EClientRequestType : uint8_t
 {
 	EClientRequestType__NonePending = 0,
 	EClientRequestType__ExistingSessionReservation = 1,
@@ -61,6 +61,13 @@ enum class EClientRequestType
 //Script Structs
 //---------------------------------------------------------------------------
 
+// ScriptStruct OnlineSubsystemUtils.BlueprintSessionResult
+// 0x00B8
+struct FBlueprintSessionResult
+{
+	unsigned char                                      UnknownData00[0xB8];                                      // 0x0000(0x00B8) MISSED OFFSET
+};
+
 // ScriptStruct OnlineSubsystemUtils.PlayerReservation
 // 0x0030
 struct FPlayerReservation
@@ -68,6 +75,7 @@ struct FPlayerReservation
 	struct FUniqueNetIdRepl                            UniqueId;                                                 // 0x0000(0x0018) (CPF_Transient)
 	struct FString                                     ValidationStr;                                            // 0x0018(0x0010) (CPF_ZeroConstructor, CPF_Transient)
 	float                                              ElapsedTime;                                              // 0x0028(0x0004) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct OnlineSubsystemUtils.PartyReservation
@@ -75,6 +83,7 @@ struct FPlayerReservation
 struct FPartyReservation
 {
 	int                                                TeamNum;                                                  // 0x0000(0x0004) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
 	struct FUniqueNetIdRepl                            PartyLeader;                                              // 0x0008(0x0018) (CPF_Transient)
 	TArray<struct FPlayerReservation>                  PartyMembers;                                             // 0x0020(0x0010) (CPF_ZeroConstructor, CPF_Transient)
 };
@@ -87,13 +96,6 @@ struct FPIELoginSettingsInternal
 	struct FString                                     Token;                                                    // 0x0010(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Transient)
 	struct FString                                     Type;                                                     // 0x0020(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 	TArray<unsigned char>                              TokenBytes;                                               // 0x0030(0x0010) (CPF_ZeroConstructor)
-};
-
-// ScriptStruct OnlineSubsystemUtils.BlueprintSessionResult
-// 0x00B8
-struct FBlueprintSessionResult
-{
-	unsigned char                                      UnknownData00[0xB8];                                      // 0x0000(0x00B8) MISSED OFFSET
 };
 
 }

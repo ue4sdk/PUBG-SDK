@@ -13,7 +13,7 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // Enum MovieScene.ESpawnOwnership
-enum class ESpawnOwnership
+enum class ESpawnOwnership : uint8_t
 {
 	ESpawnOwnership__InnerSequence = 0,
 	ESpawnOwnership__MasterSequence = 1,
@@ -23,7 +23,7 @@ enum class ESpawnOwnership
 
 
 // Enum MovieScene.EMovieSceneKeyInterpolation
-enum class EMovieSceneKeyInterpolation
+enum class EMovieSceneKeyInterpolation : uint8_t
 {
 	EMovieSceneKeyInterpolation__Auto = 0,
 	EMovieSceneKeyInterpolation__User = 1,
@@ -48,6 +48,7 @@ struct FMovieSceneSpawnable
 	class UObject*                                     ObjectTemplate;                                           // 0x0020(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	TArray<struct FGuid>                               ChildPossessables;                                        // 0x0028(0x0010) (CPF_ZeroConstructor)
 	TEnumAsByte<ESpawnOwnership>                       Ownership;                                                // 0x0038(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0039(0x0007) MISSED OFFSET
 };
 
 // ScriptStruct MovieScene.MovieScenePossessable
@@ -80,7 +81,7 @@ struct FMovieSceneTrackLabels
 // 0x0001
 struct FMovieSceneExpansionState
 {
-	unsigned char                                      bExpanded : 1;                                            // 0x0000(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bExpanded;                                                // 0x0000(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // ScriptStruct MovieScene.MovieSceneEditorData

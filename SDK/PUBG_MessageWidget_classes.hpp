@@ -23,6 +23,7 @@ public:
 	struct FText                                       Message;                                                  // 0x0258(0x0018) (CPF_Edit, CPF_BlueprintVisible)
 	struct FScriptMulticastDelegate                    MessageEnd;                                               // 0x0270(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_BlueprintAssignable)
 	TEnumAsByte<ETextJustify>                          TextAlignment;                                            // 0x0280(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0281(0x0007) MISSED OFFSET
 	struct FSlateColor                                 TextColor;                                                // 0x0288(0x0028) (CPF_Edit, CPF_BlueprintVisible)
 	int                                                TextSize;                                                 // 0x02B0(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 

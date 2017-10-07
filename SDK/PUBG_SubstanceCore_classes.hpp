@@ -20,7 +20,8 @@ public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
 	class USubstanceInstanceFactory*                   Parent;                                                   // 0x0030(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	TArray<class UObject*>                             ImageSources;                                             // 0x0038(0x0010) (CPF_ZeroConstructor)
-	unsigned char                                      bFreezed : 1;                                             // 0x0048(0x0001) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bFreezed;                                                 // 0x0048(0x0001) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x0049(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -53,6 +54,7 @@ public:
 	int                                                SizeX;                                                    // 0x0120(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
 	int                                                SizeY;                                                    // 0x0124(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
 	int                                                NumComponents;                                            // 0x0128(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x012C(0x0004) MISSED OFFSET
 	struct FString                                     SourceFilePath;                                           // 0x0130(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst)
 	struct FString                                     SourceFileTimestamp;                                      // 0x0140(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst)
 	TArray<class USubstanceGraphInstance*>             Consumers;                                                // 0x0150(0x0010) (CPF_ZeroConstructor, CPF_Transient)
@@ -73,6 +75,7 @@ class USubstanceInstanceFactory : public UObject
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
 	TEnumAsByte<ESubstanceGenerationMode>              GenerationMode;                                           // 0x0030(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -93,6 +96,7 @@ public:
 	int                                                AsyncLoadMipClip;                                         // 0x0030(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 	TEnumAsByte<ESubstanceGenerationMode>              DefaultGenerationMode;                                    // 0x0034(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 	TEnumAsByte<ESubstanceEngineType>                  SubstanceEngine;                                          // 0x0035(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x0036(0x0002) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

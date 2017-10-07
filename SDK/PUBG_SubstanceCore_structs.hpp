@@ -13,7 +13,7 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // Enum SubstanceCore.ESubstanceInputType
-enum class ESubstanceInputType
+enum class ESubstanceInputType : uint8_t
 {
 	SIT_Float                      = 0,
 	SIT_Float2                     = 1,
@@ -31,7 +31,7 @@ enum class ESubstanceInputType
 
 
 // Enum SubstanceCore.ESubstanceGenerationMode
-enum class ESubstanceGenerationMode
+enum class ESubstanceGenerationMode : uint8_t
 {
 	SGM_PlatformDefault            = 0,
 	SGM_Baked                      = 1,
@@ -44,7 +44,7 @@ enum class ESubstanceGenerationMode
 
 
 // Enum SubstanceCore.ESubstanceEngineType
-enum class ESubstanceEngineType
+enum class ESubstanceEngineType : uint8_t
 {
 	SET_CPU                        = 0,
 	SET_GPU                        = 1,
@@ -53,7 +53,7 @@ enum class ESubstanceEngineType
 
 
 // Enum SubstanceCore.ESubstanceTextureSize
-enum class ESubstanceTextureSize
+enum class ESubstanceTextureSize : uint8_t
 {
 	ERL                            = 0,
 	ERL01                          = 1,
@@ -78,6 +78,16 @@ struct FSubstanceInputDesc
 {
 	struct FString                                     Name;                                                     // 0x0000(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst)
 	TEnumAsByte<ESubstanceInputType>                   Type;                                                     // 0x0010(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0011(0x0007) MISSED OFFSET
+};
+
+// ScriptStruct SubstanceCore.SubstanceIntInputDesc
+// 0x0030 (0x0048 - 0x0018)
+struct FSubstanceIntInputDesc : public FSubstanceInputDesc
+{
+	TArray<int>                                        Min;                                                      // 0x0018(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst)
+	TArray<int>                                        Max;                                                      // 0x0028(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst)
+	TArray<int>                                        Default;                                                  // 0x0038(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst)
 };
 
 // ScriptStruct SubstanceCore.SubstanceInstanceDesc
@@ -95,15 +105,6 @@ struct FSubstanceFloatInputDesc : public FSubstanceInputDesc
 	TArray<float>                                      Min;                                                      // 0x0018(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst)
 	TArray<float>                                      Max;                                                      // 0x0028(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst)
 	TArray<float>                                      Default;                                                  // 0x0038(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst)
-};
-
-// ScriptStruct SubstanceCore.SubstanceIntInputDesc
-// 0x0030 (0x0048 - 0x0018)
-struct FSubstanceIntInputDesc : public FSubstanceInputDesc
-{
-	TArray<int>                                        Min;                                                      // 0x0018(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst)
-	TArray<int>                                        Max;                                                      // 0x0028(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst)
-	TArray<int>                                        Default;                                                  // 0x0038(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst)
 };
 
 }

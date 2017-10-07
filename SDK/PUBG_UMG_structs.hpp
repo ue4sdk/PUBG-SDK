@@ -13,7 +13,7 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // Enum UMG.ESlateVisibility
-enum class ESlateVisibility
+enum class ESlateVisibility : uint8_t
 {
 	ESlateVisibility__Visible      = 0,
 	ESlateVisibility__Collapsed    = 1,
@@ -25,7 +25,7 @@ enum class ESlateVisibility
 
 
 // Enum UMG.EVirtualKeyboardType
-enum class EVirtualKeyboardType
+enum class EVirtualKeyboardType : uint8_t
 {
 	EVirtualKeyboardType__Default  = 0,
 	EVirtualKeyboardType__Number   = 1,
@@ -38,7 +38,7 @@ enum class EVirtualKeyboardType
 
 
 // Enum UMG.EDragPivot
-enum class EDragPivot
+enum class EDragPivot : uint8_t
 {
 	EDragPivot__MouseDown          = 0,
 	EDragPivot__TopLeft            = 1,
@@ -55,7 +55,7 @@ enum class EDragPivot
 
 
 // Enum UMG.ESlateSizeRule
-enum class ESlateSizeRule
+enum class ESlateSizeRule : uint8_t
 {
 	ESlateSizeRule__Automatic      = 0,
 	ESlateSizeRule__Fill           = 1,
@@ -64,7 +64,7 @@ enum class ESlateSizeRule
 
 
 // Enum UMG.EWidgetDesignFlags
-enum class EWidgetDesignFlags
+enum class EWidgetDesignFlags : uint8_t
 {
 	EWidgetDesignFlags__None       = 0,
 	EWidgetDesignFlags__Designing  = 1,
@@ -74,7 +74,7 @@ enum class EWidgetDesignFlags
 
 
 // Enum UMG.EDesignPreviewSizeMode
-enum class EDesignPreviewSizeMode
+enum class EDesignPreviewSizeMode : uint8_t
 {
 	EDesignPreviewSizeMode__FillScreen = 0,
 	EDesignPreviewSizeMode__Custom = 1,
@@ -86,7 +86,7 @@ enum class EDesignPreviewSizeMode
 
 
 // Enum UMG.EUMGSequencePlayMode
-enum class EUMGSequencePlayMode
+enum class EUMGSequencePlayMode : uint8_t
 {
 	EUMGSequencePlayMode__Forward  = 0,
 	EUMGSequencePlayMode__Reverse  = 1,
@@ -96,7 +96,7 @@ enum class EUMGSequencePlayMode
 
 
 // Enum UMG.EBindingKind
-enum class EBindingKind
+enum class EBindingKind : uint8_t
 {
 	EBindingKind__Function         = 0,
 	EBindingKind__Property         = 1,
@@ -105,7 +105,7 @@ enum class EBindingKind
 
 
 // Enum UMG.EWidgetBlendMode
-enum class EWidgetBlendMode
+enum class EWidgetBlendMode : uint8_t
 {
 	EWidgetBlendMode__Opaque       = 0,
 	EWidgetBlendMode__Masked       = 1,
@@ -115,7 +115,7 @@ enum class EWidgetBlendMode
 
 
 // Enum UMG.EWidgetSpace
-enum class EWidgetSpace
+enum class EWidgetSpace : uint8_t
 {
 	EWidgetSpace__World            = 0,
 	EWidgetSpace__Screen           = 1,
@@ -124,7 +124,7 @@ enum class EWidgetSpace
 
 
 // Enum UMG.EWidgetInteractionSource
-enum class EWidgetInteractionSource
+enum class EWidgetInteractionSource : uint8_t
 {
 	EWidgetInteractionSource__World = 0,
 	EWidgetInteractionSource__Mouse = 1,
@@ -149,6 +149,13 @@ struct FWidgetTransform
 	float                                              Angle;                                                    // 0x0018(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
+// ScriptStruct UMG.EventReply
+// 0x00A8
+struct FEventReply
+{
+	unsigned char                                      UnknownData00[0xA8];                                      // 0x0000(0x00A8) MISSED OFFSET
+};
+
 // ScriptStruct UMG.NamedSlotBinding
 // 0x0010
 struct FNamedSlotBinding
@@ -157,12 +164,20 @@ struct FNamedSlotBinding
 	class UWidget*                                     Content;                                                  // 0x0008(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
+// ScriptStruct UMG.PaintContext
+// 0x0030
+struct FPaintContext
+{
+	unsigned char                                      UnknownData00[0x30];                                      // 0x0000(0x0030) MISSED OFFSET
+};
+
 // ScriptStruct UMG.PropertyPathSegment
 // 0x0020
 struct FPropertyPathSegment
 {
 	struct FName                                       Name;                                                     // 0x0000(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int                                                ArrayIndex;                                               // 0x0008(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
 	class UStruct*                                     Struct;                                                   // 0x0010(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 	class UField*                                      Field;                                                    // 0x0018(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 };
@@ -203,6 +218,7 @@ struct FSlateChildSize
 {
 	float                                              Value;                                                    // 0x0000(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	TEnumAsByte<ESlateSizeRule>                        SizeRule;                                                 // 0x0004(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0005(0x0003) MISSED OFFSET
 };
 
 // ScriptStruct UMG.ShapedTextOptions
@@ -211,8 +227,10 @@ struct FShapedTextOptions
 {
 	unsigned char                                      bOverride_TextShapingMethod : 1;                          // 0x0000(0x0001) (CPF_Edit)
 	unsigned char                                      bOverride_TextFlowDirection : 1;                          // 0x0000(0x0001) (CPF_Edit)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
 	TEnumAsByte<ETextShapingMethod>                    TextShapingMethod;                                        // 0x0004(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	TEnumAsByte<ETextFlowDirection>                    TextFlowDirection;                                        // 0x0005(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x2];                                       // 0x0006(0x0002) MISSED OFFSET
 };
 
 // ScriptStruct UMG.WidgetAnimationBinding
@@ -222,7 +240,8 @@ struct FWidgetAnimationBinding
 	struct FName                                       WidgetName;                                               // 0x0000(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	struct FName                                       SlotWidgetName;                                           // 0x0008(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	struct FGuid                                       AnimationGuid;                                            // 0x0010(0x0010) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      bIsRootWidget : 1;                                        // 0x0020(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bIsRootWidget;                                            // 0x0020(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0021(0x0007) MISSED OFFSET
 };
 
 // ScriptStruct UMG.DelegateRuntimeBinding
@@ -234,6 +253,7 @@ struct FDelegateRuntimeBinding
 	struct FName                                       FunctionName;                                             // 0x0018(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	struct FDynamicPropertyPath                        SourcePath;                                               // 0x0020(0x0010)
 	TEnumAsByte<EBindingKind>                          Kind;                                                     // 0x0030(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
 };
 
 // ScriptStruct UMG.WidgetNavigationData
@@ -241,22 +261,9 @@ struct FDelegateRuntimeBinding
 struct FWidgetNavigationData
 {
 	TEnumAsByte<EUINavigationRule>                     Rule;                                                     // 0x0000(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
 	struct FName                                       WidgetToFocus;                                            // 0x0008(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0010(0x0008) MISSED OFFSET
-};
-
-// ScriptStruct UMG.EventReply
-// 0x00A8
-struct FEventReply
-{
-	unsigned char                                      UnknownData00[0xA8];                                      // 0x0000(0x00A8) MISSED OFFSET
-};
-
-// ScriptStruct UMG.PaintContext
-// 0x0030
-struct FPaintContext
-{
-	unsigned char                                      UnknownData00[0x30];                                      // 0x0000(0x0030) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x8];                                       // 0x0010(0x0008) MISSED OFFSET
 };
 
 }

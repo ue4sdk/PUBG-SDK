@@ -71,13 +71,14 @@ class UGeometryCacheComponent : public UMeshComponent
 {
 public:
 	class UGeometryCache*                              GeometryCache;                                            // 0x0780(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      bRunning : 1;                                             // 0x0788(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      bLooping : 1;                                             // 0x0789(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bRunning;                                                 // 0x0788(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bLooping;                                                 // 0x0789(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x078A(0x0002) MISSED OFFSET
 	float                                              StartTimeOffset;                                          // 0x078C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              PlaybackSpeed;                                            // 0x0790(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int                                                NumTracks;                                                // 0x0794(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
 	float                                              ElapsedTime;                                              // 0x0798(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x64];                                      // 0x079C(0x0064) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x64];                                      // 0x079C(0x0064) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

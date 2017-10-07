@@ -13,7 +13,7 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // Enum AudioMixer.ESourceEffectFilter
-enum class ESourceEffectFilter
+enum class ESourceEffectFilter : uint8_t
 {
 	ESourceEffectFilter__LowPass   = 0,
 	ESourceEffectFilter__HighPass  = 1,
@@ -42,6 +42,7 @@ struct FSoundEffectLowPassFilterSettings
 struct FSourceEffectFilterSettings
 {
 	TEnumAsByte<ESourceEffectFilter>                   FilterType;                                               // 0x0000(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
 	float                                              GainDb;                                                   // 0x0004(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              CutoffFrequency;                                          // 0x0008(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              Q;                                                        // 0x000C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -51,7 +52,7 @@ struct FSourceEffectFilterSettings
 // 0x0001
 struct FSubmixEffectEQSettings
 {
-
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 };
 
 }

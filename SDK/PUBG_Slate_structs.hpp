@@ -13,7 +13,7 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // Enum Slate.ETextFlowDirection
-enum class ETextFlowDirection
+enum class ETextFlowDirection : uint8_t
 {
 	ETextFlowDirection__Auto       = 0,
 	ETextFlowDirection__LeftToRight = 1,
@@ -23,7 +23,7 @@ enum class ETextFlowDirection
 
 
 // Enum Slate.ETextWrappingPolicy
-enum class ETextWrappingPolicy
+enum class ETextWrappingPolicy : uint8_t
 {
 	ETextWrappingPolicy__DefaultWrapping = 0,
 	ETextWrappingPolicy__AllowPerCharacterWrapping = 1,
@@ -32,7 +32,7 @@ enum class ETextWrappingPolicy
 
 
 // Enum Slate.ETextJustify
-enum class ETextJustify
+enum class ETextJustify : uint8_t
 {
 	ETextJustify__Left             = 0,
 	ETextJustify__Center           = 1,
@@ -42,7 +42,7 @@ enum class ETextJustify
 
 
 // Enum Slate.ETableViewMode
-enum class ETableViewMode
+enum class ETableViewMode : uint8_t
 {
 	ETableViewMode__List           = 0,
 	ETableViewMode__Tile           = 1,
@@ -52,7 +52,7 @@ enum class ETableViewMode
 
 
 // Enum Slate.ESelectionMode
-enum class ESelectionMode
+enum class ESelectionMode : uint8_t
 {
 	ESelectionMode__None           = 0,
 	ESelectionMode__Single         = 1,
@@ -63,7 +63,7 @@ enum class ESelectionMode
 
 
 // Enum Slate.EStretch
-enum class EStretch
+enum class EStretch : uint8_t
 {
 	EStretch__None                 = 0,
 	EStretch__Fill                 = 1,
@@ -78,7 +78,7 @@ enum class EStretch
 
 
 // Enum Slate.EStretchDirection
-enum class EStretchDirection
+enum class EStretchDirection : uint8_t
 {
 	EStretchDirection__Both        = 0,
 	EStretchDirection__DownOnly    = 1,
@@ -88,7 +88,7 @@ enum class EStretchDirection
 
 
 // Enum Slate.EProgressBarFillType
-enum class EProgressBarFillType
+enum class EProgressBarFillType : uint8_t
 {
 	EProgressBarFillType__LeftToRight = 0,
 	EProgressBarFillType__RightToLeft = 1,
@@ -113,6 +113,7 @@ struct FInputChord
 	unsigned char                                      bCtrl : 1;                                                // 0x0018(0x0001)
 	unsigned char                                      bAlt : 1;                                                 // 0x0018(0x0001)
 	unsigned char                                      bCmd : 1;                                                 // 0x0018(0x0001)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0019(0x0007) MISSED OFFSET
 };
 
 // ScriptStruct Slate.Anchors

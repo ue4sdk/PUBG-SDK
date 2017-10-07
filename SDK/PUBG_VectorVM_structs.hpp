@@ -13,7 +13,7 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // Enum VectorVM.EVectorVMOp
-enum class EVectorVMOp
+enum class EVectorVMOp : uint8_t
 {
 	EVectorVMOp__done              = 0,
 	EVectorVMOp__add               = 1,
@@ -84,7 +84,7 @@ enum class EVectorVMOp
 
 
 // Enum VectorVM.EVectorVMOperandLocation
-enum class EVectorVMOperandLocation
+enum class EVectorVMOperandLocation : uint8_t
 {
 	EVectorVMOperandLocation__TemporaryRegister = 0,
 	EVectorVMOperandLocation__InputRegister = 1,

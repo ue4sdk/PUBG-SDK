@@ -298,8 +298,9 @@ class UIpNetDriver : public UNetDriver
 public:
 	unsigned char                                      LogPortUnreach : 1;                                       // 0x0418(0x0001) (CPF_Config)
 	unsigned char                                      AllowPlayerPortUnreach : 1;                               // 0x0418(0x0001) (CPF_Config)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0419(0x0003) MISSED OFFSET
 	uint32_t                                           MaxPortCountToTry;                                        // 0x041C(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0420(0x0018) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x18];                                      // 0x0420(0x0018) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -482,8 +483,8 @@ public:
 	struct FString                                     DestSessionId;                                            // 0x04F0(0x0010) (CPF_ZeroConstructor)
 	struct FPartyReservation                           PendingReservation;                                       // 0x0500(0x0030)
 	TEnumAsByte<EClientRequestType>                    RequestType;                                              // 0x0530(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      bPendingReservationSent : 1;                              // 0x0531(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      bCancelReservation : 1;                                   // 0x0532(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bPendingReservationSent;                                  // 0x0531(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bCancelReservation;                                       // 0x0532(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	unsigned char                                      UnknownData01[0x2D];                                      // 0x0533(0x002D) MISSED OFFSET
 
 	static UClass* StaticClass()
@@ -527,8 +528,9 @@ class AOnlineBeaconHost : public AOnlineBeacon
 {
 public:
 	int                                                ListenPort;                                               // 0x03C8(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x03CC(0x0004) MISSED OFFSET
 	TArray<class AOnlineBeaconClient*>                 ClientActors;                                             // 0x03D0(0x0010) (CPF_ZeroConstructor)
-	unsigned char                                      UnknownData00[0xA0];                                      // 0x03E0(0x00A0) MISSED OFFSET
+	unsigned char                                      UnknownData01[0xA0];                                      // 0x03E0(0x00A0) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -564,9 +566,11 @@ class APartyBeaconHost : public AOnlineBeaconHostObject
 public:
 	class UPartyBeaconState*                           State;                                                    // 0x03C8(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	unsigned char                                      UnknownData00[0x140];                                     // 0x03D0(0x0140) MISSED OFFSET
-	unsigned char                                      bLogoutOnSessionTimeout : 1;                              // 0x0510(0x0001) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	bool                                               bLogoutOnSessionTimeout;                                  // 0x0510(0x0001) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x0511(0x0003) MISSED OFFSET
 	float                                              SessionTimeoutSecs;                                       // 0x0514(0x0004) (CPF_ZeroConstructor, CPF_Transient, CPF_Config, CPF_IsPlainOldData)
 	float                                              TravelSessionTimeoutSecs;                                 // 0x0518(0x0004) (CPF_ZeroConstructor, CPF_Transient, CPF_Config, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x051C(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -613,7 +617,8 @@ public:
 class UOnlinePIESettings : public UDeveloperSettings
 {
 public:
-	unsigned char                                      bOnlinePIEEnabled : 1;                                    // 0x0038(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	bool                                               bOnlinePIEEnabled;                                        // 0x0038(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0039(0x0007) MISSED OFFSET
 	TArray<struct FPIELoginSettingsInternal>           Logins;                                                   // 0x0040(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
 
 	static UClass* StaticClass()
@@ -631,8 +636,8 @@ class UOnlineSessionClient : public UOnlineSession
 {
 public:
 	unsigned char                                      UnknownData00[0x288];                                     // 0x0028(0x0288) MISSED OFFSET
-	unsigned char                                      bIsFromInvite : 1;                                        // 0x02B0(0x0001) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	unsigned char                                      bHandlingDisconnect : 1;                                  // 0x02B1(0x0001) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	bool                                               bIsFromInvite;                                            // 0x02B0(0x0001) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+	bool                                               bHandlingDisconnect;                                      // 0x02B1(0x0001) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 	unsigned char                                      UnknownData01[0xE];                                       // 0x02B2(0x000E) MISSED OFFSET
 
 	static UClass* StaticClass()

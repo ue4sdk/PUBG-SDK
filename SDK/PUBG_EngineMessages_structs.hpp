@@ -57,18 +57,20 @@ struct FEngineServicePong
 {
 	struct FString                                     CurrentLevel;                                             // 0x0000(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 	int                                                EngineVersion;                                            // 0x0010(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      HasBegunPlay : 1;                                         // 0x0014(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               HasBegunPlay;                                             // 0x0014(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0015(0x0003) MISSED OFFSET
 	struct FGuid                                       InstanceId;                                               // 0x0018(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	struct FString                                     InstanceType;                                             // 0x0028(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 	struct FGuid                                       SessionId;                                                // 0x0038(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              WorldTimeSeconds;                                         // 0x0048(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x004C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct EngineMessages.EngineServicePing
 // 0x0001
 struct FEngineServicePing
 {
-
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 };
 
 }

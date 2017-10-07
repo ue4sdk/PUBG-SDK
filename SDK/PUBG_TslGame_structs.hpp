@@ -13,7 +13,7 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // Enum TslGame.EPopupButtonID
-enum class EPopupButtonID
+enum class EPopupButtonID : uint8_t
 {
 	EPopupButtonID__Cancel_Or_No   = 0,
 	EPopupButtonID__Yes_Or_OK      = 1,
@@ -22,7 +22,7 @@ enum class EPopupButtonID
 
 
 // Enum TslGame.ESystemMessageType
-enum class ESystemMessageType
+enum class ESystemMessageType : uint8_t
 {
 	ESystemMessageType__Debug      = 0,
 	ESystemMessageType__Notify     = 1,
@@ -34,7 +34,7 @@ enum class ESystemMessageType
 
 
 // Enum TslGame.EDamageReason
-enum class EDamageReason
+enum class EDamageReason : uint8_t
 {
 	EDamageReason__None            = 0,
 	EDamageReason__HeadShot        = 1,
@@ -48,7 +48,7 @@ enum class EDamageReason
 
 
 // Enum TslGame.EDamageTypeCategory
-enum class EDamageTypeCategory
+enum class EDamageTypeCategory : uint8_t
 {
 	Damage_None                    = 0,
 	Damage_Instant                 = 1,
@@ -70,7 +70,7 @@ enum class EDamageTypeCategory
 
 
 // Enum TslGame.EThrownWeaponType
-enum class EThrownWeaponType
+enum class EThrownWeaponType : uint8_t
 {
 	Thrown_Grenade                 = 0,
 	Thrown_Molotov                 = 1,
@@ -80,7 +80,7 @@ enum class EThrownWeaponType
 
 
 // Enum TslGame.EPowerUpType
-enum class EPowerUpType
+enum class EPowerUpType : uint8_t
 {
 	PowerUp_None                   = 0,
 	PowerUp_Bandage                = 1,
@@ -94,7 +94,7 @@ enum class EPowerUpType
 
 
 // Enum TslGame.EPopupStyle
-enum class EPopupStyle
+enum class EPopupStyle : uint8_t
 {
 	EPopupStyle__Ok_Cancel         = 0,
 	EPopupStyle__Ok                = 1,
@@ -104,7 +104,7 @@ enum class EPopupStyle
 
 
 // Enum TslGame.EWidgetShowType
-enum class EWidgetShowType
+enum class EWidgetShowType : uint8_t
 {
 	EWidgetShowType__Show          = 0,
 	EWidgetShowType__Hide          = 1,
@@ -114,7 +114,7 @@ enum class EWidgetShowType
 
 
 // Enum TslGame.EMovementDirection
-enum class EMovementDirection
+enum class EMovementDirection : uint8_t
 {
 	F_Direction                    = 0,
 	L_Direction                    = 1,
@@ -129,7 +129,7 @@ enum class EMovementDirection
 
 
 // Enum TslGame.EAnimStanceType
-enum class EAnimStanceType
+enum class EAnimStanceType : uint8_t
 {
 	AnimType_Stand                 = 0,
 	AnimType_Crouch                = 1,
@@ -139,7 +139,7 @@ enum class EAnimStanceType
 
 
 // Enum TslGame.EBuffOverlapSolveMethod
-enum class EBuffOverlapSolveMethod
+enum class EBuffOverlapSolveMethod : uint8_t
 {
 	IgnoreLater                    = 0,
 	Overwrite                      = 1,
@@ -149,7 +149,7 @@ enum class EBuffOverlapSolveMethod
 
 
 // Enum TslGame.ECastAnim
-enum class ECastAnim
+enum class ECastAnim : uint8_t
 {
 	ECastAnim__None                = 0,
 	ECastAnim__Bandage             = 1,
@@ -164,7 +164,7 @@ enum class ECastAnim
 
 
 // Enum TslGame.ECastLevel
-enum class ECastLevel
+enum class ECastLevel : uint8_t
 {
 	ECastLevel__None               = 0,
 	ECastLevel__NoRestriction      = 1,
@@ -174,7 +174,7 @@ enum class ECastLevel
 
 
 // Enum TslGame.ECastPriority
-enum class ECastPriority
+enum class ECastPriority : uint8_t
 {
 	ECastPriority__None            = 0,
 	ECastPriority__Low             = 1,
@@ -186,7 +186,7 @@ enum class ECastPriority
 
 
 // Enum TslGame.EUiShowType
-enum class EUiShowType
+enum class EUiShowType : uint8_t
 {
 	EUiShowType__AlwaysShow        = 0,
 	EUiShowType__TpsOnlyShow       = 1,
@@ -197,7 +197,7 @@ enum class EUiShowType
 
 
 // Enum TslGame.ETslInputModes
-enum class ETslInputModes
+enum class ETslInputModes : uint8_t
 {
 	ETslInputModes__Toggle         = 0,
 	ETslInputModes__Hold           = 1,
@@ -207,7 +207,7 @@ enum class ETslInputModes
 
 
 // Enum TslGame.EGameplayFunctionalities
-enum class EGameplayFunctionalities
+enum class EGameplayFunctionalities : uint8_t
 {
 	EGameplayFunctionalities__FreeLookInterp = 0,
 	EGameplayFunctionalities__EGameplayFunctionalities_MAX = 1
@@ -215,7 +215,7 @@ enum class EGameplayFunctionalities
 
 
 // Enum TslGame.EInputModeSettingActions
-enum class EInputModeSettingActions
+enum class EInputModeSettingActions : uint8_t
 {
 	EInputModeSettingActions__Crouch = 0,
 	EInputModeSettingActions__Prone = 1,
@@ -231,7 +231,7 @@ enum class EInputModeSettingActions
 
 
 // Enum TslGame.EKeyBindingSlot
-enum class EKeyBindingSlot
+enum class EKeyBindingSlot : uint8_t
 {
 	EKeyBindingSlot__FirstKey      = 0,
 	EKeyBindingSlot__SecondKey     = 1,
@@ -240,7 +240,7 @@ enum class EKeyBindingSlot
 
 
 // Enum TslGame.EReportCause
-enum class EReportCause
+enum class EReportCause : uint8_t
 {
 	EReportCause__Default          = 0,
 	EReportCause__Cheat            = 1,
@@ -252,7 +252,7 @@ enum class EReportCause
 
 
 // Enum TslGame.ESubjectToReport
-enum class ESubjectToReport
+enum class ESubjectToReport : uint8_t
 {
 	ESubjectToReport__Killer       = 0,
 	ESubjectToReport__Spectating_Player = 1,
@@ -261,7 +261,7 @@ enum class ESubjectToReport
 
 
 // Enum TslGame.ECarePackageIconType
-enum class ECarePackageIconType
+enum class ECarePackageIconType : uint8_t
 {
 	ECarePackageIconType__Normal   = 0,
 	ECarePackageIconType__Flying   = 1,
@@ -271,7 +271,7 @@ enum class ECarePackageIconType
 
 
 // Enum TslGame.ECharacterIconType
-enum class ECharacterIconType
+enum class ECharacterIconType : uint8_t
 {
 	ECharacterIconType__Normal     = 0,
 	ECharacterIconType__Vehicle    = 1,
@@ -285,7 +285,7 @@ enum class ECharacterIconType
 
 
 // Enum TslGame.EObserverCameraMode
-enum class EObserverCameraMode
+enum class EObserverCameraMode : uint8_t
 {
 	EObserverCameraMode__FixedCamera = 0,
 	EObserverCameraMode__FreeCamera = 1,
@@ -296,7 +296,7 @@ enum class EObserverCameraMode
 
 
 // Enum TslGame.EObserverAuthorityType
-enum class EObserverAuthorityType
+enum class EObserverAuthorityType : uint8_t
 {
 	EObserverAuthorityType__None   = 0,
 	EObserverAuthorityType__FromBeginning = 1,
@@ -307,7 +307,7 @@ enum class EObserverAuthorityType
 
 
 // Enum TslGame.EValueType
-enum class EValueType
+enum class EValueType : uint8_t
 {
 	EValueType__Float              = 0,
 	EValueType__Int                = 1,
@@ -318,7 +318,7 @@ enum class EValueType
 
 
 // Enum TslGame.EQualityType
-enum class EQualityType
+enum class EQualityType : uint8_t
 {
 	EQualityType__EMainQuality     = 0,
 	EQualityType__EViewDistanceQuality = 1,
@@ -333,7 +333,7 @@ enum class EQualityType
 
 
 // Enum TslGame.ENearClippingLevel
-enum class ENearClippingLevel
+enum class ENearClippingLevel : uint8_t
 {
 	ENearClippingLevel__Default    = 0,
 	ENearClippingLevel__Low        = 1,
@@ -344,7 +344,7 @@ enum class ENearClippingLevel
 
 
 // Enum TslGame.EThingSpotGroupType
-enum class EThingSpotGroupType
+enum class EThingSpotGroupType : uint8_t
 {
 	EThingSpotGroupType__GroupA    = 0,
 	EThingSpotGroupType__GroupB    = 1,
@@ -365,7 +365,7 @@ enum class EThingSpotGroupType
 
 
 // Enum TslGame.EPhysMaterialType
-enum class EPhysMaterialType
+enum class EPhysMaterialType : uint8_t
 {
 	EPhysMaterialType__Unknown     = 0,
 	EPhysMaterialType__Asphalt     = 1,
@@ -379,7 +379,7 @@ enum class EPhysMaterialType
 
 
 // Enum TslGame.EEquipableItemSoundType
-enum class EEquipableItemSoundType
+enum class EEquipableItemSoundType : uint8_t
 {
 	EEquipableItemSoundType__None  = 0,
 	EEquipableItemSoundType__Vest  = 1,
@@ -394,7 +394,7 @@ enum class EEquipableItemSoundType
 
 
 // Enum TslGame.EEquipableItemSoundGroup
-enum class EEquipableItemSoundGroup
+enum class EEquipableItemSoundGroup : uint8_t
 {
 	EEquipableItemSoundGroup__Default = 0,
 	EEquipableItemSoundGroup__Shoes = 1,
@@ -403,7 +403,7 @@ enum class EEquipableItemSoundGroup
 
 
 // Enum TslGame.EColorBlindType
-enum class EColorBlindType
+enum class EColorBlindType : uint8_t
 {
 	EColorBlindType__Normal        = 0,
 	EColorBlindType__Deuteranopia  = 1,
@@ -414,7 +414,7 @@ enum class EColorBlindType
 
 
 // Enum TslGame.ETslPhysMaterialType
-enum class ETslPhysMaterialType
+enum class ETslPhysMaterialType : uint8_t
 {
 	ETslPhysMaterialType__Unknown  = 0,
 	ETslPhysMaterialType__Concrete = 1,
@@ -430,7 +430,7 @@ enum class ETslPhysMaterialType
 
 
 // Enum TslGame.ETargetingType
-enum class ETargetingType
+enum class ETargetingType : uint8_t
 {
 	Targeting_None                 = 0,
 	Targeting_Aiming               = 1,
@@ -440,7 +440,7 @@ enum class ETargetingType
 
 
 // Enum TslGame.EAccessorySlot
-enum class EAccessorySlot
+enum class EAccessorySlot : uint8_t
 {
 	Slot_Primary                   = 0,
 	Slot_Secondary                 = 1,
@@ -452,7 +452,7 @@ enum class EAccessorySlot
 
 
 // Enum TslGame.EAnimWeaponType
-enum class EAnimWeaponType
+enum class EAnimWeaponType : uint8_t
 {
 	None                           = 0,
 	Rifle                          = 1,
@@ -464,7 +464,7 @@ enum class EAnimWeaponType
 
 
 // Enum TslGame.ECameraViewBehaviour
-enum class ECameraViewBehaviour
+enum class ECameraViewBehaviour : uint8_t
 {
 	ECameraViewBehaviour__FpsAndTps = 0,
 	ECameraViewBehaviour__FpsOnly  = 1,
@@ -474,7 +474,7 @@ enum class ECameraViewBehaviour
 
 
 // Enum TslGame.EMatchStartType
-enum class EMatchStartType
+enum class EMatchStartType : uint8_t
 {
 	EMatchStartType__Normal        = 0,
 	EMatchStartType__Airborne      = 1,
@@ -483,7 +483,7 @@ enum class EMatchStartType
 
 
 // Enum TslGame.EGender
-enum class EGender
+enum class EGender : uint8_t
 {
 	EGender__Male                  = 0,
 	EGender__Female                = 1,
@@ -492,7 +492,7 @@ enum class EGender
 
 
 // Enum TslGame.EAttackType
-enum class EAttackType
+enum class EAttackType : uint8_t
 {
 	EAttackType__None              = 0,
 	EAttackType__Weapon            = 1,
@@ -506,7 +506,7 @@ enum class EAttackType
 
 
 // Enum TslGame.EPlayerMoveType
-enum class EPlayerMoveType
+enum class EPlayerMoveType : uint8_t
 {
 	EPlayerMoveType__OnFoot        = 0,
 	EPlayerMoveType__OnVehicle     = 1,
@@ -515,7 +515,7 @@ enum class EPlayerMoveType
 
 
 // Enum TslGame.ELobbyItemPointSellingType
-enum class ELobbyItemPointSellingType
+enum class ELobbyItemPointSellingType : uint8_t
 {
 	ELobbyItemPointSellingType__Normal = 0,
 	ELobbyItemPointSellingType__WeeklyDouble = 1,
@@ -524,7 +524,7 @@ enum class ELobbyItemPointSellingType
 
 
 // Enum TslGame.ELobbyItemTier
-enum class ELobbyItemTier
+enum class ELobbyItemTier : uint8_t
 {
 	ELobbyItemTier__Basic          = 0,
 	ELobbyItemTier__Common         = 1,
@@ -541,7 +541,7 @@ enum class ELobbyItemTier
 
 
 // Enum TslGame.ELobbyItemCategory
-enum class ELobbyItemCategory
+enum class ELobbyItemCategory : uint8_t
 {
 	ELobbyItemCategory__Belt       = 0,
 	ELobbyItemCategory__Body       = 1,
@@ -559,7 +559,7 @@ enum class ELobbyItemCategory
 
 
 // Enum TslGame.EItemCategory
-enum class EItemCategory
+enum class EItemCategory : uint8_t
 {
 	EItemCategory__None            = 0,
 	EItemCategory__Equipment       = 1,
@@ -572,7 +572,7 @@ enum class EItemCategory
 
 
 // Enum TslGame.EForceRefreshDummy
-enum class EForceRefreshDummy
+enum class EForceRefreshDummy : uint8_t
 {
 	EForceRefreshDummy__Refresh1   = 0,
 	EForceRefreshDummy__Refresh2   = 1,
@@ -581,7 +581,7 @@ enum class EForceRefreshDummy
 
 
 // Enum TslGame.EHackDetectionType
-enum class EHackDetectionType
+enum class EHackDetectionType : uint8_t
 {
 	WEAPON_INVALID_IMPACT          = 0,
 	WEAPON_INVALID_ORIGIN          = 1,
@@ -596,7 +596,7 @@ enum class EHackDetectionType
 
 
 // Enum TslGame.EInteractionPhase
-enum class EInteractionPhase
+enum class EInteractionPhase : uint8_t
 {
 	First                          = 0,
 	Second                         = 1,
@@ -605,7 +605,7 @@ enum class EInteractionPhase
 
 
 // Enum TslGame.EWeaponGripLeftHand
-enum class EWeaponGripLeftHand
+enum class EWeaponGripLeftHand : uint8_t
 {
 	EWeaponGripLeftHand__NormalRifle = 0,
 	EWeaponGripLeftHand__Foregrip1 = 1,
@@ -616,7 +616,7 @@ enum class EWeaponGripLeftHand
 
 
 // Enum TslGame.EWeaponAttachmentSlotID
-enum class EWeaponAttachmentSlotID
+enum class EWeaponAttachmentSlotID : uint8_t
 {
 	EWeaponAttachmentSlotID__None  = 0,
 	EWeaponAttachmentSlotID__Muzzle = 1,
@@ -629,7 +629,7 @@ enum class EWeaponAttachmentSlotID
 
 
 // Enum TslGame.EItemSpotGroupType
-enum class EItemSpotGroupType
+enum class EItemSpotGroupType : uint8_t
 {
 	EItemSpotGroupType__GroupA     = 0,
 	EItemSpotGroupType__GroupB     = 1,
@@ -646,7 +646,7 @@ enum class EItemSpotGroupType
 
 
 // Enum TslGame.EItemSpotType
-enum class EItemSpotType
+enum class EItemSpotType : uint8_t
 {
 	EItemSpotType__TypeA           = 0,
 	EItemSpotType__TypeB           = 1,
@@ -659,7 +659,7 @@ enum class EItemSpotType
 
 
 // Enum TslGame.EEquipSlotID
-enum class EEquipSlotID
+enum class EEquipSlotID : uint8_t
 {
 	EEquipSlotID__Head             = 0,
 	EEquipSlotID__Eyes             = 1,
@@ -682,7 +682,7 @@ enum class EEquipSlotID
 
 
 // Enum TslGame.EDurabilityConsumeType
-enum class EDurabilityConsumeType
+enum class EDurabilityConsumeType : uint8_t
 {
 	EDurabilityConsumeType__TotalDamage = 0,
 	EDurabilityConsumeType__AbsorbDamage = 1,
@@ -691,7 +691,7 @@ enum class EDurabilityConsumeType
 
 
 // Enum TslGame.EAnimStance
-enum class EAnimStance
+enum class EAnimStance : uint8_t
 {
 	Stand                          = 0,
 	Crouch                         = 1,
@@ -702,7 +702,7 @@ enum class EAnimStance
 
 
 // Enum TslGame.EWeaponClass
-enum class EWeaponClass
+enum class EWeaponClass : uint8_t
 {
 	Class_Pistol                   = 0,
 	Class_SMG                      = 1,
@@ -719,7 +719,7 @@ enum class EWeaponClass
 
 
 // Enum TslGame.EAttachmentCalculateType
-enum class EAttachmentCalculateType
+enum class EAttachmentCalculateType : uint8_t
 {
 	Addition                       = 0,
 	Multiply                       = 1,
@@ -728,7 +728,7 @@ enum class EAttachmentCalculateType
 
 
 // Enum TslGame.EFiringMode
-enum class EFiringMode
+enum class EFiringMode : uint8_t
 {
 	Normal                         = 0,
 	Burst                          = 1,
@@ -738,7 +738,7 @@ enum class EFiringMode
 
 
 // Enum TslGame.EWeaponHand
-enum class EWeaponHand
+enum class EWeaponHand : uint8_t
 {
 	Left                           = 0,
 	Right                          = 1,
@@ -747,7 +747,7 @@ enum class EWeaponHand
 
 
 // Enum TslGame.ELobbyItemBundleType
-enum class ELobbyItemBundleType
+enum class ELobbyItemBundleType : uint8_t
 {
 	Bundle                         = 0,
 	Generator                      = 1,
@@ -756,7 +756,7 @@ enum class ELobbyItemBundleType
 
 
 // Enum TslGame.ELobbyLinkState
-enum class ELobbyLinkState
+enum class ELobbyLinkState : uint8_t
 {
 	ELobbyLinkState__Disconnect    = 0,
 	ELobbyLinkState__WaitInitialize = 1,
@@ -768,7 +768,7 @@ enum class ELobbyLinkState
 
 
 // Enum TslGame.EParameterLUTChannel
-enum class EParameterLUTChannel
+enum class EParameterLUTChannel : uint8_t
 {
 	EParameterLUTChannel__R        = 0,
 	EParameterLUTChannel__G        = 1,
@@ -781,7 +781,7 @@ enum class EParameterLUTChannel
 
 
 // Enum TslGame.EMaterialParameterType
-enum class EMaterialParameterType
+enum class EMaterialParameterType : uint8_t
 {
 	EMaterialParameterType__Bool   = 0,
 	EMaterialParameterType__Scalar = 1,
@@ -793,7 +793,7 @@ enum class EMaterialParameterType
 
 
 // Enum TslGame.EWeaponReloadAnimExec
-enum class EWeaponReloadAnimExec
+enum class EWeaponReloadAnimExec : uint8_t
 {
 	Tactical                       = 0,
 	Charge                         = 1,
@@ -804,7 +804,7 @@ enum class EWeaponReloadAnimExec
 
 
 // Enum TslGame.EWeaponReloadMethod
-enum class EWeaponReloadMethod
+enum class EWeaponReloadMethod : uint8_t
 {
 	Magazine                       = 0,
 	OneByOne                       = 1,
@@ -814,7 +814,7 @@ enum class EWeaponReloadMethod
 
 
 // Enum TslGame.EHornSoundType
-enum class EHornSoundType
+enum class EHornSoundType : uint8_t
 {
 	HornOn                         = 0,
 	HornOff                        = 1,
@@ -824,7 +824,7 @@ enum class EHornSoundType
 
 
 // Enum TslGame.EVehicleAnimType
-enum class EVehicleAnimType
+enum class EVehicleAnimType : uint8_t
 {
 	DefaultDriver                  = 0,
 	DefaultPassenger               = 1,
@@ -856,7 +856,7 @@ enum class EVehicleAnimType
 
 
 // Enum TslGame.ERiderType
-enum class ERiderType
+enum class ERiderType : uint8_t
 {
 	ERiderType__Driver             = 0,
 	ERiderType__Passenger          = 1,
@@ -865,7 +865,7 @@ enum class ERiderType
 
 
 // Enum TslGame.EVaultAnimType
-enum class EVaultAnimType
+enum class EVaultAnimType : uint8_t
 {
 	VaultNone                      = 0,
 	Vault200_Stationary            = 1,
@@ -903,7 +903,7 @@ enum class EVaultAnimType
 
 
 // Enum TslGame.EPunchDamageType
-enum class EPunchDamageType
+enum class EPunchDamageType : uint8_t
 {
 	PunchDamage_Light              = 0,
 	PunchDamage_Heavy              = 1,
@@ -912,7 +912,7 @@ enum class EPunchDamageType
 
 
 // Enum TslGame.EMovementType
-enum class EMovementType
+enum class EMovementType : uint8_t
 {
 	M_StandWalk                    = 0,
 	M_StandRun                     = 1,
@@ -937,7 +937,7 @@ enum class EMovementType
 
 
 // Enum TslGame.EDoorState
-enum class EDoorState
+enum class EDoorState : uint8_t
 {
 	Closed                         = 0,
 	Closing                        = 1,
@@ -948,7 +948,7 @@ enum class EDoorState
 
 
 // Enum TslGame.EThingGroupSpawnType
-enum class EThingGroupSpawnType
+enum class EThingGroupSpawnType : uint8_t
 {
 	EThingGroupSpawnType__None     = 0,
 	EThingGroupSpawnType__Probability = 1,
@@ -958,7 +958,7 @@ enum class EThingGroupSpawnType
 
 
 // Enum TslGame.ETeamVehicleType
-enum class ETeamVehicleType
+enum class ETeamVehicleType : uint8_t
 {
 	ETeamVehicleType__Team_None    = 0,
 	ETeamVehicleType__Team_Vehicle = 1,
@@ -968,7 +968,7 @@ enum class ETeamVehicleType
 
 
 // Enum TslGame.EWheelContactType
-enum class EWheelContactType
+enum class EWheelContactType : uint8_t
 {
 	WCT_Static                     = 0,
 	WCT_Roll                       = 1,
@@ -979,7 +979,7 @@ enum class EWheelContactType
 
 
 // Enum TslGame.EAnimPawnState
-enum class EAnimPawnState
+enum class EAnimPawnState : uint8_t
 {
 	PS_OnFoot                      = 0,
 	PS_VehicleDriver               = 1,
@@ -996,7 +996,7 @@ enum class EAnimPawnState
 
 
 // Enum TslGame.EDamageVictimActorType
-enum class EDamageVictimActorType
+enum class EDamageVictimActorType : uint8_t
 {
 	Character                      = 0,
 	Vehicle                        = 1,
@@ -1007,7 +1007,7 @@ enum class EDamageVictimActorType
 
 
 // Enum TslGame.ETslFenceSelector
-enum class ETslFenceSelector
+enum class ETslFenceSelector : uint8_t
 {
 	ETslFenceSelector__None        = 0,
 	ETslFenceSelector__Use         = 1,
@@ -1019,7 +1019,7 @@ enum class ETslFenceSelector
 
 
 // Enum TslGame.EReactionType
-enum class EReactionType
+enum class EReactionType : uint8_t
 {
 	Reaciton_None                  = 0,
 	Reaction_Physics               = 1,
@@ -1029,7 +1029,7 @@ enum class EReactionType
 
 
 // Enum TslGame.EPlayerAuthState
-enum class EPlayerAuthState
+enum class EPlayerAuthState : uint8_t
 {
 	EPlayerAuthState__None         = 0,
 	EPlayerAuthState__Login        = 1,
@@ -1039,7 +1039,7 @@ enum class EPlayerAuthState
 
 
 // Enum TslGame.EAttachParent
-enum class EAttachParent
+enum class EAttachParent : uint8_t
 {
 	EAttachParent__None            = 0,
 	EAttachParent__Character       = 1,
@@ -1049,7 +1049,7 @@ enum class EAttachParent
 
 
 // Enum TslGame.EProjectileExplodeState
-enum class EProjectileExplodeState
+enum class EProjectileExplodeState : uint8_t
 {
 	NotExplode                     = 0,
 	ImpactExplode                  = 1,
@@ -1059,7 +1059,7 @@ enum class EProjectileExplodeState
 
 
 // Enum TslGame.EProjectileExplosionRotationType
-enum class EProjectileExplosionRotationType
+enum class EProjectileExplosionRotationType : uint8_t
 {
 	ProjectileUpVector             = 0,
 	WorldUpVector                  = 1,
@@ -1068,7 +1068,7 @@ enum class EProjectileExplosionRotationType
 
 
 // Enum TslGame.EMolotovSimulationType
-enum class EMolotovSimulationType
+enum class EMolotovSimulationType : uint8_t
 {
 	Molotov_SimulationImpact       = 0,
 	Molotov_SimulationProjectile   = 1,
@@ -1078,7 +1078,7 @@ enum class EMolotovSimulationType
 
 
 // Enum TslGame.EBluezoneState
-enum class EBluezoneState
+enum class EBluezoneState : uint8_t
 {
 	EBluezoneState__None           = 0,
 	EBluezoneState__Wait           = 1,
@@ -1088,7 +1088,7 @@ enum class EBluezoneState
 
 
 // Enum TslGame.EEquipableItemIconVisibility
-enum class EEquipableItemIconVisibility
+enum class EEquipableItemIconVisibility : uint8_t
 {
 	EEquipableItemIconVisibility__Always = 0,
 	EEquipableItemIconVisibility__WhenEquipped = 1,
@@ -1097,7 +1097,7 @@ enum class EEquipableItemIconVisibility
 
 
 // Enum TslGame.EMarkStates
-enum class EMarkStates
+enum class EMarkStates : uint8_t
 {
 	EMarkStates__Normal            = 0,
 	EMarkStates__Groggy            = 1,
@@ -1110,7 +1110,7 @@ enum class EMarkStates
 
 
 // Enum TslGame.EMarkPosition
-enum class EMarkPosition
+enum class EMarkPosition : uint8_t
 {
 	EMarkPosition__Mid             = 0,
 	EMarkPosition__Top             = 1,
@@ -1126,7 +1126,7 @@ enum class EMarkPosition
 
 
 // Enum TslGame.ENoReloadGuideType
-enum class ENoReloadGuideType
+enum class ENoReloadGuideType : uint8_t
 {
 	ENoReloadGuideType__Alwyas     = 0,
 	ENoReloadGuideType__WhenCurrentWeapon = 1,
@@ -1135,7 +1135,7 @@ enum class ENoReloadGuideType
 
 
 // Enum TslGame.ESurfaceEffect
-enum class ESurfaceEffect
+enum class ESurfaceEffect : uint8_t
 {
 	S_Concrete_Roll                = 0,
 	S_Concrete_Skid                = 1,
@@ -1166,7 +1166,7 @@ enum class ESurfaceEffect
 
 
 // Enum TslGame.EHitCheckType
-enum class EHitCheckType
+enum class EHitCheckType : uint8_t
 {
 	HitCheck_Once                  = 0,
 	HitCheck_Multi                 = 1,
@@ -1175,7 +1175,7 @@ enum class EHitCheckType
 
 
 // Enum TslGame.EThrowableState
-enum class EThrowableState
+enum class EThrowableState : uint8_t
 {
 	Idle                           = 0,
 	PinOff                         = 1,
@@ -1187,7 +1187,7 @@ enum class EThrowableState
 
 
 // Enum TslGame.EProjectileExplosionStartType
-enum class EProjectileExplosionStartType
+enum class EProjectileExplosionStartType : uint8_t
 {
 	NotStart                       = 0,
 	Impact                         = 1,
@@ -1198,7 +1198,7 @@ enum class EProjectileExplosionStartType
 
 
 // Enum TslGame.EVivoxResponseState
-enum class EVivoxResponseState
+enum class EVivoxResponseState : uint8_t
 {
 	EVivoxResponseState__NotRequested = 0,
 	EVivoxResponseState__Requested = 1,
@@ -1209,7 +1209,7 @@ enum class EVivoxResponseState
 
 
 // Enum TslGame.EVivoxChannelType
-enum class EVivoxChannelType
+enum class EVivoxChannelType : uint8_t
 {
 	EVivoxChannelType__None        = 0,
 	EVivoxChannelType__All         = 1,
@@ -1220,7 +1220,7 @@ enum class EVivoxChannelType
 
 
 // Enum TslGame.EVivoxChannelJoinState
-enum class EVivoxChannelJoinState
+enum class EVivoxChannelJoinState : uint8_t
 {
 	EVivoxChannelJoinState__NotJoined = 0,
 	EVivoxChannelJoinState__Joining = 1,
@@ -1231,7 +1231,7 @@ enum class EVivoxChannelJoinState
 
 
 // Enum TslGame.EVivoxLoginState
-enum class EVivoxLoginState
+enum class EVivoxLoginState : uint8_t
 {
 	EVivoxLoginState__NotLoggedin  = 0,
 	EVivoxLoginState__Loggingin    = 1,
@@ -1241,7 +1241,7 @@ enum class EVivoxLoginState
 
 
 // Enum TslGame.EVivoxConnectionState
-enum class EVivoxConnectionState
+enum class EVivoxConnectionState : uint8_t
 {
 	EVivoxConnectionState__NotConnected = 0,
 	EVivoxConnectionState__Connecting = 1,
@@ -1260,9 +1260,10 @@ enum class EVivoxConnectionState
 struct FTslWidgetConfig
 {
 	class UClass*                                      WidgetClass;                                              // 0x0000(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      bDefaultShow : 1;                                         // 0x0008(0x0001) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      bUseMouse : 1;                                            // 0x0009(0x0001) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      bCloseByEscape : 1;                                       // 0x000A(0x0001) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bDefaultShow;                                             // 0x0008(0x0001) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bUseMouse;                                                // 0x0009(0x0001) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bCloseByEscape;                                           // 0x000A(0x0001) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x1];                                       // 0x000B(0x0001) MISSED OFFSET
 	int                                                ZOrder;                                                   // 0x000C(0x0004) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
@@ -1300,6 +1301,23 @@ struct FAnimInfo
 	struct FAnimSpeedInfo                              AnimSpeed_Walk;                                           // 0x0020(0x0020) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	struct FAnimSpeedInfo                              AnimSpeed_Run;                                            // 0x0040(0x0020) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              AnimSpeed_Sprint;                                         // 0x0060(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0064(0x0004) MISSED OFFSET
+};
+
+// ScriptStruct TslGame.CastConfig
+// 0x0030
+struct FCastConfig
+{
+	struct FText                                       CastName;                                                 // 0x0000(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
+	float                                              CastTime;                                                 // 0x0018(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	TEnumAsByte<ECastPriority>                         CastPriority;                                             // 0x001C(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	TEnumAsByte<ECastLevel>                            CastLevel;                                                // 0x001D(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x001E(0x0002) MISSED OFFSET
+	float                                              CastMaxDistance;                                          // 0x0020(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	float                                              CasterAndCastObjectMaxDistance;                           // 0x0024(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	float                                              CastMaxSpeed;                                             // 0x0028(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	TEnumAsByte<ECastAnim>                             CastAnim;                                                 // 0x002C(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x002D(0x0003) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.NearClippingLevelOverZ
@@ -1308,6 +1326,7 @@ struct FNearClippingLevelOverZ
 {
 	float                                              Z;                                                        // 0x0000(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	TEnumAsByte<ENearClippingLevel>                    Level;                                                    // 0x0004(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0005(0x0003) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.PingPongSummary
@@ -1319,6 +1338,28 @@ struct FPingPongSummary
 	int8_t                                             UnreliableSentCount;                                      // 0x0008(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int8_t                                             UnreliableMissCount;                                      // 0x0009(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int8_t                                             ReliableCount;                                            // 0x000A(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x1];                                       // 0x000B(0x0001) MISSED OFFSET
+};
+
+// ScriptStruct TslGame.TslReportedInfo
+// 0x0028
+struct FTslReportedInfo
+{
+	struct FString                                     PlayerName;                                               // 0x0000(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
+	struct FString                                     NetId;                                                    // 0x0010(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
+	int                                                TeamId;                                                   // 0x0020(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                Ranking;                                                  // 0x0024(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// ScriptStruct TslGame.TslPlayerMatchResultInfo
+// 0x0020
+struct FTslPlayerMatchResultInfo
+{
+	struct FString                                     PlayerName;                                               // 0x0000(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
+	int                                                NumKills;                                                 // 0x0010(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                Ranking;                                                  // 0x0014(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                TeamId;                                                   // 0x0018(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                NumStartTeamMember;                                       // 0x001C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // ScriptStruct TslGame.LobbyItemDesc
@@ -1329,11 +1370,14 @@ struct FLobbyItemDesc
 	unsigned char                                      bPointSellable : 1;                                       // 0x0000(0x0001) (CPF_Edit, CPF_DisableEditOnInstance)
 	unsigned char                                      bMarketable : 1;                                          // 0x0000(0x0001) (CPF_Edit, CPF_DisableEditOnInstance)
 	unsigned char                                      bPointRefundable : 1;                                     // 0x0000(0x0001) (CPF_Edit, CPF_DisableEditOnInstance)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
 	TEnumAsByte<ELobbyItemTier>                        Tier;                                                     // 0x0004(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	TEnumAsByte<ELobbyItemCategory>                    Category;                                                 // 0x0005(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x2];                                       // 0x0006(0x0002) MISSED OFFSET
 	struct FText                                       Description;                                              // 0x0008(0x0018) (CPF_Edit, CPF_DisableEditOnInstance)
 	float                                              CashSellingPrice;                                         // 0x0020(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	TEnumAsByte<ELobbyItemPointSellingType>            PointSellingType;                                         // 0x0024(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x0025(0x0003) MISSED OFFSET
 	int                                                PointSellingPrice;                                        // 0x0028(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	int                                                PointRefundingPrice;                                      // 0x002C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 };
@@ -1344,6 +1388,7 @@ struct FPackagedItemInfo
 {
 	class UClass*                                      ItemType;                                                 // 0x0000(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int                                                Count;                                                    // 0x0008(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.LobbyFaceElementDetail
@@ -1361,6 +1406,7 @@ struct FLobbyFaceElementDetail
 struct FLobbyFaceElement
 {
 	TEnumAsByte<EGender>                               Gender;                                                   // 0x0000(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
 	struct FString                                     FaceType;                                                 // 0x0008(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 	TArray<struct FLobbyFaceElementDetail>             ColorData;                                                // 0x0018(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 };
@@ -1379,8 +1425,18 @@ struct FLobbyHairElementDetail
 struct FLobbyHairElement
 {
 	TEnumAsByte<EGender>                               Gender;                                                   // 0x0000(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
 	struct FString                                     HairType;                                                 // 0x0008(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 	TArray<struct FLobbyHairElementDetail>             ColorData;                                                // 0x0018(0x0010) (CPF_Edit, CPF_ZeroConstructor)
+};
+
+// ScriptStruct TslGame.ItemInitiator
+// 0x0010
+struct FItemInitiator
+{
+	class UClass*                                      ItemClass;                                                // 0x0000(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                StackCount;                                               // 0x0008(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.GeneralItemSpawnProb
@@ -1388,6 +1444,7 @@ struct FLobbyHairElement
 struct FGeneralItemSpawnProb
 {
 	float                                              ProbabilityPercent;                                       // 0x0000(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
 	struct FName                                       ValueFilter;                                              // 0x0008(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	struct FName                                       CategoryFilter;                                           // 0x0010(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 };
@@ -1401,25 +1458,12 @@ struct FHighlightRecordConfig
 	float                                              LinkWaitDurationSec;                                      // 0x0008(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
-// ScriptStruct TslGame.CastConfig
-// 0x0030
-struct FCastConfig
-{
-	struct FText                                       CastName;                                                 // 0x0000(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
-	float                                              CastTime;                                                 // 0x0018(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	TEnumAsByte<ECastPriority>                         CastPriority;                                             // 0x001C(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	TEnumAsByte<ECastLevel>                            CastLevel;                                                // 0x001D(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	float                                              CastMaxDistance;                                          // 0x0020(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	float                                              CasterAndCastObjectMaxDistance;                           // 0x0024(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	float                                              CastMaxSpeed;                                             // 0x0028(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	TEnumAsByte<ECastAnim>                             CastAnim;                                                 // 0x002C(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-};
-
 // ScriptStruct TslGame.WeaponAttachmentData
 // 0x00B8
 struct FWeaponAttachmentData
 {
 	TEnumAsByte<EWeaponAttachmentSlotID>               AttachmentSlotID;                                         // 0x0000(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
 	struct FName                                       AttachmentTag;                                            // 0x0008(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	struct FName                                       Name;                                                     // 0x0010(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	struct FName                                       MouseSensitiveName;                                       // 0x0018(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
@@ -1444,6 +1488,7 @@ struct FWeaponAttachmentData
 	class Vector3D                                     IKHandOffset;                                             // 0x0070(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	class Rotator                                      IKHandRotation;                                           // 0x007C(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	TEnumAsByte<EWeaponGripLeftHand>                   WeaponGripLeft;                                           // 0x0088(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x0089(0x0007) MISSED OFFSET
 	class UAkAudioEvent*                               MuzzleSound;                                              // 0x0090(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	class UAnimMontage*                                CharacterReloadTactical;                                  // 0x0098(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	class UAnimMontage*                                WeaponReloadTactical;                                     // 0x00A0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
@@ -1460,6 +1505,15 @@ struct FWeaponAttachmentWeaponTagData
 	struct FWeaponAttachmentData                       AttachmentData;                                           // 0x0028(0x00B8) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_DisableEditOnInstance)
 };
 
+// ScriptStruct TslGame.EquipPosition
+// 0x0008
+struct FEquipPosition
+{
+	TEnumAsByte<EEquipSlotID>                          SlotID;                                                   // 0x0000(0x0001) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
+	int                                                Index;                                                    // 0x0004(0x0004) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
 // ScriptStruct TslGame.WeaponData
 // 0x0090
 struct FWeaponData
@@ -1469,10 +1523,10 @@ struct FWeaponData
 	struct FName                                       Rarity;                                                   // 0x0008(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	class Vector3D                                     SocketOffset_Shoulder;                                    // 0x0010(0x000C) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	class Vector3D                                     SocketOffset_Hand;                                        // 0x001C(0x000C) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      bApplyGripPoseLeft : 1;                                   // 0x0028(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	bool                                               bApplyGripPoseLeft;                                       // 0x0028(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	TEnumAsByte<EWeaponGripLeftHand>                   WeaponGripLeft;                                           // 0x0029(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	TEnumAsByte<EWeaponClass>                          WeaponClass;                                              // 0x002A(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      bUseDefaultScoreMultiplier : 1;                           // 0x002B(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	bool                                               bUseDefaultScoreMultiplier;                               // 0x002B(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              ScoreMultiplierByDamage;                                  // 0x002C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              ScoreMultiplierByKill;                                    // 0x0030(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              SwayModifier_Pitch;                                       // 0x0034(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
@@ -1484,18 +1538,23 @@ struct FWeaponData
 	float                                              CameraDOF_Range;                                          // 0x004C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              CameraDOF_NearRange;                                      // 0x0050(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              CameraDOF_Power;                                          // 0x0054(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      bUseDynamicReverbAK : 1;                                  // 0x0058(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	bool                                               bUseDynamicReverbAK;                                      // 0x0058(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0059(0x0003) MISSED OFFSET
 	float                                              CurrentWeaponZero;                                        // 0x005C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              MinWeaponZero;                                            // 0x0060(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              MaxWeaponZero;                                            // 0x0064(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              AnimationKick;                                            // 0x0068(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x006C(0x0004) MISSED OFFSET
 	class UAnimMontage*                                RecoilMontage;                                            // 0x0070(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      DestructibleDoor : 1;                                     // 0x0078(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	bool                                               DestructibleDoor;                                         // 0x0078(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	TEnumAsByte<EThrownWeaponType>                     ThrownType;                                               // 0x0079(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData02[0x2];                                       // 0x007A(0x0002) MISSED OFFSET
 	float                                              WeaponEquipDuration;                                      // 0x007C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              WeaponReadyDuration;                                      // 0x0080(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      bForceFireAfterEquip : 1;                                 // 0x0084(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	bool                                               bForceFireAfterEquip;                                     // 0x0084(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData03[0x3];                                       // 0x0085(0x0003) MISSED OFFSET
 	float                                              PhysicalBodyHitImpactPower;                               // 0x0088(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData04[0x4];                                       // 0x008C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.WeaponAttachmentTagPositionData
@@ -1511,6 +1570,7 @@ struct FWeaponAttachmentTagPositionData
 struct FWeaponAttachmentPositionData
 {
 	TEnumAsByte<EWeaponAttachmentSlotID>               AttachmentSlotID;                                         // 0x0000(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
 	struct FName                                       AttachmentPoint;                                          // 0x0008(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	TArray<struct FWeaponAttachmentTagPositionData>    AttachmentPointByTag;                                     // 0x0010(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
 };
@@ -1520,6 +1580,7 @@ struct FWeaponAttachmentPositionData
 struct FWeaponAttachmentAssetData
 {
 	TEnumAsByte<EWeaponAttachmentSlotID>               AttachmentSlotID;                                         // 0x0000(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
 	struct FName                                       AttachmentTag;                                            // 0x0008(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	TAssetPtr<class UStaticMesh>                       AttachmentMeshAsset;                                      // 0x0010(0x0020) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_DisableEditOnInstance)
 };
@@ -1546,6 +1607,7 @@ struct FWeaponRollAnim
 struct FWeaponAttachmentTagData
 {
 	TEnumAsByte<EWeaponAttachmentSlotID>               AttachmentSlotID;                                         // 0x0000(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
 	TArray<struct FName>                               AttachableTags;                                           // 0x0008(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
 };
 
@@ -1563,8 +1625,10 @@ struct FLobbyItemBundleElement
 struct FLobbyItemBundle
 {
 	int                                                BundleId;                                                 // 0x0000(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_EditConst, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
 	struct FString                                     BundleName;                                               // 0x0008(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
 	TEnumAsByte<ELobbyItemBundleType>                  Type;                                                     // 0x0018(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x0019(0x0007) MISSED OFFSET
 	TArray<struct FLobbyItemBundleElement>             ItemList;                                                 // 0x0020(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
 };
 
@@ -1574,6 +1638,7 @@ struct FNameWeight
 {
 	struct FName                                       Name;                                                     // 0x0000(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int                                                Weight;                                                   // 0x0008(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.ItemSpotTypeProperty
@@ -1581,10 +1646,12 @@ struct FNameWeight
 struct FItemSpotTypeProperty
 {
 	TEnumAsByte<EItemSpotType>                         SpotType;                                                 // 0x0000(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
 	float                                              SpotPercentMin;                                           // 0x0004(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              SpotPercentMax;                                           // 0x0008(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	int                                                ItemsPerSpotMin;                                          // 0x000C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	int                                                ItemsPerSpotMax;                                          // 0x0010(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
 	TArray<struct FNameWeight>                         WeightsPerValue;                                          // 0x0018(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
 	TArray<struct FNameWeight>                         WeightsPerCategory;                                       // 0x0028(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
 };
@@ -1594,9 +1661,10 @@ struct FItemSpotTypeProperty
 struct FItemSpotGroupTypeProperty
 {
 	TEnumAsByte<EItemSpotGroupType>                    SpotGroupType;                                            // 0x0000(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
 	float                                              SpotGroupPercent;                                         // 0x0004(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	TArray<struct FItemSpotTypeProperty>               SpotTypeProperties;                                       // 0x0008(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
-	unsigned char                                      UnknownData00[0x150];                                     // 0x0018(0x0150) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x150];                                     // 0x0018(0x0150) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.MaterialMergerParameters
@@ -1605,9 +1673,11 @@ struct FMaterialMergerParameters
 {
 	struct FName                                       Name;                                                     // 0x0000(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
 	TEnumAsByte<EMaterialParameterType>                Type;                                                     // 0x0008(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
-	unsigned char                                      bStoreToLUT : 1;                                          // 0x0009(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bStoreToLUT;                                              // 0x0009(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x000A(0x0002) MISSED OFFSET
 	int                                                LUTIndex;                                                 // 0x000C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
 	TEnumAsByte<EParameterLUTChannel>                  LUTChannel;                                               // 0x0010(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x0011(0x0007) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.BattleRoyalePoisionGasData
@@ -1632,14 +1702,16 @@ struct FWeaponGunData
 	int                                                AmmoPerClip;                                              // 0x0010(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              TimeBetweenShots;                                         // 0x0014(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              NoAnimReloadDuration;                                     // 0x0018(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
 	TArray<TEnumAsByte<EFiringMode>>                   FiringModes;                                              // 0x0020(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
 	int                                                BurstShots;                                               // 0x0030(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              BurstDelay;                                               // 0x0034(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	int                                                BulletPerFiring;                                          // 0x0038(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              FiringBulletsSpread;                                      // 0x003C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      bIsArrowProjectile : 1;                                   // 0x0040(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      bRotationFromBarrelWhenScoped : 1;                        // 0x0041(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	bool                                               bIsArrowProjectile;                                       // 0x0040(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	bool                                               bRotationFromBarrelWhenScoped;                            // 0x0041(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	TEnumAsByte<EWeaponReloadMethod>                   ReloadMethod;                                             // 0x0042(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x1];                                       // 0x0043(0x0001) MISSED OFFSET
 	float                                              ReloadDurationByOneInitial;                               // 0x0044(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              ReloadDurationByOneLoop;                                  // 0x0048(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              MovementModifierAim;                                      // 0x004C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
@@ -1649,12 +1721,15 @@ struct FWeaponGunData
 	float                                              WeaponSuppressorLength;                                   // 0x005C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              TraceRadius;                                              // 0x0060(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              TraceAdditiveZ;                                           // 0x0064(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      DebugWeaponCollision : 1;                                 // 0x0068(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	bool                                               DebugWeaponCollision;                                     // 0x0068(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x0069(0x0003) MISSED OFFSET
 	class Vector3D                                     HandWeaponOffset;                                         // 0x006C(0x000C) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	class Vector3D                                     HandWeaponOffsetFPP;                                      // 0x0078(0x000C) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      bManualCycleAfterShot : 1;                                // 0x0084(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      bManualCycleInitialStateReady : 1;                        // 0x0085(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	bool                                               bManualCycleAfterShot;                                    // 0x0084(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	bool                                               bManualCycleInitialStateReady;                            // 0x0085(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData03[0x2];                                       // 0x0086(0x0002) MISSED OFFSET
 	float                                              LongTailDelay;                                            // 0x0088(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData04[0x4];                                       // 0x008C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.WeaponDeviationData
@@ -1685,6 +1760,7 @@ struct FWeaponGunAnim
 {
 	class UAnimMontage*                                Fire;                                                     // 0x0000(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	unsigned char                                      bLoopedFire : 1;                                          // 0x0008(0x0001) (CPF_Edit, CPF_DisableEditOnInstance)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0009(0x0007) MISSED OFFSET
 	class UAnimMontage*                                Reload;                                                   // 0x0010(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	class UBlendSpace1D*                               CharacterGripBlendspace;                                  // 0x0018(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	class UBlendSpaceBase*                             CharacterLHGripBlendspace;                                // 0x0020(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
@@ -1703,11 +1779,13 @@ struct FWeaponGunAnim
 	float                                              ReloadDurationStart;                                      // 0x0080(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              ReloadDurationLoop;                                       // 0x0084(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              ReloadDurationMagOut;                                     // 0x0088(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      bUseBoltAction : 1;                                       // 0x008C(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	bool                                               bUseBoltAction;                                           // 0x008C(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x008D(0x0003) MISSED OFFSET
 	float                                              FireCycleDelay;                                           // 0x0090(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              FireCycleDuration;                                        // 0x0094(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      bCycleAfterLastShot : 1;                                  // 0x0098(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      bCycleDuringReload : 1;                                   // 0x0099(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	bool                                               bCycleAfterLastShot;                                      // 0x0098(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	bool                                               bCycleDuringReload;                                       // 0x0099(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData02[0x6];                                       // 0x009A(0x0006) MISSED OFFSET
 	class UClass*                                      ShotCameraShake;                                          // 0x00A0(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	class UClass*                                      ShotCameraShakeIronsight;                                 // 0x00A8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	class UClass*                                      ShotCameraShakeADS;                                       // 0x00B0(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
@@ -1725,6 +1803,7 @@ struct FWeaponGunAnim
 struct FTakeHitInfo
 {
 	float                                              ActualDamage;                                             // 0x0000(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
 	class UClass*                                      DamageType;                                               // 0x0008(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	TWeakObjectPtr<class ATslPlayerState>              PlayerInstigator;                                         // 0x0010(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class Vector3D                                     DamageOrigin;                                             // 0x0018(0x000C)
@@ -1753,6 +1832,7 @@ struct FZombieCustomizationData
 {
 	struct FString                                     StringOptionKey;                                          // 0x0000(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
 	TEnumAsByte<EGender>                               Gender;                                                   // 0x0010(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0011(0x0007) MISSED OFFSET
 	TArray<struct FString>                             ZombieOptionValues;                                       // 0x0018(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
 };
 
@@ -1761,6 +1841,7 @@ struct FZombieCustomizationData
 struct FBuffWithBoostGauge
 {
 	float                                              BoostGauge;                                               // 0x0000(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
 	class UClass*                                      Buff;                                                     // 0x0008(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	struct FName                                       OverlapId;                                                // 0x0010(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 };
@@ -1770,7 +1851,8 @@ struct FBuffWithBoostGauge
 struct FStanceTransition
 {
 	class UAnimMontage*                                TransitionAnim;                                           // 0x0000(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      CanPlayInMoving : 1;                                      // 0x0008(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	bool                                               CanPlayInMoving;                                          // 0x0008(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0009(0x0007) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.StanceTransitionData
@@ -1785,13 +1867,23 @@ struct FStanceTransitionData
 	struct FStanceTransition                           ProneToCrouch;                                            // 0x0050(0x0010) (CPF_Edit, CPF_DisableEditOnInstance)
 };
 
+// ScriptStruct TslGame.InventoryItem
+// 0x0010
+struct FInventoryItem
+{
+	int                                                Index;                                                    // 0x0000(0x0004) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
+	class UItem*                                       Item;                                                     // 0x0008(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
 // ScriptStruct TslGame.GeneralSpotGroupProperty
 // 0x0020
 struct FGeneralSpotGroupProperty
 {
 	TEnumAsByte<EThingSpotGroupType>                   GroupType;                                                // 0x0000(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      bActiveByStartVolume : 1;                                 // 0x0001(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	bool                                               bActiveByStartVolume;                                     // 0x0001(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	TEnumAsByte<EThingGroupSpawnType>                  SpawnType;                                                // 0x0002(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0003(0x0001) MISSED OFFSET
 	struct FFloatRange                                 TotalCountRange;                                          // 0x0004(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              TotalCountMultiplierWithPlayerCount;                      // 0x0014(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              ProbabilityPercent;                                       // 0x0018(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
@@ -1803,6 +1895,7 @@ struct FGeneralSpotGroupProperty
 struct FPackageSpawnProb
 {
 	float                                              ProbabilityPercent;                                       // 0x0000(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
 	struct FName                                       ValueFilter;                                              // 0x0008(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	struct FName                                       CategoryFilter;                                           // 0x0010(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 };
@@ -1843,8 +1936,9 @@ struct FDropCarePackageTableData
 // 0x0008
 struct FHornPlayInfo
 {
-	unsigned char                                      bMakeSureDirty : 1;                                       // 0x0000(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bMakeSureDirty;                                           // 0x0000(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	TEnumAsByte<EHornSoundType>                        HornSoundType;                                            // 0x0001(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x0002(0x0002) MISSED OFFSET
 	float                                              KeyPressedTime;                                           // 0x0004(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
@@ -1874,6 +1968,13 @@ struct FTslImpactSoundInfo
 	class UAkAudioEvent*                               MudSoundAk;                                               // 0x0058(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 };
 
+// ScriptStruct TslGame.WheelContactData
+// 0x0003
+struct FWheelContactData
+{
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0000(0x0003) MISSED OFFSET
+};
+
 // ScriptStruct TslGame.VaultingTask
 // 0x0040
 struct FVaultingTask
@@ -1883,7 +1984,8 @@ struct FVaultingTask
 	class Vector3D                                     V_ApexAdditive;                                           // 0x0018(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	class Vector3D                                     V_End;                                                    // 0x0024(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	TEnumAsByte<EVaultAnimType>                        InVaultType;                                              // 0x0030(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      bEndToFall : 1;                                           // 0x0031(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	bool                                               bEndToFall;                                               // 0x0031(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x0032(0x0002) MISSED OFFSET
 	float                                              Direction;                                                // 0x0034(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              PlayerSpeed;                                              // 0x0038(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              DistanceFromObject;                                       // 0x003C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
@@ -1895,6 +1997,7 @@ struct FDamageRatioInfo
 {
 	float                                              DamageRatio;                                              // 0x0000(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	TEnumAsByte<EDamageVictimActorType>                DamageVictimActorType;                                    // 0x0004(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0005(0x0003) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.TslChatStyle
@@ -1937,9 +2040,10 @@ struct FDecalEffectData
 	float                                              FadeScreenSize;                                           // 0x0018(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              FadeStartDelay;                                           // 0x001C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              FadeDuration;                                             // 0x0020(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      bUseRandomInput : 1;                                      // 0x0024(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      bUseRandomRoll : 1;                                       // 0x0025(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      bReversal : 1;                                            // 0x0026(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	bool                                               bUseRandomInput;                                          // 0x0024(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	bool                                               bUseRandomRoll;                                           // 0x0025(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	bool                                               bReversal;                                                // 0x0026(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0027(0x0001) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.DecalEffectDataSet
@@ -1962,6 +2066,7 @@ struct FDecalEffectDataSet
 struct FVehicleReactionData
 {
 	TEnumAsByte<EReactionType>                         ReactionType;                                             // 0x0000(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
 	float                                              ReactionForceFactor;                                      // 0x0004(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              ReactionMinSpeed;                                         // 0x0008(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
@@ -1971,6 +2076,7 @@ struct FVehicleReactionData
 struct FRadialDamageReactionData
 {
 	TEnumAsByte<EReactionType>                         ReactionType;                                             // 0x0000(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
 	float                                              ReactionForceFactor;                                      // 0x0004(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              ReactionMinDamage;                                        // 0x0008(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
@@ -1980,6 +2086,7 @@ struct FRadialDamageReactionData
 struct FPointDamageReactionData
 {
 	TEnumAsByte<EReactionType>                         ReactionType;                                             // 0x0000(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
 	float                                              ReactionForceFactor;                                      // 0x0004(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              ReactionMinDamage;                                        // 0x0008(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              DamageAccumulateTimeout;                                  // 0x000C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -2017,6 +2124,7 @@ struct FLevelLoadingBoostParameters
 struct FNearClippingValue
 {
 	TEnumAsByte<ENearClippingLevel>                    Level;                                                    // 0x0000(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
 	float                                              Value;                                                    // 0x0004(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
@@ -2046,6 +2154,7 @@ struct FTslGame_FCustomizableAxisName
 	struct FName                                       AxisName;                                                 // 0x0008(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	struct FText                                       DisplayName;                                              // 0x0010(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_DisableEditOnInstance)
 	float                                              Scale;                                                    // 0x0028(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.CustomizableMouseSensitiveName
@@ -2055,6 +2164,7 @@ struct FCustomizableMouseSensitiveName
 	struct FText                                       DisplayName;                                              // 0x0000(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_DisableEditOnInstance)
 	struct FName                                       MouseSensitiveName;                                       // 0x0018(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              MouseSensitivity;                                         // 0x0020(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0024(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.SurportQualityLevel
@@ -2062,6 +2172,7 @@ struct FCustomizableMouseSensitiveName
 struct FSurportQualityLevel
 {
 	int                                                QualityLevel;                                             // 0x0000(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
 	struct FText                                       DisplayQualityLevelName;                                  // 0x0008(0x0018) (CPF_Edit, CPF_BlueprintVisible)
 };
 
@@ -2078,6 +2189,7 @@ struct FScreenResolution
 struct FColorBlindType
 {
 	TEnumAsByte<EColorBlindType>                       Key;                                                      // 0x0000(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
 	struct FText                                       DisplayName;                                              // 0x0008(0x0018) (CPF_Edit, CPF_BlueprintVisible)
 };
 
@@ -2111,6 +2223,7 @@ struct FUiType
 struct FColorBlindColorData
 {
 	TEnumAsByte<EColorBlindType>                       Type;                                                     // 0x0000(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
 	struct FLinearColor                                Color;                                                    // 0x0004(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 };
 
@@ -2127,6 +2240,7 @@ struct FOverrideScalabilityValue
 {
 	struct FString                                     ConsoleName;                                              // 0x0000(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
 	TEnumAsByte<EValueType>                            ValueType;                                                // 0x0010(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0011(0x0007) MISSED OFFSET
 	TArray<struct FString>                             Values;                                                   // 0x0018(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
 };
 
@@ -2135,6 +2249,7 @@ struct FOverrideScalabilityValue
 struct FOverrideScalability
 {
 	TEnumAsByte<EQualityType>                          QualityType;                                              // 0x0000(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
 	TArray<struct FOverrideScalabilityValue>           OverrideScalabilityValues;                                // 0x0008(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
 };
 
@@ -2144,6 +2259,7 @@ struct FReportCauseData
 {
 	struct FText                                       DisplayName;                                              // 0x0000(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_DisableEditOnInstance)
 	TEnumAsByte<EReportCause>                          ReportCauseType;                                          // 0x0018(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0019(0x0007) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.SubjectToReport
@@ -2152,13 +2268,15 @@ struct FSubjectToReport
 {
 	struct FText                                       DisplayName;                                              // 0x0000(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_DisableEditOnInstance)
 	TEnumAsByte<ESubjectToReport>                      SubjectToReportType;                                      // 0x0018(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0019(0x0007) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.TslStartParameter
 // 0x0080
 struct FTslStartParameter
 {
-	unsigned char                                      bIsCustomGame : 1;                                        // 0x0000(0x0001) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bIsCustomGame;                                            // 0x0000(0x0001) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
 	struct FString                                     MapName;                                                  // 0x0008(0x0010) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor)
 	struct FString                                     MatchId;                                                  // 0x0018(0x0010) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor)
 	int                                                MinPlayerCount;                                           // 0x0028(0x0004) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -2179,11 +2297,13 @@ struct FReplayItem
 {
 	struct FString                                     FriendlyName;                                             // 0x0000(0x0010) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor)
 	struct FString                                     Name;                                                     // 0x0010(0x0010) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor)
-	unsigned char                                      bIsLive : 1;                                              // 0x0020(0x0001) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bIsLive;                                                  // 0x0020(0x0001) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0021(0x0007) MISSED OFFSET
 	struct FDateTime                                   Date;                                                     // 0x0028(0x0008) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor)
 	int                                                SizeInBytes;                                              // 0x0030(0x0004) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int                                                LengthInMS;                                               // 0x0034(0x0004) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int                                                NumViewers;                                               // 0x0038(0x0004) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.MatchPreparerClass
@@ -2191,6 +2311,7 @@ struct FReplayItem
 struct FMatchPreparerClass
 {
 	TEnumAsByte<EMatchStartType>                       Type;                                                     // 0x0000(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
 	class UClass*                                      Class;                                                    // 0x0008(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 };
 
@@ -2198,8 +2319,9 @@ struct FMatchPreparerClass
 // 0x0014
 struct FCustomGameUpdateCharacterInfo
 {
-	unsigned char                                      bIsZombie : 1;                                            // 0x0000(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      bIsGroggyMode : 1;                                        // 0x0001(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bIsZombie;                                                // 0x0000(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bIsGroggyMode;                                            // 0x0001(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x0002(0x0002) MISSED OFFSET
 	float                                              ReviveCastingTime;                                        // 0x0004(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              MultiplierGroggyDamagePerSecond;                          // 0x0008(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              MultiplierPunchDamage;                                    // 0x000C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -2219,7 +2341,8 @@ struct FLimitCustomStringParameter
 // 0x001C
 struct FRedZoneCustomOption
 {
-	unsigned char                                      bIsActive : 1;                                            // 0x0000(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bIsActive;                                                // 0x0000(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
 	float                                              MultiplierRedZoneExplosionDensity;                        // 0x0004(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              MultiplierRedZoneStartTime;                               // 0x0008(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              MultiplierRedZoneEndTime;                                 // 0x000C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -2244,6 +2367,7 @@ struct FBlueZoneCustomOption
 struct FTeams
 {
 	int                                                TeamNum;                                                  // 0x0000(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
 	TArray<class ATeam*>                               Members;                                                  // 0x0008(0x0010) (CPF_ZeroConstructor)
 };
 
@@ -2255,6 +2379,16 @@ struct FTslInputKey
 	unsigned char                                      bShift : 1;                                               // 0x0018(0x0001) (CPF_Edit, CPF_BlueprintVisible)
 	unsigned char                                      bCtrl : 1;                                                // 0x0018(0x0001) (CPF_Edit, CPF_BlueprintVisible)
 	unsigned char                                      bAlt : 1;                                                 // 0x0018(0x0001) (CPF_Edit, CPF_BlueprintVisible)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0019(0x0007) MISSED OFFSET
+};
+
+// ScriptStruct TslGame.QualityLevelInfo
+// 0x0020
+struct FQualityLevelInfo
+{
+	TEnumAsByte<EQualityType>                          QualityType;                                              // 0x0000(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
+	struct FText                                       DisplayQualityLevelName;                                  // 0x0008(0x0018) (CPF_Edit, CPF_BlueprintVisible)
 };
 
 // ScriptStruct TslGame.CustomActionKeyData
@@ -2271,6 +2405,7 @@ struct FCustomAxisKeyData
 {
 	struct FName                                       AxisName;                                                 // 0x0000(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              Scale;                                                    // 0x0008(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
 	TArray<struct FTslInputKey>                        Keys;                                                     // 0x0010(0x0010) (CPF_ZeroConstructor)
 };
 
@@ -2290,7 +2425,7 @@ struct FCustomInputSettings
 	TArray<struct FCustomActionKeyData>                ActionKeyList;                                            // 0x0000(0x0010) (CPF_ZeroConstructor, CPF_Config)
 	TArray<struct FCustomAxisKeyData>                  AxisKeyList;                                              // 0x0010(0x0010) (CPF_ZeroConstructor, CPF_Config)
 	TArray<struct FCustomMouseSensitiveData>           MouseSensitiveList;                                       // 0x0020(0x0010) (CPF_ZeroConstructor, CPF_Config)
-	unsigned char                                      bInvertMouse : 1;                                         // 0x0030(0x0001) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	bool                                               bInvertMouse;                                             // 0x0030(0x0001) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 	unsigned char                                      UnknownData00[0xF];                                       // 0x0031(0x000F) MISSED OFFSET
 };
 
@@ -2308,8 +2443,10 @@ struct FWeatherLevelInfo
 {
 	struct FString                                     WeatherId;                                                // 0x0000(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
 	int                                                Weight;                                                   // 0x0010(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
 	struct FName                                       WeatherLevel;                                             // 0x0018(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              WindowLightIntensity;                                     // 0x0020(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0024(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.TslMenuItemStyle
@@ -2348,7 +2485,8 @@ struct FParticleParameter
 {
 	struct FString                                     Name;                                                     // 0x0000(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
 	float                                              Value;                                                    // 0x0010(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      bEnableRTPC : 1;                                          // 0x0014(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bEnableRTPC;                                              // 0x0014(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0015(0x0003) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.TslPlayerScores
@@ -2373,6 +2511,7 @@ struct FReplicatedEquipableItem
 {
 	class UClass*                                      EquipableItemClass;                                       // 0x0000(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 	float                                              Durability;                                               // 0x0008(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.PostProcessMaterial
@@ -2381,6 +2520,7 @@ struct FPostProcessMaterial
 {
 	class UMaterialInterface*                          EffectMaterial;                                           // 0x0000(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              BlendWeight;                                              // 0x0008(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.PostProcessEffectParameter
@@ -2389,6 +2529,7 @@ struct FPostProcessEffectParameter
 {
 	struct FString                                     Name;                                                     // 0x0000(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
 	float                                              Value;                                                    // 0x0010(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.PostProcessEffectDynamicMaterialState
@@ -2412,11 +2553,13 @@ struct FProjectileData
 	float                                              ProjectileLife;                                           // 0x0000(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	int                                                ExplosionDamage;                                          // 0x0004(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              ExplosionRadius;                                          // 0x0008(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
 	class UCurveFloat*                                 DamageCurve;                                              // 0x0010(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              MinImpactVelocityForSound;                                // 0x0018(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              TimeBetweenImpactSound;                                   // 0x001C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	class UClass*                                      DamageType;                                               // 0x0020(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      DestroyAtExplosion : 1;                                   // 0x0028(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	bool                                               DestroyAtExplosion;                                       // 0x0028(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x0029(0x0007) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.DoorBreakingState
@@ -2442,6 +2585,7 @@ struct FBlockAction
 {
 	struct FName                                       ActionName;                                               // 0x0000(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	TEnumAsByte<EInputEvent>                           KeyEvent;                                                 // 0x0008(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0009(0x0007) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.UmgWidgetBinder
@@ -2576,6 +2720,7 @@ struct FVehicleEffectInfo
 {
 	class UClass*                                      Explosion;                                                // 0x0000(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              DamagedPercentMax;                                        // 0x0008(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
 	class UClass*                                      Damaged;                                                  // 0x0010(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	class UClass*                                      Destroyed;                                                // 0x0018(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	class UAkAudioEvent*                               EngineSound;                                              // 0x0020(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
@@ -2603,6 +2748,7 @@ struct FVehicleEffectInfo
 	class UClass*                                      ImpactSand;                                               // 0x00D8(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	class UClass*                                      ImpactFlesh;                                              // 0x00E0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	int                                                MaxImpactCount;                                           // 0x00E8(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x00EC(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.VehicleDebugHit
@@ -2661,7 +2807,8 @@ struct FTrajectoryWeaponData
 	float                                              RangeModifier;                                            // 0x0034(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              ReferenceDistance;                                        // 0x0038(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              TravelDistanceMax;                                        // 0x003C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      IsPenetrable : 1;                                         // 0x0040(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	bool                                               IsPenetrable;                                             // 0x0040(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0041(0x0007) MISSED OFFSET
 	class UClass*                                      DamageType;                                               // 0x0048(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	TArray<struct FRecoilPatternData>                  RecoilPatterns;                                           // 0x0050(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
 };
@@ -2679,10 +2826,12 @@ struct FRecoilInfo
 	float                                              LeftMax;                                                  // 0x0018(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              RightMax;                                                 // 0x001C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              HorizontalTendency;                                       // 0x0020(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0024(0x0004) MISSED OFFSET
 	class UCurveVector*                                RecoilCurve;                                              // 0x0028(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	int                                                BulletsPerSwitch;                                         // 0x0030(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              TimePerSwitch;                                            // 0x0034(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      bSwitchOnTime : 1;                                        // 0x0038(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	bool                                               bSwitchOnTime;                                            // 0x0038(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x0039(0x0003) MISSED OFFSET
 	float                                              RecoilSpeed_Vertical;                                     // 0x003C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              RecoilSpeed_Horizontal;                                   // 0x0040(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              RecoverySpeed_Vertical;                                   // 0x0044(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
@@ -2692,7 +2841,7 @@ struct FRecoilInfo
 	float                                              RecoilModifier_Crouch;                                    // 0x0054(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              RecoilModifier_Prone;                                     // 0x0058(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              RecoilHorizontalMinScalar;                                // 0x005C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0060(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData02[0x8];                                       // 0x0060(0x0008) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.MeleeWeaponAnim
@@ -2721,6 +2870,7 @@ struct FThrowableWeaponData
 	class UClass*                                      Ring;                                                     // 0x0010(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	struct FName                                       RingAttachSocket;                                         // 0x0018(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	TEnumAsByte<EProjectileExplosionStartType>         ExplosionStartType;                                       // 0x0020(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0021(0x0003) MISSED OFFSET
 	float                                              ExplosionDelay;                                           // 0x0024(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              FireDelay;                                                // 0x0028(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              ActivationTimeLimit;                                      // 0x002C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
@@ -2731,7 +2881,23 @@ struct FThrowableWeaponData
 	class UCurveFloat*                                 PitchCurve;                                               // 0x0080(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              ThrowTime;                                                // 0x0088(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              ThrowCooldownDuration;                                    // 0x008C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      bCanBeCooked : 1;                                         // 0x0090(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	bool                                               bCanBeCooked;                                             // 0x0090(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x0091(0x0007) MISSED OFFSET
+};
+
+// ScriptStruct TslGame.WebPopupParam
+// 0x0038
+struct FWebPopupParam
+{
+	struct FString                                     PopupId;                                                  // 0x0000(0x0010) (CPF_BlueprintVisible, CPF_ZeroConstructor)
+	struct FString                                     Uri;                                                      // 0x0010(0x0010) (CPF_BlueprintVisible, CPF_ZeroConstructor)
+	float                                              X;                                                        // 0x0020(0x0004) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              Y;                                                        // 0x0024(0x0004) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              Width;                                                    // 0x0028(0x0004) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              Height;                                                   // 0x002C(0x0004) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FColor                                      BackgroundColor;                                          // 0x0030(0x0004) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               UseBackgroundColor;                                       // 0x0034(0x0001) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0035(0x0003) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.VivoxConnectionInfo
@@ -2750,27 +2916,32 @@ struct FDeathMessage
 	struct FString                                     VictimName;                                               // 0x0010(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst)
 	unsigned char                                      bKillerIsOwner : 1;                                       // 0x0020(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_EditConst)
 	unsigned char                                      bVictimIsOwner : 1;                                       // 0x0020(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_EditConst)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0021(0x0003) MISSED OFFSET
 	int                                                KillerTeamNum;                                            // 0x0024(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
 	int                                                VictimTeamNum;                                            // 0x0028(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
 	class UTslDamageType*                              DamageType;                                               // 0x0030(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
 	struct FText                                       InsertMessage;                                            // 0x0038(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_EditConst)
 	TEnumAsByte<EDamageReason>                         DamageReason;                                             // 0x0050(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
-	unsigned char                                      bGroggy : 1;                                              // 0x0051(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
+	bool                                               bGroggy;                                                  // 0x0051(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData02[0x2];                                       // 0x0052(0x0002) MISSED OFFSET
 	int                                                AlivePlayerNum;                                           // 0x0054(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
 	int                                                AliveTeamNum;                                             // 0x0058(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData03[0x4];                                       // 0x005C(0x0004) MISSED OFFSET
 	struct FText                                       DamageCauserName;                                         // 0x0060(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_EditConst)
-	unsigned char                                      bIsKillerExist : 1;                                       // 0x0078(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
-	unsigned char                                      bIsStealKilled : 1;                                       // 0x0079(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
+	bool                                               bIsKillerExist;                                           // 0x0078(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
+	bool                                               bIsStealKilled;                                           // 0x0079(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData04[0x6];                                       // 0x007A(0x0006) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.TslFriendPresence
 // 0x0005
 struct FTslFriendPresence
 {
-	unsigned char                                      IsOnline : 1;                                             // 0x0000(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      IsPlaying : 1;                                            // 0x0001(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      IsPlayingThisGame : 1;                                    // 0x0002(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      IsJoinable : 1;                                           // 0x0003(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               IsOnline;                                                 // 0x0000(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               IsPlaying;                                                // 0x0001(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               IsPlayingThisGame;                                        // 0x0002(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               IsJoinable;                                               // 0x0003(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	unsigned char                                      Status;                                                   // 0x0004(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
@@ -2782,6 +2953,7 @@ struct FTslFriend
 	struct FString                                     UserRealName;                                             // 0x0010(0x0010) (CPF_ZeroConstructor)
 	struct FString                                     UserDisplayName;                                          // 0x0020(0x0010) (CPF_ZeroConstructor)
 	struct FTslFriendPresence                          Presence;                                                 // 0x0030(0x0005)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0035(0x0003) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.TslClientAuthData
@@ -2794,27 +2966,6 @@ struct FTslClientAuthData
 	struct FString                                     AccessToken;                                              // 0x0030(0x0010) (CPF_ZeroConstructor)
 	struct FString                                     UserDisplayName;                                          // 0x0040(0x0010) (CPF_ZeroConstructor)
 	struct FString                                     PlayerNetId;                                              // 0x0050(0x0010) (CPF_ZeroConstructor)
-};
-
-// ScriptStruct TslGame.TslReportedInfo
-// 0x0028
-struct FTslReportedInfo
-{
-	struct FString                                     PlayerName;                                               // 0x0000(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
-	struct FString                                     NetId;                                                    // 0x0010(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
-	int                                                TeamId;                                                   // 0x0020(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	int                                                Ranking;                                                  // 0x0024(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// ScriptStruct TslGame.TslPlayerMatchResultInfo
-// 0x0020
-struct FTslPlayerMatchResultInfo
-{
-	struct FString                                     PlayerName;                                               // 0x0000(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
-	int                                                NumKills;                                                 // 0x0010(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	int                                                Ranking;                                                  // 0x0014(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	int                                                TeamId;                                                   // 0x0018(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	int                                                NumStartTeamMember;                                       // 0x001C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // ScriptStruct TslGame.PlayerHitInfo
@@ -2831,6 +2982,7 @@ struct FPlayerHitInfo
 struct FPlayerAttackInfo
 {
 	int                                                Shots;                                                    // 0x0000(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
 	TMap<TEnumAsByte<EDamageReason>, struct FPlayerHitInfo> HitInfoMap;                                               // 0x0008(0x0050) (CPF_ZeroConstructor)
 };
 
@@ -2850,14 +3002,6 @@ struct FDroppedItemInfo
 {
 	class UItem*                                       Item;                                                     // 0x0000(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	unsigned char                                      UnknownData00[0x10];                                      // 0x0008(0x0010) MISSED OFFSET
-};
-
-// ScriptStruct TslGame.ItemInitiator
-// 0x0010
-struct FItemInitiator
-{
-	class UClass*                                      ItemClass;                                                // 0x0000(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	int                                                StackCount;                                               // 0x0008(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // ScriptStruct TslGame.ItemSpawnCountElement
@@ -2885,6 +3029,7 @@ struct FItemSpawnTogetherDataRow : public FTableRowBase
 	int                                                StackCount;                                               // 0x0028(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	int                                                CountMin;                                                 // 0x002C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	int                                                CountMax;                                                 // 0x0030(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.ItemSpawnDataRow
@@ -2896,14 +3041,6 @@ struct FItemSpawnDataRow : public FTableRowBase
 	class UClass*                                      Item;                                                     // 0x0018(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	int                                                StackCount;                                               // 0x0020(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	int                                                Weight;                                                   // 0x0024(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-};
-
-// ScriptStruct TslGame.EquipPosition
-// 0x0008
-struct FEquipPosition
-{
-	TEnumAsByte<EEquipSlotID>                          SlotID;                                                   // 0x0000(0x0001) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	int                                                Index;                                                    // 0x0004(0x0004) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // ScriptStruct TslGame.WeaponAnim
@@ -2930,14 +3067,6 @@ struct FMaterialParametersData
 	TArray<class UTexture*>                            Textures;                                                 // 0x0010(0x0010) (CPF_ZeroConstructor)
 };
 
-// ScriptStruct TslGame.InventoryItem
-// 0x0010
-struct FInventoryItem
-{
-	int                                                Index;                                                    // 0x0000(0x0004) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UItem*                                       Item;                                                     // 0x0008(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
 // ScriptStruct TslGame.VehicleSpawnDataRow
 // 0x0018 (0x0020 - 0x0008)
 struct FVehicleSpawnDataRow : public FTableRowBase
@@ -2945,7 +3074,8 @@ struct FVehicleSpawnDataRow : public FTableRowBase
 	struct FName                                       CategoryFilter;                                           // 0x0008(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	class UClass*                                      Vehicle;                                                  // 0x0010(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	int                                                Weight;                                                   // 0x0018(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      bSnapToFloor : 1;                                         // 0x001C(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	bool                                               bSnapToFloor;                                             // 0x001C(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x001D(0x0003) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.TslSplinePoint
@@ -2955,26 +3085,12 @@ struct FTslSplinePoint
 	unsigned char                                      UnknownData00[0x1C];                                      // 0x0000(0x001C) MISSED OFFSET
 };
 
-// ScriptStruct TslGame.WheelContactData
-// 0x0003
-struct FWheelContactData
-{
-
-};
-
 // ScriptStruct TslGame.TslPointDamageEvent
 // 0x0008 (0x00B8 - 0x00B0)
 struct FTslPointDamageEvent : public FPointDamageEvent
 {
-	unsigned char                                      bDestructibleDoor : 1;                                    // 0x00B0(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// ScriptStruct TslGame.QualityLevelInfo
-// 0x0020
-struct FQualityLevelInfo
-{
-	TEnumAsByte<EQualityType>                          QualityType;                                              // 0x0000(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FText                                       DisplayQualityLevelName;                                  // 0x0008(0x0018) (CPF_Edit, CPF_BlueprintVisible)
+	bool                                               bDestructibleDoor;                                        // 0x00B0(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x00B1(0x0007) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.SplashObject
@@ -3003,7 +3119,8 @@ struct FWuLogHackDetection_ContinuousKill : public FLogBase
 	struct FWuLogCharacter                             Character;                                                // 0x0028(0x0038)
 	float                                              Reason_DistVics;                                          // 0x0060(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              Reason_DistKiller;                                        // 0x0064(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      IsBanned : 1;                                             // 0x0068(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               IsBanned;                                                 // 0x0068(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0069(0x0007) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.WuLogHackDetection_IgnoreWall
@@ -3012,8 +3129,9 @@ struct FWuLogHackDetection_IgnoreWall : public FLogBase
 {
 	struct FWuLogCharacter                             Character;                                                // 0x0028(0x0038)
 	float                                              Reason_Distance;                                          // 0x0060(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      IsBanned : 1;                                             // 0x0064(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      IsBlockedHit : 1;                                         // 0x0065(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               IsBanned;                                                 // 0x0064(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               IsBlockedHit;                                             // 0x0065(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x0066(0x0002) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.WuLogHackDetection_Ammo
@@ -3024,8 +3142,9 @@ struct FWuLogHackDetection_Ammo : public FLogBase
 	struct FString                                     WeaponName;                                               // 0x0060(0x0010) (CPF_ZeroConstructor)
 	struct FString                                     WeaponType;                                               // 0x0070(0x0010) (CPF_ZeroConstructor)
 	struct FString                                     DetectionType;                                            // 0x0080(0x0010) (CPF_ZeroConstructor)
-	unsigned char                                      IsBanned : 1;                                             // 0x0090(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      IsBlockedHit : 1;                                         // 0x0091(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               IsBanned;                                                 // 0x0090(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               IsBlockedHit;                                             // 0x0091(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x6];                                       // 0x0092(0x0006) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.WuLogHackDetection_AttackRange
@@ -3040,8 +3159,9 @@ struct FWuLogHackDetection_AttackRange : public FLogBase
 	float                                              Reason_TravelDistance;                                    // 0x0094(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class Vector3D                                     Reason_ImpactLocation;                                    // 0x0098(0x000C) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class Vector3D                                     Reason_FireLocation;                                      // 0x00A4(0x000C) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      IsBanned : 1;                                             // 0x00B0(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      IsBlockedHit : 1;                                         // 0x00B1(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               IsBanned;                                                 // 0x00B0(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               IsBlockedHit;                                             // 0x00B1(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x6];                                       // 0x00B2(0x0006) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.WuLogHackDetection_Attacker
@@ -3056,9 +3176,10 @@ struct FWuLogHackDetection_Attacker : public FLogBase
 	class Vector3D                                     Reason_AttakerLocation;                                   // 0x0094(0x000C) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class Vector3D                                     Reason_FireLocation;                                      // 0x00A0(0x000C) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              Reason_CarVelocity;                                       // 0x00AC(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      Reason_IsInCar : 1;                                       // 0x00B0(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      IsBanned : 1;                                             // 0x00B1(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      IsBlockedHit : 1;                                         // 0x00B2(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               Reason_IsInCar;                                           // 0x00B0(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               IsBanned;                                                 // 0x00B1(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               IsBlockedHit;                                             // 0x00B2(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x5];                                       // 0x00B3(0x0005) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.WuLogHackDetection_Victim
@@ -3073,9 +3194,10 @@ struct FWuLogHackDetection_Victim : public FLogBase
 	class Vector3D                                     Reason_VictimLocation;                                    // 0x0094(0x000C) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class Vector3D                                     Reason_ImpactLocation;                                    // 0x00A0(0x000C) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              Reason_CarVelocity;                                       // 0x00AC(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      Reason_IsInCar : 1;                                       // 0x00B0(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      IsBanned : 1;                                             // 0x00B1(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      IsBlockedHit : 1;                                         // 0x00B2(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               Reason_IsInCar;                                           // 0x00B0(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               IsBanned;                                                 // 0x00B1(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               IsBlockedHit;                                             // 0x00B2(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x5];                                       // 0x00B3(0x0005) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.WuLogHackDetection_Wall
@@ -3087,8 +3209,9 @@ struct FWuLogHackDetection_Wall : public FLogBase
 	struct FString                                     WeaponType;                                               // 0x0070(0x0010) (CPF_ZeroConstructor)
 	struct FString                                     DetectionType;                                            // 0x0080(0x0010) (CPF_ZeroConstructor)
 	class Vector3D                                     Reason_ImpactLocation;                                    // 0x0090(0x000C) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      IsBanned : 1;                                             // 0x009C(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      IsBlockedHit : 1;                                         // 0x009D(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               IsBanned;                                                 // 0x009C(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               IsBlockedHit;                                             // 0x009D(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x009E(0x0002) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.WuLogHackDetection_Ping
@@ -3100,8 +3223,9 @@ struct FWuLogHackDetection_Ping : public FLogBase
 	struct FString                                     WeaponType;                                               // 0x0070(0x0010) (CPF_ZeroConstructor)
 	struct FString                                     DetectionType;                                            // 0x0080(0x0010) (CPF_ZeroConstructor)
 	float                                              Reason_Ping;                                              // 0x0090(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      IsBanned : 1;                                             // 0x0094(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      IsBlockedHit : 1;                                         // 0x0095(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               IsBanned;                                                 // 0x0094(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               IsBlockedHit;                                             // 0x0095(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x0096(0x0002) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.WuLogHackDetection_Seq
@@ -3114,8 +3238,9 @@ struct FWuLogHackDetection_Seq : public FLogBase
 	struct FString                                     DetectionType;                                            // 0x0080(0x0010) (CPF_ZeroConstructor)
 	int                                                Reason_ServerHitSeq;                                      // 0x0090(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int                                                Reason_ClientHitSeq;                                      // 0x0094(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      IsBanned : 1;                                             // 0x0098(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      IsBlockedHit : 1;                                         // 0x0099(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               IsBanned;                                                 // 0x0098(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               IsBlockedHit;                                             // 0x0099(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x6];                                       // 0x009A(0x0006) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.WuLogHackDetection
@@ -3126,7 +3251,8 @@ struct FWuLogHackDetection : public FLogBase
 	struct FString                                     WeaponName;                                               // 0x0060(0x0010) (CPF_ZeroConstructor)
 	struct FString                                     DetectionType;                                            // 0x0070(0x0010) (CPF_ZeroConstructor)
 	struct FString                                     Reason;                                                   // 0x0080(0x0010) (CPF_ZeroConstructor)
-	unsigned char                                      IsBanned : 1;                                             // 0x0090(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               IsBanned;                                                 // 0x0090(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0091(0x0007) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.WuLogVehicle
@@ -3144,11 +3270,13 @@ struct FWuLogVehicle
 struct FWuLogVehicleDestroy : public FLogBase
 {
 	int                                                AttackId;                                                 // 0x0028(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
 	struct FWuLogCharacter                             Attacker;                                                 // 0x0030(0x0038)
 	struct FWuLogVehicle                               Vehicle;                                                  // 0x0068(0x0028)
 	struct FString                                     DamageTypeCategory;                                       // 0x0090(0x0010) (CPF_ZeroConstructor)
 	struct FString                                     DamageCauserName;                                         // 0x00A0(0x0010) (CPF_ZeroConstructor)
 	float                                              Distance;                                                 // 0x00B0(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x00B4(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.WuLogVehicleLeave
@@ -3173,6 +3301,7 @@ struct FWuLogVehicleSpawn : public FLogBase
 {
 	struct FString                                     VehicleId;                                                // 0x0028(0x0010) (CPF_ZeroConstructor)
 	class Vector3D                                     Location;                                                 // 0x0038(0x000C) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0044(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.WuLogItem
@@ -3181,6 +3310,7 @@ struct FWuLogItem
 {
 	struct FString                                     ItemId;                                                   // 0x0000(0x0010) (CPF_ZeroConstructor)
 	int                                                StackCount;                                               // 0x0010(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
 	struct FString                                     Category;                                                 // 0x0018(0x0010) (CPF_ZeroConstructor)
 	struct FString                                     SubCategory;                                              // 0x0028(0x0010) (CPF_ZeroConstructor)
 	TArray<struct FString>                             AttachedItems;                                            // 0x0038(0x0010) (CPF_ZeroConstructor)
@@ -3192,6 +3322,7 @@ struct FWuLogItemPackage
 {
 	struct FString                                     ItemPackageId;                                            // 0x0000(0x0010) (CPF_ZeroConstructor)
 	class Vector3D                                     Location;                                                 // 0x0010(0x000C) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
 	TArray<struct FWuLogItem>                          Items;                                                    // 0x0020(0x0010) (CPF_ZeroConstructor)
 };
 
@@ -3290,11 +3421,13 @@ struct FWuLogReportInfo : public FLogBase
 struct FWuLogPlayerKill : public FLogBase
 {
 	int                                                AttackId;                                                 // 0x0028(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
 	struct FWuLogCharacter                             Killer;                                                   // 0x0030(0x0038)
 	struct FWuLogCharacter                             Victim;                                                   // 0x0068(0x0038)
 	struct FString                                     DamageTypeCategory;                                       // 0x00A0(0x0010) (CPF_ZeroConstructor)
 	struct FString                                     DamageCauserName;                                         // 0x00B0(0x0010) (CPF_ZeroConstructor)
 	float                                              Distance;                                                 // 0x00C0(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x00C4(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.WuLogPlayerRevive
@@ -3310,11 +3443,13 @@ struct FWuLogPlayerRevive : public FLogBase
 struct FWuLogPlayerMakeGroggy : public FLogBase
 {
 	int                                                AttackId;                                                 // 0x0028(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
 	struct FWuLogCharacter                             Attacker;                                                 // 0x0030(0x0038)
 	struct FWuLogCharacter                             Victim;                                                   // 0x0068(0x0038)
 	struct FString                                     DamageTypeCategory;                                       // 0x00A0(0x0010) (CPF_ZeroConstructor)
 	struct FString                                     DamageCauserName;                                         // 0x00B0(0x0010) (CPF_ZeroConstructor)
 	float                                              Distance;                                                 // 0x00C0(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x00C4(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.WuLogPlayerTakeDamage
@@ -3322,11 +3457,13 @@ struct FWuLogPlayerMakeGroggy : public FLogBase
 struct FWuLogPlayerTakeDamage : public FLogBase
 {
 	int                                                AttackId;                                                 // 0x0028(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
 	struct FWuLogCharacter                             Attacker;                                                 // 0x0030(0x0038)
 	struct FWuLogCharacter                             Victim;                                                   // 0x0068(0x0038)
 	struct FString                                     DamageTypeCategory;                                       // 0x00A0(0x0010) (CPF_ZeroConstructor)
 	struct FString                                     DamageReason;                                             // 0x00B0(0x0010) (CPF_ZeroConstructor)
 	float                                              Damage;                                                   // 0x00C0(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x00C4(0x0004) MISSED OFFSET
 	struct FString                                     DamageCauserName;                                         // 0x00C8(0x0010) (CPF_ZeroConstructor)
 };
 
@@ -3335,6 +3472,7 @@ struct FWuLogPlayerTakeDamage : public FLogBase
 struct FWuLogPlayerAttack : public FLogBase
 {
 	int                                                AttackId;                                                 // 0x0028(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
 	struct FWuLogCharacter                             Attacker;                                                 // 0x0030(0x0038)
 	struct FString                                     AttackType;                                               // 0x0068(0x0010) (CPF_ZeroConstructor)
 	struct FWuLogItem                                  Weapon;                                                   // 0x0078(0x0048)
@@ -3349,6 +3487,7 @@ struct FWuLogPlayerPosition : public FLogBase
 	float                                              ElapsedTime;                                              // 0x0060(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int                                                NumAlivePlayers;                                          // 0x0064(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              ClientFPS;                                                // 0x0068(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x006C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.WuLogPlayerKicked
@@ -3371,7 +3510,8 @@ struct FWuLogPlayerLogout : public FLogBase
 struct FWuLogPlayerLogin : public FLogBase
 {
 	struct FString                                     NetId;                                                    // 0x0028(0x0010) (CPF_ZeroConstructor)
-	unsigned char                                      Result : 1;                                               // 0x0038(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               Result;                                                   // 0x0038(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0039(0x0007) MISSED OFFSET
 	struct FString                                     ErrorMessage;                                             // 0x0040(0x0010) (CPF_ZeroConstructor)
 };
 
@@ -3397,6 +3537,7 @@ struct FWuLogServerStat : public FLogBase
 	float                                              FrameRateMin;                                             // 0x0048(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              FrameRateMax;                                             // 0x004C(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	float                                              FrameRateAvg;                                             // 0x0050(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0054(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.WuLogGameState
@@ -3421,6 +3562,7 @@ struct FWuLogGameState
 struct FWuLogGameStatePeriodic : public FLogBase
 {
 	struct FWuLogGameState                             GameState;                                                // 0x0028(0x0044)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x006C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.WuLogMatchEnd
@@ -3446,6 +3588,7 @@ struct FWuLogCharacterRating
 	int                                                WinPoints;                                                // 0x0020(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int                                                KillPoints;                                               // 0x0024(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int                                                MMR;                                                      // 0x0028(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.WuLogMatchDefinition
@@ -3470,9 +3613,11 @@ struct FWuGameResultPerPlayer
 {
 	struct FString                                     PlayerNetId;                                              // 0x0000(0x0010) (CPF_ZeroConstructor)
 	int                                                Rank;                                                     // 0x0010(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
 	struct FString                                     GameResult;                                               // 0x0018(0x0010) (CPF_ZeroConstructor)
 	int                                                TeamId;                                                   // 0x0028(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	struct FWuGameResultStatsPerPlayer                 Stats;                                                    // 0x002C(0x0008)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.WuGameFinishedResult
@@ -3500,7 +3645,8 @@ struct FWuGameStartInfo
 // 0x0008
 struct FWuGameInitializedResult
 {
-	unsigned char                                      IsSuccess : 1;                                            // 0x0000(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               IsSuccess;                                                // 0x0000(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
 	int                                                Port;                                                     // 0x0004(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
@@ -3531,7 +3677,8 @@ struct FWuGameOverrideParameterRequest
 // 0x0030
 struct FWuGameInitializeRequest
 {
-	unsigned char                                      IsCustomGame : 1;                                         // 0x0000(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               IsCustomGame;                                             // 0x0000(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
 	struct FString                                     MapName;                                                  // 0x0008(0x0010) (CPF_ZeroConstructor)
 	int                                                MinPlayerCount;                                           // 0x0018(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int                                                MaxPlayerCount;                                           // 0x001C(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -3553,7 +3700,8 @@ struct FWuMatchRating
 struct FWuStringBoolPair
 {
 	struct FString                                     First;                                                    // 0x0000(0x0010) (CPF_ZeroConstructor)
-	unsigned char                                      Second : 1;                                               // 0x0010(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               Second;                                                   // 0x0010(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0011(0x0007) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.WuStringFloatPair
@@ -3562,6 +3710,7 @@ struct FWuStringFloatPair
 {
 	struct FString                                     First;                                                    // 0x0000(0x0010) (CPF_ZeroConstructor)
 	float                                              Second;                                                   // 0x0010(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.WuCharacterCustomizationOptions
@@ -3579,7 +3728,8 @@ struct FWuCharacterCustomizationOptions
 struct FWuCharacterInfo
 {
 	struct FString                                     Nickname;                                                 // 0x0000(0x0010) (CPF_ZeroConstructor)
-	unsigned char                                      Gender : 1;                                               // 0x0010(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               Gender;                                                   // 0x0010(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0011(0x0007) MISSED OFFSET
 	struct FWuCharacterCustomizationOptions            CustomizationOptions;                                     // 0x0018(0x0040)
 };
 
@@ -3590,10 +3740,12 @@ struct FWuUserAuthInfo
 	struct FString                                     PlayerNetId;                                              // 0x0000(0x0010) (CPF_ZeroConstructor)
 	int                                                TeamId;                                                   // 0x0010(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	struct FWuMatchRating                              Rating;                                                   // 0x0014(0x0010)
-	unsigned char                                      IsZombie : 1;                                             // 0x0024(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               IsZombie;                                                 // 0x0024(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0025(0x0003) MISSED OFFSET
 	struct FWuCharacterInfo                            CharacterInfo;                                            // 0x0028(0x0058)
 	int                                                ObserverAuthorityType;                                    // 0x0080(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      BattlEyeDisabled : 1;                                     // 0x0084(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               BattlEyeDisabled;                                         // 0x0084(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x0085(0x0003) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.WuCustomizableObjectIdPair
@@ -3616,20 +3768,6 @@ struct FSequence_Vector : public FSequenceBase
 struct FUmgWidgetBinder_HorizontalBox : public FUmgWidgetBinder
 {
 	class UHorizontalBox*                              CachedHorizontalBox;                                      // 0x0018(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-};
-
-// ScriptStruct TslGame.WebPopupParam
-// 0x0038
-struct FWebPopupParam
-{
-	struct FString                                     PopupId;                                                  // 0x0000(0x0010) (CPF_BlueprintVisible, CPF_ZeroConstructor)
-	struct FString                                     Uri;                                                      // 0x0010(0x0010) (CPF_BlueprintVisible, CPF_ZeroConstructor)
-	float                                              X;                                                        // 0x0020(0x0004) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              Y;                                                        // 0x0024(0x0004) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              Width;                                                    // 0x0028(0x0004) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              Height;                                                   // 0x002C(0x0004) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FColor                                      BackgroundColor;                                          // 0x0030(0x0004) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UseBackgroundColor : 1;                                   // 0x0034(0x0001) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 }

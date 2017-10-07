@@ -36,8 +36,9 @@ public:
 	float                                              MinTimeSpeed;                                             // 0x02B0(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	struct FWidgetTransform                            KillEventItemTransform;                                   // 0x02B4(0x001C) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
 	float                                              TimelineWidth;                                            // 0x02D0(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      IsPaused : 1;                                             // 0x02D4(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      IsCtlVisible : 1;                                         // 0x02D5(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	bool                                               IsPaused;                                                 // 0x02D4(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	bool                                               IsCtlVisible;                                             // 0x02D5(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x02D6(0x0002) MISSED OFFSET
 	struct FTimerHandle                                GetKillEventsTimer;                                       // 0x02D8(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
 
 	static UClass* StaticClass()

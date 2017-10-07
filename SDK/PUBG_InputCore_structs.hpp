@@ -13,7 +13,7 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // Enum InputCore.ETouchIndex
-enum class ETouchIndex
+enum class ETouchIndex : uint8_t
 {
 	ETouchIndex__Touch1            = 0,
 	ETouchIndex__Touch2            = 1,
@@ -30,7 +30,7 @@ enum class ETouchIndex
 
 
 // Enum InputCore.ETouchType
-enum class ETouchType
+enum class ETouchType : uint8_t
 {
 	ETouchType__Began              = 0,
 	ETouchType__Moved              = 1,
@@ -42,7 +42,7 @@ enum class ETouchType
 
 
 // Enum InputCore.EConsoleForGamepadLabels
-enum class EConsoleForGamepadLabels
+enum class EConsoleForGamepadLabels : uint8_t
 {
 	EConsoleForGamepadLabels__None = 0,
 	EConsoleForGamepadLabels__XBoxOne = 1,
@@ -52,7 +52,7 @@ enum class EConsoleForGamepadLabels
 
 
 // Enum InputCore.EControllerHand
-enum class EControllerHand
+enum class EControllerHand : uint8_t
 {
 	EControllerHand__Left          = 0,
 	EControllerHand__Right         = 1,

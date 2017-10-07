@@ -38,16 +38,17 @@ public:
 	unsigned char                                      UnknownData00[0x20];                                      // 0x0028(0x0020) MISSED OFFSET
 	class ULevelSequence*                              LevelSequence;                                            // 0x0048(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 	class ULevelSequencePlayer*                        CurrentPlayer;                                            // 0x0050(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-	unsigned char                                      bIsPlaying : 1;                                           // 0x0058(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      bReversePlayback : 1;                                     // 0x0059(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bIsPlaying;                                               // 0x0058(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bReversePlayback;                                         // 0x0059(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x2];                                       // 0x005A(0x0002) MISSED OFFSET
 	float                                              TimeCursorPosition;                                       // 0x005C(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData01[0xC];                                       // 0x0060(0x000C) MISSED OFFSET
+	unsigned char                                      UnknownData02[0xC];                                       // 0x0060(0x000C) MISSED OFFSET
 	struct FLevelSequencePlaybackSettings              PlaybackSettings;                                         // 0x006C(0x0008)
-	unsigned char                                      UnknownData02[0x44];                                      // 0x0074(0x0044) MISSED OFFSET
+	unsigned char                                      UnknownData03[0x44];                                      // 0x0074(0x0044) MISSED OFFSET
 	struct FScriptMulticastDelegate                    OnPlay;                                                   // 0x00B8(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 	struct FScriptMulticastDelegate                    OnStop;                                                   // 0x00C8(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 	struct FScriptMulticastDelegate                    OnPause;                                                  // 0x00D8(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
-	unsigned char                                      UnknownData03[0x78];                                      // 0x00E8(0x0078) MISSED OFFSET
+	unsigned char                                      UnknownData04[0x78];                                      // 0x00E8(0x0078) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -96,7 +97,8 @@ public:
 class ULevelSequenceBurnInOptions : public UObject
 {
 public:
-	unsigned char                                      bUseBurnIn : 1;                                           // 0x0028(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bUseBurnIn;                                               // 0x0028(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0029(0x0007) MISSED OFFSET
 	struct FStringClassReference                       BurnInClass;                                              // 0x0030(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 	class ULevelSequenceBurnInInitSettings*            Settings;                                                 // 0x0040(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
@@ -114,8 +116,10 @@ public:
 class ALevelSequenceActor : public AActor
 {
 public:
-	unsigned char                                      bAutoPlay : 1;                                            // 0x03A0(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bAutoPlay;                                                // 0x03A0(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x03A1(0x0003) MISSED OFFSET
 	struct FLevelSequencePlaybackSettings              PlaybackSettings;                                         // 0x03A4(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x03AC(0x0004) MISSED OFFSET
 	class ULevelSequencePlayer*                        SequencePlayer;                                           // 0x03B0(0x0008) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 	struct FStringAssetReference                       LevelSequence;                                            // 0x03B8(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor)
 	class ULevelSequenceBurnInOptions*                 BurnInOptions;                                            // 0x03C8(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)

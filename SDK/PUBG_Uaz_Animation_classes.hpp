@@ -47,6 +47,7 @@ public:
 	struct FAnimNode_ModifyBone                        AnimGraphNode_ModifyBone_92CE5E20435206E5C4125B81AE2D5E5E;// 0x1CF0(0x00B0)
 	struct FAnimNode_ModifyBone                        AnimGraphNode_ModifyBone_F45EEFEE4F1F650FBF78D1ACCB01BDDE;// 0x1DA0(0x00B0)
 	float                                              SteeringWheelAngle;                                       // 0x1E50(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x1E54(0x0004) MISSED OFFSET
 	class ATslWheeledVehicle*                          VehicleReference;                                         // 0x1E58(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnTemplate, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	class UTslWheeledVehicleMovement*                  VehicleMovementReference;                                 // 0x1E60(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	class Rotator                                      SteeringWheelRotation;                                    // 0x1E68(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)

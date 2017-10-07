@@ -18,6 +18,7 @@ class UShaderPlatformQualitySettings : public UObject
 {
 public:
 	struct FMaterialQualityOverrides                   QualityOverrides[0x3];                                    // 0x0028(0x0006) (CPF_Edit, CPF_Config)
+	unsigned char                                      UnknownData00[0x6];                                       // 0x003A(0x0006) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

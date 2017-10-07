@@ -95,6 +95,7 @@ class USoundEffectSubmixEQPreset : public USoundEffectSourcePreset
 {
 public:
 	struct FSubmixEffectEQSettings                     Settings;                                                 // 0x0040(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0041(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

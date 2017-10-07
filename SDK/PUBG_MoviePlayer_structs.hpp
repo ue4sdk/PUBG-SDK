@@ -13,7 +13,7 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // Enum MoviePlayer.EMoviePlaybackType
-enum class EMoviePlaybackType
+enum class EMoviePlaybackType : uint8_t
 {
 	MT_Normal                      = 0,
 	MT_Looped                      = 1,

@@ -13,7 +13,7 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // Enum HeadMountedDisplay.ETrackingStatus
-enum class ETrackingStatus
+enum class ETrackingStatus : uint8_t
 {
 	ETrackingStatus__NotTracked    = 0,
 	ETrackingStatus__InertialOnly  = 1,

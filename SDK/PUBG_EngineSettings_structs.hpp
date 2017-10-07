@@ -13,7 +13,7 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // Enum EngineSettings.EThreePlayerSplitScreenType
-enum class EThreePlayerSplitScreenType
+enum class EThreePlayerSplitScreenType : uint8_t
 {
 	EThreePlayerSplitScreenType__FavorTop = 0,
 	EThreePlayerSplitScreenType__FavorBottom = 1,
@@ -22,7 +22,7 @@ enum class EThreePlayerSplitScreenType
 
 
 // Enum EngineSettings.ETwoPlayerSplitScreenType
-enum class ETwoPlayerSplitScreenType
+enum class ETwoPlayerSplitScreenType : uint8_t
 {
 	ETwoPlayerSplitScreenType__Horizontal = 0,
 	ETwoPlayerSplitScreenType__Vertical = 1,

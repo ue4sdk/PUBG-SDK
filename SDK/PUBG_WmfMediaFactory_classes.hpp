@@ -17,8 +17,9 @@ namespace Classes
 class UWmfMediaSettings : public UObject
 {
 public:
-	unsigned char                                      AllowNonStandardCodecs : 1;                               // 0x0028(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-	unsigned char                                      NativeAudioOut : 1;                                       // 0x0029(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	bool                                               AllowNonStandardCodecs;                                   // 0x0028(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	bool                                               NativeAudioOut;                                           // 0x0029(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x6];                                       // 0x002A(0x0006) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

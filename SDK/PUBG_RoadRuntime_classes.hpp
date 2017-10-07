@@ -42,6 +42,7 @@ class ARoadActor : public AActor
 {
 public:
 	TEnumAsByte<ESplineMeshAxis>                       SplineMeshAxis;                                           // 0x03A0(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x03A1(0x0003) MISSED OFFSET
 	class Vector3D                                     LocalOffset;                                              // 0x03A4(0x000C) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class ARoadActor*                                  Father;                                                   // 0x03B0(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 	struct FString                                     UniqueKey;                                                // 0x03B8(0x0010) (CPF_ZeroConstructor)

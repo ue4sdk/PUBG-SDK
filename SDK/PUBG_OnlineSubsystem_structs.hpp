@@ -13,7 +13,7 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // Enum OnlineSubsystem.EInAppPurchaseState
-enum class EInAppPurchaseState
+enum class EInAppPurchaseState : uint8_t
 {
 	EInAppPurchaseState__Unknown   = 0,
 	EInAppPurchaseState__Success   = 1,
@@ -28,7 +28,7 @@ enum class EInAppPurchaseState
 
 
 // Enum OnlineSubsystem.EMPMatchOutcome
-enum class EMPMatchOutcome
+enum class EMPMatchOutcome : uint8_t
 {
 	EMPMatchOutcome__None          = 0,
 	EMPMatchOutcome__Quit          = 1,
@@ -75,6 +75,7 @@ struct FInAppPurchaseProductInfo
 	struct FString                                     DisplayDescription;                                       // 0x0030(0x0010) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor)
 	struct FString                                     DisplayPrice;                                             // 0x0040(0x0010) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor)
 	float                                              RawPrice;                                                 // 0x0050(0x0004) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0054(0x0004) MISSED OFFSET
 	struct FString                                     CurrencyCode;                                             // 0x0058(0x0010) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor)
 	struct FString                                     CurrencySymbol;                                           // 0x0068(0x0010) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor)
 	struct FString                                     DecimalSeparator;                                         // 0x0078(0x0010) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor)
@@ -96,7 +97,8 @@ struct FInAppPurchaseRestoreInfo
 struct FInAppPurchaseProductRequest
 {
 	struct FString                                     ProductIdentifier;                                        // 0x0000(0x0010) (CPF_BlueprintVisible, CPF_ZeroConstructor)
-	unsigned char                                      bIsConsumable : 1;                                        // 0x0010(0x0001) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bIsConsumable;                                            // 0x0010(0x0001) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0011(0x0007) MISSED OFFSET
 };
 
 }
