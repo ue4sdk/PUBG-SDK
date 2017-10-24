@@ -1,6 +1,6 @@
 #pragma once
 
-// PlayerUnknown's Battlegrounds (2.6.30.2) SDK
+// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -1190,6 +1190,30 @@ public:
 };
 
 
+// Class Engine.DamageType
+// 0x0018 (0x0040 - 0x0028)
+class UDamageType : public UObject
+{
+public:
+	unsigned char                                      bCausedByWorld : 1;                                       // 0x0028(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
+	unsigned char                                      bScaleMomentumByMass : 1;                                 // 0x0028(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
+	unsigned char                                      bRadialDamageVelChange : 1;                               // 0x0028(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0029(0x0003) MISSED OFFSET
+	float                                              DamageImpulse;                                            // 0x002C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              DestructibleImpulse;                                      // 0x0030(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              DestructibleDamageSpreadScale;                            // 0x0034(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              DamageFalloff;                                            // 0x0038(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Engine.DamageType");
+		return ptr;
+	}
+
+};
+
+
 // Class Engine.MovementComponent
 // 0x0048 (0x0140 - 0x00F8)
 class UMovementComponent : public UActorComponent
@@ -1923,30 +1947,6 @@ public:
 	void BlueprintUpdateAnimation(float DeltaTimeX);
 	void BlueprintPostEvaluateAnimation();
 	void BlueprintInitializeAnimation();
-};
-
-
-// Class Engine.DamageType
-// 0x0018 (0x0040 - 0x0028)
-class UDamageType : public UObject
-{
-public:
-	unsigned char                                      bCausedByWorld : 1;                                       // 0x0028(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
-	unsigned char                                      bScaleMomentumByMass : 1;                                 // 0x0028(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
-	unsigned char                                      bRadialDamageVelChange : 1;                               // 0x0028(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0029(0x0003) MISSED OFFSET
-	float                                              DamageImpulse;                                            // 0x002C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              DestructibleImpulse;                                      // 0x0030(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              DestructibleDamageSpreadScale;                            // 0x0034(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              DamageFalloff;                                            // 0x0038(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Engine.DamageType");
-		return ptr;
-	}
-
 };
 
 

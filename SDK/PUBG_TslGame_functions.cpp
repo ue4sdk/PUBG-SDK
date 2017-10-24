@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.30.2) SDK
+// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -12347,6 +12347,23 @@ void ATslCharacter::ResetParachute()
 }
 
 
+// Function TslGame.TslCharacter.RemoveCrosshair
+// (FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
+
+void ATslCharacter::RemoveCrosshair()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslCharacter.RemoveCrosshair");
+
+	ATslCharacter_RemoveCrosshair_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function TslGame.TslCharacter.ReevaluaeTargetingState
 // (FUNC_Final, FUNC_Native, FUNC_Public)
 
@@ -14662,23 +14679,6 @@ bool ATslCharacter::IsActiveRagdoll()
 	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
-}
-
-
-// Function TslGame.TslCharacter.HiddenCrosshair
-// (FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
-
-void ATslCharacter::HiddenCrosshair()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslCharacter.HiddenCrosshair");
-
-	ATslCharacter_HiddenCrosshair_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
@@ -17631,6 +17631,354 @@ class ATslPlayerController* UTslVehicleInterface::GetTslPlayerController()
 	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
+}
+
+
+// Function TslGame.TslHUD.TestSendSystemMessage
+// (FUNC_Final, FUNC_Exec, FUNC_Native, FUNC_Public)
+// Parameters:
+// struct FText                   Message                        (CPF_Parm)
+// float                          Duration                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void ATslHUD::TestSendSystemMessage(const struct FText& Message, float Duration)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslHUD.TestSendSystemMessage");
+
+	ATslHUD_TestSendSystemMessage_Params params;
+	params.Message = Message;
+	params.Duration = Duration;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function TslGame.TslHUD.TestSendImportantMessage
+// (FUNC_Final, FUNC_Exec, FUNC_Native, FUNC_Public)
+// Parameters:
+// struct FText                   Message                        (CPF_Parm)
+// float                          Duration                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void ATslHUD::TestSendImportantMessage(const struct FText& Message, float Duration)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslHUD.TestSendImportantMessage");
+
+	ATslHUD_TestSendImportantMessage_Params params;
+	params.Message = Message;
+	params.Duration = Duration;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function TslGame.TslHUD.TestKillMessage
+// (FUNC_Final, FUNC_Exec, FUNC_Native, FUNC_Public)
+// Parameters:
+// struct FString                 KillerName                     (CPF_Parm, CPF_ZeroConstructor)
+// struct FString                 VictimName                     (CPF_Parm, CPF_ZeroConstructor)
+// bool                           bKillerIsOwner                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// bool                           bVictimIsOwner                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void ATslHUD::TestKillMessage(const struct FString& KillerName, const struct FString& VictimName, bool bKillerIsOwner, bool bVictimIsOwner)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslHUD.TestKillMessage");
+
+	ATslHUD_TestKillMessage_Params params;
+	params.KillerName = KillerName;
+	params.VictimName = VictimName;
+	params.bKillerIsOwner = bKillerIsOwner;
+	params.bVictimIsOwner = bVictimIsOwner;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function TslGame.TslHUD.TestGameEvent_MatchEnded
+// (FUNC_Final, FUNC_Exec, FUNC_Native, FUNC_Public)
+
+void ATslHUD::TestGameEvent_MatchEnded()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslHUD.TestGameEvent_MatchEnded");
+
+	ATslHUD_TestGameEvent_MatchEnded_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function TslGame.TslHUD.TestGameEvent_KillOtherPlayer
+// (FUNC_Final, FUNC_Exec, FUNC_Native, FUNC_Public)
+// Parameters:
+// bool                           bGroggy                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void ATslHUD::TestGameEvent_KillOtherPlayer(bool bGroggy)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslHUD.TestGameEvent_KillOtherPlayer");
+
+	ATslHUD_TestGameEvent_KillOtherPlayer_Params params;
+	params.bGroggy = bGroggy;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function TslGame.TslHUD.TestGameEvent_Die
+// (FUNC_Final, FUNC_Exec, FUNC_Native, FUNC_Public)
+// Parameters:
+// bool                           bGroggy                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void ATslHUD::TestGameEvent_Die(bool bGroggy)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslHUD.TestGameEvent_Die");
+
+	ATslHUD_TestGameEvent_Die_Params params;
+	params.bGroggy = bGroggy;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function TslGame.TslHUD.SpawnActorInSceneCaptureWorld
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
+// Parameters:
+// class UClass*                  ActorClass                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FTransform              SpawnTransform                 (CPF_ConstParm, CPF_Parm, CPF_IsPlainOldData)
+// struct FScriptDelegate         DelegateToCall                 (CPF_Parm, CPF_ZeroConstructor)
+
+void ATslHUD::SpawnActorInSceneCaptureWorld(class UClass* ActorClass, const struct FTransform& SpawnTransform, const struct FScriptDelegate& DelegateToCall)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslHUD.SpawnActorInSceneCaptureWorld");
+
+	ATslHUD_SpawnActorInSceneCaptureWorld_Params params;
+	params.ActorClass = ActorClass;
+	params.SpawnTransform = SpawnTransform;
+	params.DelegateToCall = DelegateToCall;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function TslGame.TslHUD.SetHighlightProvider
+// (FUNC_Final, FUNC_Exec, FUNC_Native, FUNC_Public)
+// Parameters:
+// struct FString                 Provider                       (CPF_Parm, CPF_ZeroConstructor)
+
+void ATslHUD::SetHighlightProvider(const struct FString& Provider)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslHUD.SetHighlightProvider");
+
+	ATslHUD_SetHighlightProvider_Params params;
+	params.Provider = Provider;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function TslGame.TslHUD.NotifyDropSlotOnOtherContainer
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// TScriptInterface<class USlotContainerInterface> Container                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// TScriptInterface<class USlotInterface> Slot                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// TScriptInterface<class USlotContainerInterface> OtherContainer                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void ATslHUD::NotifyDropSlotOnOtherContainer(const TScriptInterface<class USlotContainerInterface>& Container, const TScriptInterface<class USlotInterface>& Slot, const TScriptInterface<class USlotContainerInterface>& OtherContainer)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslHUD.NotifyDropSlotOnOtherContainer");
+
+	ATslHUD_NotifyDropSlotOnOtherContainer_Params params;
+	params.Container = Container;
+	params.Slot = Slot;
+	params.OtherContainer = OtherContainer;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function TslGame.TslHUD.IsGameEnded
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+bool ATslHUD::IsGameEnded()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslHUD.IsGameEnded");
+
+	ATslHUD_IsGameEnded_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function TslGame.TslHUD.InitCaptureWorld
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+
+void ATslHUD::InitCaptureWorld()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslHUD.InitCaptureWorld");
+
+	ATslHUD_InitCaptureWorld_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function TslGame.TslHUD.GoToLobby
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+
+void ATslHUD::GoToLobby()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslHUD.GoToLobby");
+
+	ATslHUD_GoToLobby_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function TslGame.TslHUD.GetPossessPawn
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// class APawn*                   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+class APawn* ATslHUD::GetPossessPawn()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslHUD.GetPossessPawn");
+
+	ATslHUD_GetPossessPawn_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function TslGame.TslHUD.GetPossessCharacter
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+// Parameters:
+// class ATslCharacter*           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+class ATslCharacter* ATslHUD::GetPossessCharacter()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslHUD.GetPossessCharacter");
+
+	ATslHUD_GetPossessCharacter_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function TslGame.TslPawnInputBindingComponent.NotifyOwnerUnPossessed
+// (FUNC_Final, FUNC_Native, FUNC_Public)
+// Parameters:
+// class ATslPlayerController*    InController                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UTslPawnInputBindingComponent::NotifyOwnerUnPossessed(class ATslPlayerController* InController)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslPawnInputBindingComponent.NotifyOwnerUnPossessed");
+
+	UTslPawnInputBindingComponent_NotifyOwnerUnPossessed_Params params;
+	params.InController = InController;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function TslGame.TslPawnInputBindingComponent.NotifyOwnerPossessed
+// (FUNC_Final, FUNC_Native, FUNC_Public)
+// Parameters:
+// class ATslPlayerController*    InController                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UTslPawnInputBindingComponent::NotifyOwnerPossessed(class ATslPlayerController* InController)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslPawnInputBindingComponent.NotifyOwnerPossessed");
+
+	UTslPawnInputBindingComponent_NotifyOwnerPossessed_Params params;
+	params.InController = InController;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
 }
 
 
@@ -23457,312 +23805,6 @@ void UTslAnimInstance::CacheCharacterReference(class ATslCharacter* InCharacter)
 }
 
 
-// Function TslGame.TslHUD.TestSendSystemMessage
-// (FUNC_Final, FUNC_Exec, FUNC_Native, FUNC_Public)
-// Parameters:
-// struct FText                   Message                        (CPF_Parm)
-// float                          Duration                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-
-void ATslHUD::TestSendSystemMessage(const struct FText& Message, float Duration)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslHUD.TestSendSystemMessage");
-
-	ATslHUD_TestSendSystemMessage_Params params;
-	params.Message = Message;
-	params.Duration = Duration;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function TslGame.TslHUD.TestSendImportantMessage
-// (FUNC_Final, FUNC_Exec, FUNC_Native, FUNC_Public)
-// Parameters:
-// struct FText                   Message                        (CPF_Parm)
-// float                          Duration                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-
-void ATslHUD::TestSendImportantMessage(const struct FText& Message, float Duration)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslHUD.TestSendImportantMessage");
-
-	ATslHUD_TestSendImportantMessage_Params params;
-	params.Message = Message;
-	params.Duration = Duration;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function TslGame.TslHUD.TestKillMessage
-// (FUNC_Final, FUNC_Exec, FUNC_Native, FUNC_Public)
-// Parameters:
-// struct FString                 KillerName                     (CPF_Parm, CPF_ZeroConstructor)
-// struct FString                 VictimName                     (CPF_Parm, CPF_ZeroConstructor)
-// bool                           bKillerIsOwner                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// bool                           bVictimIsOwner                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-
-void ATslHUD::TestKillMessage(const struct FString& KillerName, const struct FString& VictimName, bool bKillerIsOwner, bool bVictimIsOwner)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslHUD.TestKillMessage");
-
-	ATslHUD_TestKillMessage_Params params;
-	params.KillerName = KillerName;
-	params.VictimName = VictimName;
-	params.bKillerIsOwner = bKillerIsOwner;
-	params.bVictimIsOwner = bVictimIsOwner;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function TslGame.TslHUD.TestGameEvent_MatchEnded
-// (FUNC_Final, FUNC_Exec, FUNC_Native, FUNC_Public)
-
-void ATslHUD::TestGameEvent_MatchEnded()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslHUD.TestGameEvent_MatchEnded");
-
-	ATslHUD_TestGameEvent_MatchEnded_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function TslGame.TslHUD.TestGameEvent_KillOtherPlayer
-// (FUNC_Final, FUNC_Exec, FUNC_Native, FUNC_Public)
-// Parameters:
-// bool                           bGroggy                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-
-void ATslHUD::TestGameEvent_KillOtherPlayer(bool bGroggy)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslHUD.TestGameEvent_KillOtherPlayer");
-
-	ATslHUD_TestGameEvent_KillOtherPlayer_Params params;
-	params.bGroggy = bGroggy;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function TslGame.TslHUD.TestGameEvent_Die
-// (FUNC_Final, FUNC_Exec, FUNC_Native, FUNC_Public)
-// Parameters:
-// bool                           bGroggy                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-
-void ATslHUD::TestGameEvent_Die(bool bGroggy)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslHUD.TestGameEvent_Die");
-
-	ATslHUD_TestGameEvent_Die_Params params;
-	params.bGroggy = bGroggy;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function TslGame.TslHUD.SpawnActorInSceneCaptureWorld
-// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable)
-// Parameters:
-// class UClass*                  ActorClass                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// struct FTransform              SpawnTransform                 (CPF_ConstParm, CPF_Parm, CPF_IsPlainOldData)
-// struct FScriptDelegate         DelegateToCall                 (CPF_Parm, CPF_ZeroConstructor)
-
-void ATslHUD::SpawnActorInSceneCaptureWorld(class UClass* ActorClass, const struct FTransform& SpawnTransform, const struct FScriptDelegate& DelegateToCall)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslHUD.SpawnActorInSceneCaptureWorld");
-
-	ATslHUD_SpawnActorInSceneCaptureWorld_Params params;
-	params.ActorClass = ActorClass;
-	params.SpawnTransform = SpawnTransform;
-	params.DelegateToCall = DelegateToCall;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function TslGame.TslHUD.SetHighlightProvider
-// (FUNC_Final, FUNC_Exec, FUNC_Native, FUNC_Public)
-// Parameters:
-// struct FString                 Provider                       (CPF_Parm, CPF_ZeroConstructor)
-
-void ATslHUD::SetHighlightProvider(const struct FString& Provider)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslHUD.SetHighlightProvider");
-
-	ATslHUD_SetHighlightProvider_Params params;
-	params.Provider = Provider;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function TslGame.TslHUD.NotifyDropSlotOnOtherContainer
-// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
-// Parameters:
-// TScriptInterface<class USlotContainerInterface> Container                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// TScriptInterface<class USlotInterface> Slot                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// TScriptInterface<class USlotContainerInterface> OtherContainer                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-
-void ATslHUD::NotifyDropSlotOnOtherContainer(const TScriptInterface<class USlotContainerInterface>& Container, const TScriptInterface<class USlotInterface>& Slot, const TScriptInterface<class USlotContainerInterface>& OtherContainer)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslHUD.NotifyDropSlotOnOtherContainer");
-
-	ATslHUD_NotifyDropSlotOnOtherContainer_Params params;
-	params.Container = Container;
-	params.Slot = Slot;
-	params.OtherContainer = OtherContainer;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function TslGame.TslHUD.IsGameEnded
-// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
-// Parameters:
-// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-
-bool ATslHUD::IsGameEnded()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslHUD.IsGameEnded");
-
-	ATslHUD_IsGameEnded_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function TslGame.TslHUD.InitCaptureWorld
-// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
-
-void ATslHUD::InitCaptureWorld()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslHUD.InitCaptureWorld");
-
-	ATslHUD_InitCaptureWorld_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function TslGame.TslHUD.GoToLobby
-// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
-
-void ATslHUD::GoToLobby()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslHUD.GoToLobby");
-
-	ATslHUD_GoToLobby_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function TslGame.TslHUD.GetPossessPawn
-// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
-// Parameters:
-// class APawn*                   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-
-class APawn* ATslHUD::GetPossessPawn()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslHUD.GetPossessPawn");
-
-	ATslHUD_GetPossessPawn_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function TslGame.TslHUD.GetPossessCharacter
-// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
-// Parameters:
-// class ATslCharacter*           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-
-class ATslCharacter* ATslHUD::GetPossessCharacter()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslHUD.GetPossessCharacter");
-
-	ATslHUD_GetPossessCharacter_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
 // Function TslGame.LobbyHUD.SetWidgetForBinding
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 // Parameters:
@@ -25487,6 +25529,27 @@ void UTslGameInstance::SetReplayTimeSpeed(float TimeSpeed)
 }
 
 
+// Function TslGame.TslGameInstance.RequestReplayAKillEvent
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// struct FString                 EventID                        (CPF_Parm, CPF_ZeroConstructor)
+
+void UTslGameInstance::RequestReplayAKillEvent(const struct FString& EventID)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslGameInstance.RequestReplayAKillEvent");
+
+	UTslGameInstance_RequestReplayAKillEvent_Params params;
+	params.EventID = EventID;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function TslGame.TslGameInstance.ReplayJump
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 // Parameters:
@@ -25498,6 +25561,24 @@ void UTslGameInstance::ReplayJump(float TimelinePercentage)
 
 	UTslGameInstance_ReplayJump_Params params;
 	params.TimelinePercentage = TimelinePercentage;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function TslGame.TslGameInstance.RemoveAllKillEvents
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+
+void UTslGameInstance::RemoveAllKillEvents()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslGameInstance.RemoveAllKillEvents");
+
+	UTslGameInstance_RemoveAllKillEvents_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -25689,6 +25770,24 @@ void UTslGameInstance::GotoTimelineDoneDelegate__DelegateSignature()
 	UTslGameInstance_GotoTimelineDoneDelegate__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function TslGame.TslGameInstance.GotoReplayList
+// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
+
+void UTslGameInstance::GotoReplayList()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslGameInstance.GotoReplayList");
+
+	UTslGameInstance_GotoReplayList_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -27014,6 +27113,27 @@ void UTslGameOption::STATIC_SetEquipableIteIconShow(bool bNewShow)
 }
 
 
+// Function TslGame.TslGameOption.SetEnablePreloadingMap
+// (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_BlueprintCallable)
+// Parameters:
+// bool                           bEnabled                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UTslGameOption::STATIC_SetEnablePreloadingMap(bool bEnabled)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslGameOption.SetEnablePreloadingMap");
+
+	UTslGameOption_SetEnablePreloadingMap_Params params;
+	params.bEnabled = bEnabled;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function TslGame.TslGameOption.SetEnableFunctionality
 // (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_BlueprintCallable)
 // Parameters:
@@ -27662,6 +27782,28 @@ bool UTslGameOption::STATIC_IsFunctionalityEnabled(TEnumAsByte<EGameplayFunction
 
 	UTslGameOption_IsFunctionalityEnabled_Params params;
 	params.eAction = eAction;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function TslGame.TslGameOption.IsEnabledPreloadingMap
+// (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure)
+// Parameters:
+// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+
+bool UTslGameOption::STATIC_IsEnabledPreloadingMap()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslGameOption.IsEnabledPreloadingMap");
+
+	UTslGameOption_IsEnabledPreloadingMap_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -29916,48 +30058,6 @@ void ATslParticle::AttachToParent()
 	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslParticle.AttachToParent");
 
 	ATslParticle_AttachToParent_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function TslGame.TslPawnInputBindingComponent.NotifyOwnerUnPossessed
-// (FUNC_Final, FUNC_Native, FUNC_Public)
-// Parameters:
-// class ATslPlayerController*    InController                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-
-void UTslPawnInputBindingComponent::NotifyOwnerUnPossessed(class ATslPlayerController* InController)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslPawnInputBindingComponent.NotifyOwnerUnPossessed");
-
-	UTslPawnInputBindingComponent_NotifyOwnerUnPossessed_Params params;
-	params.InController = InController;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function TslGame.TslPawnInputBindingComponent.NotifyOwnerPossessed
-// (FUNC_Final, FUNC_Native, FUNC_Public)
-// Parameters:
-// class ATslPlayerController*    InController                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-
-void UTslPawnInputBindingComponent::NotifyOwnerPossessed(class ATslPlayerController* InController)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslPawnInputBindingComponent.NotifyOwnerPossessed");
-
-	UTslPawnInputBindingComponent_NotifyOwnerPossessed_Params params;
-	params.InController = InController;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -34351,6 +34451,29 @@ void UTslKeySettingWidget::InitializeKeySettingWidget()
 	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslKeySettingWidget.InitializeKeySettingWidget");
 
 	UTslKeySettingWidget_InitializeKeySettingWidget_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function TslGame.TslBreatheBarWidget.OnStartBuff
+// (FUNC_Final, FUNC_Native, FUNC_Protected)
+// Parameters:
+// struct FName                   BuffName                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// bool                           bStart                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UTslBreatheBarWidget::OnStartBuff(const struct FName& BuffName, bool bStart)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function TslGame.TslBreatheBarWidget.OnStartBuff");
+
+	UTslBreatheBarWidget_OnStartBuff_Params params;
+	params.BuffName = BuffName;
+	params.bStart = bStart;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;

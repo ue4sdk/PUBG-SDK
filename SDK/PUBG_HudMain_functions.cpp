@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.30.2) SDK
+// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,60 @@ namespace Classes
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function HudMain.HudMain_C.BindEventForShowReplayTimeline
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UHudMain_C::BindEventForShowReplayTimeline()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function HudMain.HudMain_C.BindEventForShowReplayTimeline");
+
+	UHudMain_C_BindEventForShowReplayTimeline_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function HudMain.HudMain_C.ShowReplayTimeLine
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+// Parameters:
+// bool                           bShow                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+
+void UHudMain_C::ShowReplayTimeLine(bool bShow)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function HudMain.HudMain_C.ShowReplayTimeLine");
+
+	UHudMain_C_ShowReplayTimeLine_Params params;
+	params.bShow = bShow;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function HudMain.HudMain_C.SetHUDForIngameReplayMenu
+// (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
+
+void UHudMain_C::SetHUDForIngameReplayMenu()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function HudMain.HudMain_C.SetHUDForIngameReplayMenu");
+
+	UHudMain_C_SetHUDForIngameReplayMenu_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
 
 // Function HudMain.HudMain_C.BindEventForMapClosing
 // (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
@@ -100,14 +154,14 @@ void UHudMain_C::On_Name_Prepass_1(class UWidget* BoundWidget)
 }
 
 
-// Function HudMain.HudMain_C.ShowReplayTimeline
+// Function HudMain.HudMain_C.UpdateReplayTimeline
 // (FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
-void UHudMain_C::ShowReplayTimeline()
+void UHudMain_C::UpdateReplayTimeline()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function HudMain.HudMain_C.ShowReplayTimeline");
+	static auto fn = UObject::FindObject<UFunction>("Function HudMain.HudMain_C.UpdateReplayTimeline");
 
-	UHudMain_C_ShowReplayTimeline_Params params;
+	UHudMain_C_UpdateReplayTimeline_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -973,15 +1027,12 @@ void UHudMain_C::OnPossessPawnChange()
 
 // Function HudMain.HudMain_C.InitializeHUD
 // (FUNC_Public, FUNC_HasDefaults, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
-// Parameters:
-// bool                           bIsReplaying                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UHudMain_C::InitializeHUD(bool bIsReplaying)
+void UHudMain_C::InitializeHUD()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function HudMain.HudMain_C.InitializeHUD");
 
 	UHudMain_C_InitializeHUD_Params params;
-	params.bIsReplaying = bIsReplaying;
 
 	auto flags = fn->FunctionFlags;
 

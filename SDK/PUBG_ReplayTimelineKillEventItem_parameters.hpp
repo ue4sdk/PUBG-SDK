@@ -1,6 +1,6 @@
 #pragma once
 
-// PlayerUnknown's Battlegrounds (2.6.30.2) SDK
+// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,12 @@ namespace Classes
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function ReplayTimelineKillEventItem.ReplayTimelineKillEventItem_C.GetToolTipText
+struct UReplayTimelineKillEventItem_C_GetToolTipText_Params
+{
+	struct FText                                       ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
+};
 
 }
 

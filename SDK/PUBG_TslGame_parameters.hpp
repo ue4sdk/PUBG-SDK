@@ -1,6 +1,6 @@
 #pragma once
 
-// PlayerUnknown's Battlegrounds (2.6.30.2) SDK
+// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -3523,6 +3523,11 @@ struct ATslCharacter_ResetParachute_Params
 {
 };
 
+// Function TslGame.TslCharacter.RemoveCrosshair
+struct ATslCharacter_RemoveCrosshair_Params
+{
+};
+
 // Function TslGame.TslCharacter.ReevaluaeTargetingState
 struct ATslCharacter_ReevaluaeTargetingState_Params
 {
@@ -4167,11 +4172,6 @@ struct ATslCharacter_IsAlive_Params
 struct ATslCharacter_IsActiveRagdoll_Params
 {
 	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function TslGame.TslCharacter.HiddenCrosshair
-struct ATslCharacter_HiddenCrosshair_Params
-{
 };
 
 // Function TslGame.TslCharacter.HaveNotAnyHealItemNotifyMessage
@@ -4993,6 +4993,108 @@ struct UTslVehicleInterface_GetVehicleMeshComponent_Params
 struct UTslVehicleInterface_GetTslPlayerController_Params
 {
 	class ATslPlayerController*                        ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function TslGame.TslHUD.TestSendSystemMessage
+struct ATslHUD_TestSendSystemMessage_Params
+{
+	struct FText                                       Message;                                                  // (CPF_Parm)
+	float                                              Duration;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function TslGame.TslHUD.TestSendImportantMessage
+struct ATslHUD_TestSendImportantMessage_Params
+{
+	struct FText                                       Message;                                                  // (CPF_Parm)
+	float                                              Duration;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function TslGame.TslHUD.TestKillMessage
+struct ATslHUD_TestKillMessage_Params
+{
+	struct FString                                     KillerName;                                               // (CPF_Parm, CPF_ZeroConstructor)
+	struct FString                                     VictimName;                                               // (CPF_Parm, CPF_ZeroConstructor)
+	bool                                               bKillerIsOwner;                                           // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bVictimIsOwner;                                           // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function TslGame.TslHUD.TestGameEvent_MatchEnded
+struct ATslHUD_TestGameEvent_MatchEnded_Params
+{
+};
+
+// Function TslGame.TslHUD.TestGameEvent_KillOtherPlayer
+struct ATslHUD_TestGameEvent_KillOtherPlayer_Params
+{
+	bool                                               bGroggy;                                                  // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function TslGame.TslHUD.TestGameEvent_Die
+struct ATslHUD_TestGameEvent_Die_Params
+{
+	bool                                               bGroggy;                                                  // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function TslGame.TslHUD.SpawnActorInSceneCaptureWorld
+struct ATslHUD_SpawnActorInSceneCaptureWorld_Params
+{
+	class UClass*                                      ActorClass;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FTransform                                  SpawnTransform;                                           // (CPF_ConstParm, CPF_Parm, CPF_IsPlainOldData)
+	struct FScriptDelegate                             DelegateToCall;                                           // (CPF_Parm, CPF_ZeroConstructor)
+};
+
+// Function TslGame.TslHUD.SetHighlightProvider
+struct ATslHUD_SetHighlightProvider_Params
+{
+	struct FString                                     Provider;                                                 // (CPF_Parm, CPF_ZeroConstructor)
+};
+
+// Function TslGame.TslHUD.NotifyDropSlotOnOtherContainer
+struct ATslHUD_NotifyDropSlotOnOtherContainer_Params
+{
+	TScriptInterface<class USlotContainerInterface>    Container;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TScriptInterface<class USlotInterface>             Slot;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	TScriptInterface<class USlotContainerInterface>    OtherContainer;                                           // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function TslGame.TslHUD.IsGameEnded
+struct ATslHUD_IsGameEnded_Params
+{
+	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function TslGame.TslHUD.InitCaptureWorld
+struct ATslHUD_InitCaptureWorld_Params
+{
+};
+
+// Function TslGame.TslHUD.GoToLobby
+struct ATslHUD_GoToLobby_Params
+{
+};
+
+// Function TslGame.TslHUD.GetPossessPawn
+struct ATslHUD_GetPossessPawn_Params
+{
+	class APawn*                                       ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function TslGame.TslHUD.GetPossessCharacter
+struct ATslHUD_GetPossessCharacter_Params
+{
+	class ATslCharacter*                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function TslGame.TslPawnInputBindingComponent.NotifyOwnerUnPossessed
+struct UTslPawnInputBindingComponent_NotifyOwnerUnPossessed_Params
+{
+	class ATslPlayerController*                        InController;                                             // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function TslGame.TslPawnInputBindingComponent.NotifyOwnerPossessed
+struct UTslPawnInputBindingComponent_NotifyOwnerPossessed_Params
+{
+	class ATslPlayerController*                        InController;                                             // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // Function TslGame.ParachuteVehicle.ServerRelease
@@ -6661,96 +6763,6 @@ struct UTslAnimInstance_CacheCharacterReference_Params
 	class ATslCharacter*                               InCharacter;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
-// Function TslGame.TslHUD.TestSendSystemMessage
-struct ATslHUD_TestSendSystemMessage_Params
-{
-	struct FText                                       Message;                                                  // (CPF_Parm)
-	float                                              Duration;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function TslGame.TslHUD.TestSendImportantMessage
-struct ATslHUD_TestSendImportantMessage_Params
-{
-	struct FText                                       Message;                                                  // (CPF_Parm)
-	float                                              Duration;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function TslGame.TslHUD.TestKillMessage
-struct ATslHUD_TestKillMessage_Params
-{
-	struct FString                                     KillerName;                                               // (CPF_Parm, CPF_ZeroConstructor)
-	struct FString                                     VictimName;                                               // (CPF_Parm, CPF_ZeroConstructor)
-	bool                                               bKillerIsOwner;                                           // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	bool                                               bVictimIsOwner;                                           // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function TslGame.TslHUD.TestGameEvent_MatchEnded
-struct ATslHUD_TestGameEvent_MatchEnded_Params
-{
-};
-
-// Function TslGame.TslHUD.TestGameEvent_KillOtherPlayer
-struct ATslHUD_TestGameEvent_KillOtherPlayer_Params
-{
-	bool                                               bGroggy;                                                  // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function TslGame.TslHUD.TestGameEvent_Die
-struct ATslHUD_TestGameEvent_Die_Params
-{
-	bool                                               bGroggy;                                                  // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function TslGame.TslHUD.SpawnActorInSceneCaptureWorld
-struct ATslHUD_SpawnActorInSceneCaptureWorld_Params
-{
-	class UClass*                                      ActorClass;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	struct FTransform                                  SpawnTransform;                                           // (CPF_ConstParm, CPF_Parm, CPF_IsPlainOldData)
-	struct FScriptDelegate                             DelegateToCall;                                           // (CPF_Parm, CPF_ZeroConstructor)
-};
-
-// Function TslGame.TslHUD.SetHighlightProvider
-struct ATslHUD_SetHighlightProvider_Params
-{
-	struct FString                                     Provider;                                                 // (CPF_Parm, CPF_ZeroConstructor)
-};
-
-// Function TslGame.TslHUD.NotifyDropSlotOnOtherContainer
-struct ATslHUD_NotifyDropSlotOnOtherContainer_Params
-{
-	TScriptInterface<class USlotContainerInterface>    Container;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TScriptInterface<class USlotInterface>             Slot;                                                     // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	TScriptInterface<class USlotContainerInterface>    OtherContainer;                                           // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function TslGame.TslHUD.IsGameEnded
-struct ATslHUD_IsGameEnded_Params
-{
-	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function TslGame.TslHUD.InitCaptureWorld
-struct ATslHUD_InitCaptureWorld_Params
-{
-};
-
-// Function TslGame.TslHUD.GoToLobby
-struct ATslHUD_GoToLobby_Params
-{
-};
-
-// Function TslGame.TslHUD.GetPossessPawn
-struct ATslHUD_GetPossessPawn_Params
-{
-	class APawn*                                       ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
-// Function TslGame.TslHUD.GetPossessCharacter
-struct ATslHUD_GetPossessCharacter_Params
-{
-	class ATslCharacter*                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
-};
-
 // Function TslGame.LobbyHUD.SetWidgetForBinding
 struct ALobbyHUD_SetWidgetForBinding_Params
 {
@@ -7254,10 +7266,21 @@ struct UTslGameInstance_SetReplayTimeSpeed_Params
 	float                                              TimeSpeed;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
+// Function TslGame.TslGameInstance.RequestReplayAKillEvent
+struct UTslGameInstance_RequestReplayAKillEvent_Params
+{
+	struct FString                                     EventID;                                                  // (CPF_Parm, CPF_ZeroConstructor)
+};
+
 // Function TslGame.TslGameInstance.ReplayJump
 struct UTslGameInstance_ReplayJump_Params
 {
 	float                                              TimelinePercentage;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function TslGame.TslGameInstance.RemoveAllKillEvents
+struct UTslGameInstance_RemoveAllKillEvents_Params
+{
 };
 
 // DelegateFunction TslGame.TslGameInstance.RecordStartedDelegate__DelegateSignature
@@ -7310,6 +7333,11 @@ struct UTslGameInstance_IsLive_Params
 
 // DelegateFunction TslGame.TslGameInstance.GotoTimelineDoneDelegate__DelegateSignature
 struct UTslGameInstance_GotoTimelineDoneDelegate__DelegateSignature_Params
+{
+};
+
+// Function TslGame.TslGameInstance.GotoReplayList
+struct UTslGameInstance_GotoReplayList_Params
 {
 };
 
@@ -7692,6 +7720,12 @@ struct UTslGameOption_SetEquipableIteIconShow_Params
 	bool                                               bNewShow;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
+// Function TslGame.TslGameOption.SetEnablePreloadingMap
+struct UTslGameOption_SetEnablePreloadingMap_Params
+{
+	bool                                               bEnabled;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
 // Function TslGame.TslGameOption.SetEnableFunctionality
 struct UTslGameOption_SetEnableFunctionality_Params
 {
@@ -7882,6 +7916,12 @@ struct UTslGameOption_IsGamepadKey_Params
 struct UTslGameOption_IsFunctionalityEnabled_Params
 {
 	TEnumAsByte<EGameplayFunctionalities>              eAction;                                                  // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+};
+
+// Function TslGame.TslGameOption.IsEnabledPreloadingMap
+struct UTslGameOption_IsEnabledPreloadingMap_Params
+{
 	bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 };
 
@@ -8534,18 +8574,6 @@ struct ATslParticle_ForceSpawn_Params
 // Function TslGame.TslParticle.AttachToParent
 struct ATslParticle_AttachToParent_Params
 {
-};
-
-// Function TslGame.TslPawnInputBindingComponent.NotifyOwnerUnPossessed
-struct UTslPawnInputBindingComponent_NotifyOwnerUnPossessed_Params
-{
-	class ATslPlayerController*                        InController;                                             // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-};
-
-// Function TslGame.TslPawnInputBindingComponent.NotifyOwnerPossessed
-struct UTslPawnInputBindingComponent_NotifyOwnerPossessed_Params
-{
-	class ATslPlayerController*                        InController;                                             // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // Function TslGame.TslPlayerState.OnRep_PlayerStatistics
@@ -9856,6 +9884,13 @@ struct UTslKeySettingWidget_SetToDefault_Params
 // Function TslGame.TslKeySettingWidget.InitializeKeySettingWidget
 struct UTslKeySettingWidget_InitializeKeySettingWidget_Params
 {
+};
+
+// Function TslGame.TslBreatheBarWidget.OnStartBuff
+struct UTslBreatheBarWidget_OnStartBuff_Params
+{
+	struct FName                                       BuffName;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               bStart;                                                   // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // Function TslGame.TslBuffIconListWidget.UpdateRunBuffIconVisibility

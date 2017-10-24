@@ -1,6 +1,6 @@
 #pragma once
 
-// PlayerUnknown's Battlegrounds (2.6.30.2) SDK
+// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -591,7 +591,9 @@ enum class EHackDetectionType : uint8_t
 	WEAPON_INVALID_AMMO            = 5,
 	WEAPON_WALL_CHECK              = 6,
 	IGNORE_WALL                    = 7,
-	EHackDetectionType_MAX         = 8
+	SPEED_HACK_TIME                = 8,
+	SPEED_HACK_VELOCITY            = 9,
+	EHackDetectionType_MAX         = 10
 };
 
 
@@ -936,6 +938,17 @@ enum class EMovementType : uint8_t
 };
 
 
+// Enum TslGame.EDamageVictimActorType
+enum class EDamageVictimActorType : uint8_t
+{
+	Character                      = 0,
+	Vehicle                        = 1,
+	Wheel                          = 2,
+	DestructibleActor              = 3,
+	EDamageVictimActorType_MAX     = 4
+};
+
+
 // Enum TslGame.EDoorState
 enum class EDoorState : uint8_t
 {
@@ -992,17 +1005,6 @@ enum class EAnimPawnState : uint8_t
 	PS_Flying                      = 8,
 	PS_ActiveRagdoll               = 9,
 	PS_MAX                         = 10
-};
-
-
-// Enum TslGame.EDamageVictimActorType
-enum class EDamageVictimActorType : uint8_t
-{
-	Character                      = 0,
-	Vehicle                        = 1,
-	Wheel                          = 2,
-	DestructibleActor              = 3,
-	EDamageVictimActorType_MAX     = 4
 };
 
 
@@ -1846,6 +1848,15 @@ struct FBuffWithBoostGauge
 	struct FName                                       OverlapId;                                                // 0x0010(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 };
 
+// ScriptStruct TslGame.DamageRatioInfo
+// 0x0008
+struct FDamageRatioInfo
+{
+	float                                              DamageRatio;                                              // 0x0000(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	TEnumAsByte<EDamageVictimActorType>                DamageVictimActorType;                                    // 0x0004(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0005(0x0003) MISSED OFFSET
+};
+
 // ScriptStruct TslGame.StanceTransition
 // 0x0010
 struct FStanceTransition
@@ -1989,15 +2000,6 @@ struct FVaultingTask
 	float                                              Direction;                                                // 0x0034(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              PlayerSpeed;                                              // 0x0038(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 	float                                              DistanceFromObject;                                       // 0x003C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-};
-
-// ScriptStruct TslGame.DamageRatioInfo
-// 0x0008
-struct FDamageRatioInfo
-{
-	float                                              DamageRatio;                                              // 0x0000(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	TEnumAsByte<EDamageVictimActorType>                DamageVictimActorType;                                    // 0x0004(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0005(0x0003) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.TslChatStyle
@@ -2285,10 +2287,16 @@ struct FTslStartParameter
 };
 
 // ScriptStruct TslGame.ReplayKillEventItem
-// 0x0004
+// 0x0058
 struct FReplayKillEventItem
 {
-	int                                                Time;                                                     // 0x0000(0x0004) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FString                                     ID;                                                       // 0x0000(0x0010) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor)
+	struct FString                                     Group;                                                    // 0x0010(0x0010) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor)
+	struct FString                                     MetaData;                                                 // 0x0020(0x0010) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor)
+	int                                                Time1;                                                    // 0x0030(0x0004) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	int                                                Time2;                                                    // 0x0034(0x0004) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	struct FString                                     KillerName;                                               // 0x0038(0x0010) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor)
+	struct FString                                     VictimName;                                               // 0x0048(0x0010) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor)
 };
 
 // ScriptStruct TslGame.ReplayItem
@@ -3067,6 +3075,14 @@ struct FMaterialParametersData
 	TArray<class UTexture*>                            Textures;                                                 // 0x0010(0x0010) (CPF_ZeroConstructor)
 };
 
+// ScriptStruct TslGame.TslPointDamageEvent
+// 0x0008 (0x00B8 - 0x00B0)
+struct FTslPointDamageEvent : public FPointDamageEvent
+{
+	bool                                               bDestructibleDoor;                                        // 0x00B0(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x00B1(0x0007) MISSED OFFSET
+};
+
 // ScriptStruct TslGame.VehicleSpawnDataRow
 // 0x0018 (0x0020 - 0x0008)
 struct FVehicleSpawnDataRow : public FTableRowBase
@@ -3083,14 +3099,6 @@ struct FVehicleSpawnDataRow : public FTableRowBase
 struct FTslSplinePoint
 {
 	unsigned char                                      UnknownData00[0x1C];                                      // 0x0000(0x001C) MISSED OFFSET
-};
-
-// ScriptStruct TslGame.TslPointDamageEvent
-// 0x0008 (0x00B8 - 0x00B0)
-struct FTslPointDamageEvent : public FPointDamageEvent
-{
-	bool                                               bDestructibleDoor;                                        // 0x00B0(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x00B1(0x0007) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.SplashObject
@@ -3110,6 +3118,31 @@ struct FWuLogCharacter
 	float                                              Health;                                                   // 0x0024(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	class Vector3D                                     Location;                                                 // 0x0028(0x000C) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	int                                                Ranking;                                                  // 0x0034(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// ScriptStruct TslGame.WuLogHackDetection_SpeedHackTime
+// 0x0050 (0x0078 - 0x0028)
+struct FWuLogHackDetection_SpeedHackTime : public FLogBase
+{
+	struct FWuLogCharacter                             Character;                                                // 0x0028(0x0038)
+	int                                                Reason_Count;                                             // 0x0060(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              Reason_TimeDiscrepancy;                                   // 0x0064(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              Reason_RawTimeDiscrepancy;                                // 0x0068(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              Reason_Lifetime;                                          // 0x006C(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              Reason_CurrentMoveError;                                  // 0x0070(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               IsBanned;                                                 // 0x0074(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0075(0x0003) MISSED OFFSET
+};
+
+// ScriptStruct TslGame.WuLogHackDetection_SpeedHackVelocity
+// 0x0048 (0x0070 - 0x0028)
+struct FWuLogHackDetection_SpeedHackVelocity : public FLogBase
+{
+	struct FWuLogCharacter                             Character;                                                // 0x0028(0x0038)
+	int                                                Reason_Count;                                             // 0x0060(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	float                                              Reason_Velocity;                                          // 0x0064(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	bool                                               IsBanned;                                                 // 0x0068(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0069(0x0007) MISSED OFFSET
 };
 
 // ScriptStruct TslGame.WuLogHackDetection_ContinuousKill

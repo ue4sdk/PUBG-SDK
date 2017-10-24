@@ -1,6 +1,6 @@
 #pragma once
 
-// PlayerUnknown's Battlegrounds (2.6.30.2) SDK
+// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,22 @@ namespace Classes
 //---------------------------------------------------------------------------
 //Parameters
 //---------------------------------------------------------------------------
+
+// Function HudMain.HudMain_C.BindEventForShowReplayTimeline
+struct UHudMain_C_BindEventForShowReplayTimeline_Params
+{
+};
+
+// Function HudMain.HudMain_C.ShowReplayTimeLine
+struct UHudMain_C_ShowReplayTimeLine_Params
+{
+	bool                                               bShow;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+};
+
+// Function HudMain.HudMain_C.SetHUDForIngameReplayMenu
+struct UHudMain_C_SetHUDForIngameReplayMenu_Params
+{
+};
 
 // Function HudMain.HudMain_C.BindEventForMapClosing
 struct UHudMain_C_BindEventForMapClosing_Params
@@ -40,8 +56,8 @@ struct UHudMain_C_On_Name_Prepass_1_Params
 	class UWidget*                                     BoundWidget;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
-// Function HudMain.HudMain_C.ShowReplayTimeline
-struct UHudMain_C_ShowReplayTimeline_Params
+// Function HudMain.HudMain_C.UpdateReplayTimeline
+struct UHudMain_C_UpdateReplayTimeline_Params
 {
 };
 
@@ -298,7 +314,6 @@ struct UHudMain_C_OnPossessPawnChange_Params
 // Function HudMain.HudMain_C.InitializeHUD
 struct UHudMain_C_InitializeHUD_Params
 {
-	bool                                               bIsReplaying;                                             // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 };
 
 // Function HudMain.HudMain_C.Construct
