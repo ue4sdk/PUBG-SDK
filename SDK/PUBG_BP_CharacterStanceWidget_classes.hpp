@@ -1,34 +1,32 @@
 #pragma once
 
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+#pragma pack(push, 0x8)
 #endif
 
-namespace Classes
-{
-//---------------------------------------------------------------------------
-//Classes
-//---------------------------------------------------------------------------
+namespace Classes {
+	//---------------------------------------------------------------------------
+	//Classes
+	//---------------------------------------------------------------------------
 
-// WidgetBlueprintGeneratedClass BP_CharacterStanceWidget.BP_CharacterStanceWidget_C
-// 0x0000 (0x02A8 - 0x02A8)
-class UBP_CharacterStanceWidget_C : public UCharacterStanceBaseWidget
-{
-public:
+	// WidgetBlueprintGeneratedClass BP_CharacterStanceWidget.BP_CharacterStanceWidget_C
+	// 0x0000 (0x02A8 - 0x02A8)
+	class UBP_CharacterStanceWidget_C : public UCharacterStanceBaseWidget {
+	public:
 
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass BP_CharacterStanceWidget.BP_CharacterStanceWidget_C");
-		return ptr;
-	}
+		static UClass* StaticClass() {
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x503e0aa5);
+			return ptr;
+		}
 
-};
+	};
 
 
 }
 
 #ifdef _MSC_VER
-	#pragma pack(pop)
+#pragma pack(pop)
 #endif

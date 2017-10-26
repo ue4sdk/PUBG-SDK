@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,7 +17,8 @@ namespace Classes
 
 void ACharacterStudio_Default_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CharacterStudio_Default.CharacterStudio_Default_C.UserConstructionScript");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xeccc578c);
 
 	ACharacterStudio_Default_C_UserConstructionScript_Params params;
 
@@ -36,7 +37,8 @@ void ACharacterStudio_Default_C::UserConstructionScript()
 
 void ACharacterStudio_Default_C::ReceiveTick(float* DeltaSeconds)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CharacterStudio_Default.CharacterStudio_Default_C.ReceiveTick");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x3194bc79);
 
 	ACharacterStudio_Default_C_ReceiveTick_Params params;
 	params.DeltaSeconds = DeltaSeconds;
@@ -54,7 +56,8 @@ void ACharacterStudio_Default_C::ReceiveTick(float* DeltaSeconds)
 
 void ACharacterStudio_Default_C::ReceiveDestroyed()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CharacterStudio_Default.CharacterStudio_Default_C.ReceiveDestroyed");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x99f840eb);
 
 	ACharacterStudio_Default_C_ReceiveDestroyed_Params params;
 
@@ -73,7 +76,8 @@ void ACharacterStudio_Default_C::ReceiveDestroyed()
 
 void ACharacterStudio_Default_C::ExecuteUbergraph_CharacterStudio_Default(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CharacterStudio_Default.CharacterStudio_Default_C.ExecuteUbergraph_CharacterStudio_Default");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x721a7068);
 
 	ACharacterStudio_Default_C_ExecuteUbergraph_CharacterStudio_Default_Params params;
 	params.EntryPoint = EntryPoint;

@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,8 @@ namespace Classes
 
 void UInGameReplayMenu_C::SetHUD(class ATslHUD* inHUD)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InGameReplayMenu.InGameReplayMenu_C.SetHUD");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xb5104d22);
 
 	UInGameReplayMenu_C_SetHUD_Params params;
 	params.inHUD = inHUD;
@@ -39,7 +40,8 @@ void UInGameReplayMenu_C::SetHUD(class ATslHUD* inHUD)
 
 void UInGameReplayMenu_C::GotoReplayList(TEnumAsByte<EPopupButtonID> ButtonID)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InGameReplayMenu.InGameReplayMenu_C.GotoReplayList");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x81b24a21);
 
 	UInGameReplayMenu_C_GotoReplayList_Params params;
 	params.ButtonID = ButtonID;
@@ -59,7 +61,8 @@ void UInGameReplayMenu_C::GotoReplayList(TEnumAsByte<EPopupButtonID> ButtonID)
 
 void UInGameReplayMenu_C::QuitReplay(TEnumAsByte<EPopupButtonID> ButtonID)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InGameReplayMenu.InGameReplayMenu_C.QuitReplay");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xcebe6335);
 
 	UInGameReplayMenu_C_QuitReplay_Params params;
 	params.ButtonID = ButtonID;
@@ -77,7 +80,8 @@ void UInGameReplayMenu_C::QuitReplay(TEnumAsByte<EPopupButtonID> ButtonID)
 
 void UInGameReplayMenu_C::BndEvt__Button_Exit_K2Node_ComponentBoundEvent_228_OnButtonClickedEvent__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InGameReplayMenu.InGameReplayMenu_C.BndEvt__Button_Exit_K2Node_ComponentBoundEvent_228_OnButtonClickedEvent__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xa2e5fc20);
 
 	UInGameReplayMenu_C_BndEvt__Button_Exit_K2Node_ComponentBoundEvent_228_OnButtonClickedEvent__DelegateSignature_Params params;
 
@@ -94,7 +98,8 @@ void UInGameReplayMenu_C::BndEvt__Button_Exit_K2Node_ComponentBoundEvent_228_OnB
 
 void UInGameReplayMenu_C::BndEvt__Button_Resume_K2Node_ComponentBoundEvent_247_OnButtonClickedEvent__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InGameReplayMenu.InGameReplayMenu_C.BndEvt__Button_Resume_K2Node_ComponentBoundEvent_247_OnButtonClickedEvent__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x48c562aa);
 
 	UInGameReplayMenu_C_BndEvt__Button_Resume_K2Node_ComponentBoundEvent_247_OnButtonClickedEvent__DelegateSignature_Params params;
 
@@ -111,7 +116,8 @@ void UInGameReplayMenu_C::BndEvt__Button_Resume_K2Node_ComponentBoundEvent_247_O
 
 void UInGameReplayMenu_C::BndEvt__Button_ReplayList_K2Node_ComponentBoundEvent_210_OnButtonClickedEvent__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InGameReplayMenu.InGameReplayMenu_C.BndEvt__Button_ReplayList_K2Node_ComponentBoundEvent_210_OnButtonClickedEvent__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x47b6cfda);
 
 	UInGameReplayMenu_C_BndEvt__Button_ReplayList_K2Node_ComponentBoundEvent_210_OnButtonClickedEvent__DelegateSignature_Params params;
 
@@ -128,7 +134,8 @@ void UInGameReplayMenu_C::BndEvt__Button_ReplayList_K2Node_ComponentBoundEvent_2
 
 void UInGameReplayMenu_C::HidePopupWidgetForReplay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InGameReplayMenu.InGameReplayMenu_C.HidePopupWidgetForReplay");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x18bd1fb7);
 
 	UInGameReplayMenu_C_HidePopupWidgetForReplay_Params params;
 
@@ -145,7 +152,8 @@ void UInGameReplayMenu_C::HidePopupWidgetForReplay()
 
 void UInGameReplayMenu_C::OpenReplayListMap()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InGameReplayMenu.InGameReplayMenu_C.OpenReplayListMap");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x1d5f2c8e);
 
 	UInGameReplayMenu_C_OpenReplayListMap_Params params;
 
@@ -164,7 +172,8 @@ void UInGameReplayMenu_C::OpenReplayListMap()
 
 void UInGameReplayMenu_C::ExecuteUbergraph_InGameReplayMenu(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InGameReplayMenu.InGameReplayMenu_C.ExecuteUbergraph_InGameReplayMenu");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xce0335c6);
 
 	UInGameReplayMenu_C_ExecuteUbergraph_InGameReplayMenu_Params params;
 	params.EntryPoint = EntryPoint;

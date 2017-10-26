@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,8 @@ namespace Classes
 
 bool UGraphicOptionWidget_C::IsKeyUp()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GraphicOptionWidget.GraphicOptionWidget_C.IsKeyUp");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x6aa3847b);
 
 	UGraphicOptionWidget_C_IsKeyUp_Params params;
 
@@ -40,7 +41,8 @@ bool UGraphicOptionWidget_C::IsKeyUp()
 
 bool UGraphicOptionWidget_C::IsChanged()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GraphicOptionWidget.GraphicOptionWidget_C.IsChanged");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xeac02879);
 
 	UGraphicOptionWidget_C_IsChanged_Params params;
 
@@ -59,7 +61,8 @@ bool UGraphicOptionWidget_C::IsChanged()
 
 void UGraphicOptionWidget_C::Construct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GraphicOptionWidget.GraphicOptionWidget_C.Construct");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x46b4a8e);
 
 	UGraphicOptionWidget_C_Construct_Params params;
 
@@ -76,7 +79,8 @@ void UGraphicOptionWidget_C::Construct()
 
 void UGraphicOptionWidget_C::OnApply()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GraphicOptionWidget.GraphicOptionWidget_C.OnApply");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc99e2f24);
 
 	UGraphicOptionWidget_C_OnApply_Params params;
 
@@ -93,7 +97,8 @@ void UGraphicOptionWidget_C::OnApply()
 
 void UGraphicOptionWidget_C::OnDefault()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GraphicOptionWidget.GraphicOptionWidget_C.OnDefault");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x8227d9df);
 
 	UGraphicOptionWidget_C_OnDefault_Params params;
 
@@ -110,7 +115,8 @@ void UGraphicOptionWidget_C::OnDefault()
 
 void UGraphicOptionWidget_C::OnReset()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GraphicOptionWidget.GraphicOptionWidget_C.OnReset");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xe37a1a55);
 
 	UGraphicOptionWidget_C_OnReset_Params params;
 
@@ -129,7 +135,8 @@ void UGraphicOptionWidget_C::OnReset()
 
 void UGraphicOptionWidget_C::ExecuteUbergraph_GraphicOptionWidget(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GraphicOptionWidget.GraphicOptionWidget_C.ExecuteUbergraph_GraphicOptionWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xbfd0b816);
 
 	UGraphicOptionWidget_C_ExecuteUbergraph_GraphicOptionWidget_Params params;
 	params.EntryPoint = EntryPoint;

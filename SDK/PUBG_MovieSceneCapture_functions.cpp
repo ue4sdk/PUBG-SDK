@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,8 @@ namespace Classes
 
 int UMovieSceneCaptureEnvironment::STATIC_GetCaptureFrameNumber()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.MovieSceneCaptureEnvironment.GetCaptureFrameNumber");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x7eb022b4);
 
 	UMovieSceneCaptureEnvironment_GetCaptureFrameNumber_Params params;
 
@@ -41,7 +42,8 @@ int UMovieSceneCaptureEnvironment::STATIC_GetCaptureFrameNumber()
 
 float UMovieSceneCaptureEnvironment::STATIC_GetCaptureElapsedTime()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MovieSceneCapture.MovieSceneCaptureEnvironment.GetCaptureElapsedTime");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xaae3072f);
 
 	UMovieSceneCaptureEnvironment_GetCaptureElapsedTime_Params params;
 

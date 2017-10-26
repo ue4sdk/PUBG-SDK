@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,7 +17,8 @@ namespace Classes
 
 void AWeaponStudio_C::OnLoad_Test()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponStudio.WeaponStudio_C.OnLoad_Test");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x3cdfebb);
 
 	AWeaponStudio_C_OnLoad_Test_Params params;
 
@@ -34,7 +35,8 @@ void AWeaponStudio_C::OnLoad_Test()
 
 void AWeaponStudio_C::OnAttachmentLoad()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponStudio.WeaponStudio_C.OnAttachmentLoad");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x942f987b);
 
 	AWeaponStudio_C_OnAttachmentLoad_Params params;
 
@@ -51,7 +53,8 @@ void AWeaponStudio_C::OnAttachmentLoad()
 
 void AWeaponStudio_C::UpdateAttachment()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponStudio.WeaponStudio_C.UpdateAttachment");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xaf2c92b);
 
 	AWeaponStudio_C_UpdateAttachment_Params params;
 
@@ -68,7 +71,8 @@ void AWeaponStudio_C::UpdateAttachment()
 
 void AWeaponStudio_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponStudio.WeaponStudio_C.UserConstructionScript");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xda794c0);
 
 	AWeaponStudio_C_UserConstructionScript_Params params;
 
@@ -87,7 +91,8 @@ void AWeaponStudio_C::UserConstructionScript()
 
 void AWeaponStudio_C::SetItem(class UItem** Item)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponStudio.WeaponStudio_C.SetItem");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xe73e7384);
 
 	AWeaponStudio_C_SetItem_Params params;
 	params.Item = Item;
@@ -105,7 +110,8 @@ void AWeaponStudio_C::SetItem(class UItem** Item)
 
 void AWeaponStudio_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponStudio.WeaponStudio_C.ReceiveBeginPlay");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xaa45a967);
 
 	AWeaponStudio_C_ReceiveBeginPlay_Params params;
 
@@ -124,7 +130,8 @@ void AWeaponStudio_C::ReceiveBeginPlay()
 
 void AWeaponStudio_C::ExecuteUbergraph_WeaponStudio(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponStudio.WeaponStudio_C.ExecuteUbergraph_WeaponStudio");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x5cde7425);
 
 	AWeaponStudio_C_ExecuteUbergraph_WeaponStudio_Params params;
 	params.EntryPoint = EntryPoint;

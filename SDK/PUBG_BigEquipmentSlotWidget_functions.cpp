@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,8 @@ namespace Classes
 
 void UBigEquipmentSlotWidget_C::GetSlotItem(TScriptInterface<class USlotInterface>* SlotItem)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BigEquipmentSlotWidget.BigEquipmentSlotWidget_C.GetSlotItem");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x32212984);
 
 	UBigEquipmentSlotWidget_C_GetSlotItem_Params params;
 
@@ -41,7 +42,8 @@ void UBigEquipmentSlotWidget_C::GetSlotItem(TScriptInterface<class USlotInterfac
 
 void UBigEquipmentSlotWidget_C::GetSlotContainer(TScriptInterface<class USlotContainerInterface>* SlotContainer)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BigEquipmentSlotWidget.BigEquipmentSlotWidget_C.GetSlotContainer");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xde2d75d2);
 
 	UBigEquipmentSlotWidget_C_GetSlotContainer_Params params;
 
@@ -63,7 +65,8 @@ void UBigEquipmentSlotWidget_C::GetSlotContainer(TScriptInterface<class USlotCon
 
 bool UBigEquipmentSlotWidget_C::IsFocus()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BigEquipmentSlotWidget.BigEquipmentSlotWidget_C.IsFocus");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x77d74c99);
 
 	UBigEquipmentSlotWidget_C_IsFocus_Params params;
 
@@ -85,7 +88,8 @@ bool UBigEquipmentSlotWidget_C::IsFocus()
 
 bool UBigEquipmentSlotWidget_C::SetFocus(bool* NewFocus)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BigEquipmentSlotWidget.BigEquipmentSlotWidget_C.SetFocus");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x6de3015f);
 
 	UBigEquipmentSlotWidget_C_SetFocus_Params params;
 	params.NewFocus = NewFocus;
@@ -107,7 +111,8 @@ bool UBigEquipmentSlotWidget_C::SetFocus(bool* NewFocus)
 
 void UBigEquipmentSlotWidget_C::On_FocusColorBG_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BigEquipmentSlotWidget.BigEquipmentSlotWidget_C.On_FocusColorBG_Prepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x92fb4f26);
 
 	UBigEquipmentSlotWidget_C_On_FocusColorBG_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -127,7 +132,8 @@ void UBigEquipmentSlotWidget_C::On_FocusColorBG_Prepass_1(class UWidget* BoundWi
 
 void UBigEquipmentSlotWidget_C::GetItem_Bp(class UItem** Item)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BigEquipmentSlotWidget.BigEquipmentSlotWidget_C.GetItem_Bp");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x7aad2ee5);
 
 	UBigEquipmentSlotWidget_C_GetItem_Bp_Params params;
 
@@ -149,7 +155,8 @@ void UBigEquipmentSlotWidget_C::GetItem_Bp(class UItem** Item)
 
 void UBigEquipmentSlotWidget_C::GetDurability(float* Durability)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BigEquipmentSlotWidget.BigEquipmentSlotWidget_C.GetDurability");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xe9ba11c8);
 
 	UBigEquipmentSlotWidget_C_GetDurability_Params params;
 
@@ -171,7 +178,8 @@ void UBigEquipmentSlotWidget_C::GetDurability(float* Durability)
 
 void UBigEquipmentSlotWidget_C::UpdateDurationNumber(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BigEquipmentSlotWidget.BigEquipmentSlotWidget_C.UpdateDurationNumber");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xd4f21b37);
 
 	UBigEquipmentSlotWidget_C_UpdateDurationNumber_Params params;
 	params.BoundWidget = BoundWidget;
@@ -191,7 +199,8 @@ void UBigEquipmentSlotWidget_C::UpdateDurationNumber(class UWidget* BoundWidget)
 
 void UBigEquipmentSlotWidget_C::UpdateDurabilityGauge(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BigEquipmentSlotWidget.BigEquipmentSlotWidget_C.UpdateDurabilityGauge");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xefa462e);
 
 	UBigEquipmentSlotWidget_C_UpdateDurabilityGauge_Params params;
 	params.BoundWidget = BoundWidget;
@@ -211,7 +220,8 @@ void UBigEquipmentSlotWidget_C::UpdateDurabilityGauge(class UWidget* BoundWidget
 
 void UBigEquipmentSlotWidget_C::UpdateDurabilityVisibility(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BigEquipmentSlotWidget.BigEquipmentSlotWidget_C.UpdateDurabilityVisibility");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x19f45e5d);
 
 	UBigEquipmentSlotWidget_C_UpdateDurabilityVisibility_Params params;
 	params.BoundWidget = BoundWidget;
@@ -233,7 +243,8 @@ void UBigEquipmentSlotWidget_C::UpdateDurabilityVisibility(class UWidget* BoundW
 
 struct FEventReply UBigEquipmentSlotWidget_C::OnPreviewMouseButtonDown(struct FGeometry* MyGeometry, struct FPointerEvent* MouseEvent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BigEquipmentSlotWidget.BigEquipmentSlotWidget_C.OnPreviewMouseButtonDown");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xf3ac5b09);
 
 	UBigEquipmentSlotWidget_C_OnPreviewMouseButtonDown_Params params;
 	params.MyGeometry = MyGeometry;
@@ -256,7 +267,8 @@ struct FEventReply UBigEquipmentSlotWidget_C::OnPreviewMouseButtonDown(struct FG
 
 void UBigEquipmentSlotWidget_C::HaveDurability(bool* Result)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BigEquipmentSlotWidget.BigEquipmentSlotWidget_C.HaveDurability");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x860f9374);
 
 	UBigEquipmentSlotWidget_C_HaveDurability_Params params;
 
@@ -278,7 +290,8 @@ void UBigEquipmentSlotWidget_C::HaveDurability(bool* Result)
 
 void UBigEquipmentSlotWidget_C::GetDurabilityPercent(float* DurabilityPercent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BigEquipmentSlotWidget.BigEquipmentSlotWidget_C.GetDurabilityPercent");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xb09b65ab);
 
 	UBigEquipmentSlotWidget_C_GetDurabilityPercent_Params params;
 
@@ -302,7 +315,8 @@ void UBigEquipmentSlotWidget_C::GetDurabilityPercent(float* DurabilityPercent)
 
 void UBigEquipmentSlotWidget_C::OnDragDetected(struct FGeometry* MyGeometry, struct FPointerEvent* PointerEvent, class UDragDropOperation** Operation)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BigEquipmentSlotWidget.BigEquipmentSlotWidget_C.OnDragDetected");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x8deb7b84);
 
 	UBigEquipmentSlotWidget_C_OnDragDetected_Params params;
 	params.MyGeometry = MyGeometry;
@@ -326,7 +340,8 @@ void UBigEquipmentSlotWidget_C::OnDragDetected(struct FGeometry* MyGeometry, str
 
 struct FText UBigEquipmentSlotWidget_C::GetSlotName()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BigEquipmentSlotWidget.BigEquipmentSlotWidget_C.GetSlotName");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xe78ad430);
 
 	UBigEquipmentSlotWidget_C_GetSlotName_Params params;
 
@@ -347,7 +362,8 @@ struct FText UBigEquipmentSlotWidget_C::GetSlotName()
 
 void UBigEquipmentSlotWidget_C::OnUpdateItem(class UItem** Item)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BigEquipmentSlotWidget.BigEquipmentSlotWidget_C.OnUpdateItem");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xaf737dbe);
 
 	UBigEquipmentSlotWidget_C_OnUpdateItem_Params params;
 	params.Item = Item;
@@ -365,7 +381,8 @@ void UBigEquipmentSlotWidget_C::OnUpdateItem(class UItem** Item)
 
 void UBigEquipmentSlotWidget_C::Construct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BigEquipmentSlotWidget.BigEquipmentSlotWidget_C.Construct");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x3ef6876);
 
 	UBigEquipmentSlotWidget_C_Construct_Params params;
 
@@ -384,7 +401,8 @@ void UBigEquipmentSlotWidget_C::Construct()
 
 void UBigEquipmentSlotWidget_C::ExecuteUbergraph_BigEquipmentSlotWidget(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BigEquipmentSlotWidget.BigEquipmentSlotWidget_C.ExecuteUbergraph_BigEquipmentSlotWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xed04b845);
 
 	UBigEquipmentSlotWidget_C_ExecuteUbergraph_BigEquipmentSlotWidget_Params params;
 	params.EntryPoint = EntryPoint;

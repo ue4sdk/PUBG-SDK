@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -20,7 +20,8 @@ namespace Classes
 
 void ULobbyWidgetMain_C::SendGameStateChangingToWeb(const struct FName& InName, const struct FName& InName2)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LobbyWidgetMain.LobbyWidgetMain_C.SendGameStateChangingToWeb");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x28cf46a);
 
 	ULobbyWidgetMain_C_SendGameStateChangingToWeb_Params params;
 	params.InName = InName;
@@ -42,7 +43,8 @@ void ULobbyWidgetMain_C::SendGameStateChangingToWeb(const struct FName& InName, 
 
 void ULobbyWidgetMain_C::GameStateChanging(struct FName* NewState, struct FName* OldState)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LobbyWidgetMain.LobbyWidgetMain_C.GameStateChanging");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xd48b60e5);
 
 	ULobbyWidgetMain_C_GameStateChanging_Params params;
 	params.NewState = NewState;
@@ -63,7 +65,8 @@ void ULobbyWidgetMain_C::GameStateChanging(struct FName* NewState, struct FName*
 
 void ULobbyWidgetMain_C::ExecuteUbergraph_LobbyWidgetMain(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LobbyWidgetMain.LobbyWidgetMain_C.ExecuteUbergraph_LobbyWidgetMain");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xb5b3b602);
 
 	ULobbyWidgetMain_C_ExecuteUbergraph_LobbyWidgetMain_Params params;
 	params.EntryPoint = EntryPoint;

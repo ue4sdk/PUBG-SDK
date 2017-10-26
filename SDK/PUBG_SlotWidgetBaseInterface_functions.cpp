@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,8 @@ namespace Classes
 
 void USlotWidgetBaseInterface_C::GetSlotContainer(TScriptInterface<class USlotContainerInterface>* SlotContainer)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SlotWidgetBaseInterface.SlotWidgetBaseInterface_C.GetSlotContainer");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x98070caa);
 
 	USlotWidgetBaseInterface_C_GetSlotContainer_Params params;
 
@@ -41,7 +42,8 @@ void USlotWidgetBaseInterface_C::GetSlotContainer(TScriptInterface<class USlotCo
 
 void USlotWidgetBaseInterface_C::GetSlotItem(TScriptInterface<class USlotInterface>* SlotItem)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SlotWidgetBaseInterface.SlotWidgetBaseInterface_C.GetSlotItem");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x61168bec);
 
 	USlotWidgetBaseInterface_C_GetSlotItem_Params params;
 

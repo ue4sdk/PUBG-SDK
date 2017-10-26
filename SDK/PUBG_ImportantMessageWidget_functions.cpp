@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,8 @@ namespace Classes
 
 void UImportantMessageWidget_C::GetFadeInAnimation(class UWidgetAnimation** Animation)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ImportantMessageWidget.ImportantMessageWidget_C.GetFadeInAnimation");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x69b8448a);
 
 	UImportantMessageWidget_C_GetFadeInAnimation_Params params;
 
@@ -41,7 +42,8 @@ void UImportantMessageWidget_C::GetFadeInAnimation(class UWidgetAnimation** Anim
 
 void UImportantMessageWidget_C::GetFadeOutAnimation(class UWidgetAnimation** Animation)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ImportantMessageWidget.ImportantMessageWidget_C.GetFadeOutAnimation");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x54241787);
 
 	UImportantMessageWidget_C_GetFadeOutAnimation_Params params;
 
@@ -61,7 +63,8 @@ void UImportantMessageWidget_C::GetFadeOutAnimation(class UWidgetAnimation** Ani
 
 void UImportantMessageWidget_C::Construct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ImportantMessageWidget.ImportantMessageWidget_C.Construct");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xa91d432c);
 
 	UImportantMessageWidget_C_Construct_Params params;
 
@@ -80,7 +83,8 @@ void UImportantMessageWidget_C::Construct()
 
 void UImportantMessageWidget_C::ExecuteUbergraph_ImportantMessageWidget(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ImportantMessageWidget.ImportantMessageWidget_C.ExecuteUbergraph_ImportantMessageWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x73099d5e);
 
 	UImportantMessageWidget_C_ExecuteUbergraph_ImportantMessageWidget_Params params;
 	params.EntryPoint = EntryPoint;

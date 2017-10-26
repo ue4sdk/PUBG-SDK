@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,7 +17,8 @@ namespace Classes
 
 void AVehicleSeatBase_Moto_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VehicleSeatBase_Moto.VehicleSeatBase_Moto_C.UserConstructionScript");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x7df0d2b8);
 
 	AVehicleSeatBase_Moto_C_UserConstructionScript_Params params;
 
@@ -36,7 +37,8 @@ void AVehicleSeatBase_Moto_C::UserConstructionScript()
 
 void AVehicleSeatBase_Moto_C::BndEvt__Interaction_K2Node_ComponentBoundEvent_63_ComponentInteractBySignature__DelegateSignature(class ATslCharacter* OtherCharacter)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VehicleSeatBase_Moto.VehicleSeatBase_Moto_C.BndEvt__Interaction_K2Node_ComponentBoundEvent_63_ComponentInteractBySignature__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x729faadc);
 
 	AVehicleSeatBase_Moto_C_BndEvt__Interaction_K2Node_ComponentBoundEvent_63_ComponentInteractBySignature__DelegateSignature_Params params;
 	params.OtherCharacter = OtherCharacter;
@@ -54,7 +56,8 @@ void AVehicleSeatBase_Moto_C::BndEvt__Interaction_K2Node_ComponentBoundEvent_63_
 
 void AVehicleSeatBase_Moto_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VehicleSeatBase_Moto.VehicleSeatBase_Moto_C.ReceiveBeginPlay");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x78e597af);
 
 	AVehicleSeatBase_Moto_C_ReceiveBeginPlay_Params params;
 
@@ -73,7 +76,8 @@ void AVehicleSeatBase_Moto_C::ReceiveBeginPlay()
 
 void AVehicleSeatBase_Moto_C::ExecuteUbergraph_VehicleSeatBase_Moto(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VehicleSeatBase_Moto.VehicleSeatBase_Moto_C.ExecuteUbergraph_VehicleSeatBase_Moto");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x3ecf6a47);
 
 	AVehicleSeatBase_Moto_C_ExecuteUbergraph_VehicleSeatBase_Moto_Params params;
 	params.EntryPoint = EntryPoint;

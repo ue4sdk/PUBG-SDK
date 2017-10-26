@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,8 @@ namespace Classes
 
 void UNewCastingBarWidget_C::On_CastingBarCanvas_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function NewCastingBarWidget.NewCastingBarWidget_C.On_CastingBarCanvas_Prepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x17ae0f80);
 
 	UNewCastingBarWidget_C_On_CastingBarCanvas_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -39,7 +40,8 @@ void UNewCastingBarWidget_C::On_CastingBarCanvas_Prepass_1(class UWidget* BoundW
 
 struct FText UNewCastingBarWidget_C::GetRemainingCastTime()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function NewCastingBarWidget.NewCastingBarWidget_C.GetRemainingCastTime");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xdf1db899);
 
 	UNewCastingBarWidget_C_GetRemainingCastTime_Params params;
 
@@ -60,7 +62,8 @@ struct FText UNewCastingBarWidget_C::GetRemainingCastTime()
 
 struct FText UNewCastingBarWidget_C::GetCastingNameText()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function NewCastingBarWidget.NewCastingBarWidget_C.GetCastingNameText");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x14cb02ec);
 
 	UNewCastingBarWidget_C_GetCastingNameText_Params params;
 
@@ -81,7 +84,8 @@ struct FText UNewCastingBarWidget_C::GetCastingNameText()
 
 float UNewCastingBarWidget_C::GetCastingProgressBarPercent()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function NewCastingBarWidget.NewCastingBarWidget_C.GetCastingProgressBarPercent");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x289033cf);
 
 	UNewCastingBarWidget_C_GetCastingProgressBarPercent_Params params;
 
@@ -100,7 +104,8 @@ float UNewCastingBarWidget_C::GetCastingProgressBarPercent()
 
 void UNewCastingBarWidget_C::Construct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function NewCastingBarWidget.NewCastingBarWidget_C.Construct");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xb8188986);
 
 	UNewCastingBarWidget_C_Construct_Params params;
 
@@ -120,7 +125,8 @@ void UNewCastingBarWidget_C::Construct()
 
 void UNewCastingBarWidget_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function NewCastingBarWidget.NewCastingBarWidget_C.Tick");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xe1dda3dc);
 
 	UNewCastingBarWidget_C_Tick_Params params;
 	params.MyGeometry = MyGeometry;
@@ -139,7 +145,8 @@ void UNewCastingBarWidget_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTi
 
 void UNewCastingBarWidget_C::Destruct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function NewCastingBarWidget.NewCastingBarWidget_C.Destruct");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xecb59c95);
 
 	UNewCastingBarWidget_C_Destruct_Params params;
 
@@ -156,7 +163,8 @@ void UNewCastingBarWidget_C::Destruct()
 
 void UNewCastingBarWidget_C::OnInteract()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function NewCastingBarWidget.NewCastingBarWidget_C.OnInteract");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xfce39332);
 
 	UNewCastingBarWidget_C_OnInteract_Params params;
 
@@ -175,7 +183,8 @@ void UNewCastingBarWidget_C::OnInteract()
 
 void UNewCastingBarWidget_C::ExecuteUbergraph_NewCastingBarWidget(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function NewCastingBarWidget.NewCastingBarWidget_C.ExecuteUbergraph_NewCastingBarWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc76f58fd);
 
 	UNewCastingBarWidget_C_ExecuteUbergraph_NewCastingBarWidget_Params params;
 	params.EntryPoint = EntryPoint;

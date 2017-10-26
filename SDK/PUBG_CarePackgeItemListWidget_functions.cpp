@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,7 +17,8 @@ namespace Classes
 
 void UCarePackgeItemListWidget_C::SetCarePackgeItemList()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CarePackgeItemListWidget.CarePackgeItemListWidget_C.SetCarePackgeItemList");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x752d11ae);
 
 	UCarePackgeItemListWidget_C_SetCarePackgeItemList_Params params;
 
@@ -34,7 +35,8 @@ void UCarePackgeItemListWidget_C::SetCarePackgeItemList()
 
 void UCarePackgeItemListWidget_C::GetCarePackageItemIcons()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CarePackgeItemListWidget.CarePackgeItemListWidget_C.GetCarePackageItemIcons");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x4114f891);
 
 	UCarePackgeItemListWidget_C_GetCarePackageItemIcons_Params params;
 
@@ -51,7 +53,8 @@ void UCarePackgeItemListWidget_C::GetCarePackageItemIcons()
 
 void UCarePackgeItemListWidget_C::HideCarePackageItemList()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CarePackgeItemListWidget.CarePackgeItemListWidget_C.HideCarePackageItemList");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x70b7bbff);
 
 	UCarePackgeItemListWidget_C_HideCarePackageItemList_Params params;
 
@@ -73,7 +76,8 @@ void UCarePackgeItemListWidget_C::HideCarePackageItemList()
 
 void UCarePackgeItemListWidget_C::GetCarePackageItemWidget(class UTexture* ItemIcon, const struct FText& ItemName, int ItemCount, class UCarePackageItemSlotWidget_C** CarePackageItemSlotWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CarePackgeItemListWidget.CarePackgeItemListWidget_C.GetCarePackageItemWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xbd8cbd81);
 
 	UCarePackgeItemListWidget_C_GetCarePackageItemWidget_Params params;
 	params.ItemIcon = ItemIcon;
@@ -96,7 +100,8 @@ void UCarePackgeItemListWidget_C::GetCarePackageItemWidget(class UTexture* ItemI
 
 void UCarePackgeItemListWidget_C::ShowCarePackageItemList()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CarePackgeItemListWidget.CarePackgeItemListWidget_C.ShowCarePackageItemList");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x3cc3ddb6);
 
 	UCarePackgeItemListWidget_C_ShowCarePackageItemList_Params params;
 
@@ -113,7 +118,8 @@ void UCarePackgeItemListWidget_C::ShowCarePackageItemList()
 
 void UCarePackgeItemListWidget_C::Construct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CarePackgeItemListWidget.CarePackgeItemListWidget_C.Construct");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x7a1fa97c);
 
 	UCarePackgeItemListWidget_C_Construct_Params params;
 
@@ -130,7 +136,8 @@ void UCarePackgeItemListWidget_C::Construct()
 
 void UCarePackgeItemListWidget_C::ShowCarePackageItem()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CarePackgeItemListWidget.CarePackgeItemListWidget_C.ShowCarePackageItem");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xa180a072);
 
 	UCarePackgeItemListWidget_C_ShowCarePackageItem_Params params;
 
@@ -149,7 +156,8 @@ void UCarePackgeItemListWidget_C::ShowCarePackageItem()
 
 void UCarePackgeItemListWidget_C::ExecuteUbergraph_CarePackgeItemListWidget(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CarePackgeItemListWidget.CarePackgeItemListWidget_C.ExecuteUbergraph_CarePackgeItemListWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x1ad4fc7c);
 
 	UCarePackgeItemListWidget_C_ExecuteUbergraph_CarePackgeItemListWidget_Params params;
 	params.EntryPoint = EntryPoint;
@@ -167,7 +175,8 @@ void UCarePackgeItemListWidget_C::ExecuteUbergraph_CarePackgeItemListWidget(int 
 
 void UCarePackgeItemListWidget_C::EventDispatcher_ShowCarePackageItem__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CarePackgeItemListWidget.CarePackgeItemListWidget_C.EventDispatcher_ShowCarePackageItem__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x9562f2ab);
 
 	UCarePackgeItemListWidget_C_EventDispatcher_ShowCarePackageItem__DelegateSignature_Params params;
 

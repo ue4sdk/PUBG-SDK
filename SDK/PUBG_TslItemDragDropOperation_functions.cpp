@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,8 @@ namespace Classes
 
 void UTslItemDragDropOperation_C::IsDragDroppingItemAttachment(bool* IsAttachment)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TslItemDragDropOperation.TslItemDragDropOperation_C.IsDragDroppingItemAttachment");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x89f7d5e4);
 
 	UTslItemDragDropOperation_C_IsDragDroppingItemAttachment_Params params;
 
@@ -41,7 +42,8 @@ void UTslItemDragDropOperation_C::IsDragDroppingItemAttachment(bool* IsAttachmen
 
 void UTslItemDragDropOperation_C::IsDragDroppingItemWeapon(bool* IsWeapon)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TslItemDragDropOperation.TslItemDragDropOperation_C.IsDragDroppingItemWeapon");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x26744a9f);
 
 	UTslItemDragDropOperation_C_IsDragDroppingItemWeapon_Params params;
 
@@ -63,7 +65,8 @@ void UTslItemDragDropOperation_C::IsDragDroppingItemWeapon(bool* IsWeapon)
 
 void UTslItemDragDropOperation_C::IsInEquipment(bool* NewParam)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TslItemDragDropOperation.TslItemDragDropOperation_C.IsInEquipment");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xdcea16a2);
 
 	UTslItemDragDropOperation_C_IsInEquipment_Params params;
 
@@ -85,7 +88,8 @@ void UTslItemDragDropOperation_C::IsInEquipment(bool* NewParam)
 
 void UTslItemDragDropOperation_C::GetCurrentOtherContainer(TScriptInterface<class USlotContainerInterface>* OtherContainer)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TslItemDragDropOperation.TslItemDragDropOperation_C.GetCurrentOtherContainer");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x8b04e18b);
 
 	UTslItemDragDropOperation_C_GetCurrentOtherContainer_Params params;
 
@@ -105,7 +109,8 @@ void UTslItemDragDropOperation_C::GetCurrentOtherContainer(TScriptInterface<clas
 
 void UTslItemDragDropOperation_C::LeaveOtherContainer()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TslItemDragDropOperation.TslItemDragDropOperation_C.LeaveOtherContainer");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x4ea68e73);
 
 	UTslItemDragDropOperation_C_LeaveOtherContainer_Params params;
 
@@ -124,7 +129,8 @@ void UTslItemDragDropOperation_C::LeaveOtherContainer()
 
 void UTslItemDragDropOperation_C::EnterOtherContainer(const TScriptInterface<class USlotContainerInterface>& NewOtherContainer)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TslItemDragDropOperation.TslItemDragDropOperation_C.EnterOtherContainer");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xfb5653c0);
 
 	UTslItemDragDropOperation_C_EnterOtherContainer_Params params;
 	params.NewOtherContainer = NewOtherContainer;
@@ -144,7 +150,8 @@ void UTslItemDragDropOperation_C::EnterOtherContainer(const TScriptInterface<cla
 
 void UTslItemDragDropOperation_C::IsEnableAction(bool* IsEnableAction)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TslItemDragDropOperation.TslItemDragDropOperation_C.IsEnableAction");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xb7e2da8c);
 
 	UTslItemDragDropOperation_C_IsEnableAction_Params params;
 
@@ -166,7 +173,8 @@ void UTslItemDragDropOperation_C::IsEnableAction(bool* IsEnableAction)
 
 void UTslItemDragDropOperation_C::GetActionName(struct FName* ActionName)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TslItemDragDropOperation.TslItemDragDropOperation_C.GetActionName");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xe69a1f9a);
 
 	UTslItemDragDropOperation_C_GetActionName_Params params;
 
@@ -188,7 +196,8 @@ void UTslItemDragDropOperation_C::GetActionName(struct FName* ActionName)
 
 void UTslItemDragDropOperation_C::GetOptions(struct FString* Options)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TslItemDragDropOperation.TslItemDragDropOperation_C.GetOptions");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x626029);
 
 	UTslItemDragDropOperation_C_GetOptions_Params params;
 

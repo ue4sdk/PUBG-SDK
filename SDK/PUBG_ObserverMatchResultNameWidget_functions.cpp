@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,8 @@ namespace Classes
 
 void UObserverMatchResultNameWidget_C::SetSmall(bool bSmall)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ObserverMatchResultNameWidget.ObserverMatchResultNameWidget_C.SetSmall");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x799e9e36);
 
 	UObserverMatchResultNameWidget_C_SetSmall_Params params;
 	params.bSmall = bSmall;
@@ -39,7 +40,8 @@ void UObserverMatchResultNameWidget_C::SetSmall(bool bSmall)
 
 void UObserverMatchResultNameWidget_C::On_Kills_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ObserverMatchResultNameWidget.ObserverMatchResultNameWidget_C.On_Kills_Prepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xac42ef6f);
 
 	UObserverMatchResultNameWidget_C_On_Kills_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -59,7 +61,8 @@ void UObserverMatchResultNameWidget_C::On_Kills_Prepass_1(class UWidget* BoundWi
 
 void UObserverMatchResultNameWidget_C::GetPlayerNameFontSize(int* FontSize)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ObserverMatchResultNameWidget.ObserverMatchResultNameWidget_C.GetPlayerNameFontSize");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x10ca5eb3);
 
 	UObserverMatchResultNameWidget_C_GetPlayerNameFontSize_Params params;
 
@@ -81,7 +84,8 @@ void UObserverMatchResultNameWidget_C::GetPlayerNameFontSize(int* FontSize)
 
 void UObserverMatchResultNameWidget_C::GetKillFontSize(int* FontSize)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ObserverMatchResultNameWidget.ObserverMatchResultNameWidget_C.GetKillFontSize");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x928fcf6d);
 
 	UObserverMatchResultNameWidget_C_GetKillFontSize_Params params;
 
@@ -103,7 +107,8 @@ void UObserverMatchResultNameWidget_C::GetKillFontSize(int* FontSize)
 
 void UObserverMatchResultNameWidget_C::On_Slash_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ObserverMatchResultNameWidget.ObserverMatchResultNameWidget_C.On_Slash_Prepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x778c8cbb);
 
 	UObserverMatchResultNameWidget_C_On_Slash_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -123,7 +128,8 @@ void UObserverMatchResultNameWidget_C::On_Slash_Prepass_1(class UWidget* BoundWi
 
 void UObserverMatchResultNameWidget_C::On_PlayerName_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ObserverMatchResultNameWidget.ObserverMatchResultNameWidget_C.On_PlayerName_Prepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x64e20174);
 
 	UObserverMatchResultNameWidget_C_On_PlayerName_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -143,7 +149,8 @@ void UObserverMatchResultNameWidget_C::On_PlayerName_Prepass_1(class UWidget* Bo
 
 void UObserverMatchResultNameWidget_C::On_KillCount_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ObserverMatchResultNameWidget.ObserverMatchResultNameWidget_C.On_KillCount_Prepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xb4f69231);
 
 	UObserverMatchResultNameWidget_C_On_KillCount_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -163,7 +170,8 @@ void UObserverMatchResultNameWidget_C::On_KillCount_Prepass_1(class UWidget* Bou
 
 void UObserverMatchResultNameWidget_C::OnPrepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ObserverMatchResultNameWidget.ObserverMatchResultNameWidget_C.OnPrepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x5878d9d8);
 
 	UObserverMatchResultNameWidget_C_OnPrepass_1_Params params;
 	params.BoundWidget = BoundWidget;

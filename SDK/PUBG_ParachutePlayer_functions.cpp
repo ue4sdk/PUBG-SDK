@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,7 +17,8 @@ namespace Classes
 
 void AParachutePlayer_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ParachutePlayer.ParachutePlayer_C.UserConstructionScript");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x209e9c70);
 
 	AParachutePlayer_C_UserConstructionScript_Params params;
 
@@ -34,7 +35,8 @@ void AParachutePlayer_C::UserConstructionScript()
 
 void AParachutePlayer_C::АР„З|·xЗ_()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ParachutePlayer.ParachutePlayer_C.АР„З|·xЗ_");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xbc21ce67);
 
 	AParachutePlayer_C_АР„З|·xЗ__Params params;
 
@@ -53,7 +55,8 @@ void AParachutePlayer_C::АР„З|·xЗ_()
 
 void AParachutePlayer_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason>* EndPlayReason)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ParachutePlayer.ParachutePlayer_C.ReceiveEndPlay");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xcdf7d6df);
 
 	AParachutePlayer_C_ReceiveEndPlay_Params params;
 	params.EndPlayReason = EndPlayReason;
@@ -73,14 +76,15 @@ void AParachutePlayer_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason>* EndPlayReas
 // class AActor**                 Other                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UPrimitiveComponent**    OtherComp                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool*                          bSelfMoved                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D*                HitLocation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D*                HitNormal                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D*                NormalImpulse                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector*                HitLocation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector*                HitNormal                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector*                NormalImpulse                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // struct FHitResult*             Hit                            (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-void AParachutePlayer_C::ReceiveHit(class UPrimitiveComponent** MyComp, class AActor** Other, class UPrimitiveComponent** OtherComp, bool* bSelfMoved, class Vector3D* HitLocation, class Vector3D* HitNormal, class Vector3D* NormalImpulse, struct FHitResult* Hit)
+void AParachutePlayer_C::ReceiveHit(class UPrimitiveComponent** MyComp, class AActor** Other, class UPrimitiveComponent** OtherComp, bool* bSelfMoved, struct FVector* HitLocation, struct FVector* HitNormal, struct FVector* NormalImpulse, struct FHitResult* Hit)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ParachutePlayer.ParachutePlayer_C.ReceiveHit");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xad1c9bf1);
 
 	AParachutePlayer_C_ReceiveHit_Params params;
 	params.MyComp = MyComp;
@@ -107,7 +111,8 @@ void AParachutePlayer_C::ReceiveHit(class UPrimitiveComponent** MyComp, class AA
 
 void AParachutePlayer_C::ReceiveTick(float* DeltaSeconds)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ParachutePlayer.ParachutePlayer_C.ReceiveTick");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xf8c551bd);
 
 	AParachutePlayer_C_ReceiveTick_Params params;
 	params.DeltaSeconds = DeltaSeconds;
@@ -125,7 +130,8 @@ void AParachutePlayer_C::ReceiveTick(float* DeltaSeconds)
 
 void AParachutePlayer_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ParachutePlayer.ParachutePlayer_C.ReceiveBeginPlay");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x4ac65017);
 
 	AParachutePlayer_C_ReceiveBeginPlay_Params params;
 
@@ -144,7 +150,8 @@ void AParachutePlayer_C::ReceiveBeginPlay()
 
 void AParachutePlayer_C::ExecuteUbergraph_ParachutePlayer(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ParachutePlayer.ParachutePlayer_C.ExecuteUbergraph_ParachutePlayer");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x7e354f3b);
 
 	AParachutePlayer_C_ExecuteUbergraph_ParachutePlayer_Params params;
 	params.EntryPoint = EntryPoint;
@@ -162,7 +169,8 @@ void AParachutePlayer_C::ExecuteUbergraph_ParachutePlayer(int EntryPoint)
 
 void AParachutePlayer_C::On_Land__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ParachutePlayer.ParachutePlayer_C.On Land__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xed87ef92);
 
 	AParachutePlayer_C_On_Land__DelegateSignature_Params params;
 

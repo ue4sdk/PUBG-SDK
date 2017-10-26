@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -20,7 +20,8 @@ namespace Classes
 
 void UHitNotifyWidget_C::DamagedPercentToDamage(float DamagedPercent, float* Damage)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function HitNotifyWidget.HitNotifyWidget_C.DamagedPercentToDamage");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xafb2382b);
 
 	UHitNotifyWidget_C_DamagedPercentToDamage_Params params;
 	params.DamagedPercent = DamagedPercent;
@@ -43,7 +44,8 @@ void UHitNotifyWidget_C::DamagedPercentToDamage(float DamagedPercent, float* Dam
 
 void UHitNotifyWidget_C::GetPlayerHealthPercent(float* HealthPercent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function HitNotifyWidget.HitNotifyWidget_C.GetPlayerHealthPercent");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x9f25b58b);
 
 	UHitNotifyWidget_C_GetPlayerHealthPercent_Params params;
 
@@ -65,7 +67,8 @@ void UHitNotifyWidget_C::GetPlayerHealthPercent(float* HealthPercent)
 
 void UHitNotifyWidget_C::PostAkEvent(class UAkAudioEvent* AkEvent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function HitNotifyWidget.HitNotifyWidget_C.PostAkEvent");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x5c3a0d6f);
 
 	UHitNotifyWidget_C_PostAkEvent_Params params;
 	params.AkEvent = AkEvent;
@@ -86,7 +89,8 @@ void UHitNotifyWidget_C::PostAkEvent(class UAkAudioEvent* AkEvent)
 
 void UHitNotifyWidget_C::SetRTPCValue(const struct FString& RTPC, float Value)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function HitNotifyWidget.HitNotifyWidget_C.SetRTPCValue");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xdca06f73);
 
 	UHitNotifyWidget_C_SetRTPCValue_Params params;
 	params.RTPC = RTPC;
@@ -108,7 +112,8 @@ void UHitNotifyWidget_C::SetRTPCValue(const struct FString& RTPC, float Value)
 
 void UHitNotifyWidget_C::DamagedPercentToDamagePercent(float DamagedPercent, float* DamagePercent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function HitNotifyWidget.HitNotifyWidget_C.DamagedPercentToDamagePercent");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xa817e5a2);
 
 	UHitNotifyWidget_C_DamagedPercentToDamagePercent_Params params;
 	params.DamagedPercent = DamagedPercent;
@@ -129,7 +134,8 @@ void UHitNotifyWidget_C::DamagedPercentToDamagePercent(float DamagedPercent, flo
 
 void UHitNotifyWidget_C::PlayHitNotifySound()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function HitNotifyWidget.HitNotifyWidget_C.PlayHitNotifySound");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x96af3c88);
 
 	UHitNotifyWidget_C_PlayHitNotifySound_Params params;
 
@@ -144,11 +150,12 @@ void UHitNotifyWidget_C::PlayHitNotifySound()
 // Function HitNotifyWidget.HitNotifyWidget_C.GetRandomScale
 // (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector2D                 Scale                          (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               Scale                          (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UHitNotifyWidget_C::GetRandomScale(class Vector2D* Scale)
+void UHitNotifyWidget_C::GetRandomScale(struct FVector2D* Scale)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function HitNotifyWidget.HitNotifyWidget_C.GetRandomScale");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x6c18213a);
 
 	UHitNotifyWidget_C_GetRandomScale_Params params;
 
@@ -166,11 +173,12 @@ void UHitNotifyWidget_C::GetRandomScale(class Vector2D* Scale)
 // Function HitNotifyWidget.HitNotifyWidget_C.GetRandomTranslation
 // (FUNC_Public, FUNC_HasOutParms, FUNC_BlueprintCallable, FUNC_BlueprintEvent, FUNC_BlueprintPure, FUNC_Const)
 // Parameters:
-// class Vector2D                 Translation                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D               Translation                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UHitNotifyWidget_C::GetRandomTranslation(class Vector2D* Translation)
+void UHitNotifyWidget_C::GetRandomTranslation(struct FVector2D* Translation)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function HitNotifyWidget.HitNotifyWidget_C.GetRandomTranslation");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x74b3011d);
 
 	UHitNotifyWidget_C_GetRandomTranslation_Params params;
 
@@ -193,7 +201,8 @@ void UHitNotifyWidget_C::GetRandomTranslation(class Vector2D* Translation)
 
 void UHitNotifyWidget_C::OnHitNotify(float DamagePercent, TEnumAsByte<EDamageTypeCategory> DamageTypeCategory)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function HitNotifyWidget.HitNotifyWidget_C.OnHitNotify");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xb0b21a18);
 
 	UHitNotifyWidget_C_OnHitNotify_Params params;
 	params.DamagePercent = DamagePercent;

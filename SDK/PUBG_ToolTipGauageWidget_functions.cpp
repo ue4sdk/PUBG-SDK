@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -21,7 +21,8 @@ namespace Classes
 
 void UToolTipGauageWidget_C::Update(float BeginGap, float EndGap, bool bCompareMode)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ToolTipGauageWidget.ToolTipGauageWidget_C.Update");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x3c41af9c);
 
 	UToolTipGauageWidget_C_Update_Params params;
 	params.BeginGap = BeginGap;
@@ -41,7 +42,8 @@ void UToolTipGauageWidget_C::Update(float BeginGap, float EndGap, bool bCompareM
 
 void UToolTipGauageWidget_C::Construct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ToolTipGauageWidget.ToolTipGauageWidget_C.Construct");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x41d41576);
 
 	UToolTipGauageWidget_C_Construct_Params params;
 
@@ -60,7 +62,8 @@ void UToolTipGauageWidget_C::Construct()
 
 void UToolTipGauageWidget_C::ExecuteUbergraph_ToolTipGauageWidget(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ToolTipGauageWidget.ToolTipGauageWidget_C.ExecuteUbergraph_ToolTipGauageWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x73db36a2);
 
 	UToolTipGauageWidget_C_ExecuteUbergraph_ToolTipGauageWidget_Params params;
 	params.EntryPoint = EntryPoint;

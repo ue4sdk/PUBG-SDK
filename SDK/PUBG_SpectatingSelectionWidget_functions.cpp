@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,8 @@ namespace Classes
 
 struct FText USpectatingSelectionWidget_C::Get_SelectionText_Text_1()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SpectatingSelectionWidget.SpectatingSelectionWidget_C.Get_SelectionText_Text_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x19f10b17);
 
 	USpectatingSelectionWidget_C_Get_SelectionText_Text_1_Params params;
 
@@ -40,7 +41,8 @@ struct FText USpectatingSelectionWidget_C::Get_SelectionText_Text_1()
 
 struct FText USpectatingSelectionWidget_C::Get_SelectionKey_Text_1()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SpectatingSelectionWidget.SpectatingSelectionWidget_C.Get_SelectionKey_Text_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xb21546f);
 
 	USpectatingSelectionWidget_C_Get_SelectionKey_Text_1_Params params;
 
@@ -61,7 +63,8 @@ struct FText USpectatingSelectionWidget_C::Get_SelectionKey_Text_1()
 
 void USpectatingSelectionWidget_C::OnPrepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SpectatingSelectionWidget.SpectatingSelectionWidget_C.OnPrepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xbbca5ed0);
 
 	USpectatingSelectionWidget_C_OnPrepass_1_Params params;
 	params.BoundWidget = BoundWidget;

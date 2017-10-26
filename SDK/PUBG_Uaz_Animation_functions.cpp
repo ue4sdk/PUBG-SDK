@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,7 +17,8 @@ namespace Classes
 
 void UUaz_Animation_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Uaz_Animation_AnimGraphNode_ModifyBone_F45EEFEE4F1F650FBF78D1ACCB01BDDE()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Uaz_Animation.Uaz_Animation_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Uaz_Animation_AnimGraphNode_ModifyBone_F45EEFEE4F1F650FBF78D1ACCB01BDDE");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x839383db);
 
 	UUaz_Animation_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Uaz_Animation_AnimGraphNode_ModifyBone_F45EEFEE4F1F650FBF78D1ACCB01BDDE_Params params;
 
@@ -34,7 +35,8 @@ void UUaz_Animation_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Uaz_Animation
 
 void UUaz_Animation_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Uaz_Animation_AnimGraphNode_ModifyBone_92CE5E20435206E5C4125B81AE2D5E5E()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Uaz_Animation.Uaz_Animation_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Uaz_Animation_AnimGraphNode_ModifyBone_92CE5E20435206E5C4125B81AE2D5E5E");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xf4402d70);
 
 	UUaz_Animation_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Uaz_Animation_AnimGraphNode_ModifyBone_92CE5E20435206E5C4125B81AE2D5E5E_Params params;
 
@@ -53,7 +55,8 @@ void UUaz_Animation_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Uaz_Animation
 
 void UUaz_Animation_C::BlueprintUpdateAnimation(float* DeltaTimeX)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Uaz_Animation.Uaz_Animation_C.BlueprintUpdateAnimation");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x5c9bcbbb);
 
 	UUaz_Animation_C_BlueprintUpdateAnimation_Params params;
 	params.DeltaTimeX = DeltaTimeX;
@@ -73,7 +76,8 @@ void UUaz_Animation_C::BlueprintUpdateAnimation(float* DeltaTimeX)
 
 void UUaz_Animation_C::ExecuteUbergraph_Uaz_Animation(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Uaz_Animation.Uaz_Animation_C.ExecuteUbergraph_Uaz_Animation");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xf030224e);
 
 	UUaz_Animation_C_ExecuteUbergraph_Uaz_Animation_Params params;
 	params.EntryPoint = EntryPoint;

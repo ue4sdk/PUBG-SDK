@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,8 @@ namespace Classes
 
 struct FText UQualitySliderWidget_C::GetValueText()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function QualitySliderWidget.QualitySliderWidget_C.GetValueText");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x81e74c19);
 
 	UQualitySliderWidget_C_GetValueText_Params params;
 
@@ -40,7 +41,8 @@ struct FText UQualitySliderWidget_C::GetValueText()
 
 void UQualitySliderWidget_C::SetValue(float Value)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function QualitySliderWidget.QualitySliderWidget_C.SetValue");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x24feaa98);
 
 	UQualitySliderWidget_C_SetValue_Params params;
 	params.Value = Value;
@@ -60,7 +62,8 @@ void UQualitySliderWidget_C::SetValue(float Value)
 
 struct FText UQualitySliderWidget_C::GetQualityName()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function QualitySliderWidget.QualitySliderWidget_C.GetQualityName");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x8dac5d0d);
 
 	UQualitySliderWidget_C_GetQualityName_Params params;
 
@@ -81,7 +84,8 @@ struct FText UQualitySliderWidget_C::GetQualityName()
 
 void UQualitySliderWidget_C::GetValueByRange(float* Value)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function QualitySliderWidget.QualitySliderWidget_C.GetValueByRange");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xefaa9c2a);
 
 	UQualitySliderWidget_C_GetValueByRange_Params params;
 
@@ -101,7 +105,8 @@ void UQualitySliderWidget_C::GetValueByRange(float* Value)
 
 void UQualitySliderWidget_C::BndEvt__Button_2_K2Node_ComponentBoundEvent_370_OnButtonClickedEvent__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function QualitySliderWidget.QualitySliderWidget_C.BndEvt__Button_2_K2Node_ComponentBoundEvent_370_OnButtonClickedEvent__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xa1ac1430);
 
 	UQualitySliderWidget_C_BndEvt__Button_2_K2Node_ComponentBoundEvent_370_OnButtonClickedEvent__DelegateSignature_Params params;
 
@@ -118,7 +123,8 @@ void UQualitySliderWidget_C::BndEvt__Button_2_K2Node_ComponentBoundEvent_370_OnB
 
 void UQualitySliderWidget_C::BndEvt__RightButotn_K2Node_ComponentBoundEvent_395_OnButtonClickedEvent__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function QualitySliderWidget.QualitySliderWidget_C.BndEvt__RightButotn_K2Node_ComponentBoundEvent_395_OnButtonClickedEvent__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x37c01f2e);
 
 	UQualitySliderWidget_C_BndEvt__RightButotn_K2Node_ComponentBoundEvent_395_OnButtonClickedEvent__DelegateSignature_Params params;
 
@@ -137,7 +143,8 @@ void UQualitySliderWidget_C::BndEvt__RightButotn_K2Node_ComponentBoundEvent_395_
 
 void UQualitySliderWidget_C::ExecuteUbergraph_QualitySliderWidget(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function QualitySliderWidget.QualitySliderWidget_C.ExecuteUbergraph_QualitySliderWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x5bdd8959);
 
 	UQualitySliderWidget_C_ExecuteUbergraph_QualitySliderWidget_Params params;
 	params.EntryPoint = EntryPoint;

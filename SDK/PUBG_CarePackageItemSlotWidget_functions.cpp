@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,8 @@ namespace Classes
 
 bool UCarePackageItemSlotWidget_C::IsFocusable()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CarePackageItemSlotWidget.CarePackageItemSlotWidget_C.IsFocusable");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x2bc41dc9);
 
 	UCarePackageItemSlotWidget_C_IsFocusable_Params params;
 
@@ -40,7 +41,8 @@ bool UCarePackageItemSlotWidget_C::IsFocusable()
 
 bool UCarePackageItemSlotWidget_C::InputLB()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CarePackageItemSlotWidget.CarePackageItemSlotWidget_C.InputLB");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xf1b623);
 
 	UCarePackageItemSlotWidget_C_InputLB_Params params;
 
@@ -61,7 +63,8 @@ bool UCarePackageItemSlotWidget_C::InputLB()
 
 bool UCarePackageItemSlotWidget_C::InputLT()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CarePackageItemSlotWidget.CarePackageItemSlotWidget_C.InputLT");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xad1e5185);
 
 	UCarePackageItemSlotWidget_C_InputLT_Params params;
 
@@ -82,7 +85,8 @@ bool UCarePackageItemSlotWidget_C::InputLT()
 
 bool UCarePackageItemSlotWidget_C::InputRB()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CarePackageItemSlotWidget.CarePackageItemSlotWidget_C.InputRB");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xef7f98bd);
 
 	UCarePackageItemSlotWidget_C_InputRB_Params params;
 
@@ -103,7 +107,8 @@ bool UCarePackageItemSlotWidget_C::InputRB()
 
 bool UCarePackageItemSlotWidget_C::InputRT()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CarePackageItemSlotWidget.CarePackageItemSlotWidget_C.InputRT");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x4352fd5b);
 
 	UCarePackageItemSlotWidget_C_InputRT_Params params;
 
@@ -124,7 +129,8 @@ bool UCarePackageItemSlotWidget_C::InputRT()
 
 class UUserWidget* UCarePackageItemSlotWidget_C::GetFocusingChildWidget()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CarePackageItemSlotWidget.CarePackageItemSlotWidget_C.GetFocusingChildWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x8c4ae5b1);
 
 	UCarePackageItemSlotWidget_C_GetFocusingChildWidget_Params params;
 
@@ -145,7 +151,8 @@ class UUserWidget* UCarePackageItemSlotWidget_C::GetFocusingChildWidget()
 
 bool UCarePackageItemSlotWidget_C::InputA()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CarePackageItemSlotWidget.CarePackageItemSlotWidget_C.InputA");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xe32a374e);
 
 	UCarePackageItemSlotWidget_C_InputA_Params params;
 
@@ -166,7 +173,8 @@ bool UCarePackageItemSlotWidget_C::InputA()
 
 bool UCarePackageItemSlotWidget_C::InputB()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CarePackageItemSlotWidget.CarePackageItemSlotWidget_C.InputB");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xbd27bce5);
 
 	UCarePackageItemSlotWidget_C_InputB_Params params;
 
@@ -187,7 +195,8 @@ bool UCarePackageItemSlotWidget_C::InputB()
 
 bool UCarePackageItemSlotWidget_C::InputX()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CarePackageItemSlotWidget.CarePackageItemSlotWidget_C.InputX");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x78f137df);
 
 	UCarePackageItemSlotWidget_C_InputX_Params params;
 
@@ -208,7 +217,8 @@ bool UCarePackageItemSlotWidget_C::InputX()
 
 bool UCarePackageItemSlotWidget_C::InputY()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CarePackageItemSlotWidget.CarePackageItemSlotWidget_C.InputY");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x52eebd76);
 
 	UCarePackageItemSlotWidget_C_InputY_Params params;
 
@@ -229,7 +239,8 @@ bool UCarePackageItemSlotWidget_C::InputY()
 
 class UUserWidget* UCarePackageItemSlotWidget_C::GetDownWidget()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CarePackageItemSlotWidget.CarePackageItemSlotWidget_C.GetDownWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x13d87a4d);
 
 	UCarePackageItemSlotWidget_C_GetDownWidget_Params params;
 
@@ -250,7 +261,8 @@ class UUserWidget* UCarePackageItemSlotWidget_C::GetDownWidget()
 
 class UUserWidget* UCarePackageItemSlotWidget_C::GetLeftWidget()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CarePackageItemSlotWidget.CarePackageItemSlotWidget_C.GetLeftWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x43c1550a);
 
 	UCarePackageItemSlotWidget_C_GetLeftWidget_Params params;
 
@@ -271,7 +283,8 @@ class UUserWidget* UCarePackageItemSlotWidget_C::GetLeftWidget()
 
 class UUserWidget* UCarePackageItemSlotWidget_C::GetRightWidget()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CarePackageItemSlotWidget.CarePackageItemSlotWidget_C.GetRightWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x661d9845);
 
 	UCarePackageItemSlotWidget_C_GetRightWidget_Params params;
 
@@ -292,7 +305,8 @@ class UUserWidget* UCarePackageItemSlotWidget_C::GetRightWidget()
 
 class UUserWidget* UCarePackageItemSlotWidget_C::GetUpWidget()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CarePackageItemSlotWidget.CarePackageItemSlotWidget_C.GetUpWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x248e55b6);
 
 	UCarePackageItemSlotWidget_C_GetUpWidget_Params params;
 
@@ -313,7 +327,8 @@ class UUserWidget* UCarePackageItemSlotWidget_C::GetUpWidget()
 
 bool UCarePackageItemSlotWidget_C::Down()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CarePackageItemSlotWidget.CarePackageItemSlotWidget_C.Down");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x7183f56b);
 
 	UCarePackageItemSlotWidget_C_Down_Params params;
 
@@ -334,7 +349,8 @@ bool UCarePackageItemSlotWidget_C::Down()
 
 bool UCarePackageItemSlotWidget_C::IsFocus()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CarePackageItemSlotWidget.CarePackageItemSlotWidget_C.IsFocus");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x710db195);
 
 	UCarePackageItemSlotWidget_C_IsFocus_Params params;
 
@@ -355,7 +371,8 @@ bool UCarePackageItemSlotWidget_C::IsFocus()
 
 bool UCarePackageItemSlotWidget_C::Left()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CarePackageItemSlotWidget.CarePackageItemSlotWidget_C.Left");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x6c4c96dc);
 
 	UCarePackageItemSlotWidget_C_Left_Params params;
 
@@ -376,7 +393,8 @@ bool UCarePackageItemSlotWidget_C::Left()
 
 bool UCarePackageItemSlotWidget_C::Right()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CarePackageItemSlotWidget.CarePackageItemSlotWidget_C.Right");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xaae60433);
 
 	UCarePackageItemSlotWidget_C_Right_Params params;
 
@@ -398,7 +416,8 @@ bool UCarePackageItemSlotWidget_C::Right()
 
 bool UCarePackageItemSlotWidget_C::SetFocus(bool NewFocus)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CarePackageItemSlotWidget.CarePackageItemSlotWidget_C.SetFocus");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xf4d1d123);
 
 	UCarePackageItemSlotWidget_C_SetFocus_Params params;
 	params.NewFocus = NewFocus;
@@ -420,7 +439,8 @@ bool UCarePackageItemSlotWidget_C::SetFocus(bool NewFocus)
 
 bool UCarePackageItemSlotWidget_C::Up()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CarePackageItemSlotWidget.CarePackageItemSlotWidget_C.Up");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc9e39a54);
 
 	UCarePackageItemSlotWidget_C_Up_Params params;
 
@@ -441,7 +461,8 @@ bool UCarePackageItemSlotWidget_C::Up()
 
 void UCarePackageItemSlotWidget_C::GetSlotItem(TScriptInterface<class USlotInterface>* SlotItem)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CarePackageItemSlotWidget.CarePackageItemSlotWidget_C.GetSlotItem");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x81a4acc0);
 
 	UCarePackageItemSlotWidget_C_GetSlotItem_Params params;
 
@@ -463,7 +484,8 @@ void UCarePackageItemSlotWidget_C::GetSlotItem(TScriptInterface<class USlotInter
 
 void UCarePackageItemSlotWidget_C::GetSlotContainer(TScriptInterface<class USlotContainerInterface>* SlotContainer)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CarePackageItemSlotWidget.CarePackageItemSlotWidget_C.GetSlotContainer");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x9f3553d6);
 
 	UCarePackageItemSlotWidget_C_GetSlotContainer_Params params;
 
@@ -485,7 +507,8 @@ void UCarePackageItemSlotWidget_C::GetSlotContainer(TScriptInterface<class USlot
 
 void UCarePackageItemSlotWidget_C::SetItemCount(int ItemCount)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CarePackageItemSlotWidget.CarePackageItemSlotWidget_C.SetItemCount");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xbae80265);
 
 	UCarePackageItemSlotWidget_C_SetItemCount_Params params;
 	params.ItemCount = ItemCount;
@@ -505,7 +528,8 @@ void UCarePackageItemSlotWidget_C::SetItemCount(int ItemCount)
 
 void UCarePackageItemSlotWidget_C::SetItemIcon(class UTexture* ItemIcon)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CarePackageItemSlotWidget.CarePackageItemSlotWidget_C.SetItemIcon");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x710452bb);
 
 	UCarePackageItemSlotWidget_C_SetItemIcon_Params params;
 	params.ItemIcon = ItemIcon;
@@ -525,7 +549,8 @@ void UCarePackageItemSlotWidget_C::SetItemIcon(class UTexture* ItemIcon)
 
 void UCarePackageItemSlotWidget_C::SetItemName(const struct FText& ItemName)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CarePackageItemSlotWidget.CarePackageItemSlotWidget_C.SetItemName");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x643cd11);
 
 	UCarePackageItemSlotWidget_C_SetItemName_Params params;
 	params.ItemName = ItemName;

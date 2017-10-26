@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,7 +17,8 @@ namespace Classes
 
 void ABP_Motorbike_04_SideCar_C::ProcessCamera()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Motorbike_04_SideCar.BP_Motorbike_04_SideCar_C.ProcessCamera");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x6c4a8e9b);
 
 	ABP_Motorbike_04_SideCar_C_ProcessCamera_Params params;
 
@@ -34,7 +35,8 @@ void ABP_Motorbike_04_SideCar_C::ProcessCamera()
 
 void ABP_Motorbike_04_SideCar_C::Process_FuelConsumption()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Motorbike_04_SideCar.BP_Motorbike_04_SideCar_C.Process_FuelConsumption");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xff4d2b8a);
 
 	ABP_Motorbike_04_SideCar_C_Process_FuelConsumption_Params params;
 
@@ -51,7 +53,8 @@ void ABP_Motorbike_04_SideCar_C::Process_FuelConsumption()
 
 void ABP_Motorbike_04_SideCar_C::InitCache()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Motorbike_04_SideCar.BP_Motorbike_04_SideCar_C.InitCache");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xe902fd5);
 
 	ABP_Motorbike_04_SideCar_C_InitCache_Params params;
 
@@ -68,7 +71,8 @@ void ABP_Motorbike_04_SideCar_C::InitCache()
 
 void ABP_Motorbike_04_SideCar_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Motorbike_04_SideCar.BP_Motorbike_04_SideCar_C.UserConstructionScript");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xb75f4308);
 
 	ABP_Motorbike_04_SideCar_C_UserConstructionScript_Params params;
 
@@ -85,7 +89,8 @@ void ABP_Motorbike_04_SideCar_C::UserConstructionScript()
 
 void ABP_Motorbike_04_SideCar_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Motorbike_04_SideCar.BP_Motorbike_04_SideCar_C.ReceiveBeginPlay");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc394843f);
 
 	ABP_Motorbike_04_SideCar_C_ReceiveBeginPlay_Params params;
 
@@ -104,7 +109,8 @@ void ABP_Motorbike_04_SideCar_C::ReceiveBeginPlay()
 
 void ABP_Motorbike_04_SideCar_C::ReceiveTick(float* DeltaSeconds)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Motorbike_04_SideCar.BP_Motorbike_04_SideCar_C.ReceiveTick");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x32a1b4f5);
 
 	ABP_Motorbike_04_SideCar_C_ReceiveTick_Params params;
 	params.DeltaSeconds = DeltaSeconds;
@@ -124,7 +130,8 @@ void ABP_Motorbike_04_SideCar_C::ReceiveTick(float* DeltaSeconds)
 
 void ABP_Motorbike_04_SideCar_C::InpAxisEvt_AirControlPitch_K2Node_InputAxisEvent_8(float AxisValue)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Motorbike_04_SideCar.BP_Motorbike_04_SideCar_C.InpAxisEvt_AirControlPitch_K2Node_InputAxisEvent_8");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x2402e655);
 
 	ABP_Motorbike_04_SideCar_C_InpAxisEvt_AirControlPitch_K2Node_InputAxisEvent_8_Params params;
 	params.AxisValue = AxisValue;
@@ -144,7 +151,8 @@ void ABP_Motorbike_04_SideCar_C::InpAxisEvt_AirControlPitch_K2Node_InputAxisEven
 
 void ABP_Motorbike_04_SideCar_C::InpAxisEvt_AirControlRoll_K2Node_InputAxisEvent_14(float AxisValue)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Motorbike_04_SideCar.BP_Motorbike_04_SideCar_C.InpAxisEvt_AirControlRoll_K2Node_InputAxisEvent_14");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xb98f3add);
 
 	ABP_Motorbike_04_SideCar_C_InpAxisEvt_AirControlRoll_K2Node_InputAxisEvent_14_Params params;
 	params.AxisValue = AxisValue;
@@ -167,7 +175,8 @@ void ABP_Motorbike_04_SideCar_C::InpAxisEvt_AirControlRoll_K2Node_InputAxisEvent
 
 void ABP_Motorbike_04_SideCar_C::OnDeath_Event_1(float KillingDamage, const struct FDamageEvent& DamageEvent, class ATslPlayerState* PlayerInstigator, class AActor* DamageCauser)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Motorbike_04_SideCar.BP_Motorbike_04_SideCar_C.OnDeath_Event_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x6dba19b7);
 
 	ABP_Motorbike_04_SideCar_C_OnDeath_Event_1_Params params;
 	params.KillingDamage = KillingDamage;
@@ -190,7 +199,8 @@ void ABP_Motorbike_04_SideCar_C::OnDeath_Event_1(float KillingDamage, const stru
 
 void ABP_Motorbike_04_SideCar_C::ExecuteUbergraph_BP_Motorbike_04_SideCar(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Motorbike_04_SideCar.BP_Motorbike_04_SideCar_C.ExecuteUbergraph_BP_Motorbike_04_SideCar");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xf5ee834b);
 
 	ABP_Motorbike_04_SideCar_C_ExecuteUbergraph_BP_Motorbike_04_SideCar_Params params;
 	params.EntryPoint = EntryPoint;

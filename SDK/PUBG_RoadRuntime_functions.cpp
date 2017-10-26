@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -16,15 +16,16 @@ namespace Classes
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults)
 // Parameters:
 // class UStaticMesh*             InPrototype                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 MeshRelativeLocation           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  MeshRelativeRotation           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 MeshRelativeLocation           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                MeshRelativeRotation           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            SocketIndex                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           IsEnable                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           IsNormalized                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void ACrossActor::UpdateSideMesh(class UStaticMesh* InPrototype, const class Vector3D& MeshRelativeLocation, const class Rotator& MeshRelativeRotation, int SocketIndex, bool IsEnable, bool IsNormalized)
+void ACrossActor::UpdateSideMesh(class UStaticMesh* InPrototype, const struct FVector& MeshRelativeLocation, const struct FRotator& MeshRelativeRotation, int SocketIndex, bool IsEnable, bool IsNormalized)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RoadRuntime.CrossActor.UpdateSideMesh");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x1eba9119);
 
 	ACrossActor_UpdateSideMesh_Params params;
 	params.InPrototype = InPrototype;
@@ -47,15 +48,16 @@ void ACrossActor::UpdateSideMesh(class UStaticMesh* InPrototype, const class Vec
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults)
 // Parameters:
 // class UClass*                  InPrototype                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ActorRelativeLocation          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  ActorRelativeRotation          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ActorRelativeLocation          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                ActorRelativeRotation          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            SocketIndex                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           IsEnable                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           IsNormalized                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void ACrossActor::UpdateSideActor(class UClass* InPrototype, const class Vector3D& ActorRelativeLocation, const class Rotator& ActorRelativeRotation, int SocketIndex, bool IsEnable, bool IsNormalized)
+void ACrossActor::UpdateSideActor(class UClass* InPrototype, const struct FVector& ActorRelativeLocation, const struct FRotator& ActorRelativeRotation, int SocketIndex, bool IsEnable, bool IsNormalized)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RoadRuntime.CrossActor.UpdateSideActor");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x36f72b71);
 
 	ACrossActor_UpdateSideActor_Params params;
 	params.InPrototype = InPrototype;
@@ -78,15 +80,16 @@ void ACrossActor::UpdateSideActor(class UClass* InPrototype, const class Vector3
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults)
 // Parameters:
 // class UStaticMesh*             InPrototype                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 MeshRelativeLocation           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  MeshRelativeRotation           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 MeshRelativeLocation           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                MeshRelativeRotation           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            SocketIndex                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           IsEnable                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           IsNormalized                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void ACrossActor::PushSideMesh(class UStaticMesh* InPrototype, const class Vector3D& MeshRelativeLocation, const class Rotator& MeshRelativeRotation, int SocketIndex, bool IsEnable, bool IsNormalized)
+void ACrossActor::PushSideMesh(class UStaticMesh* InPrototype, const struct FVector& MeshRelativeLocation, const struct FRotator& MeshRelativeRotation, int SocketIndex, bool IsEnable, bool IsNormalized)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RoadRuntime.CrossActor.PushSideMesh");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x34cb5656);
 
 	ACrossActor_PushSideMesh_Params params;
 	params.InPrototype = InPrototype;
@@ -109,15 +112,16 @@ void ACrossActor::PushSideMesh(class UStaticMesh* InPrototype, const class Vecto
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults)
 // Parameters:
 // class UClass*                  InPrototype                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ActorRelativeLocation          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  ActorRelativeRotation          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ActorRelativeLocation          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                ActorRelativeRotation          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            SocketIndex                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           IsEnable                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           IsNormalized                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void ACrossActor::PushSideActor(class UClass* InPrototype, const class Vector3D& ActorRelativeLocation, const class Rotator& ActorRelativeRotation, int SocketIndex, bool IsEnable, bool IsNormalized)
+void ACrossActor::PushSideActor(class UClass* InPrototype, const struct FVector& ActorRelativeLocation, const struct FRotator& ActorRelativeRotation, int SocketIndex, bool IsEnable, bool IsNormalized)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RoadRuntime.CrossActor.PushSideActor");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x54a01e44);
 
 	ACrossActor_PushSideActor_Params params;
 	params.InPrototype = InPrototype;
@@ -141,7 +145,8 @@ void ACrossActor::PushSideActor(class UClass* InPrototype, const class Vector3D&
 
 void ACrossActor::DestroySideObjects()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RoadRuntime.CrossActor.DestroySideObjects");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xd97576bd);
 
 	ACrossActor_DestroySideObjects_Params params;
 
@@ -161,7 +166,8 @@ void ACrossActor::DestroySideObjects()
 
 void ARoadActor::UpdateSplineMesh(int MeshIndex)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RoadRuntime.RoadActor.UpdateSplineMesh");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x2f1f190f);
 
 	ARoadActor_UpdateSplineMesh_Params params;
 	params.MeshIndex = MeshIndex;
@@ -179,17 +185,18 @@ void ARoadActor::UpdateSplineMesh(int MeshIndex)
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults)
 // Parameters:
 // class UStaticMesh*             InPrototype                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 MeshRelativeLocation           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  MeshRelativeRotation           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 MeshRelativeLocation           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                MeshRelativeRotation           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            SocketIndex                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            InShift                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            InSpacing                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           IsEnable                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           IsNormalized                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void ARoadActor::UpdateSideMeshes(class UStaticMesh* InPrototype, const class Vector3D& MeshRelativeLocation, const class Rotator& MeshRelativeRotation, int SocketIndex, int InShift, int InSpacing, bool IsEnable, bool IsNormalized)
+void ARoadActor::UpdateSideMeshes(class UStaticMesh* InPrototype, const struct FVector& MeshRelativeLocation, const struct FRotator& MeshRelativeRotation, int SocketIndex, int InShift, int InSpacing, bool IsEnable, bool IsNormalized)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RoadRuntime.RoadActor.UpdateSideMeshes");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xf9509f79);
 
 	ARoadActor_UpdateSideMeshes_Params params;
 	params.InPrototype = InPrototype;
@@ -214,17 +221,18 @@ void ARoadActor::UpdateSideMeshes(class UStaticMesh* InPrototype, const class Ve
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults)
 // Parameters:
 // class UClass*                  InPrototype                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ActorRelativeLocation          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  ActorRelativeRotation          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ActorRelativeLocation          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                ActorRelativeRotation          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            SocketIndex                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            InShift                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            InSpacing                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           IsEnable                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           IsNormalized                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void ARoadActor::UpdateSideActor(class UClass* InPrototype, const class Vector3D& ActorRelativeLocation, const class Rotator& ActorRelativeRotation, int SocketIndex, int InShift, int InSpacing, bool IsEnable, bool IsNormalized)
+void ARoadActor::UpdateSideActor(class UClass* InPrototype, const struct FVector& ActorRelativeLocation, const struct FRotator& ActorRelativeRotation, int SocketIndex, int InShift, int InSpacing, bool IsEnable, bool IsNormalized)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RoadRuntime.RoadActor.UpdateSideActor");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x35cf1a1);
 
 	ARoadActor_UpdateSideActor_Params params;
 	params.InPrototype = InPrototype;
@@ -255,7 +263,8 @@ void ARoadActor::UpdateSideActor(class UClass* InPrototype, const class Vector3D
 
 void ARoadActor::UpdateSegment(int SegmentIndex, class USplineComponent* SplineComponent, class UStaticMesh* StaticMesh, TEnumAsByte<ESplineMeshAxis> InAxis)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RoadRuntime.RoadActor.UpdateSegment");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xa55c9a0e);
 
 	ARoadActor_UpdateSegment_Params params;
 	params.SegmentIndex = SegmentIndex;
@@ -276,17 +285,18 @@ void ARoadActor::UpdateSegment(int SegmentIndex, class USplineComponent* SplineC
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults)
 // Parameters:
 // class UStaticMesh*             InPrototype                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 MeshRelativeLocation           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  MeshRelativeRotation           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 MeshRelativeLocation           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                MeshRelativeRotation           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            SocketIndex                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            InShift                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            InSpacing                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           IsEnable                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           IsNormalized                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void ARoadActor::PushSideMesh(class UStaticMesh* InPrototype, const class Vector3D& MeshRelativeLocation, const class Rotator& MeshRelativeRotation, int SocketIndex, int InShift, int InSpacing, bool IsEnable, bool IsNormalized)
+void ARoadActor::PushSideMesh(class UStaticMesh* InPrototype, const struct FVector& MeshRelativeLocation, const struct FRotator& MeshRelativeRotation, int SocketIndex, int InShift, int InSpacing, bool IsEnable, bool IsNormalized)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RoadRuntime.RoadActor.PushSideMesh");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x8d4a7c6);
 
 	ARoadActor_PushSideMesh_Params params;
 	params.InPrototype = InPrototype;
@@ -311,17 +321,18 @@ void ARoadActor::PushSideMesh(class UStaticMesh* InPrototype, const class Vector
 // (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_HasDefaults)
 // Parameters:
 // class UClass*                  InPrototype                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 ActorRelativeLocation          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Rotator                  ActorRelativeRotation          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 ActorRelativeLocation          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FRotator                ActorRelativeRotation          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            SocketIndex                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            InShift                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // int                            InSpacing                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           IsEnable                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool                           IsNormalized                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void ARoadActor::PushSideActor(class UClass* InPrototype, const class Vector3D& ActorRelativeLocation, const class Rotator& ActorRelativeRotation, int SocketIndex, int InShift, int InSpacing, bool IsEnable, bool IsNormalized)
+void ARoadActor::PushSideActor(class UClass* InPrototype, const struct FVector& ActorRelativeLocation, const struct FRotator& ActorRelativeRotation, int SocketIndex, int InShift, int InSpacing, bool IsEnable, bool IsNormalized)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RoadRuntime.RoadActor.PushSideActor");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xcf8950b4);
 
 	ARoadActor_PushSideActor_Params params;
 	params.InPrototype = InPrototype;
@@ -347,7 +358,8 @@ void ARoadActor::PushSideActor(class UClass* InPrototype, const class Vector3D& 
 
 void ARoadActor::DestroySideObjects()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RoadRuntime.RoadActor.DestroySideObjects");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xb2f581ed);
 
 	ARoadActor_DestroySideObjects_Params params;
 
@@ -365,7 +377,8 @@ void ARoadActor::DestroySideObjects()
 
 void ARoadActor::ClearSplineMeshes()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RoadRuntime.RoadActor.ClearSplineMeshes");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc6d2083f);
 
 	ARoadActor_ClearSplineMeshes_Params params;
 
@@ -389,7 +402,8 @@ void ARoadActor::ClearSplineMeshes()
 
 float ARoadActor::STATIC_ApproxLength(const struct FInterpCurveVector& SplineInfo, float Start, float End, int ApproxSections)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RoadRuntime.RoadActor.ApproxLength");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x8274ea80);
 
 	ARoadActor_ApproxLength_Params params;
 	params.SplineInfo = SplineInfo;
@@ -415,7 +429,8 @@ float ARoadActor::STATIC_ApproxLength(const struct FInterpCurveVector& SplineInf
 
 void ARoadActor::AddSplineMesh(int MeshIndex)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function RoadRuntime.RoadActor.AddSplineMesh");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc0c8efd9);
 
 	ARoadActor_AddSplineMesh_Params params;
 	params.MeshIndex = MeshIndex;

@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,8 @@ namespace Classes
 
 void UObserverTagManagerWidget_C::RemoveReplicateCharacter(TArray<class ATslCharacter*>* Characters)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ObserverTagManagerWidget.ObserverTagManagerWidget_C.RemoveReplicateCharacter");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x61712aab);
 
 	UObserverTagManagerWidget_C_RemoveReplicateCharacter_Params params;
 
@@ -41,7 +42,8 @@ void UObserverTagManagerWidget_C::RemoveReplicateCharacter(TArray<class ATslChar
 
 void UObserverTagManagerWidget_C::AddReplicateCharacter(TArray<class ATslCharacter*>* Characters)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ObserverTagManagerWidget.ObserverTagManagerWidget_C.AddReplicateCharacter");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x498e8950);
 
 	UObserverTagManagerWidget_C_AddReplicateCharacter_Params params;
 
@@ -64,7 +66,8 @@ void UObserverTagManagerWidget_C::AddReplicateCharacter(TArray<class ATslCharact
 
 void UObserverTagManagerWidget_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ObserverTagManagerWidget.ObserverTagManagerWidget_C.Tick");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xe343fe92);
 
 	UObserverTagManagerWidget_C_Tick_Params params;
 	params.MyGeometry = MyGeometry;
@@ -85,7 +88,8 @@ void UObserverTagManagerWidget_C::Tick(struct FGeometry* MyGeometry, float* InDe
 
 void UObserverTagManagerWidget_C::ExecuteUbergraph_ObserverTagManagerWidget(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ObserverTagManagerWidget.ObserverTagManagerWidget_C.ExecuteUbergraph_ObserverTagManagerWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc9894462);
 
 	UObserverTagManagerWidget_C_ExecuteUbergraph_ObserverTagManagerWidget_Params params;
 	params.EntryPoint = EntryPoint;

@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,8 @@ namespace Classes
 
 bool UQualitySettingsWidget_C::GetbIsEnabled_1()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function QualitySettingsWidget.QualitySettingsWidget_C.GetbIsEnabled_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x4896d0fc);
 
 	UQualitySettingsWidget_C_GetbIsEnabled_1_Params params;
 
@@ -38,7 +39,8 @@ bool UQualitySettingsWidget_C::GetbIsEnabled_1()
 
 void UQualitySettingsWidget_C::SettingDefautl()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function QualitySettingsWidget.QualitySettingsWidget_C.SettingDefautl");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xf45ae7fc);
 
 	UQualitySettingsWidget_C_SettingDefautl_Params params;
 
@@ -57,7 +59,8 @@ void UQualitySettingsWidget_C::SettingDefautl()
 
 void UQualitySettingsWidget_C::UpdateOtionStringByUserStting(TEnumAsByte<EQualityType> Selection)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function QualitySettingsWidget.QualitySettingsWidget_C.UpdateOtionStringByUserStting");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x6c964559);
 
 	UQualitySettingsWidget_C_UpdateOtionStringByUserStting_Params params;
 	params.Selection = Selection;
@@ -75,7 +78,8 @@ void UQualitySettingsWidget_C::UpdateOtionStringByUserStting(TEnumAsByte<EQualit
 
 void UQualitySettingsWidget_C::UpdateMainOptionStringByComboBox()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function QualitySettingsWidget.QualitySettingsWidget_C.UpdateMainOptionStringByComboBox");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xb89dc59);
 
 	UQualitySettingsWidget_C_UpdateMainOptionStringByComboBox_Params params;
 
@@ -95,7 +99,8 @@ void UQualitySettingsWidget_C::UpdateMainOptionStringByComboBox()
 
 void UQualitySettingsWidget_C::GetComboBox(TEnumAsByte<EQualityType> Selection, class UQualityComboBox_C** ComboBox)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function QualitySettingsWidget.QualitySettingsWidget_C.GetComboBox");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x7658ad68);
 
 	UQualitySettingsWidget_C_GetComboBox_Params params;
 	params.Selection = Selection;
@@ -118,7 +123,8 @@ void UQualitySettingsWidget_C::GetComboBox(TEnumAsByte<EQualityType> Selection, 
 
 void UQualitySettingsWidget_C::SetQualityLevelByComboBox(TEnumAsByte<EQualityType> QualityType)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function QualitySettingsWidget.QualitySettingsWidget_C.SetQualityLevelByComboBox");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x732c0898);
 
 	UQualitySettingsWidget_C_SetQualityLevelByComboBox_Params params;
 	params.QualityType = QualityType;
@@ -139,7 +145,8 @@ void UQualitySettingsWidget_C::SetQualityLevelByComboBox(TEnumAsByte<EQualityTyp
 
 void UQualitySettingsWidget_C::GetQualityLevelByComboBox(TEnumAsByte<EQualityType> QualityType, int* QualityLevel)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function QualitySettingsWidget.QualitySettingsWidget_C.GetQualityLevelByComboBox");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x83d0a6e4);
 
 	UQualitySettingsWidget_C_GetQualityLevelByComboBox_Params params;
 	params.QualityType = QualityType;
@@ -162,7 +169,8 @@ void UQualitySettingsWidget_C::GetQualityLevelByComboBox(TEnumAsByte<EQualityTyp
 
 bool UQualitySettingsWidget_C::IsChanged()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function QualitySettingsWidget.QualitySettingsWidget_C.IsChanged");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x6364eef9);
 
 	UQualitySettingsWidget_C_IsChanged_Params params;
 
@@ -183,7 +191,8 @@ bool UQualitySettingsWidget_C::IsChanged()
 
 void UQualitySettingsWidget_C::GetScreenScaleValue_Slider(float* ScreenScale)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function QualitySettingsWidget.QualitySettingsWidget_C.GetScreenScaleValue_Slider");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xe8748fa4);
 
 	UQualitySettingsWidget_C_GetScreenScaleValue_Slider_Params params;
 
@@ -203,7 +212,8 @@ void UQualitySettingsWidget_C::GetScreenScaleValue_Slider(float* ScreenScale)
 
 void UQualitySettingsWidget_C::InitQualitySettingsWidget()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function QualitySettingsWidget.QualitySettingsWidget_C.InitQualitySettingsWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x1c8ad157);
 
 	UQualitySettingsWidget_C_InitQualitySettingsWidget_Params params;
 
@@ -220,7 +230,8 @@ void UQualitySettingsWidget_C::InitQualitySettingsWidget()
 
 void UQualitySettingsWidget_C::OnDefault()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function QualitySettingsWidget.QualitySettingsWidget_C.OnDefault");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xfacca05f);
 
 	UQualitySettingsWidget_C_OnDefault_Params params;
 
@@ -237,7 +248,8 @@ void UQualitySettingsWidget_C::OnDefault()
 
 void UQualitySettingsWidget_C::OnApply()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function QualitySettingsWidget.QualitySettingsWidget_C.OnApply");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x6ea2f1a4);
 
 	UQualitySettingsWidget_C_OnApply_Params params;
 
@@ -257,7 +269,8 @@ void UQualitySettingsWidget_C::OnApply()
 
 void UQualitySettingsWidget_C::BndEvt__MainQualityComboBox_K2Node_ComponentBoundEvent_663_OnSelectionChanged__DelegateSignature(const struct FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function QualitySettingsWidget.QualitySettingsWidget_C.BndEvt__MainQualityComboBox_K2Node_ComponentBoundEvent_663_OnSelectionChanged__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x5ad84228);
 
 	UQualitySettingsWidget_C_BndEvt__MainQualityComboBox_K2Node_ComponentBoundEvent_663_OnSelectionChanged__DelegateSignature_Params params;
 	params.SelectedItem = SelectedItem;
@@ -279,7 +292,8 @@ void UQualitySettingsWidget_C::BndEvt__MainQualityComboBox_K2Node_ComponentBound
 
 void UQualitySettingsWidget_C::BndEvt__ViewDistanceComboBox_K2Node_ComponentBoundEvent_2029_OnSelectionChanged__DelegateSignature(const struct FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function QualitySettingsWidget.QualitySettingsWidget_C.BndEvt__ViewDistanceComboBox_K2Node_ComponentBoundEvent_2029_OnSelectionChanged__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xaddd27da);
 
 	UQualitySettingsWidget_C_BndEvt__ViewDistanceComboBox_K2Node_ComponentBoundEvent_2029_OnSelectionChanged__DelegateSignature_Params params;
 	params.SelectedItem = SelectedItem;
@@ -301,7 +315,8 @@ void UQualitySettingsWidget_C::BndEvt__ViewDistanceComboBox_K2Node_ComponentBoun
 
 void UQualitySettingsWidget_C::BndEvt__AnitiAliasingComboBox_K2Node_ComponentBoundEvent_2255_OnSelectionChanged__DelegateSignature(const struct FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function QualitySettingsWidget.QualitySettingsWidget_C.BndEvt__AnitiAliasingComboBox_K2Node_ComponentBoundEvent_2255_OnSelectionChanged__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xf296f598);
 
 	UQualitySettingsWidget_C_BndEvt__AnitiAliasingComboBox_K2Node_ComponentBoundEvent_2255_OnSelectionChanged__DelegateSignature_Params params;
 	params.SelectedItem = SelectedItem;
@@ -323,7 +338,8 @@ void UQualitySettingsWidget_C::BndEvt__AnitiAliasingComboBox_K2Node_ComponentBou
 
 void UQualitySettingsWidget_C::BndEvt__PostProcessComboBox_K2Node_ComponentBoundEvent_2259_OnSelectionChanged__DelegateSignature(const struct FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function QualitySettingsWidget.QualitySettingsWidget_C.BndEvt__PostProcessComboBox_K2Node_ComponentBoundEvent_2259_OnSelectionChanged__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x9fd238e6);
 
 	UQualitySettingsWidget_C_BndEvt__PostProcessComboBox_K2Node_ComponentBoundEvent_2259_OnSelectionChanged__DelegateSignature_Params params;
 	params.SelectedItem = SelectedItem;
@@ -345,7 +361,8 @@ void UQualitySettingsWidget_C::BndEvt__PostProcessComboBox_K2Node_ComponentBound
 
 void UQualitySettingsWidget_C::BndEvt__ShadowsComboBox_K2Node_ComponentBoundEvent_2264_OnSelectionChanged__DelegateSignature(const struct FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function QualitySettingsWidget.QualitySettingsWidget_C.BndEvt__ShadowsComboBox_K2Node_ComponentBoundEvent_2264_OnSelectionChanged__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xe66785d0);
 
 	UQualitySettingsWidget_C_BndEvt__ShadowsComboBox_K2Node_ComponentBoundEvent_2264_OnSelectionChanged__DelegateSignature_Params params;
 	params.SelectedItem = SelectedItem;
@@ -367,7 +384,8 @@ void UQualitySettingsWidget_C::BndEvt__ShadowsComboBox_K2Node_ComponentBoundEven
 
 void UQualitySettingsWidget_C::BndEvt__TextureComboBox_K2Node_ComponentBoundEvent_2270_OnSelectionChanged__DelegateSignature(const struct FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function QualitySettingsWidget.QualitySettingsWidget_C.BndEvt__TextureComboBox_K2Node_ComponentBoundEvent_2270_OnSelectionChanged__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x4bd1865);
 
 	UQualitySettingsWidget_C_BndEvt__TextureComboBox_K2Node_ComponentBoundEvent_2270_OnSelectionChanged__DelegateSignature_Params params;
 	params.SelectedItem = SelectedItem;
@@ -389,7 +407,8 @@ void UQualitySettingsWidget_C::BndEvt__TextureComboBox_K2Node_ComponentBoundEven
 
 void UQualitySettingsWidget_C::BndEvt__EffectComboBox_K2Node_ComponentBoundEvent_2277_OnSelectionChanged__DelegateSignature(const struct FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function QualitySettingsWidget.QualitySettingsWidget_C.BndEvt__EffectComboBox_K2Node_ComponentBoundEvent_2277_OnSelectionChanged__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x483bd198);
 
 	UQualitySettingsWidget_C_BndEvt__EffectComboBox_K2Node_ComponentBoundEvent_2277_OnSelectionChanged__DelegateSignature_Params params;
 	params.SelectedItem = SelectedItem;
@@ -411,7 +430,8 @@ void UQualitySettingsWidget_C::BndEvt__EffectComboBox_K2Node_ComponentBoundEvent
 
 void UQualitySettingsWidget_C::BndEvt__FoliageComboBox_K2Node_ComponentBoundEvent_2285_OnSelectionChanged__DelegateSignature(const struct FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function QualitySettingsWidget.QualitySettingsWidget_C.BndEvt__FoliageComboBox_K2Node_ComponentBoundEvent_2285_OnSelectionChanged__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xd2bcd2b5);
 
 	UQualitySettingsWidget_C_BndEvt__FoliageComboBox_K2Node_ComponentBoundEvent_2285_OnSelectionChanged__DelegateSignature_Params params;
 	params.SelectedItem = SelectedItem;
@@ -430,7 +450,8 @@ void UQualitySettingsWidget_C::BndEvt__FoliageComboBox_K2Node_ComponentBoundEven
 
 void UQualitySettingsWidget_C::OnReset()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function QualitySettingsWidget.QualitySettingsWidget_C.OnReset");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x887edcd5);
 
 	UQualitySettingsWidget_C_OnReset_Params params;
 
@@ -447,7 +468,8 @@ void UQualitySettingsWidget_C::OnReset()
 
 void UQualitySettingsWidget_C::Construct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function QualitySettingsWidget.QualitySettingsWidget_C.Construct");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x7d10110e);
 
 	UQualitySettingsWidget_C_Construct_Params params;
 
@@ -466,7 +488,8 @@ void UQualitySettingsWidget_C::Construct()
 
 void UQualitySettingsWidget_C::ExecuteUbergraph_QualitySettingsWidget(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function QualitySettingsWidget.QualitySettingsWidget_C.ExecuteUbergraph_QualitySettingsWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x88000a81);
 
 	UQualitySettingsWidget_C_ExecuteUbergraph_QualitySettingsWidget_Params params;
 	params.EntryPoint = EntryPoint;

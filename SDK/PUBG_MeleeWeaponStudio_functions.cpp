@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,7 +17,8 @@ namespace Classes
 
 void AMeleeWeaponStudio_C::OnLoaded()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MeleeWeaponStudio.MeleeWeaponStudio_C.OnLoaded");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x45708eff);
 
 	AMeleeWeaponStudio_C_OnLoaded_Params params;
 
@@ -34,7 +35,8 @@ void AMeleeWeaponStudio_C::OnLoaded()
 
 void AMeleeWeaponStudio_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MeleeWeaponStudio.MeleeWeaponStudio_C.UserConstructionScript");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x299e270);
 
 	AMeleeWeaponStudio_C_UserConstructionScript_Params params;
 
@@ -53,7 +55,8 @@ void AMeleeWeaponStudio_C::UserConstructionScript()
 
 void AMeleeWeaponStudio_C::SetItem(class UItem** Item)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MeleeWeaponStudio.MeleeWeaponStudio_C.SetItem");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x752935b4);
 
 	AMeleeWeaponStudio_C_SetItem_Params params;
 	params.Item = Item;
@@ -73,7 +76,8 @@ void AMeleeWeaponStudio_C::SetItem(class UItem** Item)
 
 void AMeleeWeaponStudio_C::ExecuteUbergraph_MeleeWeaponStudio(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MeleeWeaponStudio.MeleeWeaponStudio_C.ExecuteUbergraph_MeleeWeaponStudio");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc993c11b);
 
 	AMeleeWeaponStudio_C_ExecuteUbergraph_MeleeWeaponStudio_Params params;
 	params.EntryPoint = EntryPoint;

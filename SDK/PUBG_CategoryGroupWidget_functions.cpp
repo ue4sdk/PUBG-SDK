@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,8 @@ namespace Classes
 
 void UCategoryGroupWidget_C::AddChild(class UWidget** Widget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CategoryGroupWidget.CategoryGroupWidget_C.AddChild");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x371236);
 
 	UCategoryGroupWidget_C_AddChild_Params params;
 
@@ -41,7 +42,8 @@ void UCategoryGroupWidget_C::AddChild(class UWidget** Widget)
 
 void UCategoryGroupWidget_C::GetChilderenCount(int* Count)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CategoryGroupWidget.CategoryGroupWidget_C.GetChilderenCount");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x95516c32);
 
 	UCategoryGroupWidget_C_GetChilderenCount_Params params;
 
@@ -61,7 +63,8 @@ void UCategoryGroupWidget_C::GetChilderenCount(int* Count)
 
 void UCategoryGroupWidget_C::Clear()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CategoryGroupWidget.CategoryGroupWidget_C.Clear");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xcc305f6);
 
 	UCategoryGroupWidget_C_Clear_Params params;
 
@@ -80,7 +83,8 @@ void UCategoryGroupWidget_C::Clear()
 
 void UCategoryGroupWidget_C::OnPrepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CategoryGroupWidget.CategoryGroupWidget_C.OnPrepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xe09f90b8);
 
 	UCategoryGroupWidget_C_OnPrepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -100,7 +104,8 @@ void UCategoryGroupWidget_C::OnPrepass_1(class UWidget* BoundWidget)
 
 void UCategoryGroupWidget_C::AddItemSlot(class UItemSlotWidget_C** ItemSlotWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CategoryGroupWidget.CategoryGroupWidget_C.AddItemSlot");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x75cbb7c5);
 
 	UCategoryGroupWidget_C_AddItemSlot_Params params;
 

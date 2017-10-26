@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,8 @@ namespace Classes
 
 void USlotBaseWidget_C::IsPlayCharacterPickupAnim(bool* bIsPickup)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SlotBaseWidget.SlotBaseWidget_C.IsPlayCharacterPickupAnim");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x18d12a17);
 
 	USlotBaseWidget_C_IsPlayCharacterPickupAnim_Params params;
 
@@ -41,7 +42,8 @@ void USlotBaseWidget_C::IsPlayCharacterPickupAnim(bool* bIsPickup)
 
 void USlotBaseWidget_C::IsCharacterCasting(bool* IsCasting)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SlotBaseWidget.SlotBaseWidget_C.IsCharacterCasting");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x3068ffb5);
 
 	USlotBaseWidget_C_IsCharacterCasting_Params params;
 
@@ -63,7 +65,8 @@ void USlotBaseWidget_C::IsCharacterCasting(bool* IsCasting)
 
 void USlotBaseWidget_C::PlaySoundAk(class UAkAudioEvent* SoundAk)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SlotBaseWidget.SlotBaseWidget_C.PlaySoundAk");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x43d25cb4);
 
 	USlotBaseWidget_C_PlaySoundAk_Params params;
 	params.SoundAk = SoundAk;
@@ -81,7 +84,8 @@ void USlotBaseWidget_C::PlaySoundAk(class UAkAudioEvent* SoundAk)
 
 void USlotBaseWidget_C::Construct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SlotBaseWidget.SlotBaseWidget_C.Construct");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x96690db0);
 
 	USlotBaseWidget_C_Construct_Params params;
 
@@ -101,7 +105,8 @@ void USlotBaseWidget_C::Construct()
 
 void USlotBaseWidget_C::OnMouseEnter(struct FGeometry* MyGeometry, struct FPointerEvent* MouseEvent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SlotBaseWidget.SlotBaseWidget_C.OnMouseEnter");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x98e82793);
 
 	USlotBaseWidget_C_OnMouseEnter_Params params;
 	params.MyGeometry = MyGeometry;
@@ -122,7 +127,8 @@ void USlotBaseWidget_C::OnMouseEnter(struct FGeometry* MyGeometry, struct FPoint
 
 void USlotBaseWidget_C::ExecuteUbergraph_SlotBaseWidget(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SlotBaseWidget.SlotBaseWidget_C.ExecuteUbergraph_SlotBaseWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xd0bf5b32);
 
 	USlotBaseWidget_C_ExecuteUbergraph_SlotBaseWidget_Params params;
 	params.EntryPoint = EntryPoint;

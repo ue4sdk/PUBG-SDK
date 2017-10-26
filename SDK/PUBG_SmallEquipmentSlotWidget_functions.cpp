@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,8 @@ namespace Classes
 
 void USmallEquipmentSlotWidget_C::GetSlotItem(TScriptInterface<class USlotInterface>* SlotItem)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SmallEquipmentSlotWidget.SmallEquipmentSlotWidget_C.GetSlotItem");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x833f2f22);
 
 	USmallEquipmentSlotWidget_C_GetSlotItem_Params params;
 
@@ -41,7 +42,8 @@ void USmallEquipmentSlotWidget_C::GetSlotItem(TScriptInterface<class USlotInterf
 
 void USmallEquipmentSlotWidget_C::GetSlotContainer(TScriptInterface<class USlotContainerInterface>* SlotContainer)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SmallEquipmentSlotWidget.SmallEquipmentSlotWidget_C.GetSlotContainer");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xe036bab8);
 
 	USmallEquipmentSlotWidget_C_GetSlotContainer_Params params;
 
@@ -63,7 +65,8 @@ void USmallEquipmentSlotWidget_C::GetSlotContainer(TScriptInterface<class USlotC
 
 bool USmallEquipmentSlotWidget_C::IsFocus()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SmallEquipmentSlotWidget.SmallEquipmentSlotWidget_C.IsFocus");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x338782a7);
 
 	USmallEquipmentSlotWidget_C_IsFocus_Params params;
 
@@ -85,7 +88,8 @@ bool USmallEquipmentSlotWidget_C::IsFocus()
 
 bool USmallEquipmentSlotWidget_C::SetFocus(bool* NewFocus)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SmallEquipmentSlotWidget.SmallEquipmentSlotWidget_C.SetFocus");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x82720d71);
 
 	USmallEquipmentSlotWidget_C_SetFocus_Params params;
 	params.NewFocus = NewFocus;
@@ -107,7 +111,8 @@ bool USmallEquipmentSlotWidget_C::SetFocus(bool* NewFocus)
 
 void USmallEquipmentSlotWidget_C::On_FocusColorBG_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SmallEquipmentSlotWidget.SmallEquipmentSlotWidget_C.On_FocusColorBG_Prepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x4b779860);
 
 	USmallEquipmentSlotWidget_C_On_FocusColorBG_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -127,7 +132,8 @@ void USmallEquipmentSlotWidget_C::On_FocusColorBG_Prepass_1(class UWidget* Bound
 
 void USmallEquipmentSlotWidget_C::GetItem_Bp(class UItem** Item)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SmallEquipmentSlotWidget.SmallEquipmentSlotWidget_C.GetItem_Bp");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xfce911df);
 
 	USmallEquipmentSlotWidget_C_GetItem_Bp_Params params;
 
@@ -151,7 +157,8 @@ void USmallEquipmentSlotWidget_C::GetItem_Bp(class UItem** Item)
 
 struct FEventReply USmallEquipmentSlotWidget_C::OnPreviewMouseButtonDown(struct FGeometry* MyGeometry, struct FPointerEvent* MouseEvent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SmallEquipmentSlotWidget.SmallEquipmentSlotWidget_C.OnPreviewMouseButtonDown");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xe8a48133);
 
 	USmallEquipmentSlotWidget_C_OnPreviewMouseButtonDown_Params params;
 	params.MyGeometry = MyGeometry;
@@ -174,7 +181,8 @@ struct FEventReply USmallEquipmentSlotWidget_C::OnPreviewMouseButtonDown(struct 
 
 struct FSlateBrush USmallEquipmentSlotWidget_C::GetIcon()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SmallEquipmentSlotWidget.SmallEquipmentSlotWidget_C.GetIcon");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x26310614);
 
 	USmallEquipmentSlotWidget_C_GetIcon_Params params;
 
@@ -197,7 +205,8 @@ struct FSlateBrush USmallEquipmentSlotWidget_C::GetIcon()
 
 void USmallEquipmentSlotWidget_C::OnDragDetected(struct FGeometry* MyGeometry, struct FPointerEvent* PointerEvent, class UDragDropOperation** Operation)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SmallEquipmentSlotWidget.SmallEquipmentSlotWidget_C.OnDragDetected");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xfd606d96);
 
 	USmallEquipmentSlotWidget_C_OnDragDetected_Params params;
 	params.MyGeometry = MyGeometry;
@@ -221,7 +230,8 @@ void USmallEquipmentSlotWidget_C::OnDragDetected(struct FGeometry* MyGeometry, s
 
 struct FText USmallEquipmentSlotWidget_C::GetSlotName()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SmallEquipmentSlotWidget.SmallEquipmentSlotWidget_C.GetSlotName");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xd68b6902);
 
 	USmallEquipmentSlotWidget_C_GetSlotName_Params params;
 
@@ -242,7 +252,8 @@ struct FText USmallEquipmentSlotWidget_C::GetSlotName()
 
 void USmallEquipmentSlotWidget_C::OnUpdateItem(class UItem** Item)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SmallEquipmentSlotWidget.SmallEquipmentSlotWidget_C.OnUpdateItem");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x64b2c1d4);
 
 	USmallEquipmentSlotWidget_C_OnUpdateItem_Params params;
 	params.Item = Item;
@@ -260,7 +271,8 @@ void USmallEquipmentSlotWidget_C::OnUpdateItem(class UItem** Item)
 
 void USmallEquipmentSlotWidget_C::Construct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SmallEquipmentSlotWidget.SmallEquipmentSlotWidget_C.Construct");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x7e338a90);
 
 	USmallEquipmentSlotWidget_C_Construct_Params params;
 
@@ -279,7 +291,8 @@ void USmallEquipmentSlotWidget_C::Construct()
 
 void USmallEquipmentSlotWidget_C::ExecuteUbergraph_SmallEquipmentSlotWidget(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SmallEquipmentSlotWidget.SmallEquipmentSlotWidget_C.ExecuteUbergraph_SmallEquipmentSlotWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xdb56fd6);
 
 	USmallEquipmentSlotWidget_C_ExecuteUbergraph_SmallEquipmentSlotWidget_Params params;
 	params.EntryPoint = EntryPoint;

@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,8 @@ namespace Classes
 
 bool UInventoryListBaseWidget_C::IsFocusable()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.IsFocusable");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x58c7095d);
 
 	UInventoryListBaseWidget_C_IsFocusable_Params params;
 
@@ -40,7 +41,8 @@ bool UInventoryListBaseWidget_C::IsFocusable()
 
 bool UInventoryListBaseWidget_C::InputLB()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.InputLB");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xbc0bd87f);
 
 	UInventoryListBaseWidget_C_InputLB_Params params;
 
@@ -61,7 +63,8 @@ bool UInventoryListBaseWidget_C::InputLB()
 
 bool UInventoryListBaseWidget_C::InputLT()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.InputLT");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x3824a099);
 
 	UInventoryListBaseWidget_C_InputLT_Params params;
 
@@ -82,7 +85,8 @@ bool UInventoryListBaseWidget_C::InputLT()
 
 bool UInventoryListBaseWidget_C::InputRB()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.InputRB");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x9177bea1);
 
 	UInventoryListBaseWidget_C_InputRB_Params params;
 
@@ -103,7 +107,8 @@ bool UInventoryListBaseWidget_C::InputRB()
 
 bool UInventoryListBaseWidget_C::InputRT()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.InputRT");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x155ef687);
 
 	UInventoryListBaseWidget_C_InputRT_Params params;
 
@@ -124,7 +129,8 @@ bool UInventoryListBaseWidget_C::InputRT()
 
 class UUserWidget* UInventoryListBaseWidget_C::GetFocusingChildWidget()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.GetFocusingChildWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xf38be57d);
 
 	UInventoryListBaseWidget_C_GetFocusingChildWidget_Params params;
 
@@ -145,7 +151,8 @@ class UUserWidget* UInventoryListBaseWidget_C::GetFocusingChildWidget()
 
 bool UInventoryListBaseWidget_C::InputA()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.InputA");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xe919a1ba);
 
 	UInventoryListBaseWidget_C_InputA_Params params;
 
@@ -166,7 +173,8 @@ bool UInventoryListBaseWidget_C::InputA()
 
 bool UInventoryListBaseWidget_C::InputB()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.InputB");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc3172751);
 
 	UInventoryListBaseWidget_C_InputB_Params params;
 
@@ -187,7 +195,8 @@ bool UInventoryListBaseWidget_C::InputB()
 
 bool UInventoryListBaseWidget_C::InputX()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.InputX");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x3f2fef6b);
 
 	UInventoryListBaseWidget_C_InputX_Params params;
 
@@ -208,7 +217,8 @@ bool UInventoryListBaseWidget_C::InputX()
 
 bool UInventoryListBaseWidget_C::InputY()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.InputY");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x192d7502);
 
 	UInventoryListBaseWidget_C_InputY_Params params;
 
@@ -229,7 +239,8 @@ bool UInventoryListBaseWidget_C::InputY()
 
 class UUserWidget* UInventoryListBaseWidget_C::GetDownWidget()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.GetDownWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x4d25cba9);
 
 	UInventoryListBaseWidget_C_GetDownWidget_Params params;
 
@@ -250,7 +261,8 @@ class UUserWidget* UInventoryListBaseWidget_C::GetDownWidget()
 
 class UUserWidget* UInventoryListBaseWidget_C::GetLeftWidget()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.GetLeftWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x7377b0f6);
 
 	UInventoryListBaseWidget_C_GetLeftWidget_Params params;
 
@@ -271,7 +283,8 @@ class UUserWidget* UInventoryListBaseWidget_C::GetLeftWidget()
 
 class UUserWidget* UInventoryListBaseWidget_C::GetRightWidget()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.GetRightWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x255ff8f9);
 
 	UInventoryListBaseWidget_C_GetRightWidget_Params params;
 
@@ -292,7 +305,8 @@ class UUserWidget* UInventoryListBaseWidget_C::GetRightWidget()
 
 class UUserWidget* UInventoryListBaseWidget_C::GetUpWidget()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.GetUpWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xf753759a);
 
 	UInventoryListBaseWidget_C_GetUpWidget_Params params;
 
@@ -313,7 +327,8 @@ class UUserWidget* UInventoryListBaseWidget_C::GetUpWidget()
 
 bool UInventoryListBaseWidget_C::Down()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.Down");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x83d3f63f);
 
 	UInventoryListBaseWidget_C_Down_Params params;
 
@@ -334,7 +349,8 @@ bool UInventoryListBaseWidget_C::Down()
 
 bool UInventoryListBaseWidget_C::IsFocus()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.IsFocus");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x8ed9169);
 
 	UInventoryListBaseWidget_C_IsFocus_Params params;
 
@@ -355,7 +371,8 @@ bool UInventoryListBaseWidget_C::IsFocus()
 
 bool UInventoryListBaseWidget_C::Left()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.Left");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x4eb8f80);
 
 	UInventoryListBaseWidget_C_Left_Params params;
 
@@ -376,7 +393,8 @@ bool UInventoryListBaseWidget_C::Left()
 
 bool UInventoryListBaseWidget_C::Right()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.Right");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x2e567fef);
 
 	UInventoryListBaseWidget_C_Right_Params params;
 
@@ -398,7 +416,8 @@ bool UInventoryListBaseWidget_C::Right()
 
 bool UInventoryListBaseWidget_C::SetFocus(bool NewFocus)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.SetFocus");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xd53f55af);
 
 	UInventoryListBaseWidget_C_SetFocus_Params params;
 	params.NewFocus = NewFocus;
@@ -420,7 +439,8 @@ bool UInventoryListBaseWidget_C::SetFocus(bool NewFocus)
 
 bool UInventoryListBaseWidget_C::Up()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.Up");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x997dd3b0);
 
 	UInventoryListBaseWidget_C_Up_Params params;
 
@@ -441,7 +461,8 @@ bool UInventoryListBaseWidget_C::Up()
 
 float UInventoryListBaseWidget_C::GetScrollAccelation()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.GetScrollAccelation");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xa0ae5e01);
 
 	UInventoryListBaseWidget_C_GetScrollAccelation_Params params;
 
@@ -462,7 +483,8 @@ float UInventoryListBaseWidget_C::GetScrollAccelation()
 
 float UInventoryListBaseWidget_C::GetMaxScroll()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.GetMaxScroll");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x50faaa6a);
 
 	UInventoryListBaseWidget_C_GetMaxScroll_Params params;
 
@@ -481,7 +503,8 @@ float UInventoryListBaseWidget_C::GetMaxScroll()
 
 void UInventoryListBaseWidget_C::OnChildWidgetRefreshFocus()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.OnChildWidgetRefreshFocus");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xe6b0c70d);
 
 	UInventoryListBaseWidget_C_OnChildWidgetRefreshFocus_Params params;
 
@@ -500,7 +523,8 @@ void UInventoryListBaseWidget_C::OnChildWidgetRefreshFocus()
 
 void UInventoryListBaseWidget_C::On_FocusColor_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.On_FocusColor_Prepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x9356f2c3);
 
 	UInventoryListBaseWidget_C_On_FocusColor_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -518,7 +542,8 @@ void UInventoryListBaseWidget_C::On_FocusColor_Prepass_1(class UWidget* BoundWid
 
 void UInventoryListBaseWidget_C::UpdateOffset_XBoxOne_Up()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.UpdateOffset_XBoxOne_Up");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xdd7a3cb3);
 
 	UInventoryListBaseWidget_C_UpdateOffset_XBoxOne_Up_Params params;
 
@@ -535,7 +560,8 @@ void UInventoryListBaseWidget_C::UpdateOffset_XBoxOne_Up()
 
 void UInventoryListBaseWidget_C::UpdateOffset_XBoxOne_Down()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.UpdateOffset_XBoxOne_Down");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xbc94d7d8);
 
 	UInventoryListBaseWidget_C_UpdateOffset_XBoxOne_Down_Params params;
 
@@ -552,7 +578,8 @@ void UInventoryListBaseWidget_C::UpdateOffset_XBoxOne_Down()
 
 void UInventoryListBaseWidget_C::GetSelectWidget()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.GetSelectWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x2949487d);
 
 	UInventoryListBaseWidget_C_GetSelectWidget_Params params;
 
@@ -571,7 +598,8 @@ void UInventoryListBaseWidget_C::GetSelectWidget()
 
 bool UInventoryListBaseWidget_C::isEmptyList()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.isEmptyList");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xecb3c98e);
 
 	UInventoryListBaseWidget_C_isEmptyList_Params params;
 
@@ -590,7 +618,8 @@ bool UInventoryListBaseWidget_C::isEmptyList()
 
 void UInventoryListBaseWidget_C::RefreshList_Inventory()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.RefreshList_Inventory");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x1b306231);
 
 	UInventoryListBaseWidget_C_RefreshList_Inventory_Params params;
 
@@ -612,7 +641,8 @@ void UInventoryListBaseWidget_C::RefreshList_Inventory()
 
 void UInventoryListBaseWidget_C::GetSlotItem(int Index, const TScriptInterface<class USlotInterface>& Item_SlotInterface, const TScriptInterface<class USlotContainerInterface>& SlotContainer, class UItemSlotWidget_C** ItemSlotWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.GetSlotItem");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xd6363d74);
 
 	UInventoryListBaseWidget_C_GetSlotItem_Params params;
 	params.Index = Index;
@@ -635,7 +665,8 @@ void UInventoryListBaseWidget_C::GetSlotItem(int Index, const TScriptInterface<c
 
 void UInventoryListBaseWidget_C::RefreshList_Visinity()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.RefreshList_Visinity");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x5a20b8c2);
 
 	UInventoryListBaseWidget_C_RefreshList_Visinity_Params params;
 
@@ -657,7 +688,8 @@ void UInventoryListBaseWidget_C::RefreshList_Visinity()
 
 bool UInventoryListBaseWidget_C::OnDrop(struct FGeometry* MyGeometry, struct FPointerEvent* PointerEvent, class UDragDropOperation** Operation)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.OnDrop");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xe9a229f7);
 
 	UInventoryListBaseWidget_C_OnDrop_Params params;
 	params.MyGeometry = MyGeometry;
@@ -681,7 +713,8 @@ bool UInventoryListBaseWidget_C::OnDrop(struct FGeometry* MyGeometry, struct FPo
 
 void UInventoryListBaseWidget_C::GetContentCount(int* Count)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.GetContentCount");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x64ccbfad);
 
 	UInventoryListBaseWidget_C_GetContentCount_Params params;
 
@@ -703,7 +736,8 @@ void UInventoryListBaseWidget_C::GetContentCount(int* Count)
 
 float UInventoryListBaseWidget_C::GetWeightPercent()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.GetWeightPercent");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x5a9dcf10);
 
 	UInventoryListBaseWidget_C_GetWeightPercent_Params params;
 
@@ -724,7 +758,8 @@ float UInventoryListBaseWidget_C::GetWeightPercent()
 
 struct FText UInventoryListBaseWidget_C::GetWeightText()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.GetWeightText");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x2e40a76c);
 
 	UInventoryListBaseWidget_C_GetWeightText_Params params;
 
@@ -743,7 +778,8 @@ struct FText UInventoryListBaseWidget_C::GetWeightText()
 
 void UInventoryListBaseWidget_C::RefreshList()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.RefreshList");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc91b7604);
 
 	UInventoryListBaseWidget_C_RefreshList_Params params;
 
@@ -760,7 +796,8 @@ void UInventoryListBaseWidget_C::RefreshList()
 
 void UInventoryListBaseWidget_C::CreateBackgroundSlots()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.CreateBackgroundSlots");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x89af2b82);
 
 	UInventoryListBaseWidget_C_CreateBackgroundSlots_Params params;
 
@@ -777,7 +814,8 @@ void UInventoryListBaseWidget_C::CreateBackgroundSlots()
 
 void UInventoryListBaseWidget_C::Construct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.Construct");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xaafea046);
 
 	UInventoryListBaseWidget_C_Construct_Params params;
 
@@ -797,7 +835,8 @@ void UInventoryListBaseWidget_C::Construct()
 
 void UInventoryListBaseWidget_C::OnSlotFocus(const TScriptInterface<class USlotInterface>& Slot, const TScriptInterface<class USlotContainerInterface>& SlotContainer)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.OnSlotFocus");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x2827043c);
 
 	UInventoryListBaseWidget_C_OnSlotFocus_Params params;
 	params.Slot = Slot;
@@ -816,7 +855,8 @@ void UInventoryListBaseWidget_C::OnSlotFocus(const TScriptInterface<class USlotI
 
 void UInventoryListBaseWidget_C::OnRefreshList()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.OnRefreshList");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x15aca209);
 
 	UInventoryListBaseWidget_C_OnRefreshList_Params params;
 
@@ -837,7 +877,8 @@ void UInventoryListBaseWidget_C::OnRefreshList()
 
 void UInventoryListBaseWidget_C::OnDragEnter(struct FGeometry* MyGeometry, struct FPointerEvent* PointerEvent, class UDragDropOperation** Operation)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.OnDragEnter");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc3795a8c);
 
 	UInventoryListBaseWidget_C_OnDragEnter_Params params;
 	params.MyGeometry = MyGeometry;
@@ -860,7 +901,8 @@ void UInventoryListBaseWidget_C::OnDragEnter(struct FGeometry* MyGeometry, struc
 
 void UInventoryListBaseWidget_C::OnDragLeave(struct FPointerEvent* PointerEvent, class UDragDropOperation** Operation)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.OnDragLeave");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x127f132b);
 
 	UInventoryListBaseWidget_C_OnDragLeave_Params params;
 	params.PointerEvent = PointerEvent;
@@ -879,7 +921,8 @@ void UInventoryListBaseWidget_C::OnDragLeave(struct FPointerEvent* PointerEvent,
 
 void UInventoryListBaseWidget_C::Destruct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.Destruct");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x7202bf55);
 
 	UInventoryListBaseWidget_C_Destruct_Params params;
 
@@ -899,7 +942,8 @@ void UInventoryListBaseWidget_C::Destruct()
 
 void UInventoryListBaseWidget_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.Tick");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x9f6bd9c);
 
 	UInventoryListBaseWidget_C_Tick_Params params;
 	params.MyGeometry = MyGeometry;
@@ -918,7 +962,8 @@ void UInventoryListBaseWidget_C::Tick(struct FGeometry* MyGeometry, float* InDel
 
 void UInventoryListBaseWidget_C::CustomEvent_1()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.CustomEvent_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x69bdefae);
 
 	UInventoryListBaseWidget_C_CustomEvent_1_Params params;
 
@@ -935,7 +980,8 @@ void UInventoryListBaseWidget_C::CustomEvent_1()
 
 void UInventoryListBaseWidget_C::OnRefreshFocus()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.OnRefreshFocus");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xd89aa097);
 
 	UInventoryListBaseWidget_C_OnRefreshFocus_Params params;
 
@@ -954,7 +1000,8 @@ void UInventoryListBaseWidget_C::OnRefreshFocus()
 
 void UInventoryListBaseWidget_C::OnAddScroll(float Scale)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.OnAddScroll");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x702f1cae);
 
 	UInventoryListBaseWidget_C_OnAddScroll_Params params;
 	params.Scale = Scale;
@@ -972,7 +1019,8 @@ void UInventoryListBaseWidget_C::OnAddScroll(float Scale)
 
 void UInventoryListBaseWidget_C::OnSlotMoveUpPressed()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.OnSlotMoveUpPressed");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc4578d66);
 
 	UInventoryListBaseWidget_C_OnSlotMoveUpPressed_Params params;
 
@@ -989,7 +1037,8 @@ void UInventoryListBaseWidget_C::OnSlotMoveUpPressed()
 
 void UInventoryListBaseWidget_C::OnSlotMoveUpReleased()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.OnSlotMoveUpReleased");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x6dea95fd);
 
 	UInventoryListBaseWidget_C_OnSlotMoveUpReleased_Params params;
 
@@ -1006,7 +1055,8 @@ void UInventoryListBaseWidget_C::OnSlotMoveUpReleased()
 
 void UInventoryListBaseWidget_C::OnSlotMoveDownPressed()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.OnSlotMoveDownPressed");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x5d54d9b);
 
 	UInventoryListBaseWidget_C_OnSlotMoveDownPressed_Params params;
 
@@ -1023,7 +1073,8 @@ void UInventoryListBaseWidget_C::OnSlotMoveDownPressed()
 
 void UInventoryListBaseWidget_C::OnSlotMoveDownReleased()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.OnSlotMoveDownReleased");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x72efd47e);
 
 	UInventoryListBaseWidget_C_OnSlotMoveDownReleased_Params params;
 
@@ -1040,7 +1091,8 @@ void UInventoryListBaseWidget_C::OnSlotMoveDownReleased()
 
 void UInventoryListBaseWidget_C::OnSlotScrollMoving()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.OnSlotScrollMoving");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x8b44b1a5);
 
 	UInventoryListBaseWidget_C_OnSlotScrollMoving_Params params;
 
@@ -1059,7 +1111,8 @@ void UInventoryListBaseWidget_C::OnSlotScrollMoving()
 
 void UInventoryListBaseWidget_C::ExecuteUbergraph_InventoryListBaseWidget(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.ExecuteUbergraph_InventoryListBaseWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xdaf372a2);
 
 	UInventoryListBaseWidget_C_ExecuteUbergraph_InventoryListBaseWidget_Params params;
 	params.EntryPoint = EntryPoint;
@@ -1077,7 +1130,8 @@ void UInventoryListBaseWidget_C::ExecuteUbergraph_InventoryListBaseWidget(int En
 
 void UInventoryListBaseWidget_C::RefreshFocus__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.RefreshFocus__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x890f92c7);
 
 	UInventoryListBaseWidget_C_RefreshFocus__DelegateSignature_Params params;
 
@@ -1097,7 +1151,8 @@ void UInventoryListBaseWidget_C::RefreshFocus__DelegateSignature()
 
 void UInventoryListBaseWidget_C::OnChildSlotFocus__DelegateSignature(const TScriptInterface<class USlotInterface>& Slot, const TScriptInterface<class USlotContainerInterface>& SlotContainer)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryListBaseWidget.InventoryListBaseWidget_C.OnChildSlotFocus__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x574fc5bd);
 
 	UInventoryListBaseWidget_C_OnChildSlotFocus__DelegateSignature_Params params;
 	params.Slot = Slot;

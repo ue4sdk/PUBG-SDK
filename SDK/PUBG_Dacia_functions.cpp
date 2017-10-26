@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,7 +17,8 @@ namespace Classes
 
 void ADacia_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Dacia.Dacia_C.UserConstructionScript");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xb19a2580);
 
 	ADacia_C_UserConstructionScript_Params params;
 

@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,8 @@ namespace Classes
 
 void UPlayerHeadWidget_C::AddAlphaWhenADS(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerHeadWidget.PlayerHeadWidget_C.AddAlphaWhenADS");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xb84e9d4);
 
 	UPlayerHeadWidget_C_AddAlphaWhenADS_Params params;
 	params.BoundWidget = BoundWidget;
@@ -39,7 +40,8 @@ void UPlayerHeadWidget_C::AddAlphaWhenADS(class UWidget* BoundWidget)
 
 void UPlayerHeadWidget_C::On_HeadBorder_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerHeadWidget.PlayerHeadWidget_C.On_HeadBorder_Prepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x4ef97448);
 
 	UPlayerHeadWidget_C_On_HeadBorder_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -59,7 +61,8 @@ void UPlayerHeadWidget_C::On_HeadBorder_Prepass_1(class UWidget* BoundWidget)
 
 void UPlayerHeadWidget_C::IsEmptyPlayerName(bool* EmptyPlayerName)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerHeadWidget.PlayerHeadWidget_C.IsEmptyPlayerName");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc900c75a);
 
 	UPlayerHeadWidget_C_IsEmptyPlayerName_Params params;
 
@@ -81,7 +84,8 @@ void UPlayerHeadWidget_C::IsEmptyPlayerName(bool* EmptyPlayerName)
 
 void UPlayerHeadWidget_C::OnPrepass_2(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerHeadWidget.PlayerHeadWidget_C.OnPrepass_2");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xa18a3949);
 
 	UPlayerHeadWidget_C_OnPrepass_2_Params params;
 	params.BoundWidget = BoundWidget;
@@ -101,7 +105,8 @@ void UPlayerHeadWidget_C::OnPrepass_2(class UWidget* BoundWidget)
 
 void UPlayerHeadWidget_C::OnPrepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerHeadWidget.PlayerHeadWidget_C.OnPrepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc78cb3b2);
 
 	UPlayerHeadWidget_C_OnPrepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -119,7 +124,8 @@ void UPlayerHeadWidget_C::OnPrepass_1(class UWidget* BoundWidget)
 
 void UPlayerHeadWidget_C::UpdateTextColor()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerHeadWidget.PlayerHeadWidget_C.UpdateTextColor");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xa8b5ddb8);
 
 	UPlayerHeadWidget_C_UpdateTextColor_Params params;
 
@@ -138,7 +144,8 @@ void UPlayerHeadWidget_C::UpdateTextColor()
 
 struct FText UPlayerHeadWidget_C::Get_PlayerName_Text_1()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerHeadWidget.PlayerHeadWidget_C.Get_PlayerName_Text_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x732958f2);
 
 	UPlayerHeadWidget_C_Get_PlayerName_Text_1_Params params;
 
@@ -159,7 +166,8 @@ struct FText UPlayerHeadWidget_C::Get_PlayerName_Text_1()
 
 void UPlayerHeadWidget_C::GetCurrentWeaponGun(class ATslWeapon_Gun** WeaponGun)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerHeadWidget.PlayerHeadWidget_C.GetCurrentWeaponGun");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xd48e6614);
 
 	UPlayerHeadWidget_C_GetCurrentWeaponGun_Params params;
 
@@ -181,7 +189,8 @@ void UPlayerHeadWidget_C::GetCurrentWeaponGun(class ATslWeapon_Gun** WeaponGun)
 
 void UPlayerHeadWidget_C::On_WeaponHandsOnLoadedAmmoCount_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerHeadWidget.PlayerHeadWidget_C.On_WeaponHandsOnLoadedAmmoCount_Prepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x3962ef49);
 
 	UPlayerHeadWidget_C_On_WeaponHandsOnLoadedAmmoCount_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -201,7 +210,8 @@ void UPlayerHeadWidget_C::On_WeaponHandsOnLoadedAmmoCount_Prepass_1(class UWidge
 
 void UPlayerHeadWidget_C::GetCurrentWeapon(class ATslWeapon** CurrentWeapon)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerHeadWidget.PlayerHeadWidget_C.GetCurrentWeapon");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xb047d66a);
 
 	UPlayerHeadWidget_C_GetCurrentWeapon_Params params;
 
@@ -223,7 +233,8 @@ void UPlayerHeadWidget_C::GetCurrentWeapon(class ATslWeapon** CurrentWeapon)
 
 void UPlayerHeadWidget_C::GetAmmoWeapon(int* Ammo)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerHeadWidget.PlayerHeadWidget_C.GetAmmoWeapon");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x850e8139);
 
 	UPlayerHeadWidget_C_GetAmmoWeapon_Params params;
 
@@ -245,7 +256,8 @@ void UPlayerHeadWidget_C::GetAmmoWeapon(int* Ammo)
 
 void UPlayerHeadWidget_C::GetWeaponIndex(int* SlotIndex)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerHeadWidget.PlayerHeadWidget_C.GetWeaponIndex");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x1da5f039);
 
 	UPlayerHeadWidget_C_GetWeaponIndex_Params params;
 
@@ -267,7 +279,8 @@ void UPlayerHeadWidget_C::GetWeaponIndex(int* SlotIndex)
 
 void UPlayerHeadWidget_C::IsCurrentWeapon(bool* bCurrentWeapon)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerHeadWidget.PlayerHeadWidget_C.IsCurrentWeapon");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xb8037f68);
 
 	UPlayerHeadWidget_C_IsCurrentWeapon_Params params;
 
@@ -289,7 +302,8 @@ void UPlayerHeadWidget_C::IsCurrentWeapon(bool* bCurrentWeapon)
 
 void UPlayerHeadWidget_C::GetWeaponProcessor(class AWeaponProcessor** WeaponProcessor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerHeadWidget.PlayerHeadWidget_C.GetWeaponProcessor");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x1714c67d);
 
 	UPlayerHeadWidget_C_GetWeaponProcessor_Params params;
 
@@ -311,7 +325,8 @@ void UPlayerHeadWidget_C::GetWeaponProcessor(class AWeaponProcessor** WeaponProc
 
 struct FLinearColor UPlayerHeadWidget_C::GetTslWeaponColor()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerHeadWidget.PlayerHeadWidget_C.GetTslWeaponColor");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x869c7d59);
 
 	UPlayerHeadWidget_C_GetTslWeaponColor_Params params;
 
@@ -330,7 +345,8 @@ struct FLinearColor UPlayerHeadWidget_C::GetTslWeaponColor()
 
 void UPlayerHeadWidget_C::UpdateIcon()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerHeadWidget.PlayerHeadWidget_C.UpdateIcon");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x3f7d3da9);
 
 	UPlayerHeadWidget_C_UpdateIcon_Params params;
 
@@ -349,7 +365,8 @@ void UPlayerHeadWidget_C::UpdateIcon()
 
 void UPlayerHeadWidget_C::On_weaponImage_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerHeadWidget.PlayerHeadWidget_C.On_weaponImage_Prepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xe65f8be5);
 
 	UPlayerHeadWidget_C_On_weaponImage_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -369,7 +386,8 @@ void UPlayerHeadWidget_C::On_weaponImage_Prepass_1(class UWidget* BoundWidget)
 
 void UPlayerHeadWidget_C::On_WeaponImageSizeBox_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerHeadWidget.PlayerHeadWidget_C.On_WeaponImageSizeBox_Prepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xd9a95ab);
 
 	UPlayerHeadWidget_C_On_WeaponImageSizeBox_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -389,7 +407,8 @@ void UPlayerHeadWidget_C::On_WeaponImageSizeBox_Prepass_1(class UWidget* BoundWi
 
 void UPlayerHeadWidget_C::GetTslWeaponVisibility(TEnumAsByte<ESlateVisibility>* Visible)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerHeadWidget.PlayerHeadWidget_C.GetTslWeaponVisibility");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x3512cdb0);
 
 	UPlayerHeadWidget_C_GetTslWeaponVisibility_Params params;
 
@@ -411,7 +430,8 @@ void UPlayerHeadWidget_C::GetTslWeaponVisibility(TEnumAsByte<ESlateVisibility>* 
 
 void UPlayerHeadWidget_C::GetBoostGauge(float* BoostGauge)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerHeadWidget.PlayerHeadWidget_C.GetBoostGauge");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x78708b01);
 
 	UPlayerHeadWidget_C_GetBoostGauge_Params params;
 
@@ -431,7 +451,8 @@ void UPlayerHeadWidget_C::GetBoostGauge(float* BoostGauge)
 
 void UPlayerHeadWidget_C::UpdateBoostGauge()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerHeadWidget.PlayerHeadWidget_C.UpdateBoostGauge");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x8969d300);
 
 	UPlayerHeadWidget_C_UpdateBoostGauge_Params params;
 
@@ -450,7 +471,8 @@ void UPlayerHeadWidget_C::UpdateBoostGauge()
 
 void UPlayerHeadWidget_C::SetBoostGauge(float BoostGauge)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerHeadWidget.PlayerHeadWidget_C.SetBoostGauge");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x9a5e73ed);
 
 	UPlayerHeadWidget_C_SetBoostGauge_Params params;
 	params.BoostGauge = BoostGauge;
@@ -468,7 +490,8 @@ void UPlayerHeadWidget_C::SetBoostGauge(float BoostGauge)
 
 void UPlayerHeadWidget_C::InitBoostGauge()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerHeadWidget.PlayerHeadWidget_C.InitBoostGauge");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xcc864781);
 
 	UPlayerHeadWidget_C_InitBoostGauge_Params params;
 
@@ -487,7 +510,8 @@ void UPlayerHeadWidget_C::InitBoostGauge()
 
 void UPlayerHeadWidget_C::IsGroggy(bool* IsGroggy)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerHeadWidget.PlayerHeadWidget_C.IsGroggy");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x5d73ff6c);
 
 	UPlayerHeadWidget_C_IsGroggy_Params params;
 
@@ -509,7 +533,8 @@ void UPlayerHeadWidget_C::IsGroggy(bool* IsGroggy)
 
 void UPlayerHeadWidget_C::GetHealthPercent(float* Health)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerHeadWidget.PlayerHeadWidget_C.GetHealthPercent");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x46ba2820);
 
 	UPlayerHeadWidget_C_GetHealthPercent_Params params;
 
@@ -531,7 +556,8 @@ void UPlayerHeadWidget_C::GetHealthPercent(float* Health)
 
 void UPlayerHeadWidget_C::GetGroggyHealthPercent(float* GroggyHealth)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerHeadWidget.PlayerHeadWidget_C.GetGroggyHealthPercent");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xa9e16197);
 
 	UPlayerHeadWidget_C_GetGroggyHealthPercent_Params params;
 
@@ -551,7 +577,8 @@ void UPlayerHeadWidget_C::GetGroggyHealthPercent(float* GroggyHealth)
 
 void UPlayerHeadWidget_C::UpdateHealthGauge()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerHeadWidget.PlayerHeadWidget_C.UpdateHealthGauge");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x8c2ec39d);
 
 	UPlayerHeadWidget_C_UpdateHealthGauge_Params params;
 
@@ -568,7 +595,8 @@ void UPlayerHeadWidget_C::UpdateHealthGauge()
 
 void UPlayerHeadWidget_C::Construct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerHeadWidget.PlayerHeadWidget_C.Construct");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x61c2a400);
 
 	UPlayerHeadWidget_C_Construct_Params params;
 
@@ -588,7 +616,8 @@ void UPlayerHeadWidget_C::Construct()
 
 void UPlayerHeadWidget_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerHeadWidget.PlayerHeadWidget_C.Tick");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x81f82632);
 
 	UPlayerHeadWidget_C_Tick_Params params;
 	params.MyGeometry = MyGeometry;
@@ -605,12 +634,13 @@ void UPlayerHeadWidget_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 // Function PlayerHeadWidget.PlayerHeadWidget_C.SetCharacterIconPosition_UC
 // (FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
 // Parameters:
-// class Vector2D*                Pos_UC                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector2D*              Pos_UC                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // bool*                          IsHidden                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UPlayerHeadWidget_C::SetCharacterIconPosition_UC(class Vector2D* Pos_UC, bool* IsHidden)
+void UPlayerHeadWidget_C::SetCharacterIconPosition_UC(struct FVector2D* Pos_UC, bool* IsHidden)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerHeadWidget.PlayerHeadWidget_C.SetCharacterIconPosition_UC");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xcf92c8b9);
 
 	UPlayerHeadWidget_C_SetCharacterIconPosition_UC_Params params;
 	params.Pos_UC = Pos_UC;
@@ -631,7 +661,8 @@ void UPlayerHeadWidget_C::SetCharacterIconPosition_UC(class Vector2D* Pos_UC, bo
 
 void UPlayerHeadWidget_C::ExecuteUbergraph_PlayerHeadWidget(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerHeadWidget.PlayerHeadWidget_C.ExecuteUbergraph_PlayerHeadWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xba2f7a98);
 
 	UPlayerHeadWidget_C_ExecuteUbergraph_PlayerHeadWidget_Params params;
 	params.EntryPoint = EntryPoint;

@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,7 +17,8 @@ namespace Classes
 
 void ABuggy_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buggy.Buggy_C.UserConstructionScript");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xf538b588);
 
 	ABuggy_C_UserConstructionScript_Params params;
 
@@ -36,7 +37,8 @@ void ABuggy_C::UserConstructionScript()
 
 void ABuggy_C::ReceiveTick(float* DeltaSeconds)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buggy.Buggy_C.ReceiveTick");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x7be08c75);
 
 	ABuggy_C_ReceiveTick_Params params;
 	params.DeltaSeconds = DeltaSeconds;
@@ -56,7 +58,8 @@ void ABuggy_C::ReceiveTick(float* DeltaSeconds)
 
 void ABuggy_C::ExecuteUbergraph_Buggy(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Buggy.Buggy_C.ExecuteUbergraph_Buggy");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xa7daf637);
 
 	ABuggy_C_ExecuteUbergraph_Buggy_Params params;
 	params.EntryPoint = EntryPoint;

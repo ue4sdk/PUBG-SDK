@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,8 @@ namespace Classes
 
 bool UMotionControllerComponent::IsTracked()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function HeadMountedDisplay.MotionControllerComponent.IsTracked");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xa5973d7c);
 
 	UMotionControllerComponent_IsTracked_Params params;
 
@@ -39,7 +40,8 @@ bool UMotionControllerComponent::IsTracked()
 
 void UVRNotificationsComponent::VRNotificationsDelegate__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("DelegateFunction HeadMountedDisplay.VRNotificationsComponent.VRNotificationsDelegate__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xdb412fe1);
 
 	UVRNotificationsComponent_VRNotificationsDelegate__DelegateSignature_Params params;
 

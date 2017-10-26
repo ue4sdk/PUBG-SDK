@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -21,7 +21,8 @@ namespace Classes
 
 void UUiHelperFunctionsBp_C::STATIC_GetSelfPutAttachment(class UUserWidget* Widget, class UObject* __WorldContext, class UAttachableItem** GamepadadSelectedAttachableItem)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UiHelperFunctionsBp.UiHelperFunctionsBp_C.GetSelfPutAttachment");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xa1feba95);
 
 	UUiHelperFunctionsBp_C_GetSelfPutAttachment_Params params;
 	params.Widget = Widget;
@@ -46,7 +47,8 @@ void UUiHelperFunctionsBp_C::STATIC_GetSelfPutAttachment(class UUserWidget* Widg
 
 void UUiHelperFunctionsBp_C::STATIC_CancelSelfAttachmentPutMode(class UUserWidget* Widget, class UObject* __WorldContext)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UiHelperFunctionsBp.UiHelperFunctionsBp_C.CancelSelfAttachmentPutMode");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x997144a2);
 
 	UUiHelperFunctionsBp_C_CancelSelfAttachmentPutMode_Params params;
 	params.Widget = Widget;
@@ -69,7 +71,8 @@ void UUiHelperFunctionsBp_C::STATIC_CancelSelfAttachmentPutMode(class UUserWidge
 
 void UUiHelperFunctionsBp_C::STATIC_IsSelfAttachmentPutMode(class UUserWidget* Widget, class UObject* __WorldContext, bool* bResult)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UiHelperFunctionsBp.UiHelperFunctionsBp_C.IsSelfAttachmentPutMode");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xdae56000);
 
 	UUiHelperFunctionsBp_C_IsSelfAttachmentPutMode_Params params;
 	params.Widget = Widget;
@@ -95,7 +98,8 @@ void UUiHelperFunctionsBp_C::STATIC_IsSelfAttachmentPutMode(class UUserWidget* W
 
 void UUiHelperFunctionsBp_C::STATIC_GetInventoryWidget(class UUserWidget* Widget, class UObject* __WorldContext, class UInventoryWidget_C** InventoryWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UiHelperFunctionsBp.UiHelperFunctionsBp_C.GetInventoryWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x9d279263);
 
 	UUiHelperFunctionsBp_C_GetInventoryWidget_Params params;
 	params.Widget = Widget;
@@ -120,7 +124,8 @@ void UUiHelperFunctionsBp_C::STATIC_GetInventoryWidget(class UUserWidget* Widget
 
 void UUiHelperFunctionsBp_C::STATIC_InventoryFocusingColor(class UObject* __WorldContext, struct FLinearColor* NewParam)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UiHelperFunctionsBp.UiHelperFunctionsBp_C.InventoryFocusingColor");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc5c1054a);
 
 	UUiHelperFunctionsBp_C_InventoryFocusingColor_Params params;
 	params.__WorldContext = __WorldContext;
@@ -144,7 +149,8 @@ void UUiHelperFunctionsBp_C::STATIC_InventoryFocusingColor(class UObject* __Worl
 
 void UUiHelperFunctionsBp_C::STATIC_IsXBoxOnePlatform(class UObject* __WorldContext, bool* NewParam)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UiHelperFunctionsBp.UiHelperFunctionsBp_C.IsXBoxOnePlatform");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xe895020d);
 
 	UUiHelperFunctionsBp_C_IsXBoxOnePlatform_Params params;
 	params.__WorldContext = __WorldContext;
@@ -165,11 +171,12 @@ void UUiHelperFunctionsBp_C::STATIC_IsXBoxOnePlatform(class UObject* __WorldCont
 // Parameters:
 // class UUserWidget*             Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UObject*                 __WorldContext                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Look                           (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Look                           (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UUiHelperFunctionsBp_C::STATIC_GetCharacterLook(class UUserWidget* Widget, class UObject* __WorldContext, class Vector3D* Look)
+void UUiHelperFunctionsBp_C::STATIC_GetCharacterLook(class UUserWidget* Widget, class UObject* __WorldContext, struct FVector* Look)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UiHelperFunctionsBp.UiHelperFunctionsBp_C.GetCharacterLook");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x446aecf);
 
 	UUiHelperFunctionsBp_C_GetCharacterLook_Params params;
 	params.Widget = Widget;
@@ -191,11 +198,12 @@ void UUiHelperFunctionsBp_C::STATIC_GetCharacterLook(class UUserWidget* Widget, 
 // Parameters:
 // class UUserWidget*             Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 // class UObject*                 __WorldContext                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
-// class Vector3D                 Position                       (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+// struct FVector                 Position                       (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-void UUiHelperFunctionsBp_C::STATIC_GetCharacterPosititon(class UUserWidget* Widget, class UObject* __WorldContext, class Vector3D* Position)
+void UUiHelperFunctionsBp_C::STATIC_GetCharacterPosititon(class UUserWidget* Widget, class UObject* __WorldContext, struct FVector* Position)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UiHelperFunctionsBp.UiHelperFunctionsBp_C.GetCharacterPosititon");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x22e214ef);
 
 	UUiHelperFunctionsBp_C_GetCharacterPosititon_Params params;
 	params.Widget = Widget;
@@ -221,7 +229,8 @@ void UUiHelperFunctionsBp_C::STATIC_GetCharacterPosititon(class UUserWidget* Wid
 
 void UUiHelperFunctionsBp_C::STATIC_GetCharacterAngle(class UUserWidget* Widget, class UObject* __WorldContext, float* Angle)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UiHelperFunctionsBp.UiHelperFunctionsBp_C.GetCharacterAngle");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x676027df);
 
 	UUiHelperFunctionsBp_C_GetCharacterAngle_Params params;
 	params.Widget = Widget;
@@ -247,7 +256,8 @@ void UUiHelperFunctionsBp_C::STATIC_GetCharacterAngle(class UUserWidget* Widget,
 
 void UUiHelperFunctionsBp_C::STATIC_GetBluezoneWarningTimeBp(class UObject* WorldContextObject, class UObject* __WorldContext, float* WarningTime)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UiHelperFunctionsBp.UiHelperFunctionsBp_C.GetBluezoneWarningTimeBp");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xb5500670);
 
 	UUiHelperFunctionsBp_C_GetBluezoneWarningTimeBp_Params params;
 	params.WorldContextObject = WorldContextObject;
@@ -273,7 +283,8 @@ void UUiHelperFunctionsBp_C::STATIC_GetBluezoneWarningTimeBp(class UObject* Worl
 
 void UUiHelperFunctionsBp_C::STATIC_GetBluezoneReleaseTimeBp(class UObject* WorldContextObject, class UObject* __WorldContext, float* ReleaseTime)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UiHelperFunctionsBp.UiHelperFunctionsBp_C.GetBluezoneReleaseTimeBp");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x40e39d23);
 
 	UUiHelperFunctionsBp_C_GetBluezoneReleaseTimeBp_Params params;
 	params.WorldContextObject = WorldContextObject;
@@ -299,7 +310,8 @@ void UUiHelperFunctionsBp_C::STATIC_GetBluezoneReleaseTimeBp(class UObject* Worl
 
 void UUiHelperFunctionsBp_C::STATIC_GetDistanceColor(float Distance, class UObject* __WorldContext, struct FLinearColor* Color)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UiHelperFunctionsBp.UiHelperFunctionsBp_C.GetDistanceColor");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x61468525);
 
 	UUiHelperFunctionsBp_C_GetDistanceColor_Params params;
 	params.Distance = Distance;
@@ -326,7 +338,8 @@ void UUiHelperFunctionsBp_C::STATIC_GetDistanceColor(float Distance, class UObje
 
 void UUiHelperFunctionsBp_C::STATIC_IsLastSpectatorTeam(class UUserWidget* Widget, class ATslCharacter* Character, class UObject* __WorldContext, bool* bIsTeam)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UiHelperFunctionsBp.UiHelperFunctionsBp_C.IsLastSpectatorTeam");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x7efa170d);
 
 	UUiHelperFunctionsBp_C_IsLastSpectatorTeam_Params params;
 	params.Widget = Widget;
@@ -352,7 +365,8 @@ void UUiHelperFunctionsBp_C::STATIC_IsLastSpectatorTeam(class UUserWidget* Widge
 
 void UUiHelperFunctionsBp_C::STATIC_GetTeamColor(class UObject* __WorldContext, struct FLinearColor* Color)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UiHelperFunctionsBp.UiHelperFunctionsBp_C.GetTeamColor");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x1e6f554b);
 
 	UUiHelperFunctionsBp_C_GetTeamColor_Params params;
 	params.__WorldContext = __WorldContext;
@@ -378,7 +392,8 @@ void UUiHelperFunctionsBp_C::STATIC_GetTeamColor(class UObject* __WorldContext, 
 
 void UUiHelperFunctionsBp_C::STATIC_IsSpectatorTeam(class UUserWidget* Widget, class ATslCharacter* Character, class UObject* __WorldContext, bool* bIsTeam)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UiHelperFunctionsBp.UiHelperFunctionsBp_C.IsSpectatorTeam");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x29d016c1);
 
 	UUiHelperFunctionsBp_C_IsSpectatorTeam_Params params;
 	params.Widget = Widget;
@@ -405,7 +420,8 @@ void UUiHelperFunctionsBp_C::STATIC_IsSpectatorTeam(class UUserWidget* Widget, c
 
 void UUiHelperFunctionsBp_C::STATIC_GetStateByTeam(class ATeam* Team, class UObject* __WorldContext, int* State)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UiHelperFunctionsBp.UiHelperFunctionsBp_C.GetStateByTeam");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x412924d4);
 
 	UUiHelperFunctionsBp_C_GetStateByTeam_Params params;
 	params.Team = Team;
@@ -431,7 +447,8 @@ void UUiHelperFunctionsBp_C::STATIC_GetStateByTeam(class ATeam* Team, class UObj
 
 void UUiHelperFunctionsBp_C::STATIC_GetStateByCharacter(class ATslCharacter* Character, class UObject* __WorldContext, int* OutState)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UiHelperFunctionsBp.UiHelperFunctionsBp_C.GetStateByCharacter");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xeba30180);
 
 	UUiHelperFunctionsBp_C_GetStateByCharacter_Params params;
 	params.Character = Character;
@@ -457,7 +474,8 @@ void UUiHelperFunctionsBp_C::STATIC_GetStateByCharacter(class ATslCharacter* Cha
 
 void UUiHelperFunctionsBp_C::STATIC_GetSpectatorColor(bool bISpectator, class UObject* __WorldContext, struct FLinearColor* Color)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UiHelperFunctionsBp.UiHelperFunctionsBp_C.GetSpectatorColor");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x3a9c9655);
 
 	UUiHelperFunctionsBp_C_GetSpectatorColor_Params params;
 	params.bISpectator = bISpectator;
@@ -483,7 +501,8 @@ void UUiHelperFunctionsBp_C::STATIC_GetSpectatorColor(bool bISpectator, class UO
 
 void UUiHelperFunctionsBp_C::STATIC_GetCharacterStateIcon(int State, class UObject* __WorldContext, class UTexture2D** NewParam)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UiHelperFunctionsBp.UiHelperFunctionsBp_C.GetCharacterStateIcon");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x718c886);
 
 	UUiHelperFunctionsBp_C_GetCharacterStateIcon_Params params;
 	params.State = State;
@@ -509,7 +528,8 @@ void UUiHelperFunctionsBp_C::STATIC_GetCharacterStateIcon(int State, class UObje
 
 void UUiHelperFunctionsBp_C::STATIC_GetTslCharacters_Bp(class UObject* WorldContextObject, class UObject* __WorldContext, TArray<class ATslCharacter*>* OutActors)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UiHelperFunctionsBp.UiHelperFunctionsBp_C.GetTslCharacters_Bp");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x3a991ff3);
 
 	UUiHelperFunctionsBp_C_GetTslCharacters_Bp_Params params;
 	params.WorldContextObject = WorldContextObject;
@@ -536,7 +556,8 @@ void UUiHelperFunctionsBp_C::STATIC_GetTslCharacters_Bp(class UObject* WorldCont
 
 void UUiHelperFunctionsBp_C::STATIC_NotifyWidgetShowed(class UUserWidget* Widget, const struct FString& WidgetName, bool bShow, class UObject* __WorldContext)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UiHelperFunctionsBp.UiHelperFunctionsBp_C.NotifyWidgetShowed");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xfb8046f0);
 
 	UUiHelperFunctionsBp_C_NotifyWidgetShowed_Params params;
 	params.Widget = Widget;
@@ -561,7 +582,8 @@ void UUiHelperFunctionsBp_C::STATIC_NotifyWidgetShowed(class UUserWidget* Widget
 
 void UUiHelperFunctionsBp_C::STATIC_GetTeamMarkerColor(int MemberNumber, class UObject* __WorldContext, struct FLinearColor* NewParam)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UiHelperFunctionsBp.UiHelperFunctionsBp_C.GetTeamMarkerColor");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x727f1ea9);
 
 	UUiHelperFunctionsBp_C_GetTeamMarkerColor_Params params;
 	params.MemberNumber = MemberNumber;
@@ -588,7 +610,8 @@ void UUiHelperFunctionsBp_C::STATIC_GetTeamMarkerColor(int MemberNumber, class U
 
 void UUiHelperFunctionsBp_C::STATIC_CreateAndSetMaterial(class UWidget* Widget, class UMaterialInstance* Material, class UObject* __WorldContext, class UMaterialInstanceDynamic** DynamicMaterial)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UiHelperFunctionsBp.UiHelperFunctionsBp_C.CreateAndSetMaterial");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x31192b41);
 
 	UUiHelperFunctionsBp_C_CreateAndSetMaterial_Params params;
 	params.Widget = Widget;
@@ -615,7 +638,8 @@ void UUiHelperFunctionsBp_C::STATIC_CreateAndSetMaterial(class UWidget* Widget, 
 
 void UUiHelperFunctionsBp_C::STATIC_GetDynamicMaterial(class UWidget* Widget, class UObject* __WorldContext, class UMaterialInstanceDynamic** DynamicMaterial)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UiHelperFunctionsBp.UiHelperFunctionsBp_C.GetDynamicMaterial");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x94c4e00f);
 
 	UUiHelperFunctionsBp_C_GetDynamicMaterial_Params params;
 	params.Widget = Widget;
@@ -642,7 +666,8 @@ void UUiHelperFunctionsBp_C::STATIC_GetDynamicMaterial(class UWidget* Widget, cl
 
 TArray<TScriptInterface<class USlotInterface>> UUiHelperFunctionsBp_C::STATIC_SortItemBp(bool bSort, class UObject* __WorldContext, TArray<TScriptInterface<class USlotInterface>>* InItemList)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function UiHelperFunctionsBp.UiHelperFunctionsBp_C.SortItemBp");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x55dddd48);
 
 	UUiHelperFunctionsBp_C_SortItemBp_Params params;
 	params.bSort = bSort;

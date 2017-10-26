@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,8 @@ namespace Classes
 
 void UTslItemDragWidget_C::On_ErrorIcon_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TslItemDragWidget.TslItemDragWidget_C.On_ErrorIcon_Prepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xecd6ec15);
 
 	UTslItemDragWidget_C_On_ErrorIcon_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -39,7 +40,8 @@ void UTslItemDragWidget_C::On_ErrorIcon_Prepass_1(class UWidget* BoundWidget)
 
 void UTslItemDragWidget_C::IsEnable(bool* IsEnable)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TslItemDragWidget.TslItemDragWidget_C.IsEnable");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x7ecd3f82);
 
 	UTslItemDragWidget_C_IsEnable_Params params;
 
@@ -61,7 +63,8 @@ void UTslItemDragWidget_C::IsEnable(bool* IsEnable)
 
 void UTslItemDragWidget_C::UpdateBackgroundImage(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TslItemDragWidget.TslItemDragWidget_C.UpdateBackgroundImage");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x3707086f);
 
 	UTslItemDragWidget_C_UpdateBackgroundImage_Params params;
 	params.BoundWidget = BoundWidget;
@@ -81,7 +84,8 @@ void UTslItemDragWidget_C::UpdateBackgroundImage(class UWidget* BoundWidget)
 
 void UTslItemDragWidget_C::GettslItemDragDropOperation(class UTslItemDragDropOperation_C** AsTsl_Item_Drag_Drop_Operation)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TslItemDragWidget.TslItemDragWidget_C.GettslItemDragDropOperation");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x13efc155);
 
 	UTslItemDragWidget_C_GettslItemDragDropOperation_Params params;
 
@@ -103,7 +107,8 @@ void UTslItemDragWidget_C::GettslItemDragDropOperation(class UTslItemDragDropOpe
 
 void UTslItemDragWidget_C::GetActionName(struct FName* ActionName)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TslItemDragWidget.TslItemDragWidget_C.GetActionName");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x92d48442);
 
 	UTslItemDragWidget_C_GetActionName_Params params;
 
@@ -125,7 +130,8 @@ void UTslItemDragWidget_C::GetActionName(struct FName* ActionName)
 
 void UTslItemDragWidget_C::GetInventory(class AInventory** Inventory)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TslItemDragWidget.TslItemDragWidget_C.GetInventory");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xd7bc103);
 
 	UTslItemDragWidget_C_GetInventory_Params params;
 
@@ -147,7 +153,8 @@ void UTslItemDragWidget_C::GetInventory(class AInventory** Inventory)
 
 void UTslItemDragWidget_C::GetAdditionalMaxStackCount(int* Count)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TslItemDragWidget.TslItemDragWidget_C.GetAdditionalMaxStackCount");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x362e2945);
 
 	UTslItemDragWidget_C_GetAdditionalMaxStackCount_Params params;
 
@@ -169,7 +176,8 @@ void UTslItemDragWidget_C::GetAdditionalMaxStackCount(int* Count)
 
 void UTslItemDragWidget_C::GetShooterPlayerController(class ATslPlayerController** ShooterPlayerController)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TslItemDragWidget.TslItemDragWidget_C.GetShooterPlayerController");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xaaabcae0);
 
 	UTslItemDragWidget_C_GetShooterPlayerController_Params params;
 
@@ -191,7 +199,8 @@ void UTslItemDragWidget_C::GetShooterPlayerController(class ATslPlayerController
 
 void UTslItemDragWidget_C::UpdateStackCount(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TslItemDragWidget.TslItemDragWidget_C.UpdateStackCount");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xae9ccd01);
 
 	UTslItemDragWidget_C_UpdateStackCount_Params params;
 	params.BoundWidget = BoundWidget;
@@ -211,7 +220,8 @@ void UTslItemDragWidget_C::UpdateStackCount(class UWidget* BoundWidget)
 
 void UTslItemDragWidget_C::UpdateStackCountVisibility(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TslItemDragWidget.TslItemDragWidget_C.UpdateStackCountVisibility");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xa563412d);
 
 	UTslItemDragWidget_C_UpdateStackCountVisibility_Params params;
 	params.BoundWidget = BoundWidget;
@@ -231,7 +241,8 @@ void UTslItemDragWidget_C::UpdateStackCountVisibility(class UWidget* BoundWidget
 
 void UTslItemDragWidget_C::UpdateIcon(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TslItemDragWidget.TslItemDragWidget_C.UpdateIcon");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x72410257);
 
 	UTslItemDragWidget_C_UpdateIcon_Params params;
 	params.BoundWidget = BoundWidget;
@@ -249,7 +260,8 @@ void UTslItemDragWidget_C::UpdateIcon(class UWidget* BoundWidget)
 
 void UTslItemDragWidget_C::Construct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TslItemDragWidget.TslItemDragWidget_C.Construct");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc093aa9e);
 
 	UTslItemDragWidget_C_Construct_Params params;
 
@@ -266,7 +278,8 @@ void UTslItemDragWidget_C::Construct()
 
 void UTslItemDragWidget_C::Destruct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TslItemDragWidget.TslItemDragWidget_C.Destruct");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xf2ccffdd);
 
 	UTslItemDragWidget_C_Destruct_Params params;
 
@@ -285,7 +298,8 @@ void UTslItemDragWidget_C::Destruct()
 
 void UTslItemDragWidget_C::ExecuteUbergraph_TslItemDragWidget(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TslItemDragWidget.TslItemDragWidget_C.ExecuteUbergraph_TslItemDragWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xbf4cad9b);
 
 	UTslItemDragWidget_C_ExecuteUbergraph_TslItemDragWidget_Params params;
 	params.EntryPoint = EntryPoint;

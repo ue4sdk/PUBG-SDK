@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,8 @@ namespace Classes
 
 void UOptionButton_C::SetButtonBgColor(const struct FLinearColor& InBackgroundColor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function OptionButton.OptionButton_C.SetButtonBgColor");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xdd554373);
 
 	UOptionButton_C_SetButtonBgColor_Params params;
 	params.InBackgroundColor = InBackgroundColor;
@@ -39,7 +40,8 @@ void UOptionButton_C::SetButtonBgColor(const struct FLinearColor& InBackgroundCo
 
 struct FText UOptionButton_C::GetText_1()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function OptionButton.OptionButton_C.GetText_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xb692dac2);
 
 	UOptionButton_C_GetText_1_Params params;
 
@@ -58,7 +60,8 @@ struct FText UOptionButton_C::GetText_1()
 
 void UOptionButton_C::BndEvt__Button_1_K2Node_ComponentBoundEvent_103_OnButtonClickedEvent__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function OptionButton.OptionButton_C.BndEvt__Button_1_K2Node_ComponentBoundEvent_103_OnButtonClickedEvent__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xabee323);
 
 	UOptionButton_C_BndEvt__Button_1_K2Node_ComponentBoundEvent_103_OnButtonClickedEvent__DelegateSignature_Params params;
 
@@ -77,7 +80,8 @@ void UOptionButton_C::BndEvt__Button_1_K2Node_ComponentBoundEvent_103_OnButtonCl
 
 void UOptionButton_C::ExecuteUbergraph_OptionButton(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function OptionButton.OptionButton_C.ExecuteUbergraph_OptionButton");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x5ef90316);
 
 	UOptionButton_C_ExecuteUbergraph_OptionButton_Params params;
 	params.EntryPoint = EntryPoint;
@@ -95,7 +99,8 @@ void UOptionButton_C::ExecuteUbergraph_OptionButton(int EntryPoint)
 
 void UOptionButton_C::OnClicked__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function OptionButton.OptionButton_C.OnClicked__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x9885de70);
 
 	UOptionButton_C_OnClicked__DelegateSignature_Params params;
 

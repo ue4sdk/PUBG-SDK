@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,8 @@ namespace Classes
 
 void USystemMessageWidget_C::AddMessage(class UMessageWidget_C* Message)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SystemMessageWidget.SystemMessageWidget_C.AddMessage");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xd62ac39d);
 
 	USystemMessageWidget_C_AddMessage_Params params;
 	params.Message = Message;
@@ -40,7 +41,8 @@ void USystemMessageWidget_C::AddMessage(class UMessageWidget_C* Message)
 
 void USystemMessageWidget_C::DisplaySystemMessage(TEnumAsByte<ESystemMessageType> MessageType, const struct FText& Message)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SystemMessageWidget.SystemMessageWidget_C.DisplaySystemMessage");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xdc11bb1d);
 
 	USystemMessageWidget_C_DisplaySystemMessage_Params params;
 	params.MessageType = MessageType;

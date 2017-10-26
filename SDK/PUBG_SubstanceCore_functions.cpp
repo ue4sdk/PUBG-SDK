@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -20,7 +20,8 @@ namespace Classes
 
 void USubstanceGraphInstance::SetInputInt(const struct FString& Identifier, TArray<int> Value)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SubstanceCore.SubstanceGraphInstance.SetInputInt");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x6b3977c0);
 
 	USubstanceGraphInstance_SetInputInt_Params params;
 	params.Identifier = Identifier;
@@ -44,7 +45,8 @@ void USubstanceGraphInstance::SetInputInt(const struct FString& Identifier, TArr
 
 bool USubstanceGraphInstance::SetInputImg(const struct FString& InputName, class UObject* Value)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SubstanceCore.SubstanceGraphInstance.SetInputImg");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xacda7e1a);
 
 	USubstanceGraphInstance_SetInputImg_Params params;
 	params.InputName = InputName;
@@ -69,7 +71,8 @@ bool USubstanceGraphInstance::SetInputImg(const struct FString& InputName, class
 
 void USubstanceGraphInstance::SetInputFloat(const struct FString& Identifier, TArray<float> InputValues)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SubstanceCore.SubstanceGraphInstance.SetInputFloat");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x745718a1);
 
 	USubstanceGraphInstance_SetInputFloat_Params params;
 	params.Identifier = Identifier;
@@ -92,7 +95,8 @@ void USubstanceGraphInstance::SetInputFloat(const struct FString& Identifier, TA
 
 struct FSubstanceIntInputDesc USubstanceGraphInstance::GetIntInputDesc(const struct FString& Identifier)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SubstanceCore.SubstanceGraphInstance.GetIntInputDesc");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xf320bd69);
 
 	USubstanceGraphInstance_GetIntInputDesc_Params params;
 	params.Identifier = Identifier;
@@ -115,7 +119,8 @@ struct FSubstanceIntInputDesc USubstanceGraphInstance::GetIntInputDesc(const str
 
 struct FSubstanceInstanceDesc USubstanceGraphInstance::GetInstanceDesc()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SubstanceCore.SubstanceGraphInstance.GetInstanceDesc");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x3382dc59);
 
 	USubstanceGraphInstance_GetInstanceDesc_Params params;
 
@@ -138,7 +143,8 @@ struct FSubstanceInstanceDesc USubstanceGraphInstance::GetInstanceDesc()
 
 TEnumAsByte<ESubstanceInputType> USubstanceGraphInstance::GetInputType(const struct FString& InputName)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SubstanceCore.SubstanceGraphInstance.GetInputType");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xed015149);
 
 	USubstanceGraphInstance_GetInputType_Params params;
 	params.InputName = InputName;
@@ -161,7 +167,8 @@ TEnumAsByte<ESubstanceInputType> USubstanceGraphInstance::GetInputType(const str
 
 TArray<struct FString> USubstanceGraphInstance::GetInputNames()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SubstanceCore.SubstanceGraphInstance.GetInputNames");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x5c0048db);
 
 	USubstanceGraphInstance_GetInputNames_Params params;
 
@@ -184,7 +191,8 @@ TArray<struct FString> USubstanceGraphInstance::GetInputNames()
 
 TArray<int> USubstanceGraphInstance::GetInputInt(const struct FString& Identifier)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SubstanceCore.SubstanceGraphInstance.GetInputInt");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x3d5dd4cc);
 
 	USubstanceGraphInstance_GetInputInt_Params params;
 	params.Identifier = Identifier;
@@ -208,7 +216,8 @@ TArray<int> USubstanceGraphInstance::GetInputInt(const struct FString& Identifie
 
 TArray<float> USubstanceGraphInstance::GetInputFloat(const struct FString& Identifier)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SubstanceCore.SubstanceGraphInstance.GetInputFloat");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x6b4aa5ad);
 
 	USubstanceGraphInstance_GetInputFloat_Params params;
 	params.Identifier = Identifier;
@@ -232,7 +241,8 @@ TArray<float> USubstanceGraphInstance::GetInputFloat(const struct FString& Ident
 
 struct FSubstanceFloatInputDesc USubstanceGraphInstance::GetFloatInputDesc(const struct FString& Identifier)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SubstanceCore.SubstanceGraphInstance.GetFloatInputDesc");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x78cc3652);
 
 	USubstanceGraphInstance_GetFloatInputDesc_Params params;
 	params.Identifier = Identifier;
@@ -255,7 +265,8 @@ struct FSubstanceFloatInputDesc USubstanceGraphInstance::GetFloatInputDesc(const
 
 void USubstanceUtility::STATIC_SyncRendering(class USubstanceGraphInstance* InstancesToRender)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SubstanceCore.SubstanceUtility.SyncRendering");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xa80ab3e5);
 
 	USubstanceUtility_SyncRendering_Params params;
 	params.InstancesToRender = InstancesToRender;
@@ -278,7 +289,8 @@ void USubstanceUtility::STATIC_SyncRendering(class USubstanceGraphInstance* Inst
 
 void USubstanceUtility::STATIC_SetGraphInstanceOutputSizeInt(class USubstanceGraphInstance* GraphInstance, int Width, int Height)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SubstanceCore.SubstanceUtility.SetGraphInstanceOutputSizeInt");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xdb327cda);
 
 	USubstanceUtility_SetGraphInstanceOutputSizeInt_Params params;
 	params.GraphInstance = GraphInstance;
@@ -303,7 +315,8 @@ void USubstanceUtility::STATIC_SetGraphInstanceOutputSizeInt(class USubstanceGra
 
 void USubstanceUtility::STATIC_SetGraphInstanceOutputSize(class USubstanceGraphInstance* GraphInstance, TEnumAsByte<ESubstanceTextureSize> Width, TEnumAsByte<ESubstanceTextureSize> Height)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SubstanceCore.SubstanceUtility.SetGraphInstanceOutputSize");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x809f371f);
 
 	USubstanceUtility_SetGraphInstanceOutputSize_Params params;
 	params.GraphInstance = GraphInstance;
@@ -326,7 +339,8 @@ void USubstanceUtility::STATIC_SetGraphInstanceOutputSize(class USubstanceGraphI
 
 void USubstanceUtility::STATIC_ResetInputParameters(class USubstanceGraphInstance* GraphInstance)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SubstanceCore.SubstanceUtility.ResetInputParameters");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xd732dcd1);
 
 	USubstanceUtility_ResetInputParameters_Params params;
 	params.GraphInstance = GraphInstance;
@@ -348,7 +362,8 @@ void USubstanceUtility::STATIC_ResetInputParameters(class USubstanceGraphInstanc
 
 TArray<class USubstanceTexture2D*> USubstanceUtility::STATIC_GetSubstanceTextures(class USubstanceGraphInstance* GraphInstance)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SubstanceCore.SubstanceUtility.GetSubstanceTextures");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x4a17bfa4);
 
 	USubstanceUtility_GetSubstanceTextures_Params params;
 	params.GraphInstance = GraphInstance;
@@ -372,7 +387,8 @@ TArray<class USubstanceTexture2D*> USubstanceUtility::STATIC_GetSubstanceTexture
 
 TArray<class USubstanceGraphInstance*> USubstanceUtility::STATIC_GetSubstances(class UMaterialInterface* Material)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SubstanceCore.SubstanceUtility.GetSubstances");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x2b4bd827);
 
 	USubstanceUtility_GetSubstances_Params params;
 	params.Material = Material;
@@ -395,7 +411,8 @@ TArray<class USubstanceGraphInstance*> USubstanceUtility::STATIC_GetSubstances(c
 
 float USubstanceUtility::STATIC_GetSubstanceLoadingProgress()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SubstanceCore.SubstanceUtility.GetSubstanceLoadingProgress");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xba0ae5a1);
 
 	USubstanceUtility_GetSubstanceLoadingProgress_Params params;
 
@@ -418,7 +435,8 @@ float USubstanceUtility::STATIC_GetSubstanceLoadingProgress()
 
 struct FString USubstanceUtility::STATIC_GetGraphName(class USubstanceGraphInstance* GraphInstance)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SubstanceCore.SubstanceUtility.GetGraphName");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x839011d7);
 
 	USubstanceUtility_GetGraphName_Params params;
 	params.GraphInstance = GraphInstance;
@@ -442,7 +460,8 @@ struct FString USubstanceUtility::STATIC_GetGraphName(class USubstanceGraphInsta
 
 struct FString USubstanceUtility::STATIC_GetFactoryName(class USubstanceGraphInstance* GraphInstance)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SubstanceCore.SubstanceUtility.GetFactoryName");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x17825fe1);
 
 	USubstanceUtility_GetFactoryName_Params params;
 	params.GraphInstance = GraphInstance;
@@ -467,7 +486,8 @@ struct FString USubstanceUtility::STATIC_GetFactoryName(class USubstanceGraphIns
 
 class USubstanceGraphInstance* USubstanceUtility::STATIC_DuplicateGraphInstance(class UObject* WorldContextObject, class USubstanceGraphInstance* GraphInstance)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SubstanceCore.SubstanceUtility.DuplicateGraphInstance");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x71706b92);
 
 	USubstanceUtility_DuplicateGraphInstance_Params params;
 	params.WorldContextObject = WorldContextObject;
@@ -493,7 +513,8 @@ class USubstanceGraphInstance* USubstanceUtility::STATIC_DuplicateGraphInstance(
 
 void USubstanceUtility::STATIC_CreateInstanceOutputs(class UObject* WorldContextObject, class USubstanceGraphInstance* GraphInstance, TArray<int> OutputIndices)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SubstanceCore.SubstanceUtility.CreateInstanceOutputs");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc1ac1d2b);
 
 	USubstanceUtility_CreateInstanceOutputs_Params params;
 	params.WorldContextObject = WorldContextObject;
@@ -520,7 +541,8 @@ void USubstanceUtility::STATIC_CreateInstanceOutputs(class UObject* WorldContext
 
 class USubstanceGraphInstance* USubstanceUtility::STATIC_CreateGraphInstance(class UObject* WorldContextObject, class USubstanceInstanceFactory* Factory, int GraphDescIndex, const struct FString& InstanceName)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SubstanceCore.SubstanceUtility.CreateGraphInstance");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x2cd64f13);
 
 	USubstanceUtility_CreateGraphInstance_Params params;
 	params.WorldContextObject = WorldContextObject;
@@ -547,7 +569,8 @@ class USubstanceGraphInstance* USubstanceUtility::STATIC_CreateGraphInstance(cla
 
 void USubstanceUtility::STATIC_CopyInputParameters(class USubstanceGraphInstance* SourceGraphInstance, class USubstanceGraphInstance* DestGraphInstance)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SubstanceCore.SubstanceUtility.CopyInputParameters");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc89b38b);
 
 	USubstanceUtility_CopyInputParameters_Params params;
 	params.SourceGraphInstance = SourceGraphInstance;
@@ -569,7 +592,8 @@ void USubstanceUtility::STATIC_CopyInputParameters(class USubstanceGraphInstance
 
 void USubstanceUtility::STATIC_AsyncRendering(class USubstanceGraphInstance* InstancesToRender)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SubstanceCore.SubstanceUtility.AsyncRendering");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xf81c0dda);
 
 	USubstanceUtility_AsyncRendering_Params params;
 	params.InstancesToRender = InstancesToRender;

@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,7 +17,8 @@ namespace Classes
 
 void UGameLiveStreamingFunctionLibrary::STATIC_StopWebCam()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameLiveStreaming.GameLiveStreamingFunctionLibrary.StopWebCam");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x73d3498b);
 
 	UGameLiveStreamingFunctionLibrary_StopWebCam_Params params;
 
@@ -35,7 +36,8 @@ void UGameLiveStreamingFunctionLibrary::STATIC_StopWebCam()
 
 void UGameLiveStreamingFunctionLibrary::STATIC_StopBroadcastingGame()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameLiveStreaming.GameLiveStreamingFunctionLibrary.StopBroadcastingGame");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x63b43261);
 
 	UGameLiveStreamingFunctionLibrary_StopBroadcastingGame_Params params;
 
@@ -58,7 +60,8 @@ void UGameLiveStreamingFunctionLibrary::STATIC_StopBroadcastingGame()
 
 void UGameLiveStreamingFunctionLibrary::STATIC_StartWebCam(int DesiredWebCamWidth, int DesiredWebCamHeight, bool bMirrorWebCamImage, bool bDrawSimpleWebCamVideo)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameLiveStreaming.GameLiveStreamingFunctionLibrary.StartWebCam");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc2a4aee7);
 
 	UGameLiveStreamingFunctionLibrary_StartWebCam_Params params;
 	params.DesiredWebCamWidth = DesiredWebCamWidth;
@@ -93,7 +96,8 @@ void UGameLiveStreamingFunctionLibrary::STATIC_StartWebCam(int DesiredWebCamWidt
 
 void UGameLiveStreamingFunctionLibrary::STATIC_StartBroadcastingGame(const struct FString& LoginUserName, const struct FString& LoginPassword, int FrameRate, float ScreenScaling, bool bStartWebCam, int DesiredWebCamWidth, int DesiredWebCamHeight, bool bMirrorWebCamImage, bool bDrawSimpleWebCamVideo, bool bCaptureAudioFromComputer, bool bCaptureAudioFromMicrophone, class UTexture2D* CoverUpImage)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameLiveStreaming.GameLiveStreamingFunctionLibrary.StartBroadcastingGame");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x85dd4145);
 
 	UGameLiveStreamingFunctionLibrary_StartBroadcastingGame_Params params;
 	params.LoginUserName = LoginUserName;
@@ -125,7 +129,8 @@ void UGameLiveStreamingFunctionLibrary::STATIC_StartBroadcastingGame(const struc
 
 bool UGameLiveStreamingFunctionLibrary::STATIC_IsWebCamEnabled()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameLiveStreaming.GameLiveStreamingFunctionLibrary.IsWebCamEnabled");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xf5250cc6);
 
 	UGameLiveStreamingFunctionLibrary_IsWebCamEnabled_Params params;
 
@@ -147,7 +152,8 @@ bool UGameLiveStreamingFunctionLibrary::STATIC_IsWebCamEnabled()
 
 bool UGameLiveStreamingFunctionLibrary::STATIC_IsBroadcastingGame()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameLiveStreaming.GameLiveStreamingFunctionLibrary.IsBroadcastingGame");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xb84d6a61);
 
 	UGameLiveStreamingFunctionLibrary_IsBroadcastingGame_Params params;
 
@@ -170,7 +176,8 @@ bool UGameLiveStreamingFunctionLibrary::STATIC_IsBroadcastingGame()
 
 class UQueryLiveStreamsCallbackProxy* UQueryLiveStreamsCallbackProxy::STATIC_QueryLiveStreams(const struct FString& GameName)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function GameLiveStreaming.QueryLiveStreamsCallbackProxy.QueryLiveStreams");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x301cca4);
 
 	UQueryLiveStreamsCallbackProxy_QueryLiveStreams_Params params;
 	params.GameName = GameName;

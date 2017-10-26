@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,8 @@ namespace Classes
 
 bool UWeaponEquipmentWidget_C::IsFocusable()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.IsFocusable");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x48eac875);
 
 	UWeaponEquipmentWidget_C_IsFocusable_Params params;
 
@@ -40,7 +41,8 @@ bool UWeaponEquipmentWidget_C::IsFocusable()
 
 bool UWeaponEquipmentWidget_C::Down()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.Down");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x341747d7);
 
 	UWeaponEquipmentWidget_C_Down_Params params;
 
@@ -61,7 +63,8 @@ bool UWeaponEquipmentWidget_C::Down()
 
 class UUserWidget* UWeaponEquipmentWidget_C::GetDownWidget()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.GetDownWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x9607a9e1);
 
 	UWeaponEquipmentWidget_C_GetDownWidget_Params params;
 
@@ -82,7 +85,8 @@ class UUserWidget* UWeaponEquipmentWidget_C::GetDownWidget()
 
 class UUserWidget* UWeaponEquipmentWidget_C::GetFocusingChildWidget()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.GetFocusingChildWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x85575145);
 
 	UWeaponEquipmentWidget_C_GetFocusingChildWidget_Params params;
 
@@ -103,7 +107,8 @@ class UUserWidget* UWeaponEquipmentWidget_C::GetFocusingChildWidget()
 
 class UUserWidget* UWeaponEquipmentWidget_C::GetLeftWidget()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.GetLeftWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xaf6ffb7e);
 
 	UWeaponEquipmentWidget_C_GetLeftWidget_Params params;
 
@@ -124,7 +129,8 @@ class UUserWidget* UWeaponEquipmentWidget_C::GetLeftWidget()
 
 class UUserWidget* UWeaponEquipmentWidget_C::GetRightWidget()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.GetRightWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x5bf2b701);
 
 	UWeaponEquipmentWidget_C_GetRightWidget_Params params;
 
@@ -145,7 +151,8 @@ class UUserWidget* UWeaponEquipmentWidget_C::GetRightWidget()
 
 class UUserWidget* UWeaponEquipmentWidget_C::GetUpWidget()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.GetUpWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x1ef26872);
 
 	UWeaponEquipmentWidget_C_GetUpWidget_Params params;
 
@@ -166,7 +173,8 @@ class UUserWidget* UWeaponEquipmentWidget_C::GetUpWidget()
 
 bool UWeaponEquipmentWidget_C::InputA()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.InputA");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x7f3c18f2);
 
 	UWeaponEquipmentWidget_C_InputA_Params params;
 
@@ -187,7 +195,8 @@ bool UWeaponEquipmentWidget_C::InputA()
 
 bool UWeaponEquipmentWidget_C::InputB()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.InputB");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x59399e89);
 
 	UWeaponEquipmentWidget_C_InputB_Params params;
 
@@ -208,7 +217,8 @@ bool UWeaponEquipmentWidget_C::InputB()
 
 bool UWeaponEquipmentWidget_C::InputLB()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.InputLB");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x3ab8ba57);
 
 	UWeaponEquipmentWidget_C_InputLB_Params params;
 
@@ -229,7 +239,8 @@ bool UWeaponEquipmentWidget_C::InputLB()
 
 bool UWeaponEquipmentWidget_C::InputLT()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.InputLT");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xf6823551);
 
 	UWeaponEquipmentWidget_C_InputLT_Params params;
 
@@ -250,7 +261,8 @@ bool UWeaponEquipmentWidget_C::InputLT()
 
 bool UWeaponEquipmentWidget_C::InputRB()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.InputRB");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x21b96bc9);
 
 	UWeaponEquipmentWidget_C_InputRB_Params params;
 
@@ -271,7 +283,8 @@ bool UWeaponEquipmentWidget_C::InputRB()
 
 bool UWeaponEquipmentWidget_C::InputRT()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.InputRT");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x65eff0cf);
 
 	UWeaponEquipmentWidget_C_InputRT_Params params;
 
@@ -292,7 +305,8 @@ bool UWeaponEquipmentWidget_C::InputRT()
 
 bool UWeaponEquipmentWidget_C::InputX()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.InputX");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x357a0d33);
 
 	UWeaponEquipmentWidget_C_InputX_Params params;
 
@@ -313,7 +327,8 @@ bool UWeaponEquipmentWidget_C::InputX()
 
 bool UWeaponEquipmentWidget_C::InputY()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.InputY");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xf7792ca);
 
 	UWeaponEquipmentWidget_C_InputY_Params params;
 
@@ -334,7 +349,8 @@ bool UWeaponEquipmentWidget_C::InputY()
 
 bool UWeaponEquipmentWidget_C::IsFocus()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.IsFocus");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xe1ba3b51);
 
 	UWeaponEquipmentWidget_C_IsFocus_Params params;
 
@@ -355,7 +371,8 @@ bool UWeaponEquipmentWidget_C::IsFocus()
 
 bool UWeaponEquipmentWidget_C::Left()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.Left");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x3ec3f2c8);
 
 	UWeaponEquipmentWidget_C_Left_Params params;
 
@@ -376,7 +393,8 @@ bool UWeaponEquipmentWidget_C::Left()
 
 bool UWeaponEquipmentWidget_C::Right()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.Right");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x9b3a7717);
 
 	UWeaponEquipmentWidget_C_Right_Params params;
 
@@ -398,7 +416,8 @@ bool UWeaponEquipmentWidget_C::Right()
 
 bool UWeaponEquipmentWidget_C::SetFocus(bool NewFocus)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.SetFocus");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x72c04d7);
 
 	UWeaponEquipmentWidget_C_SetFocus_Params params;
 	params.NewFocus = NewFocus;
@@ -420,7 +439,8 @@ bool UWeaponEquipmentWidget_C::SetFocus(bool NewFocus)
 
 bool UWeaponEquipmentWidget_C::Up()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.Up");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xeb829908);
 
 	UWeaponEquipmentWidget_C_Up_Params params;
 
@@ -439,7 +459,8 @@ bool UWeaponEquipmentWidget_C::Up()
 
 void UWeaponEquipmentWidget_C::SelfUpAttachmentIndexUp()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.SelfUpAttachmentIndexUp");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x73c43548);
 
 	UWeaponEquipmentWidget_C_SelfUpAttachmentIndexUp_Params params;
 
@@ -456,7 +477,8 @@ void UWeaponEquipmentWidget_C::SelfUpAttachmentIndexUp()
 
 void UWeaponEquipmentWidget_C::PutAttachment()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.PutAttachment");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x5e628ae9);
 
 	UWeaponEquipmentWidget_C_PutAttachment_Params params;
 
@@ -473,7 +495,8 @@ void UWeaponEquipmentWidget_C::PutAttachment()
 
 void UWeaponEquipmentWidget_C::StopSelftattachmentPut()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.StopSelftattachmentPut");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x74f438e7);
 
 	UWeaponEquipmentWidget_C_StopSelftattachmentPut_Params params;
 
@@ -492,7 +515,8 @@ void UWeaponEquipmentWidget_C::StopSelftattachmentPut()
 
 void UWeaponEquipmentWidget_C::StartSelfAttachmentPut(bool* bResult)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.StartSelfAttachmentPut");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xa521597f);
 
 	UWeaponEquipmentWidget_C_StartSelfAttachmentPut_Params params;
 
@@ -512,7 +536,8 @@ void UWeaponEquipmentWidget_C::StartSelfAttachmentPut(bool* bResult)
 
 void UWeaponEquipmentWidget_C::OnChildSlotRefreshFocus()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.OnChildSlotRefreshFocus");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x8e938cbd);
 
 	UWeaponEquipmentWidget_C_OnChildSlotRefreshFocus_Params params;
 
@@ -531,7 +556,8 @@ void UWeaponEquipmentWidget_C::OnChildSlotRefreshFocus()
 
 void UWeaponEquipmentWidget_C::FindFirtFocusableWidgetIndex(int* Index)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.FindFirtFocusableWidgetIndex");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x52cb923b);
 
 	UWeaponEquipmentWidget_C_FindFirtFocusableWidgetIndex_Params params;
 
@@ -553,7 +579,8 @@ void UWeaponEquipmentWidget_C::FindFirtFocusableWidgetIndex(int* Index)
 
 void UWeaponEquipmentWidget_C::GetFocusableDownChildIndex(int* Index)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.GetFocusableDownChildIndex");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x47491d5);
 
 	UWeaponEquipmentWidget_C_GetFocusableDownChildIndex_Params params;
 
@@ -575,7 +602,8 @@ void UWeaponEquipmentWidget_C::GetFocusableDownChildIndex(int* Index)
 
 void UWeaponEquipmentWidget_C::GetFocusableUpChildIndex(int* Index)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.GetFocusableUpChildIndex");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x9f6ce7b2);
 
 	UWeaponEquipmentWidget_C_GetFocusableUpChildIndex_Params params;
 
@@ -597,7 +625,8 @@ void UWeaponEquipmentWidget_C::GetFocusableUpChildIndex(int* Index)
 
 void UWeaponEquipmentWidget_C::GetFocusableRightChildIndex(int* Index)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.GetFocusableRightChildIndex");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x7c944bcd);
 
 	UWeaponEquipmentWidget_C_GetFocusableRightChildIndex_Params params;
 
@@ -619,7 +648,8 @@ void UWeaponEquipmentWidget_C::GetFocusableRightChildIndex(int* Index)
 
 void UWeaponEquipmentWidget_C::GetFocusableLeftChildIdnex(int* Index)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.GetFocusableLeftChildIdnex");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xb26d9a12);
 
 	UWeaponEquipmentWidget_C_GetFocusableLeftChildIdnex_Params params;
 
@@ -641,7 +671,8 @@ void UWeaponEquipmentWidget_C::GetFocusableLeftChildIdnex(int* Index)
 
 void UWeaponEquipmentWidget_C::GetEquipment(class AEquipment** Equipment)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.GetEquipment");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xcf952e73);
 
 	UWeaponEquipmentWidget_C_GetEquipment_Params params;
 
@@ -663,7 +694,8 @@ void UWeaponEquipmentWidget_C::GetEquipment(class AEquipment** Equipment)
 
 void UWeaponEquipmentWidget_C::MainPrepass(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.MainPrepass");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xb954e274);
 
 	UWeaponEquipmentWidget_C_MainPrepass_Params params;
 	params.BoundWidget = BoundWidget;
@@ -681,7 +713,8 @@ void UWeaponEquipmentWidget_C::MainPrepass(class UWidget* BoundWidget)
 
 void UWeaponEquipmentWidget_C::InitializeWeaponEquipment()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.InitializeWeaponEquipment");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xd143e37);
 
 	UWeaponEquipmentWidget_C_InitializeWeaponEquipment_Params params;
 
@@ -703,7 +736,8 @@ void UWeaponEquipmentWidget_C::InitializeWeaponEquipment()
 
 bool UWeaponEquipmentWidget_C::OnDrop(struct FGeometry* MyGeometry, struct FPointerEvent* PointerEvent, class UDragDropOperation** Operation)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.OnDrop");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x2751f19f);
 
 	UWeaponEquipmentWidget_C_OnDrop_Params params;
 	params.MyGeometry = MyGeometry;
@@ -728,7 +762,8 @@ bool UWeaponEquipmentWidget_C::OnDrop(struct FGeometry* MyGeometry, struct FPoin
 
 void UWeaponEquipmentWidget_C::GetWeaponItemByTabIndex(int Index, class UWeaponItem** WeaponItem)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.GetWeaponItemByTabIndex");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x90118848);
 
 	UWeaponEquipmentWidget_C_GetWeaponItemByTabIndex_Params params;
 	params.Index = Index;
@@ -749,7 +784,8 @@ void UWeaponEquipmentWidget_C::GetWeaponItemByTabIndex(int Index, class UWeaponI
 
 void UWeaponEquipmentWidget_C::Construct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.Construct");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xb81583ee);
 
 	UWeaponEquipmentWidget_C_Construct_Params params;
 
@@ -770,7 +806,8 @@ void UWeaponEquipmentWidget_C::Construct()
 
 void UWeaponEquipmentWidget_C::OnDragEnter(struct FGeometry* MyGeometry, struct FPointerEvent* PointerEvent, class UDragDropOperation** Operation)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.OnDragEnter");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x7d1ed284);
 
 	UWeaponEquipmentWidget_C_OnDragEnter_Params params;
 	params.MyGeometry = MyGeometry;
@@ -793,7 +830,8 @@ void UWeaponEquipmentWidget_C::OnDragEnter(struct FGeometry* MyGeometry, struct 
 
 void UWeaponEquipmentWidget_C::OnDragLeave(struct FPointerEvent* PointerEvent, class UDragDropOperation** Operation)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.OnDragLeave");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xf1d9e0a3);
 
 	UWeaponEquipmentWidget_C_OnDragLeave_Params params;
 	params.PointerEvent = PointerEvent;
@@ -815,7 +853,8 @@ void UWeaponEquipmentWidget_C::OnDragLeave(struct FPointerEvent* PointerEvent, c
 
 void UWeaponEquipmentWidget_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.Tick");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x18ef3034);
 
 	UWeaponEquipmentWidget_C_Tick_Params params;
 	params.MyGeometry = MyGeometry;
@@ -836,7 +875,8 @@ void UWeaponEquipmentWidget_C::Tick(struct FGeometry* MyGeometry, float* InDelta
 
 void UWeaponEquipmentWidget_C::SetInventoryWidget(class UInventoryWidget_C** Inventory)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.SetInventoryWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xefa166ff);
 
 	UWeaponEquipmentWidget_C_SetInventoryWidget_Params params;
 	params.Inventory = Inventory;
@@ -854,7 +894,8 @@ void UWeaponEquipmentWidget_C::SetInventoryWidget(class UInventoryWidget_C** Inv
 
 void UWeaponEquipmentWidget_C::BndEvt__Weapon_01_K2Node_ComponentBoundEvent_19_RefreshFocus__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.BndEvt__Weapon_01_K2Node_ComponentBoundEvent_19_RefreshFocus__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x7a8b498a);
 
 	UWeaponEquipmentWidget_C_BndEvt__Weapon_01_K2Node_ComponentBoundEvent_19_RefreshFocus__DelegateSignature_Params params;
 
@@ -871,7 +912,8 @@ void UWeaponEquipmentWidget_C::BndEvt__Weapon_01_K2Node_ComponentBoundEvent_19_R
 
 void UWeaponEquipmentWidget_C::BndEvt__Weapon_02_K2Node_ComponentBoundEvent_75_RefreshFocus__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.BndEvt__Weapon_02_K2Node_ComponentBoundEvent_75_RefreshFocus__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xf6b359af);
 
 	UWeaponEquipmentWidget_C_BndEvt__Weapon_02_K2Node_ComponentBoundEvent_75_RefreshFocus__DelegateSignature_Params params;
 
@@ -888,7 +930,8 @@ void UWeaponEquipmentWidget_C::BndEvt__Weapon_02_K2Node_ComponentBoundEvent_75_R
 
 void UWeaponEquipmentWidget_C::BndEvt__Weapon_03_K2Node_ComponentBoundEvent_90_RefreshFocus__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.BndEvt__Weapon_03_K2Node_ComponentBoundEvent_90_RefreshFocus__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x9ad31071);
 
 	UWeaponEquipmentWidget_C_BndEvt__Weapon_03_K2Node_ComponentBoundEvent_90_RefreshFocus__DelegateSignature_Params params;
 
@@ -905,7 +948,8 @@ void UWeaponEquipmentWidget_C::BndEvt__Weapon_03_K2Node_ComponentBoundEvent_90_R
 
 void UWeaponEquipmentWidget_C::BndEvt__Weapon_04_K2Node_ComponentBoundEvent_106_RefreshFocus__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.BndEvt__Weapon_04_K2Node_ComponentBoundEvent_106_RefreshFocus__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x594a22d2);
 
 	UWeaponEquipmentWidget_C_BndEvt__Weapon_04_K2Node_ComponentBoundEvent_106_RefreshFocus__DelegateSignature_Params params;
 
@@ -922,7 +966,8 @@ void UWeaponEquipmentWidget_C::BndEvt__Weapon_04_K2Node_ComponentBoundEvent_106_
 
 void UWeaponEquipmentWidget_C::BndEvt__Weapon_05_K2Node_ComponentBoundEvent_123_RefreshFocus__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.BndEvt__Weapon_05_K2Node_ComponentBoundEvent_123_RefreshFocus__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x41c606fa);
 
 	UWeaponEquipmentWidget_C_BndEvt__Weapon_05_K2Node_ComponentBoundEvent_123_RefreshFocus__DelegateSignature_Params params;
 
@@ -939,7 +984,8 @@ void UWeaponEquipmentWidget_C::BndEvt__Weapon_05_K2Node_ComponentBoundEvent_123_
 
 void UWeaponEquipmentWidget_C::OnWidgetMoveUp()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.OnWidgetMoveUp");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x7de0e8bc);
 
 	UWeaponEquipmentWidget_C_OnWidgetMoveUp_Params params;
 
@@ -956,7 +1002,8 @@ void UWeaponEquipmentWidget_C::OnWidgetMoveUp()
 
 void UWeaponEquipmentWidget_C::OnWidgetMoveDown()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.OnWidgetMoveDown");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xd03e8eb3);
 
 	UWeaponEquipmentWidget_C_OnWidgetMoveDown_Params params;
 
@@ -975,7 +1022,8 @@ void UWeaponEquipmentWidget_C::OnWidgetMoveDown()
 
 void UWeaponEquipmentWidget_C::ExecuteUbergraph_WeaponEquipmentWidget(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WeaponEquipmentWidget.WeaponEquipmentWidget_C.ExecuteUbergraph_WeaponEquipmentWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xa4ef5079);
 
 	UWeaponEquipmentWidget_C_ExecuteUbergraph_WeaponEquipmentWidget_Params params;
 	params.EntryPoint = EntryPoint;

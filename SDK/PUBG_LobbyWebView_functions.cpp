@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -20,7 +20,8 @@ namespace Classes
 
 void ULobbyWebView_C::WebViewBroadcast(const struct FString& EventName, const struct FString& Parameter)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LobbyWebView.LobbyWebView_C.WebViewBroadcast");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xcadb8753);
 
 	ULobbyWebView_C_WebViewBroadcast_Params params;
 	params.EventName = EventName;
@@ -41,7 +42,8 @@ void ULobbyWebView_C::WebViewBroadcast(const struct FString& EventName, const st
 
 void ULobbyWebView_C::WebViewUnload(int ViewIndex)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LobbyWebView.LobbyWebView_C.WebViewUnload");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xa3889d13);
 
 	ULobbyWebView_C_WebViewUnload_Params params;
 	params.ViewIndex = ViewIndex;
@@ -62,7 +64,8 @@ void ULobbyWebView_C::WebViewUnload(int ViewIndex)
 
 void ULobbyWebView_C::WebViewShow(int VeiwIndex, bool Visible)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LobbyWebView.LobbyWebView_C.WebViewShow");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xd4df3aa9);
 
 	ULobbyWebView_C_WebViewShow_Params params;
 	params.VeiwIndex = VeiwIndex;
@@ -83,7 +86,8 @@ void ULobbyWebView_C::WebViewShow(int VeiwIndex, bool Visible)
 
 void ULobbyWebView_C::HandleEventFromWeb(class UCoherentUIGTJSPayload* payload)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LobbyWebView.LobbyWebView_C.HandleEventFromWeb");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x778fbc71);
 
 	ULobbyWebView_C_HandleEventFromWeb_Params params;
 	params.payload = payload;
@@ -103,7 +107,8 @@ void ULobbyWebView_C::HandleEventFromWeb(class UCoherentUIGTJSPayload* payload)
 
 void ULobbyWebView_C::WebViewInputFocus(int ViewIndex)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LobbyWebView.LobbyWebView_C.WebViewInputFocus");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xda193df2);
 
 	ULobbyWebView_C_WebViewInputFocus_Params params;
 	params.ViewIndex = ViewIndex;
@@ -124,7 +129,8 @@ void ULobbyWebView_C::WebViewInputFocus(int ViewIndex)
 
 void ULobbyWebView_C::WebViewLoad(int ViewIndex, const struct FString& URL)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LobbyWebView.LobbyWebView_C.WebViewLoad");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x11ddbcea);
 
 	ULobbyWebView_C_WebViewLoad_Params params;
 	params.ViewIndex = ViewIndex;
@@ -143,7 +149,8 @@ void ULobbyWebView_C::WebViewLoad(int ViewIndex, const struct FString& URL)
 
 void ULobbyWebView_C::BndEvt__CoherentUIGTWidget_0_K2Node_ComponentBoundEvent_383_UIGTReadyForBindingsSignature__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LobbyWebView.LobbyWebView_C.BndEvt__CoherentUIGTWidget_0_K2Node_ComponentBoundEvent_383_UIGTReadyForBindingsSignature__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xb99e24a);
 
 	ULobbyWebView_C_BndEvt__CoherentUIGTWidget_0_K2Node_ComponentBoundEvent_383_UIGTReadyForBindingsSignature__DelegateSignature_Params params;
 
@@ -162,7 +169,8 @@ void ULobbyWebView_C::BndEvt__CoherentUIGTWidget_0_K2Node_ComponentBoundEvent_38
 
 void ULobbyWebView_C::J_1(class UCoherentUIGTJSPayload* payload)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LobbyWebView.LobbyWebView_C.J_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x310b8bd5);
 
 	ULobbyWebView_C_J_1_Params params;
 	params.payload = payload;
@@ -180,7 +188,8 @@ void ULobbyWebView_C::J_1(class UCoherentUIGTJSPayload* payload)
 
 void ULobbyWebView_C::BndEvt__WebView_1_K2Node_ComponentBoundEvent_545_UIGTReadyForBindingsSignature__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LobbyWebView.LobbyWebView_C.BndEvt__WebView_1_K2Node_ComponentBoundEvent_545_UIGTReadyForBindingsSignature__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xfdd0d223);
 
 	ULobbyWebView_C_BndEvt__WebView_1_K2Node_ComponentBoundEvent_545_UIGTReadyForBindingsSignature__DelegateSignature_Params params;
 
@@ -197,7 +206,8 @@ void ULobbyWebView_C::BndEvt__WebView_1_K2Node_ComponentBoundEvent_545_UIGTReady
 
 void ULobbyWebView_C::BndEvt__WebView_2_K2Node_ComponentBoundEvent_548_UIGTReadyForBindingsSignature__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LobbyWebView.LobbyWebView_C.BndEvt__WebView_2_K2Node_ComponentBoundEvent_548_UIGTReadyForBindingsSignature__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xf16b09d7);
 
 	ULobbyWebView_C_BndEvt__WebView_2_K2Node_ComponentBoundEvent_548_UIGTReadyForBindingsSignature__DelegateSignature_Params params;
 
@@ -214,7 +224,8 @@ void ULobbyWebView_C::BndEvt__WebView_2_K2Node_ComponentBoundEvent_548_UIGTReady
 
 void ULobbyWebView_C::Construct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LobbyWebView.LobbyWebView_C.Construct");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x2e438504);
 
 	ULobbyWebView_C_Construct_Params params;
 
@@ -234,7 +245,8 @@ void ULobbyWebView_C::Construct()
 
 void ULobbyWebView_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LobbyWebView.LobbyWebView_C.Tick");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x8790454e);
 
 	ULobbyWebView_C_Tick_Params params;
 	params.MyGeometry = MyGeometry;
@@ -253,7 +265,8 @@ void ULobbyWebView_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 
 void ULobbyWebView_C::Destruct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LobbyWebView.LobbyWebView_C.Destruct");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x1ac23c3b);
 
 	ULobbyWebView_C_Destruct_Params params;
 
@@ -270,7 +283,8 @@ void ULobbyWebView_C::Destruct()
 
 void ULobbyWebView_C::PressAKey()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LobbyWebView.LobbyWebView_C.PressAKey");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x5bbd4318);
 
 	ULobbyWebView_C_PressAKey_Params params;
 
@@ -287,7 +301,8 @@ void ULobbyWebView_C::PressAKey()
 
 void ULobbyWebView_C::PressBKey()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LobbyWebView.LobbyWebView_C.PressBKey");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xcc0282d5);
 
 	ULobbyWebView_C_PressBKey_Params params;
 
@@ -306,7 +321,8 @@ void ULobbyWebView_C::PressBKey()
 
 void ULobbyWebView_C::ExecuteUbergraph_LobbyWebView(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LobbyWebView.LobbyWebView_C.ExecuteUbergraph_LobbyWebView");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xa212c184);
 
 	ULobbyWebView_C_ExecuteUbergraph_LobbyWebView_Params params;
 	params.EntryPoint = EntryPoint;

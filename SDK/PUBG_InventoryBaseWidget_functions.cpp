@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,8 @@ namespace Classes
 
 void UInventoryBaseWidget_C::UpdateDragDragDroppingItem(class UItem* DroppingItem)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryBaseWidget.InventoryBaseWidget_C.UpdateDragDragDroppingItem");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x7595ef0e);
 
 	UInventoryBaseWidget_C_UpdateDragDragDroppingItem_Params params;
 	params.DroppingItem = DroppingItem;
@@ -39,7 +40,8 @@ void UInventoryBaseWidget_C::UpdateDragDragDroppingItem(class UItem* DroppingIte
 
 void UInventoryBaseWidget_C::SetInventoryWidget(class UInventoryWidget_C* Inventory)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryBaseWidget.InventoryBaseWidget_C.SetInventoryWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xceb1adc7);
 
 	UInventoryBaseWidget_C_SetInventoryWidget_Params params;
 	params.Inventory = Inventory;
@@ -59,7 +61,8 @@ void UInventoryBaseWidget_C::SetInventoryWidget(class UInventoryWidget_C* Invent
 
 void UInventoryBaseWidget_C::ExecuteUbergraph_InventoryBaseWidget(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryBaseWidget.InventoryBaseWidget_C.ExecuteUbergraph_InventoryBaseWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x9dd230fa);
 
 	UInventoryBaseWidget_C_ExecuteUbergraph_InventoryBaseWidget_Params params;
 	params.EntryPoint = EntryPoint;
@@ -77,7 +80,8 @@ void UInventoryBaseWidget_C::ExecuteUbergraph_InventoryBaseWidget(int EntryPoint
 
 void UInventoryBaseWidget_C::RefreshFocus__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function InventoryBaseWidget.InventoryBaseWidget_C.RefreshFocus__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xb467a207);
 
 	UInventoryBaseWidget_C_RefreshFocus__DelegateSignature_Params params;
 

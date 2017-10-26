@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,7 +17,8 @@ namespace Classes
 
 void UKillMessageWidget_C::SetKillMessageFont()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function KillMessageWidget.KillMessageWidget_C.SetKillMessageFont");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x4efd9461);
 
 	UKillMessageWidget_C_SetKillMessageFont_Params params;
 
@@ -36,7 +37,8 @@ void UKillMessageWidget_C::SetKillMessageFont()
 
 void UKillMessageWidget_C::OnPrepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function KillMessageWidget.KillMessageWidget_C.OnPrepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x76e9db08);
 
 	UKillMessageWidget_C_OnPrepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -54,7 +56,8 @@ void UKillMessageWidget_C::OnPrepass_1(class UWidget* BoundWidget)
 
 void UKillMessageWidget_C::SetKillMessageText()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function KillMessageWidget.KillMessageWidget_C.SetKillMessageText");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x8a3a0b33);
 
 	UKillMessageWidget_C_SetKillMessageText_Params params;
 
@@ -73,7 +76,8 @@ void UKillMessageWidget_C::SetKillMessageText()
 
 void UKillMessageWidget_C::GetNumStartTeam(int* NumStartTeam)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function KillMessageWidget.KillMessageWidget_C.GetNumStartTeam");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x9f6a4b5a);
 
 	UKillMessageWidget_C_GetNumStartTeam_Params params;
 
@@ -95,7 +99,8 @@ void UKillMessageWidget_C::GetNumStartTeam(int* NumStartTeam)
 
 void UKillMessageWidget_C::On_AlivePlayer_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function KillMessageWidget.KillMessageWidget_C.On_AlivePlayer_Prepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x29ecb520);
 
 	UKillMessageWidget_C_On_AlivePlayer_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -115,7 +120,8 @@ void UKillMessageWidget_C::On_AlivePlayer_Prepass_1(class UWidget* BoundWidget)
 
 void UKillMessageWidget_C::On_MyKills_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function KillMessageWidget.KillMessageWidget_C.On_MyKills_Prepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x6d2550c1);
 
 	UKillMessageWidget_C_On_MyKills_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -135,7 +141,8 @@ void UKillMessageWidget_C::On_MyKills_Prepass_1(class UWidget* BoundWidget)
 
 struct FLinearColor UKillMessageWidget_C::GetBrushColor_1()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function KillMessageWidget.KillMessageWidget_C.GetBrushColor_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xa3646024);
 
 	UKillMessageWidget_C_GetBrushColor_1_Params params;
 
@@ -156,7 +163,8 @@ struct FLinearColor UKillMessageWidget_C::GetBrushColor_1()
 
 void UKillMessageWidget_C::GetTeamAlive(int* Alive)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function KillMessageWidget.KillMessageWidget_C.GetTeamAlive");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc0dfa49d);
 
 	UKillMessageWidget_C_GetTeamAlive_Params params;
 
@@ -178,7 +186,8 @@ void UKillMessageWidget_C::GetTeamAlive(int* Alive)
 
 struct FText UKillMessageWidget_C::Get_AlivePlayer_Text_1()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function KillMessageWidget.KillMessageWidget_C.Get_AlivePlayer_Text_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x56a8c496);
 
 	UKillMessageWidget_C_Get_AlivePlayer_Text_1_Params params;
 
@@ -199,7 +208,8 @@ struct FText UKillMessageWidget_C::Get_AlivePlayer_Text_1()
 
 void UKillMessageWidget_C::GetAlivePlayerNum(int* AlivePlayer)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function KillMessageWidget.KillMessageWidget_C.GetAlivePlayerNum");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x6339a421);
 
 	UKillMessageWidget_C_GetAlivePlayerNum_Params params;
 
@@ -221,7 +231,8 @@ void UKillMessageWidget_C::GetAlivePlayerNum(int* AlivePlayer)
 
 void UKillMessageWidget_C::GetKillNum(int* KillNum)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function KillMessageWidget.KillMessageWidget_C.GetKillNum");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x36184e0f);
 
 	UKillMessageWidget_C_GetKillNum_Params params;
 
@@ -243,7 +254,8 @@ void UKillMessageWidget_C::GetKillNum(int* KillNum)
 
 TEnumAsByte<ESlateVisibility> UKillMessageWidget_C::Get_Killer_Visibility_1()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function KillMessageWidget.KillMessageWidget_C.Get_Killer_Visibility_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x8c44f778);
 
 	UKillMessageWidget_C_Get_Killer_Visibility_1_Params params;
 
@@ -264,7 +276,8 @@ TEnumAsByte<ESlateVisibility> UKillMessageWidget_C::Get_Killer_Visibility_1()
 
 TEnumAsByte<ESlateVisibility> UKillMessageWidget_C::Get_Insert2_Visibility_1()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function KillMessageWidget.KillMessageWidget_C.Get_Insert2_Visibility_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x81a6c7ea);
 
 	UKillMessageWidget_C_Get_Insert2_Visibility_1_Params params;
 
@@ -285,7 +298,8 @@ TEnumAsByte<ESlateVisibility> UKillMessageWidget_C::Get_Insert2_Visibility_1()
 
 TEnumAsByte<ESlateVisibility> UKillMessageWidget_C::Get_Insert_Visibility_1()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function KillMessageWidget.KillMessageWidget_C.Get_Insert_Visibility_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xb35fe88a);
 
 	UKillMessageWidget_C_Get_Insert_Visibility_1_Params params;
 
@@ -306,7 +320,8 @@ TEnumAsByte<ESlateVisibility> UKillMessageWidget_C::Get_Insert_Visibility_1()
 
 void UKillMessageWidget_C::GetFadeInAnimation(class UWidgetAnimation** Animation)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function KillMessageWidget.KillMessageWidget_C.GetFadeInAnimation");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xe49ccac8);
 
 	UKillMessageWidget_C_GetFadeInAnimation_Params params;
 
@@ -328,7 +343,8 @@ void UKillMessageWidget_C::GetFadeInAnimation(class UWidgetAnimation** Animation
 
 void UKillMessageWidget_C::GetFadeOutAnimation(class UWidgetAnimation** Animation)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function KillMessageWidget.KillMessageWidget_C.GetFadeOutAnimation");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x611e0f11);
 
 	UKillMessageWidget_C_GetFadeOutAnimation_Params params;
 
@@ -348,7 +364,8 @@ void UKillMessageWidget_C::GetFadeOutAnimation(class UWidgetAnimation** Animatio
 
 void UKillMessageWidget_C::InitializeKillMessageText()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function KillMessageWidget.KillMessageWidget_C.InitializeKillMessageText");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x231e23db);
 
 	UKillMessageWidget_C_InitializeKillMessageText_Params params;
 
@@ -367,7 +384,8 @@ void UKillMessageWidget_C::InitializeKillMessageText()
 
 void UKillMessageWidget_C::IsVictimTeam(bool* IsTeam)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function KillMessageWidget.KillMessageWidget_C.IsVictimTeam");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc3e55324);
 
 	UKillMessageWidget_C_IsVictimTeam_Params params;
 
@@ -389,7 +407,8 @@ void UKillMessageWidget_C::IsVictimTeam(bool* IsTeam)
 
 void UKillMessageWidget_C::IsKillerTeam(bool* IsTeam)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function KillMessageWidget.KillMessageWidget_C.IsKillerTeam");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xa48cf5e9);
 
 	UKillMessageWidget_C_IsKillerTeam_Params params;
 
@@ -409,7 +428,8 @@ void UKillMessageWidget_C::IsKillerTeam(bool* IsTeam)
 
 void UKillMessageWidget_C::Construct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function KillMessageWidget.KillMessageWidget_C.Construct");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xe12b4076);
 
 	UKillMessageWidget_C_Construct_Params params;
 
@@ -428,7 +448,8 @@ void UKillMessageWidget_C::Construct()
 
 void UKillMessageWidget_C::ExecuteUbergraph_KillMessageWidget(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function KillMessageWidget.KillMessageWidget_C.ExecuteUbergraph_KillMessageWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x7444d0f4);
 
 	UKillMessageWidget_C_ExecuteUbergraph_KillMessageWidget_Params params;
 	params.EntryPoint = EntryPoint;

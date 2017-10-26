@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -20,7 +20,8 @@ namespace Classes
 
 void UVoiceSettingWidget_C::GetVoiceChannelByOption(bool* GlobalChannel, bool* TeamChannel)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VoiceSettingWidget.VoiceSettingWidget_C.GetVoiceChannelByOption");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x75d8a896);
 
 	UVoiceSettingWidget_C_GetVoiceChannelByOption_Params params;
 
@@ -45,7 +46,8 @@ void UVoiceSettingWidget_C::GetVoiceChannelByOption(bool* GlobalChannel, bool* T
 
 void UVoiceSettingWidget_C::GetMyVoiceByOption(bool* bIsMuted, bool* bUsePushToTalk)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VoiceSettingWidget.VoiceSettingWidget_C.GetMyVoiceByOption");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xe3511977);
 
 	UVoiceSettingWidget_C_GetMyVoiceByOption_Params params;
 
@@ -69,7 +71,8 @@ void UVoiceSettingWidget_C::GetMyVoiceByOption(bool* bIsMuted, bool* bUsePushToT
 
 void UVoiceSettingWidget_C::GetVoiceChannelOptionString(struct FString* OptionString)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VoiceSettingWidget.VoiceSettingWidget_C.GetVoiceChannelOptionString");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xfe6c6082);
 
 	UVoiceSettingWidget_C_GetVoiceChannelOptionString_Params params;
 
@@ -91,7 +94,8 @@ void UVoiceSettingWidget_C::GetVoiceChannelOptionString(struct FString* OptionSt
 
 void UVoiceSettingWidget_C::GetMyVoiceOptionString(struct FString* OptionString)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VoiceSettingWidget.VoiceSettingWidget_C.GetMyVoiceOptionString");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x604041f);
 
 	UVoiceSettingWidget_C_GetMyVoiceOptionString_Params params;
 
@@ -113,7 +117,8 @@ void UVoiceSettingWidget_C::GetMyVoiceOptionString(struct FString* OptionString)
 
 bool UVoiceSettingWidget_C::IsChanged()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VoiceSettingWidget.VoiceSettingWidget_C.IsChanged");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x4298e7a5);
 
 	UVoiceSettingWidget_C_IsChanged_Params params;
 
@@ -132,7 +137,8 @@ bool UVoiceSettingWidget_C::IsChanged()
 
 void UVoiceSettingWidget_C::UpdateVoiceSettingWidget()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VoiceSettingWidget.VoiceSettingWidget_C.UpdateVoiceSettingWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xb24245f6);
 
 	UVoiceSettingWidget_C_UpdateVoiceSettingWidget_Params params;
 
@@ -149,7 +155,8 @@ void UVoiceSettingWidget_C::UpdateVoiceSettingWidget()
 
 void UVoiceSettingWidget_C::Construct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VoiceSettingWidget.VoiceSettingWidget_C.Construct");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x4aa22612);
 
 	UVoiceSettingWidget_C_Construct_Params params;
 
@@ -166,7 +173,8 @@ void UVoiceSettingWidget_C::Construct()
 
 void UVoiceSettingWidget_C::OnApply()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VoiceSettingWidget.VoiceSettingWidget_C.OnApply");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xab041958);
 
 	UVoiceSettingWidget_C_OnApply_Params params;
 
@@ -183,7 +191,8 @@ void UVoiceSettingWidget_C::OnApply()
 
 void UVoiceSettingWidget_C::OnDefault()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VoiceSettingWidget.VoiceSettingWidget_C.OnDefault");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x1ea508db);
 
 	UVoiceSettingWidget_C_OnDefault_Params params;
 
@@ -200,7 +209,8 @@ void UVoiceSettingWidget_C::OnDefault()
 
 void UVoiceSettingWidget_C::OnReset()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VoiceSettingWidget.VoiceSettingWidget_C.OnReset");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xa802b6d9);
 
 	UVoiceSettingWidget_C_OnReset_Params params;
 
@@ -219,7 +229,8 @@ void UVoiceSettingWidget_C::OnReset()
 
 void UVoiceSettingWidget_C::ExecuteUbergraph_VoiceSettingWidget(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VoiceSettingWidget.VoiceSettingWidget_C.ExecuteUbergraph_VoiceSettingWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xa9792319);
 
 	UVoiceSettingWidget_C_ExecuteUbergraph_VoiceSettingWidget_Params params;
 	params.EntryPoint = EntryPoint;

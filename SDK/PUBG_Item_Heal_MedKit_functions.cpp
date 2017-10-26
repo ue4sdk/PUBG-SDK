@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -20,7 +20,8 @@ namespace Classes
 
 bool UItem_Heal_MedKit_C::IsCastable(class ATslCharacter** Character)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Item_Heal_MedKit.Item_Heal_MedKit_C.IsCastable");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xae663c20);
 
 	UItem_Heal_MedKit_C_IsCastable_Params params;
 	params.Character = Character;
@@ -40,7 +41,8 @@ bool UItem_Heal_MedKit_C::IsCastable(class ATslCharacter** Character)
 
 void UItem_Heal_MedKit_C::PrintCastingTime()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Item_Heal_MedKit.Item_Heal_MedKit_C.PrintCastingTime");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x255f50aa);
 
 	UItem_Heal_MedKit_C_PrintCastingTime_Params params;
 
@@ -57,7 +59,8 @@ void UItem_Heal_MedKit_C::PrintCastingTime()
 
 void UItem_Heal_MedKit_C::Heal()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Item_Heal_MedKit.Item_Heal_MedKit_C.Heal");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xad21f193);
 
 	UItem_Heal_MedKit_C_Heal_Params params;
 
@@ -77,7 +80,8 @@ void UItem_Heal_MedKit_C::Heal()
 
 bool UItem_Heal_MedKit_C::UseBy(class ATslCharacter** Character)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Item_Heal_MedKit.Item_Heal_MedKit_C.UseBy");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x5fc61a1);
 
 	UItem_Heal_MedKit_C_UseBy_Params params;
 	params.Character = Character;

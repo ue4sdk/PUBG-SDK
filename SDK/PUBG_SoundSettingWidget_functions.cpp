@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,8 @@ namespace Classes
 
 bool USoundSettingWidget_C::IsChanged()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SoundSettingWidget.SoundSettingWidget_C.IsChanged");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x213a653b);
 
 	USoundSettingWidget_C_IsChanged_Params params;
 
@@ -38,7 +39,8 @@ bool USoundSettingWidget_C::IsChanged()
 
 void USoundSettingWidget_C::UpdateSoundSettings()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SoundSettingWidget.SoundSettingWidget_C.UpdateSoundSettings");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x523c7130);
 
 	USoundSettingWidget_C_UpdateSoundSettings_Params params;
 
@@ -55,7 +57,8 @@ void USoundSettingWidget_C::UpdateSoundSettings()
 
 void USoundSettingWidget_C::Construct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SoundSettingWidget.SoundSettingWidget_C.Construct");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xd60b1a88);
 
 	USoundSettingWidget_C_Construct_Params params;
 
@@ -72,7 +75,8 @@ void USoundSettingWidget_C::Construct()
 
 void USoundSettingWidget_C::OnReset()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SoundSettingWidget.SoundSettingWidget_C.OnReset");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x60a28267);
 
 	USoundSettingWidget_C_OnReset_Params params;
 
@@ -89,7 +93,8 @@ void USoundSettingWidget_C::OnReset()
 
 void USoundSettingWidget_C::OnDefault()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SoundSettingWidget.SoundSettingWidget_C.OnDefault");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc70f1f45);
 
 	USoundSettingWidget_C_OnDefault_Params params;
 
@@ -106,7 +111,8 @@ void USoundSettingWidget_C::OnDefault()
 
 void USoundSettingWidget_C::OnApply()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SoundSettingWidget.SoundSettingWidget_C.OnApply");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xa256a096);
 
 	USoundSettingWidget_C_OnApply_Params params;
 
@@ -125,7 +131,8 @@ void USoundSettingWidget_C::OnApply()
 
 void USoundSettingWidget_C::ExecuteUbergraph_SoundSettingWidget(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SoundSettingWidget.SoundSettingWidget_C.ExecuteUbergraph_SoundSettingWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xa8adb66);
 
 	USoundSettingWidget_C_ExecuteUbergraph_SoundSettingWidget_Params params;
 	params.EntryPoint = EntryPoint;

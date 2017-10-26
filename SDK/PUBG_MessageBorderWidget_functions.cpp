@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,8 @@ namespace Classes
 
 void UMessageBorderWidget_C::RemoveMessage(class UMessageWidget_C* DeleteMessage)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MessageBorderWidget.MessageBorderWidget_C.RemoveMessage");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xd109e09c);
 
 	UMessageBorderWidget_C_RemoveMessage_Params params;
 	params.DeleteMessage = DeleteMessage;
@@ -39,7 +40,8 @@ void UMessageBorderWidget_C::RemoveMessage(class UMessageWidget_C* DeleteMessage
 
 void UMessageBorderWidget_C::AddMessage(class UMessageWidget_C* Message)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MessageBorderWidget.MessageBorderWidget_C.AddMessage");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x18399c01);
 
 	UMessageBorderWidget_C_AddMessage_Params params;
 	params.Message = Message;
@@ -59,7 +61,8 @@ void UMessageBorderWidget_C::AddMessage(class UMessageWidget_C* Message)
 
 void UMessageBorderWidget_C::DisplayKilledMessage(const struct FDeathMessage& DeathMessage)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MessageBorderWidget.MessageBorderWidget_C.DisplayKilledMessage");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xe773c41d);
 
 	UMessageBorderWidget_C_DisplayKilledMessage_Params params;
 	params.DeathMessage = DeathMessage;

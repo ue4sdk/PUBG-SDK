@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -20,7 +20,8 @@ namespace Classes
 
 void UCoherentUIGTWidget::TriggerJSEvent(const struct FString& Name, class UCoherentUIGTJSEvent* eventData)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.TriggerJSEvent");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xb6bfad1);
 
 	UCoherentUIGTWidget_TriggerJSEvent_Params params;
 	params.Name = Name;
@@ -42,7 +43,8 @@ void UCoherentUIGTWidget::TriggerJSEvent(const struct FString& Name, class UCohe
 
 void UCoherentUIGTWidget::ShowPaintRects(bool show)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.ShowPaintRects");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xbd43faa4);
 
 	UCoherentUIGTWidget_ShowPaintRects_Params params;
 	params.show = show;
@@ -63,7 +65,8 @@ void UCoherentUIGTWidget::ShowPaintRects(bool show)
 
 void UCoherentUIGTWidget::SetClickThroughAlphaThreshold(float threshold)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.SetClickThroughAlphaThreshold");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x17a630e0);
 
 	UCoherentUIGTWidget_SetClickThroughAlphaThreshold_Params params;
 	params.threshold = threshold;
@@ -82,7 +85,8 @@ void UCoherentUIGTWidget::SetClickThroughAlphaThreshold(float threshold)
 
 void UCoherentUIGTWidget::Reload()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.Reload");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xda140845);
 
 	UCoherentUIGTWidget_Reload_Params params;
 
@@ -100,7 +104,8 @@ void UCoherentUIGTWidget::Reload()
 
 void UCoherentUIGTWidget::Redraw()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.Redraw");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x2bcf7457);
 
 	UCoherentUIGTWidget_Redraw_Params params;
 
@@ -120,7 +125,8 @@ void UCoherentUIGTWidget::Redraw()
 
 void UCoherentUIGTWidget::Load(const struct FString& path)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.Load");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xf87c5a0e);
 
 	UCoherentUIGTWidget_Load_Params params;
 	params.path = path;
@@ -141,7 +147,8 @@ void UCoherentUIGTWidget::Load(const struct FString& path)
 
 bool UCoherentUIGTWidget::IsTransparent()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.IsTransparent");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x93778098);
 
 	UCoherentUIGTWidget_IsTransparent_Params params;
 
@@ -163,7 +170,8 @@ bool UCoherentUIGTWidget::IsTransparent()
 
 bool UCoherentUIGTWidget::IsReadyToCreateView()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.IsReadyToCreateView");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x67a00dd3);
 
 	UCoherentUIGTWidget_IsReadyToCreateView_Params params;
 
@@ -185,7 +193,8 @@ bool UCoherentUIGTWidget::IsReadyToCreateView()
 
 bool UCoherentUIGTWidget::IsReadyForBindings()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.IsReadyForBindings");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x5ebd7bf2);
 
 	UCoherentUIGTWidget_IsReadyForBindings_Params params;
 
@@ -207,7 +216,8 @@ bool UCoherentUIGTWidget::IsReadyForBindings()
 
 bool UCoherentUIGTWidget::IsDocumentReady()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.IsDocumentReady");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xe8c7f646);
 
 	UCoherentUIGTWidget_IsDocumentReady_Params params;
 
@@ -229,7 +239,8 @@ bool UCoherentUIGTWidget::IsDocumentReady()
 
 bool UCoherentUIGTWidget::HasRequestedView()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.HasRequestedView");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xd9c6d325);
 
 	UCoherentUIGTWidget_HasRequestedView_Params params;
 
@@ -251,7 +262,8 @@ bool UCoherentUIGTWidget::HasRequestedView()
 
 float UCoherentUIGTWidget::GetClickThroughAlphaThreshold()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.GetClickThroughAlphaThreshold");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xfc18d0cc);
 
 	UCoherentUIGTWidget_GetClickThroughAlphaThreshold_Params params;
 
@@ -273,7 +285,8 @@ float UCoherentUIGTWidget::GetClickThroughAlphaThreshold()
 
 class UCoherentUIGTJSEvent* UCoherentUIGTWidget::CreateJSEvent()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTWidget.CreateJSEvent");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x8f7fb1ed);
 
 	UCoherentUIGTWidget_CreateJSEvent_Params params;
 
@@ -295,7 +308,8 @@ class UCoherentUIGTJSEvent* UCoherentUIGTWidget::CreateJSEvent()
 
 void UCoherentUIGTJSEvent::AddStructArg(class UStructProperty* Arg)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTJSEvent.AddStructArg");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x83731c5);
 
 	UCoherentUIGTJSEvent_AddStructArg_Params params;
 	params.Arg = Arg;
@@ -316,7 +330,8 @@ void UCoherentUIGTJSEvent::AddStructArg(class UStructProperty* Arg)
 
 void UCoherentUIGTJSEvent::AddString(const struct FString& str)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTJSEvent.AddString");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xe939bf8f);
 
 	UCoherentUIGTJSEvent_AddString_Params params;
 	params.str = str;
@@ -337,7 +352,8 @@ void UCoherentUIGTJSEvent::AddString(const struct FString& str)
 
 void UCoherentUIGTJSEvent::AddObject(class UObject* Object)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTJSEvent.AddObject");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xfffeb8f9);
 
 	UCoherentUIGTJSEvent_AddObject_Params params;
 	params.Object = Object;
@@ -358,7 +374,8 @@ void UCoherentUIGTJSEvent::AddObject(class UObject* Object)
 
 void UCoherentUIGTJSEvent::AddInt32(int integer)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTJSEvent.AddInt32");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x36167a28);
 
 	UCoherentUIGTJSEvent_AddInt32_Params params;
 	params.integer = integer;
@@ -379,7 +396,8 @@ void UCoherentUIGTJSEvent::AddInt32(int integer)
 
 void UCoherentUIGTJSEvent::AddFloat(float FL)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTJSEvent.AddFloat");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x4b074472);
 
 	UCoherentUIGTJSEvent_AddFloat_Params params;
 	params.FL = FL;
@@ -400,7 +418,8 @@ void UCoherentUIGTJSEvent::AddFloat(float FL)
 
 void UCoherentUIGTJSEvent::AddByte(unsigned char byte)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTJSEvent.AddByte");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x1c0e4d9a);
 
 	UCoherentUIGTJSEvent_AddByte_Params params;
 	params.byte = byte;
@@ -421,7 +440,8 @@ void UCoherentUIGTJSEvent::AddByte(unsigned char byte)
 
 void UCoherentUIGTJSEvent::AddBool(bool B)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTJSEvent.AddBool");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x700ea804);
 
 	UCoherentUIGTJSEvent_AddBool_Params params;
 	params.B = B;
@@ -442,7 +462,8 @@ void UCoherentUIGTJSEvent::AddBool(bool B)
 
 void UCoherentUIGTJSEvent::AddArray(TArray<int> Array)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTJSEvent.AddArray");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x1a6594ab);
 
 	UCoherentUIGTJSEvent_AddArray_Params params;
 	params.Array = Array;
@@ -461,7 +482,8 @@ void UCoherentUIGTJSEvent::AddArray(TArray<int> Array)
 
 void UCoherentUIGTBlueprintFunctionLibrary::STATIC_PurgeCoherentDiskCache()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary.PurgeCoherentDiskCache");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xf9797b2e);
 
 	UCoherentUIGTBlueprintFunctionLibrary_PurgeCoherentDiskCache_Params params;
 
@@ -482,7 +504,8 @@ void UCoherentUIGTBlueprintFunctionLibrary::STATIC_PurgeCoherentDiskCache()
 
 class UCoherentUIGTJSEvent* UCoherentUIGTBlueprintFunctionLibrary::STATIC_CreateJSEvent(class UObject* WorldContextObject)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary.CreateJSEvent");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xe945f5df);
 
 	UCoherentUIGTBlueprintFunctionLibrary_CreateJSEvent_Params params;
 	params.WorldContextObject = WorldContextObject;
@@ -506,7 +529,8 @@ class UCoherentUIGTJSEvent* UCoherentUIGTBlueprintFunctionLibrary::STATIC_Create
 
 void UCoherentUIGTBlueprintFunctionLibrary::STATIC_AddStructArg(class UCoherentUIGTJSEvent* JSEvent, class UStructProperty* Arg)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary.AddStructArg");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xd297199a);
 
 	UCoherentUIGTBlueprintFunctionLibrary_AddStructArg_Params params;
 	params.JSEvent = JSEvent;
@@ -529,7 +553,8 @@ void UCoherentUIGTBlueprintFunctionLibrary::STATIC_AddStructArg(class UCoherentU
 
 void UCoherentUIGTBlueprintFunctionLibrary::STATIC_AddString(class UCoherentUIGTJSEvent* JSEvent, const struct FString& Arg)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary.AddString");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x85f45efe);
 
 	UCoherentUIGTBlueprintFunctionLibrary_AddString_Params params;
 	params.JSEvent = JSEvent;
@@ -552,7 +577,8 @@ void UCoherentUIGTBlueprintFunctionLibrary::STATIC_AddString(class UCoherentUIGT
 
 void UCoherentUIGTBlueprintFunctionLibrary::STATIC_AddObject(class UCoherentUIGTJSEvent* JSEvent, class UObject* Arg)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary.AddObject");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x1978ae54);
 
 	UCoherentUIGTBlueprintFunctionLibrary_AddObject_Params params;
 	params.JSEvent = JSEvent;
@@ -575,7 +601,8 @@ void UCoherentUIGTBlueprintFunctionLibrary::STATIC_AddObject(class UCoherentUIGT
 
 void UCoherentUIGTBlueprintFunctionLibrary::STATIC_AddInt32(class UCoherentUIGTJSEvent* JSEvent, int Arg)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary.AddInt32");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xbd564323);
 
 	UCoherentUIGTBlueprintFunctionLibrary_AddInt32_Params params;
 	params.JSEvent = JSEvent;
@@ -598,7 +625,8 @@ void UCoherentUIGTBlueprintFunctionLibrary::STATIC_AddInt32(class UCoherentUIGTJ
 
 void UCoherentUIGTBlueprintFunctionLibrary::STATIC_AddFloat(class UCoherentUIGTJSEvent* JSEvent, float Arg)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary.AddFloat");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x112aadd1);
 
 	UCoherentUIGTBlueprintFunctionLibrary_AddFloat_Params params;
 	params.JSEvent = JSEvent;
@@ -621,7 +649,8 @@ void UCoherentUIGTBlueprintFunctionLibrary::STATIC_AddFloat(class UCoherentUIGTJ
 
 void UCoherentUIGTBlueprintFunctionLibrary::STATIC_AddByte(class UCoherentUIGTJSEvent* JSEvent, unsigned char Arg)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary.AddByte");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xde1b71e7);
 
 	UCoherentUIGTBlueprintFunctionLibrary_AddByte_Params params;
 	params.JSEvent = JSEvent;
@@ -644,7 +673,8 @@ void UCoherentUIGTBlueprintFunctionLibrary::STATIC_AddByte(class UCoherentUIGTJS
 
 void UCoherentUIGTBlueprintFunctionLibrary::STATIC_AddBool(class UCoherentUIGTJSEvent* JSEvent, bool Arg)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary.AddBool");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x5b2ec801);
 
 	UCoherentUIGTBlueprintFunctionLibrary_AddBool_Params params;
 	params.JSEvent = JSEvent;
@@ -667,7 +697,8 @@ void UCoherentUIGTBlueprintFunctionLibrary::STATIC_AddBool(class UCoherentUIGTJS
 
 void UCoherentUIGTBlueprintFunctionLibrary::STATIC_AddArrayOfStructs(class UCoherentUIGTJSEvent* JSEvent, TArray<int> Arg)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary.AddArrayOfStructs");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x8198d7e3);
 
 	UCoherentUIGTBlueprintFunctionLibrary_AddArrayOfStructs_Params params;
 	params.JSEvent = JSEvent;
@@ -691,7 +722,8 @@ void UCoherentUIGTBlueprintFunctionLibrary::STATIC_AddArrayOfStructs(class UCohe
 
 void UCoherentUIGTBlueprintFunctionLibrary::STATIC_AddArray(class UCoherentUIGTJSEvent* JSEvent, TArray<int> Arg, int ArrayType)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary.AddArray");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc59c7094);
 
 	UCoherentUIGTBlueprintFunctionLibrary_AddArray_Params params;
 	params.JSEvent = JSEvent;
@@ -715,7 +747,8 @@ void UCoherentUIGTBlueprintFunctionLibrary::STATIC_AddArray(class UCoherentUIGTJ
 
 void UCoherentUIGTJSPayload::ReadObject(int Index, class UObject* Object)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTJSPayload.ReadObject");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xa2fb08c8);
 
 	UCoherentUIGTJSPayload_ReadObject_Params params;
 	params.Index = Index;
@@ -738,7 +771,8 @@ void UCoherentUIGTJSPayload::ReadObject(int Index, class UObject* Object)
 
 struct FString UCoherentUIGTJSPayload::GetString(int Index)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTJSPayload.GetString");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x1404089c);
 
 	UCoherentUIGTJSPayload_GetString_Params params;
 	params.Index = Index;
@@ -762,7 +796,8 @@ struct FString UCoherentUIGTJSPayload::GetString(int Index)
 
 float UCoherentUIGTJSPayload::GetNumber(int Index)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTJSPayload.GetNumber");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x876116ac);
 
 	UCoherentUIGTJSPayload_GetNumber_Params params;
 	params.Index = Index;
@@ -786,7 +821,8 @@ float UCoherentUIGTJSPayload::GetNumber(int Index)
 
 int UCoherentUIGTJSPayload::GetInt32(int Index)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTJSPayload.GetInt32");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x7d3e8cb1);
 
 	UCoherentUIGTJSPayload_GetInt32_Params params;
 	params.Index = Index;
@@ -810,7 +846,8 @@ int UCoherentUIGTJSPayload::GetInt32(int Index)
 
 bool UCoherentUIGTJSPayload::GetBool(int Index)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CoherentUIGTPlugin.CoherentUIGTJSPayload.GetBool");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x73325a2b);
 
 	UCoherentUIGTJSPayload_GetBool_Params params;
 	params.Index = Index;

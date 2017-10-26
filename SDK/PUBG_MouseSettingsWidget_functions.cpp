@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,8 @@ namespace Classes
 
 bool UMouseSettingsWidget_C::IsEnableApply()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MouseSettingsWidget.MouseSettingsWidget_C.IsEnableApply");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x47c11dba);
 
 	UMouseSettingsWidget_C_IsEnableApply_Params params;
 
@@ -40,7 +41,8 @@ bool UMouseSettingsWidget_C::IsEnableApply()
 
 void UMouseSettingsWidget_C::initailizeMouseSettingsWidget(bool bIsDefaultSetting)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MouseSettingsWidget.MouseSettingsWidget_C.initailizeMouseSettingsWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x9d7c05f9);
 
 	UMouseSettingsWidget_C_initailizeMouseSettingsWidget_Params params;
 	params.bIsDefaultSetting = bIsDefaultSetting;
@@ -60,7 +62,8 @@ void UMouseSettingsWidget_C::initailizeMouseSettingsWidget(bool bIsDefaultSettin
 
 bool UMouseSettingsWidget_C::IsChanged()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MouseSettingsWidget.MouseSettingsWidget_C.IsChanged");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xcc2f4339);
 
 	UMouseSettingsWidget_C_IsChanged_Params params;
 
@@ -79,7 +82,8 @@ bool UMouseSettingsWidget_C::IsChanged()
 
 void UMouseSettingsWidget_C::OnDefault()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MouseSettingsWidget.MouseSettingsWidget_C.OnDefault");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x727c1f9f);
 
 	UMouseSettingsWidget_C_OnDefault_Params params;
 
@@ -96,7 +100,8 @@ void UMouseSettingsWidget_C::OnDefault()
 
 void UMouseSettingsWidget_C::OnApply()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MouseSettingsWidget.MouseSettingsWidget_C.OnApply");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x536418e4);
 
 	UMouseSettingsWidget_C_OnApply_Params params;
 
@@ -113,7 +118,8 @@ void UMouseSettingsWidget_C::OnApply()
 
 void UMouseSettingsWidget_C::Construct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MouseSettingsWidget.MouseSettingsWidget_C.Construct");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xa606314e);
 
 	UMouseSettingsWidget_C_Construct_Params params;
 
@@ -130,7 +136,8 @@ void UMouseSettingsWidget_C::Construct()
 
 void UMouseSettingsWidget_C::OnReset()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MouseSettingsWidget.MouseSettingsWidget_C.OnReset");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xdf44f615);
 
 	UMouseSettingsWidget_C_OnReset_Params params;
 
@@ -149,7 +156,8 @@ void UMouseSettingsWidget_C::OnReset()
 
 void UMouseSettingsWidget_C::ExecuteUbergraph_MouseSettingsWidget(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MouseSettingsWidget.MouseSettingsWidget_C.ExecuteUbergraph_MouseSettingsWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x4a1557bb);
 
 	UMouseSettingsWidget_C_ExecuteUbergraph_MouseSettingsWidget_Params params;
 	params.EntryPoint = EntryPoint;

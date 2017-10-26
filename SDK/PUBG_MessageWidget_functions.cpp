@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,7 +17,8 @@ namespace Classes
 
 void UMessageWidget_C::ClearMessage()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MessageWidget.MessageWidget_C.ClearMessage");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xae275b8b);
 
 	UMessageWidget_C_ClearMessage_Params params;
 
@@ -34,7 +35,8 @@ void UMessageWidget_C::ClearMessage()
 
 void UMessageWidget_C::Construct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MessageWidget.MessageWidget_C.Construct");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x5d6cb5f6);
 
 	UMessageWidget_C_Construct_Params params;
 
@@ -51,7 +53,8 @@ void UMessageWidget_C::Construct()
 
 void UMessageWidget_C::O_1()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MessageWidget.MessageWidget_C.O_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xaa039932);
 
 	UMessageWidget_C_O_1_Params params;
 
@@ -70,7 +73,8 @@ void UMessageWidget_C::O_1()
 
 void UMessageWidget_C::ExecuteUbergraph_MessageWidget(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MessageWidget.MessageWidget_C.ExecuteUbergraph_MessageWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xedf071c8);
 
 	UMessageWidget_C_ExecuteUbergraph_MessageWidget_Params params;
 	params.EntryPoint = EntryPoint;
@@ -90,7 +94,8 @@ void UMessageWidget_C::ExecuteUbergraph_MessageWidget(int EntryPoint)
 
 void UMessageWidget_C::MessageEnd__DelegateSignature(class UMessageWidget_C* Message)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MessageWidget.MessageWidget_C.MessageEnd__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x22a806be);
 
 	UMessageWidget_C_MessageEnd__DelegateSignature_Params params;
 	params.Message = Message;

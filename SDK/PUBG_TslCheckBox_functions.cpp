@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -21,7 +21,8 @@ namespace Classes
 
 struct FEventReply UTslCheckBox_C::OnMouseButtonDown_1(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TslCheckBox.TslCheckBox_C.OnMouseButtonDown_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xa43150d1);
 
 	UTslCheckBox_C_OnMouseButtonDown_1_Params params;
 	params.MyGeometry = MyGeometry;
@@ -44,7 +45,8 @@ struct FEventReply UTslCheckBox_C::OnMouseButtonDown_1(const struct FGeometry& M
 
 struct FSlateBrush UTslCheckBox_C::GetBrush_1()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TslCheckBox.TslCheckBox_C.GetBrush_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x22e4c68f);
 
 	UTslCheckBox_C_GetBrush_1_Params params;
 
@@ -65,7 +67,8 @@ struct FSlateBrush UTslCheckBox_C::GetBrush_1()
 
 void UTslCheckBox_C::IsChekced(bool* bChecked)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TslCheckBox.TslCheckBox_C.IsChekced");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xa11f817a);
 
 	UTslCheckBox_C_IsChekced_Params params;
 
@@ -87,7 +90,8 @@ void UTslCheckBox_C::IsChekced(bool* bChecked)
 
 void UTslCheckBox_C::SetCheck(bool bChecked)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TslCheckBox.TslCheckBox_C.SetCheck");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x2260e727);
 
 	UTslCheckBox_C_SetCheck_Params params;
 	params.bChecked = bChecked;
@@ -107,7 +111,8 @@ void UTslCheckBox_C::SetCheck(bool bChecked)
 
 struct FText UTslCheckBox_C::GetDisplayName()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TslCheckBox.TslCheckBox_C.GetDisplayName");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xbd8d47ac);
 
 	UTslCheckBox_C_GetDisplayName_Params params;
 
@@ -126,7 +131,8 @@ struct FText UTslCheckBox_C::GetDisplayName()
 
 void UTslCheckBox_C::BndEvt__Button_2_K2Node_ComponentBoundEvent_1_OnButtonPressedEvent__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TslCheckBox.TslCheckBox_C.BndEvt__Button_2_K2Node_ComponentBoundEvent_1_OnButtonPressedEvent__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x11f68e62);
 
 	UTslCheckBox_C_BndEvt__Button_2_K2Node_ComponentBoundEvent_1_OnButtonPressedEvent__DelegateSignature_Params params;
 
@@ -145,7 +151,8 @@ void UTslCheckBox_C::BndEvt__Button_2_K2Node_ComponentBoundEvent_1_OnButtonPress
 
 void UTslCheckBox_C::ExecuteUbergraph_TslCheckBox(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TslCheckBox.TslCheckBox_C.ExecuteUbergraph_TslCheckBox");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xff83f9f7);
 
 	UTslCheckBox_C_ExecuteUbergraph_TslCheckBox_Params params;
 	params.EntryPoint = EntryPoint;

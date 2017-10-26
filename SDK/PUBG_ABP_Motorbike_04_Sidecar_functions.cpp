@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,7 +17,8 @@ namespace Classes
 
 void UABP_Motorbike_04_Sidecar_C::TickBikePose()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ABP_Motorbike_04_Sidecar.ABP_Motorbike_04_Sidecar_C.TickBikePose");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x1b2e402a);
 
 	UABP_Motorbike_04_Sidecar_C_TickBikePose_Params params;
 
@@ -34,7 +35,8 @@ void UABP_Motorbike_04_Sidecar_C::TickBikePose()
 
 void UABP_Motorbike_04_Sidecar_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Motorbike_04_Sidecar_AnimGraphNode_ModifyBone_667EFEB64E62473E948009AB4A214191()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ABP_Motorbike_04_Sidecar.ABP_Motorbike_04_Sidecar_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Motorbike_04_Sidecar_AnimGraphNode_ModifyBone_667EFEB64E62473E948009AB4A214191");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xbccc7084);
 
 	UABP_Motorbike_04_Sidecar_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Motorbike_04_Sidecar_AnimGraphNode_ModifyBone_667EFEB64E62473E948009AB4A214191_Params params;
 
@@ -53,7 +55,8 @@ void UABP_Motorbike_04_Sidecar_C::EvaluateGraphExposedInputs_ExecuteUbergraph_AB
 
 void UABP_Motorbike_04_Sidecar_C::BlueprintUpdateAnimation(float* DeltaTimeX)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ABP_Motorbike_04_Sidecar.ABP_Motorbike_04_Sidecar_C.BlueprintUpdateAnimation");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x5e6e3575);
 
 	UABP_Motorbike_04_Sidecar_C_BlueprintUpdateAnimation_Params params;
 	params.DeltaTimeX = DeltaTimeX;
@@ -73,7 +76,8 @@ void UABP_Motorbike_04_Sidecar_C::BlueprintUpdateAnimation(float* DeltaTimeX)
 
 void UABP_Motorbike_04_Sidecar_C::ExecuteUbergraph_ABP_Motorbike_04_Sidecar(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ABP_Motorbike_04_Sidecar.ABP_Motorbike_04_Sidecar_C.ExecuteUbergraph_ABP_Motorbike_04_Sidecar");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x75e4ef4);
 
 	UABP_Motorbike_04_Sidecar_C_ExecuteUbergraph_ABP_Motorbike_04_Sidecar_Params params;
 	params.EntryPoint = EntryPoint;

@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,7 +17,8 @@ namespace Classes
 
 void UPlayerListWidget_C::InitForReplay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerListWidget.PlayerListWidget_C.InitForReplay");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xbfef7785);
 
 	UPlayerListWidget_C_InitForReplay_Params params;
 
@@ -36,7 +37,8 @@ void UPlayerListWidget_C::InitForReplay()
 
 void UPlayerListWidget_C::CheckChangeList(bool* bChange)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerListWidget.PlayerListWidget_C.CheckChangeList");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x1225bdb);
 
 	UPlayerListWidget_C_CheckChangeList_Params params;
 
@@ -60,7 +62,8 @@ void UPlayerListWidget_C::CheckChangeList(bool* bChange)
 
 struct FEventReply UPlayerListWidget_C::OnPreviewKeyDown(struct FGeometry* MyGeometry, struct FKeyEvent* InKeyEvent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerListWidget.PlayerListWidget_C.OnPreviewKeyDown");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x5bd4bfab);
 
 	UPlayerListWidget_C_OnPreviewKeyDown_Params params;
 	params.MyGeometry = MyGeometry;
@@ -83,7 +86,8 @@ struct FEventReply UPlayerListWidget_C::OnPreviewKeyDown(struct FGeometry* MyGeo
 
 void UPlayerListWidget_C::IsIncludeDyingPlayer(bool* NewParam)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerListWidget.PlayerListWidget_C.IsIncludeDyingPlayer");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x52494691);
 
 	UPlayerListWidget_C_IsIncludeDyingPlayer_Params params;
 
@@ -105,7 +109,8 @@ void UPlayerListWidget_C::IsIncludeDyingPlayer(bool* NewParam)
 
 void UPlayerListWidget_C::UpdatePlayerList(float InputPin)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerListWidget.PlayerListWidget_C.UpdatePlayerList");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xf613cbb9);
 
 	UPlayerListWidget_C_UpdatePlayerList_Params params;
 	params.InputPin = InputPin;
@@ -125,7 +130,8 @@ void UPlayerListWidget_C::UpdatePlayerList(float InputPin)
 
 void UPlayerListWidget_C::GetPlayersInDistance(TArray<class ATslCharacter*>* PlayerList)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerListWidget.PlayerListWidget_C.GetPlayersInDistance");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x6392818b);
 
 	UPlayerListWidget_C_GetPlayersInDistance_Params params;
 
@@ -145,7 +151,8 @@ void UPlayerListWidget_C::GetPlayersInDistance(TArray<class ATslCharacter*>* Pla
 
 void UPlayerListWidget_C::CheckUpdate()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerListWidget.PlayerListWidget_C.CheckUpdate");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xea424dbc);
 
 	UPlayerListWidget_C_CheckUpdate_Params params;
 
@@ -166,7 +173,8 @@ void UPlayerListWidget_C::CheckUpdate()
 
 class UPlayerInfoWidget_C* UPlayerListWidget_C::CreateOrUpdatePlayerInfo(int IndexToTest, class ATslCharacter* Character)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerListWidget.PlayerListWidget_C.CreateOrUpdatePlayerInfo");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x5bf7486);
 
 	UPlayerListWidget_C_CreateOrUpdatePlayerInfo_Params params;
 	params.IndexToTest = IndexToTest;
@@ -187,7 +195,8 @@ class UPlayerInfoWidget_C* UPlayerListWidget_C::CreateOrUpdatePlayerInfo(int Ind
 
 void UPlayerListWidget_C::RefreshList()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerListWidget.PlayerListWidget_C.RefreshList");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x75871ab6);
 
 	UPlayerListWidget_C_RefreshList_Params params;
 
@@ -204,7 +213,8 @@ void UPlayerListWidget_C::RefreshList()
 
 void UPlayerListWidget_C::OnGotoTimelineDone_PlayerList()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerListWidget.PlayerListWidget_C.OnGotoTimelineDone_PlayerList");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x5b4260ca);
 
 	UPlayerListWidget_C_OnGotoTimelineDone_PlayerList_Params params;
 
@@ -221,7 +231,8 @@ void UPlayerListWidget_C::OnGotoTimelineDone_PlayerList()
 
 void UPlayerListWidget_C::Construct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerListWidget.PlayerListWidget_C.Construct");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x1de12344);
 
 	UPlayerListWidget_C_Construct_Params params;
 
@@ -241,7 +252,8 @@ void UPlayerListWidget_C::Construct()
 
 void UPlayerListWidget_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerListWidget.PlayerListWidget_C.Tick");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x407b3e8e);
 
 	UPlayerListWidget_C_Tick_Params params;
 	params.MyGeometry = MyGeometry;
@@ -263,7 +275,8 @@ void UPlayerListWidget_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 
 void UPlayerListWidget_C::BndEvt__DistanceSliderWidget_K2Node_ComponentBoundEvent_81_ChagedDistance__DelegateSignature(float NewDistance, float Value)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerListWidget.PlayerListWidget_C.BndEvt__DistanceSliderWidget_K2Node_ComponentBoundEvent_81_ChagedDistance__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x79a313e7);
 
 	UPlayerListWidget_C_BndEvt__DistanceSliderWidget_K2Node_ComponentBoundEvent_81_ChagedDistance__DelegateSignature_Params params;
 	params.NewDistance = NewDistance;
@@ -282,7 +295,8 @@ void UPlayerListWidget_C::BndEvt__DistanceSliderWidget_K2Node_ComponentBoundEven
 
 void UPlayerListWidget_C::CheckChangeTimer()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerListWidget.PlayerListWidget_C.CheckChangeTimer");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x8f38b21e);
 
 	UPlayerListWidget_C_CheckChangeTimer_Params params;
 
@@ -301,7 +315,8 @@ void UPlayerListWidget_C::CheckChangeTimer()
 
 void UPlayerListWidget_C::OnTurn(float Scale)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerListWidget.PlayerListWidget_C.OnTurn");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x7f0f260f);
 
 	UPlayerListWidget_C_OnTurn_Params params;
 	params.Scale = Scale;
@@ -321,7 +336,8 @@ void UPlayerListWidget_C::OnTurn(float Scale)
 
 void UPlayerListWidget_C::OnLookUp(float Scale)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerListWidget.PlayerListWidget_C.OnLookUp");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xb3f43f10);
 
 	UPlayerListWidget_C_OnLookUp_Params params;
 	params.Scale = Scale;
@@ -339,7 +355,8 @@ void UPlayerListWidget_C::OnLookUp(float Scale)
 
 void UPlayerListWidget_C::Custom_Event_1()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerListWidget.PlayerListWidget_C.Custom Event_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xb1c74b4);
 
 	UPlayerListWidget_C_Custom_Event_1_Params params;
 
@@ -356,7 +373,8 @@ void UPlayerListWidget_C::Custom_Event_1()
 
 void UPlayerListWidget_C::Custom_Event_2()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerListWidget.PlayerListWidget_C.Custom Event_2");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x7d23e3ef);
 
 	UPlayerListWidget_C_Custom_Event_2_Params params;
 
@@ -373,7 +391,8 @@ void UPlayerListWidget_C::Custom_Event_2()
 
 void UPlayerListWidget_C::Destruct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerListWidget.PlayerListWidget_C.Destruct");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xf674f57b);
 
 	UPlayerListWidget_C_Destruct_Params params;
 
@@ -392,7 +411,8 @@ void UPlayerListWidget_C::Destruct()
 
 void UPlayerListWidget_C::ExecuteUbergraph_PlayerListWidget(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerListWidget.PlayerListWidget_C.ExecuteUbergraph_PlayerListWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xf4bbae3a);
 
 	UPlayerListWidget_C_ExecuteUbergraph_PlayerListWidget_Params params;
 	params.EntryPoint = EntryPoint;

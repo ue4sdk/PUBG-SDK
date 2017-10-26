@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,7 +17,8 @@ namespace Classes
 
 void UABP_Motorbike_03_C::TickBikePose()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ABP_Motorbike_03.ABP_Motorbike_03_C.TickBikePose");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xb01e7790);
 
 	UABP_Motorbike_03_C_TickBikePose_Params params;
 
@@ -34,7 +35,8 @@ void UABP_Motorbike_03_C::TickBikePose()
 
 void UABP_Motorbike_03_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Motorbike_03_AnimGraphNode_ModifyBone_79E6A0D24EED59EEE71332B0CBAFEDBB()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ABP_Motorbike_03.ABP_Motorbike_03_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Motorbike_03_AnimGraphNode_ModifyBone_79E6A0D24EED59EEE71332B0CBAFEDBB");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc34cc730);
 
 	UABP_Motorbike_03_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Motorbike_03_AnimGraphNode_ModifyBone_79E6A0D24EED59EEE71332B0CBAFEDBB_Params params;
 
@@ -53,7 +55,8 @@ void UABP_Motorbike_03_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Motorb
 
 void UABP_Motorbike_03_C::BlueprintUpdateAnimation(float* DeltaTimeX)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ABP_Motorbike_03.ABP_Motorbike_03_C.BlueprintUpdateAnimation");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x3f2e040b);
 
 	UABP_Motorbike_03_C_BlueprintUpdateAnimation_Params params;
 	params.DeltaTimeX = DeltaTimeX;
@@ -73,7 +76,8 @@ void UABP_Motorbike_03_C::BlueprintUpdateAnimation(float* DeltaTimeX)
 
 void UABP_Motorbike_03_C::ExecuteUbergraph_ABP_Motorbike_03(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ABP_Motorbike_03.ABP_Motorbike_03_C.ExecuteUbergraph_ABP_Motorbike_03");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x93e82f19);
 
 	UABP_Motorbike_03_C_ExecuteUbergraph_ABP_Motorbike_03_Params params;
 	params.EntryPoint = EntryPoint;

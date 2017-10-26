@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -22,7 +22,8 @@ namespace Classes
 
 void UWebPopup_C::SetPopupData(const struct FString& PopupId, const struct FString& Uri, bool UseBackgroundColor, const struct FLinearColor& BackgroundColor)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WebPopup.WebPopup_C.SetPopupData");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xe3d0efd9);
 
 	UWebPopup_C_SetPopupData_Params params;
 	params.PopupId = PopupId;
@@ -46,7 +47,8 @@ void UWebPopup_C::SetPopupData(const struct FString& PopupId, const struct FStri
 
 void UWebPopup_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WebPopup.WebPopup_C.Tick");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xa382052c);
 
 	UWebPopup_C_Tick_Params params;
 	params.MyGeometry = MyGeometry;
@@ -65,7 +67,8 @@ void UWebPopup_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 
 void UWebPopup_C::Destruct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WebPopup.WebPopup_C.Destruct");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x938e6da5);
 
 	UWebPopup_C_Destruct_Params params;
 
@@ -82,7 +85,8 @@ void UWebPopup_C::Destruct()
 
 void UWebPopup_C::BndEvt__Button_Exit_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WebPopup.WebPopup_C.BndEvt__Button_Exit_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x98c89dbe);
 
 	UWebPopup_C_BndEvt__Button_Exit_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature_Params params;
 
@@ -99,7 +103,8 @@ void UWebPopup_C::BndEvt__Button_Exit_K2Node_ComponentBoundEvent_0_OnButtonClick
 
 void UWebPopup_C::BndEvt__Button_Reload_K2Node_ComponentBoundEvent_18_OnButtonClickedEvent__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WebPopup.WebPopup_C.BndEvt__Button_Reload_K2Node_ComponentBoundEvent_18_OnButtonClickedEvent__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xdf53fb4e);
 
 	UWebPopup_C_BndEvt__Button_Reload_K2Node_ComponentBoundEvent_18_OnButtonClickedEvent__DelegateSignature_Params params;
 
@@ -116,7 +121,8 @@ void UWebPopup_C::BndEvt__Button_Reload_K2Node_ComponentBoundEvent_18_OnButtonCl
 
 void UWebPopup_C::BndEvt__Button_Back_K2Node_ComponentBoundEvent_37_OnButtonClickedEvent__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WebPopup.WebPopup_C.BndEvt__Button_Back_K2Node_ComponentBoundEvent_37_OnButtonClickedEvent__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x60c434dd);
 
 	UWebPopup_C_BndEvt__Button_Back_K2Node_ComponentBoundEvent_37_OnButtonClickedEvent__DelegateSignature_Params params;
 
@@ -135,7 +141,8 @@ void UWebPopup_C::BndEvt__Button_Back_K2Node_ComponentBoundEvent_37_OnButtonClic
 
 void UWebPopup_C::ExecuteUbergraph_WebPopup(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WebPopup.WebPopup_C.ExecuteUbergraph_WebPopup");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x23f1b583);
 
 	UWebPopup_C_ExecuteUbergraph_WebPopup_Params params;
 	params.EntryPoint = EntryPoint;
@@ -155,7 +162,8 @@ void UWebPopup_C::ExecuteUbergraph_WebPopup(int EntryPoint)
 
 void UWebPopup_C::OnClosePopup__DelegateSignature(class UWebPopup_C* Widget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WebPopup.WebPopup_C.OnClosePopup__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x58d68765);
 
 	UWebPopup_C_OnClosePopup__DelegateSignature_Params params;
 	params.Widget = Widget;

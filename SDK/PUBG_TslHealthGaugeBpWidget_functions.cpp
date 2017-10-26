@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,8 @@ namespace Classes
 
 void UTslHealthGaugeBpWidget_C::On_Background_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TslHealthGaugeBpWidget.TslHealthGaugeBpWidget_C.On_Background_Prepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc1f489ba);
 
 	UTslHealthGaugeBpWidget_C_On_Background_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -39,7 +40,8 @@ void UTslHealthGaugeBpWidget_C::On_Background_Prepass_1(class UWidget* BoundWidg
 
 struct FLinearColor UTslHealthGaugeBpWidget_C::Get_Background_ColorAndOpacity_1()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TslHealthGaugeBpWidget.TslHealthGaugeBpWidget_C.Get_Background_ColorAndOpacity_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x463357e);
 
 	UTslHealthGaugeBpWidget_C_Get_Background_ColorAndOpacity_1_Params params;
 
@@ -60,7 +62,8 @@ struct FLinearColor UTslHealthGaugeBpWidget_C::Get_Background_ColorAndOpacity_1(
 
 TEnumAsByte<ESlateVisibility> UTslHealthGaugeBpWidget_C::Get_Background_Visibility_1()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TslHealthGaugeBpWidget.TslHealthGaugeBpWidget_C.Get_Background_Visibility_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xb6931007);
 
 	UTslHealthGaugeBpWidget_C_Get_Background_Visibility_1_Params params;
 
@@ -79,7 +82,8 @@ TEnumAsByte<ESlateVisibility> UTslHealthGaugeBpWidget_C::Get_Background_Visibili
 
 void UTslHealthGaugeBpWidget_C::UpdateWaning()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TslHealthGaugeBpWidget.TslHealthGaugeBpWidget_C.UpdateWaning");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc7a83176);
 
 	UTslHealthGaugeBpWidget_C_UpdateWaning_Params params;
 
@@ -96,7 +100,8 @@ void UTslHealthGaugeBpWidget_C::UpdateWaning()
 
 void UTslHealthGaugeBpWidget_C::UpdateColorGauge()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TslHealthGaugeBpWidget.TslHealthGaugeBpWidget_C.UpdateColorGauge");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xf2ce4712);
 
 	UTslHealthGaugeBpWidget_C_UpdateColorGauge_Params params;
 
@@ -115,7 +120,8 @@ void UTslHealthGaugeBpWidget_C::UpdateColorGauge()
 
 void UTslHealthGaugeBpWidget_C::GetMoveCurve(class UCurveFloat** NewParam)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TslHealthGaugeBpWidget.TslHealthGaugeBpWidget_C.GetMoveCurve");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x8c575f4f);
 
 	UTslHealthGaugeBpWidget_C_GetMoveCurve_Params params;
 
@@ -138,7 +144,8 @@ void UTslHealthGaugeBpWidget_C::GetMoveCurve(class UCurveFloat** NewParam)
 
 void UTslHealthGaugeBpWidget_C::SetHealth(float NewDestination, bool bGroggy)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TslHealthGaugeBpWidget.TslHealthGaugeBpWidget_C.SetHealth");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x338c05bb);
 
 	UTslHealthGaugeBpWidget_C_SetHealth_Params params;
 	params.NewDestination = NewDestination;
@@ -157,7 +164,8 @@ void UTslHealthGaugeBpWidget_C::SetHealth(float NewDestination, bool bGroggy)
 
 void UTslHealthGaugeBpWidget_C::MoveTick()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TslHealthGaugeBpWidget.TslHealthGaugeBpWidget_C.MoveTick");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x85e1c0bf);
 
 	UTslHealthGaugeBpWidget_C_MoveTick_Params params;
 
@@ -176,7 +184,8 @@ void UTslHealthGaugeBpWidget_C::MoveTick()
 
 void UTslHealthGaugeBpWidget_C::GetHealthGaugeColorOpacity(struct FLinearColor* Color)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TslHealthGaugeBpWidget.TslHealthGaugeBpWidget_C.GetHealthGaugeColorOpacity");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x9a7f7764);
 
 	UTslHealthGaugeBpWidget_C_GetHealthGaugeColorOpacity_Params params;
 
@@ -196,7 +205,8 @@ void UTslHealthGaugeBpWidget_C::GetHealthGaugeColorOpacity(struct FLinearColor* 
 
 void UTslHealthGaugeBpWidget_C::Construct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TslHealthGaugeBpWidget.TslHealthGaugeBpWidget_C.Construct");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x19fb83c2);
 
 	UTslHealthGaugeBpWidget_C_Construct_Params params;
 
@@ -216,7 +226,8 @@ void UTslHealthGaugeBpWidget_C::Construct()
 
 void UTslHealthGaugeBpWidget_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TslHealthGaugeBpWidget.TslHealthGaugeBpWidget_C.Tick");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xba857c00);
 
 	UTslHealthGaugeBpWidget_C_Tick_Params params;
 	params.MyGeometry = MyGeometry;
@@ -235,7 +246,8 @@ void UTslHealthGaugeBpWidget_C::Tick(struct FGeometry* MyGeometry, float* InDelt
 
 void UTslHealthGaugeBpWidget_C::StartMove()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TslHealthGaugeBpWidget.TslHealthGaugeBpWidget_C.StartMove");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xff7d7956);
 
 	UTslHealthGaugeBpWidget_C_StartMove_Params params;
 
@@ -254,7 +266,8 @@ void UTslHealthGaugeBpWidget_C::StartMove()
 
 void UTslHealthGaugeBpWidget_C::ExecuteUbergraph_TslHealthGaugeBpWidget(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TslHealthGaugeBpWidget.TslHealthGaugeBpWidget_C.ExecuteUbergraph_TslHealthGaugeBpWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x13abfd0d);
 
 	UTslHealthGaugeBpWidget_C_ExecuteUbergraph_TslHealthGaugeBpWidget_Params params;
 	params.EntryPoint = EntryPoint;

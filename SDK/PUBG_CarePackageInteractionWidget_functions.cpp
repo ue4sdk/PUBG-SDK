@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,8 @@ namespace Classes
 
 void UCarePackageInteractionWidget_C::ShowCarePackageInteractionWidget(bool IsShow)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CarePackageInteractionWidget.CarePackageInteractionWidget_C.ShowCarePackageInteractionWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x28385b49);
 
 	UCarePackageInteractionWidget_C_ShowCarePackageInteractionWidget_Params params;
 	params.IsShow = IsShow;
@@ -40,7 +41,8 @@ void UCarePackageInteractionWidget_C::ShowCarePackageInteractionWidget(bool IsSh
 
 void UCarePackageInteractionWidget_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CarePackageInteractionWidget.CarePackageInteractionWidget_C.Tick");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x98917cee);
 
 	UCarePackageInteractionWidget_C_Tick_Params params;
 	params.MyGeometry = MyGeometry;
@@ -59,7 +61,8 @@ void UCarePackageInteractionWidget_C::Tick(struct FGeometry* MyGeometry, float* 
 
 void UCarePackageInteractionWidget_C::Construct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CarePackageInteractionWidget.CarePackageInteractionWidget_C.Construct");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x18f41624);
 
 	UCarePackageInteractionWidget_C_Construct_Params params;
 
@@ -76,7 +79,8 @@ void UCarePackageInteractionWidget_C::Construct()
 
 void UCarePackageInteractionWidget_C::BndEvt__Vanishing_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CarePackageInteractionWidget.CarePackageInteractionWidget_C.BndEvt__Vanishing_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x76c7708);
 
 	UCarePackageInteractionWidget_C_BndEvt__Vanishing_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature_Params params;
 
@@ -93,7 +97,8 @@ void UCarePackageInteractionWidget_C::BndEvt__Vanishing_K2Node_ComponentBoundEve
 
 void UCarePackageInteractionWidget_C::CustomTick()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CarePackageInteractionWidget.CarePackageInteractionWidget_C.CustomTick");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x4434e997);
 
 	UCarePackageInteractionWidget_C_CustomTick_Params params;
 
@@ -110,7 +115,8 @@ void UCarePackageInteractionWidget_C::CustomTick()
 
 void UCarePackageInteractionWidget_C::TimerCheckCarePackage()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CarePackageInteractionWidget.CarePackageInteractionWidget_C.TimerCheckCarePackage");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x63f33bfd);
 
 	UCarePackageInteractionWidget_C_TimerCheckCarePackage_Params params;
 
@@ -129,7 +135,8 @@ void UCarePackageInteractionWidget_C::TimerCheckCarePackage()
 
 void UCarePackageInteractionWidget_C::ExecuteUbergraph_CarePackageInteractionWidget(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CarePackageInteractionWidget.CarePackageInteractionWidget_C.ExecuteUbergraph_CarePackageInteractionWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xa0f57cde);
 
 	UCarePackageInteractionWidget_C_ExecuteUbergraph_CarePackageInteractionWidget_Params params;
 	params.EntryPoint = EntryPoint;

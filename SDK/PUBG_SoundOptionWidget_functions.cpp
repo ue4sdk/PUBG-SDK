@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,8 @@ namespace Classes
 
 bool USoundOptionWidget_C::IsEnable_VoiceSetting()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SoundOptionWidget.SoundOptionWidget_C.IsEnable_VoiceSetting");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x5fa2746f);
 
 	USoundOptionWidget_C_IsEnable_VoiceSetting_Params params;
 
@@ -40,7 +41,8 @@ bool USoundOptionWidget_C::IsEnable_VoiceSetting()
 
 bool USoundOptionWidget_C::IsKeyUp()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SoundOptionWidget.SoundOptionWidget_C.IsKeyUp");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x6e3b39ab);
 
 	USoundOptionWidget_C_IsKeyUp_Params params;
 
@@ -61,7 +63,8 @@ bool USoundOptionWidget_C::IsKeyUp()
 
 bool USoundOptionWidget_C::IsChanged()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SoundOptionWidget.SoundOptionWidget_C.IsChanged");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x9af5c0c9);
 
 	USoundOptionWidget_C_IsChanged_Params params;
 
@@ -80,7 +83,8 @@ bool USoundOptionWidget_C::IsChanged()
 
 void USoundOptionWidget_C::OnApply()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SoundOptionWidget.SoundOptionWidget_C.OnApply");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x2f6e0b4);
 
 	USoundOptionWidget_C_OnApply_Params params;
 
@@ -97,7 +101,8 @@ void USoundOptionWidget_C::OnApply()
 
 void USoundOptionWidget_C::OnDefault()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SoundOptionWidget.SoundOptionWidget_C.OnDefault");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x5696060f);
 
 	USoundOptionWidget_C_OnDefault_Params params;
 
@@ -114,7 +119,8 @@ void USoundOptionWidget_C::OnDefault()
 
 void USoundOptionWidget_C::OnReset()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SoundOptionWidget.SoundOptionWidget_C.OnReset");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x5b6ed765);
 
 	USoundOptionWidget_C_OnReset_Params params;
 
@@ -131,7 +137,8 @@ void USoundOptionWidget_C::OnReset()
 
 void USoundOptionWidget_C::Construct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SoundOptionWidget.SoundOptionWidget_C.Construct");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x5eeaf9de);
 
 	USoundOptionWidget_C_Construct_Params params;
 
@@ -150,7 +157,8 @@ void USoundOptionWidget_C::Construct()
 
 void USoundOptionWidget_C::ExecuteUbergraph_SoundOptionWidget(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function SoundOptionWidget.SoundOptionWidget_C.ExecuteUbergraph_SoundOptionWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xf24a118f);
 
 	USoundOptionWidget_C_ExecuteUbergraph_SoundOptionWidget_Params params;
 	params.EntryPoint = EntryPoint;

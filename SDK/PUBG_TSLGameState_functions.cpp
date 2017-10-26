@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,7 +17,8 @@ namespace Classes
 
 void ATSLGameState_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TSLGameState.TSLGameState_C.UserConstructionScript");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xa9c7e108);
 
 	ATSLGameState_C_UserConstructionScript_Params params;
 
@@ -36,7 +37,8 @@ void ATSLGameState_C::UserConstructionScript()
 
 void ATSLGameState_C::UpdateWorldTimeSecondsDelta(float* DeltaSeconds)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TSLGameState.TSLGameState_C.UpdateWorldTimeSecondsDelta");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xef32a310);
 
 	ATSLGameState_C_UpdateWorldTimeSecondsDelta_Params params;
 	params.DeltaSeconds = DeltaSeconds;
@@ -56,7 +58,8 @@ void ATSLGameState_C::UpdateWorldTimeSecondsDelta(float* DeltaSeconds)
 
 void ATSLGameState_C::ExecuteUbergraph_TSLGameState(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function TSLGameState.TSLGameState_C.ExecuteUbergraph_TSLGameState");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc8d4e249);
 
 	ATSLGameState_C_ExecuteUbergraph_TSLGameState_Params params;
 	params.EntryPoint = EntryPoint;

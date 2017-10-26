@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -20,7 +20,8 @@ namespace Classes
 
 void UMainLobbyHUD_C::GetNameTagWidget(int SlotIndex, class ULobbyVoiceChat_C** Widget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MainLobbyHUD.MainLobbyHUD_C.GetNameTagWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x2606f4e8);
 
 	UMainLobbyHUD_C_GetNameTagWidget_Params params;
 	params.SlotIndex = SlotIndex;
@@ -43,7 +44,8 @@ void UMainLobbyHUD_C::GetNameTagWidget(int SlotIndex, class ULobbyVoiceChat_C** 
 
 void UMainLobbyHUD_C::OnDestroyCharacter(int SlotIndex)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MainLobbyHUD.MainLobbyHUD_C.OnDestroyCharacter");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xa5852ef);
 
 	UMainLobbyHUD_C_OnDestroyCharacter_Params params;
 	params.SlotIndex = SlotIndex;
@@ -63,7 +65,8 @@ void UMainLobbyHUD_C::OnDestroyCharacter(int SlotIndex)
 
 void UMainLobbyHUD_C::OnCreateCharacter(int SlotIndex)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MainLobbyHUD.MainLobbyHUD_C.OnCreateCharacter");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x44eb13d9);
 
 	UMainLobbyHUD_C_OnCreateCharacter_Params params;
 	params.SlotIndex = SlotIndex;
@@ -83,7 +86,8 @@ void UMainLobbyHUD_C::OnCreateCharacter(int SlotIndex)
 
 void UMainLobbyHUD_C::On_NameTag_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MainLobbyHUD.MainLobbyHUD_C.On_NameTag_Prepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x1175278f);
 
 	UMainLobbyHUD_C_On_NameTag_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -103,7 +107,8 @@ void UMainLobbyHUD_C::On_NameTag_Prepass_1(class UWidget* BoundWidget)
 
 void UMainLobbyHUD_C::CloseWebPopupByID(const struct FString& WebPopupID)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MainLobbyHUD.MainLobbyHUD_C.CloseWebPopupByID");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xaa53d801);
 
 	UMainLobbyHUD_C_CloseWebPopupByID_Params params;
 	params.WebPopupID = WebPopupID;
@@ -123,7 +128,8 @@ void UMainLobbyHUD_C::CloseWebPopupByID(const struct FString& WebPopupID)
 
 void UMainLobbyHUD_C::RemoveWebPopup(class UWebPopup_C* Widget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MainLobbyHUD.MainLobbyHUD_C.RemoveWebPopup");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xa83b6de3);
 
 	UMainLobbyHUD_C_RemoveWebPopup_Params params;
 	params.Widget = Widget;
@@ -143,7 +149,8 @@ void UMainLobbyHUD_C::RemoveWebPopup(class UWebPopup_C* Widget)
 
 void UMainLobbyHUD_C::AddWebPopup(class UWebPopup_C* Widget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MainLobbyHUD.MainLobbyHUD_C.AddWebPopup");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xb832b7b4);
 
 	UMainLobbyHUD_C_AddWebPopup_Params params;
 	params.Widget = Widget;
@@ -164,7 +171,8 @@ void UMainLobbyHUD_C::AddWebPopup(class UWebPopup_C* Widget)
 
 void UMainLobbyHUD_C::CanShowWebPopup(const struct FString& PopupId, bool* Result)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MainLobbyHUD.MainLobbyHUD_C.CanShowWebPopup");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xabdf410c);
 
 	UMainLobbyHUD_C_CanShowWebPopup_Params params;
 	params.PopupId = PopupId;
@@ -187,7 +195,8 @@ void UMainLobbyHUD_C::CanShowWebPopup(const struct FString& PopupId, bool* Resul
 
 void UMainLobbyHUD_C::ShowWebPopupImpl(const struct FWebPopupParam& Param)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MainLobbyHUD.MainLobbyHUD_C.ShowWebPopupImpl");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x6d5a1546);
 
 	UMainLobbyHUD_C_ShowWebPopupImpl_Params params;
 	params.Param = Param;
@@ -207,7 +216,8 @@ void UMainLobbyHUD_C::ShowWebPopupImpl(const struct FWebPopupParam& Param)
 
 void UMainLobbyHUD_C::On_HorizontalBox_90_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MainLobbyHUD.MainLobbyHUD_C.On_HorizontalBox_90_Prepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xa0a6f51b);
 
 	UMainLobbyHUD_C_On_HorizontalBox_90_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -225,7 +235,8 @@ void UMainLobbyHUD_C::On_HorizontalBox_90_Prepass_1(class UWidget* BoundWidget)
 
 void UMainLobbyHUD_C::OnReload()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MainLobbyHUD.MainLobbyHUD_C.OnReload");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x6ea93267);
 
 	UMainLobbyHUD_C_OnReload_Params params;
 
@@ -244,7 +255,8 @@ void UMainLobbyHUD_C::OnReload()
 
 void UMainLobbyHUD_C::GetMainCoherentWidget(class UCoherentUIGTWidget** Browser)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MainLobbyHUD.MainLobbyHUD_C.GetMainCoherentWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xedae4f88);
 
 	UMainLobbyHUD_C_GetMainCoherentWidget_Params params;
 
@@ -264,7 +276,8 @@ void UMainLobbyHUD_C::GetMainCoherentWidget(class UCoherentUIGTWidget** Browser)
 
 void UMainLobbyHUD_C::OnKey_SystemMenuOrEscape()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MainLobbyHUD.MainLobbyHUD_C.OnKey_SystemMenuOrEscape");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xfb632a6c);
 
 	UMainLobbyHUD_C_OnKey_SystemMenuOrEscape_Params params;
 
@@ -281,7 +294,8 @@ void UMainLobbyHUD_C::OnKey_SystemMenuOrEscape()
 
 void UMainLobbyHUD_C::InitializeHUD()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MainLobbyHUD.MainLobbyHUD_C.InitializeHUD");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x5f113c08);
 
 	UMainLobbyHUD_C_InitializeHUD_Params params;
 
@@ -298,7 +312,8 @@ void UMainLobbyHUD_C::InitializeHUD()
 
 void UMainLobbyHUD_C::BndEvt__Button_Setting_K2Node_ComponentBoundEvent_190_OnButtonClickedEvent__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MainLobbyHUD.MainLobbyHUD_C.BndEvt__Button_Setting_K2Node_ComponentBoundEvent_190_OnButtonClickedEvent__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xa413c826);
 
 	UMainLobbyHUD_C_BndEvt__Button_Setting_K2Node_ComponentBoundEvent_190_OnButtonClickedEvent__DelegateSignature_Params params;
 
@@ -315,7 +330,8 @@ void UMainLobbyHUD_C::BndEvt__Button_Setting_K2Node_ComponentBoundEvent_190_OnBu
 
 void UMainLobbyHUD_C::BndEvt__Button_Reload_K2Node_ComponentBoundEvent_210_OnButtonClickedEvent__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MainLobbyHUD.MainLobbyHUD_C.BndEvt__Button_Reload_K2Node_ComponentBoundEvent_210_OnButtonClickedEvent__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x8e1ceafe);
 
 	UMainLobbyHUD_C_BndEvt__Button_Reload_K2Node_ComponentBoundEvent_210_OnButtonClickedEvent__DelegateSignature_Params params;
 
@@ -332,7 +348,8 @@ void UMainLobbyHUD_C::BndEvt__Button_Reload_K2Node_ComponentBoundEvent_210_OnBut
 
 void UMainLobbyHUD_C::BndEvt__Button_Quit_K2Node_ComponentBoundEvent_229_OnButtonClickedEvent__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MainLobbyHUD.MainLobbyHUD_C.BndEvt__Button_Quit_K2Node_ComponentBoundEvent_229_OnButtonClickedEvent__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x17a506a0);
 
 	UMainLobbyHUD_C_BndEvt__Button_Quit_K2Node_ComponentBoundEvent_229_OnButtonClickedEvent__DelegateSignature_Params params;
 
@@ -351,7 +368,8 @@ void UMainLobbyHUD_C::BndEvt__Button_Quit_K2Node_ComponentBoundEvent_229_OnButto
 
 void UMainLobbyHUD_C::ShowWebPopup(const struct FWebPopupParam& Param)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MainLobbyHUD.MainLobbyHUD_C.ShowWebPopup");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xcf44908c);
 
 	UMainLobbyHUD_C_ShowWebPopup_Params params;
 	params.Param = Param;
@@ -369,7 +387,8 @@ void UMainLobbyHUD_C::ShowWebPopup(const struct FWebPopupParam& Param)
 
 void UMainLobbyHUD_C::Construct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MainLobbyHUD.MainLobbyHUD_C.Construct");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xead135de);
 
 	UMainLobbyHUD_C_Construct_Params params;
 
@@ -388,7 +407,8 @@ void UMainLobbyHUD_C::Construct()
 
 void UMainLobbyHUD_C::ExecuteUbergraph_MainLobbyHUD(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function MainLobbyHUD.MainLobbyHUD_C.ExecuteUbergraph_MainLobbyHUD");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x660146b3);
 
 	UMainLobbyHUD_C_ExecuteUbergraph_MainLobbyHUD_Params params;
 	params.EntryPoint = EntryPoint;

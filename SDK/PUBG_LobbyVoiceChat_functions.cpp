@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -22,7 +22,8 @@ namespace Classes
 
 void ULobbyVoiceChat_C::OnVoiceChatUpdated(const struct FString& UniqueId, bool bIsTeamChannel, bool bIsSpeaking, float Energy)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LobbyVoiceChat.LobbyVoiceChat_C.OnVoiceChatUpdated");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xb2161659);
 
 	ULobbyVoiceChat_C_OnVoiceChatUpdated_Params params;
 	params.UniqueId = UniqueId;
@@ -43,7 +44,8 @@ void ULobbyVoiceChat_C::OnVoiceChatUpdated(const struct FString& UniqueId, bool 
 
 void ULobbyVoiceChat_C::Construct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LobbyVoiceChat.LobbyVoiceChat_C.Construct");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xcdf409f6);
 
 	ULobbyVoiceChat_C_Construct_Params params;
 
@@ -62,7 +64,8 @@ void ULobbyVoiceChat_C::Construct()
 
 void ULobbyVoiceChat_C::ExecuteUbergraph_LobbyVoiceChat(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function LobbyVoiceChat.LobbyVoiceChat_C.ExecuteUbergraph_LobbyVoiceChat");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x3516f74b);
 
 	ULobbyVoiceChat_C_ExecuteUbergraph_LobbyVoiceChat_Params params;
 	params.EntryPoint = EntryPoint;

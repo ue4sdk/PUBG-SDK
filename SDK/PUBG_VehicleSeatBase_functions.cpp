@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,7 +17,8 @@ namespace Classes
 
 void AVehicleSeatBase_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VehicleSeatBase.VehicleSeatBase_C.UserConstructionScript");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xd5125174);
 
 	AVehicleSeatBase_C_UserConstructionScript_Params params;
 
@@ -36,7 +37,8 @@ void AVehicleSeatBase_C::UserConstructionScript()
 
 void AVehicleSeatBase_C::BndEvt__Interaction_K2Node_ComponentBoundEvent_63_ComponentInteractBySignature__DelegateSignature(class ATslCharacter* OtherCharacter)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VehicleSeatBase.VehicleSeatBase_C.BndEvt__Interaction_K2Node_ComponentBoundEvent_63_ComponentInteractBySignature__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x19dbee10);
 
 	AVehicleSeatBase_C_BndEvt__Interaction_K2Node_ComponentBoundEvent_63_ComponentInteractBySignature__DelegateSignature_Params params;
 	params.OtherCharacter = OtherCharacter;
@@ -54,7 +56,8 @@ void AVehicleSeatBase_C::BndEvt__Interaction_K2Node_ComponentBoundEvent_63_Compo
 
 void AVehicleSeatBase_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VehicleSeatBase.VehicleSeatBase_C.ReceiveBeginPlay");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x59ea61ab);
 
 	AVehicleSeatBase_C_ReceiveBeginPlay_Params params;
 
@@ -73,7 +76,8 @@ void AVehicleSeatBase_C::ReceiveBeginPlay()
 
 void AVehicleSeatBase_C::ExecuteUbergraph_VehicleSeatBase(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VehicleSeatBase.VehicleSeatBase_C.ExecuteUbergraph_VehicleSeatBase");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xda3faefd);
 
 	AVehicleSeatBase_C_ExecuteUbergraph_VehicleSeatBase_Params params;
 	params.EntryPoint = EntryPoint;

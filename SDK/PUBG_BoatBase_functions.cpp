@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,7 +17,8 @@ namespace Classes
 
 void ABoatBase_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BoatBase.BoatBase_C.UserConstructionScript");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xe9c476c2);
 
 	ABoatBase_C_UserConstructionScript_Params params;
 
@@ -34,7 +35,8 @@ void ABoatBase_C::UserConstructionScript()
 
 void ABoatBase_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BoatBase.BoatBase_C.ReceiveBeginPlay");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x17afe2d5);
 
 	ABoatBase_C_ReceiveBeginPlay_Params params;
 
@@ -53,7 +55,8 @@ void ABoatBase_C::ReceiveBeginPlay()
 
 void ABoatBase_C::ReceiveTick(float* DeltaSeconds)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BoatBase.BoatBase_C.ReceiveTick");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x4dcb6123);
 
 	ABoatBase_C_ReceiveTick_Params params;
 	params.DeltaSeconds = DeltaSeconds;
@@ -71,7 +74,8 @@ void ABoatBase_C::ReceiveTick(float* DeltaSeconds)
 
 void ABoatBase_C::EventFuelConsumption()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BoatBase.BoatBase_C.EventFuelConsumption");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xd8bce24);
 
 	ABoatBase_C_EventFuelConsumption_Params params;
 
@@ -90,7 +94,8 @@ void ABoatBase_C::EventFuelConsumption()
 
 void ABoatBase_C::ExecuteUbergraph_BoatBase(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BoatBase.BoatBase_C.ExecuteUbergraph_BoatBase");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x1826a1bc);
 
 	ABoatBase_C_ExecuteUbergraph_BoatBase_Params params;
 	params.EntryPoint = EntryPoint;

@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,8 @@ namespace Classes
 
 struct FText UOptionSettingsButotn_C::GetText_1()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function OptionSettingsButotn.OptionSettingsButotn_C.GetText_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x3573fe30);
 
 	UOptionSettingsButotn_C_GetText_1_Params params;
 
@@ -40,7 +41,8 @@ struct FText UOptionSettingsButotn_C::GetText_1()
 
 struct FSlateColor UOptionSettingsButotn_C::GetColorAndOpacity_1()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function OptionSettingsButotn.OptionSettingsButotn_C.GetColorAndOpacity_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x498473b4);
 
 	UOptionSettingsButotn_C_GetColorAndOpacity_1_Params params;
 
@@ -59,7 +61,8 @@ struct FSlateColor UOptionSettingsButotn_C::GetColorAndOpacity_1()
 
 void UOptionSettingsButotn_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_20_OnButtonClickedEvent__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function OptionSettingsButotn.OptionSettingsButotn_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_20_OnButtonClickedEvent__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x5b98a8e2);
 
 	UOptionSettingsButotn_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_20_OnButtonClickedEvent__DelegateSignature_Params params;
 
@@ -78,7 +81,8 @@ void UOptionSettingsButotn_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_20_OnB
 
 void UOptionSettingsButotn_C::ExecuteUbergraph_OptionSettingsButotn(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function OptionSettingsButotn.OptionSettingsButotn_C.ExecuteUbergraph_OptionSettingsButotn");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x4f0061a9);
 
 	UOptionSettingsButotn_C_ExecuteUbergraph_OptionSettingsButotn_Params params;
 	params.EntryPoint = EntryPoint;
@@ -96,7 +100,8 @@ void UOptionSettingsButotn_C::ExecuteUbergraph_OptionSettingsButotn(int EntryPoi
 
 void UOptionSettingsButotn_C::OnButtonDown__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function OptionSettingsButotn.OptionSettingsButotn_C.OnButtonDown__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x8a5800ef);
 
 	UOptionSettingsButotn_C_OnButtonDown__DelegateSignature_Params params;
 

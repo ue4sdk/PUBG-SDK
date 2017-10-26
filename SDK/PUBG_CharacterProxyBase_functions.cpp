@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,7 +17,8 @@ namespace Classes
 
 void ACharacterProxyBase_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CharacterProxyBase.CharacterProxyBase_C.UserConstructionScript");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x921d81a8);
 
 	ACharacterProxyBase_C_UserConstructionScript_Params params;
 
@@ -34,7 +35,8 @@ void ACharacterProxyBase_C::UserConstructionScript()
 
 void ACharacterProxyBase_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CharacterProxyBase.CharacterProxyBase_C.ReceiveBeginPlay");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x577d35f);
 
 	ACharacterProxyBase_C_ReceiveBeginPlay_Params params;
 
@@ -53,7 +55,8 @@ void ACharacterProxyBase_C::ReceiveBeginPlay()
 
 void ACharacterProxyBase_C::ExecuteUbergraph_CharacterProxyBase(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CharacterProxyBase.CharacterProxyBase_C.ExecuteUbergraph_CharacterProxyBase");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xa261ba8f);
 
 	ACharacterProxyBase_C_ExecuteUbergraph_CharacterProxyBase_Params params;
 	params.EntryPoint = EntryPoint;

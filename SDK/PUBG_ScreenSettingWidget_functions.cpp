@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,8 @@ namespace Classes
 
 bool UScreenSettingWidget_C::IsEnable()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ScreenSettingWidget.ScreenSettingWidget_C.IsEnable");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x619527be);
 
 	UScreenSettingWidget_C_IsEnable_Params params;
 
@@ -40,7 +41,8 @@ bool UScreenSettingWidget_C::IsEnable()
 
 void UScreenSettingWidget_C::GetSelectedFullScreenMode(TEnumAsByte<EWindowMode>* FullscreenMode)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ScreenSettingWidget.ScreenSettingWidget_C.GetSelectedFullScreenMode");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x8d1d2230);
 
 	UScreenSettingWidget_C_GetSelectedFullScreenMode_Params params;
 
@@ -60,7 +62,8 @@ void UScreenSettingWidget_C::GetSelectedFullScreenMode(TEnumAsByte<EWindowMode>*
 
 void UScreenSettingWidget_C::SettingDefault()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ScreenSettingWidget.ScreenSettingWidget_C.SettingDefault");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xea945590);
 
 	UScreenSettingWidget_C_SettingDefault_Params params;
 
@@ -79,7 +82,8 @@ void UScreenSettingWidget_C::SettingDefault()
 
 bool UScreenSettingWidget_C::IsChanged()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ScreenSettingWidget.ScreenSettingWidget_C.IsChanged");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x698cc02d);
 
 	UScreenSettingWidget_C_IsChanged_Params params;
 
@@ -100,7 +104,8 @@ bool UScreenSettingWidget_C::IsChanged()
 
 bool UScreenSettingWidget_C::GetResolutionEnabled()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ScreenSettingWidget.ScreenSettingWidget_C.GetResolutionEnabled");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xf4f7a6);
 
 	UScreenSettingWidget_C_GetResolutionEnabled_Params params;
 
@@ -121,7 +126,8 @@ bool UScreenSettingWidget_C::GetResolutionEnabled()
 
 void UScreenSettingWidget_C::GetSelectedResolution(struct FScreenResolution* SelectedResolution)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ScreenSettingWidget.ScreenSettingWidget_C.GetSelectedResolution");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xf7f445b8);
 
 	UScreenSettingWidget_C_GetSelectedResolution_Params params;
 
@@ -141,7 +147,8 @@ void UScreenSettingWidget_C::GetSelectedResolution(struct FScreenResolution* Sel
 
 void UScreenSettingWidget_C::InitializeResolutionIWidget()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ScreenSettingWidget.ScreenSettingWidget_C.InitializeResolutionIWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x1e5cac78);
 
 	UScreenSettingWidget_C_InitializeResolutionIWidget_Params params;
 
@@ -158,7 +165,8 @@ void UScreenSettingWidget_C::InitializeResolutionIWidget()
 
 void UScreenSettingWidget_C::OnApply()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ScreenSettingWidget.ScreenSettingWidget_C.OnApply");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x1ecff610);
 
 	UScreenSettingWidget_C_OnApply_Params params;
 
@@ -175,7 +183,8 @@ void UScreenSettingWidget_C::OnApply()
 
 void UScreenSettingWidget_C::OnDefault()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ScreenSettingWidget.ScreenSettingWidget_C.OnDefault");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x94abed03);
 
 	UScreenSettingWidget_C_OnDefault_Params params;
 
@@ -192,7 +201,8 @@ void UScreenSettingWidget_C::OnDefault()
 
 void UScreenSettingWidget_C::OnReset()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ScreenSettingWidget.ScreenSettingWidget_C.OnReset");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xdd5fce11);
 
 	UScreenSettingWidget_C_OnReset_Params params;
 
@@ -209,7 +219,8 @@ void UScreenSettingWidget_C::OnReset()
 
 void UScreenSettingWidget_C::Construct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ScreenSettingWidget.ScreenSettingWidget_C.Construct");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x79c5b46a);
 
 	UScreenSettingWidget_C_Construct_Params params;
 
@@ -228,7 +239,8 @@ void UScreenSettingWidget_C::Construct()
 
 void UScreenSettingWidget_C::ExecuteUbergraph_ScreenSettingWidget(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ScreenSettingWidget.ScreenSettingWidget_C.ExecuteUbergraph_ScreenSettingWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x22ab8f71);
 
 	UScreenSettingWidget_C_ExecuteUbergraph_ScreenSettingWidget_Params params;
 	params.EntryPoint = EntryPoint;

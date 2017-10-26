@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,8 @@ namespace Classes
 
 void UBlueZoneGpsWidget_Circle_C::SubPrepass(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Circle.BlueZoneGpsWidget_Circle_C.SubPrepass");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xa387793);
 
 	UBlueZoneGpsWidget_Circle_C_SubPrepass_Params params;
 	params.BoundWidget = BoundWidget;
@@ -39,7 +40,8 @@ void UBlueZoneGpsWidget_Circle_C::SubPrepass(class UWidget* BoundWidget)
 
 void UBlueZoneGpsWidget_Circle_C::On_BluezoneLight_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Circle.BlueZoneGpsWidget_Circle_C.On_BluezoneLight_Prepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x237a15a0);
 
 	UBlueZoneGpsWidget_Circle_C_On_BluezoneLight_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -59,7 +61,8 @@ void UBlueZoneGpsWidget_Circle_C::On_BluezoneLight_Prepass_1(class UWidget* Boun
 
 void UBlueZoneGpsWidget_Circle_C::On_ImageBorder_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Circle.BlueZoneGpsWidget_Circle_C.On_ImageBorder_Prepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc9181c47);
 
 	UBlueZoneGpsWidget_Circle_C_On_ImageBorder_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -79,7 +82,8 @@ void UBlueZoneGpsWidget_Circle_C::On_ImageBorder_Prepass_1(class UWidget* BoundW
 
 void UBlueZoneGpsWidget_Circle_C::TickReset(float Time)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Circle.BlueZoneGpsWidget_Circle_C.TickReset");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x37f5804f);
 
 	UBlueZoneGpsWidget_Circle_C_TickReset_Params params;
 	params.Time = Time;
@@ -97,7 +101,8 @@ void UBlueZoneGpsWidget_Circle_C::TickReset(float Time)
 
 void UBlueZoneGpsWidget_Circle_C::Construct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Circle.BlueZoneGpsWidget_Circle_C.Construct");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xd92f4bec);
 
 	UBlueZoneGpsWidget_Circle_C_Construct_Params params;
 
@@ -116,7 +121,8 @@ void UBlueZoneGpsWidget_Circle_C::Construct()
 
 void UBlueZoneGpsWidget_Circle_C::ChildUpdateGauge(float* Gauge)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Circle.BlueZoneGpsWidget_Circle_C.ChildUpdateGauge");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xeb892703);
 
 	UBlueZoneGpsWidget_Circle_C_ChildUpdateGauge_Params params;
 	params.Gauge = Gauge;
@@ -136,7 +142,8 @@ void UBlueZoneGpsWidget_Circle_C::ChildUpdateGauge(float* Gauge)
 
 void UBlueZoneGpsWidget_Circle_C::MainPrepassWidgetVisibilitySetting(class UWidget** BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Circle.BlueZoneGpsWidget_Circle_C.MainPrepassWidgetVisibilitySetting");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x8087586a);
 
 	UBlueZoneGpsWidget_Circle_C_MainPrepassWidgetVisibilitySetting_Params params;
 	params.BoundWidget = BoundWidget;
@@ -154,7 +161,8 @@ void UBlueZoneGpsWidget_Circle_C::MainPrepassWidgetVisibilitySetting(class UWidg
 
 void UBlueZoneGpsWidget_Circle_C::OnWarning()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Circle.BlueZoneGpsWidget_Circle_C.OnWarning");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x1c43b8ee);
 
 	UBlueZoneGpsWidget_Circle_C_OnWarning_Params params;
 
@@ -171,7 +179,8 @@ void UBlueZoneGpsWidget_Circle_C::OnWarning()
 
 void UBlueZoneGpsWidget_Circle_C::OnEnterNextPlayzone()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Circle.BlueZoneGpsWidget_Circle_C.OnEnterNextPlayzone");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x9108bd6f);
 
 	UBlueZoneGpsWidget_Circle_C_OnEnterNextPlayzone_Params params;
 
@@ -188,7 +197,8 @@ void UBlueZoneGpsWidget_Circle_C::OnEnterNextPlayzone()
 
 void UBlueZoneGpsWidget_Circle_C::OnLeaveNextPlayzone()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Circle.BlueZoneGpsWidget_Circle_C.OnLeaveNextPlayzone");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x9ad80e3c);
 
 	UBlueZoneGpsWidget_Circle_C_OnLeaveNextPlayzone_Params params;
 
@@ -207,7 +217,8 @@ void UBlueZoneGpsWidget_Circle_C::OnLeaveNextPlayzone()
 
 void UBlueZoneGpsWidget_Circle_C::ExecuteUbergraph_BlueZoneGpsWidget_Circle(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BlueZoneGpsWidget_Circle.BlueZoneGpsWidget_Circle_C.ExecuteUbergraph_BlueZoneGpsWidget_Circle");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x74f4b494);
 
 	UBlueZoneGpsWidget_Circle_C_ExecuteUbergraph_BlueZoneGpsWidget_Circle_Params params;
 	params.EntryPoint = EntryPoint;

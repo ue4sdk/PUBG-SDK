@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,8 @@ namespace Classes
 
 void UCountDownWidget_C::GetTslGameState(class ATslGameState** GameState)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CountDownWidget.CountDownWidget_C.GetTslGameState");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x83b5157f);
 
 	UCountDownWidget_C_GetTslGameState_Params params;
 
@@ -41,7 +42,8 @@ void UCountDownWidget_C::GetTslGameState(class ATslGameState** GameState)
 
 void UCountDownWidget_C::On_CountDownBlock_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CountDownWidget.CountDownWidget_C.On_CountDownBlock_Prepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x8d5e4706);
 
 	UCountDownWidget_C_On_CountDownBlock_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -61,7 +63,8 @@ void UCountDownWidget_C::On_CountDownBlock_Prepass_1(class UWidget* BoundWidget)
 
 void UCountDownWidget_C::On_CountDownText_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CountDownWidget.CountDownWidget_C.On_CountDownText_Prepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x89e4c73c);
 
 	UCountDownWidget_C_On_CountDownText_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -81,7 +84,8 @@ void UCountDownWidget_C::On_CountDownText_Prepass_1(class UWidget* BoundWidget)
 
 TEnumAsByte<ESlateVisibility> UCountDownWidget_C::Get_CountDownText_Visibility_1()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CountDownWidget.CountDownWidget_C.Get_CountDownText_Visibility_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x57febd67);
 
 	UCountDownWidget_C_Get_CountDownText_Visibility_1_Params params;
 
@@ -102,7 +106,8 @@ TEnumAsByte<ESlateVisibility> UCountDownWidget_C::Get_CountDownText_Visibility_1
 
 struct FText UCountDownWidget_C::Get_CountDownText_Text_1()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CountDownWidget.CountDownWidget_C.Get_CountDownText_Text_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x26bf9dc2);
 
 	UCountDownWidget_C_Get_CountDownText_Text_1_Params params;
 

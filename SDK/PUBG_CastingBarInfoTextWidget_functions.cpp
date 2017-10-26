@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,8 @@ namespace Classes
 
 void UCastingBarInfoTextWidget_C::On_CastingInfoCancelMsgLayer_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CastingBarInfoTextWidget.CastingBarInfoTextWidget_C.On_CastingInfoCancelMsgLayer_Prepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc5115749);
 
 	UCastingBarInfoTextWidget_C_On_CastingInfoCancelMsgLayer_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -37,7 +38,8 @@ void UCastingBarInfoTextWidget_C::On_CastingInfoCancelMsgLayer_Prepass_1(class U
 
 void UCastingBarInfoTextWidget_C::OnCastCancleorFinish()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CastingBarInfoTextWidget.CastingBarInfoTextWidget_C.OnCastCancleorFinish");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x81cb30c1);
 
 	UCastingBarInfoTextWidget_C_OnCastCancleorFinish_Params params;
 
@@ -54,7 +56,8 @@ void UCastingBarInfoTextWidget_C::OnCastCancleorFinish()
 
 void UCastingBarInfoTextWidget_C::OnCastStart()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CastingBarInfoTextWidget.CastingBarInfoTextWidget_C.OnCastStart");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc95b3b7d);
 
 	UCastingBarInfoTextWidget_C_OnCastStart_Params params;
 
@@ -73,7 +76,8 @@ void UCastingBarInfoTextWidget_C::OnCastStart()
 
 struct FLinearColor UCastingBarInfoTextWidget_C::Get_CastingInfoCancelMsgLayer_ContentColorAndOpacity_1()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CastingBarInfoTextWidget.CastingBarInfoTextWidget_C.Get_CastingInfoCancelMsgLayer_ContentColorAndOpacity_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x6499d432);
 
 	UCastingBarInfoTextWidget_C_Get_CastingInfoCancelMsgLayer_ContentColorAndOpacity_1_Params params;
 
@@ -94,7 +98,8 @@ struct FLinearColor UCastingBarInfoTextWidget_C::Get_CastingInfoCancelMsgLayer_C
 
 void UCastingBarInfoTextWidget_C::On_CastingInfoCancelMsgBox_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CastingBarInfoTextWidget.CastingBarInfoTextWidget_C.On_CastingInfoCancelMsgBox_Prepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xb3108bb9);
 
 	UCastingBarInfoTextWidget_C_On_CastingInfoCancelMsgBox_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -114,7 +119,8 @@ void UCastingBarInfoTextWidget_C::On_CastingInfoCancelMsgBox_Prepass_1(class UWi
 
 struct FText UCastingBarInfoTextWidget_C::Get_KeyText_Text_1()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CastingBarInfoTextWidget.CastingBarInfoTextWidget_C.Get_KeyText_Text_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xe06207d8);
 
 	UCastingBarInfoTextWidget_C_Get_KeyText_Text_1_Params params;
 
@@ -135,7 +141,8 @@ struct FText UCastingBarInfoTextWidget_C::Get_KeyText_Text_1()
 
 void UCastingBarInfoTextWidget_C::OnPrepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CastingBarInfoTextWidget.CastingBarInfoTextWidget_C.OnPrepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x5a7f08ae);
 
 	UCastingBarInfoTextWidget_C_OnPrepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -155,7 +162,8 @@ void UCastingBarInfoTextWidget_C::OnPrepass_1(class UWidget* BoundWidget)
 
 TEnumAsByte<ESlateVisibility> UCastingBarInfoTextWidget_C::GetVisibility_1()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CastingBarInfoTextWidget.CastingBarInfoTextWidget_C.GetVisibility_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xfdf31acf);
 
 	UCastingBarInfoTextWidget_C_GetVisibility_1_Params params;
 
@@ -176,7 +184,8 @@ TEnumAsByte<ESlateVisibility> UCastingBarInfoTextWidget_C::GetVisibility_1()
 
 struct FText UCastingBarInfoTextWidget_C::GetCastName()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CastingBarInfoTextWidget.CastingBarInfoTextWidget_C.GetCastName");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc1c916df);
 
 	UCastingBarInfoTextWidget_C_GetCastName_Params params;
 
@@ -198,7 +207,8 @@ struct FText UCastingBarInfoTextWidget_C::GetCastName()
 
 void UCastingBarInfoTextWidget_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CastingBarInfoTextWidget.CastingBarInfoTextWidget_C.Tick");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xbcb0173e);
 
 	UCastingBarInfoTextWidget_C_Tick_Params params;
 	params.MyGeometry = MyGeometry;
@@ -217,7 +227,8 @@ void UCastingBarInfoTextWidget_C::Tick(struct FGeometry* MyGeometry, float* InDe
 
 void UCastingBarInfoTextWidget_C::Construct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CastingBarInfoTextWidget.CastingBarInfoTextWidget_C.Construct");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x6b350e94);
 
 	UCastingBarInfoTextWidget_C_Construct_Params params;
 
@@ -234,7 +245,8 @@ void UCastingBarInfoTextWidget_C::Construct()
 
 void UCastingBarInfoTextWidget_C::Destruct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CastingBarInfoTextWidget.CastingBarInfoTextWidget_C.Destruct");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x46dab6b);
 
 	UCastingBarInfoTextWidget_C_Destruct_Params params;
 
@@ -253,7 +265,8 @@ void UCastingBarInfoTextWidget_C::Destruct()
 
 void UCastingBarInfoTextWidget_C::ExecuteUbergraph_CastingBarInfoTextWidget(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CastingBarInfoTextWidget.CastingBarInfoTextWidget_C.ExecuteUbergraph_CastingBarInfoTextWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x3eeb5ac6);
 
 	UCastingBarInfoTextWidget_C_ExecuteUbergraph_CastingBarInfoTextWidget_Params params;
 	params.EntryPoint = EntryPoint;

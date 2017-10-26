@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,8 @@ namespace Classes
 
 void UQualityComboBox_C::GetDisplayTextByOption(struct FText* DisplayText)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function QualityComboBox.QualityComboBox_C.GetDisplayTextByOption");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x80a5616c);
 
 	UQualityComboBox_C_GetDisplayTextByOption_Params params;
 
@@ -41,7 +42,8 @@ void UQualityComboBox_C::GetDisplayTextByOption(struct FText* DisplayText)
 
 bool UQualityComboBox_C::Get_ComboBox_bIsEnabled_1()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function QualityComboBox.QualityComboBox_C.Get_ComboBox_bIsEnabled_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x47de7515);
 
 	UQualityComboBox_C_Get_ComboBox_bIsEnabled_1_Params params;
 
@@ -63,7 +65,8 @@ bool UQualityComboBox_C::Get_ComboBox_bIsEnabled_1()
 
 class UWidget* UQualityComboBox_C::On_ComboBox_GenerateWidget_1(const struct FString& Item)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function QualityComboBox.QualityComboBox_C.On_ComboBox_GenerateWidget_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x6aa2a9e4);
 
 	UQualityComboBox_C_On_ComboBox_GenerateWidget_1_Params params;
 	params.Item = Item;
@@ -85,7 +88,8 @@ class UWidget* UQualityComboBox_C::On_ComboBox_GenerateWidget_1(const struct FSt
 
 void UQualityComboBox_C::RemoveOption(const struct FString& Option)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function QualityComboBox.QualityComboBox_C.RemoveOption");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x666367f4);
 
 	UQualityComboBox_C_RemoveOption_Params params;
 	params.Option = Option;
@@ -105,7 +109,8 @@ void UQualityComboBox_C::RemoveOption(const struct FString& Option)
 
 void UQualityComboBox_C::GetSelectedOption(struct FString* SelectedOption)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function QualityComboBox.QualityComboBox_C.GetSelectedOption");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xe10c02b1);
 
 	UQualityComboBox_C_GetSelectedOption_Params params;
 
@@ -127,7 +132,8 @@ void UQualityComboBox_C::GetSelectedOption(struct FString* SelectedOption)
 
 void UQualityComboBox_C::SetSelectedOption(const struct FString& Option)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function QualityComboBox.QualityComboBox_C.SetSelectedOption");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x6229a355);
 
 	UQualityComboBox_C_SetSelectedOption_Params params;
 	params.Option = Option;
@@ -145,7 +151,8 @@ void UQualityComboBox_C::SetSelectedOption(const struct FString& Option)
 
 void UQualityComboBox_C::ClearOptions()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function QualityComboBox.QualityComboBox_C.ClearOptions");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x1a613334);
 
 	UQualityComboBox_C_ClearOptions_Params params;
 
@@ -165,7 +172,8 @@ void UQualityComboBox_C::ClearOptions()
 
 void UQualityComboBox_C::AddOption(const struct FString& OptionName, const struct FText& DisplayOptionName)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function QualityComboBox.QualityComboBox_C.AddOption");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x50d93777);
 
 	UQualityComboBox_C_AddOption_Params params;
 	params.OptionName = OptionName;
@@ -187,7 +195,8 @@ void UQualityComboBox_C::AddOption(const struct FString& OptionName, const struc
 
 void UQualityComboBox_C::BndEvt__ComboBox_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature(const struct FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function QualityComboBox.QualityComboBox_C.BndEvt__ComboBox_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x786994d);
 
 	UQualityComboBox_C_BndEvt__ComboBox_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature_Params params;
 	params.SelectedItem = SelectedItem;
@@ -208,7 +217,8 @@ void UQualityComboBox_C::BndEvt__ComboBox_K2Node_ComponentBoundEvent_0_OnSelecti
 
 void UQualityComboBox_C::ExecuteUbergraph_QualityComboBox(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function QualityComboBox.QualityComboBox_C.ExecuteUbergraph_QualityComboBox");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x86182f6b);
 
 	UQualityComboBox_C_ExecuteUbergraph_QualityComboBox_Params params;
 	params.EntryPoint = EntryPoint;
@@ -229,7 +239,8 @@ void UQualityComboBox_C::ExecuteUbergraph_QualityComboBox(int EntryPoint)
 
 void UQualityComboBox_C::OnSelectionChanged__DelegateSignature(const struct FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function QualityComboBox.QualityComboBox_C.OnSelectionChanged__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x798f4b11);
 
 	UQualityComboBox_C_OnSelectionChanged__DelegateSignature_Params params;
 	params.SelectedItem = SelectedItem;

@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,7 +17,8 @@ namespace Classes
 
 void UCharProxy_AnimBP_C::UpdateBlink()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CharProxy_AnimBP.CharProxy_AnimBP_C.UpdateBlink");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x98a7367e);
 
 	UCharProxy_AnimBP_C_UpdateBlink_Params params;
 
@@ -36,7 +37,8 @@ void UCharProxy_AnimBP_C::UpdateBlink()
 
 void UCharProxy_AnimBP_C::GetAnimWeaponIKLeft(struct FTransform* IKLeft)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CharProxy_AnimBP.CharProxy_AnimBP_C.GetAnimWeaponIKLeft");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xfea90325);
 
 	UCharProxy_AnimBP_C_GetAnimWeaponIKLeft_Params params;
 
@@ -58,7 +60,8 @@ void UCharProxy_AnimBP_C::GetAnimWeaponIKLeft(struct FTransform* IKLeft)
 
 void UCharProxy_AnimBP_C::GetAnimWeaponType(TEnumAsByte<EAnimWeaponType>* AnimWeaponType)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CharProxy_AnimBP.CharProxy_AnimBP_C.GetAnimWeaponType");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xe467680a);
 
 	UCharProxy_AnimBP_C_GetAnimWeaponType_Params params;
 
@@ -78,7 +81,8 @@ void UCharProxy_AnimBP_C::GetAnimWeaponType(TEnumAsByte<EAnimWeaponType>* AnimWe
 
 void UCharProxy_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CharProxy_AnimBP_AnimGraphNode_BlendSpacePlayer_FE57F22747D2CBE68A6B6C8735A0AA7D()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CharProxy_AnimBP.CharProxy_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_CharProxy_AnimBP_AnimGraphNode_BlendSpacePlayer_FE57F22747D2CBE68A6B6C8735A0AA7D");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xb38da05e);
 
 	UCharProxy_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_CharProxy_AnimBP_AnimGraphNode_BlendSpacePlayer_FE57F22747D2CBE68A6B6C8735A0AA7D_Params params;
 
@@ -95,7 +99,8 @@ void UCharProxy_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CharProxy_
 
 void UCharProxy_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CharProxy_AnimBP_AnimGraphNode_LayeredBoneBlend_C2F30D7E4BD89239D23E298DD1729B77()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CharProxy_AnimBP.CharProxy_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_CharProxy_AnimBP_AnimGraphNode_LayeredBoneBlend_C2F30D7E4BD89239D23E298DD1729B77");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x14cec112);
 
 	UCharProxy_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_CharProxy_AnimBP_AnimGraphNode_LayeredBoneBlend_C2F30D7E4BD89239D23E298DD1729B77_Params params;
 
@@ -112,7 +117,8 @@ void UCharProxy_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CharProxy_
 
 void UCharProxy_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CharProxy_AnimBP_AnimGraphNode_CopyBone_94E5E49E48018345AB9C488D9EB44172()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CharProxy_AnimBP.CharProxy_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_CharProxy_AnimBP_AnimGraphNode_CopyBone_94E5E49E48018345AB9C488D9EB44172");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x33e30af1);
 
 	UCharProxy_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_CharProxy_AnimBP_AnimGraphNode_CopyBone_94E5E49E48018345AB9C488D9EB44172_Params params;
 
@@ -129,7 +135,8 @@ void UCharProxy_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CharProxy_
 
 void UCharProxy_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CharProxy_AnimBP_AnimGraphNode_Fabrik_50E1CCC144ED9B7CFB3C1890CBA2E662()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CharProxy_AnimBP.CharProxy_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_CharProxy_AnimBP_AnimGraphNode_Fabrik_50E1CCC144ED9B7CFB3C1890CBA2E662");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x647aaaf9);
 
 	UCharProxy_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_CharProxy_AnimBP_AnimGraphNode_Fabrik_50E1CCC144ED9B7CFB3C1890CBA2E662_Params params;
 
@@ -146,7 +153,8 @@ void UCharProxy_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CharProxy_
 
 void UCharProxy_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CharProxy_AnimBP_AnimGraphNode_BlendListByEnum_044C21FF45F8C9135ED72E90A1317ACF()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CharProxy_AnimBP.CharProxy_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_CharProxy_AnimBP_AnimGraphNode_BlendListByEnum_044C21FF45F8C9135ED72E90A1317ACF");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x7cab8c98);
 
 	UCharProxy_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_CharProxy_AnimBP_AnimGraphNode_BlendListByEnum_044C21FF45F8C9135ED72E90A1317ACF_Params params;
 
@@ -163,7 +171,8 @@ void UCharProxy_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CharProxy_
 
 void UCharProxy_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CharProxy_AnimBP_AnimGraphNode_BlendListByEnum_7DD4DF2E4EE51B857C8F8BBA6ADD08B0()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CharProxy_AnimBP.CharProxy_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_CharProxy_AnimBP_AnimGraphNode_BlendListByEnum_7DD4DF2E4EE51B857C8F8BBA6ADD08B0");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xa7a2780c);
 
 	UCharProxy_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_CharProxy_AnimBP_AnimGraphNode_BlendListByEnum_7DD4DF2E4EE51B857C8F8BBA6ADD08B0_Params params;
 
@@ -180,7 +189,8 @@ void UCharProxy_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CharProxy_
 
 void UCharProxy_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CharProxy_AnimBP_AnimGraphNode_ModifyBone_60F7F60D46063AC788F6DAA1F7DDBE0D()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CharProxy_AnimBP.CharProxy_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_CharProxy_AnimBP_AnimGraphNode_ModifyBone_60F7F60D46063AC788F6DAA1F7DDBE0D");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x2a3f6cfa);
 
 	UCharProxy_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_CharProxy_AnimBP_AnimGraphNode_ModifyBone_60F7F60D46063AC788F6DAA1F7DDBE0D_Params params;
 
@@ -197,7 +207,8 @@ void UCharProxy_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CharProxy_
 
 void UCharProxy_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CharProxy_AnimBP_AnimGraphNode_ModifyBone_D9BD57E94786BDB98B1024BAA5B2A680()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CharProxy_AnimBP.CharProxy_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_CharProxy_AnimBP_AnimGraphNode_ModifyBone_D9BD57E94786BDB98B1024BAA5B2A680");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x3338c04c);
 
 	UCharProxy_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_CharProxy_AnimBP_AnimGraphNode_ModifyBone_D9BD57E94786BDB98B1024BAA5B2A680_Params params;
 
@@ -214,7 +225,8 @@ void UCharProxy_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CharProxy_
 
 void UCharProxy_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CharProxy_AnimBP_AnimGraphNode_BlendListByEnum_341CAEF947395CE8613E1AA1A1B0CEB9()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CharProxy_AnimBP.CharProxy_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_CharProxy_AnimBP_AnimGraphNode_BlendListByEnum_341CAEF947395CE8613E1AA1A1B0CEB9");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x6f568aeb);
 
 	UCharProxy_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_CharProxy_AnimBP_AnimGraphNode_BlendListByEnum_341CAEF947395CE8613E1AA1A1B0CEB9_Params params;
 
@@ -231,7 +243,8 @@ void UCharProxy_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CharProxy_
 
 void UCharProxy_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CharProxy_AnimBP_AnimGraphNode_TwoWayBlend_F55B74BC41101BEBCB2E1FB32E00F62E()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CharProxy_AnimBP.CharProxy_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_CharProxy_AnimBP_AnimGraphNode_TwoWayBlend_F55B74BC41101BEBCB2E1FB32E00F62E");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xad869fe8);
 
 	UCharProxy_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_CharProxy_AnimBP_AnimGraphNode_TwoWayBlend_F55B74BC41101BEBCB2E1FB32E00F62E_Params params;
 
@@ -248,7 +261,8 @@ void UCharProxy_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CharProxy_
 
 void UCharProxy_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CharProxy_AnimBP_AnimGraphNode_BlendSpacePlayer_50CC758845EBAE09DFE0FFA151BC45A3()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CharProxy_AnimBP.CharProxy_AnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_CharProxy_AnimBP_AnimGraphNode_BlendSpacePlayer_50CC758845EBAE09DFE0FFA151BC45A3");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x1c51e83b);
 
 	UCharProxy_AnimBP_C_EvaluateGraphExposedInputs_ExecuteUbergraph_CharProxy_AnimBP_AnimGraphNode_BlendSpacePlayer_50CC758845EBAE09DFE0FFA151BC45A3_Params params;
 
@@ -267,7 +281,8 @@ void UCharProxy_AnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_CharProxy_
 
 void UCharProxy_AnimBP_C::BlueprintUpdateAnimation(float* DeltaTimeX)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CharProxy_AnimBP.CharProxy_AnimBP_C.BlueprintUpdateAnimation");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x6617c11b);
 
 	UCharProxy_AnimBP_C_BlueprintUpdateAnimation_Params params;
 	params.DeltaTimeX = DeltaTimeX;
@@ -287,7 +302,8 @@ void UCharProxy_AnimBP_C::BlueprintUpdateAnimation(float* DeltaTimeX)
 
 void UCharProxy_AnimBP_C::ExecuteUbergraph_CharProxy_AnimBP(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CharProxy_AnimBP.CharProxy_AnimBP_C.ExecuteUbergraph_CharProxy_AnimBP");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x2a6a9d59);
 
 	UCharProxy_AnimBP_C_ExecuteUbergraph_CharProxy_AnimBP_Params params;
 	params.EntryPoint = EntryPoint;

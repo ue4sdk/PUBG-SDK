@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,7 +17,8 @@ namespace Classes
 
 void UBloodSpotWidget_C::Construct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BloodSpotWidget.BloodSpotWidget_C.Construct");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xdda41c92);
 
 	UBloodSpotWidget_C_Construct_Params params;
 
@@ -34,7 +35,8 @@ void UBloodSpotWidget_C::Construct()
 
 void UBloodSpotWidget_C::Finish()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BloodSpotWidget.BloodSpotWidget_C.Finish");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x5d88cdd2);
 
 	UBloodSpotWidget_C_Finish_Params params;
 
@@ -53,7 +55,8 @@ void UBloodSpotWidget_C::Finish()
 
 void UBloodSpotWidget_C::ExecuteUbergraph_BloodSpotWidget(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BloodSpotWidget.BloodSpotWidget_C.ExecuteUbergraph_BloodSpotWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x703bc761);
 
 	UBloodSpotWidget_C_ExecuteUbergraph_BloodSpotWidget_Params params;
 	params.EntryPoint = EntryPoint;

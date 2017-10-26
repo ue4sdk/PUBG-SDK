@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,7 +17,8 @@ namespace Classes
 
 void AP_MotoDrive_Grass_BP_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function P_MotoDrive_Grass_BP.P_MotoDrive_Grass_BP_C.UserConstructionScript");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x683e50f0);
 
 	AP_MotoDrive_Grass_BP_C_UserConstructionScript_Params params;
 
@@ -34,7 +35,8 @@ void AP_MotoDrive_Grass_BP_C::UserConstructionScript()
 
 void AP_MotoDrive_Grass_BP_C::OnParameterUpdated()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function P_MotoDrive_Grass_BP.P_MotoDrive_Grass_BP_C.OnParameterUpdated");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x93843ca2);
 
 	AP_MotoDrive_Grass_BP_C_OnParameterUpdated_Params params;
 
@@ -53,7 +55,8 @@ void AP_MotoDrive_Grass_BP_C::OnParameterUpdated()
 
 void AP_MotoDrive_Grass_BP_C::ExecuteUbergraph_P_MotoDrive_Grass_BP(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function P_MotoDrive_Grass_BP.P_MotoDrive_Grass_BP_C.ExecuteUbergraph_P_MotoDrive_Grass_BP");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x835d39c3);
 
 	AP_MotoDrive_Grass_BP_C_ExecuteUbergraph_P_MotoDrive_Grass_BP_Params params;
 	params.EntryPoint = EntryPoint;

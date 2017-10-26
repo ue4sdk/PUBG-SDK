@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,8 @@ namespace Classes
 
 void UObserverMatchResultNameGroupWidget_C::GetLineCount(int* LineCount)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ObserverMatchResultNameGroupWidget.ObserverMatchResultNameGroupWidget_C.GetLineCount");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xacc678f4);
 
 	UObserverMatchResultNameGroupWidget_C_GetLineCount_Params params;
 
@@ -41,7 +42,8 @@ void UObserverMatchResultNameGroupWidget_C::GetLineCount(int* LineCount)
 
 void UObserverMatchResultNameGroupWidget_C::On_TextBlock_4_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ObserverMatchResultNameGroupWidget.ObserverMatchResultNameGroupWidget_C.On_TextBlock_4_Prepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xb3c234f1);
 
 	UObserverMatchResultNameGroupWidget_C_On_TextBlock_4_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -61,7 +63,8 @@ void UObserverMatchResultNameGroupWidget_C::On_TextBlock_4_Prepass_1(class UWidg
 
 void UObserverMatchResultNameGroupWidget_C::SetSmall(bool bSmall)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ObserverMatchResultNameGroupWidget.ObserverMatchResultNameGroupWidget_C.SetSmall");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x5140f57e);
 
 	UObserverMatchResultNameGroupWidget_C_SetSmall_Params params;
 	params.bSmall = bSmall;
@@ -81,7 +84,8 @@ void UObserverMatchResultNameGroupWidget_C::SetSmall(bool bSmall)
 
 void UObserverMatchResultNameGroupWidget_C::On_GroupLayer_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ObserverMatchResultNameGroupWidget.ObserverMatchResultNameGroupWidget_C.On_GroupLayer_Prepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x2c659892);
 
 	UObserverMatchResultNameGroupWidget_C_On_GroupLayer_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -101,7 +105,8 @@ void UObserverMatchResultNameGroupWidget_C::On_GroupLayer_Prepass_1(class UWidge
 
 void UObserverMatchResultNameGroupWidget_C::On_Octa_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ObserverMatchResultNameGroupWidget.ObserverMatchResultNameGroupWidget_C.On_Octa_Prepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x9cd22c01);
 
 	UObserverMatchResultNameGroupWidget_C_On_Octa_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -121,7 +126,8 @@ void UObserverMatchResultNameGroupWidget_C::On_Octa_Prepass_1(class UWidget* Bou
 
 void UObserverMatchResultNameGroupWidget_C::On_Hexa_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ObserverMatchResultNameGroupWidget.ObserverMatchResultNameGroupWidget_C.On_Hexa_Prepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xe7e3294a);
 
 	UObserverMatchResultNameGroupWidget_C_On_Hexa_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -141,7 +147,8 @@ void UObserverMatchResultNameGroupWidget_C::On_Hexa_Prepass_1(class UWidget* Bou
 
 void UObserverMatchResultNameGroupWidget_C::On_Squad_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ObserverMatchResultNameGroupWidget.ObserverMatchResultNameGroupWidget_C.On_Squad_Prepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x5373022a);
 
 	UObserverMatchResultNameGroupWidget_C_On_Squad_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -161,7 +168,8 @@ void UObserverMatchResultNameGroupWidget_C::On_Squad_Prepass_1(class UWidget* Bo
 
 void UObserverMatchResultNameGroupWidget_C::On_SoloOrDuo_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ObserverMatchResultNameGroupWidget.ObserverMatchResultNameGroupWidget_C.On_SoloOrDuo_Prepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x1c44dc3a);
 
 	UObserverMatchResultNameGroupWidget_C_On_SoloOrDuo_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -181,7 +189,8 @@ void UObserverMatchResultNameGroupWidget_C::On_SoloOrDuo_Prepass_1(class UWidget
 
 struct FText UObserverMatchResultNameGroupWidget_C::Get_TextBlock_4_Text_1()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ObserverMatchResultNameGroupWidget.ObserverMatchResultNameGroupWidget_C.Get_TextBlock_4_Text_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc34b45dd);
 
 	UObserverMatchResultNameGroupWidget_C_Get_TextBlock_4_Text_1_Params params;
 
@@ -202,7 +211,8 @@ struct FText UObserverMatchResultNameGroupWidget_C::Get_TextBlock_4_Text_1()
 
 void UObserverMatchResultNameGroupWidget_C::AddPlayerMatchResultInfo(const struct FTslPlayerMatchResultInfo& NewItem)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ObserverMatchResultNameGroupWidget.ObserverMatchResultNameGroupWidget_C.AddPlayerMatchResultInfo");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x5863b725);
 
 	UObserverMatchResultNameGroupWidget_C_AddPlayerMatchResultInfo_Params params;
 	params.NewItem = NewItem;

@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,8 @@ namespace Classes
 
 void UPlayerGroupWidget_C::On_PlayerListBG_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerGroupWidget.PlayerGroupWidget_C.On_PlayerListBG_Prepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xbc36fc6c);
 
 	UPlayerGroupWidget_C_On_PlayerListBG_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -39,7 +40,8 @@ void UPlayerGroupWidget_C::On_PlayerListBG_Prepass_1(class UWidget* BoundWidget)
 
 void UPlayerGroupWidget_C::On_PlayerListBorder_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerGroupWidget.PlayerGroupWidget_C.On_PlayerListBorder_Prepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc90556a7);
 
 	UPlayerGroupWidget_C_On_PlayerListBorder_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -57,7 +59,8 @@ void UPlayerGroupWidget_C::On_PlayerListBorder_Prepass_1(class UWidget* BoundWid
 
 void UPlayerGroupWidget_C::Clear()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerGroupWidget.PlayerGroupWidget_C.Clear");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x899c2946);
 
 	UPlayerGroupWidget_C_Clear_Params params;
 
@@ -76,7 +79,8 @@ void UPlayerGroupWidget_C::Clear()
 
 void UPlayerGroupWidget_C::AddPlayerWidget(class UPlayerInfoWidget_C* PlayerInfo)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerGroupWidget.PlayerGroupWidget_C.AddPlayerWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x761c8433);
 
 	UPlayerGroupWidget_C_AddPlayerWidget_Params params;
 	params.PlayerInfo = PlayerInfo;
@@ -94,7 +98,8 @@ void UPlayerGroupWidget_C::AddPlayerWidget(class UPlayerInfoWidget_C* PlayerInfo
 
 void UPlayerGroupWidget_C::Construct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerGroupWidget.PlayerGroupWidget_C.Construct");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x6408fb36);
 
 	UPlayerGroupWidget_C_Construct_Params params;
 
@@ -113,7 +118,8 @@ void UPlayerGroupWidget_C::Construct()
 
 void UPlayerGroupWidget_C::ExecuteUbergraph_PlayerGroupWidget(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function PlayerGroupWidget.PlayerGroupWidget_C.ExecuteUbergraph_PlayerGroupWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xaf2c73d9);
 
 	UPlayerGroupWidget_C_ExecuteUbergraph_PlayerGroupWidget_Params params;
 	params.EntryPoint = EntryPoint;

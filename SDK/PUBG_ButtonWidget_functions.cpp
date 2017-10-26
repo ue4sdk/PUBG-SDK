@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -20,7 +20,8 @@ namespace Classes
 
 void UButtonWidget_C::MakeBrush(class UTexture2D* Texture, struct FSlateBrush* Brush)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ButtonWidget.ButtonWidget_C.MakeBrush");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x57dfafa7);
 
 	UButtonWidget_C_MakeBrush_Params params;
 	params.Texture = Texture;
@@ -41,7 +42,8 @@ void UButtonWidget_C::MakeBrush(class UTexture2D* Texture, struct FSlateBrush* B
 
 void UButtonWidget_C::BndEvt__Button_32_K2Node_ComponentBoundEvent_118_OnButtonClickedEvent__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ButtonWidget.ButtonWidget_C.BndEvt__Button_32_K2Node_ComponentBoundEvent_118_OnButtonClickedEvent__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x19ea552d);
 
 	UButtonWidget_C_BndEvt__Button_32_K2Node_ComponentBoundEvent_118_OnButtonClickedEvent__DelegateSignature_Params params;
 
@@ -58,7 +60,8 @@ void UButtonWidget_C::BndEvt__Button_32_K2Node_ComponentBoundEvent_118_OnButtonC
 
 void UButtonWidget_C::Construct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ButtonWidget.ButtonWidget_C.Construct");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x823d2ba6);
 
 	UButtonWidget_C_Construct_Params params;
 
@@ -77,7 +80,8 @@ void UButtonWidget_C::Construct()
 
 void UButtonWidget_C::ExecuteUbergraph_ButtonWidget(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ButtonWidget.ButtonWidget_C.ExecuteUbergraph_ButtonWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x321f2ab);
 
 	UButtonWidget_C_ExecuteUbergraph_ButtonWidget_Params params;
 	params.EntryPoint = EntryPoint;
@@ -95,7 +99,8 @@ void UButtonWidget_C::ExecuteUbergraph_ButtonWidget(int EntryPoint)
 
 void UButtonWidget_C::OnClickedEventDispatcher__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ButtonWidget.ButtonWidget_C.OnClickedEventDispatcher__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x628ce8a9);
 
 	UButtonWidget_C_OnClickedEventDispatcher__DelegateSignature_Params params;
 

@@ -1,37 +1,35 @@
 #pragma once
 
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+#pragma pack(push, 0x8)
 #endif
 
-namespace Classes
-{
-//---------------------------------------------------------------------------
-//Classes
-//---------------------------------------------------------------------------
+namespace Classes {
+	//---------------------------------------------------------------------------
+	//Classes
+	//---------------------------------------------------------------------------
 
-// WidgetBlueprintGeneratedClass InputHookingWidget.InputHookingWidget_C
-// 0x0000 (0x0290 - 0x0290)
-class UInputHookingWidget_C : public UBlockInputUserWidget
-{
-public:
+	// WidgetBlueprintGeneratedClass InputHookingWidget.InputHookingWidget_C
+	// 0x0000 (0x0290 - 0x0290)
+	class UInputHookingWidget_C : public UBlockInputUserWidget {
+	public:
 
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("WidgetBlueprintGeneratedClass InputHookingWidget.InputHookingWidget_C");
-		return ptr;
-	}
+		static UClass* StaticClass() {
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x59b10aff);
+			return ptr;
+		}
 
 
-	void OnInputAxis(float Scale);
-	void OnInputAction();
-};
+		void OnInputAxis(float Scale);
+		void OnInputAction();
+	};
 
 
 }
 
 #ifdef _MSC_VER
-	#pragma pack(pop)
+#pragma pack(pop)
 #endif

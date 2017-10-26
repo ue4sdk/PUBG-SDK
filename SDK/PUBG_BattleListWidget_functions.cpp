@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -20,7 +20,8 @@ namespace Classes
 
 void UBattleListWidget_C::FindCharacterByPlayerState(class APlayerState* PlayerState, class ATslCharacter** Character)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BattleListWidget.BattleListWidget_C.FindCharacterByPlayerState");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x87364a62);
 
 	UBattleListWidget_C_FindCharacterByPlayerState_Params params;
 	params.PlayerState = PlayerState;
@@ -41,7 +42,8 @@ void UBattleListWidget_C::FindCharacterByPlayerState(class APlayerState* PlayerS
 
 void UBattleListWidget_C::UpdateBattleList()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BattleListWidget.BattleListWidget_C.UpdateBattleList");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x7e2a2ffa);
 
 	UBattleListWidget_C_UpdateBattleList_Params params;
 
@@ -58,7 +60,8 @@ void UBattleListWidget_C::UpdateBattleList()
 
 void UBattleListWidget_C::RefreshPlayerList()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BattleListWidget.BattleListWidget_C.RefreshPlayerList");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x465f6c3b);
 
 	UBattleListWidget_C_RefreshPlayerList_Params params;
 
@@ -75,7 +78,8 @@ void UBattleListWidget_C::RefreshPlayerList()
 
 void UBattleListWidget_C::Construct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BattleListWidget.BattleListWidget_C.Construct");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xd330a2d2);
 
 	UBattleListWidget_C_Construct_Params params;
 
@@ -92,7 +96,8 @@ void UBattleListWidget_C::Construct()
 
 void UBattleListWidget_C::CustomTick()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BattleListWidget.BattleListWidget_C.CustomTick");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x42e20f15);
 
 	UBattleListWidget_C_CustomTick_Params params;
 
@@ -109,7 +114,8 @@ void UBattleListWidget_C::CustomTick()
 
 void UBattleListWidget_C::TimerCheckUpdateList()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BattleListWidget.BattleListWidget_C.TimerCheckUpdateList");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x447a2c35);
 
 	UBattleListWidget_C_TimerCheckUpdateList_Params params;
 
@@ -128,7 +134,8 @@ void UBattleListWidget_C::TimerCheckUpdateList()
 
 void UBattleListWidget_C::ExecuteUbergraph_BattleListWidget(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BattleListWidget.BattleListWidget_C.ExecuteUbergraph_BattleListWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x7ce29b89);
 
 	UBattleListWidget_C_ExecuteUbergraph_BattleListWidget_Params params;
 	params.EntryPoint = EntryPoint;

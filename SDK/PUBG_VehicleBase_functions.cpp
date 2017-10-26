@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,7 +17,8 @@ namespace Classes
 
 void AVehicleBase_C::TickIndicators()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VehicleBase.VehicleBase_C.TickIndicators");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc8f5b8e);
 
 	AVehicleBase_C_TickIndicators_Params params;
 
@@ -34,7 +35,8 @@ void AVehicleBase_C::TickIndicators()
 
 void AVehicleBase_C::TickDynamicCamera()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VehicleBase.VehicleBase_C.TickDynamicCamera");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x5d18051a);
 
 	AVehicleBase_C_TickDynamicCamera_Params params;
 
@@ -51,7 +53,8 @@ void AVehicleBase_C::TickDynamicCamera()
 
 void AVehicleBase_C::TickBrakeSoundTest()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VehicleBase.VehicleBase_C.TickBrakeSoundTest");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xb7b2fa72);
 
 	AVehicleBase_C_TickBrakeSoundTest_Params params;
 
@@ -68,7 +71,8 @@ void AVehicleBase_C::TickBrakeSoundTest()
 
 void AVehicleBase_C::TickThrottleSoundTest()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VehicleBase.VehicleBase_C.TickThrottleSoundTest");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x7287e3b9);
 
 	AVehicleBase_C_TickThrottleSoundTest_Params params;
 
@@ -85,7 +89,8 @@ void AVehicleBase_C::TickThrottleSoundTest()
 
 void AVehicleBase_C::TickBoostSoundTest()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VehicleBase.VehicleBase_C.TickBoostSoundTest");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xbbd1753a);
 
 	AVehicleBase_C_TickBoostSoundTest_Params params;
 
@@ -104,7 +109,8 @@ void AVehicleBase_C::TickBoostSoundTest()
 
 void AVehicleBase_C::TickFuelConsumption(float DeltaSeconds)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VehicleBase.VehicleBase_C.TickFuelConsumption");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xbd81241d);
 
 	AVehicleBase_C_TickFuelConsumption_Params params;
 	params.DeltaSeconds = DeltaSeconds;
@@ -122,7 +128,8 @@ void AVehicleBase_C::TickFuelConsumption(float DeltaSeconds)
 
 void AVehicleBase_C::TickBasicInfoCaching()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VehicleBase.VehicleBase_C.TickBasicInfoCaching");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xff9fcde9);
 
 	AVehicleBase_C_TickBasicInfoCaching_Params params;
 
@@ -139,7 +146,8 @@ void AVehicleBase_C::TickBasicInfoCaching()
 
 void AVehicleBase_C::TickWheelCaching()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VehicleBase.VehicleBase_C.TickWheelCaching");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xe863bce8);
 
 	AVehicleBase_C_TickWheelCaching_Params params;
 
@@ -156,7 +164,8 @@ void AVehicleBase_C::TickWheelCaching()
 
 void AVehicleBase_C::TickWheelSound()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VehicleBase.VehicleBase_C.TickWheelSound");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xccaaed3e);
 
 	AVehicleBase_C_TickWheelSound_Params params;
 
@@ -173,7 +182,8 @@ void AVehicleBase_C::TickWheelSound()
 
 void AVehicleBase_C::OnRep_IsBrakeEngaged()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VehicleBase.VehicleBase_C.OnRep_IsBrakeEngaged");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x4d8a7d80);
 
 	AVehicleBase_C_OnRep_IsBrakeEngaged_Params params;
 
@@ -185,14 +195,15 @@ void AVehicleBase_C::OnRep_IsBrakeEngaged()
 }
 
 
-// Function VehicleBase.VehicleBase_C.OnRep_isLightsOn
+// Function VehicleBase.VehicleBase_C.OnRep_IsLightsOn
 // (FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
-void AVehicleBase_C::OnRep_isLightsOn()
+void AVehicleBase_C::OnRep_IsLightsOn()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VehicleBase.VehicleBase_C.OnRep_isLightsOn");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x156af124);
 
-	AVehicleBase_C_OnRep_isLightsOn_Params params;
+	AVehicleBase_C_OnRep_IsLightsOn_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -207,7 +218,8 @@ void AVehicleBase_C::OnRep_isLightsOn()
 
 void AVehicleBase_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VehicleBase.VehicleBase_C.UserConstructionScript");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xcb9bdb48);
 
 	AVehicleBase_C_UserConstructionScript_Params params;
 
@@ -226,7 +238,8 @@ void AVehicleBase_C::UserConstructionScript()
 
 void AVehicleBase_C::InpActEvt_Handbrake_K2Node_InputActionEvent_4(const struct FKey& Key)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VehicleBase.VehicleBase_C.InpActEvt_Handbrake_K2Node_InputActionEvent_4");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x4f04d6ec);
 
 	AVehicleBase_C_InpActEvt_Handbrake_K2Node_InputActionEvent_4_Params params;
 	params.Key = Key;
@@ -246,7 +259,8 @@ void AVehicleBase_C::InpActEvt_Handbrake_K2Node_InputActionEvent_4(const struct 
 
 void AVehicleBase_C::InpActEvt_Handbrake_K2Node_InputActionEvent_3(const struct FKey& Key)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VehicleBase.VehicleBase_C.InpActEvt_Handbrake_K2Node_InputActionEvent_3");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x29025c83);
 
 	AVehicleBase_C_InpActEvt_Handbrake_K2Node_InputActionEvent_3_Params params;
 	params.Key = Key;
@@ -264,7 +278,8 @@ void AVehicleBase_C::InpActEvt_Handbrake_K2Node_InputActionEvent_3(const struct 
 
 void AVehicleBase_C::ToggleLights()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VehicleBase.VehicleBase_C.ToggleLights");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc1e1a52c);
 
 	AVehicleBase_C_ToggleLights_Params params;
 
@@ -281,7 +296,8 @@ void AVehicleBase_C::ToggleLights()
 
 void AVehicleBase_C::BrakeLampOn()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VehicleBase.VehicleBase_C.BrakeLampOn");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xe43a56d1);
 
 	AVehicleBase_C_BrakeLampOn_Params params;
 
@@ -298,7 +314,8 @@ void AVehicleBase_C::BrakeLampOn()
 
 void AVehicleBase_C::BrakeLampOff()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VehicleBase.VehicleBase_C.BrakeLampOff");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x2cb81e1d);
 
 	AVehicleBase_C_BrakeLampOff_Params params;
 
@@ -317,7 +334,8 @@ void AVehicleBase_C::BrakeLampOff()
 
 void AVehicleBase_C::ReceiveTick(float* DeltaSeconds)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VehicleBase.VehicleBase_C.ReceiveTick");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xd5842435);
 
 	AVehicleBase_C_ReceiveTick_Params params;
 	params.DeltaSeconds = DeltaSeconds;
@@ -337,7 +355,8 @@ void AVehicleBase_C::ReceiveTick(float* DeltaSeconds)
 
 void AVehicleBase_C::InpAxisEvt_MoveForward_K2Node_InputAxisEvent_8(float AxisValue)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VehicleBase.VehicleBase_C.InpAxisEvt_MoveForward_K2Node_InputAxisEvent_8");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc89f4788);
 
 	AVehicleBase_C_InpAxisEvt_MoveForward_K2Node_InputAxisEvent_8_Params params;
 	params.AxisValue = AxisValue;
@@ -355,7 +374,8 @@ void AVehicleBase_C::InpAxisEvt_MoveForward_K2Node_InputAxisEvent_8(float AxisVa
 
 void AVehicleBase_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VehicleBase.VehicleBase_C.ReceiveBeginPlay");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xa8e4f67f);
 
 	AVehicleBase_C_ReceiveBeginPlay_Params params;
 
@@ -377,7 +397,8 @@ void AVehicleBase_C::ReceiveBeginPlay()
 
 void AVehicleBase_C::TurnOffLight(float KillingDamage, const struct FDamageEvent& DamageEvent, class ATslPlayerState* PlayerInstigator, class AActor* DamageCauser)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VehicleBase.VehicleBase_C.TurnOffLight");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x341afd53);
 
 	AVehicleBase_C_TurnOffLight_Params params;
 	params.KillingDamage = KillingDamage;
@@ -400,7 +421,8 @@ void AVehicleBase_C::TurnOffLight(float KillingDamage, const struct FDamageEvent
 
 void AVehicleBase_C::InpAxisEvt_MoveRight_K2Node_InputAxisEvent_16(float AxisValue)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VehicleBase.VehicleBase_C.InpAxisEvt_MoveRight_K2Node_InputAxisEvent_16");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x39f62eaa);
 
 	AVehicleBase_C_InpAxisEvt_MoveRight_K2Node_InputAxisEvent_16_Params params;
 	params.AxisValue = AxisValue;
@@ -418,7 +440,8 @@ void AVehicleBase_C::InpAxisEvt_MoveRight_K2Node_InputAxisEvent_16(float AxisVal
 
 void AVehicleBase_C::EventFuelConsumption()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VehicleBase.VehicleBase_C.EventFuelConsumption");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xb09baa6a);
 
 	AVehicleBase_C_EventFuelConsumption_Params params;
 
@@ -437,7 +460,8 @@ void AVehicleBase_C::EventFuelConsumption()
 
 void AVehicleBase_C::ExecuteUbergraph_VehicleBase(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function VehicleBase.VehicleBase_C.ExecuteUbergraph_VehicleBase");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x85c3b566);
 
 	AVehicleBase_C_ExecuteUbergraph_VehicleBase_Params params;
 	params.EntryPoint = EntryPoint;

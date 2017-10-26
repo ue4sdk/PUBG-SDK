@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,8 @@ namespace Classes
 
 void UCameraShakeForFalling_C::ReceivePlayShake(float* Scale)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CameraShakeForFalling.CameraShakeForFalling_C.ReceivePlayShake");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x17064346);
 
 	UCameraShakeForFalling_C_ReceivePlayShake_Params params;
 	params.Scale = Scale;
@@ -39,7 +40,8 @@ void UCameraShakeForFalling_C::ReceivePlayShake(float* Scale)
 
 void UCameraShakeForFalling_C::ExecuteUbergraph_CameraShakeForFalling(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function CameraShakeForFalling.CameraShakeForFalling_C.ExecuteUbergraph_CameraShakeForFalling");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xbd6190e);
 
 	UCameraShakeForFalling_C_ExecuteUbergraph_CameraShakeForFalling_Params params;
 	params.EntryPoint = EntryPoint;

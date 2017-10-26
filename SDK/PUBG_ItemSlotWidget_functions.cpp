@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,8 @@ namespace Classes
 
 bool UItemSlotWidget_C::IsFocusable()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.IsFocusable");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x59428977);
 
 	UItemSlotWidget_C_IsFocusable_Params params;
 
@@ -40,7 +41,8 @@ bool UItemSlotWidget_C::IsFocusable()
 
 bool UItemSlotWidget_C::InputLB()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.InputLB");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xe94a8ee1);
 
 	UItemSlotWidget_C_InputLB_Params params;
 
@@ -61,7 +63,8 @@ bool UItemSlotWidget_C::InputLB()
 
 bool UItemSlotWidget_C::InputLT()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.InputLT");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x6d31c6c7);
 
 	UItemSlotWidget_C_InputLT_Params params;
 
@@ -82,7 +85,8 @@ bool UItemSlotWidget_C::InputLT()
 
 bool UItemSlotWidget_C::InputRB()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.InputRB");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x165911bf);
 
 	UItemSlotWidget_C_InputRB_Params params;
 
@@ -103,7 +107,8 @@ bool UItemSlotWidget_C::InputRB()
 
 bool UItemSlotWidget_C::InputRT()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.InputRT");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x9271d9d9);
 
 	UItemSlotWidget_C_InputRT_Params params;
 
@@ -124,7 +129,8 @@ bool UItemSlotWidget_C::InputRT()
 
 class UUserWidget* UItemSlotWidget_C::GetFocusingChildWidget()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.GetFocusingChildWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x31492833);
 
 	UItemSlotWidget_C_GetFocusingChildWidget_Params params;
 
@@ -145,7 +151,8 @@ class UUserWidget* UItemSlotWidget_C::GetFocusingChildWidget()
 
 bool UItemSlotWidget_C::InputA()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.InputA");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x38284a14);
 
 	UItemSlotWidget_C_InputA_Params params;
 
@@ -166,7 +173,8 @@ bool UItemSlotWidget_C::InputA()
 
 bool UItemSlotWidget_C::InputB()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.InputB");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xaa2fb94f);
 
 	UItemSlotWidget_C_InputB_Params params;
 
@@ -187,7 +195,8 @@ bool UItemSlotWidget_C::InputB()
 
 bool UItemSlotWidget_C::InputX()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.InputX");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x2e16f135);
 
 	UItemSlotWidget_C_InputX_Params params;
 
@@ -208,7 +217,8 @@ bool UItemSlotWidget_C::InputX()
 
 bool UItemSlotWidget_C::InputY()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.InputY");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x81476cc);
 
 	UItemSlotWidget_C_InputY_Params params;
 
@@ -229,7 +239,8 @@ bool UItemSlotWidget_C::InputY()
 
 class UUserWidget* UItemSlotWidget_C::GetDownWidget()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.GetDownWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x25a7411b);
 
 	UItemSlotWidget_C_GetDownWidget_Params params;
 
@@ -250,7 +261,8 @@ class UUserWidget* UItemSlotWidget_C::GetDownWidget()
 
 class UUserWidget* UItemSlotWidget_C::GetLeftWidget()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.GetLeftWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x74be5bd0);
 
 	UItemSlotWidget_C_GetLeftWidget_Params params;
 
@@ -271,7 +283,8 @@ class UUserWidget* UItemSlotWidget_C::GetLeftWidget()
 
 class UUserWidget* UItemSlotWidget_C::GetRightWidget()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.GetRightWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xf2d02483);
 
 	UItemSlotWidget_C_GetRightWidget_Params params;
 
@@ -292,7 +305,8 @@ class UUserWidget* UItemSlotWidget_C::GetRightWidget()
 
 class UUserWidget* UItemSlotWidget_C::GetUpWidget()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.GetUpWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xd460eb08);
 
 	UItemSlotWidget_C_GetUpWidget_Params params;
 
@@ -313,7 +327,8 @@ class UUserWidget* UItemSlotWidget_C::GetUpWidget()
 
 bool UItemSlotWidget_C::Down()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.Down");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xa7fd76b9);
 
 	UItemSlotWidget_C_Down_Params params;
 
@@ -334,7 +349,8 @@ bool UItemSlotWidget_C::Down()
 
 bool UItemSlotWidget_C::IsFocus()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.IsFocus");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xf25aa397);
 
 	UItemSlotWidget_C_IsFocus_Params params;
 
@@ -355,7 +371,8 @@ bool UItemSlotWidget_C::IsFocus()
 
 bool UItemSlotWidget_C::Left()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.Left");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x3aadafa);
 
 	UItemSlotWidget_C_Left_Params params;
 
@@ -376,7 +393,8 @@ bool UItemSlotWidget_C::Left()
 
 bool UItemSlotWidget_C::Right()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.Right");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x62607cc9);
 
 	UItemSlotWidget_C_Right_Params params;
 
@@ -398,7 +416,8 @@ bool UItemSlotWidget_C::Right()
 
 bool UItemSlotWidget_C::SetFocus(bool NewFocus)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.SetFocus");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x373b13a1);
 
 	UItemSlotWidget_C_SetFocus_Params params;
 	params.NewFocus = NewFocus;
@@ -420,7 +439,8 @@ bool UItemSlotWidget_C::SetFocus(bool NewFocus)
 
 bool UItemSlotWidget_C::Up()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.Up");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x745f18e6);
 
 	UItemSlotWidget_C_Up_Params params;
 
@@ -441,7 +461,8 @@ bool UItemSlotWidget_C::Up()
 
 void UItemSlotWidget_C::GetSlotItem(TScriptInterface<class USlotInterface>* SlotItem)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.GetSlotItem");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xab8d8b32);
 
 	UItemSlotWidget_C_GetSlotItem_Params params;
 
@@ -463,7 +484,8 @@ void UItemSlotWidget_C::GetSlotItem(TScriptInterface<class USlotInterface>* Slot
 
 void UItemSlotWidget_C::GetSlotContainer(TScriptInterface<class USlotContainerInterface>* SlotContainer)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.GetSlotContainer");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x4edf7588);
 
 	UItemSlotWidget_C_GetSlotContainer_Params params;
 
@@ -485,7 +507,8 @@ void UItemSlotWidget_C::GetSlotContainer(TScriptInterface<class USlotContainerIn
 
 void UItemSlotWidget_C::On_UseInfo_Text_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.On_UseInfo_Text_Prepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x455110bd);
 
 	UItemSlotWidget_C_On_UseInfo_Text_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -505,7 +528,8 @@ void UItemSlotWidget_C::On_UseInfo_Text_Prepass_1(class UWidget* BoundWidget)
 
 void UItemSlotWidget_C::On_CategoryText_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.On_CategoryText_Prepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x9d825d75);
 
 	UItemSlotWidget_C_On_CategoryText_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -525,7 +549,8 @@ void UItemSlotWidget_C::On_CategoryText_Prepass_1(class UWidget* BoundWidget)
 
 void UItemSlotWidget_C::On_CategoryLayer_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.On_CategoryLayer_Prepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc99f51ad);
 
 	UItemSlotWidget_C_On_CategoryLayer_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -545,7 +570,8 @@ void UItemSlotWidget_C::On_CategoryLayer_Prepass_1(class UWidget* BoundWidget)
 
 void UItemSlotWidget_C::On_ItemMainLayer_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.On_ItemMainLayer_Prepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x964da7c7);
 
 	UItemSlotWidget_C_On_ItemMainLayer_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -565,7 +591,8 @@ void UItemSlotWidget_C::On_ItemMainLayer_Prepass_1(class UWidget* BoundWidget)
 
 void UItemSlotWidget_C::IsCastableItem(bool* IsCastableItem)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.IsCastableItem");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xd62b4589);
 
 	UItemSlotWidget_C_IsCastableItem_Params params;
 
@@ -587,7 +614,8 @@ void UItemSlotWidget_C::IsCastableItem(bool* IsCastableItem)
 
 void UItemSlotWidget_C::On_DurabilityGauge_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.On_DurabilityGauge_Prepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x24091f4);
 
 	UItemSlotWidget_C_On_DurabilityGauge_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -607,7 +635,8 @@ void UItemSlotWidget_C::On_DurabilityGauge_Prepass_1(class UWidget* BoundWidget)
 
 void UItemSlotWidget_C::On_DurabilityBorder_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.On_DurabilityBorder_Prepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xde5a245f);
 
 	UItemSlotWidget_C_On_DurabilityBorder_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -628,7 +657,8 @@ void UItemSlotWidget_C::On_DurabilityBorder_Prepass_1(class UWidget* BoundWidget
 
 bool UItemSlotWidget_C::IsUsableItemSlot(const TScriptInterface<class USlotInterface>& Target)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.IsUsableItemSlot");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x39f25eb4);
 
 	UItemSlotWidget_C_IsUsableItemSlot_Params params;
 	params.Target = Target;
@@ -651,7 +681,8 @@ bool UItemSlotWidget_C::IsUsableItemSlot(const TScriptInterface<class USlotInter
 
 void UItemSlotWidget_C::IsAttachableItemSlot(const TScriptInterface<class USlotInterface>& Target, bool* return_node)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.IsAttachableItemSlot");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x3d36d17f);
 
 	UItemSlotWidget_C_IsAttachableItemSlot_Params params;
 	params.Target = Target;
@@ -675,7 +706,8 @@ void UItemSlotWidget_C::IsAttachableItemSlot(const TScriptInterface<class USlotI
 
 void UItemSlotWidget_C::isPickupableDropItemSlot(const TScriptInterface<class USlotInterface>& Target, bool* return_value)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.isPickupableDropItemSlot");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x207cd013);
 
 	UItemSlotWidget_C_isPickupableDropItemSlot_Params params;
 	params.Target = Target;
@@ -698,7 +730,8 @@ void UItemSlotWidget_C::isPickupableDropItemSlot(const TScriptInterface<class US
 
 struct FLinearColor UItemSlotWidget_C::Get_UseInfo_Text_ColorAndOpacity_1()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.Get_UseInfo_Text_ColorAndOpacity_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x1fc4b635);
 
 	UItemSlotWidget_C_Get_UseInfo_Text_ColorAndOpacity_1_Params params;
 
@@ -719,7 +752,8 @@ struct FLinearColor UItemSlotWidget_C::Get_UseInfo_Text_ColorAndOpacity_1()
 
 void UItemSlotWidget_C::On_CastingBarLayer_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.On_CastingBarLayer_Prepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc2bfc1ef);
 
 	UItemSlotWidget_C_On_CastingBarLayer_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -739,7 +773,8 @@ void UItemSlotWidget_C::On_CastingBarLayer_Prepass_1(class UWidget* BoundWidget)
 
 class UWidget* UItemSlotWidget_C::GetToolTipWidget_1()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.GetToolTipWidget_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xf96556cc);
 
 	UItemSlotWidget_C_GetToolTipWidget_1_Params params;
 
@@ -766,7 +801,8 @@ class UWidget* UItemSlotWidget_C::GetToolTipWidget_1()
 
 void UItemSlotWidget_C::GetOperationSpawnValue(class UItem** Item, class UEquipableItem** EquipableItem, class UWeaponItem** WeaponItem, class UThrowableItem** ThrowableItem, class UAttachableItem** AttachmentItem, TScriptInterface<class USlotInterface>* SlotItem, TScriptInterface<class USlotContainerInterface>* Container)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.GetOperationSpawnValue");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x8f3ee5a2);
 
 	UItemSlotWidget_C_GetOperationSpawnValue_Params params;
 
@@ -800,7 +836,8 @@ void UItemSlotWidget_C::GetOperationSpawnValue(class UItem** Item, class UEquipa
 
 void UItemSlotWidget_C::UpdateItemIfoVisibility(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.UpdateItemIfoVisibility");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x1aad69dd);
 
 	UItemSlotWidget_C_UpdateItemIfoVisibility_Params params;
 	params.BoundWidget = BoundWidget;
@@ -820,7 +857,8 @@ void UItemSlotWidget_C::UpdateItemIfoVisibility(class UWidget* BoundWidget)
 
 void UItemSlotWidget_C::UpdateInnerItemSlotListVisibility(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.UpdateInnerItemSlotListVisibility");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xa6d74517);
 
 	UItemSlotWidget_C_UpdateInnerItemSlotListVisibility_Params params;
 	params.BoundWidget = BoundWidget;
@@ -840,7 +878,8 @@ void UItemSlotWidget_C::UpdateInnerItemSlotListVisibility(class UWidget* BoundWi
 
 void UItemSlotWidget_C::UpdateOpenButtonVisibility(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.UpdateOpenButtonVisibility");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xfd420142);
 
 	UItemSlotWidget_C_UpdateOpenButtonVisibility_Params params;
 	params.BoundWidget = BoundWidget;
@@ -860,7 +899,8 @@ void UItemSlotWidget_C::UpdateOpenButtonVisibility(class UWidget* BoundWidget)
 
 void UItemSlotWidget_C::UpdateEquipableIconVisibility(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.UpdateEquipableIconVisibility");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xecb598c1);
 
 	UItemSlotWidget_C_UpdateEquipableIconVisibility_Params params;
 	params.BoundWidget = BoundWidget;
@@ -880,7 +920,8 @@ void UItemSlotWidget_C::UpdateEquipableIconVisibility(class UWidget* BoundWidget
 
 void UItemSlotWidget_C::UpdateUseButtonVisibility(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.UpdateUseButtonVisibility");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xd5484f5f);
 
 	UItemSlotWidget_C_UpdateUseButtonVisibility_Params params;
 	params.BoundWidget = BoundWidget;
@@ -900,7 +941,8 @@ void UItemSlotWidget_C::UpdateUseButtonVisibility(class UWidget* BoundWidget)
 
 void UItemSlotWidget_C::UpdateStackCountVisibility(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.UpdateStackCountVisibility");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x67fb6d7f);
 
 	UItemSlotWidget_C_UpdateStackCountVisibility_Params params;
 	params.BoundWidget = BoundWidget;
@@ -920,7 +962,8 @@ void UItemSlotWidget_C::UpdateStackCountVisibility(class UWidget* BoundWidget)
 
 void UItemSlotWidget_C::DialogButtonDown(TEnumAsByte<EPopupButtonID> ButtonID)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.DialogButtonDown");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc3a369f5);
 
 	UItemSlotWidget_C_DialogButtonDown_Params params;
 	params.ButtonID = ButtonID;
@@ -940,7 +983,8 @@ void UItemSlotWidget_C::DialogButtonDown(TEnumAsByte<EPopupButtonID> ButtonID)
 
 void UItemSlotWidget_C::On_Brackground_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.On_Brackground_Prepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x25f866ac);
 
 	UItemSlotWidget_C_On_Brackground_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -960,7 +1004,8 @@ void UItemSlotWidget_C::On_Brackground_Prepass_1(class UWidget* BoundWidget)
 
 void UItemSlotWidget_C::UpdateIconSizeRatio(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.UpdateIconSizeRatio");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xe97607c3);
 
 	UItemSlotWidget_C_UpdateIconSizeRatio_Params params;
 	params.BoundWidget = BoundWidget;
@@ -980,7 +1025,8 @@ void UItemSlotWidget_C::UpdateIconSizeRatio(class UWidget* BoundWidget)
 
 void UItemSlotWidget_C::UpdateUseText(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.UpdateUseText");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xd3ff966);
 
 	UItemSlotWidget_C_UpdateUseText_Params params;
 	params.BoundWidget = BoundWidget;
@@ -1000,7 +1046,8 @@ void UItemSlotWidget_C::UpdateUseText(class UWidget* BoundWidget)
 
 void UItemSlotWidget_C::UpdateButtonIconIndex(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.UpdateButtonIconIndex");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc2a4dfeb);
 
 	UItemSlotWidget_C_UpdateButtonIconIndex_Params params;
 	params.BoundWidget = BoundWidget;
@@ -1023,7 +1070,8 @@ void UItemSlotWidget_C::UpdateButtonIconIndex(class UWidget* BoundWidget)
 
 void UItemSlotWidget_C::UpdateSlot(const TScriptInterface<class USlotInterface>& Item_SlotInterface, const TScriptInterface<class USlotContainerInterface>& SlotContainer, bool bIsPackaged, bool bSort)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.UpdateSlot");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xfb89a366);
 
 	UItemSlotWidget_C_UpdateSlot_Params params;
 	params.Item_SlotInterface = Item_SlotInterface;
@@ -1046,7 +1094,8 @@ void UItemSlotWidget_C::UpdateSlot(const TScriptInterface<class USlotInterface>&
 
 void UItemSlotWidget_C::UpdateItemVisibility(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.UpdateItemVisibility");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x85c0829f);
 
 	UItemSlotWidget_C_UpdateItemVisibility_Params params;
 	params.BoundWidget = BoundWidget;
@@ -1066,7 +1115,8 @@ void UItemSlotWidget_C::UpdateItemVisibility(class UWidget* BoundWidget)
 
 void UItemSlotWidget_C::UpdateStackCountText(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.UpdateStackCountText");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x3a1cb19a);
 
 	UItemSlotWidget_C_UpdateStackCountText_Params params;
 	params.BoundWidget = BoundWidget;
@@ -1086,7 +1136,8 @@ void UItemSlotWidget_C::UpdateStackCountText(class UWidget* BoundWidget)
 
 void UItemSlotWidget_C::UpdateItemIconImage(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.UpdateItemIconImage");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xd9a7c217);
 
 	UItemSlotWidget_C_UpdateItemIconImage_Params params;
 	params.BoundWidget = BoundWidget;
@@ -1106,7 +1157,8 @@ void UItemSlotWidget_C::UpdateItemIconImage(class UWidget* BoundWidget)
 
 void UItemSlotWidget_C::UpdateSlotName(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.UpdateSlotName");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x20e7c30b);
 
 	UItemSlotWidget_C_UpdateSlotName_Params params;
 	params.BoundWidget = BoundWidget;
@@ -1126,7 +1178,8 @@ void UItemSlotWidget_C::UpdateSlotName(class UWidget* BoundWidget)
 
 void UItemSlotWidget_C::GetItemCount(int* Count)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.GetItemCount");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xa9db5923);
 
 	UItemSlotWidget_C_GetItemCount_Params params;
 
@@ -1148,7 +1201,8 @@ void UItemSlotWidget_C::GetItemCount(int* Count)
 
 void UItemSlotWidget_C::CreateTslDragDropOperation(class UTslItemDragDropOperation_C** OutOperation)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.CreateTslDragDropOperation");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x79f687a2);
 
 	UItemSlotWidget_C_CreateTslDragDropOperation_Params params;
 
@@ -1170,7 +1224,8 @@ void UItemSlotWidget_C::CreateTslDragDropOperation(class UTslItemDragDropOperati
 
 TEnumAsByte<ESlateVisibility> UItemSlotWidget_C::GetOpenButtonVisibility()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.GetOpenButtonVisibility");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc65f3373);
 
 	UItemSlotWidget_C_GetOpenButtonVisibility_Params params;
 
@@ -1189,7 +1244,8 @@ TEnumAsByte<ESlateVisibility> UItemSlotWidget_C::GetOpenButtonVisibility()
 
 void UItemSlotWidget_C::DispatchRefreshInnerList()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.DispatchRefreshInnerList");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xf53c372c);
 
 	UItemSlotWidget_C_DispatchRefreshInnerList_Params params;
 
@@ -1208,7 +1264,8 @@ void UItemSlotWidget_C::DispatchRefreshInnerList()
 
 void UItemSlotWidget_C::IsDraggable(bool* Result)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.IsDraggable");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x3ef274ea);
 
 	UItemSlotWidget_C_IsDraggable_Params params;
 
@@ -1232,7 +1289,8 @@ void UItemSlotWidget_C::IsDraggable(bool* Result)
 
 void UItemSlotWidget_C::OnDragDetected(struct FGeometry* MyGeometry, struct FPointerEvent* PointerEvent, class UDragDropOperation** Operation)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.OnDragDetected");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x39823ba6);
 
 	UItemSlotWidget_C_OnDragDetected_Params params;
 	params.MyGeometry = MyGeometry;
@@ -1258,7 +1316,8 @@ void UItemSlotWidget_C::OnDragDetected(struct FGeometry* MyGeometry, struct FPoi
 
 struct FEventReply UItemSlotWidget_C::OnMouseButtonDown(struct FGeometry* MyGeometry, struct FPointerEvent* MouseEvent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.OnMouseButtonDown");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x73d20f2f);
 
 	UItemSlotWidget_C_OnMouseButtonDown_Params params;
 	params.MyGeometry = MyGeometry;
@@ -1281,7 +1340,8 @@ struct FEventReply UItemSlotWidget_C::OnMouseButtonDown(struct FGeometry* MyGeom
 
 void UItemSlotWidget_C::GetContentCount(int* Count)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.GetContentCount");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc8f02e8f);
 
 	UItemSlotWidget_C_GetContentCount_Params params;
 
@@ -1301,7 +1361,8 @@ void UItemSlotWidget_C::GetContentCount(int* Count)
 
 void UItemSlotWidget_C::Refresh()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.Refresh");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x68173eae);
 
 	UItemSlotWidget_C_Refresh_Params params;
 
@@ -1320,7 +1381,8 @@ void UItemSlotWidget_C::Refresh()
 
 TEnumAsByte<ESlateVisibility> UItemSlotWidget_C::GetInnerContainerVisibility()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.GetInnerContainerVisibility");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xeb6043ea);
 
 	UItemSlotWidget_C_GetInnerContainerVisibility_Params params;
 
@@ -1341,7 +1403,8 @@ TEnumAsByte<ESlateVisibility> UItemSlotWidget_C::GetInnerContainerVisibility()
 
 TEnumAsByte<ESlateVisibility> UItemSlotWidget_C::GetPackagedLabelVisibility()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.GetPackagedLabelVisibility");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x169ea6e3);
 
 	UItemSlotWidget_C_GetPackagedLabelVisibility_Params params;
 
@@ -1362,7 +1425,8 @@ TEnumAsByte<ESlateVisibility> UItemSlotWidget_C::GetPackagedLabelVisibility()
 
 TEnumAsByte<ESlateVisibility> UItemSlotWidget_C::GetIconVisibility()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.GetIconVisibility");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xb1fae4c0);
 
 	UItemSlotWidget_C_GetIconVisibility_Params params;
 
@@ -1383,7 +1447,8 @@ TEnumAsByte<ESlateVisibility> UItemSlotWidget_C::GetIconVisibility()
 
 TEnumAsByte<ESlateVisibility> UItemSlotWidget_C::GetAmmountTextVisibility()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.GetAmmountTextVisibility");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xfd2d61c9);
 
 	UItemSlotWidget_C_GetAmmountTextVisibility_Params params;
 
@@ -1404,7 +1469,8 @@ TEnumAsByte<ESlateVisibility> UItemSlotWidget_C::GetAmmountTextVisibility()
 
 struct FText UItemSlotWidget_C::GetAmmountText()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.GetAmmountText");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x97f3c855);
 
 	UItemSlotWidget_C_GetAmmountText_Params params;
 
@@ -1425,7 +1491,8 @@ struct FText UItemSlotWidget_C::GetAmmountText()
 
 TEnumAsByte<ESlateVisibility> UItemSlotWidget_C::GetUseButtonVisibility()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.GetUseButtonVisibility");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xddeda230);
 
 	UItemSlotWidget_C_GetUseButtonVisibility_Params params;
 
@@ -1446,7 +1513,8 @@ TEnumAsByte<ESlateVisibility> UItemSlotWidget_C::GetUseButtonVisibility()
 
 void UItemSlotWidget_C::GetIconTexture(class UTexture** Tex)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.GetIconTexture");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xdefa61a5);
 
 	UItemSlotWidget_C_GetIconTexture_Params params;
 
@@ -1468,7 +1536,8 @@ void UItemSlotWidget_C::GetIconTexture(class UTexture** Tex)
 
 struct FText UItemSlotWidget_C::GetSlotName()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.GetSlotName");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x3ead1432);
 
 	UItemSlotWidget_C_GetSlotName_Params params;
 
@@ -1490,7 +1559,8 @@ struct FText UItemSlotWidget_C::GetSlotName()
 
 void UItemSlotWidget_C::OnMouseEnter(struct FGeometry* MyGeometry, struct FPointerEvent* MouseEvent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.OnMouseEnter");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x8c4aca63);
 
 	UItemSlotWidget_C_OnMouseEnter_Params params;
 	params.MyGeometry = MyGeometry;
@@ -1509,7 +1579,8 @@ void UItemSlotWidget_C::OnMouseEnter(struct FGeometry* MyGeometry, struct FPoint
 
 void UItemSlotWidget_C::Destruct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.Destruct");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x869092f);
 
 	UItemSlotWidget_C_Destruct_Params params;
 
@@ -1528,7 +1599,8 @@ void UItemSlotWidget_C::Destruct()
 
 void UItemSlotWidget_C::OnMouseLeave(struct FPointerEvent* MouseEvent)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.OnMouseLeave");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xb3c1440c);
 
 	UItemSlotWidget_C_OnMouseLeave_Params params;
 	params.MouseEvent = MouseEvent;
@@ -1548,7 +1620,8 @@ void UItemSlotWidget_C::OnMouseLeave(struct FPointerEvent* MouseEvent)
 
 void UItemSlotWidget_C::BndEvt__InnerItemSlotListWidget_K2Node_ComponentBoundEvent_0_OnChildSlotFocus__DelegateSignature(const TScriptInterface<class USlotInterface>& Slot)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.BndEvt__InnerItemSlotListWidget_K2Node_ComponentBoundEvent_0_OnChildSlotFocus__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xfa1bc863);
 
 	UItemSlotWidget_C_BndEvt__InnerItemSlotListWidget_K2Node_ComponentBoundEvent_0_OnChildSlotFocus__DelegateSignature_Params params;
 	params.Slot = Slot;
@@ -1566,7 +1639,8 @@ void UItemSlotWidget_C::BndEvt__InnerItemSlotListWidget_K2Node_ComponentBoundEve
 
 void UItemSlotWidget_C::ShowToolTip()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.ShowToolTip");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xbdcbffe3);
 
 	UItemSlotWidget_C_ShowToolTip_Params params;
 
@@ -1583,7 +1657,8 @@ void UItemSlotWidget_C::ShowToolTip()
 
 void UItemSlotWidget_C::Construct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.Construct");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xdfc73fc0);
 
 	UItemSlotWidget_C_Construct_Params params;
 
@@ -1600,7 +1675,8 @@ void UItemSlotWidget_C::Construct()
 
 void UItemSlotWidget_C::OnInputXPressed()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.OnInputXPressed");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x8889ce90);
 
 	UItemSlotWidget_C_OnInputXPressed_Params params;
 
@@ -1617,7 +1693,8 @@ void UItemSlotWidget_C::OnInputXPressed()
 
 void UItemSlotWidget_C::OnInputXReleased()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.OnInputXReleased");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xaa309047);
 
 	UItemSlotWidget_C_OnInputXReleased_Params params;
 
@@ -1634,7 +1711,8 @@ void UItemSlotWidget_C::OnInputXReleased()
 
 void UItemSlotWidget_C::UI_Gamepad_B_Pressed()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.UI_Gamepad_B_Pressed");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xf6beb2ff);
 
 	UItemSlotWidget_C_UI_Gamepad_B_Pressed_Params params;
 
@@ -1651,7 +1729,8 @@ void UItemSlotWidget_C::UI_Gamepad_B_Pressed()
 
 void UItemSlotWidget_C::UI_Gamepad_B_Released()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.UI_Gamepad_B_Released");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc1ff566a);
 
 	UItemSlotWidget_C_UI_Gamepad_B_Released_Params params;
 
@@ -1671,7 +1750,8 @@ void UItemSlotWidget_C::UI_Gamepad_B_Released()
 
 void UItemSlotWidget_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.Tick");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xea7cfbf2);
 
 	UItemSlotWidget_C_Tick_Params params;
 	params.MyGeometry = MyGeometry;
@@ -1692,7 +1772,8 @@ void UItemSlotWidget_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 
 void UItemSlotWidget_C::OnButtonClicked(TEnumAsByte<EPopupButtonID> ButtonID)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.OnButtonClicked");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x1999c9b1);
 
 	UItemSlotWidget_C_OnButtonClicked_Params params;
 	params.ButtonID = ButtonID;
@@ -1710,7 +1791,8 @@ void UItemSlotWidget_C::OnButtonClicked(TEnumAsByte<EPopupButtonID> ButtonID)
 
 void UItemSlotWidget_C::OnInputWidgetInputB()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.OnInputWidgetInputB");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xa4da45c);
 
 	UItemSlotWidget_C_OnInputWidgetInputB_Params params;
 
@@ -1729,7 +1811,8 @@ void UItemSlotWidget_C::OnInputWidgetInputB()
 
 void UItemSlotWidget_C::ExecuteUbergraph_ItemSlotWidget(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.ExecuteUbergraph_ItemSlotWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x91a30b44);
 
 	UItemSlotWidget_C_ExecuteUbergraph_ItemSlotWidget_Params params;
 	params.EntryPoint = EntryPoint;
@@ -1747,7 +1830,8 @@ void UItemSlotWidget_C::ExecuteUbergraph_ItemSlotWidget(int EntryPoint)
 
 void UItemSlotWidget_C::RefreshFocus__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.RefreshFocus__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x893da435);
 
 	UItemSlotWidget_C_RefreshFocus__DelegateSignature_Params params;
 
@@ -1764,7 +1848,8 @@ void UItemSlotWidget_C::RefreshFocus__DelegateSignature()
 
 void UItemSlotWidget_C::OnRefreshInnerList__DelegateSignature()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.OnRefreshInnerList__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xebd9700c);
 
 	UItemSlotWidget_C_OnRefreshInnerList__DelegateSignature_Params params;
 
@@ -1784,7 +1869,8 @@ void UItemSlotWidget_C::OnRefreshInnerList__DelegateSignature()
 
 void UItemSlotWidget_C::OnSlotFocus__DelegateSignature(const TScriptInterface<class USlotInterface>& Slot, const TScriptInterface<class USlotContainerInterface>& SlotContainer)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ItemSlotWidget.ItemSlotWidget_C.OnSlotFocus__DelegateSignature");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xfa5bf611);
 
 	UItemSlotWidget_C_OnSlotFocus__DelegateSignature_Params params;
 	params.Slot = Slot;

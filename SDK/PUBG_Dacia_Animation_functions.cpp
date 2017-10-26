@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,7 +17,8 @@ namespace Classes
 
 void UDacia_Animation_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Dacia_Animation_AnimGraphNode_ModifyBone_719092E14E4BB5CA865A9189AABCA18D()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Dacia_Animation.Dacia_Animation_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Dacia_Animation_AnimGraphNode_ModifyBone_719092E14E4BB5CA865A9189AABCA18D");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x845e2e1f);
 
 	UDacia_Animation_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Dacia_Animation_AnimGraphNode_ModifyBone_719092E14E4BB5CA865A9189AABCA18D_Params params;
 
@@ -34,7 +35,8 @@ void UDacia_Animation_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Dacia_Anima
 
 void UDacia_Animation_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Dacia_Animation_AnimGraphNode_ModifyBone_8AADA72D4702CF0AC25A53A719905896()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Dacia_Animation.Dacia_Animation_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Dacia_Animation_AnimGraphNode_ModifyBone_8AADA72D4702CF0AC25A53A719905896");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xbe2f5104);
 
 	UDacia_Animation_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Dacia_Animation_AnimGraphNode_ModifyBone_8AADA72D4702CF0AC25A53A719905896_Params params;
 
@@ -51,7 +53,8 @@ void UDacia_Animation_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Dacia_Anima
 
 void UDacia_Animation_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Dacia_Animation_AnimGraphNode_ModifyBone_8B502CF54ED760CF23396D8775CD4D7E()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Dacia_Animation.Dacia_Animation_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Dacia_Animation_AnimGraphNode_ModifyBone_8B502CF54ED760CF23396D8775CD4D7E");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xdaeb6b20);
 
 	UDacia_Animation_C_EvaluateGraphExposedInputs_ExecuteUbergraph_Dacia_Animation_AnimGraphNode_ModifyBone_8B502CF54ED760CF23396D8775CD4D7E_Params params;
 
@@ -70,7 +73,8 @@ void UDacia_Animation_C::EvaluateGraphExposedInputs_ExecuteUbergraph_Dacia_Anima
 
 void UDacia_Animation_C::BlueprintUpdateAnimation(float* DeltaTimeX)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Dacia_Animation.Dacia_Animation_C.BlueprintUpdateAnimation");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xd203e2e3);
 
 	UDacia_Animation_C_BlueprintUpdateAnimation_Params params;
 	params.DeltaTimeX = DeltaTimeX;
@@ -90,7 +94,8 @@ void UDacia_Animation_C::BlueprintUpdateAnimation(float* DeltaTimeX)
 
 void UDacia_Animation_C::ExecuteUbergraph_Dacia_Animation(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Dacia_Animation.Dacia_Animation_C.ExecuteUbergraph_Dacia_Animation");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xf1eda9c8);
 
 	UDacia_Animation_C_ExecuteUbergraph_Dacia_Animation_Params params;
 	params.EntryPoint = EntryPoint;

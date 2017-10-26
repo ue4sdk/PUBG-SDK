@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,8 @@ namespace Classes
 
 void UParachuteVehicleWidget_C::On_Parachute_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ParachuteVehicleWidget.ParachuteVehicleWidget_C.On_Parachute_Prepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x8f8090db);
 
 	UParachuteVehicleWidget_C_On_Parachute_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -39,7 +40,8 @@ void UParachuteVehicleWidget_C::On_Parachute_Prepass_1(class UWidget* BoundWidge
 
 struct FText UParachuteVehicleWidget_C::Get_AirSpeed_Text_1()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ParachuteVehicleWidget.ParachuteVehicleWidget_C.Get_AirSpeed_Text_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x59b6388b);
 
 	UParachuteVehicleWidget_C_Get_AirSpeed_Text_1_Params params;
 
@@ -60,7 +62,8 @@ struct FText UParachuteVehicleWidget_C::Get_AirSpeed_Text_1()
 
 void UParachuteVehicleWidget_C::OnPrepass_ParachuteWidgetVisibility(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ParachuteVehicleWidget.ParachuteVehicleWidget_C.OnPrepass_ParachuteWidgetVisibility");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xe4ab5e8e);
 
 	UParachuteVehicleWidget_C_OnPrepass_ParachuteWidgetVisibility_Params params;
 	params.BoundWidget = BoundWidget;
@@ -78,7 +81,8 @@ void UParachuteVehicleWidget_C::OnPrepass_ParachuteWidgetVisibility(class UWidge
 
 void UParachuteVehicleWidget_C::Construct()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ParachuteVehicleWidget.ParachuteVehicleWidget_C.Construct");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc8277f88);
 
 	UParachuteVehicleWidget_C_Construct_Params params;
 
@@ -98,7 +102,8 @@ void UParachuteVehicleWidget_C::Construct()
 
 void UParachuteVehicleWidget_C::Tick(struct FGeometry* MyGeometry, float* InDeltaTime)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ParachuteVehicleWidget.ParachuteVehicleWidget_C.Tick");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x9e60532a);
 
 	UParachuteVehicleWidget_C_Tick_Params params;
 	params.MyGeometry = MyGeometry;
@@ -119,7 +124,8 @@ void UParachuteVehicleWidget_C::Tick(struct FGeometry* MyGeometry, float* InDelt
 
 void UParachuteVehicleWidget_C::ExecuteUbergraph_ParachuteVehicleWidget(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ParachuteVehicleWidget.ParachuteVehicleWidget_C.ExecuteUbergraph_ParachuteVehicleWidget");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xa77080e2);
 
 	UParachuteVehicleWidget_C_ExecuteUbergraph_ParachuteVehicleWidget_Params params;
 	params.EntryPoint = EntryPoint;

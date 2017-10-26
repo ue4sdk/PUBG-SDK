@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,8 @@ namespace Classes
 
 void ADeathDropItemPackage_C::GetCategory(struct FText* Category)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function DeathDropItemPackage.DeathDropItemPackage_C.GetCategory");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x5a907a21);
 
 	ADeathDropItemPackage_C_GetCategory_Params params;
 
@@ -39,7 +40,8 @@ void ADeathDropItemPackage_C::GetCategory(struct FText* Category)
 
 void ADeathDropItemPackage_C::UserConstructionScript()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function DeathDropItemPackage.DeathDropItemPackage_C.UserConstructionScript");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc09243a8);
 
 	ADeathDropItemPackage_C_UserConstructionScript_Params params;
 
@@ -56,7 +58,8 @@ void ADeathDropItemPackage_C::UserConstructionScript()
 
 void ADeathDropItemPackage_C::ReceiveBeginPlay()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function DeathDropItemPackage.DeathDropItemPackage_C.ReceiveBeginPlay");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xca77255f);
 
 	ADeathDropItemPackage_C_ReceiveBeginPlay_Params params;
 
@@ -75,7 +78,8 @@ void ADeathDropItemPackage_C::ReceiveBeginPlay()
 
 void ADeathDropItemPackage_C::ExecuteUbergraph_DeathDropItemPackage(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function DeathDropItemPackage.DeathDropItemPackage_C.ExecuteUbergraph_DeathDropItemPackage");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x675b946b);
 
 	ADeathDropItemPackage_C_ExecuteUbergraph_DeathDropItemPackage_Params params;
 	params.EntryPoint = EntryPoint;

@@ -1,44 +1,42 @@
 #pragma once
 
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
-	#pragma pack(push, 0x8)
+#pragma pack(push, 0x8)
 #endif
 
-namespace Classes
-{
-//---------------------------------------------------------------------------
-//Classes
-//---------------------------------------------------------------------------
+namespace Classes {
+	//---------------------------------------------------------------------------
+	//Classes
+	//---------------------------------------------------------------------------
 
-// BlueprintGeneratedClass VehicleSeatBase.VehicleSeatBase_C
-// 0x0024 (0x0454 - 0x0430)
-class AVehicleSeatBase_C : public ATslVehicleSeatActor
-{
-public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0430(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_DuplicateTransient)
-	class USphereComponent*                            VehicleSeatInteractionCollision;                          // 0x0438(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class UInteractionComponent*                       Interaction;                                              // 0x0440(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0448(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-	float                                              LastInteractionTime;                                      // 0x0450(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+	// BlueprintGeneratedClass VehicleSeatBase.VehicleSeatBase_C
+	// 0x0024 (0x0454 - 0x0430)
+	class AVehicleSeatBase_C : public ATslVehicleSeatActor {
+	public:
+		struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0430(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_DuplicateTransient)
+		class USphereComponent*                            VehicleSeatInteractionCollision;                          // 0x0438(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		class UInteractionComponent*                       Interaction;                                              // 0x0440(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		class USceneComponent*                             DefaultSceneRoot;                                         // 0x0448(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		float                                              LastInteractionTime;                                      // 0x0450(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass VehicleSeatBase.VehicleSeatBase_C");
-		return ptr;
-	}
+		static UClass* StaticClass() {
+			static UClass* ptr = nullptr;
+			if (!ptr) ptr = UObject::FindClass(0x1739b3c9);
+			return ptr;
+		}
 
 
-	void UserConstructionScript();
-	void BndEvt__Interaction_K2Node_ComponentBoundEvent_63_ComponentInteractBySignature__DelegateSignature(class ATslCharacter* OtherCharacter);
-	void ReceiveBeginPlay();
-	void ExecuteUbergraph_VehicleSeatBase(int EntryPoint);
-};
+		void UserConstructionScript();
+		void BndEvt__Interaction_K2Node_ComponentBoundEvent_63_ComponentInteractBySignature__DelegateSignature(class ATslCharacter* OtherCharacter);
+		void ReceiveBeginPlay();
+		void ExecuteUbergraph_VehicleSeatBase(int EntryPoint);
+	};
 
 
 }
 
 #ifdef _MSC_VER
-	#pragma pack(pop)
+#pragma pack(pop)
 #endif

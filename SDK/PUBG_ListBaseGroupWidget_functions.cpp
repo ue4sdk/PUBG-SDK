@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.6.36.9) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,7 +19,8 @@ namespace Classes
 
 void UListBaseGroupWidget_C::GetChilderenCount(int* Count)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ListBaseGroupWidget.ListBaseGroupWidget_C.GetChilderenCount");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xbec280aa);
 
 	UListBaseGroupWidget_C_GetChilderenCount_Params params;
 
@@ -41,7 +42,8 @@ void UListBaseGroupWidget_C::GetChilderenCount(int* Count)
 
 void UListBaseGroupWidget_C::AddChild(class UWidget** Content)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ListBaseGroupWidget.ListBaseGroupWidget_C.AddChild");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x85dcdc4e);
 
 	UListBaseGroupWidget_C_AddChild_Params params;
 
@@ -61,7 +63,8 @@ void UListBaseGroupWidget_C::AddChild(class UWidget** Content)
 
 void UListBaseGroupWidget_C::Clear()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ListBaseGroupWidget.ListBaseGroupWidget_C.Clear");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x685acdfe);
 
 	UListBaseGroupWidget_C_Clear_Params params;
 
@@ -80,7 +83,8 @@ void UListBaseGroupWidget_C::Clear()
 
 void UListBaseGroupWidget_C::On_List_Prepass_1(class UWidget* BoundWidget)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ListBaseGroupWidget.ListBaseGroupWidget_C.On_List_Prepass_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xb0a2476a);
 
 	UListBaseGroupWidget_C_On_List_Prepass_1_Params params;
 	params.BoundWidget = BoundWidget;
@@ -100,7 +104,8 @@ void UListBaseGroupWidget_C::On_List_Prepass_1(class UWidget* BoundWidget)
 
 void UListBaseGroupWidget_C::AddCategoryGroup(class UCategoryGroupWidget_C* CategoryGroup)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ListBaseGroupWidget.ListBaseGroupWidget_C.AddCategoryGroup");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xa62540f5);
 
 	UListBaseGroupWidget_C_AddCategoryGroup_Params params;
 	params.CategoryGroup = CategoryGroup;
