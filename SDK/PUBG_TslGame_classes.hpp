@@ -6142,7 +6142,7 @@ namespace Classes {
 
 
 	// Class TslGame.TslGameMode
-	// 0x0338 (0x07A8 - 0x0470)
+	// 0x0340 (0x07B0 - 0x0470)
 	class ATslGameMode : public AGameMode {
 	public:
 		class UClass*                                      MalePawnClass;                                            // 0x0470(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -6202,7 +6202,7 @@ namespace Classes {
 		unsigned char                                      UnknownData06[0x98];                                      // 0x0608(0x0098) MISSED OFFSET
 		TMap<struct FString, class APlayerState*>          JoinedUserPlayerStateMap;                                 // 0x06A0(0x0050) (CPF_ZeroConstructor, CPF_Transient)
 		TArray<struct FTeams>                              Teams;                                                    // 0x06F0(0x0010) (CPF_ZeroConstructor, CPF_Transient)
-		unsigned char                                      UnknownData07[0xA8];                                      // 0x0700(0x00A8) MISSED OFFSET
+		unsigned char                                      UnknownData07[0xB0];                                      // 0x0700(0x00B0) MISSED OFFSET
 
 		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
@@ -6909,7 +6909,7 @@ namespace Classes {
 
 
 	// Class TslGame.TslPlayerState
-	// 0x01F0 (0x0620 - 0x0430)
+	// 0x0210 (0x0640 - 0x0430)
 	class ATslPlayerState : public APlayerState {
 	public:
 		int                                                Ranking;                                                  // 0x0430(0x0004) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Net, CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
@@ -6926,10 +6926,10 @@ namespace Classes {
 		TArray<struct FReplicatedEquipableItem>            ReplicatedEquipableItems;                                 // 0x0500(0x0010) (CPF_Net, CPF_ZeroConstructor, CPF_Transient)
 		unsigned char                                      UnknownData03[0x1C];                                      // 0x0510(0x001C) MISSED OFFSET
 		unsigned char                                      bQuitter : 1;                                             // 0x052C(0x0001)
-		unsigned char                                      UnknownData04[0xDF];                                      // 0x052D(0x00DF) MISSED OFFSET
-		float                                              LastHitTime;                                              // 0x060C(0x0004) (CPF_BlueprintVisible, CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		struct FVector_NetQuantize                         CurrentAttackedPlayerLocation;                            // 0x0610(0x000C) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Net)
-		unsigned char                                      UnknownData05[0x4];                                       // 0x061C(0x0004) MISSED OFFSET
+		unsigned char                                      UnknownData04[0xFF];                                      // 0x052D(0x00FF) MISSED OFFSET
+		float                                              LastHitTime;                                              // 0x062C(0x0004) (CPF_BlueprintVisible, CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		struct FVector_NetQuantize                         CurrentAttackedPlayerLocation;                            // 0x0630(0x000C) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Net)
+		unsigned char                                      UnknownData05[0x4];                                       // 0x063C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
