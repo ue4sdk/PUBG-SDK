@@ -6,13 +6,15 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Enums
 	//---------------------------------------------------------------------------
 
 	// Enum MoviePlayer.EMoviePlaybackType
-	enum class EMoviePlaybackType : uint8_t {
+	enum class EMoviePlaybackType : uint8_t
+	{
 		MT_Normal = 0,
 		MT_Looped = 1,
 		MT_LoadingLoop = 2,

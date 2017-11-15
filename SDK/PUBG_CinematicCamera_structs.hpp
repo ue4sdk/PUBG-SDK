@@ -6,13 +6,15 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Enums
 	//---------------------------------------------------------------------------
 
 	// Enum CinematicCamera.ECameraFocusMethod
-	enum class ECameraFocusMethod : uint8_t {
+	enum class ECameraFocusMethod : uint8_t
+	{
 		ECameraFocusMethod__None = 0,
 		ECameraFocusMethod__Manual = 1,
 		ECameraFocusMethod__Tracking = 2,
@@ -27,7 +29,8 @@ namespace Classes {
 
 	// ScriptStruct CinematicCamera.CameraFilmbackSettings
 	// 0x000C
-	struct FCameraFilmbackSettings {
+	struct FCameraFilmbackSettings
+	{
 		float                                              SensorWidth;                                              // 0x0000(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		float                                              SensorHeight;                                             // 0x0004(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		float                                              SensorAspectRatio;                                        // 0x0008(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
@@ -35,7 +38,8 @@ namespace Classes {
 
 	// ScriptStruct CinematicCamera.CameraLensSettings
 	// 0x0014
-	struct FCameraLensSettings {
+	struct FCameraLensSettings
+	{
 		float                                              MinFocalLength;                                           // 0x0000(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		float                                              MaxFocalLength;                                           // 0x0004(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		float                                              MinFStop;                                                 // 0x0008(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -45,7 +49,8 @@ namespace Classes {
 
 	// ScriptStruct CinematicCamera.CameraTrackingFocusSettings
 	// 0x0018
-	struct FCameraTrackingFocusSettings {
+	struct FCameraTrackingFocusSettings
+	{
 		class AActor*                                      ActorToTrack;                                             // 0x0000(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		struct FVector                                     RelativeOffset;                                           // 0x0008(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      bDrawDebugTrackingFocusPoint : 1;                         // 0x0014(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_Transient)
@@ -54,7 +59,8 @@ namespace Classes {
 
 	// ScriptStruct CinematicCamera.CameraFocusSettings
 	// 0x0030
-	struct FCameraFocusSettings {
+	struct FCameraFocusSettings
+	{
 		TEnumAsByte<ECameraFocusMethod>                    FocusMethod;                                              // 0x0000(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
 		float                                              ManualFocusDistance;                                      // 0x0004(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -68,7 +74,8 @@ namespace Classes {
 
 	// ScriptStruct CinematicCamera.NamedFilmbackPreset
 	// 0x0020
-	struct FNamedFilmbackPreset {
+	struct FNamedFilmbackPreset
+	{
 		struct FString                                     Name;                                                     // 0x0000(0x0010) (CPF_ZeroConstructor)
 		struct FCameraFilmbackSettings                     FilmbackSettings;                                         // 0x0010(0x000C) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
@@ -76,7 +83,8 @@ namespace Classes {
 
 	// ScriptStruct CinematicCamera.NamedLensPreset
 	// 0x0028
-	struct FNamedLensPreset {
+	struct FNamedLensPreset
+	{
 		struct FString                                     Name;                                                     // 0x0000(0x0010) (CPF_ZeroConstructor)
 		struct FCameraLensSettings                         LensSettings;                                             // 0x0010(0x0014) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x4];                                       // 0x0024(0x0004) MISSED OFFSET
@@ -84,7 +92,8 @@ namespace Classes {
 
 	// ScriptStruct CinematicCamera.CameraLookatTrackingSettings
 	// 0x0030
-	struct FCameraLookatTrackingSettings {
+	struct FCameraLookatTrackingSettings
+	{
 		unsigned char                                      bEnableLookAtTracking : 1;                                // 0x0000(0x0001) (CPF_Edit, CPF_BlueprintVisible)
 		unsigned char                                      bDrawDebugLookAtTrackingPosition : 1;                     // 0x0000(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_Transient)
 		unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET

@@ -6,14 +6,16 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// WidgetBlueprintGeneratedClass BP_WeaponSlotWidget.BP_WeaponSlotWidget_C
 	// 0x0090 (0x05F8 - 0x0568)
-	class UBP_WeaponSlotWidget_C : public UWeaponSlotBaseWidget {
+	class UBP_WeaponSlotWidget_C : public UWeaponSlotBaseWidget
+	{
 	public:
 		class UWidgetAnimation*                            ZeroDistIncreasing;                                       // 0x0568(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData, CPF_RepSkip, CPF_RepNotify, CPF_Interp, CPF_NonTransactional, CPF_EditorOnly, CPF_NoDestructor, CPF_AutoWeak, CPF_ContainsInstancedReference, CPF_AssetRegistrySearchable, CPF_SimpleDisplay, CPF_AdvancedDisplay, CPF_Protected, CPF_BlueprintCallable, CPF_BlueprintAuthorityOnly, CPF_TextExportTransient, CPF_NonPIEDuplicateTransient, CPF_ExposeOnSpawn, CPF_PersistentInstance, CPF_UObjectWrapper, CPF_HasGetValueTypeHash, CPF_NativeAccessSpecifierPublic, CPF_NativeAccessSpecifierProtected, CPF_NativeAccessSpecifierPrivate)
 		class UWidgetAnimation*                            ZeroDistDecreasing;                                       // 0x0570(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData, CPF_RepSkip, CPF_RepNotify, CPF_Interp, CPF_NonTransactional, CPF_EditorOnly, CPF_NoDestructor, CPF_AutoWeak, CPF_ContainsInstancedReference, CPF_AssetRegistrySearchable, CPF_SimpleDisplay, CPF_AdvancedDisplay, CPF_Protected, CPF_BlueprintCallable, CPF_BlueprintAuthorityOnly, CPF_TextExportTransient, CPF_NonPIEDuplicateTransient, CPF_ExposeOnSpawn, CPF_PersistentInstance, CPF_UObjectWrapper, CPF_HasGetValueTypeHash, CPF_NativeAccessSpecifierPublic, CPF_NativeAccessSpecifierProtected, CPF_NativeAccessSpecifierPrivate)
@@ -30,7 +32,8 @@ namespace Classes {
 		struct FScriptMulticastDelegate                    HIddenStart;                                              // 0x05D8(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_BlueprintAssignable)
 		struct FScriptMulticastDelegate                    HIddenEnd;                                                // 0x05E8(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_BlueprintAssignable)
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xad617fb5);
 			return ptr;

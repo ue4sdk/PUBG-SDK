@@ -6,13 +6,15 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Enums
 	//---------------------------------------------------------------------------
 
 	// Enum MovieScene.ESpawnOwnership
-	enum class ESpawnOwnership : uint8_t {
+	enum class ESpawnOwnership : uint8_t
+	{
 		ESpawnOwnership__InnerSequence = 0,
 		ESpawnOwnership__MasterSequence = 1,
 		ESpawnOwnership__External = 2,
@@ -21,7 +23,8 @@ namespace Classes {
 
 
 	// Enum MovieScene.EMovieSceneKeyInterpolation
-	enum class EMovieSceneKeyInterpolation : uint8_t {
+	enum class EMovieSceneKeyInterpolation : uint8_t
+	{
 		EMovieSceneKeyInterpolation__Auto = 0,
 		EMovieSceneKeyInterpolation__User = 1,
 		EMovieSceneKeyInterpolation__Break = 2,
@@ -38,7 +41,8 @@ namespace Classes {
 
 	// ScriptStruct MovieScene.MovieSceneSpawnable
 	// 0x0040
-	struct FMovieSceneSpawnable {
+	struct FMovieSceneSpawnable
+	{
 		struct FGuid                                       Guid;                                                     // 0x0000(0x0010) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		struct FString                                     Name;                                                     // 0x0010(0x0010) (CPF_ZeroConstructor)
 		class UObject*                                     ObjectTemplate;                                           // 0x0020(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -49,7 +53,8 @@ namespace Classes {
 
 	// ScriptStruct MovieScene.MovieScenePossessable
 	// 0x0038
-	struct FMovieScenePossessable {
+	struct FMovieScenePossessable
+	{
 		struct FGuid                                       Guid;                                                     // 0x0000(0x0010) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		struct FString                                     Name;                                                     // 0x0010(0x0010) (CPF_ZeroConstructor)
 		class UClass*                                      PossessedObjectClass;                                     // 0x0020(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -58,7 +63,8 @@ namespace Classes {
 
 	// ScriptStruct MovieScene.MovieSceneBinding
 	// 0x0030
-	struct FMovieSceneBinding {
+	struct FMovieSceneBinding
+	{
 		struct FGuid                                       ObjectGuid;                                               // 0x0000(0x0010) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		struct FString                                     BindingName;                                              // 0x0010(0x0010) (CPF_ZeroConstructor)
 		TArray<class UMovieSceneTrack*>                    Tracks;                                                   // 0x0020(0x0010) (CPF_ZeroConstructor)
@@ -66,19 +72,22 @@ namespace Classes {
 
 	// ScriptStruct MovieScene.MovieSceneTrackLabels
 	// 0x0010
-	struct FMovieSceneTrackLabels {
+	struct FMovieSceneTrackLabels
+	{
 		TArray<struct FString>                             Strings;                                                  // 0x0000(0x0010) (CPF_ZeroConstructor)
 	};
 
 	// ScriptStruct MovieScene.MovieSceneExpansionState
 	// 0x0001
-	struct FMovieSceneExpansionState {
+	struct FMovieSceneExpansionState
+	{
 		bool                                               bExpanded;                                                // 0x0000(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	};
 
 	// ScriptStruct MovieScene.MovieSceneEditorData
 	// 0x0070
-	struct FMovieSceneEditorData {
+	struct FMovieSceneEditorData
+	{
 		TMap<struct FString, struct FMovieSceneExpansionState> ExpansionStates;                                          // 0x0000(0x0050) (CPF_ZeroConstructor)
 		struct FFloatRange                                 WorkingRange;                                             // 0x0050(0x0010) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		struct FFloatRange                                 ViewRange;                                                // 0x0060(0x0010) (CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -86,7 +95,8 @@ namespace Classes {
 
 	// ScriptStruct MovieScene.MovieSceneKeyStruct
 	// 0x0008
-	struct FMovieSceneKeyStruct {
+	struct FMovieSceneKeyStruct
+	{
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
 	};
 

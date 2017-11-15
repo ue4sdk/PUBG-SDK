@@ -6,17 +6,20 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// BlueprintGeneratedClass UiHelperFunctionsBp.UiHelperFunctionsBp_C
 	// 0x0000 (0x0028 - 0x0028)
-	class UUiHelperFunctionsBp_C : public UBlueprintFunctionLibrary {
+	class UUiHelperFunctionsBp_C : public UBlueprintFunctionLibrary
+	{
 	public:
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x6b618965);
 			return ptr;

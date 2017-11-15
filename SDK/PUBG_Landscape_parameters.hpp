@@ -8,13 +8,15 @@
 
 #include "../SDK.hpp"
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Parameters
 	//---------------------------------------------------------------------------
 
 	// Function Landscape.LandscapeProxy.EditorApplySpline
-	struct ALandscapeProxy_EditorApplySpline_Params {
+	struct ALandscapeProxy_EditorApplySpline_Params
+	{
 		class USplineComponent*                            InSplineComponent;                                        // (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 		float                                              StartWidth;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		float                                              EndWidth;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -29,7 +31,8 @@ namespace Classes {
 	};
 
 	// Function Landscape.LandscapeProxy.ChangeLODDistanceFactor
-	struct ALandscapeProxy_ChangeLODDistanceFactor_Params {
+	struct ALandscapeProxy_ChangeLODDistanceFactor_Params
+	{
 		float                                              InLODDistanceFactor;                                      // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	};
 

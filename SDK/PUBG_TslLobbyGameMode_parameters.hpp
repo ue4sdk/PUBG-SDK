@@ -8,13 +8,15 @@
 
 #include "../SDK.hpp"
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Parameters
 	//---------------------------------------------------------------------------
 
 	// Function TslLobbyGameMode.TSLLobbyGameMode_C.UserConstructionScript
-	struct ATSLLobbyGameMode_C_UserConstructionScript_Params {
+	struct ATSLLobbyGameMode_C_UserConstructionScript_Params
+	{
 	};
 
 }

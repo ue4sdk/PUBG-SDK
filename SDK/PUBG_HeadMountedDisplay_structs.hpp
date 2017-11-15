@@ -6,13 +6,15 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Enums
 	//---------------------------------------------------------------------------
 
 	// Enum HeadMountedDisplay.ETrackingStatus
-	enum class ETrackingStatus : uint8_t {
+	enum class ETrackingStatus : uint8_t
+	{
 		ETrackingStatus__NotTracked = 0,
 		ETrackingStatus__InertialOnly = 1,
 		ETrackingStatus__Tracked = 2,

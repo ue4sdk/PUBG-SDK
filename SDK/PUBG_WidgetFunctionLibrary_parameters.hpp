@@ -8,13 +8,15 @@
 
 #include "../SDK.hpp"
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Parameters
 	//---------------------------------------------------------------------------
 
 	// Function WidgetFunctionLibrary.WidgetFunctionLibrary_C.GetOwningShooterCharacter
-	struct UWidgetFunctionLibrary_C_GetOwningShooterCharacter_Params {
+	struct UWidgetFunctionLibrary_C_GetOwningShooterCharacter_Params
+	{
 		class UUserWidget*                                 UserWidget;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class UObject*                                     __WorldContext;                                           // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class ATslCharacter*                               ShooterCharacter;                                         // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)

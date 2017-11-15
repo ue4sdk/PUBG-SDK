@@ -6,14 +6,16 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// WidgetBlueprintGeneratedClass ReplayTimeline.ReplayTimeline_C
 	// 0x00A0 (0x02E0 - 0x0240)
-	class UReplayTimeline_C : public UUserWidget {
+	class UReplayTimeline_C : public UUserWidget
+	{
 	public:
 		struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0240(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_DuplicateTransient)
 		class UButton*                                     BtnPause;                                                 // 0x0248(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData, CPF_RepSkip, CPF_RepNotify, CPF_Interp, CPF_NonTransactional, CPF_EditorOnly, CPF_NoDestructor, CPF_AutoWeak, CPF_ContainsInstancedReference, CPF_AssetRegistrySearchable, CPF_SimpleDisplay, CPF_AdvancedDisplay, CPF_Protected, CPF_BlueprintCallable, CPF_BlueprintAuthorityOnly, CPF_TextExportTransient, CPF_NonPIEDuplicateTransient, CPF_ExposeOnSpawn, CPF_PersistentInstance, CPF_UObjectWrapper, CPF_HasGetValueTypeHash, CPF_NativeAccessSpecifierPublic, CPF_NativeAccessSpecifierProtected, CPF_NativeAccessSpecifierPrivate)
@@ -39,7 +41,8 @@ namespace Classes {
 		unsigned char                                      UnknownData00[0x2];                                       // 0x02D6(0x0002) MISSED OFFSET
 		struct FTimerHandle                                GetKillEventsTimer;                                       // 0x02D8(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xa2230e55);
 			return ptr;

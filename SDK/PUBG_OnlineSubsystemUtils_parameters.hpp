@@ -8,13 +8,15 @@
 
 #include "../SDK.hpp"
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Parameters
 	//---------------------------------------------------------------------------
 
 	// Function OnlineSubsystemUtils.AchievementBlueprintLibrary.GetCachedAchievementProgress
-	struct UAchievementBlueprintLibrary_GetCachedAchievementProgress_Params {
+	struct UAchievementBlueprintLibrary_GetCachedAchievementProgress_Params
+	{
 		class UObject*                                     WorldContextObject;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class APlayerController*                           PlayerController;                                         // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		struct FName                                       AchievementID;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -23,7 +25,8 @@ namespace Classes {
 	};
 
 	// Function OnlineSubsystemUtils.AchievementBlueprintLibrary.GetCachedAchievementDescription
-	struct UAchievementBlueprintLibrary_GetCachedAchievementDescription_Params {
+	struct UAchievementBlueprintLibrary_GetCachedAchievementDescription_Params
+	{
 		class UObject*                                     WorldContextObject;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class APlayerController*                           PlayerController;                                         // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		struct FName                                       AchievementID;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -35,21 +38,24 @@ namespace Classes {
 	};
 
 	// Function OnlineSubsystemUtils.AchievementQueryCallbackProxy.CacheAchievements
-	struct UAchievementQueryCallbackProxy_CacheAchievements_Params {
+	struct UAchievementQueryCallbackProxy_CacheAchievements_Params
+	{
 		class UObject*                                     WorldContextObject;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class APlayerController*                           PlayerController;                                         // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class UAchievementQueryCallbackProxy*              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 	};
 
 	// Function OnlineSubsystemUtils.AchievementQueryCallbackProxy.CacheAchievementDescriptions
-	struct UAchievementQueryCallbackProxy_CacheAchievementDescriptions_Params {
+	struct UAchievementQueryCallbackProxy_CacheAchievementDescriptions_Params
+	{
 		class UObject*                                     WorldContextObject;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class APlayerController*                           PlayerController;                                         // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class UAchievementQueryCallbackProxy*              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 	};
 
 	// Function OnlineSubsystemUtils.AchievementWriteCallbackProxy.WriteAchievementProgress
-	struct UAchievementWriteCallbackProxy_WriteAchievementProgress_Params {
+	struct UAchievementWriteCallbackProxy_WriteAchievementProgress_Params
+	{
 		class UObject*                                     WorldContextObject;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class APlayerController*                           PlayerController;                                         // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		struct FName                                       AchievementName;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -59,14 +65,16 @@ namespace Classes {
 	};
 
 	// Function OnlineSubsystemUtils.ConnectionCallbackProxy.ConnectToService
-	struct UConnectionCallbackProxy_ConnectToService_Params {
+	struct UConnectionCallbackProxy_ConnectToService_Params
+	{
 		class UObject*                                     WorldContextObject;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class APlayerController*                           PlayerController;                                         // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class UConnectionCallbackProxy*                    ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 	};
 
 	// Function OnlineSubsystemUtils.CreateSessionCallbackProxy.CreateSession
-	struct UCreateSessionCallbackProxy_CreateSession_Params {
+	struct UCreateSessionCallbackProxy_CreateSession_Params
+	{
 		class UObject*                                     WorldContextObject;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class APlayerController*                           PlayerController;                                         // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		int                                                PublicConnections;                                        // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -75,14 +83,16 @@ namespace Classes {
 	};
 
 	// Function OnlineSubsystemUtils.DestroySessionCallbackProxy.DestroySession
-	struct UDestroySessionCallbackProxy_DestroySession_Params {
+	struct UDestroySessionCallbackProxy_DestroySession_Params
+	{
 		class UObject*                                     WorldContextObject;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class APlayerController*                           PlayerController;                                         // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class UDestroySessionCallbackProxy*                ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 	};
 
 	// Function OnlineSubsystemUtils.EndMatchCallbackProxy.EndMatch
-	struct UEndMatchCallbackProxy_EndMatch_Params {
+	struct UEndMatchCallbackProxy_EndMatch_Params
+	{
 		class UObject*                                     WorldContextObject;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class APlayerController*                           PlayerController;                                         // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		TScriptInterface<class UTurnBasedMatchInterface>   MatchActor;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -93,7 +103,8 @@ namespace Classes {
 	};
 
 	// Function OnlineSubsystemUtils.EndTurnCallbackProxy.EndTurn
-	struct UEndTurnCallbackProxy_EndTurn_Params {
+	struct UEndTurnCallbackProxy_EndTurn_Params
+	{
 		class UObject*                                     WorldContextObject;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class APlayerController*                           PlayerController;                                         // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		struct FString                                     MatchId;                                                  // (CPF_Parm, CPF_ZeroConstructor)
@@ -102,31 +113,36 @@ namespace Classes {
 	};
 
 	// Function OnlineSubsystemUtils.FindSessionsCallbackProxy.GetServerName
-	struct UFindSessionsCallbackProxy_GetServerName_Params {
+	struct UFindSessionsCallbackProxy_GetServerName_Params
+	{
 		struct FBlueprintSessionResult                     Result;                                                   // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
 		struct FString                                     ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 	};
 
 	// Function OnlineSubsystemUtils.FindSessionsCallbackProxy.GetPingInMs
-	struct UFindSessionsCallbackProxy_GetPingInMs_Params {
+	struct UFindSessionsCallbackProxy_GetPingInMs_Params
+	{
 		struct FBlueprintSessionResult                     Result;                                                   // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
 		int                                                ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 	};
 
 	// Function OnlineSubsystemUtils.FindSessionsCallbackProxy.GetMaxPlayers
-	struct UFindSessionsCallbackProxy_GetMaxPlayers_Params {
+	struct UFindSessionsCallbackProxy_GetMaxPlayers_Params
+	{
 		struct FBlueprintSessionResult                     Result;                                                   // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
 		int                                                ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 	};
 
 	// Function OnlineSubsystemUtils.FindSessionsCallbackProxy.GetCurrentPlayers
-	struct UFindSessionsCallbackProxy_GetCurrentPlayers_Params {
+	struct UFindSessionsCallbackProxy_GetCurrentPlayers_Params
+	{
 		struct FBlueprintSessionResult                     Result;                                                   // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
 		int                                                ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 	};
 
 	// Function OnlineSubsystemUtils.FindSessionsCallbackProxy.FindSessions
-	struct UFindSessionsCallbackProxy_FindSessions_Params {
+	struct UFindSessionsCallbackProxy_FindSessions_Params
+	{
 		class UObject*                                     WorldContextObject;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class APlayerController*                           PlayerController;                                         // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		int                                                MaxResults;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -135,7 +151,8 @@ namespace Classes {
 	};
 
 	// Function OnlineSubsystemUtils.FindTurnBasedMatchCallbackProxy.FindTurnBasedMatch
-	struct UFindTurnBasedMatchCallbackProxy_FindTurnBasedMatch_Params {
+	struct UFindTurnBasedMatchCallbackProxy_FindTurnBasedMatch_Params
+	{
 		class UObject*                                     WorldContextObject;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class APlayerController*                           PlayerController;                                         // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		TScriptInterface<class UTurnBasedMatchInterface>   MatchActor;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -147,28 +164,32 @@ namespace Classes {
 	};
 
 	// Function OnlineSubsystemUtils.InAppPurchaseCallbackProxy.CreateProxyObjectForInAppPurchase
-	struct UInAppPurchaseCallbackProxy_CreateProxyObjectForInAppPurchase_Params {
+	struct UInAppPurchaseCallbackProxy_CreateProxyObjectForInAppPurchase_Params
+	{
 		class APlayerController*                           PlayerController;                                         // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		struct FInAppPurchaseProductRequest                ProductRequest;                                           // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
 		class UInAppPurchaseCallbackProxy*                 ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 	};
 
 	// Function OnlineSubsystemUtils.InAppPurchaseQueryCallbackProxy.CreateProxyObjectForInAppPurchaseQuery
-	struct UInAppPurchaseQueryCallbackProxy_CreateProxyObjectForInAppPurchaseQuery_Params {
+	struct UInAppPurchaseQueryCallbackProxy_CreateProxyObjectForInAppPurchaseQuery_Params
+	{
 		class APlayerController*                           PlayerController;                                         // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		TArray<struct FString>                             ProductIdentifiers;                                       // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
 		class UInAppPurchaseQueryCallbackProxy*            ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 	};
 
 	// Function OnlineSubsystemUtils.InAppPurchaseRestoreCallbackProxy.CreateProxyObjectForInAppPurchaseRestore
-	struct UInAppPurchaseRestoreCallbackProxy_CreateProxyObjectForInAppPurchaseRestore_Params {
+	struct UInAppPurchaseRestoreCallbackProxy_CreateProxyObjectForInAppPurchaseRestore_Params
+	{
 		TArray<struct FInAppPurchaseProductRequest>        ConsumableProductFlags;                                   // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
 		class APlayerController*                           PlayerController;                                         // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class UInAppPurchaseRestoreCallbackProxy*          ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 	};
 
 	// Function OnlineSubsystemUtils.JoinSessionCallbackProxy.JoinSession
-	struct UJoinSessionCallbackProxy_JoinSession_Params {
+	struct UJoinSessionCallbackProxy_JoinSession_Params
+	{
 		class UObject*                                     WorldContextObject;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class APlayerController*                           PlayerController;                                         // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		struct FBlueprintSessionResult                     SearchResult;                                             // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
@@ -176,7 +197,8 @@ namespace Classes {
 	};
 
 	// Function OnlineSubsystemUtils.LeaderboardBlueprintLibrary.WriteLeaderboardInteger
-	struct ULeaderboardBlueprintLibrary_WriteLeaderboardInteger_Params {
+	struct ULeaderboardBlueprintLibrary_WriteLeaderboardInteger_Params
+	{
 		class APlayerController*                           PlayerController;                                         // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		struct FName                                       StatName;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		int                                                StatValue;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -184,76 +206,90 @@ namespace Classes {
 	};
 
 	// Function OnlineSubsystemUtils.LeaderboardFlushCallbackProxy.CreateProxyObjectForFlush
-	struct ULeaderboardFlushCallbackProxy_CreateProxyObjectForFlush_Params {
+	struct ULeaderboardFlushCallbackProxy_CreateProxyObjectForFlush_Params
+	{
 		class APlayerController*                           PlayerController;                                         // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		struct FName                                       SessionName;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class ULeaderboardFlushCallbackProxy*              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 	};
 
 	// Function OnlineSubsystemUtils.LeaderboardQueryCallbackProxy.CreateProxyObjectForIntQuery
-	struct ULeaderboardQueryCallbackProxy_CreateProxyObjectForIntQuery_Params {
+	struct ULeaderboardQueryCallbackProxy_CreateProxyObjectForIntQuery_Params
+	{
 		class APlayerController*                           PlayerController;                                         // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		struct FName                                       StatName;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class ULeaderboardQueryCallbackProxy*              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 	};
 
 	// Function OnlineSubsystemUtils.LogoutCallbackProxy.Logout
-	struct ULogoutCallbackProxy_Logout_Params {
+	struct ULogoutCallbackProxy_Logout_Params
+	{
 		class UObject*                                     WorldContextObject;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class APlayerController*                           PlayerController;                                         // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class ULogoutCallbackProxy*                        ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 	};
 
 	// Function OnlineSubsystemUtils.OnlineBeaconClient.ClientOnConnected
-	struct AOnlineBeaconClient_ClientOnConnected_Params {
+	struct AOnlineBeaconClient_ClientOnConnected_Params
+	{
 	};
 
 	// Function OnlineSubsystemUtils.PartyBeaconClient.ServerUpdateReservationRequest
-	struct APartyBeaconClient_ServerUpdateReservationRequest_Params {
+	struct APartyBeaconClient_ServerUpdateReservationRequest_Params
+	{
 		struct FString                                     SessionId;                                                // (CPF_Parm, CPF_ZeroConstructor)
 		struct FPartyReservation                           ReservationUpdate;                                        // (CPF_ConstParm, CPF_Parm, CPF_ReferenceParm)
 	};
 
 	// Function OnlineSubsystemUtils.PartyBeaconClient.ServerReservationRequest
-	struct APartyBeaconClient_ServerReservationRequest_Params {
+	struct APartyBeaconClient_ServerReservationRequest_Params
+	{
 		struct FString                                     SessionId;                                                // (CPF_Parm, CPF_ZeroConstructor)
 		struct FPartyReservation                           Reservation;                                              // (CPF_ConstParm, CPF_Parm, CPF_ReferenceParm)
 	};
 
 	// Function OnlineSubsystemUtils.PartyBeaconClient.ServerCancelReservationRequest
-	struct APartyBeaconClient_ServerCancelReservationRequest_Params {
+	struct APartyBeaconClient_ServerCancelReservationRequest_Params
+	{
 		struct FUniqueNetIdRepl                            PartyLeader;                                              // (CPF_ConstParm, CPF_Parm, CPF_ReferenceParm)
 	};
 
 	// Function OnlineSubsystemUtils.PartyBeaconClient.ClientSendReservationUpdates
-	struct APartyBeaconClient_ClientSendReservationUpdates_Params {
+	struct APartyBeaconClient_ClientSendReservationUpdates_Params
+	{
 		int                                                NumRemainingReservations;                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	};
 
 	// Function OnlineSubsystemUtils.PartyBeaconClient.ClientSendReservationFull
-	struct APartyBeaconClient_ClientSendReservationFull_Params {
+	struct APartyBeaconClient_ClientSendReservationFull_Params
+	{
 	};
 
 	// Function OnlineSubsystemUtils.PartyBeaconClient.ClientReservationResponse
-	struct APartyBeaconClient_ClientReservationResponse_Params {
+	struct APartyBeaconClient_ClientReservationResponse_Params
+	{
 		TEnumAsByte<EPartyReservationResult>               ReservationResponse;                                      // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	};
 
 	// Function OnlineSubsystemUtils.PartyBeaconClient.ClientCancelReservationResponse
-	struct APartyBeaconClient_ClientCancelReservationResponse_Params {
+	struct APartyBeaconClient_ClientCancelReservationResponse_Params
+	{
 		TEnumAsByte<EPartyReservationResult>               ReservationResponse;                                      // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	};
 
 	// Function OnlineSubsystemUtils.TestBeaconClient.ServerPong
-	struct ATestBeaconClient_ServerPong_Params {
+	struct ATestBeaconClient_ServerPong_Params
+	{
 	};
 
 	// Function OnlineSubsystemUtils.TestBeaconClient.ClientPing
-	struct ATestBeaconClient_ClientPing_Params {
+	struct ATestBeaconClient_ClientPing_Params
+	{
 	};
 
 	// Function OnlineSubsystemUtils.QuitMatchCallbackProxy.QuitMatch
-	struct UQuitMatchCallbackProxy_QuitMatch_Params {
+	struct UQuitMatchCallbackProxy_QuitMatch_Params
+	{
 		class UObject*                                     WorldContextObject;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class APlayerController*                           PlayerController;                                         // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		struct FString                                     MatchId;                                                  // (CPF_Parm, CPF_ZeroConstructor)
@@ -263,21 +299,24 @@ namespace Classes {
 	};
 
 	// Function OnlineSubsystemUtils.ShowLoginUICallbackProxy.ShowExternalLoginUI
-	struct UShowLoginUICallbackProxy_ShowExternalLoginUI_Params {
+	struct UShowLoginUICallbackProxy_ShowExternalLoginUI_Params
+	{
 		class UObject*                                     WorldContextObject;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class APlayerController*                           InPlayerController;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class UShowLoginUICallbackProxy*                   ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 	};
 
 	// Function OnlineSubsystemUtils.TurnBasedBlueprintLibrary.RegisterTurnBasedMatchInterfaceObject
-	struct UTurnBasedBlueprintLibrary_RegisterTurnBasedMatchInterfaceObject_Params {
+	struct UTurnBasedBlueprintLibrary_RegisterTurnBasedMatchInterfaceObject_Params
+	{
 		class UObject*                                     WorldContextObject;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class APlayerController*                           PlayerController;                                         // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class UObject*                                     Object;                                                   // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	};
 
 	// Function OnlineSubsystemUtils.TurnBasedBlueprintLibrary.GetPlayerDisplayName
-	struct UTurnBasedBlueprintLibrary_GetPlayerDisplayName_Params {
+	struct UTurnBasedBlueprintLibrary_GetPlayerDisplayName_Params
+	{
 		class UObject*                                     WorldContextObject;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class APlayerController*                           PlayerController;                                         // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		struct FString                                     MatchId;                                                  // (CPF_Parm, CPF_ZeroConstructor)
@@ -286,7 +325,8 @@ namespace Classes {
 	};
 
 	// Function OnlineSubsystemUtils.TurnBasedBlueprintLibrary.GetMyPlayerIndex
-	struct UTurnBasedBlueprintLibrary_GetMyPlayerIndex_Params {
+	struct UTurnBasedBlueprintLibrary_GetMyPlayerIndex_Params
+	{
 		class UObject*                                     WorldContextObject;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class APlayerController*                           PlayerController;                                         // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		struct FString                                     MatchId;                                                  // (CPF_Parm, CPF_ZeroConstructor)
@@ -294,7 +334,8 @@ namespace Classes {
 	};
 
 	// Function OnlineSubsystemUtils.TurnBasedBlueprintLibrary.GetIsMyTurn
-	struct UTurnBasedBlueprintLibrary_GetIsMyTurn_Params {
+	struct UTurnBasedBlueprintLibrary_GetIsMyTurn_Params
+	{
 		class UObject*                                     WorldContextObject;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class APlayerController*                           PlayerController;                                         // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		struct FString                                     MatchId;                                                  // (CPF_Parm, CPF_ZeroConstructor)

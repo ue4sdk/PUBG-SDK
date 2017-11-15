@@ -8,22 +8,26 @@
 
 #include "../SDK.hpp"
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Parameters
 	//---------------------------------------------------------------------------
 
 	// Function TSLGameState.TSLGameState_C.UserConstructionScript
-	struct ATSLGameState_C_UserConstructionScript_Params {
+	struct ATSLGameState_C_UserConstructionScript_Params
+	{
 	};
 
 	// Function TSLGameState.TSLGameState_C.UpdateWorldTimeSecondsDelta
-	struct ATSLGameState_C_UpdateWorldTimeSecondsDelta_Params {
+	struct ATSLGameState_C_UpdateWorldTimeSecondsDelta_Params
+	{
 		float*                                             DeltaSeconds;                                             // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	};
 
 	// Function TSLGameState.TSLGameState_C.ExecuteUbergraph_TSLGameState
-	struct ATSLGameState_C_ExecuteUbergraph_TSLGameState_Params {
+	struct ATSLGameState_C_ExecuteUbergraph_TSLGameState_Params
+	{
 		int                                                EntryPoint;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	};
 

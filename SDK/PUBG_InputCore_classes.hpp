@@ -6,17 +6,20 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// Class InputCore.InputCoreTypes
 	// 0x0000 (0x0028 - 0x0028)
-	class UInputCoreTypes : public UObject {
+	class UInputCoreTypes : public UObject
+	{
 	public:
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xc1182b12);
 			return ptr;

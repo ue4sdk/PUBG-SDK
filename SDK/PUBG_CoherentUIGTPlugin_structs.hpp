@@ -6,13 +6,15 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Enums
 	//---------------------------------------------------------------------------
 
 	// Enum CoherentUIGTPlugin.ECoherentUIGTMSAA
-	enum class ECoherentUIGTMSAA : uint8_t {
+	enum class ECoherentUIGTMSAA : uint8_t
+	{
 		ECoherentUIGTMSAA__MSAA_1x = 0,
 		ECoherentUIGTMSAA__MSAA_2x = 1,
 		ECoherentUIGTMSAA__MSAA_4x = 2,
@@ -21,7 +23,8 @@ namespace Classes {
 
 
 	// Enum CoherentUIGTPlugin.ECoherentUIGTSettingsSeverity
-	enum class ECoherentUIGTSettingsSeverity : uint8_t {
+	enum class ECoherentUIGTSettingsSeverity : uint8_t
+	{
 		ECoherentUIGTSettingsSeverity__Trace = 0,
 		ECoherentUIGTSettingsSeverity__Debug = 1,
 		ECoherentUIGTSettingsSeverity__Info = 2,
@@ -33,7 +36,8 @@ namespace Classes {
 
 
 	// Enum CoherentUIGTPlugin.ECoherentUIGTInputPropagationBehaviour
-	enum class ECoherentUIGTInputPropagationBehaviour : uint8_t {
+	enum class ECoherentUIGTInputPropagationBehaviour : uint8_t
+	{
 		ECoherentUIGTInputPropagationBehaviour__None = 0,
 		ECoherentUIGTInputPropagationBehaviour__Keyboard = 1,
 		ECoherentUIGTInputPropagationBehaviour__Joystick = 2,
@@ -43,7 +47,8 @@ namespace Classes {
 
 
 	// Enum CoherentUIGTPlugin.EGamepadBehaviourOnFocusLost
-	enum class EGamepadBehaviourOnFocusLost : uint8_t {
+	enum class EGamepadBehaviourOnFocusLost : uint8_t
+	{
 		ResetState = 0,
 		UseCurrentState = 1,
 		UseStateBeforeReset = 2,
@@ -52,7 +57,8 @@ namespace Classes {
 
 
 	// Enum CoherentUIGTPlugin.EGTInputWidgetLineTraceMode
-	enum class EGTInputWidgetLineTraceMode : uint8_t {
+	enum class EGTInputWidgetLineTraceMode : uint8_t
+	{
 		GTInputLineTrace_Single = 0,
 		GTInputLineTrace_Multi = 1,
 		GTInputLineTrace_MAX = 2
@@ -60,7 +66,8 @@ namespace Classes {
 
 
 	// Enum CoherentUIGTPlugin.EGTInputWidgetRaycastQuality
-	enum class EGTInputWidgetRaycastQuality : uint8_t {
+	enum class EGTInputWidgetRaycastQuality : uint8_t
+	{
 		RaycastQuality_Fast = 0,
 		RaycastQuality_Balanced = 1,
 		RaycastQuality_Accurate = 2,
@@ -75,7 +82,8 @@ namespace Classes {
 
 	// ScriptStruct CoherentUIGTPlugin.CoherentUIGTViewInfo
 	// 0x0014
-	struct FCoherentUIGTViewInfo {
+	struct FCoherentUIGTViewInfo
+	{
 		int                                                Width;                                                    // 0x0000(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		int                                                Height;                                                   // 0x0004(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		bool                                               IsTransparent;                                            // 0x0008(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)

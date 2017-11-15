@@ -6,14 +6,16 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// Class BuildPatchServices.BuildPatchManifest
 	// 0x00A8 (0x00D0 - 0x0028)
-	class UBuildPatchManifest : public UObject {
+	class UBuildPatchManifest : public UObject
+	{
 	public:
 		unsigned char                                      ManifestFileVersion;                                      // 0x0028(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		bool                                               bIsFileData;                                              // 0x0029(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -30,7 +32,8 @@ namespace Classes {
 		TArray<struct FChunkInfoData>                      ChunkList;                                                // 0x00B0(0x0010) (CPF_ZeroConstructor)
 		TArray<struct FCustomFieldData>                    CustomFields;                                             // 0x00C0(0x0010) (CPF_ZeroConstructor)
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xb5d8d388);
 			return ptr;

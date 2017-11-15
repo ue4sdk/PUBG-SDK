@@ -6,14 +6,16 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// AnimBlueprintGeneratedClass ABP_Motorbike_04.ABP_Motorbike_04_C
 	// 0x0C10 (0x1490 - 0x0880)
-	class UABP_Motorbike_04_C : public UVehicleAnimInstance {
+	class UABP_Motorbike_04_C : public UVehicleAnimInstance
+	{
 	public:
 		struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0880(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_DuplicateTransient)
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0888(0x0008) MISSED OFFSET
@@ -53,7 +55,8 @@ namespace Classes {
 		struct FRotator                                    SteerROT;                                                 // 0x1478(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		struct FRotator                                    SpeedArrowRot;                                            // 0x1484(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xd6157436);
 			return ptr;

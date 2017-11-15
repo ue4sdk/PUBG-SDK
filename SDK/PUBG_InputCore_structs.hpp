@@ -6,13 +6,15 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Enums
 	//---------------------------------------------------------------------------
 
 	// Enum InputCore.ETouchIndex
-	enum class ETouchIndex : uint8_t {
+	enum class ETouchIndex : uint8_t
+	{
 		ETouchIndex__Touch1 = 0,
 		ETouchIndex__Touch2 = 1,
 		ETouchIndex__Touch3 = 2,
@@ -28,7 +30,8 @@ namespace Classes {
 
 
 	// Enum InputCore.ETouchType
-	enum class ETouchType : uint8_t {
+	enum class ETouchType : uint8_t
+	{
 		ETouchType__Began = 0,
 		ETouchType__Moved = 1,
 		ETouchType__Stationary = 2,
@@ -39,7 +42,8 @@ namespace Classes {
 
 
 	// Enum InputCore.EConsoleForGamepadLabels
-	enum class EConsoleForGamepadLabels : uint8_t {
+	enum class EConsoleForGamepadLabels : uint8_t
+	{
 		EConsoleForGamepadLabels__None = 0,
 		EConsoleForGamepadLabels__XBoxOne = 1,
 		EConsoleForGamepadLabels__PS4 = 2,
@@ -48,7 +52,8 @@ namespace Classes {
 
 
 	// Enum InputCore.EControllerHand
-	enum class EControllerHand : uint8_t {
+	enum class EControllerHand : uint8_t
+	{
 		EControllerHand__Left = 0,
 		EControllerHand__Right = 1,
 		EControllerHand__Pad = 2,
@@ -73,7 +78,8 @@ namespace Classes {
 
 	// ScriptStruct InputCore.Key
 	// 0x0018
-	struct FKey {
+	struct FKey
+	{
 		struct FName                                       KeyName;                                                  // 0x0000(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x10];                                      // 0x0008(0x0010) MISSED OFFSET
 	};

@@ -6,14 +6,16 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Script Structs
 	//---------------------------------------------------------------------------
 
 	// ScriptStruct TslCommon.LogBase
 	// 0x0028
-	struct FLogBase {
+	struct FLogBase
+	{
 		int                                                _V;                                                       // 0x0000(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
 		struct FString                                     _D;                                                       // 0x0008(0x0010) (CPF_ZeroConstructor)

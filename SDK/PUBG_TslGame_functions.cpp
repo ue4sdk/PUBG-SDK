@@ -6,7 +6,8 @@
 
 #include "../SDK.hpp"
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Functions
 	//---------------------------------------------------------------------------
@@ -18,7 +19,8 @@ namespace Classes {
 	// struct FText                   Message                        (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
 	// struct FScriptDelegate         PressedDelegate                (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
 
-	void UTslPopupInterface::SetPopup(TEnumAsByte<EPopupStyle> PopupStyle, const struct FText& Message, const struct FScriptDelegate& PressedDelegate) {
+	void UTslPopupInterface::SetPopup(TEnumAsByte<EPopupStyle> PopupStyle, const struct FText& Message, const struct FScriptDelegate& PressedDelegate)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x640eba9c);
 
@@ -40,7 +42,8 @@ namespace Classes {
 	// Parameters:
 	// struct FString                 WidgetName                     (CPF_Parm, CPF_ZeroConstructor)
 
-	void ATslBaseHUD::WidgetToggle(const struct FString& WidgetName) {
+	void ATslBaseHUD::WidgetToggle(const struct FString& WidgetName)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x89af84e7);
 
@@ -63,7 +66,8 @@ namespace Classes {
 	// TEnumAsByte<EWidgetShowType>   ShowType                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class UObject*                 OptionalParam                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslBaseHUD::WidgetShow(const struct FString& WidgetName, TEnumAsByte<EWidgetShowType> ShowType, class UObject* OptionalParam) {
+	void ATslBaseHUD::WidgetShow(const struct FString& WidgetName, TEnumAsByte<EWidgetShowType> ShowType, class UObject* OptionalParam)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xdee0c0fc);
 
@@ -87,7 +91,8 @@ namespace Classes {
 	// struct FString                 WidgetName                     (CPF_Parm, CPF_ZeroConstructor)
 	// struct FTslWidgetConfig        Config                         (CPF_Parm)
 
-	void ATslBaseHUD::WidgetCreate(const struct FString& WidgetName, const struct FTslWidgetConfig& Config) {
+	void ATslBaseHUD::WidgetCreate(const struct FString& WidgetName, const struct FTslWidgetConfig& Config)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf890536f);
 
@@ -110,7 +115,8 @@ namespace Classes {
 	// struct FName                   ActionName                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// TEnumAsByte<EInputEvent>       InputEvent                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslBaseHUD::UnbindActionKeyDelegateEvent(const struct FName& ActionName, TEnumAsByte<EInputEvent> InputEvent) {
+	void ATslBaseHUD::UnbindActionKeyDelegateEvent(const struct FName& ActionName, TEnumAsByte<EInputEvent> InputEvent)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xabd0adf5);
 
@@ -135,7 +141,8 @@ namespace Classes {
 	// struct FText                   Message                        (CPF_Parm)
 	// struct FScriptDelegate         PressedDelegate                (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
 
-	void ATslBaseHUD::ShowPopupDialog(const struct FString& PopupWidgetName, TEnumAsByte<EPopupStyle> PopupStyle, const struct FText& Message, const struct FScriptDelegate& PressedDelegate) {
+	void ATslBaseHUD::ShowPopupDialog(const struct FString& PopupWidgetName, TEnumAsByte<EPopupStyle> PopupStyle, const struct FText& Message, const struct FScriptDelegate& PressedDelegate)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa8906b3a);
 
@@ -160,7 +167,8 @@ namespace Classes {
 	// struct FString                 WidgetName                     (CPF_Parm, CPF_ZeroConstructor)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslBaseHUD::IsWidgetShow(const struct FString& WidgetName) {
+	bool ATslBaseHUD::IsWidgetShow(const struct FString& WidgetName)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9f5da39c);
 
@@ -183,7 +191,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslBaseHUD::HideWidgetByEscape() {
+	bool ATslBaseHUD::HideWidgetByEscape()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4e197315);
 
@@ -205,7 +214,8 @@ namespace Classes {
 	// Parameters:
 	// struct FString                 PopupWidgetName                (CPF_Parm, CPF_ZeroConstructor)
 
-	void ATslBaseHUD::HidePopupDialog(const struct FString& PopupWidgetName) {
+	void ATslBaseHUD::HidePopupDialog(const struct FString& PopupWidgetName)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x8eecc763);
 
@@ -227,7 +237,8 @@ namespace Classes {
 	// struct FString                 WidgetName                     (CPF_Parm, CPF_ZeroConstructor)
 	// class UUserWidget*             ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UUserWidget* ATslBaseHUD::GetWidget(const struct FString& WidgetName) {
+	class UUserWidget* ATslBaseHUD::GetWidget(const struct FString& WidgetName)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa46502a5);
 
@@ -250,7 +261,8 @@ namespace Classes {
 	// Parameters:
 	// class UUserWidget*             ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UUserWidget* ATslBaseHUD::GetMainUMGHud() {
+	class UUserWidget* ATslBaseHUD::GetMainUMGHud()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc1facde6);
 
@@ -270,7 +282,8 @@ namespace Classes {
 	// Function TslGame.TslBaseHUD.DestroyAllWidgets
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ATslBaseHUD::DestroyAllWidgets() {
+	void ATslBaseHUD::DestroyAllWidgets()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc4380d3b);
 
@@ -292,7 +305,8 @@ namespace Classes {
 	// TEnumAsByte<EInputEvent>       InputEvent                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FScriptDelegate         ActionKeyDelegate              (CPF_Parm, CPF_ZeroConstructor)
 
-	void ATslBaseHUD::BindActionKeyDelegateEvent(const struct FName& ActionName, TEnumAsByte<EInputEvent> InputEvent, const struct FScriptDelegate& ActionKeyDelegate) {
+	void ATslBaseHUD::BindActionKeyDelegateEvent(const struct FName& ActionName, TEnumAsByte<EInputEvent> InputEvent, const struct FScriptDelegate& ActionKeyDelegate)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd2efc3c);
 
@@ -317,7 +331,8 @@ namespace Classes {
 	// bool                           bIsFPP                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class UBlendSpace*             ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UBlendSpace* UAnimDB::GetBlendSpaceRelaxed(TEnumAsByte<EAnimStanceType> AnimStance, bool bIsFPP) {
+	class UBlendSpace* UAnimDB::GetBlendSpaceRelaxed(TEnumAsByte<EAnimStanceType> AnimStance, bool bIsFPP)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xfced2851);
 
@@ -343,7 +358,8 @@ namespace Classes {
 	// bool                           bIsFPP                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class UBlendSpace*             ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UBlendSpace* UAnimDB::GetBlendSpace(TEnumAsByte<EAnimStanceType> AnimStance, bool bIsFPP) {
+	class UBlendSpace* UAnimDB::GetBlendSpace(TEnumAsByte<EAnimStanceType> AnimStance, bool bIsFPP)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xad0e71b4);
 
@@ -372,7 +388,8 @@ namespace Classes {
 	// float                          SprintAlpha                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UAnimDB::GetAnimSpeed(TEnumAsByte<EAnimStanceType> AnimStance, float Direction, float InSpeed, float* PlayRate, float* SprintAlpha) {
+	float UAnimDB::GetAnimSpeed(TEnumAsByte<EAnimStanceType> AnimStance, float Direction, float InSpeed, float* PlayRate, float* SprintAlpha)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2da88037);
 
@@ -402,7 +419,8 @@ namespace Classes {
 	// Parameters:
 	// TAssetPtr<class UStaticMesh>   Asset                          (CPF_Parm)
 
-	void UAsyncStaticMeshComponent::SetStaticMeshAsset(TAssetPtr<class UStaticMesh> Asset) {
+	void UAsyncStaticMeshComponent::SetStaticMeshAsset(TAssetPtr<class UStaticMesh> Asset)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x10d35abd);
 
@@ -424,7 +442,8 @@ namespace Classes {
 	// TAssetPtr<class UStaticMesh>   Asset                          (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UAsyncStaticMeshComponent::IsSameMesh(TAssetPtr<class UStaticMesh> Asset) {
+	bool UAsyncStaticMeshComponent::IsSameMesh(TAssetPtr<class UStaticMesh> Asset)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6579d55b);
 
@@ -447,7 +466,8 @@ namespace Classes {
 	// Parameters:
 	// TAssetPtr<class UStaticMesh>   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
-	TAssetPtr<class UStaticMesh> UAsyncStaticMeshComponent::GetStaticMeshAsset() {
+	TAssetPtr<class UStaticMesh> UAsyncStaticMeshComponent::GetStaticMeshAsset()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6b446251);
 
@@ -467,7 +487,8 @@ namespace Classes {
 	// Function TslGame.AsyncStaticMeshComponent.ClearStaticMeshAsset
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UAsyncStaticMeshComponent::ClearStaticMeshAsset() {
+	void UAsyncStaticMeshComponent::ClearStaticMeshAsset()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x46a91bd4);
 
@@ -485,7 +506,8 @@ namespace Classes {
 	// Function TslGame.TslBuff.TickBuff
 	// (FUNC_Native, FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
 
-	void ATslBuff::TickBuff() {
+	void ATslBuff::TickBuff()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xaafdd48a);
 
@@ -505,7 +527,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bCanceled                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslBuff::StopBuffBlueprint(bool bCanceled) {
+	void ATslBuff::StopBuffBlueprint(bool bCanceled)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7fa99e42);
 
@@ -523,7 +546,8 @@ namespace Classes {
 	// Function TslGame.TslBuff.StartBuffBlueprint
 	// (FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
 
-	void ATslBuff::StartBuffBlueprint() {
+	void ATslBuff::StartBuffBlueprint()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4e40a9ea);
 
@@ -542,7 +566,8 @@ namespace Classes {
 	// Parameters:
 	// class APawn*                   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class APawn* ATslBuff::GetOwnerPawn() {
+	class APawn* ATslBuff::GetOwnerPawn()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xff03eb19);
 
@@ -564,7 +589,8 @@ namespace Classes {
 	// Parameters:
 	// struct FAttackId               ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
-	struct FAttackId ATslBuff::GetAttackId() {
+	struct FAttackId ATslBuff::GetAttackId()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x115b2539);
 
@@ -586,7 +612,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslBuff::CanApplyBuff() {
+	bool ATslBuff::CanApplyBuff()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x408a2e53);
 
@@ -608,7 +635,8 @@ namespace Classes {
 	// Parameters:
 	// struct FName                   OverlapId                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UBuffComponet::RemoveBuff(const struct FName& OverlapId) {
+	void UBuffComponet::RemoveBuff(const struct FName& OverlapId)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2b3e95f5);
 
@@ -630,7 +658,8 @@ namespace Classes {
 	// struct FName                   BuffOverlapId                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class ATslBuff*                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslBuff* UBuffComponet::FindBuffWithOverlapId(const struct FName& BuffOverlapId) {
+	class ATslBuff* UBuffComponet::FindBuffWithOverlapId(const struct FName& BuffOverlapId)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7b3886a);
 
@@ -654,7 +683,8 @@ namespace Classes {
 	// class UClass*                  TslBuffClass                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class ATslBuff*                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslBuff* UBuffComponet::AddBuff(class UClass* TslBuffClass) {
+	class ATslBuff* UBuffComponet::AddBuff(class UClass* TslBuffClass)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6e055e74);
 
@@ -678,7 +708,8 @@ namespace Classes {
 	// class ATslCharacter*           Character                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UCastableInterface::IsCastable(class ATslCharacter* Character) {
+	bool UCastableInterface::IsCastable(class ATslCharacter* Character)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7ef03dc3);
 
@@ -702,7 +733,8 @@ namespace Classes {
 	// class ATslCharacter*           Character                      (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FText                   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
-	struct FText UCastableInterface::GetCastFailMessage(class ATslCharacter* Character) {
+	struct FText UCastableInterface::GetCastFailMessage(class ATslCharacter* Character)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5b82e078);
 
@@ -725,7 +757,8 @@ namespace Classes {
 	// Parameters:
 	// struct FCastConfig             ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
-	struct FCastConfig UCastableInterface::GetCastConfig() {
+	struct FCastConfig UCastableInterface::GetCastConfig()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb79649e1);
 
@@ -748,7 +781,8 @@ namespace Classes {
 	// TScriptInterface<class UCastableInterface> CastableInterface              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UCastComponent::StartCast(const TScriptInterface<class UCastableInterface>& CastableInterface) {
+	bool UCastComponent::StartCast(const TScriptInterface<class UCastableInterface>& CastableInterface)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6d0cfc4f);
 
@@ -771,7 +805,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UCastComponent::GetTotalCastTime() {
+	float UCastComponent::GetTotalCastTime()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2aa2db36);
 
@@ -793,7 +828,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UCastComponent::GetElapsedCastTime() {
+	float UCastComponent::GetElapsedCastTime()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2276aad8);
 
@@ -815,7 +851,8 @@ namespace Classes {
 	// Parameters:
 	// TEnumAsByte<ECastPriority>     ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	TEnumAsByte<ECastPriority> UCastComponent::GetCastPriority() {
+	TEnumAsByte<ECastPriority> UCastComponent::GetCastPriority()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x550a9627);
 
@@ -837,7 +874,8 @@ namespace Classes {
 	// Parameters:
 	// class UObject*                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UObject* UCastComponent::GetCastObject() {
+	class UObject* UCastComponent::GetCastObject()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xde3edb22);
 
@@ -859,7 +897,8 @@ namespace Classes {
 	// Parameters:
 	// struct FText                   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
-	struct FText UCastComponent::GetCastName() {
+	struct FText UCastComponent::GetCastName()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9fa9716);
 
@@ -881,7 +920,8 @@ namespace Classes {
 	// Parameters:
 	// TEnumAsByte<ECastLevel>        ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	TEnumAsByte<ECastLevel> UCastComponent::GetCastLevel() {
+	TEnumAsByte<ECastLevel> UCastComponent::GetCastLevel()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9fe38c03);
 
@@ -903,7 +943,8 @@ namespace Classes {
 	// Parameters:
 	// TEnumAsByte<ECastAnim>         ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	TEnumAsByte<ECastAnim> UCastComponent::GetCastAnim() {
+	TEnumAsByte<ECastAnim> UCastComponent::GetCastAnim()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe963d42c);
 
@@ -925,7 +966,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UCastComponent::CancelCast() {
+	bool UCastComponent::CancelCast()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd35ce331);
 
@@ -947,7 +989,8 @@ namespace Classes {
 	// Parameters:
 	// float                          LastBreath                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UCharacterBreathComponent::OnRep_Breath(float LastBreath) {
+	void UCharacterBreathComponent::OnRep_Breath(float LastBreath)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x33ae864d);
 
@@ -968,7 +1011,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UCharacterBreathComponent::IsInApnea() {
+	bool UCharacterBreathComponent::IsInApnea()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2844fada);
 
@@ -990,7 +1034,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UCharacterBreathComponent::IsConsuming() {
+	bool UCharacterBreathComponent::IsConsuming()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd5de3767);
 
@@ -1012,7 +1057,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UCharacterBreathComponent::GetBreathRatio() {
+	float UCharacterBreathComponent::GetBreathRatio()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa5dbc19b);
 
@@ -1034,7 +1080,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UCharacterBreathComponent::GetBreathMax() {
+	float UCharacterBreathComponent::GetBreathMax()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1a612ff4);
 
@@ -1056,7 +1103,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UCharacterBreathComponent::GetBreath() {
+	float UCharacterBreathComponent::GetBreath()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd2858b3e);
 
@@ -1078,7 +1126,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UCharacterBreathComponent::CanStartSprinting() {
+	bool UCharacterBreathComponent::CanStartSprinting()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xdfa920f6);
 
@@ -1100,7 +1149,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UCharacterBreathComponent::CanStartHoldingBreath() {
+	bool UCharacterBreathComponent::CanStartHoldingBreath()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf89dd031);
 
@@ -1122,7 +1172,8 @@ namespace Classes {
 	// Parameters:
 	// float                          Value                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UCharacterBreathComponent::AddBreath(float Value) {
+	void UCharacterBreathComponent::AddBreath(float Value)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x609ad53);
 
@@ -1141,7 +1192,8 @@ namespace Classes {
 	// Function TslGame.CharacterStudio.Update
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ACharacterStudio::Update() {
+	void ACharacterStudio::Update()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xedaa5b2a);
 
@@ -1161,7 +1213,8 @@ namespace Classes {
 	// Parameters:
 	// class UMaterialInstanceDynamic* Mid                            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ACharacterStudio::SetSceneCaptureMaterial(class UMaterialInstanceDynamic* Mid) {
+	void ACharacterStudio::SetSceneCaptureMaterial(class UMaterialInstanceDynamic* Mid)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x91953ff6);
 
@@ -1182,7 +1235,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslCharacter*           Character                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ACharacterStudio::SetCharacter(class ATslCharacter* Character) {
+	void ACharacterStudio::SetCharacter(class ATslCharacter* Character)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc2b27830);
 
@@ -1203,7 +1257,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ACharacterStudio::IsUsingDynamicResolution() {
+	bool ACharacterStudio::IsUsingDynamicResolution()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe5640894);
 
@@ -1225,7 +1280,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ACharacterStudio::IsCharacterValid() {
+	bool ACharacterStudio::IsCharacterValid()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf68020ac);
 
@@ -1247,7 +1303,8 @@ namespace Classes {
 	// Parameters:
 	// class UMaterialInstanceDynamic* ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UMaterialInstanceDynamic* ACharacterStudio::GetSceneCaptureMaterial() {
+	class UMaterialInstanceDynamic* ACharacterStudio::GetSceneCaptureMaterial()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xcf08a362);
 
@@ -1269,7 +1326,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslCharacter*           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslCharacter* ACharacterStudio::GetCharacter() {
+	class ATslCharacter* ACharacterStudio::GetCharacter()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6288cfc4);
 
@@ -1291,7 +1349,8 @@ namespace Classes {
 	// Parameters:
 	// float                          Yaw                            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ACharacterStudio::AddYaw(float Yaw) {
+	void ACharacterStudio::AddYaw(float Yaw)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x58ac9537);
 
@@ -1310,7 +1369,8 @@ namespace Classes {
 	// Function TslGame.CoherentCommonBinder.Test
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void UCoherentCommonBinder::Test() {
+	void UCoherentCommonBinder::Test()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7e2edf33);
 
@@ -1328,7 +1388,8 @@ namespace Classes {
 	// Function TslGame.CoherentCommonBinder.OnWebPageOnPlatformFailed
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void UCoherentCommonBinder::OnWebPageOnPlatformFailed() {
+	void UCoherentCommonBinder::OnWebPageOnPlatformFailed()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2da30fb6);
 
@@ -1346,7 +1407,8 @@ namespace Classes {
 	// Function TslGame.CoherentCommonBinder.BindUI
 	// (FUNC_Native, FUNC_Protected)
 
-	void UCoherentCommonBinder::BindUI() {
+	void UCoherentCommonBinder::BindUI()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa959cefc);
 
@@ -1364,7 +1426,8 @@ namespace Classes {
 	// Function TslGame.CoherentCommonBinder.BindDelegate
 	// (FUNC_Native, FUNC_Protected)
 
-	void UCoherentCommonBinder::BindDelegate() {
+	void UCoherentCommonBinder::BindDelegate()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xce625d2f);
 
@@ -1385,7 +1448,8 @@ namespace Classes {
 	// int                            SeqID                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// int64_t                        DateTimeTickFromServer         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslPlayerController::UnreliablePong(int SeqID, int64_t DateTimeTickFromServer) {
+	void ATslPlayerController::UnreliablePong(int SeqID, int64_t DateTimeTickFromServer)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6c7c8607);
 
@@ -1408,7 +1472,8 @@ namespace Classes {
 	// int                            SeqID                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// int64_t                        DateTimeTick                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslPlayerController::UnreliablePing(int SeqID, int64_t DateTimeTick) {
+	void ATslPlayerController::UnreliablePing(int SeqID, int64_t DateTimeTick)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x179b72b9);
 
@@ -1428,7 +1493,8 @@ namespace Classes {
 	// Function TslGame.TslPlayerController.ToggleInventory
 	// (FUNC_Final, FUNC_Native, FUNC_Private, FUNC_BlueprintCallable)
 
-	void ATslPlayerController::ToggleInventory() {
+	void ATslPlayerController::ToggleInventory()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x845d20ea);
 
@@ -1446,7 +1512,8 @@ namespace Classes {
 	// Function TslGame.TslPlayerController.Suicide
 	// (FUNC_Exec, FUNC_Native, FUNC_Public)
 
-	void ATslPlayerController::Suicide() {
+	void ATslPlayerController::Suicide()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x8e46b9e);
 
@@ -1467,7 +1534,8 @@ namespace Classes {
 	// struct FKey                    Key                            (CPF_Parm)
 	// bool                           bPressed                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslPlayerController::SimulateInputKey(const struct FKey& Key, bool bPressed) {
+	void ATslPlayerController::SimulateInputKey(const struct FKey& Key, bool bPressed)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe0e5faa1);
 
@@ -1487,7 +1555,8 @@ namespace Classes {
 	// Function TslGame.TslPlayerController.ShowTslDebugInfomation
 	// (FUNC_Final, FUNC_Exec, FUNC_Native, FUNC_Public)
 
-	void ATslPlayerController::ShowTslDebugInfomation() {
+	void ATslPlayerController::ShowTslDebugInfomation()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa447b2fb);
 
@@ -1505,7 +1574,8 @@ namespace Classes {
 	// Function TslGame.TslPlayerController.ShowTeamDeathPopup
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void ATslPlayerController::ShowTeamDeathPopup() {
+	void ATslPlayerController::ShowTeamDeathPopup()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1c53b51a);
 
@@ -1523,7 +1593,8 @@ namespace Classes {
 	// Function TslGame.TslPlayerController.ShowPlayerControllerBindActions_Admin
 	// (FUNC_Final, FUNC_Exec, FUNC_Native, FUNC_Public)
 
-	void ATslPlayerController::ShowPlayerControllerBindActions_Admin() {
+	void ATslPlayerController::ShowPlayerControllerBindActions_Admin()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd379f420);
 
@@ -1541,7 +1612,8 @@ namespace Classes {
 	// Function TslGame.TslPlayerController.ShowMatchResult
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void ATslPlayerController::ShowMatchResult() {
+	void ATslPlayerController::ShowMatchResult()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf28a6f8b);
 
@@ -1559,7 +1631,8 @@ namespace Classes {
 	// Function TslGame.TslPlayerController.ShowInGameMenu
 	// (FUNC_Final, FUNC_Native, FUNC_Private, FUNC_BlueprintCallable)
 
-	void ATslPlayerController::ShowInGameMenu() {
+	void ATslPlayerController::ShowInGameMenu()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x23d1a8ab);
 
@@ -1579,7 +1652,8 @@ namespace Classes {
 	// Parameters:
 	// TEnumAsByte<EPopupButtonID>    ButtonID                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslPlayerController::ShowGotoLobbyPopUp(TEnumAsByte<EPopupButtonID> ButtonID) {
+	void ATslPlayerController::ShowGotoLobbyPopUp(TEnumAsByte<EPopupButtonID> ButtonID)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf78e9012);
 
@@ -1600,7 +1674,8 @@ namespace Classes {
 	// Parameters:
 	// float                          NewFOV                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslPlayerController::SetDefaultFOV(float NewFOV) {
+	void ATslPlayerController::SetDefaultFOV(float NewFOV)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x53490a3a);
 
@@ -1621,7 +1696,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bOn                            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslPlayerController::SetCustomDepth(bool bOn) {
+	void ATslPlayerController::SetCustomDepth(bool bOn)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb96d911a);
 
@@ -1642,7 +1718,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bCanSee                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslPlayerController::SetCanSeeTerrainThroughFogInTheAir(bool bCanSee) {
+	void ATslPlayerController::SetCanSeeTerrainThroughFogInTheAir(bool bCanSee)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x681114cb);
 
@@ -1661,7 +1738,8 @@ namespace Classes {
 	// Function TslGame.TslPlayerController.ServerViewTargetReplicateUpdate
 	// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Public, FUNC_NetServer, FUNC_NetValidate)
 
-	void ATslPlayerController::ServerViewTargetReplicateUpdate() {
+	void ATslPlayerController::ServerViewTargetReplicateUpdate()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc52f01cb);
 
@@ -1681,7 +1759,8 @@ namespace Classes {
 	// Parameters:
 	// class UActorComponent*         TargetComponent                (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
-	void ATslPlayerController::ServerTryInteractByComponent(class UActorComponent* TargetComponent) {
+	void ATslPlayerController::ServerTryInteractByComponent(class UActorComponent* TargetComponent)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x33fbbdf8);
 
@@ -1702,7 +1781,8 @@ namespace Classes {
 	// Parameters:
 	// class AActor*                  TargetObject                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslPlayerController::ServerTryInteract(class AActor* TargetObject) {
+	void ATslPlayerController::ServerTryInteract(class AActor* TargetObject)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xfe994b00);
 
@@ -1721,7 +1801,8 @@ namespace Classes {
 	// Function TslGame.TslPlayerController.ServerSuicide
 	// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Public, FUNC_NetServer, FUNC_NetValidate)
 
-	void ATslPlayerController::ServerSuicide() {
+	void ATslPlayerController::ServerSuicide()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa31310d);
 
@@ -1742,7 +1823,8 @@ namespace Classes {
 	// struct FRotator                DeltaRotation                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           bUseInterp                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslPlayerController::ServerStopHoldRotation(const struct FRotator& DeltaRotation, bool bUseInterp) {
+	void ATslPlayerController::ServerStopHoldRotation(const struct FRotator& DeltaRotation, bool bUseInterp)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x18e7ea8a);
 
@@ -1764,7 +1846,8 @@ namespace Classes {
 	// Parameters:
 	// class UActorComponent*         InteractionComponent           (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
-	void ATslPlayerController::ServerStartInteractionByComponent(class UActorComponent* InteractionComponent) {
+	void ATslPlayerController::ServerStartInteractionByComponent(class UActorComponent* InteractionComponent)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x95d70e51);
 
@@ -1785,7 +1868,8 @@ namespace Classes {
 	// Parameters:
 	// class UInteractionComponent*   InteractionComponent           (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
-	void ATslPlayerController::ServerStartInteraction(class UInteractionComponent* InteractionComponent) {
+	void ATslPlayerController::ServerStartInteraction(class UInteractionComponent* InteractionComponent)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc5ad2b37);
 
@@ -1806,7 +1890,8 @@ namespace Classes {
 	// Parameters:
 	// struct FRotator                Current                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslPlayerController::ServerStartHoldRotation(const struct FRotator& Current) {
+	void ATslPlayerController::ServerStartHoldRotation(const struct FRotator& Current)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xaf1df434);
 
@@ -1825,7 +1910,8 @@ namespace Classes {
 	// Function TslGame.TslPlayerController.ServerSpawnVehicle
 	// (FUNC_Final, FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Private, FUNC_NetServer, FUNC_NetValidate)
 
-	void ATslPlayerController::ServerSpawnVehicle() {
+	void ATslPlayerController::ServerSpawnVehicle()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1354aa68);
 
@@ -1845,7 +1931,8 @@ namespace Classes {
 	// Parameters:
 	// class AActor*                  NewViewTarget                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslPlayerController::ServerSetViewTarget(class AActor* NewViewTarget) {
+	void ATslPlayerController::ServerSetViewTarget(class AActor* NewViewTarget)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x211cef85);
 
@@ -1866,7 +1953,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bNewThirdPerson                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslPlayerController::ServerSetThirdPerson(bool bNewThirdPerson) {
+	void ATslPlayerController::ServerSetThirdPerson(bool bNewThirdPerson)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9853ad53);
 
@@ -1887,7 +1975,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           InbIsReviving                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslPlayerController::ServerSetIsReviving(bool InbIsReviving) {
+	void ATslPlayerController::ServerSetIsReviving(bool InbIsReviving)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf083a36b);
 
@@ -1908,7 +1997,8 @@ namespace Classes {
 	// Parameters:
 	// float                          Fps                            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslPlayerController::ServerSetClientFps(float Fps) {
+	void ATslPlayerController::ServerSetClientFps(float Fps)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb4d49bf9);
 
@@ -1929,7 +2019,8 @@ namespace Classes {
 	// Parameters:
 	// struct FVector_NetQuantizeNormal InAccumViewRotation            (CPF_ConstParm, CPF_Parm, CPF_ReferenceParm)
 
-	void ATslPlayerController::ServerSetAccumViewRotation(const struct FVector_NetQuantizeNormal& InAccumViewRotation) {
+	void ATslPlayerController::ServerSetAccumViewRotation(const struct FVector_NetQuantizeNormal& InAccumViewRotation)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xfb878cc7);
 
@@ -1950,7 +2041,8 @@ namespace Classes {
 	// Parameters:
 	// TArray<unsigned char>          Packet                         (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_ReferenceParm)
 
-	void ATslPlayerController::ServerSendPacketUnreliable(TArray<unsigned char> Packet) {
+	void ATslPlayerController::ServerSendPacketUnreliable(TArray<unsigned char> Packet)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x10d2ffc6);
 
@@ -1971,7 +2063,8 @@ namespace Classes {
 	// Parameters:
 	// TArray<unsigned char>          Packet                         (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_ReferenceParm)
 
-	void ATslPlayerController::ServerSendPacketReliable(TArray<unsigned char> Packet) {
+	void ATslPlayerController::ServerSendPacketReliable(TArray<unsigned char> Packet)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5c838413);
 
@@ -1992,7 +2085,8 @@ namespace Classes {
 	// Parameters:
 	// struct FString                 Msg                            (CPF_Parm, CPF_ZeroConstructor)
 
-	void ATslPlayerController::ServerSay(const struct FString& Msg) {
+	void ATslPlayerController::ServerSay(const struct FString& Msg)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7d2e9ef0);
 
@@ -2016,7 +2110,8 @@ namespace Classes {
 	// struct FName                   TargetContainer                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FString                 Options                        (CPF_Parm, CPF_ZeroConstructor)
 
-	void ATslPlayerController::ServerPickUpItemFromPackage(class UItem* Item, class AItemPackage* Package, const struct FName& TargetContainer, const struct FString& Options) {
+	void ATslPlayerController::ServerPickUpItemFromPackage(class UItem* Item, class AItemPackage* Package, const struct FName& TargetContainer, const struct FString& Options)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x41e8c3e);
 
@@ -2042,7 +2137,8 @@ namespace Classes {
 	// struct FName                   TargetContainer                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FString                 Options                        (CPF_Parm, CPF_ZeroConstructor)
 
-	void ATslPlayerController::ServerPickUpDroppedItem(class UObject* DroppedItemObject, const struct FName& TargetContainer, const struct FString& Options) {
+	void ATslPlayerController::ServerPickUpDroppedItem(class UObject* DroppedItemObject, const struct FName& TargetContainer, const struct FString& Options)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2f518342);
 
@@ -2066,7 +2162,8 @@ namespace Classes {
 	// class UTslInstancedGlassWindowComponent* GlassWindowInstComponent       (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 	// struct FHitResult              Hit                            (CPF_ConstParm, CPF_Parm, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-	void ATslPlayerController::ServerNotifyHitToGlassWindowInst(class UTslInstancedGlassWindowComponent* GlassWindowInstComponent, const struct FHitResult& Hit) {
+	void ATslPlayerController::ServerNotifyHitToGlassWindowInst(class UTslInstancedGlassWindowComponent* GlassWindowInstComponent, const struct FHitResult& Hit)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x422408f0);
 
@@ -2089,7 +2186,8 @@ namespace Classes {
 	// class UTslGlassWindowComponent* GlassWindowComponent           (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 	// struct FHitResult              Hit                            (CPF_ConstParm, CPF_Parm, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-	void ATslPlayerController::ServerNotifyHitToGlassWindow(class UTslGlassWindowComponent* GlassWindowComponent, const struct FHitResult& Hit) {
+	void ATslPlayerController::ServerNotifyHitToGlassWindow(class UTslGlassWindowComponent* GlassWindowComponent, const struct FHitResult& Hit)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3e775640);
 
@@ -2111,7 +2209,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bIsPrev                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslPlayerController::ServerNextSetViewTarget(bool bIsPrev) {
+	void ATslPlayerController::ServerNextSetViewTarget(bool bIsPrev)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x11cc42c4);
 
@@ -2132,7 +2231,8 @@ namespace Classes {
 	// Parameters:
 	// int                            SeatIndex                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslPlayerController::ServerMoveToVehicleSeat(int SeatIndex) {
+	void ATslPlayerController::ServerMoveToVehicleSeat(int SeatIndex)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xdb22dd1a);
 
@@ -2151,7 +2251,8 @@ namespace Classes {
 	// Function TslGame.TslPlayerController.ServerMapLoadFinishedOnClient
 	// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Public, FUNC_NetServer, FUNC_NetValidate)
 
-	void ATslPlayerController::ServerMapLoadFinishedOnClient() {
+	void ATslPlayerController::ServerMapLoadFinishedOnClient()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xaf4123ff);
 
@@ -2172,7 +2273,8 @@ namespace Classes {
 	// struct FString                 WindowsLanguage                (CPF_Parm, CPF_ZeroConstructor)
 	// struct FString                 GameLanguage                   (CPF_Parm, CPF_ZeroConstructor)
 
-	void ATslPlayerController::ServerLogLanguage(const struct FString& WindowsLanguage, const struct FString& GameLanguage) {
+	void ATslPlayerController::ServerLogLanguage(const struct FString& WindowsLanguage, const struct FString& GameLanguage)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x16a519d5);
 
@@ -2192,7 +2294,8 @@ namespace Classes {
 	// Function TslGame.TslPlayerController.ServerLeaveMatchIntentionally
 	// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Public, FUNC_NetServer, FUNC_NetValidate)
 
-	void ATslPlayerController::ServerLeaveMatchIntentionally() {
+	void ATslPlayerController::ServerLeaveMatchIntentionally()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf567c88f);
 
@@ -2213,7 +2316,8 @@ namespace Classes {
 	// class ATslCharacter*           TslCharacter                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FText                   Reason                         (CPF_ConstParm, CPF_Parm, CPF_ReferenceParm)
 
-	void ATslPlayerController::ServerKickCharacter(class ATslCharacter* TslCharacter, const struct FText& Reason) {
+	void ATslPlayerController::ServerKickCharacter(class ATslCharacter* TslCharacter, const struct FText& Reason)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x92e80542);
 
@@ -2235,7 +2339,8 @@ namespace Classes {
 	// Parameters:
 	// struct FString                 Msg                            (CPF_Parm, CPF_ZeroConstructor)
 
-	void ATslPlayerController::ServerCheat(const struct FString& Msg) {
+	void ATslPlayerController::ServerCheat(const struct FString& Msg)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x8223a754);
 
@@ -2256,7 +2361,8 @@ namespace Classes {
 	// Parameters:
 	// class UActorComponent*         InteractionComponent           (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
-	void ATslPlayerController::ServerCancelInteraction(class UActorComponent* InteractionComponent) {
+	void ATslPlayerController::ServerCancelInteraction(class UActorComponent* InteractionComponent)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x70c77f13);
 
@@ -2280,7 +2386,8 @@ namespace Classes {
 	// bool                           InbIsInVehicle                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           InbIsScoping                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslPlayerController::ServerBroadCastUsedUpdateCameraMode(const struct FName& InCameraName, bool InbFirstPerson, bool InbIsInVehicle, bool InbIsScoping) {
+	void ATslPlayerController::ServerBroadCastUsedUpdateCameraMode(const struct FName& InCameraName, bool InbFirstPerson, bool InbIsInVehicle, bool InbIsScoping)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc79546e8);
 
@@ -2306,7 +2413,8 @@ namespace Classes {
 	// struct FText                   CastName                       (CPF_ConstParm, CPF_Parm, CPF_ReferenceParm)
 	// bool                           OnOff                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslPlayerController::ServerBroadCastCastingBar(float CastTime, const struct FText& CastName, bool OnOff) {
+	void ATslPlayerController::ServerBroadCastCastingBar(float CastTime, const struct FText& CastName, bool OnOff)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb579b5a6);
 
@@ -2332,7 +2440,8 @@ namespace Classes {
 	// struct FString                 Arg1                           (CPF_Parm, CPF_ZeroConstructor)
 	// struct FString                 Arg2                           (CPF_Parm, CPF_ZeroConstructor)
 
-	void ATslPlayerController::ServerBEServerCommand(const struct FString& Command, const struct FString& Arg0, const struct FString& Arg1, const struct FString& Arg2) {
+	void ATslPlayerController::ServerBEServerCommand(const struct FString& Command, const struct FString& Arg0, const struct FString& Arg1, const struct FString& Arg2)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x289e7628);
 
@@ -2357,7 +2466,8 @@ namespace Classes {
 	// TEnumAsByte<EReportCause>      ReportCause                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FTslReportedInfo        InReportedInfo                 (CPF_Parm)
 
-	void ATslPlayerController::ServerApplyReport(TEnumAsByte<EReportCause> ReportCause, const struct FTslReportedInfo& InReportedInfo) {
+	void ATslPlayerController::ServerApplyReport(TEnumAsByte<EReportCause> ReportCause, const struct FTslReportedInfo& InReportedInfo)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3fe4348f);
 
@@ -2379,7 +2489,8 @@ namespace Classes {
 	// Parameters:
 	// struct FString                 AdminCommand                   (CPF_Parm, CPF_ZeroConstructor)
 
-	void ATslPlayerController::ServerAdmin(const struct FString& AdminCommand) {
+	void ATslPlayerController::ServerAdmin(const struct FString& AdminCommand)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4056ee4c);
 
@@ -2402,7 +2513,8 @@ namespace Classes {
 	// struct FText                   Message                        (CPF_ConstParm, CPF_Parm, CPF_ReferenceParm)
 	// float                          MessageDuration                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslPlayerController::SendSystemMessage(TEnumAsByte<ESystemMessageType> MessageType, const struct FText& Message, float MessageDuration) {
+	void ATslPlayerController::SendSystemMessage(TEnumAsByte<ESystemMessageType> MessageType, const struct FText& Message, float MessageDuration)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5f64cf38);
 
@@ -2425,7 +2537,8 @@ namespace Classes {
 	// Parameters:
 	// struct FString                 Msg                            (CPF_Parm, CPF_ZeroConstructor)
 
-	void ATslPlayerController::Say(const struct FString& Msg) {
+	void ATslPlayerController::Say(const struct FString& Msg)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf5f42cf7);
 
@@ -2447,7 +2560,8 @@ namespace Classes {
 	// int                            ProfileIndex                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// TArray<class UClass*>          inArray                        (CPF_Parm, CPF_ZeroConstructor)
 
-	void ATslPlayerController::SaveGearProfile(int ProfileIndex, TArray<class UClass*> inArray) {
+	void ATslPlayerController::SaveGearProfile(int ProfileIndex, TArray<class UClass*> inArray)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6d9b27ff);
 
@@ -2470,7 +2584,8 @@ namespace Classes {
 	// int                            SeqID                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// int64_t                        DateTimeTickFromServer         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslPlayerController::ReliablePong(int SeqID, int64_t DateTimeTickFromServer) {
+	void ATslPlayerController::ReliablePong(int SeqID, int64_t DateTimeTickFromServer)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x74042596);
 
@@ -2493,7 +2608,8 @@ namespace Classes {
 	// int                            SeqID                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// int64_t                        DateTimeTick                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslPlayerController::ReliablePing(int SeqID, int64_t DateTimeTick) {
+	void ATslPlayerController::ReliablePing(int SeqID, int64_t DateTimeTick)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xccae8b0);
 
@@ -2519,7 +2635,8 @@ namespace Classes {
 	// bool                           InbIsInVehicle                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           InbIsScoping                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslPlayerController::OnUpdateSpectatorCameraMode(class ATslCharacter* TslCharacter, const struct FName& InCameraName, bool InbFirstPerson, bool InbIsInVehicle, bool InbIsScoping) {
+	void ATslPlayerController::OnUpdateSpectatorCameraMode(class ATslCharacter* TslCharacter, const struct FName& InCameraName, bool InbFirstPerson, bool InbIsInVehicle, bool InbIsScoping)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x211127e5);
 
@@ -2546,7 +2663,8 @@ namespace Classes {
 	// struct FText                   CastName                       (CPF_Parm)
 	// bool                           OnOff                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslPlayerController::OnShowCastingBarWidget(float CastTime, const struct FText& CastName, bool OnOff) {
+	void ATslPlayerController::OnShowCastingBarWidget(float CastTime, const struct FText& CastName, bool OnOff)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x31b32268);
 
@@ -2567,7 +2685,8 @@ namespace Classes {
 	// Function TslGame.TslPlayerController.OnRep_Team
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void ATslPlayerController::OnRep_Team() {
+	void ATslPlayerController::OnRep_Team()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd9537ffe);
 
@@ -2585,7 +2704,8 @@ namespace Classes {
 	// Function TslGame.TslPlayerController.OnRep_CameraViewBehaviour
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void ATslPlayerController::OnRep_CameraViewBehaviour() {
+	void ATslPlayerController::OnRep_CameraViewBehaviour()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb3dd6ba4);
 
@@ -2605,7 +2725,8 @@ namespace Classes {
 	// Parameters:
 	// unsigned char                  idx                            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslPlayerController::OnMoveToVehicleSeat(unsigned char idx) {
+	void ATslPlayerController::OnMoveToVehicleSeat(unsigned char idx)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x343fa0e0);
 
@@ -2624,7 +2745,8 @@ namespace Classes {
 	// Function TslGame.TslPlayerController.OnItemStackCountHandlingMode
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ATslPlayerController::OnItemStackCountHandlingMode() {
+	void ATslPlayerController::OnItemStackCountHandlingMode()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x503dc977);
 
@@ -2644,7 +2766,8 @@ namespace Classes {
 	// Parameters:
 	// class UObject*                 CastObject                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslPlayerController::OnFinishInteractionCast(class UObject* CastObject) {
+	void ATslPlayerController::OnFinishInteractionCast(class UObject* CastObject)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x456b8941);
 
@@ -2663,7 +2786,8 @@ namespace Classes {
 	// Function TslGame.TslPlayerController.OnExecuteExitCommand
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void ATslPlayerController::OnExecuteExitCommand() {
+	void ATslPlayerController::OnExecuteExitCommand()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe7d01a5);
 
@@ -2684,7 +2808,8 @@ namespace Classes {
 	// TEnumAsByte<EReportCause>      ReportCause                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// TEnumAsByte<ESubjectToReport>  SubjectToReport                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslPlayerController::OnClickedReportButton(TEnumAsByte<EReportCause> ReportCause, TEnumAsByte<ESubjectToReport> SubjectToReport) {
+	void ATslPlayerController::OnClickedReportButton(TEnumAsByte<EReportCause> ReportCause, TEnumAsByte<ESubjectToReport> SubjectToReport)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3303afa2);
 
@@ -2706,7 +2831,8 @@ namespace Classes {
 	// Parameters:
 	// class UObject*                 CastObject                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslPlayerController::OnCancelInteractionCast(class UObject* CastObject) {
+	void ATslPlayerController::OnCancelInteractionCast(class UObject* CastObject)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x120214f4);
 
@@ -2725,7 +2851,8 @@ namespace Classes {
 	// Function TslGame.TslPlayerController.OffItemStackCountHandlingMode
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ATslPlayerController::OffItemStackCountHandlingMode() {
+	void ATslPlayerController::OffItemStackCountHandlingMode()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x371feeab);
 
@@ -2745,7 +2872,8 @@ namespace Classes {
 	// Parameters:
 	// struct FVector                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslPlayerController::ObserverTeleportTo(const struct FVector& Location) {
+	void ATslPlayerController::ObserverTeleportTo(const struct FVector& Location)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x224e7a0e);
 
@@ -2764,7 +2892,8 @@ namespace Classes {
 	// Function TslGame.TslPlayerController.NextSetViewTarget
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ATslPlayerController::NextSetViewTarget() {
+	void ATslPlayerController::NextSetViewTarget()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xdc1a5553);
 
@@ -2785,7 +2914,8 @@ namespace Classes {
 	// class ATslCharacter*           TslCharacter                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FText                   Reason                         (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
 
-	void ATslPlayerController::KickCharacter(class ATslCharacter* TslCharacter, const struct FText& Reason) {
+	void ATslPlayerController::KickCharacter(class ATslCharacter* TslCharacter, const struct FText& Reason)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6725c039);
 
@@ -2807,7 +2937,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslPlayerController::IsSpectatorState() {
+	bool ATslPlayerController::IsSpectatorState()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe2970e98);
 
@@ -2829,7 +2960,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslPlayerController::IsSpectating() {
+	bool ATslPlayerController::IsSpectating()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xed85a452);
 
@@ -2852,7 +2984,8 @@ namespace Classes {
 	// TEnumAsByte<EObserverCameraMode> CameraType                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslPlayerController::IsSameObservingCameraMode(TEnumAsByte<EObserverCameraMode> CameraType) {
+	bool ATslPlayerController::IsSameObservingCameraMode(TEnumAsByte<EObserverCameraMode> CameraType)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7b6dab39);
 
@@ -2875,7 +3008,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslPlayerController::IsReplaying() {
+	bool ATslPlayerController::IsReplaying()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x97d5d13d);
 
@@ -2897,7 +3031,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslPlayerController::IsObserving() {
+	bool ATslPlayerController::IsObserving()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x181c2eb7);
 
@@ -2919,7 +3054,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslPlayerController::IsItemStackCountHandlingMode() {
+	bool ATslPlayerController::IsItemStackCountHandlingMode()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xbf55298c);
 
@@ -2941,7 +3077,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslPlayerController::IsHighPing() {
+	bool ATslPlayerController::IsHighPing()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd7c42baa);
 
@@ -2963,7 +3100,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslPlayerController::IsGroggying() {
+	bool ATslPlayerController::IsGroggying()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x53fdf175);
 
@@ -2985,7 +3123,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslPlayerController::IsGameInputAllowed() {
+	bool ATslPlayerController::IsGameInputAllowed()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x12e77d0);
 
@@ -3005,7 +3144,8 @@ namespace Classes {
 	// Function TslGame.TslPlayerController.HideTslDebugInfomation
 	// (FUNC_Final, FUNC_Exec, FUNC_Native, FUNC_Public)
 
-	void ATslPlayerController::HideTslDebugInfomation() {
+	void ATslPlayerController::HideTslDebugInfomation()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd4333558);
 
@@ -3023,7 +3163,8 @@ namespace Classes {
 	// Function TslGame.TslPlayerController.HideMatchResult
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void ATslPlayerController::HideMatchResult() {
+	void ATslPlayerController::HideMatchResult()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x330534ee);
 
@@ -3043,7 +3184,8 @@ namespace Classes {
 	// Parameters:
 	// class UVivoxComponent*         ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
-	class UVivoxComponent* ATslPlayerController::GetVivoxComponent() {
+	class UVivoxComponent* ATslPlayerController::GetVivoxComponent()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x29d5ab45);
 
@@ -3065,7 +3207,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslCharacter*           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslCharacter* ATslPlayerController::GetViewTargetTslCharacter() {
+	class ATslCharacter* ATslPlayerController::GetViewTargetTslCharacter()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa8d57268);
 
@@ -3087,7 +3230,8 @@ namespace Classes {
 	// Parameters:
 	// class ATeam*                   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATeam* ATslPlayerController::GetViewTargetTeam() {
+	class ATeam* ATslPlayerController::GetViewTargetTeam()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe2974e79);
 
@@ -3109,7 +3253,8 @@ namespace Classes {
 	// Parameters:
 	// TArray<struct FTslPlayerMatchResultInfo> ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<struct FTslPlayerMatchResultInfo> ATslPlayerController::GetTslPlayerMatchResultInfos() {
+	TArray<struct FTslPlayerMatchResultInfo> ATslPlayerController::GetTslPlayerMatchResultInfos()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3612ede3);
 
@@ -3131,7 +3276,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslCharacter*           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslCharacter* ATslPlayerController::GetTslCharacter() {
+	class ATslCharacter* ATslPlayerController::GetTslCharacter()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xcc7671ac);
 
@@ -3153,7 +3299,8 @@ namespace Classes {
 	// Parameters:
 	// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	int ATslPlayerController::GetTeamMemberCount() {
+	int ATslPlayerController::GetTeamMemberCount()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x532b83fc);
 
@@ -3175,7 +3322,8 @@ namespace Classes {
 	// Parameters:
 	// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FRotator ATslPlayerController::GetTargetViewRotation() {
+	struct FRotator ATslPlayerController::GetTargetViewRotation()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x8cd42028);
 
@@ -3197,7 +3345,8 @@ namespace Classes {
 	// Parameters:
 	// struct FString                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	struct FString ATslPlayerController::GetSpectatingPlayerName() {
+	struct FString ATslPlayerController::GetSpectatingPlayerName()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x53d319fc);
 
@@ -3219,7 +3368,8 @@ namespace Classes {
 	// Parameters:
 	// TArray<class ATslCharacter*>   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<class ATslCharacter*> ATslPlayerController::GetReplicateTeamMembers() {
+	TArray<class ATslCharacter*> ATslPlayerController::GetReplicateTeamMembers()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x926384d1);
 
@@ -3241,7 +3391,8 @@ namespace Classes {
 	// Parameters:
 	// TArray<class ATslCharacter*>   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<class ATslCharacter*> ATslPlayerController::GetReplicateCharacters() {
+	TArray<class ATslCharacter*> ATslPlayerController::GetReplicateCharacters()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xfdea7697);
 
@@ -3263,7 +3414,8 @@ namespace Classes {
 	// Parameters:
 	// TArray<class ACarePackageItem*> ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<class ACarePackageItem*> ATslPlayerController::GetReplicateCarePackageItems() {
+	TArray<class ACarePackageItem*> ATslPlayerController::GetReplicateCarePackageItems()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xab7e39f4);
 
@@ -3285,7 +3437,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslPlayerController::GetOtherElapsedCastTime() {
+	float ATslPlayerController::GetOtherElapsedCastTime()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x35898b4e);
 
@@ -3307,7 +3460,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslPlayerController::GetOtherCastTime() {
+	float ATslPlayerController::GetOtherCastTime()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x946d536e);
 
@@ -3329,7 +3483,8 @@ namespace Classes {
 	// Parameters:
 	// struct FText                   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
-	struct FText ATslPlayerController::GetOtherCastingName() {
+	struct FText ATslPlayerController::GetOtherCastingName()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc8c88342);
 
@@ -3351,7 +3506,8 @@ namespace Classes {
 	// Parameters:
 	// TEnumAsByte<EObserverCameraMode> ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	TEnumAsByte<EObserverCameraMode> ATslPlayerController::GetObserverCameraMode() {
+	TEnumAsByte<EObserverCameraMode> ATslPlayerController::GetObserverCameraMode()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6d5a31f8);
 
@@ -3373,7 +3529,8 @@ namespace Classes {
 	// Parameters:
 	// TEnumAsByte<EObserverAuthorityType> ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	TEnumAsByte<EObserverAuthorityType> ATslPlayerController::GetObserverAuthorityType() {
+	TEnumAsByte<EObserverAuthorityType> ATslPlayerController::GetObserverAuthorityType()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xbaab0fc7);
 
@@ -3395,7 +3552,8 @@ namespace Classes {
 	// Parameters:
 	// struct FString                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	struct FString ATslPlayerController::GetKillerName() {
+	struct FString ATslPlayerController::GetKillerName()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5f3b1712);
 
@@ -3417,7 +3575,8 @@ namespace Classes {
 	// Parameters:
 	// struct FText                   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
-	struct FText ATslPlayerController::GetHudDebugText() {
+	struct FText ATslPlayerController::GetHudDebugText()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x8441b9a3);
 
@@ -3440,7 +3599,8 @@ namespace Classes {
 	// int                            ProfileIndex                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// TArray<class UClass*>          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<class UClass*> ATslPlayerController::GetGearProfile(int ProfileIndex) {
+	TArray<class UClass*> ATslPlayerController::GetGearProfile(int ProfileIndex)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x463ec5be);
 
@@ -3464,7 +3624,8 @@ namespace Classes {
 	// bool                           IncludeSelf                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// TArray<class ATeam*>           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<class ATeam*> ATslPlayerController::GetClientTeam(bool IncludeSelf) {
+	TArray<class ATeam*> ATslPlayerController::GetClientTeam(bool IncludeSelf)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x51031dcc);
 
@@ -3487,7 +3648,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslPlayerController::GetCanAllSpectate() {
+	bool ATslPlayerController::GetCanAllSpectate()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xcd8e1ba4);
 
@@ -3509,7 +3671,8 @@ namespace Classes {
 	// Parameters:
 	// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	int ATslPlayerController::GetAliveTeamMemberCount() {
+	int ATslPlayerController::GetAliveTeamMemberCount()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2bfb53bd);
 
@@ -3529,7 +3692,8 @@ namespace Classes {
 	// Function TslGame.TslPlayerController.DumpActorDetailByRaycast
 	// (FUNC_Final, FUNC_Exec, FUNC_Native, FUNC_Public)
 
-	void ATslPlayerController::DumpActorDetailByRaycast() {
+	void ATslPlayerController::DumpActorDetailByRaycast()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x762ce2f0);
 
@@ -3549,7 +3713,8 @@ namespace Classes {
 	// Parameters:
 	// struct FString                 ItemTypeName                   (CPF_Parm, CPF_ZeroConstructor)
 
-	void ATslPlayerController::DropItem(const struct FString& ItemTypeName) {
+	void ATslPlayerController::DropItem(const struct FString& ItemTypeName)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb3664910);
 
@@ -3570,7 +3735,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslPlayerController::CompleteReportKiller() {
+	bool ATslPlayerController::CompleteReportKiller()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7c6eaa24);
 
@@ -3595,7 +3761,8 @@ namespace Classes {
 	// bool                           InbIsInVehicle                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           InbIsScoping                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslPlayerController::ClientUpdateSpectatorCameraMode(const struct FName& InCameraName, bool InbFirstPerson, bool InbIsInVehicle, bool InbIsScoping) {
+	void ATslPlayerController::ClientUpdateSpectatorCameraMode(const struct FName& InCameraName, bool InbFirstPerson, bool InbIsInVehicle, bool InbIsScoping)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x52d28d7);
 
@@ -3617,7 +3784,8 @@ namespace Classes {
 	// Function TslGame.TslPlayerController.ClientStartOnlineGame
 	// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Public, FUNC_NetClient)
 
-	void ATslPlayerController::ClientStartOnlineGame() {
+	void ATslPlayerController::ClientStartOnlineGame()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xdb753dfa);
 
@@ -3635,7 +3803,8 @@ namespace Classes {
 	// Function TslGame.TslPlayerController.ClientShowMatchResult
 	// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Public, FUNC_NetClient, FUNC_BlueprintCallable)
 
-	void ATslPlayerController::ClientShowMatchResult() {
+	void ATslPlayerController::ClientShowMatchResult()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5dc1a9d8);
 
@@ -3657,7 +3826,8 @@ namespace Classes {
 	// struct FText                   CastName                       (CPF_ConstParm, CPF_Parm, CPF_ReferenceParm)
 	// bool                           OnOff                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslPlayerController::ClientShowCastingBar(float CastTime, const struct FText& CastName, bool OnOff) {
+	void ATslPlayerController::ClientShowCastingBar(float CastTime, const struct FText& CastName, bool OnOff)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x294c9d1a);
 
@@ -3680,7 +3850,8 @@ namespace Classes {
 	// Parameters:
 	// TArray<struct FTslPlayerMatchResultInfo> InTslPlayerMatchResultInfos    (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_ReferenceParm)
 
-	void ATslPlayerController::ClientSetTslPlayerMatchResultInfos(TArray<struct FTslPlayerMatchResultInfo> InTslPlayerMatchResultInfos) {
+	void ATslPlayerController::ClientSetTslPlayerMatchResultInfos(TArray<struct FTslPlayerMatchResultInfo> InTslPlayerMatchResultInfos)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe00a7b8a);
 
@@ -3702,7 +3873,8 @@ namespace Classes {
 	// struct FVector                 CameraLocation                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FRotator                CameraRotation                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslPlayerController::ClientSetSpectatorCamera(const struct FVector& CameraLocation, const struct FRotator& CameraRotation) {
+	void ATslPlayerController::ClientSetSpectatorCamera(const struct FVector& CameraLocation, const struct FRotator& CameraRotation)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf018017d);
 
@@ -3724,7 +3896,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           InbCanSpectate                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslPlayerController::ClientSetCanAllSpectate(bool InbCanSpectate) {
+	void ATslPlayerController::ClientSetCanAllSpectate(bool InbCanSpectate)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7447888f);
 
@@ -3746,7 +3919,8 @@ namespace Classes {
 	// bool                           bIsWinner                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// int                            ExpendedTimeInSeconds          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslPlayerController::ClientSendRoundEndEvent(bool bIsWinner, int ExpendedTimeInSeconds) {
+	void ATslPlayerController::ClientSendRoundEndEvent(bool bIsWinner, int ExpendedTimeInSeconds)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xfd7fc82e);
 
@@ -3768,7 +3942,8 @@ namespace Classes {
 	// Parameters:
 	// TArray<unsigned char>          Packet                         (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_ReferenceParm)
 
-	void ATslPlayerController::ClientSendPacketUnreliable(TArray<unsigned char> Packet) {
+	void ATslPlayerController::ClientSendPacketUnreliable(TArray<unsigned char> Packet)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x31a78e22);
 
@@ -3789,7 +3964,8 @@ namespace Classes {
 	// Parameters:
 	// TArray<unsigned char>          Packet                         (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_ReferenceParm)
 
-	void ATslPlayerController::ClientSendPacketReliable(TArray<unsigned char> Packet) {
+	void ATslPlayerController::ClientSendPacketReliable(TArray<unsigned char> Packet)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x224fe11f);
 
@@ -3808,7 +3984,8 @@ namespace Classes {
 	// Function TslGame.TslPlayerController.ClientOnCharacterRestart
 	// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Public, FUNC_NetClient)
 
-	void ATslPlayerController::ClientOnCharacterRestart() {
+	void ATslPlayerController::ClientOnCharacterRestart()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb890529e);
 
@@ -3831,7 +4008,8 @@ namespace Classes {
 	// struct FTslReportedInfo        InKillerInfo                   (CPF_Parm)
 	// bool                           InbCanReport                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslPlayerController::ClientOnCharacterDeath(bool bIsTeamMatch, bool bHasAliveTeamMember, const struct FTslReportedInfo& InKillerInfo, bool InbCanReport) {
+	void ATslPlayerController::ClientOnCharacterDeath(bool bIsTeamMatch, bool bHasAliveTeamMember, const struct FTslReportedInfo& InKillerInfo, bool InbCanReport)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xacbff275);
 
@@ -3856,7 +4034,8 @@ namespace Classes {
 	// struct FName                   BuffName                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           bStart                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslPlayerController::ClientNotifyStartBuff(const struct FName& BuffName, bool bStart) {
+	void ATslPlayerController::ClientNotifyStartBuff(const struct FName& BuffName, bool bStart)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe9171f37);
 
@@ -3878,7 +4057,8 @@ namespace Classes {
 	// Parameters:
 	// float                          Boost                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslPlayerController::ClientNotifySpeedBoost(float Boost) {
+	void ATslPlayerController::ClientNotifySpeedBoost(float Boost)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe8af18a2);
 
@@ -3897,7 +4077,8 @@ namespace Classes {
 	// Function TslGame.TslPlayerController.ClientNotifyRestrictingPlayArea
 	// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Public, FUNC_NetClient, FUNC_BlueprintCallable)
 
-	void ATslPlayerController::ClientNotifyRestrictingPlayArea() {
+	void ATslPlayerController::ClientNotifyRestrictingPlayArea()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe3bd33ed);
 
@@ -3918,7 +4099,8 @@ namespace Classes {
 	// struct FVector_NetQuantize     PoisonGasWarningPosition       (CPF_Parm)
 	// float                          PoisonGasWarningRadius         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslPlayerController::ClientNotifyNextGasIn(const struct FVector_NetQuantize& PoisonGasWarningPosition, float PoisonGasWarningRadius) {
+	void ATslPlayerController::ClientNotifyNextGasIn(const struct FVector_NetQuantize& PoisonGasWarningPosition, float PoisonGasWarningRadius)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x41135f2b);
 
@@ -3940,7 +4122,8 @@ namespace Classes {
 	// Parameters:
 	// float                          Heal                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslPlayerController::ClientNotifyHealAmount_Unreliable(float Heal) {
+	void ATslPlayerController::ClientNotifyHealAmount_Unreliable(float Heal)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x137bc78e);
 
@@ -3961,7 +4144,8 @@ namespace Classes {
 	// Parameters:
 	// float                          Heal                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslPlayerController::ClientNotifyHealAmount_Reliable(float Heal) {
+	void ATslPlayerController::ClientNotifyHealAmount_Reliable(float Heal)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb96978cb);
 
@@ -3982,7 +4166,8 @@ namespace Classes {
 	// Parameters:
 	// float                          Heal                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslPlayerController::ClientNotifyHealAmount(float Heal) {
+	void ATslPlayerController::ClientNotifyHealAmount(float Heal)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x489aecfa);
 
@@ -4005,7 +4190,8 @@ namespace Classes {
 	// float                          Health                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          MaxHealth                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslPlayerController::ClientNotifyHeal_Unreliable(float HealthStart, float Health, float MaxHealth) {
+	void ATslPlayerController::ClientNotifyHeal_Unreliable(float HealthStart, float Health, float MaxHealth)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xec9ca57a);
 
@@ -4030,7 +4216,8 @@ namespace Classes {
 	// float                          Health                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          MaxHealth                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslPlayerController::ClientNotifyHeal_Reliable(float HealthStart, float Health, float MaxHealth) {
+	void ATslPlayerController::ClientNotifyHeal_Reliable(float HealthStart, float Health, float MaxHealth)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x50d16fc7);
 
@@ -4055,7 +4242,8 @@ namespace Classes {
 	// float                          Health                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          MaxHealth                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslPlayerController::ClientNotifyHeal(float HealthStart, float Health, float MaxHealth) {
+	void ATslPlayerController::ClientNotifyHeal(float HealthStart, float Health, float MaxHealth)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6cf139d6);
 
@@ -4078,7 +4266,8 @@ namespace Classes {
 	// Parameters:
 	// class UActorComponent*         TargetComponent                (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
-	void ATslPlayerController::ClientInteractByComponent(class UActorComponent* TargetComponent) {
+	void ATslPlayerController::ClientInteractByComponent(class UActorComponent* TargetComponent)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb9d61b7f);
 
@@ -4099,7 +4288,8 @@ namespace Classes {
 	// Parameters:
 	// class AActor*                  TargetObject                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslPlayerController::ClientInteract(class AActor* TargetObject) {
+	void ATslPlayerController::ClientInteract(class AActor* TargetObject)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x101d8211);
 
@@ -4118,7 +4308,8 @@ namespace Classes {
 	// Function TslGame.TslPlayerController.ClientGameStarted
 	// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Public, FUNC_NetClient)
 
-	void ATslPlayerController::ClientGameStarted() {
+	void ATslPlayerController::ClientGameStarted()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc2fd3c90);
 
@@ -4136,7 +4327,8 @@ namespace Classes {
 	// Function TslGame.TslPlayerController.ClientEndOnlineGame
 	// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Public, FUNC_NetClient)
 
-	void ATslPlayerController::ClientEndOnlineGame() {
+	void ATslPlayerController::ClientEndOnlineGame()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa9d9f24d);
 
@@ -4156,7 +4348,8 @@ namespace Classes {
 	// Parameters:
 	// struct FString                 inString                       (CPF_Parm, CPF_ZeroConstructor)
 
-	void ATslPlayerController::ClientAdminCopyString(const struct FString& inString) {
+	void ATslPlayerController::ClientAdminCopyString(const struct FString& inString)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xfe550480);
 
@@ -4177,7 +4370,8 @@ namespace Classes {
 	// Parameters:
 	// int                            VehicleIndex                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslPlayerController::Cheat_ServerSpawnVehicle(int VehicleIndex) {
+	void ATslPlayerController::Cheat_ServerSpawnVehicle(int VehicleIndex)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1be925b8);
 
@@ -4198,7 +4392,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslPlayerController::CanSeeTerrainThroughFogInTheAir() {
+	bool ATslPlayerController::CanSeeTerrainThroughFogInTheAir()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1321579b);
 
@@ -4220,7 +4415,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslPlayerController::CanReport() {
+	bool ATslPlayerController::CanReport()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x33986176);
 
@@ -4242,7 +4438,8 @@ namespace Classes {
 	// Parameters:
 	// int                            VehicleIndex                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslPlayerController::BP_Test_SpawnVehicle(int VehicleIndex) {
+	void ATslPlayerController::BP_Test_SpawnVehicle(int VehicleIndex)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa11f987d);
 
@@ -4266,7 +4463,8 @@ namespace Classes {
 	// struct FString                 Arg1                           (CPF_Parm, CPF_ZeroConstructor)
 	// struct FString                 Arg2                           (CPF_Parm, CPF_ZeroConstructor)
 
-	void ATslPlayerController::BEServer(const struct FString& Command, const struct FString& Arg0, const struct FString& Arg1, const struct FString& Arg2) {
+	void ATslPlayerController::BEServer(const struct FString& Command, const struct FString& Arg0, const struct FString& Arg1, const struct FString& Arg2)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x63552c7c);
 
@@ -4290,7 +4488,8 @@ namespace Classes {
 	// Parameters:
 	// struct FString                 Command                        (CPF_Parm, CPF_ZeroConstructor)
 
-	void ATslPlayerController::BEClient(const struct FString& Command) {
+	void ATslPlayerController::BEClient(const struct FString& Command)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x366015d0);
 
@@ -4311,7 +4510,8 @@ namespace Classes {
 	// Parameters:
 	// struct FString                 ServerAdminCommand             (CPF_Parm, CPF_ZeroConstructor)
 
-	void ATslPlayerController::Admin(const struct FString& ServerAdminCommand) {
+	void ATslPlayerController::Admin(const struct FString& ServerAdminCommand)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x37febd73);
 
@@ -4332,7 +4532,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool USlotInterface::IsWeapon() {
+	bool USlotInterface::IsWeapon()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x8230af7);
 
@@ -4354,7 +4555,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool USlotInterface::IsStackable() {
+	bool USlotInterface::IsStackable()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x89219415);
 
@@ -4376,7 +4578,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool USlotInterface::IsPackageItem() {
+	bool USlotInterface::IsPackageItem()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7336c838);
 
@@ -4398,7 +4601,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool USlotInterface::IsEquipable() {
+	bool USlotInterface::IsEquipable()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5e2ac489);
 
@@ -4420,7 +4624,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool USlotInterface::IsCastableItem() {
+	bool USlotInterface::IsCastableItem()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf573c29f);
 
@@ -4442,7 +4647,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool USlotInterface::IsAttachment() {
+	bool USlotInterface::IsAttachment()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb7fe870c);
 
@@ -4464,7 +4670,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float USlotInterface::GetUnitSpace() {
+	float USlotInterface::GetUnitSpace()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xacecbf5b);
 
@@ -4486,7 +4693,8 @@ namespace Classes {
 	// Parameters:
 	// class UTexture*                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UTexture* USlotInterface::GetToolTipIconTexture() {
+	class UTexture* USlotInterface::GetToolTipIconTexture()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc5a3756a);
 
@@ -4508,7 +4716,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float USlotInterface::GetToolTipIconSizeRatio() {
+	float USlotInterface::GetToolTipIconSizeRatio()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4486cb07);
 
@@ -4530,7 +4739,8 @@ namespace Classes {
 	// Parameters:
 	// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	int USlotInterface::GetStackCountMax() {
+	int USlotInterface::GetStackCountMax()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc942e9a6);
 
@@ -4552,7 +4762,8 @@ namespace Classes {
 	// Parameters:
 	// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	int USlotInterface::GetStackCount() {
+	int USlotInterface::GetStackCount()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x92ae5abc);
 
@@ -4574,7 +4785,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float USlotInterface::GetSpace() {
+	float USlotInterface::GetSpace()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x59d56ed);
 
@@ -4596,7 +4808,8 @@ namespace Classes {
 	// Parameters:
 	// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	int USlotInterface::GetSortPriority() {
+	int USlotInterface::GetSortPriority()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4a23e2c9);
 
@@ -4618,7 +4831,8 @@ namespace Classes {
 	// Parameters:
 	// struct FText                   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
-	struct FText USlotInterface::GetSlotName() {
+	struct FText USlotInterface::GetSlotName()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4aaa95f4);
 
@@ -4640,7 +4854,8 @@ namespace Classes {
 	// Parameters:
 	// struct FText                   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
-	struct FText USlotInterface::GetSlotDetailedName() {
+	struct FText USlotInterface::GetSlotDetailedName()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf2158bb4);
 
@@ -4662,7 +4877,8 @@ namespace Classes {
 	// Parameters:
 	// struct FText                   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
-	struct FText USlotInterface::GetSlotDescription() {
+	struct FText USlotInterface::GetSlotDescription()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4a657389);
 
@@ -4684,7 +4900,8 @@ namespace Classes {
 	// Parameters:
 	// struct FText                   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
-	struct FText USlotInterface::GetSlotCategory() {
+	struct FText USlotInterface::GetSlotCategory()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa490d329);
 
@@ -4706,7 +4923,8 @@ namespace Classes {
 	// Parameters:
 	// class UTexture*                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UTexture* USlotInterface::GetIconTexture() {
+	class UTexture* USlotInterface::GetIconTexture()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1db2f8df);
 
@@ -4728,7 +4946,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float USlotInterface::GetIconSizeRatio() {
+	float USlotInterface::GetIconSizeRatio()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x28af4f8a);
 
@@ -4750,7 +4969,8 @@ namespace Classes {
 	// Parameters:
 	// class UAkAudioEvent*           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UAkAudioEvent* USlotInterface::GetDropSound() {
+	class UAkAudioEvent* USlotInterface::GetDropSound()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6c86a3b3);
 
@@ -4772,7 +4992,8 @@ namespace Classes {
 	// Parameters:
 	// TScriptInterface<class USlotInterface> Slot                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void USlotContainerInterface::ShowSlotContextMenu(const TScriptInterface<class USlotInterface>& Slot) {
+	void USlotContainerInterface::ShowSlotContextMenu(const TScriptInterface<class USlotInterface>& Slot)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xfb56d43f);
 
@@ -4796,7 +5017,8 @@ namespace Classes {
 	// struct FString                 Options                        (CPF_Parm, CPF_ZeroConstructor)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool USlotContainerInterface::IsEnableAction(const TScriptInterface<class USlotInterface>& Slot, const TScriptInterface<class USlotContainerInterface>& OtherContainer, const struct FString& Options) {
+	bool USlotContainerInterface::IsEnableAction(const TScriptInterface<class USlotInterface>& Slot, const TScriptInterface<class USlotContainerInterface>& OtherContainer, const struct FString& Options)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1ab45e9d);
 
@@ -4819,7 +5041,8 @@ namespace Classes {
 	// Function TslGame.SlotContainerInterface.HideSlotContextMenu
 	// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void USlotContainerInterface::HideSlotContextMenu() {
+	void USlotContainerInterface::HideSlotContextMenu()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x46a41992);
 
@@ -4839,7 +5062,8 @@ namespace Classes {
 	// Parameters:
 	// TScriptInterface<class USlotInterface> ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	TScriptInterface<class USlotInterface> USlotContainerInterface::GetSlotContext() {
+	TScriptInterface<class USlotInterface> USlotContainerInterface::GetSlotContext()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x8377adff);
 
@@ -4861,7 +5085,8 @@ namespace Classes {
 	// Parameters:
 	// class AActor*                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class AActor* USlotContainerInterface::GetSlotContainerOwner() {
+	class AActor* USlotContainerInterface::GetSlotContainerOwner()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4a06fae0);
 
@@ -4883,7 +5108,8 @@ namespace Classes {
 	// Parameters:
 	// struct FName                   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FName USlotContainerInterface::GetSlotContainerName() {
+	struct FName USlotContainerInterface::GetSlotContainerName()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1e32db86);
 
@@ -4906,7 +5132,8 @@ namespace Classes {
 	// TScriptInterface<class USlotInterface> Slot                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FName                   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FName USlotContainerInterface::GetDefaultActionName(const TScriptInterface<class USlotInterface>& Slot) {
+	struct FName USlotContainerInterface::GetDefaultActionName(const TScriptInterface<class USlotInterface>& Slot)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7bd7e4be);
 
@@ -4930,7 +5157,8 @@ namespace Classes {
 	// TScriptInterface<class USlotInterface> Slot                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// TArray<struct FName>           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<struct FName> USlotContainerInterface::GetAvailableSlotActions(const TScriptInterface<class USlotInterface>& Slot) {
+	TArray<struct FName> USlotContainerInterface::GetAvailableSlotActions(const TScriptInterface<class USlotInterface>& Slot)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x661eec80);
 
@@ -4953,7 +5181,8 @@ namespace Classes {
 	// Parameters:
 	// TArray<TScriptInterface<class USlotInterface>> ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<TScriptInterface<class USlotInterface>> USlotContainerInterface::GetAllSlots() {
+	TArray<TScriptInterface<class USlotInterface>> USlotContainerInterface::GetAllSlots()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc916db3a);
 
@@ -4978,7 +5207,8 @@ namespace Classes {
 	// struct FString                 Options                        (CPF_Parm, CPF_ZeroConstructor)
 	// struct FName                   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FName USlotContainerInterface::GetActionName(const TScriptInterface<class USlotInterface>& Slot, const TScriptInterface<class USlotContainerInterface>& OtherContainer, const struct FString& Options) {
+	struct FName USlotContainerInterface::GetActionName(const TScriptInterface<class USlotInterface>& Slot, const TScriptInterface<class USlotContainerInterface>& OtherContainer, const struct FString& Options)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2166b51d);
 
@@ -5005,7 +5235,8 @@ namespace Classes {
 	// TScriptInterface<class USlotContainerInterface> OtherContainer                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FString                 Options                        (CPF_Parm, CPF_ZeroConstructor)
 
-	void USlotContainerInterface::DropSlotOnOtherContainer(const TScriptInterface<class USlotInterface>& Slot, const TScriptInterface<class USlotContainerInterface>& OtherContainer, const struct FString& Options) {
+	void USlotContainerInterface::DropSlotOnOtherContainer(const TScriptInterface<class USlotInterface>& Slot, const TScriptInterface<class USlotContainerInterface>& OtherContainer, const struct FString& Options)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x50be8711);
 
@@ -5028,7 +5259,8 @@ namespace Classes {
 	// Parameters:
 	// TScriptInterface<class USlotInterface> Slot                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void USlotContainerInterface::DoSlotActionDefault(const TScriptInterface<class USlotInterface>& Slot) {
+	void USlotContainerInterface::DoSlotActionDefault(const TScriptInterface<class USlotInterface>& Slot)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x8f15f28e);
 
@@ -5050,7 +5282,8 @@ namespace Classes {
 	// struct FName                   ActionName                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FString                 Options                        (CPF_Parm, CPF_ZeroConstructor)
 
-	void USlotContainerInterface::DoSlotAction(const struct FName& ActionName, const struct FString& Options) {
+	void USlotContainerInterface::DoSlotAction(const struct FName& ActionName, const struct FString& Options)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x229ee24b);
 
@@ -5074,7 +5307,8 @@ namespace Classes {
 	// struct FName                   ActionName                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FString                 Options                        (CPF_Parm, CPF_ZeroConstructor)
 
-	void USlotContainerInterface::DoActionWithSlot(const TScriptInterface<class USlotInterface>& Slot, const struct FName& ActionName, const struct FString& Options) {
+	void USlotContainerInterface::DoActionWithSlot(const TScriptInterface<class USlotInterface>& Slot, const struct FName& ActionName, const struct FString& Options)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xed8a616f);
 
@@ -5095,7 +5329,8 @@ namespace Classes {
 	// Function TslGame.ItemExplorerInterface.UpdateItemList
 	// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UItemExplorerInterface::UpdateItemList() {
+	void UItemExplorerInterface::UpdateItemList()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x627ad4fd);
 
@@ -5115,7 +5350,8 @@ namespace Classes {
 	// Parameters:
 	// TArray<TScriptInterface<class USlotInterface>> ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<TScriptInterface<class USlotInterface>> UItemExplorerInterface::GetExplorableItemSlotList() {
+	TArray<TScriptInterface<class USlotInterface>> UItemExplorerInterface::GetExplorableItemSlotList()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x74f16870);
 
@@ -5137,7 +5373,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UExplorableItemInterface::IsValidExplorableItem() {
+	bool UExplorableItemInterface::IsValidExplorableItem()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb4d2b725);
 
@@ -5159,7 +5396,8 @@ namespace Classes {
 	// Parameters:
 	// struct FName                   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FName UExplorableItemInterface::GetInteractiveActionName() {
+	struct FName UExplorableItemInterface::GetInteractiveActionName()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xbc4f795d);
 
@@ -5181,7 +5419,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UExplorableItemInterface::GetExplorationDistance() {
+	float UExplorableItemInterface::GetExplorationDistance()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5e0c3cd0);
 
@@ -5204,7 +5443,8 @@ namespace Classes {
 	// class ATslCharacter*           Character                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UItem::UseBy(class ATslCharacter* Character) {
+	bool UItem::UseBy(class ATslCharacter* Character)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3801186b);
 
@@ -5230,7 +5470,8 @@ namespace Classes {
 	// struct FString                 Options                        (CPF_Parm, CPF_ZeroConstructor)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UItem::PickUpBy(class ATslCharacter* Character, const struct FName& TargetContainer, const struct FString& Options) {
+	bool UItem::PickUpBy(class ATslCharacter* Character, const struct FName& TargetContainer, const struct FString& Options)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd2ad5b04);
 
@@ -5255,7 +5496,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UItem::IsWeapon() {
+	bool UItem::IsWeapon()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa86ba20b);
 
@@ -5277,7 +5519,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UItem::IsToy() {
+	bool UItem::IsToy()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xef9ce04d);
 
@@ -5299,7 +5542,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UItem::IsPackageItem() {
+	bool UItem::IsPackageItem()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd6ecf46c);
 
@@ -5321,7 +5565,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UItem::IsEquipable() {
+	bool UItem::IsEquipable()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x651d4265);
 
@@ -5343,7 +5588,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UItem::IsCastableItem() {
+	bool UItem::IsCastableItem()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd1ba1b43);
 
@@ -5365,7 +5611,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UItem::IsAttachment() {
+	bool UItem::IsAttachment()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x41815800);
 
@@ -5387,7 +5634,8 @@ namespace Classes {
 	// Parameters:
 	// class UTexture*                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UTexture* UItem::GetIconTexture() {
+	class UTexture* UItem::GetIconTexture()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf1391533);
 
@@ -5407,7 +5655,8 @@ namespace Classes {
 	// Function TslGame.ItemPackage.Items_RepNotify
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void AItemPackage::Items_RepNotify() {
+	void AItemPackage::Items_RepNotify()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x285f1030);
 
@@ -5428,7 +5677,8 @@ namespace Classes {
 	// class ATslCharacter*           Character                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool AItemPackage::IsOpenedBy(class ATslCharacter* Character) {
+	bool AItemPackage::IsOpenedBy(class ATslCharacter* Character)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4b937dc9);
 
@@ -5451,7 +5701,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslCharacter*           OtherCharacter                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void AItemPackage::ClientOnInteractBy(class ATslCharacter* OtherCharacter) {
+	void AItemPackage::ClientOnInteractBy(class ATslCharacter* OtherCharacter)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5ae0a06);
 
@@ -5473,7 +5724,8 @@ namespace Classes {
 	// class ATslCharacter*           OtherCharacter                 (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool AItemPackage::AllowInteract(class ATslCharacter* OtherCharacter) {
+	bool AItemPackage::AllowInteract(class ATslCharacter* OtherCharacter)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x500ecd6e);
 
@@ -5496,7 +5748,8 @@ namespace Classes {
 	// Parameters:
 	// class UStaticMesh*             ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UStaticMesh* UDoorFrameComponent::GetDoorStaticMesh() {
+	class UStaticMesh* UDoorFrameComponent::GetDoorStaticMesh()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2b23a94d);
 
@@ -5516,7 +5769,8 @@ namespace Classes {
 	// Function TslGame.DroppedItem.Item_RepNotify
 	// (FUNC_Final, FUNC_Native, FUNC_Protected)
 
-	void ADroppedItem::Item_RepNotify() {
+	void ADroppedItem::Item_RepNotify()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9fc6f7db);
 
@@ -5534,7 +5788,8 @@ namespace Classes {
 	// Function TslGame.DroppedItemGroup.OnItemEndPlay
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void ADroppedItemGroup::OnItemEndPlay() {
+	void ADroppedItemGroup::OnItemEndPlay()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xeaba9da3);
 
@@ -5552,7 +5807,8 @@ namespace Classes {
 	// Function TslGame.DroppedItemGroup.OnItemBeginPlay
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void ADroppedItemGroup::OnItemBeginPlay() {
+	void ADroppedItemGroup::OnItemBeginPlay()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc11e335b);
 
@@ -5574,7 +5830,8 @@ namespace Classes {
 	// struct FVector                 NewWorldLocation               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ADroppedItemGroup::AddItem(class UItem* NewItem, const struct FVector& NewWorldLocation) {
+	bool ADroppedItemGroup::AddItem(class UItem* NewItem, const struct FVector& NewWorldLocation)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1ec5f938);
 
@@ -5598,7 +5855,8 @@ namespace Classes {
 	// Parameters:
 	// class UItem*                   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UItem* UDroppedItemInterface::GetDroppedItem() {
+	class UItem* UDroppedItemInterface::GetDroppedItem()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x42ee5cb7);
 
@@ -5618,7 +5876,8 @@ namespace Classes {
 	// Function TslGame.FlashBangCaptureActor.CaptureScreen
 	// (FUNC_Final, FUNC_Native, FUNC_Public)
 
-	void AFlashBangCaptureActor::CaptureScreen() {
+	void AFlashBangCaptureActor::CaptureScreen()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xffcc0617);
 
@@ -5643,7 +5902,8 @@ namespace Classes {
 	// struct FPostProcessSettings    PP_Settings                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
 	// bool                           bHidePawn                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void AFlashBangCaptureActor::CaptureINIT(bool bDoDelay, float CaptureDelay, class APawn* PlayerRef, class UTextureRenderTarget2D* RenderTexture, const struct FPostProcessSettings& PP_Settings, bool bHidePawn) {
+	void AFlashBangCaptureActor::CaptureINIT(bool bDoDelay, float CaptureDelay, class APawn* PlayerRef, class UTextureRenderTarget2D* RenderTexture, const struct FPostProcessSettings& PP_Settings, bool bHidePawn)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa2490395);
 
@@ -5669,7 +5929,8 @@ namespace Classes {
 	// Parameters:
 	// TArray<class UItem*>           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<class UItem*> UGeneralItemSpawner::CreateItems() {
+	TArray<class UItem*> UGeneralItemSpawner::CreateItems()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xce32ab33);
 
@@ -5691,7 +5952,8 @@ namespace Classes {
 	// Parameters:
 	// TArray<struct FItemInitiator>  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<struct FItemInitiator> UGeneralItemSpawner::CreateItemInitiators() {
+	TArray<struct FItemInitiator> UGeneralItemSpawner::CreateItemInitiators()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x81c3f51a);
 
@@ -5713,7 +5975,8 @@ namespace Classes {
 	// Parameters:
 	// float                          Distance                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UHackReporterComponent::ServerOnWallHackDetected(float Distance) {
+	void UHackReporterComponent::ServerOnWallHackDetected(float Distance)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xfc81b8d0);
 
@@ -5732,7 +5995,8 @@ namespace Classes {
 	// Function TslGame.HighlightSession.MatchEnded
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void UHighlightSession::MatchEnded() {
+	void UHighlightSession::MatchEnded()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xef771261);
 
@@ -5752,7 +6016,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bGroggy                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UHighlightSession::KillOtherPlayer(bool bGroggy) {
+	void UHighlightSession::KillOtherPlayer(bool bGroggy)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf9961905);
 
@@ -5771,7 +6036,8 @@ namespace Classes {
 	// Function TslGame.HighlightSession.FinishRecord
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void UHighlightSession::FinishRecord() {
+	void UHighlightSession::FinishRecord()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x74b361be);
 
@@ -5791,7 +6057,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bGroggy                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UHighlightSession::Die(bool bGroggy) {
+	void UHighlightSession::Die(bool bGroggy)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf7ccc0c6);
 
@@ -5812,7 +6079,8 @@ namespace Classes {
 	// Parameters:
 	// struct FText                   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
-	struct FText UInteractionInterface::GetInteractiveObjectName() {
+	struct FText UInteractionInterface::GetInteractiveObjectName()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x11e7456f);
 
@@ -5834,7 +6102,8 @@ namespace Classes {
 	// Parameters:
 	// struct FText                   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
-	struct FText UInteractionInterface::GetInteractionVerb() {
+	struct FText UInteractionInterface::GetInteractionVerb()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3ac97e8);
 
@@ -5857,7 +6126,8 @@ namespace Classes {
 	// class ATslCharacter*           Character                      (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UInteractionInterface::AllowInteractBy(class ATslCharacter* Character) {
+	bool UInteractionInterface::AllowInteractBy(class ATslCharacter* Character)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9785355b);
 
@@ -5880,7 +6150,8 @@ namespace Classes {
 	// Parameters:
 	// struct FText                   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
-	struct FText UInteractionComponent::GetInteractiveObjectName() {
+	struct FText UInteractionComponent::GetInteractiveObjectName()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9ddde447);
 
@@ -5902,7 +6173,8 @@ namespace Classes {
 	// Parameters:
 	// struct FText                   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
-	struct FText UInteractionComponent::GetInteractionVerb() {
+	struct FText UInteractionComponent::GetInteractionVerb()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3f1424e0);
 
@@ -5925,7 +6197,8 @@ namespace Classes {
 	// class ATslCharacter*           Character                      (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UInteractionComponent::AllowInteractBy(class ATslCharacter* Character) {
+	bool UInteractionComponent::AllowInteractBy(class ATslCharacter* Character)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7eba6c13);
 
@@ -5948,7 +6221,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslCharacter*           OtherCharacter                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UDroppedItemActorComponent::OnInteractDelegate(class ATslCharacter* OtherCharacter) {
+	void UDroppedItemActorComponent::OnInteractDelegate(class ATslCharacter* OtherCharacter)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x36216915);
 
@@ -5970,7 +6244,8 @@ namespace Classes {
 	// class ATslCharacter*           OtherCharacter                 (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UDroppedItemActorComponent::AllowInteractDelegate(class ATslCharacter* OtherCharacter) {
+	bool UDroppedItemActorComponent::AllowInteractDelegate(class ATslCharacter* OtherCharacter)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xecdb3997);
 
@@ -5994,7 +6269,8 @@ namespace Classes {
 	// struct FName                   WeaponTag                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// TEnumAsByte<EWeaponAttachmentSlotID> ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	TEnumAsByte<EWeaponAttachmentSlotID> UAttachableItem::GetAttachmentSlotID(const struct FName& WeaponTag) {
+	TEnumAsByte<EWeaponAttachmentSlotID> UAttachableItem::GetAttachmentSlotID(const struct FName& WeaponTag)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb1cf4ffe);
 
@@ -6018,7 +6294,8 @@ namespace Classes {
 	// struct FName                   WeaponTag                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FWeaponAttachmentData   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
-	struct FWeaponAttachmentData UAttachableItem::GetAttachmentData(const struct FName& WeaponTag) {
+	struct FWeaponAttachmentData UAttachableItem::GetAttachmentData(const struct FName& WeaponTag)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1865ed9);
 
@@ -6041,7 +6318,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslCharacter*           Character                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UEquipableItem::UnequipBy(class ATslCharacter* Character) {
+	void UEquipableItem::UnequipBy(class ATslCharacter* Character)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa5edcc1d);
 
@@ -6064,7 +6342,8 @@ namespace Classes {
 	// struct FEquipPosition          Position                       (CPF_Parm)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UEquipableItem::EquipBy(class ATslCharacter* Character, const struct FEquipPosition& Position) {
+	bool UEquipableItem::EquipBy(class ATslCharacter* Character, const struct FEquipPosition& Position)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6f7b5ffe);
 
@@ -6089,7 +6368,8 @@ namespace Classes {
 	// class ATslCharacter*           Character                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UEquipableItem::CanEquipTo(class ATslCharacter* Character) {
+	bool UEquipableItem::CanEquipTo(class ATslCharacter* Character)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xba185d2e);
 
@@ -6112,7 +6392,8 @@ namespace Classes {
 	// Parameters:
 	// struct FTransform              ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FTransform UCustomEquipableItem::GetOffset_Thrown() {
+	struct FTransform UCustomEquipableItem::GetOffset_Thrown()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf99cd628);
 
@@ -6134,7 +6415,8 @@ namespace Classes {
 	// Parameters:
 	// struct FTransform              ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FTransform UCustomEquipableItem::GetOffset_SideArm() {
+	struct FTransform UCustomEquipableItem::GetOffset_SideArm()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x22b935cf);
 
@@ -6156,7 +6438,8 @@ namespace Classes {
 	// Parameters:
 	// struct FTransform              ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FTransform UCustomEquipableItem::GetOffset_Secondary() {
+	struct FTransform UCustomEquipableItem::GetOffset_Secondary()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xcd9f53d8);
 
@@ -6178,7 +6461,8 @@ namespace Classes {
 	// Parameters:
 	// struct FTransform              ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FTransform UCustomEquipableItem::GetOffset_Primary() {
+	struct FTransform UCustomEquipableItem::GetOffset_Primary()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4806db28);
 
@@ -6200,7 +6484,8 @@ namespace Classes {
 	// Parameters:
 	// struct FTransform              ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FTransform UCustomEquipableItem::GetOffset_Melee() {
+	struct FTransform UCustomEquipableItem::GetOffset_Melee()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x428425fa);
 
@@ -6222,7 +6507,8 @@ namespace Classes {
 	// Parameters:
 	// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	int UCustomEquipableItem::GetItemLevel() {
+	int UCustomEquipableItem::GetItemLevel()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xfc6d1a6b);
 
@@ -6244,7 +6530,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslWeapon*              ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslWeapon* UThrowableItem::GetEquippedWeapon() {
+	class ATslWeapon* UThrowableItem::GetEquippedWeapon()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6fd771a2);
 
@@ -6266,7 +6553,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslWeapon*              ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslWeapon* UThrowableItem::GetDefaultWeaponObject() {
+	class ATslWeapon* UThrowableItem::GetDefaultWeaponObject()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4b7052f5);
 
@@ -6286,7 +6574,8 @@ namespace Classes {
 	// Function TslGame.TslWeapon.Weapon_AttachShoulder
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ATslWeapon::Weapon_AttachShoulder() {
+	void ATslWeapon::Weapon_AttachShoulder()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc6757b9d);
 
@@ -6304,7 +6593,8 @@ namespace Classes {
 	// Function TslGame.TslWeapon.Weapon_AttachHand
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ATslWeapon::Weapon_AttachHand() {
+	void ATslWeapon::Weapon_AttachHand()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x44e2d1f6);
 
@@ -6325,7 +6615,8 @@ namespace Classes {
 	// struct FHitResult              Impact                         (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
 	// struct FVector                 ShotDirection                  (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-	void ATslWeapon::SimulatePhysicalBodyHit(const struct FHitResult& Impact, const struct FVector& ShotDirection) {
+	void ATslWeapon::SimulatePhysicalBodyHit(const struct FHitResult& Impact, const struct FVector& ShotDirection)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x43fd43f5);
 
@@ -6347,7 +6638,8 @@ namespace Classes {
 	// Parameters:
 	// float                          newZero                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslWeapon::SetCurrentWeaponZero(float newZero) {
+	void ATslWeapon::SetCurrentWeaponZero(float newZero)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd2ffd0be);
 
@@ -6368,7 +6660,8 @@ namespace Classes {
 	// Parameters:
 	// struct FAttackId               AttackId                       (CPF_Parm)
 
-	void ATslWeapon::ServerLogFireWeapon(const struct FAttackId& AttackId) {
+	void ATslWeapon::ServerLogFireWeapon(const struct FAttackId& AttackId)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x74ecf308);
 
@@ -6387,7 +6680,8 @@ namespace Classes {
 	// Function TslGame.TslWeapon.OnRep_MyPawn
 	// (FUNC_Final, FUNC_Native, FUNC_Protected)
 
-	void ATslWeapon::OnRep_MyPawn() {
+	void ATslWeapon::OnRep_MyPawn()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xbdfc5864);
 
@@ -6405,7 +6699,8 @@ namespace Classes {
 	// Function TslGame.TslWeapon.OnRep_AttachedItemClasses
 	// (FUNC_Native, FUNC_Protected)
 
-	void ATslWeapon::OnRep_AttachedItemClasses() {
+	void ATslWeapon::OnRep_AttachedItemClasses()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf9a82357);
 
@@ -6425,7 +6720,8 @@ namespace Classes {
 	// Parameters:
 	// struct FName                   NotifyName                     (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-	void ATslWeapon::OnAnimationNotify(const struct FName& NotifyName) {
+	void ATslWeapon::OnAnimationNotify(const struct FName& NotifyName)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5adf7bf9);
 
@@ -6446,7 +6742,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslWeapon::IsWeaponAttachedToShoulder() {
+	bool ATslWeapon::IsWeaponAttachedToShoulder()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x21eecbc0);
 
@@ -6469,7 +6766,8 @@ namespace Classes {
 	// TEnumAsByte<EWeaponAttachmentSlotID> SlotID                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslWeapon::IsCustomSightAttached(TEnumAsByte<EWeaponAttachmentSlotID> SlotID) {
+	bool ATslWeapon::IsCustomSightAttached(TEnumAsByte<EWeaponAttachmentSlotID> SlotID)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb42ddcd);
 
@@ -6492,7 +6790,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslWeapon::GetWeaponReadyDuration() {
+	float ATslWeapon::GetWeaponReadyDuration()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x593ecd76);
 
@@ -6514,7 +6813,8 @@ namespace Classes {
 	// Parameters:
 	// class USkeletalMeshComponent*  ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
-	class USkeletalMeshComponent* ATslWeapon::GetWeaponMesh() {
+	class USkeletalMeshComponent* ATslWeapon::GetWeaponMesh()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb01ef3c6);
 
@@ -6536,7 +6836,8 @@ namespace Classes {
 	// Parameters:
 	// TEnumAsByte<EWeaponGripLeftHand> ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	TEnumAsByte<EWeaponGripLeftHand> ATslWeapon::GetWeaponGripTypeLeft() {
+	TEnumAsByte<EWeaponGripLeftHand> ATslWeapon::GetWeaponGripTypeLeft()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xdf0976aa);
 
@@ -6558,7 +6859,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslWeapon::GetWeaponEquipDuration() {
+	float ATslWeapon::GetWeaponEquipDuration()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x8929e88b);
 
@@ -6580,7 +6882,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslWeapon::GetWeaponDamage() {
+	float ATslWeapon::GetWeaponDamage()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc163949a);
 
@@ -6602,7 +6905,8 @@ namespace Classes {
 	// Parameters:
 	// struct FWeaponData             ReturnValue                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_ReferenceParm)
 
-	struct FWeaponData ATslWeapon::GetWeaponConfig() {
+	struct FWeaponData ATslWeapon::GetWeaponConfig()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa7e3ce27);
 
@@ -6624,7 +6928,8 @@ namespace Classes {
 	// Parameters:
 	// TEnumAsByte<EWeaponClass>      ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	TEnumAsByte<EWeaponClass> ATslWeapon::GetWeaponClassEnum() {
+	TEnumAsByte<EWeaponClass> ATslWeapon::GetWeaponClassEnum()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1b8569b4);
 
@@ -6648,7 +6953,8 @@ namespace Classes {
 	// struct FName                   Tag                            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FName                   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FName ATslWeapon::GetWeaponAttachmentPoint(TEnumAsByte<EWeaponAttachmentSlotID> SlotID, const struct FName& Tag) {
+	struct FName ATslWeapon::GetWeaponAttachmentPoint(TEnumAsByte<EWeaponAttachmentSlotID> SlotID, const struct FName& Tag)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4fbf8274);
 
@@ -6673,7 +6979,8 @@ namespace Classes {
 	// TEnumAsByte<EWeaponAttachmentSlotID> SlotID                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FWeaponAttachmentData   ReturnValue                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
-	struct FWeaponAttachmentData ATslWeapon::GetWeaponAttachmentData(TEnumAsByte<EWeaponAttachmentSlotID> SlotID) {
+	struct FWeaponAttachmentData ATslWeapon::GetWeaponAttachmentData(TEnumAsByte<EWeaponAttachmentSlotID> SlotID)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xbecb18ee);
 
@@ -6696,7 +7003,8 @@ namespace Classes {
 	// Parameters:
 	// TArray<struct FWeaponAttachmentAssetData> ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<struct FWeaponAttachmentAssetData> ATslWeapon::GetWeaponAttachmentAssetDatas() {
+	TArray<struct FWeaponAttachmentAssetData> ATslWeapon::GetWeaponAttachmentAssetDatas()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4ce89a15);
 
@@ -6719,7 +7027,8 @@ namespace Classes {
 	// TEnumAsByte<EWeaponAttachmentSlotID> SlotID                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FWeaponAttachmentAssetData ReturnValue                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
-	struct FWeaponAttachmentAssetData ATslWeapon::GetWeaponAttachmentAsset(TEnumAsByte<EWeaponAttachmentSlotID> SlotID) {
+	struct FWeaponAttachmentAssetData ATslWeapon::GetWeaponAttachmentAsset(TEnumAsByte<EWeaponAttachmentSlotID> SlotID)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xaf6a7a9a);
 
@@ -6742,7 +7051,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslWeapon::GetWeaponAnimationKick() {
+	float ATslWeapon::GetWeaponAnimationKick()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xddf9f10f);
 
@@ -6764,7 +7074,8 @@ namespace Classes {
 	// Parameters:
 	// TEnumAsByte<EThrownWeaponType> ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	TEnumAsByte<EThrownWeaponType> ATslWeapon::GetThrownType() {
+	TEnumAsByte<EThrownWeaponType> ATslWeapon::GetThrownType()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9224157f);
 
@@ -6786,7 +7097,8 @@ namespace Classes {
 	// Parameters:
 	// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FVector ATslWeapon::GetSwayModifier() {
+	struct FVector ATslWeapon::GetSwayModifier()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa47d3f26);
 
@@ -6809,7 +7121,8 @@ namespace Classes {
 	// TEnumAsByte<EAnimStance>       Stance                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslWeapon::GetStanceSwayModifier(TEnumAsByte<EAnimStance> Stance) {
+	float ATslWeapon::GetStanceSwayModifier(TEnumAsByte<EAnimStance> Stance)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xaeca908a);
 
@@ -6832,7 +7145,8 @@ namespace Classes {
 	// Parameters:
 	// class UAnimMontage*            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UAnimMontage* ATslWeapon::GetRecoilMontage() {
+	class UAnimMontage* ATslWeapon::GetRecoilMontage()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x21646bd2);
 
@@ -6854,7 +7168,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslCharacter*           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslCharacter* ATslWeapon::GetPawnOwner() {
+	class ATslCharacter* ATslWeapon::GetPawnOwner()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5225739c);
 
@@ -6876,7 +7191,8 @@ namespace Classes {
 	// Parameters:
 	// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FVector ATslWeapon::GetLowerRailOffset() {
+	struct FVector ATslWeapon::GetLowerRailOffset()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xffdbcc5d);
 
@@ -6898,7 +7214,8 @@ namespace Classes {
 	// Parameters:
 	// struct FText                   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
-	struct FText ATslWeapon::GetItemName() {
+	struct FText ATslWeapon::GetItemName()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x76b190f1);
 
@@ -6920,7 +7237,8 @@ namespace Classes {
 	// Parameters:
 	// class USceneComponent*         ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
-	class USceneComponent* ATslWeapon::GetHandIK_Right() {
+	class USceneComponent* ATslWeapon::GetHandIK_Right()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x32619259);
 
@@ -6942,7 +7260,8 @@ namespace Classes {
 	// Parameters:
 	// class USceneComponent*         ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
-	class USceneComponent* ATslWeapon::GetHandIK_Left() {
+	class USceneComponent* ATslWeapon::GetHandIK_Left()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x63bdc98a);
 
@@ -6964,7 +7283,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslWeapon::GetDoGripPose() {
+	bool ATslWeapon::GetDoGripPose()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x38244bb1);
 
@@ -6986,7 +7306,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslWeapon::GetCurrentWeaponZero() {
+	float ATslWeapon::GetCurrentWeaponZero()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xfafae6c2);
 
@@ -7008,7 +7329,8 @@ namespace Classes {
 	// Parameters:
 	// TArray<class UAsyncStaticMeshComponent*> ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<class UAsyncStaticMeshComponent*> ATslWeapon::GetAttachedMesh() {
+	TArray<class UAsyncStaticMeshComponent*> ATslWeapon::GetAttachedMesh()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7f41580a);
 
@@ -7030,7 +7352,8 @@ namespace Classes {
 	// Parameters:
 	// TEnumAsByte<EAnimWeaponType>   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	TEnumAsByte<EAnimWeaponType> ATslWeapon::GetAnimWeaponType() {
+	TEnumAsByte<EAnimWeaponType> ATslWeapon::GetAnimWeaponType()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf49ab1c2);
 
@@ -7052,7 +7375,8 @@ namespace Classes {
 	// Parameters:
 	// TArray<struct FWeaponAttachmentData> ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<struct FWeaponAttachmentData> ATslWeapon::GetAllWeaponAttachmentData() {
+	TArray<struct FWeaponAttachmentData> ATslWeapon::GetAllWeaponAttachmentData()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xbfe85e5d);
 
@@ -7074,7 +7398,8 @@ namespace Classes {
 	// Parameters:
 	// TArray<struct FWeaponAttachmentAssetData> ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<struct FWeaponAttachmentAssetData> ATslWeapon::GetAllWeaponAttachmentAssets() {
+	TArray<struct FWeaponAttachmentAssetData> ATslWeapon::GetAllWeaponAttachmentAssets()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5944d552);
 
@@ -7096,7 +7421,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bIsArmed                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslWeapon::ClientInitByReconnection(bool bIsArmed) {
+	void ATslWeapon::ClientInitByReconnection(bool bIsArmed)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xdd76bc34);
 
@@ -7117,7 +7443,8 @@ namespace Classes {
 	// Parameters:
 	// int                            SlotIndex                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslWeapon::AttachWeaponToSlot(int SlotIndex) {
+	void ATslWeapon::AttachWeaponToSlot(int SlotIndex)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x97208577);
 
@@ -7136,7 +7463,8 @@ namespace Classes {
 	// Function TslGame.TslWeapon.AttachWeaponToMesh
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ATslWeapon::AttachWeaponToMesh() {
+	void ATslWeapon::AttachWeaponToMesh()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x67c8c6c0);
 
@@ -7156,7 +7484,8 @@ namespace Classes {
 	// Parameters:
 	// TEnumAsByte<EFiringMode>       fMode                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UWeaponItem::SetFiringMode(TEnumAsByte<EFiringMode> fMode) {
+	void UWeaponItem::SetFiringMode(TEnumAsByte<EFiringMode> fMode)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1d2009a9);
 
@@ -7178,7 +7507,8 @@ namespace Classes {
 	// class UAttachableItem*         Item                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UWeaponItem::IsAttachable(class UAttachableItem* Item) {
+	bool UWeaponItem::IsAttachable(class UAttachableItem* Item)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe4a5c72c);
 
@@ -7202,7 +7532,8 @@ namespace Classes {
 	// TEnumAsByte<EWeaponAttachmentSlotID> SlotID                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UWeaponItem::HasAttachmentSlot(TEnumAsByte<EWeaponAttachmentSlotID> SlotID) {
+	bool UWeaponItem::HasAttachmentSlot(TEnumAsByte<EWeaponAttachmentSlotID> SlotID)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3da19de6);
 
@@ -7225,7 +7556,8 @@ namespace Classes {
 	// Parameters:
 	// TEnumAsByte<EFiringMode>       ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	TEnumAsByte<EFiringMode> UWeaponItem::GetFiringMode() {
+	TEnumAsByte<EFiringMode> UWeaponItem::GetFiringMode()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x51a43b2d);
 
@@ -7247,7 +7579,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslWeapon*              ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslWeapon* UWeaponItem::GetEquippedWeapon() {
+	class ATslWeapon* UWeaponItem::GetEquippedWeapon()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5ef20aae);
 
@@ -7269,7 +7602,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslWeapon*              ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslWeapon* UWeaponItem::GetDefaultWeaponObject() {
+	class ATslWeapon* UWeaponItem::GetDefaultWeaponObject()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x922cae81);
 
@@ -7292,7 +7626,8 @@ namespace Classes {
 	// TEnumAsByte<EWeaponAttachmentSlotID> SlotID                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class UAttachableItem*         ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UAttachableItem* UWeaponItem::GetAttachedItem(TEnumAsByte<EWeaponAttachmentSlotID> SlotID) {
+	class UAttachableItem* UWeaponItem::GetAttachedItem(TEnumAsByte<EWeaponAttachmentSlotID> SlotID)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xdd94a804);
 
@@ -7315,7 +7650,8 @@ namespace Classes {
 	// Parameters:
 	// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	int UWeaponItem::GetAttachableItemCount() {
+	int UWeaponItem::GetAttachableItemCount()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x61bcdff4);
 
@@ -7337,7 +7673,8 @@ namespace Classes {
 	// Parameters:
 	// TArray<class UAttachableItem*> ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<class UAttachableItem*> UWeaponItem::GetAllAttachedItems() {
+	TArray<class UAttachableItem*> UWeaponItem::GetAllAttachedItems()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x71664c5a);
 
@@ -7360,7 +7697,8 @@ namespace Classes {
 	// TEnumAsByte<EWeaponAttachmentSlotID> SlotID                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class UAttachableItem*         ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UAttachableItem* UWeaponItem::DetachItem(TEnumAsByte<EWeaponAttachmentSlotID> SlotID) {
+	class UAttachableItem* UWeaponItem::DetachItem(TEnumAsByte<EWeaponAttachmentSlotID> SlotID)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xac4831d3);
 
@@ -7384,7 +7722,8 @@ namespace Classes {
 	// class UAttachableItem*         Item                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UWeaponItem::AttachItem(class UAttachableItem* Item) {
+	bool UWeaponItem::AttachItem(class UAttachableItem* Item)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x79800b29);
 
@@ -7407,7 +7746,8 @@ namespace Classes {
 	// Parameters:
 	// class UItemSpotGroupComponent* Spawner                        (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
-	void UItemSpawnProcessor::ProcessSpawnItem(class UItemSpotGroupComponent* Spawner) {
+	void UItemSpawnProcessor::ProcessSpawnItem(class UItemSpotGroupComponent* Spawner)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1fb8ba83);
 
@@ -7429,7 +7769,8 @@ namespace Classes {
 	// class UItemSpotGroupComponent* SpotGroup                      (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 	// TArray<class UItemSpotComponent*> Spots                          (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
 
-	void UItemSpawnProcessor::ProcessGroup(class UItemSpotGroupComponent* SpotGroup, TArray<class UItemSpotComponent*> Spots) {
+	void UItemSpawnProcessor::ProcessGroup(class UItemSpotGroupComponent* SpotGroup, TArray<class UItemSpotComponent*> Spots)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb5012232);
 
@@ -7452,7 +7793,8 @@ namespace Classes {
 	// class UItemSpotGroupComponent* SpotGroup                      (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UItemSpawnProcessor::CheckItemGroup(class UItemSpotGroupComponent* SpotGroup) {
+	bool UItemSpawnProcessor::CheckItemGroup(class UItemSpotGroupComponent* SpotGroup)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa1555ea0);
 
@@ -7475,7 +7817,8 @@ namespace Classes {
 	// Parameters:
 	// class UMeshComponent*          Mesh                           (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
-	void AItemStudio::UpdateComponentToWorld(class UMeshComponent* Mesh) {
+	void AItemStudio::UpdateComponentToWorld(class UMeshComponent* Mesh)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3172c98c);
 
@@ -7496,7 +7839,8 @@ namespace Classes {
 	// Parameters:
 	// class UTextureRenderTarget2D*  NewTextureTarget               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void AItemStudio::SetTextureRenderTarget(class UTextureRenderTarget2D* NewTextureTarget) {
+	void AItemStudio::SetTextureRenderTarget(class UTextureRenderTarget2D* NewTextureTarget)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb10e692b);
 
@@ -7517,7 +7861,8 @@ namespace Classes {
 	// Parameters:
 	// class UItem*                   Item                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void AItemStudio::SetItem(class UItem* Item) {
+	void AItemStudio::SetItem(class UItem* Item)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6c706cee);
 
@@ -7538,7 +7883,8 @@ namespace Classes {
 	// Parameters:
 	// float                          Value                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void AItemStudio::AddYaw(float Value) {
+	void AItemStudio::AddYaw(float Value)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5e25490b);
 
@@ -7560,7 +7906,8 @@ namespace Classes {
 	// class UEquipableItem*          EquipableItem                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class UEquipableItem*          EquipmentSlotItem              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UItemToolTipWidget::UpdateVicinityOrInventorySlotItemToolTip(class UEquipableItem* EquipableItem, class UEquipableItem* EquipmentSlotItem) {
+	void UItemToolTipWidget::UpdateVicinityOrInventorySlotItemToolTip(class UEquipableItem* EquipableItem, class UEquipableItem* EquipmentSlotItem)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1a054689);
 
@@ -7582,7 +7929,8 @@ namespace Classes {
 	// TScriptInterface<class USlotInterface> SlotInterface                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// TScriptInterface<class USlotContainerInterface> Container                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UItemToolTipWidget::UpdateToolTipBySlotInterface(const TScriptInterface<class USlotInterface>& SlotInterface, const TScriptInterface<class USlotContainerInterface>& Container) {
+	void UItemToolTipWidget::UpdateToolTipBySlotInterface(const TScriptInterface<class USlotInterface>& SlotInterface, const TScriptInterface<class USlotContainerInterface>& Container)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x389d2412);
 
@@ -7604,7 +7952,8 @@ namespace Classes {
 	// Parameters:
 	// TScriptInterface<class USlotInterface> SlotInterface                  (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-	void UItemToolTipWidget::UpdateSlotInfo(const TScriptInterface<class USlotInterface>& SlotInterface) {
+	void UItemToolTipWidget::UpdateSlotInfo(const TScriptInterface<class USlotInterface>& SlotInterface)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5dd4e741);
 
@@ -7624,7 +7973,8 @@ namespace Classes {
 	// Parameters:
 	// class UEquipableItem*          EquipableItem                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UItemToolTipWidget::UpdateEquipmentSlotItemToolTip(class UEquipableItem* EquipableItem) {
+	void UItemToolTipWidget::UpdateEquipmentSlotItemToolTip(class UEquipableItem* EquipableItem)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xda76e7eb);
 
@@ -7645,7 +7995,8 @@ namespace Classes {
 	// struct FName                   NewState                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FName                   OldState                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ULobbyWidget::GameStateChanging(const struct FName& NewState, const struct FName& OldState) {
+	void ULobbyWidget::GameStateChanging(const struct FName& NewState, const struct FName& OldState)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe65c08b4);
 
@@ -7664,7 +8015,8 @@ namespace Classes {
 	// Function TslGame.MatchPreparer.TimerGameStartCountDown
 	// (FUNC_Native, FUNC_Protected)
 
-	void UMatchPreparer::TimerGameStartCountDown() {
+	void UMatchPreparer::TimerGameStartCountDown()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe0ffb9fa);
 
@@ -7682,7 +8034,8 @@ namespace Classes {
 	// Function TslGame.AirborneMatchPreparer.AllowDealDamage
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void UAirborneMatchPreparer::AllowDealDamage() {
+	void UAirborneMatchPreparer::AllowDealDamage()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9230f146);
 
@@ -7704,7 +8057,8 @@ namespace Classes {
 	// struct FText                   Message                        (CPF_Parm)
 	// float                          MessageDuration                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void AModeController::SendSystemMessageToAll(TEnumAsByte<ESystemMessageType> MessageType, const struct FText& Message, float MessageDuration) {
+	void AModeController::SendSystemMessageToAll(TEnumAsByte<ESystemMessageType> MessageType, const struct FText& Message, float MessageDuration)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5d9507d9);
 
@@ -7727,7 +8081,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool AModeController::IsPlayInEditor() {
+	bool AModeController::IsPlayInEditor()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xdbfd1aef);
 
@@ -7750,7 +8105,8 @@ namespace Classes {
 	// struct FString                 AdminCommand                   (CPF_Parm, CPF_ZeroConstructor)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool AModeController::HandleServerAdminBlueprint(const struct FString& AdminCommand) {
+	bool AModeController::HandleServerAdminBlueprint(const struct FString& AdminCommand)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1d194d82);
 
@@ -7772,7 +8128,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslGameState*           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslGameState* AModeController::GetGameState() {
+	class ATslGameState* AModeController::GetGameState()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe74192a6);
 
@@ -7794,7 +8151,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslGameMode*            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslGameMode* AModeController::GetGameMode() {
+	class ATslGameMode* AModeController::GetGameMode()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe5635baa);
 
@@ -7818,7 +8176,8 @@ namespace Classes {
 	// class ATslPlayerState*         DamagedPlayer                  (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool AModeController::CanDealDamage(class ATslPlayerState* DamageInstigator, class ATslPlayerState* DamagedPlayer) {
+	bool AModeController::CanDealDamage(class ATslPlayerState* DamageInstigator, class ATslPlayerState* DamagedPlayer)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x241b74d6);
 
@@ -7842,7 +8201,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ABattleRoyaleModeController::SetNextGasInBlackboard() {
+	bool ABattleRoyaleModeController::SetNextGasInBlackboard()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe820bbbf);
 
@@ -7862,7 +8222,8 @@ namespace Classes {
 	// Function TslGame.BattleRoyaleModeController.InitRadius
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ABattleRoyaleModeController::InitRadius() {
+	void ABattleRoyaleModeController::InitRadius()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3cca54b7);
 
@@ -7885,7 +8246,8 @@ namespace Classes {
 	// float                          PoisonGasWarningRadius         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ABattleRoyaleModeController::GetPoisonGasDamagePerSecond(float CharaterToCenterDistance, float SafetyZoneRadius, float PoisonGasWarningRadius) {
+	float ABattleRoyaleModeController::GetPoisonGasDamagePerSecond(float CharaterToCenterDistance, float SafetyZoneRadius, float PoisonGasWarningRadius)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xcb66d12c);
 
@@ -7910,7 +8272,8 @@ namespace Classes {
 	// Parameters:
 	// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	int ABattleRoyaleModeController::GetMaxPhaseCount() {
+	int ABattleRoyaleModeController::GetMaxPhaseCount()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xda82abff);
 
@@ -7933,7 +8296,8 @@ namespace Classes {
 	// bool                           CopyIntersectionInfo           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FVector ACarePackageController::SpawnAircraftCarePackage(bool CopyIntersectionInfo) {
+	struct FVector ACarePackageController::SpawnAircraftCarePackage(bool CopyIntersectionInfo)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x88b1523);
 
@@ -7956,7 +8320,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ACarePackageController::SetNextCarePackageInBlackboard() {
+	bool ACarePackageController::SetNextCarePackageInBlackboard()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb13e571d);
 
@@ -7976,7 +8341,8 @@ namespace Classes {
 	// Function TslGame.CarePackageController.InitCarePackageSetting
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ACarePackageController::InitCarePackageSetting() {
+	void ACarePackageController::InitCarePackageSetting()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa751d1c6);
 
@@ -7996,7 +8362,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ACarePackageController::GetSpawnInterval() {
+	float ACarePackageController::GetSpawnInterval()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc56dce49);
 
@@ -8016,7 +8383,8 @@ namespace Classes {
 	// Function TslGame.RedZoneController.SpawnBombProjectile
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ARedZoneController::SpawnBombProjectile() {
+	void ARedZoneController::SpawnBombProjectile()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc5f69993);
 
@@ -8036,7 +8404,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ARedZoneController::SetNextRedZoneInBlackboard() {
+	bool ARedZoneController::SetNextRedZoneInBlackboard()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x605c5549);
 
@@ -8056,7 +8425,8 @@ namespace Classes {
 	// Function TslGame.RedZoneController.InitRedZoneSetting
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ARedZoneController::InitRedZoneSetting() {
+	void ARedZoneController::InitRedZoneSetting()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2c54af2a);
 
@@ -8076,7 +8446,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ARedZoneController::GetRandomBombingInterval() {
+	float ARedZoneController::GetRandomBombingInterval()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x475ac125);
 
@@ -8096,7 +8467,8 @@ namespace Classes {
 	// Function TslGame.MutableCharacter.UpdateAppearence
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void AMutableCharacter::UpdateAppearence() {
+	void AMutableCharacter::UpdateAppearence()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x903fda0);
 
@@ -8114,7 +8486,8 @@ namespace Classes {
 	// Function TslGame.MutableCharacter.OnRep_InstanceDescriptor
 	// (FUNC_Final, FUNC_Native, FUNC_Protected)
 
-	void AMutableCharacter::OnRep_InstanceDescriptor() {
+	void AMutableCharacter::OnRep_InstanceDescriptor()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3f8782dc);
 
@@ -8134,7 +8507,8 @@ namespace Classes {
 	// Parameters:
 	// TEnumAsByte<EGender>           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	TEnumAsByte<EGender> AMutableCharacter::GetGender() {
+	TEnumAsByte<EGender> AMutableCharacter::GetGender()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x98d142d4);
 
@@ -8156,7 +8530,8 @@ namespace Classes {
 	// Parameters:
 	// struct FString                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	struct FString ALobbyCharacter::GetNickName() {
+	struct FString ALobbyCharacter::GetNickName()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xab1a2ab1);
 
@@ -8178,7 +8553,8 @@ namespace Classes {
 	// Parameters:
 	// struct FString                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	struct FString ALobbyCharacter::GetNetId() {
+	struct FString ALobbyCharacter::GetNetId()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x45f55269);
 
@@ -8200,7 +8576,8 @@ namespace Classes {
 	// Parameters:
 	// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FVector ATslVaultingHelper::GetActorAttachScene() {
+	struct FVector ATslVaultingHelper::GetActorAttachScene()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xcb3d95f5);
 
@@ -8222,7 +8599,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslWeapon_Gun::WeaponCycleDone() {
+	bool ATslWeapon_Gun::WeaponCycleDone()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5a6fa514);
 
@@ -8242,7 +8620,8 @@ namespace Classes {
 	// Function TslGame.TslWeapon_Gun.StopReloadAnimByOne
 	// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_NetMulticast, FUNC_Protected)
 
-	void ATslWeapon_Gun::StopReloadAnimByOne() {
+	void ATslWeapon_Gun::StopReloadAnimByOne()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1e03a107);
 
@@ -8260,7 +8639,8 @@ namespace Classes {
 	// Function TslGame.TslWeapon_Gun.StartManualFireCycle
 	// (FUNC_Final, FUNC_Native, FUNC_Protected)
 
-	void ATslWeapon_Gun::StartManualFireCycle() {
+	void ATslWeapon_Gun::StartManualFireCycle()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd3ae0afa);
 
@@ -8280,7 +8660,8 @@ namespace Classes {
 	// Parameters:
 	// TEnumAsByte<EWeaponReloadAnimExec> ReloadAnimExec                 (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-	void ATslWeapon_Gun::SimulateWeaponReload(TEnumAsByte<EWeaponReloadAnimExec> ReloadAnimExec) {
+	void ATslWeapon_Gun::SimulateWeaponReload(TEnumAsByte<EWeaponReloadAnimExec> ReloadAnimExec)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x217eb623);
 
@@ -8301,7 +8682,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bIsInterrupted                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslWeapon_Gun::SetWeaponReloadInterrupted(bool bIsInterrupted) {
+	void ATslWeapon_Gun::SetWeaponReloadInterrupted(bool bIsInterrupted)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6657dbd9);
 
@@ -8322,7 +8704,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           DoSpawnBulletFromBarrel        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslWeapon_Gun::SetSpawnBulletFromBarrel(bool DoSpawnBulletFromBarrel) {
+	void ATslWeapon_Gun::SetSpawnBulletFromBarrel(bool DoSpawnBulletFromBarrel)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x221334c3);
 
@@ -8343,7 +8726,8 @@ namespace Classes {
 	// Parameters:
 	// TEnumAsByte<EFiringMode>       FiringMode                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslWeapon_Gun::SetFiringMode(TEnumAsByte<EFiringMode> FiringMode) {
+	void ATslWeapon_Gun::SetFiringMode(TEnumAsByte<EFiringMode> FiringMode)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc94dbc8a);
 
@@ -8362,7 +8746,8 @@ namespace Classes {
 	// Function TslGame.TslWeapon_Gun.ServerStopReload
 	// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Protected, FUNC_NetServer, FUNC_NetValidate)
 
-	void ATslWeapon_Gun::ServerStopReload() {
+	void ATslWeapon_Gun::ServerStopReload()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1e848bd4);
 
@@ -8380,7 +8765,8 @@ namespace Classes {
 	// Function TslGame.TslWeapon_Gun.ServerStopFire
 	// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Protected, FUNC_NetServer, FUNC_NetValidate)
 
-	void ATslWeapon_Gun::ServerStopFire() {
+	void ATslWeapon_Gun::ServerStopFire()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4934f34b);
 
@@ -8398,7 +8784,8 @@ namespace Classes {
 	// Function TslGame.TslWeapon_Gun.ServerStartReload
 	// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Protected, FUNC_NetServer, FUNC_NetValidate)
 
-	void ATslWeapon_Gun::ServerStartReload() {
+	void ATslWeapon_Gun::ServerStartReload()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe471abb2);
 
@@ -8416,7 +8803,8 @@ namespace Classes {
 	// Function TslGame.TslWeapon_Gun.ServerStartFire
 	// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Protected, FUNC_NetServer, FUNC_NetValidate)
 
-	void ATslWeapon_Gun::ServerStartFire() {
+	void ATslWeapon_Gun::ServerStartFire()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9bc9fd81);
 
@@ -8436,7 +8824,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bNewIsHipped                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslWeapon_Gun::ServerSetHip(bool bNewIsHipped) {
+	void ATslWeapon_Gun::ServerSetHip(bool bNewIsHipped)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x61ee2768);
 
@@ -8457,7 +8846,8 @@ namespace Classes {
 	// Parameters:
 	// struct FHitResult              ExceptTrajectoryHitResult      (CPF_ConstParm, CPF_Parm, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-	void ATslWeapon_Gun::ServerHandleFiring(const struct FHitResult& ExceptTrajectoryHitResult) {
+	void ATslWeapon_Gun::ServerHandleFiring(const struct FHitResult& ExceptTrajectoryHitResult)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x8bf46108);
 
@@ -8476,7 +8866,8 @@ namespace Classes {
 	// Function TslGame.TslWeapon_Gun.ServerCancelReload
 	// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Public, FUNC_NetServer, FUNC_NetValidate)
 
-	void ATslWeapon_Gun::ServerCancelReload() {
+	void ATslWeapon_Gun::ServerCancelReload()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x308ef0b6);
 
@@ -8494,7 +8885,8 @@ namespace Classes {
 	// Function TslGame.TslWeapon_Gun.Server_StartManualFireCycle
 	// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Protected, FUNC_NetServer, FUNC_NetValidate)
 
-	void ATslWeapon_Gun::Server_StartManualFireCycle() {
+	void ATslWeapon_Gun::Server_StartManualFireCycle()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xdc949f4e);
 
@@ -8512,7 +8904,8 @@ namespace Classes {
 	// Function TslGame.TslWeapon_Gun.ProcessBoltAction
 	// (FUNC_Final, FUNC_Native, FUNC_Protected)
 
-	void ATslWeapon_Gun::ProcessBoltAction() {
+	void ATslWeapon_Gun::ProcessBoltAction()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x483136);
 
@@ -8530,7 +8923,8 @@ namespace Classes {
 	// Function TslGame.TslWeapon_Gun.PlayWeaponCycleCameraAnim
 	// (FUNC_Final, FUNC_Native, FUNC_Protected)
 
-	void ATslWeapon_Gun::PlayWeaponCycleCameraAnim() {
+	void ATslWeapon_Gun::PlayWeaponCycleCameraAnim()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf66772a8);
 
@@ -8548,7 +8942,8 @@ namespace Classes {
 	// Function TslGame.TslWeapon_Gun.PlayLongTailSound
 	// (FUNC_Final, FUNC_Native, FUNC_Protected)
 
-	void ATslWeapon_Gun::PlayLongTailSound() {
+	void ATslWeapon_Gun::PlayLongTailSound()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x799e3579);
 
@@ -8568,7 +8963,8 @@ namespace Classes {
 	// Parameters:
 	// float                          LastTimeBetweenShots           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslWeapon_Gun::OnRep_TimeBetweenShots(float LastTimeBetweenShots) {
+	void ATslWeapon_Gun::OnRep_TimeBetweenShots(float LastTimeBetweenShots)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1f771fb1);
 
@@ -8587,7 +8983,8 @@ namespace Classes {
 	// Function TslGame.TslWeapon_Gun.OnRep_AttachedItemClasses
 	// (FUNC_Native, FUNC_Protected)
 
-	void ATslWeapon_Gun::OnRep_AttachedItemClasses() {
+	void ATslWeapon_Gun::OnRep_AttachedItemClasses()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe0cb95ac);
 
@@ -8607,7 +9004,8 @@ namespace Classes {
 	// Parameters:
 	// int                            LastCurrentAmmoInClip          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslWeapon_Gun::OnRep_AmmoCount(int LastCurrentAmmoInClip) {
+	void ATslWeapon_Gun::OnRep_AmmoCount(int LastCurrentAmmoInClip)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x761b8528);
 
@@ -8626,7 +9024,8 @@ namespace Classes {
 	// Function TslGame.TslWeapon_Gun.OnAttachmentScopeLoaded
 	// (FUNC_Final, FUNC_Native, FUNC_Protected)
 
-	void ATslWeapon_Gun::OnAttachmentScopeLoaded() {
+	void ATslWeapon_Gun::OnAttachmentScopeLoaded()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd1a7f881);
 
@@ -8646,7 +9045,8 @@ namespace Classes {
 	// Parameters:
 	// struct FName                   NotifyName                     (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-	void ATslWeapon_Gun::OnAnimationNotify(const struct FName& NotifyName) {
+	void ATslWeapon_Gun::OnAnimationNotify(const struct FName& NotifyName)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf34798fa);
 
@@ -8665,7 +9065,8 @@ namespace Classes {
 	// Function TslGame.TslWeapon_Gun.ManualFireCycleFinished
 	// (FUNC_Final, FUNC_Native, FUNC_Protected)
 
-	void ATslWeapon_Gun::ManualFireCycleFinished() {
+	void ATslWeapon_Gun::ManualFireCycleFinished()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x38852c88);
 
@@ -8685,7 +9086,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslWeapon_Gun::IsWeaponCycleInProgress() {
+	bool ATslWeapon_Gun::IsWeaponCycleInProgress()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xec5b0658);
 
@@ -8707,7 +9109,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslWeapon_Gun::IsReloadInterrupted() {
+	bool ATslWeapon_Gun::IsReloadInterrupted()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xdf7fc1e5);
 
@@ -8729,7 +9132,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslWeapon_Gun::IsReloading() {
+	bool ATslWeapon_Gun::IsReloading()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x98aa2ce7);
 
@@ -8751,7 +9155,8 @@ namespace Classes {
 	// Parameters:
 	// class UAnimMontage*            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UAnimMontage* ATslWeapon_Gun::GetWeaponTacticalReload() {
+	class UAnimMontage* ATslWeapon_Gun::GetWeaponTacticalReload()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x36f05ee);
 
@@ -8773,7 +9178,8 @@ namespace Classes {
 	// Parameters:
 	// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FVector ATslWeapon_Gun::GetWeaponHandOffsetFPP() {
+	struct FVector ATslWeapon_Gun::GetWeaponHandOffsetFPP()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe1c101b6);
 
@@ -8795,7 +9201,8 @@ namespace Classes {
 	// Parameters:
 	// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FVector ATslWeapon_Gun::GetWeaponHandOffset() {
+	struct FVector ATslWeapon_Gun::GetWeaponHandOffset()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x20aa3b50);
 
@@ -8817,7 +9224,8 @@ namespace Classes {
 	// Parameters:
 	// struct FWeaponGunData          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
-	struct FWeaponGunData ATslWeapon_Gun::GetWeaponGunConfig() {
+	struct FWeaponGunData ATslWeapon_Gun::GetWeaponGunConfig()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf57302ee);
 
@@ -8839,7 +9247,8 @@ namespace Classes {
 	// Parameters:
 	// struct FWeaponGunAnim          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
-	struct FWeaponGunAnim ATslWeapon_Gun::GetWeaponGunAnimConfig() {
+	struct FWeaponGunAnim ATslWeapon_Gun::GetWeaponGunAnimConfig()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xdb2d379);
 
@@ -8861,7 +9270,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslWeapon_Gun::GetWeaponFullReloadTime() {
+	float ATslWeapon_Gun::GetWeaponFullReloadTime()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xeeb9e535);
 
@@ -8883,7 +9293,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslWeapon_Gun::GetWeaponFullRealoadTimeWithAttachments() {
+	float ATslWeapon_Gun::GetWeaponFullRealoadTimeWithAttachments()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc16014de);
 
@@ -8905,7 +9316,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslWeapon_Gun::GetWeaponCurrentRecoilValue() {
+	float ATslWeapon_Gun::GetWeaponCurrentRecoilValue()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6ad67cd6);
 
@@ -8927,7 +9339,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslWeapon_Gun::GetWeaponCurrentDeviationValue() {
+	float ATslWeapon_Gun::GetWeaponCurrentDeviationValue()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xeed3fcd5);
 
@@ -8949,7 +9362,8 @@ namespace Classes {
 	// Parameters:
 	// class UAnimMontage*            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UAnimMontage* ATslWeapon_Gun::GetWeaponChargeReload() {
+	class UAnimMontage* ATslWeapon_Gun::GetWeaponChargeReload()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3544f6e9);
 
@@ -8971,7 +9385,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslWeapon_Gun::GetReloadAnimationPlayRate() {
+	float ATslWeapon_Gun::GetReloadAnimationPlayRate()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9d54e859);
 
@@ -8993,7 +9408,8 @@ namespace Classes {
 	// Parameters:
 	// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FVector ATslWeapon_Gun::GetRecoilADSSocketOffsetScale() {
+	struct FVector ATslWeapon_Gun::GetRecoilADSSocketOffsetScale()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe0ebb9be);
 
@@ -9015,7 +9431,8 @@ namespace Classes {
 	// Parameters:
 	// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	int ATslWeapon_Gun::GetNumOfFiringMode() {
+	int ATslWeapon_Gun::GetNumOfFiringMode()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xfc305cb5);
 
@@ -9037,7 +9454,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslWeapon_Gun::GetMovementModifierScope() {
+	float ATslWeapon_Gun::GetMovementModifierScope()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3da5cec6);
 
@@ -9059,7 +9477,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslWeapon_Gun::GetMovementModifierAim() {
+	float ATslWeapon_Gun::GetMovementModifierAim()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa68c5ef1);
 
@@ -9081,7 +9500,8 @@ namespace Classes {
 	// Parameters:
 	// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	int ATslWeapon_Gun::GetMaxAmmo() {
+	int ATslWeapon_Gun::GetMaxAmmo()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x53a7209a);
 
@@ -9103,7 +9523,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslWeapon_Gun::GetMagOutDuration() {
+	float ATslWeapon_Gun::GetMagOutDuration()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x87d36c59);
 
@@ -9125,7 +9546,8 @@ namespace Classes {
 	// Parameters:
 	// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FVector ATslWeapon_Gun::GetMagDropLinearVelocity() {
+	struct FVector ATslWeapon_Gun::GetMagDropLinearVelocity()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x95a22126);
 
@@ -9147,7 +9569,8 @@ namespace Classes {
 	// Parameters:
 	// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FVector ATslWeapon_Gun::GetMagDropAngularVelocity() {
+	struct FVector ATslWeapon_Gun::GetMagDropAngularVelocity()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3f0b713);
 
@@ -9169,7 +9592,8 @@ namespace Classes {
 	// Parameters:
 	// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	int ATslWeapon_Gun::GetGripTypeIndex() {
+	int ATslWeapon_Gun::GetGripTypeIndex()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb29c52e2);
 
@@ -9191,7 +9615,8 @@ namespace Classes {
 	// Parameters:
 	// TEnumAsByte<EFiringMode>       ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	TEnumAsByte<EFiringMode> ATslWeapon_Gun::GetFiringMode() {
+	TEnumAsByte<EFiringMode> ATslWeapon_Gun::GetFiringMode()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd39664c6);
 
@@ -9213,7 +9638,8 @@ namespace Classes {
 	// Parameters:
 	// class UAmmoItem*               ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UAmmoItem* ATslWeapon_Gun::GetDefaultAmmoObject() {
+	class UAmmoItem* ATslWeapon_Gun::GetDefaultAmmoObject()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x172d33aa);
 
@@ -9235,7 +9661,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslWeapon_Gun::GetCurrentDeviation() {
+	float ATslWeapon_Gun::GetCurrentDeviation()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x31ecbbb2);
 
@@ -9257,7 +9684,8 @@ namespace Classes {
 	// Parameters:
 	// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	int ATslWeapon_Gun::GetCurrentAmmoInInventory() {
+	int ATslWeapon_Gun::GetCurrentAmmoInInventory()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6f368f46);
 
@@ -9279,7 +9707,8 @@ namespace Classes {
 	// Parameters:
 	// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	int ATslWeapon_Gun::GetCurrentAmmoInClip() {
+	int ATslWeapon_Gun::GetCurrentAmmoInClip()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xbe3a53a0);
 
@@ -9301,7 +9730,8 @@ namespace Classes {
 	// Parameters:
 	// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	int ATslWeapon_Gun::GetCurrentAmmo() {
+	int ATslWeapon_Gun::GetCurrentAmmo()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x789caa7);
 
@@ -9323,7 +9753,8 @@ namespace Classes {
 	// Parameters:
 	// class UAnimMontage*            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UAnimMontage* ATslWeapon_Gun::GetCharacterTacticalReloadFromAttach() {
+	class UAnimMontage* ATslWeapon_Gun::GetCharacterTacticalReloadFromAttach()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x800adf7c);
 
@@ -9345,7 +9776,8 @@ namespace Classes {
 	// Parameters:
 	// class UAnimMontage*            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UAnimMontage* ATslWeapon_Gun::GetCharacterReloadTacticalMontage() {
+	class UAnimMontage* ATslWeapon_Gun::GetCharacterReloadTacticalMontage()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xbc36a8aa);
 
@@ -9367,7 +9799,8 @@ namespace Classes {
 	// Parameters:
 	// class UAnimMontage*            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UAnimMontage* ATslWeapon_Gun::GetCharacterReloadChargeMontage() {
+	class UAnimMontage* ATslWeapon_Gun::GetCharacterReloadChargeMontage()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd335e3a3);
 
@@ -9389,7 +9822,8 @@ namespace Classes {
 	// Parameters:
 	// class UAnimMontage*            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UAnimMontage* ATslWeapon_Gun::GetCharacterReloadByOneStopMontage() {
+	class UAnimMontage* ATslWeapon_Gun::GetCharacterReloadByOneStopMontage()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x43b0e920);
 
@@ -9411,7 +9845,8 @@ namespace Classes {
 	// Parameters:
 	// class UAnimMontage*            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UAnimMontage* ATslWeapon_Gun::GetCharacterReloadByOneStartMontage() {
+	class UAnimMontage* ATslWeapon_Gun::GetCharacterReloadByOneStartMontage()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6cf52a3a);
 
@@ -9433,7 +9868,8 @@ namespace Classes {
 	// Parameters:
 	// class UAnimMontage*            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UAnimMontage* ATslWeapon_Gun::GetCharacterReloadByOneSingleMontage() {
+	class UAnimMontage* ATslWeapon_Gun::GetCharacterReloadByOneSingleMontage()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd998a090);
 
@@ -9455,7 +9891,8 @@ namespace Classes {
 	// Parameters:
 	// class UBlendSpaceBase*         ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UBlendSpaceBase* ATslWeapon_Gun::GetCharacterLHGripBlendspace() {
+	class UBlendSpaceBase* ATslWeapon_Gun::GetCharacterLHGripBlendspace()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xfded1292);
 
@@ -9477,7 +9914,8 @@ namespace Classes {
 	// Parameters:
 	// class UBlendSpace1D*           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UBlendSpace1D* ATslWeapon_Gun::GetCharacterGripBlendspace() {
+	class UBlendSpace1D* ATslWeapon_Gun::GetCharacterGripBlendspace()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xbd05259e);
 
@@ -9499,7 +9937,8 @@ namespace Classes {
 	// Parameters:
 	// class UAnimMontage*            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UAnimMontage* ATslWeapon_Gun::GetCharacterFireSelectorMontage() {
+	class UAnimMontage* ATslWeapon_Gun::GetCharacterFireSelectorMontage()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb1497c4b);
 
@@ -9521,7 +9960,8 @@ namespace Classes {
 	// Parameters:
 	// class UAnimMontage*            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UAnimMontage* ATslWeapon_Gun::GetCharacterFireMontage() {
+	class UAnimMontage* ATslWeapon_Gun::GetCharacterFireMontage()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1dd876ba);
 
@@ -9543,7 +9983,8 @@ namespace Classes {
 	// Parameters:
 	// class UAnimMontage*            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UAnimMontage* ATslWeapon_Gun::GetCharacterFireCycle() {
+	class UAnimMontage* ATslWeapon_Gun::GetCharacterFireCycle()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xbdde2f4b);
 
@@ -9565,7 +10006,8 @@ namespace Classes {
 	// Parameters:
 	// class UAnimMontage*            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UAnimMontage* ATslWeapon_Gun::GetCharacterChargeReloadFromAttach() {
+	class UAnimMontage* ATslWeapon_Gun::GetCharacterChargeReloadFromAttach()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5965f2ab);
 
@@ -9587,7 +10029,8 @@ namespace Classes {
 	// Parameters:
 	// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	int ATslWeapon_Gun::GetAmmoPerClip() {
+	int ATslWeapon_Gun::GetAmmoPerClip()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x14a9276b);
 
@@ -9609,7 +10052,8 @@ namespace Classes {
 	// Parameters:
 	// class UClass*                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UClass* ATslWeapon_Gun::GetAmmoItemClass() {
+	class UClass* ATslWeapon_Gun::GetAmmoItemClass()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xfcf7ca4b);
 
@@ -9631,7 +10075,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslWeapon_Gun::GetADSRecoilKick() {
+	float ATslWeapon_Gun::GetADSRecoilKick()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x72e0c728);
 
@@ -9651,7 +10096,8 @@ namespace Classes {
 	// Function TslGame.TslWeapon_Gun.ClientStopSimulatingWeaponFire
 	// (FUNC_Net, FUNC_Native, FUNC_Event, FUNC_NetMulticast, FUNC_Protected)
 
-	void ATslWeapon_Gun::ClientStopSimulatingWeaponFire() {
+	void ATslWeapon_Gun::ClientStopSimulatingWeaponFire()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x392a2b84);
 
@@ -9671,7 +10117,8 @@ namespace Classes {
 	// Parameters:
 	// struct FHitResult              ExceptTrajectoryHitResult      (CPF_ConstParm, CPF_Parm, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-	void ATslWeapon_Gun::ClientSimulateWeaponFire(const struct FHitResult& ExceptTrajectoryHitResult) {
+	void ATslWeapon_Gun::ClientSimulateWeaponFire(const struct FHitResult& ExceptTrajectoryHitResult)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb5d65f9d);
 
@@ -9690,7 +10137,8 @@ namespace Classes {
 	// Function TslGame.TslWeapon_Gun.ClientNotifyStopReloadByOne
 	// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_NetMulticast, FUNC_Protected)
 
-	void ATslWeapon_Gun::ClientNotifyStopReloadByOne() {
+	void ATslWeapon_Gun::ClientNotifyStopReloadByOne()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x8471ecf8);
 
@@ -9710,7 +10158,8 @@ namespace Classes {
 	// Parameters:
 	// int                            InCurrentAmmoInClip            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslWeapon_Gun::ClientNotifyAmmo(int InCurrentAmmoInClip) {
+	void ATslWeapon_Gun::ClientNotifyAmmo(int InCurrentAmmoInClip)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x23c1842);
 
@@ -9729,7 +10178,8 @@ namespace Classes {
 	// Function TslGame.TslWeapon_Gun.ClientCancelReload
 	// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_NetMulticast, FUNC_Public)
 
-	void ATslWeapon_Gun::ClientCancelReload() {
+	void ATslWeapon_Gun::ClientCancelReload()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7f75b492);
 
@@ -9747,7 +10197,8 @@ namespace Classes {
 	// Function TslGame.TslWeapon_Gun.Client_StartManualFireCycle
 	// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_NetMulticast, FUNC_Protected)
 
-	void ATslWeapon_Gun::Client_StartManualFireCycle() {
+	void ATslWeapon_Gun::Client_StartManualFireCycle()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x8be68072);
 
@@ -9767,7 +10218,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslWeapon_Gun::CheckMiddlePointCollision() {
+	bool ATslWeapon_Gun::CheckMiddlePointCollision()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf58bf763);
 
@@ -9787,7 +10239,8 @@ namespace Classes {
 	// Function TslGame.TslWeapon_Gun.CancelReloadImpl
 	// (FUNC_Final, FUNC_Native, FUNC_Public)
 
-	void ATslWeapon_Gun::CancelReloadImpl() {
+	void ATslWeapon_Gun::CancelReloadImpl()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa8c95dc5);
 
@@ -9805,7 +10258,8 @@ namespace Classes {
 	// Function TslGame.TslWeapon_Gun.AnimCall_ToggleFireMode
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ATslWeapon_Gun::AnimCall_ToggleFireMode() {
+	void ATslWeapon_Gun::AnimCall_ToggleFireMode()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7992d92d);
 
@@ -9823,7 +10277,8 @@ namespace Classes {
 	// Function TslGame.TslWeapon_Gun.AnimCall_ReloadTacticalWeapon
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ATslWeapon_Gun::AnimCall_ReloadTacticalWeapon() {
+	void ATslWeapon_Gun::AnimCall_ReloadTacticalWeapon()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3dd87774);
 
@@ -9841,7 +10296,8 @@ namespace Classes {
 	// Function TslGame.TslWeapon_Gun.AnimCall_ReloadChargeWeapon
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ATslWeapon_Gun::AnimCall_ReloadChargeWeapon() {
+	void ATslWeapon_Gun::AnimCall_ReloadChargeWeapon()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xcd9ef6eb);
 
@@ -9859,7 +10315,8 @@ namespace Classes {
 	// Function TslGame.TslWeapon_Gun.AnimCall_FireWeaponCycle
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ATslWeapon_Gun::AnimCall_FireWeaponCycle() {
+	void ATslWeapon_Gun::AnimCall_FireWeaponCycle()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xdbc5f3ae);
 
@@ -9877,7 +10334,8 @@ namespace Classes {
 	// Function TslGame.TslWeapon_Gun.AnimCall_FireWeapon
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ATslWeapon_Gun::AnimCall_FireWeapon() {
+	void ATslWeapon_Gun::AnimCall_FireWeapon()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xdfb240cc);
 
@@ -9895,7 +10353,8 @@ namespace Classes {
 	// Function TslGame.VehicleSeatActor.OnRep_Rider
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void AVehicleSeatActor::OnRep_Rider() {
+	void AVehicleSeatActor::OnRep_Rider()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5d1ddac3);
 
@@ -9916,7 +10375,8 @@ namespace Classes {
 	// TEnumAsByte<EWeaponClass>      InClass                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool AVehicleSeatActor::IsWeaponClassAllowed(TEnumAsByte<EWeaponClass> InClass) {
+	bool AVehicleSeatActor::IsWeaponClassAllowed(TEnumAsByte<EWeaponClass> InClass)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xdfc1cd96);
 
@@ -9939,7 +10399,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool AVehicleSeatActor::IsEntryAllowedByVelocity() {
+	bool AVehicleSeatActor::IsEntryAllowedByVelocity()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x38719e4c);
 
@@ -9961,7 +10422,8 @@ namespace Classes {
 	// Parameters:
 	// class UTslVehicleSeatComponent* ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
-	class UTslVehicleSeatComponent* AVehicleSeatActor::GetVehicleSeatComponent() {
+	class UTslVehicleSeatComponent* AVehicleSeatActor::GetVehicleSeatComponent()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xadc1bb9e);
 
@@ -9983,7 +10445,8 @@ namespace Classes {
 	// Parameters:
 	// class APawn*                   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class APawn* AVehicleSeatActor::GetVehiclePawn() {
+	class APawn* AVehicleSeatActor::GetVehiclePawn()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x36781e70);
 
@@ -10005,7 +10468,8 @@ namespace Classes {
 	// Parameters:
 	// TScriptInterface<class UTslVehicleInterface> ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	TScriptInterface<class UTslVehicleInterface> AVehicleSeatActor::GetVehicleInterface() {
+	TScriptInterface<class UTslVehicleInterface> AVehicleSeatActor::GetVehicleInterface()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x66f73323);
 
@@ -10027,7 +10491,8 @@ namespace Classes {
 	// Parameters:
 	// TEnumAsByte<EVehicleAnimType>  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	TEnumAsByte<EVehicleAnimType> AVehicleSeatActor::GetVehicleAnimType() {
+	TEnumAsByte<EVehicleAnimType> AVehicleSeatActor::GetVehicleAnimType()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6a9d99b1);
 
@@ -10049,7 +10514,8 @@ namespace Classes {
 	// Parameters:
 	// class UBlendSpaceBase*         ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UBlendSpaceBase* AVehicleSeatActor::GetTransitionOutBlendspace() {
+	class UBlendSpaceBase* AVehicleSeatActor::GetTransitionOutBlendspace()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6f414cb8);
 
@@ -10071,7 +10537,8 @@ namespace Classes {
 	// Parameters:
 	// class UBlendSpaceBase*         ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UBlendSpaceBase* AVehicleSeatActor::GetTransitionInBlendspace() {
+	class UBlendSpaceBase* AVehicleSeatActor::GetTransitionInBlendspace()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa8f1924f);
 
@@ -10093,7 +10560,8 @@ namespace Classes {
 	// Parameters:
 	// class UAimOffsetBlendSpace*    ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UAimOffsetBlendSpace* AVehicleSeatActor::GetSeatIdleAO() {
+	class UAimOffsetBlendSpace* AVehicleSeatActor::GetSeatIdleAO()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x543bcdb7);
 
@@ -10115,7 +10583,8 @@ namespace Classes {
 	// Parameters:
 	// class UAnimSequenceBase*       ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UAnimSequenceBase* AVehicleSeatActor::GetSeatIdleAnimation() {
+	class UAnimSequenceBase* AVehicleSeatActor::GetSeatIdleAnimation()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1034445b);
 
@@ -10137,7 +10606,8 @@ namespace Classes {
 	// Parameters:
 	// class UBlendSpaceBase*         ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UBlendSpaceBase* AVehicleSeatActor::GetSeatAimingBlendspace() {
+	class UBlendSpaceBase* AVehicleSeatActor::GetSeatAimingBlendspace()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa4ad6585);
 
@@ -10159,7 +10629,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslCharacter*           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslCharacter* AVehicleSeatActor::GetRider() {
+	class ATslCharacter* AVehicleSeatActor::GetRider()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xca371d9e);
 
@@ -10182,7 +10653,8 @@ namespace Classes {
 	// float                          CurrentYaw                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float AVehicleSeatActor::GetMinPitchByYaw(float CurrentYaw) {
+	float AVehicleSeatActor::GetMinPitchByYaw(float CurrentYaw)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb75c5120);
 
@@ -10206,7 +10678,8 @@ namespace Classes {
 	// float                          CurrentYaw                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float AVehicleSeatActor::GetMaxPitchByYaw(float CurrentYaw) {
+	float AVehicleSeatActor::GetMaxPitchByYaw(float CurrentYaw)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x748ed6d6);
 
@@ -10229,7 +10702,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool AVehicleSeatActor::GetCanFireOnlyWhileAimed() {
+	bool AVehicleSeatActor::GetCanFireOnlyWhileAimed()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x45520af);
 
@@ -10252,7 +10726,8 @@ namespace Classes {
 	// class ATslCharacter*           Character                      (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FText                   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
-	struct FText AVehicleSeatActor::GetAdditionalMessage(class ATslCharacter* Character) {
+	struct FText AVehicleSeatActor::GetAdditionalMessage(class ATslCharacter* Character)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xedff3016);
 
@@ -10276,7 +10751,8 @@ namespace Classes {
 	// class ATslCharacter*           OtherCharacter                 (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool AVehicleSeatActor::AllowInteract(class ATslCharacter* OtherCharacter) {
+	bool AVehicleSeatActor::AllowInteract(class ATslCharacter* OtherCharacter)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x47526e17);
 
@@ -10299,7 +10775,8 @@ namespace Classes {
 	// Parameters:
 	// int                            WeaponIndex                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void AWeaponProcessor::SimulateUnArmWeapon(int WeaponIndex) {
+	void AWeaponProcessor::SimulateUnArmWeapon(int WeaponIndex)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa3b3ae2f);
 
@@ -10321,7 +10798,8 @@ namespace Classes {
 	// int                            WeaponIndex                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           bNeedAnimation                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void AWeaponProcessor::SimulateArmWeapon(int WeaponIndex, bool bNeedAnimation) {
+	void AWeaponProcessor::SimulateArmWeapon(int WeaponIndex, bool bNeedAnimation)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xdb50ba20);
 
@@ -10341,7 +10819,8 @@ namespace Classes {
 	// Function TslGame.WeaponProcessor.ServerUnarmCurrentWeapon
 	// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Protected, FUNC_NetServer, FUNC_NetValidate)
 
-	void AWeaponProcessor::ServerUnarmCurrentWeapon() {
+	void AWeaponProcessor::ServerUnarmCurrentWeapon()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd6a47d3d);
 
@@ -10362,7 +10841,8 @@ namespace Classes {
 	// int                            WeaponIndex                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           bNeedAnimation                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void AWeaponProcessor::ServerArmWeapon(int WeaponIndex, bool bNeedAnimation) {
+	void AWeaponProcessor::ServerArmWeapon(int WeaponIndex, bool bNeedAnimation)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xbc96f711);
 
@@ -10384,7 +10864,8 @@ namespace Classes {
 	// Parameters:
 	// TArray<class ATslWeapon*>      LastEquippedWeapons            (CPF_Parm, CPF_ZeroConstructor)
 
-	void AWeaponProcessor::OnRep_EquippedWeapons(TArray<class ATslWeapon*> LastEquippedWeapons) {
+	void AWeaponProcessor::OnRep_EquippedWeapons(TArray<class ATslWeapon*> LastEquippedWeapons)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc215860b);
 
@@ -10405,7 +10886,8 @@ namespace Classes {
 	// Parameters:
 	// int                            LastWeaponIndex                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void AWeaponProcessor::OnRep_CurrentWeaponIndex(int LastWeaponIndex) {
+	void AWeaponProcessor::OnRep_CurrentWeaponIndex(int LastWeaponIndex)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x14c06cb6);
 
@@ -10424,7 +10906,8 @@ namespace Classes {
 	// Function TslGame.WeaponProcessor.NotifyWeaponUpdate
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void AWeaponProcessor::NotifyWeaponUpdate() {
+	void AWeaponProcessor::NotifyWeaponUpdate()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd70194ec);
 
@@ -10445,7 +10928,8 @@ namespace Classes {
 	// int                            WeaponIndex                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool AWeaponProcessor::IsUnarmedWeapon(int WeaponIndex) {
+	bool AWeaponProcessor::IsUnarmedWeapon(int WeaponIndex)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x384622ee);
 
@@ -10468,7 +10952,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool AWeaponProcessor::IsUnarmed() {
+	bool AWeaponProcessor::IsUnarmed()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xdc5ceece);
 
@@ -10490,7 +10975,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslWeapon_Throwable*    ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslWeapon_Throwable* AWeaponProcessor::GetWeaponThrowable() {
+	class ATslWeapon_Throwable* AWeaponProcessor::GetWeaponThrowable()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xde16c9a0);
 
@@ -10512,7 +10998,8 @@ namespace Classes {
 	// Parameters:
 	// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	int AWeaponProcessor::GetWeaponIndex() {
+	int AWeaponProcessor::GetWeaponIndex()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xbbd7e184);
 
@@ -10534,7 +11021,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslWeapon_Gun*          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslWeapon_Gun* AWeaponProcessor::GetWeaponGun() {
+	class ATslWeapon_Gun* AWeaponProcessor::GetWeaponGun()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4d7f9e9e);
 
@@ -10557,7 +11045,8 @@ namespace Classes {
 	// int                            Index                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class ATslWeapon*              ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslWeapon* AWeaponProcessor::GetWeaponByIndex(int Index) {
+	class ATslWeapon* AWeaponProcessor::GetWeaponByIndex(int Index)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x851f9619);
 
@@ -10580,7 +11069,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslWeapon*              ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslWeapon* AWeaponProcessor::GetWeapon() {
+	class ATslWeapon* AWeaponProcessor::GetWeapon()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xed83b130);
 
@@ -10602,7 +11092,8 @@ namespace Classes {
 	// Parameters:
 	// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	int AWeaponProcessor::GetUnarmedWeaponIndex() {
+	int AWeaponProcessor::GetUnarmedWeaponIndex()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x61447276);
 
@@ -10624,7 +11115,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslWeapon*              ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslWeapon* AWeaponProcessor::GetCurrentWeapon() {
+	class ATslWeapon* AWeaponProcessor::GetCurrentWeapon()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa960113f);
 
@@ -10647,7 +11139,8 @@ namespace Classes {
 	// class UClass*                  WeaponClass                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class ATslWeapon*              ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslWeapon* AWeaponProcessor::FindWeapon(class UClass* WeaponClass) {
+	class ATslWeapon* AWeaponProcessor::FindWeapon(class UClass* WeaponClass)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf21b8ea1);
 
@@ -10670,7 +11163,8 @@ namespace Classes {
 	// Parameters:
 	// int                            WeaponIndex                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void AWeaponProcessor::ClientSetWeaponIndex(int WeaponIndex) {
+	void AWeaponProcessor::ClientSetWeaponIndex(int WeaponIndex)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf362c495);
 
@@ -10691,7 +11185,8 @@ namespace Classes {
 	// Parameters:
 	// int                            InitWeaponIndex                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void AWeaponProcessor::ClientInitByReconnection(int InitWeaponIndex) {
+	void AWeaponProcessor::ClientInitByReconnection(int InitWeaponIndex)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4b8a4b97);
 
@@ -10712,7 +11207,8 @@ namespace Classes {
 	// Parameters:
 	// int                            WeaponIndex                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void AWeaponProcessor::ClientForceRemoveWeapon(int WeaponIndex) {
+	void AWeaponProcessor::ClientForceRemoveWeapon(int WeaponIndex)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x33c9f11a);
 
@@ -10733,7 +11229,8 @@ namespace Classes {
 	// Parameters:
 	// class UAnimSequenceBase*       ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UAnimSequenceBase* UVaultingData::GetVaultAnimation() {
+	class UAnimSequenceBase* UVaultingData::GetVaultAnimation()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x12c4615e);
 
@@ -10756,7 +11253,8 @@ namespace Classes {
 	// float                          InDistance                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UVaultingData::GetBlendSpeedByDistance(float InDistance) {
+	float UVaultingData::GetBlendSpeedByDistance(float InDistance)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9c654720);
 
@@ -10779,7 +11277,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UVaultingData::GetAnimationLength() {
+	float UVaultingData::GetAnimationLength()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x34d406f6);
 
@@ -10801,7 +11300,8 @@ namespace Classes {
 	// Parameters:
 	// class UCurveFloat*             ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UCurveFloat* UVaultingData::GetAnimationCurve() {
+	class UCurveFloat* UVaultingData::GetAnimationCurve()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x83aa38cb);
 
@@ -10821,7 +11321,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.UpdateWeaponAttachPoint
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ATslCharacter::UpdateWeaponAttachPoint() {
+	void ATslCharacter::UpdateWeaponAttachPoint()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xde388a30);
 
@@ -10841,7 +11342,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslPlayerController*    InController                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::UnBindCallbackToHUD(class ATslPlayerController* InController) {
+	void ATslCharacter::UnBindCallbackToHUD(class ATslPlayerController* InController)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5c0d9d5f);
 
@@ -10860,7 +11362,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.ToggleAnimDynamics
 	// (FUNC_Final, FUNC_Exec, FUNC_Native, FUNC_Public)
 
-	void ATslCharacter::ToggleAnimDynamics() {
+	void ATslCharacter::ToggleAnimDynamics()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x58c6401b);
 
@@ -10880,7 +11383,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::TickOptimization_ShouldRunMovementUpdate() {
+	bool ATslCharacter::TickOptimization_ShouldRunMovementUpdate()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xea32b64b);
 
@@ -10902,7 +11406,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::TickOptimization_ShouldRunAnimUpdate() {
+	bool ATslCharacter::TickOptimization_ShouldRunAnimUpdate()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x429a9b13);
 
@@ -10924,7 +11429,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::TickOptimization_IsOverMinimumDistance() {
+	bool ATslCharacter::TickOptimization_IsOverMinimumDistance()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x39cffec8);
 
@@ -10944,7 +11450,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.TickOptimization_Eval
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ATslCharacter::TickOptimization_Eval() {
+	void ATslCharacter::TickOptimization_Eval()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xbd469ba3);
 
@@ -10962,7 +11469,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.StopAllAnimMontages
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ATslCharacter::StopAllAnimMontages() {
+	void ATslCharacter::StopAllAnimMontages()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa5ae951a);
 
@@ -10980,7 +11488,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.STAT_TickEnd
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ATslCharacter::STAT_TickEnd() {
+	void ATslCharacter::STAT_TickEnd()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xee31fc73);
 
@@ -10998,7 +11507,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.STAT_TickBegin
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ATslCharacter::STAT_TickBegin() {
+	void ATslCharacter::STAT_TickBegin()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xbdc8c5a3);
 
@@ -11019,7 +11529,8 @@ namespace Classes {
 	// struct FVector                 InLocation                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FRotator                InRotation                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::SpawnPunchImpact_Reliable(const struct FVector& InLocation, const struct FRotator& InRotation) {
+	void ATslCharacter::SpawnPunchImpact_Reliable(const struct FVector& InLocation, const struct FRotator& InRotation)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5461c4d4);
 
@@ -11042,7 +11553,8 @@ namespace Classes {
 	// struct FVector                 InLocation                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FRotator                InRotation                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::SpawnPunchImpact(const struct FVector& InLocation, const struct FRotator& InRotation) {
+	void ATslCharacter::SpawnPunchImpact(const struct FVector& InLocation, const struct FRotator& InRotation)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xda7e7417);
 
@@ -11065,7 +11577,8 @@ namespace Classes {
 	// struct FVector                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          BulletVelocity                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::SpawnBulletPassByEffect(const struct FVector& Location, float BulletVelocity) {
+	void ATslCharacter::SpawnBulletPassByEffect(const struct FVector& Location, float BulletVelocity)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd9561334);
 
@@ -11085,7 +11598,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.SimulatePhysicalHitRecovery
 	// (FUNC_Final, FUNC_Native, FUNC_Protected)
 
-	void ATslCharacter::SimulatePhysicalHitRecovery() {
+	void ATslCharacter::SimulatePhysicalHitRecovery()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5d8fdfcf);
 
@@ -11106,7 +11620,8 @@ namespace Classes {
 	// struct FTransform              SpawnTransform                 (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
 	// struct FTransform              ImpactTransform                (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-	void ATslCharacter::SimulateHeadShot(const struct FTransform& SpawnTransform, const struct FTransform& ImpactTransform) {
+	void ATslCharacter::SimulateHeadShot(const struct FTransform& SpawnTransform, const struct FTransform& ImpactTransform)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x414a766e);
 
@@ -11127,7 +11642,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bShow                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::ShowDynamicCrosshair(bool bShow) {
+	void ATslCharacter::ShowDynamicCrosshair(bool bShow)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb33e6ca8);
 
@@ -11146,7 +11662,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.SetWorldTransformIdentity
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ATslCharacter::SetWorldTransformIdentity() {
+	void ATslCharacter::SetWorldTransformIdentity()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd776e824);
 
@@ -11166,7 +11683,8 @@ namespace Classes {
 	// Parameters:
 	// struct FRotator                InInertia                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::SetWeaponInertia(const struct FRotator& InInertia) {
+	void ATslCharacter::SetWeaponInertia(const struct FRotator& InInertia)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc8650cc);
 
@@ -11185,7 +11703,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.SetupWeaponBlueprint
 	// (FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
 
-	void ATslCharacter::SetupWeaponBlueprint() {
+	void ATslCharacter::SetupWeaponBlueprint()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6f4fd486);
 
@@ -11204,7 +11723,8 @@ namespace Classes {
 	// Parameters:
 	// float                          VerticalOffset                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::SetTPPSpringarmOffset(float VerticalOffset) {
+	void ATslCharacter::SetTPPSpringarmOffset(float VerticalOffset)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd03408e4);
 
@@ -11225,7 +11745,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bActivate                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::SetTickOptimization_Movement(bool bActivate) {
+	void ATslCharacter::SetTickOptimization_Movement(bool bActivate)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xdb7e8ffe);
 
@@ -11246,7 +11767,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bActivate                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::SetTickOptimization_Anim(bool bActivate) {
+	void ATslCharacter::SetTickOptimization_Anim(bool bActivate)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xfcb886e);
 
@@ -11267,7 +11789,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bActivate                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::SetTickOptimization_Actor(bool bActivate) {
+	void ATslCharacter::SetTickOptimization_Actor(bool bActivate)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1a341e98);
 
@@ -11290,7 +11813,8 @@ namespace Classes {
 	// float                          SwayVerticalMultiplier         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          SwayHorizontalMultiplier       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::SetSwayDebuffParameters(float SwaySpeed, float SwayVerticalMultiplier, float SwayHorizontalMultiplier) {
+	void ATslCharacter::SetSwayDebuffParameters(float SwaySpeed, float SwayVerticalMultiplier, float SwayHorizontalMultiplier)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe85bc160);
 
@@ -11313,7 +11837,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           InFinished                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::SetServerVaultFinished(bool InFinished) {
+	void ATslCharacter::SetServerVaultFinished(bool InFinished)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xdd883353);
 
@@ -11334,7 +11859,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bAssistActive                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::SetParachuteLandingAssist(bool bAssistActive) {
+	void ATslCharacter::SetParachuteLandingAssist(bool bAssistActive)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x25de8815);
 
@@ -11355,7 +11881,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bNewOutSidePlayerArea          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::SetOutSidePlayerArea(bool bNewOutSidePlayerArea) {
+	void ATslCharacter::SetOutSidePlayerArea(bool bNewOutSidePlayerArea)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x36021573);
 
@@ -11376,7 +11903,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           IsEnabled                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::SetMovementEnabled(bool IsEnabled) {
+	void ATslCharacter::SetMovementEnabled(bool IsEnabled)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2b5b77b0);
 
@@ -11399,7 +11927,8 @@ namespace Classes {
 	// class ATslPlayerState*         InPlayerState                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class AActor*                  Causer                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::SetLaunchEvent(const struct FAttackId& AttackId, class ATslPlayerState* InPlayerState, class AActor* Causer) {
+	void ATslCharacter::SetLaunchEvent(const struct FAttackId& AttackId, class ATslPlayerState* InPlayerState, class AActor* Causer)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3284a6a5);
 
@@ -11423,7 +11952,8 @@ namespace Classes {
 	// struct FVector                 JumpStartLoc                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          FallHeight                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::SetJumpStartLocationAndFallheight(const struct FVector& JumpStartLoc, float FallHeight) {
+	void ATslCharacter::SetJumpStartLocationAndFallheight(const struct FVector& JumpStartLoc, float FallHeight)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5cece128);
 
@@ -11445,7 +11975,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bOn                            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::SetCustomDepth(bool bOn) {
+	void ATslCharacter::SetCustomDepth(bool bOn)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x57365f82);
 
@@ -11470,7 +12001,8 @@ namespace Classes {
 	// bool                           InEndVaultToFall               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          InDirection                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::SetCharacterVaultingData(float InVaultTimer, bool InIsVaulting, bool InIsClimbing, bool InEndVaultToFall, float InDirection) {
+	void ATslCharacter::SetCharacterVaultingData(float InVaultTimer, bool InIsVaulting, bool InIsClimbing, bool InEndVaultToFall, float InDirection)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x49ca8213);
 
@@ -11495,7 +12027,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bInCanGroggyDamage             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::SetCanGroggyDamage(bool bInCanGroggyDamage) {
+	void ATslCharacter::SetCanGroggyDamage(bool bInCanGroggyDamage)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7b58d162);
 
@@ -11516,7 +12049,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           InOverride                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::SetBulletSpawnOverride(bool InOverride) {
+	void ATslCharacter::SetBulletSpawnOverride(bool InOverride)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5b6514a7);
 
@@ -11537,7 +12071,8 @@ namespace Classes {
 	// Parameters:
 	// float                          FinalSpreadFactor              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::SetBuffFinalSpreadFactor(float FinalSpreadFactor) {
+	void ATslCharacter::SetBuffFinalSpreadFactor(float FinalSpreadFactor)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4f5fa32b);
 
@@ -11558,7 +12093,8 @@ namespace Classes {
 	// Parameters:
 	// float                          NewBoostGauge                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::SetBoostGauge(float NewBoostGauge) {
+	void ATslCharacter::SetBoostGauge(float NewBoostGauge)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2cb33f34);
 
@@ -11580,7 +12116,8 @@ namespace Classes {
 	// struct FString                 SwitchGroup                    (CPF_Parm, CPF_ZeroConstructor)
 	// struct FString                 SwitchState                    (CPF_Parm, CPF_ZeroConstructor)
 
-	void ATslCharacter::SetAnimationAkSwitch(const struct FString& SwitchGroup, const struct FString& SwitchState) {
+	void ATslCharacter::SetAnimationAkSwitch(const struct FString& SwitchGroup, const struct FString& SwitchState)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4df943e4);
 
@@ -11603,7 +12140,8 @@ namespace Classes {
 	// struct FString                 RTPCName                       (CPF_Parm, CPF_ZeroConstructor)
 	// float                          RTPCValue                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::SetAnimationAkRTPC(const struct FString& RTPCName, float RTPCValue) {
+	void ATslCharacter::SetAnimationAkRTPC(const struct FString& RTPCName, float RTPCValue)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5713f149);
 
@@ -11625,7 +12163,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           IsActive                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::SetAimStateActive(bool IsActive) {
+	void ATslCharacter::SetAimStateActive(bool IsActive)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc0384dce);
 
@@ -11646,7 +12185,8 @@ namespace Classes {
 	// Parameters:
 	// struct FVector                 NewOffset                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::SetADSSocketOffset(const struct FVector& NewOffset) {
+	void ATslCharacter::SetADSSocketOffset(const struct FVector& NewOffset)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5bbf165e);
 
@@ -11667,7 +12207,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bIsActive                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::SetActiveRagdoll(bool bIsActive) {
+	void ATslCharacter::SetActiveRagdoll(bool bIsActive)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xaba310a5);
 
@@ -11688,7 +12229,8 @@ namespace Classes {
 	// Parameters:
 	// class UTslAccessoryComponent*  AccessoryComponent             (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
-	void ATslCharacter::SetAccessorySlot_Thrown(class UTslAccessoryComponent* AccessoryComponent) {
+	void ATslCharacter::SetAccessorySlot_Thrown(class UTslAccessoryComponent* AccessoryComponent)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe19a01fd);
 
@@ -11709,7 +12251,8 @@ namespace Classes {
 	// Parameters:
 	// class UTslAccessoryComponent*  AccessoryComponent             (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
-	void ATslCharacter::SetAccessorySlot_SideArm(class UTslAccessoryComponent* AccessoryComponent) {
+	void ATslCharacter::SetAccessorySlot_SideArm(class UTslAccessoryComponent* AccessoryComponent)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x57f4f594);
 
@@ -11730,7 +12273,8 @@ namespace Classes {
 	// Parameters:
 	// class UTslAccessoryComponent*  AccessoryComponent             (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
-	void ATslCharacter::SetAccessorySlot_Secondary(class UTslAccessoryComponent* AccessoryComponent) {
+	void ATslCharacter::SetAccessorySlot_Secondary(class UTslAccessoryComponent* AccessoryComponent)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5000b83f);
 
@@ -11751,7 +12295,8 @@ namespace Classes {
 	// Parameters:
 	// class UTslAccessoryComponent*  AccessoryComponent             (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
-	void ATslCharacter::SetAccessorySlot_Primary(class UTslAccessoryComponent* AccessoryComponent) {
+	void ATslCharacter::SetAccessorySlot_Primary(class UTslAccessoryComponent* AccessoryComponent)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xbedcaf3f);
 
@@ -11772,7 +12317,8 @@ namespace Classes {
 	// Parameters:
 	// class UTslAccessoryComponent*  AccessoryComponent             (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
-	void ATslCharacter::SetAccessorySlot_Melee(class UTslAccessoryComponent* AccessoryComponent) {
+	void ATslCharacter::SetAccessorySlot_Melee(class UTslAccessoryComponent* AccessoryComponent)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3a584a85);
 
@@ -11794,7 +12340,8 @@ namespace Classes {
 	// class UTslAccessoryComponent*  AccessoryComponent             (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 	// TEnumAsByte<EAccessorySlot>    Slot                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::SetAccessorySlot(class UTslAccessoryComponent* AccessoryComponent, TEnumAsByte<EAccessorySlot> Slot) {
+	void ATslCharacter::SetAccessorySlot(class UTslAccessoryComponent* AccessoryComponent, TEnumAsByte<EAccessorySlot> Slot)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x143ec18c);
 
@@ -11816,7 +12363,8 @@ namespace Classes {
 	// Parameters:
 	// TEnumAsByte<ETargetingType>    NewTargetingType               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::ServerSetTargeting(TEnumAsByte<ETargetingType> NewTargetingType) {
+	void ATslCharacter::ServerSetTargeting(TEnumAsByte<ETargetingType> NewTargetingType)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2422cbc6);
 
@@ -11837,7 +12385,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bNewSprintingAuto              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::ServerSetSprintingAuto(bool bNewSprintingAuto) {
+	void ATslCharacter::ServerSetSprintingAuto(bool bNewSprintingAuto)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x780a2756);
 
@@ -11858,7 +12407,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bNewSprinting                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::ServerSetSprinting(bool bNewSprinting) {
+	void ATslCharacter::ServerSetSprinting(bool bNewSprinting)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1e86231b);
 
@@ -11879,7 +12429,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bNewRunning                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::ServerSetRunning(bool bNewRunning) {
+	void ATslCharacter::ServerSetRunning(bool bNewRunning)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc92c733e);
 
@@ -11901,7 +12452,8 @@ namespace Classes {
 	// bool                           bNewRolling                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           bIsLeft                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::ServerSetRolling(bool bNewRolling, bool bIsLeft) {
+	void ATslCharacter::ServerSetRolling(bool bNewRolling, bool bIsLeft)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb07377ec);
 
@@ -11924,7 +12476,8 @@ namespace Classes {
 	// bool                           bNewPeekRight                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           InbUseRightShoulderAiming      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::ServerSetPeekRight(bool bNewPeekRight, bool InbUseRightShoulderAiming) {
+	void ATslCharacter::ServerSetPeekRight(bool bNewPeekRight, bool InbUseRightShoulderAiming)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x684c4186);
 
@@ -11947,7 +12500,8 @@ namespace Classes {
 	// bool                           bNewPeekLeft                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           InbUseRightShoulderAiming      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::ServerSetPeekLeft(bool bNewPeekLeft, bool InbUseRightShoulderAiming) {
+	void ATslCharacter::ServerSetPeekLeft(bool bNewPeekLeft, bool InbUseRightShoulderAiming)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd5500313);
 
@@ -11969,7 +12523,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bNewHoldingBreath              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::ServerSetHoldingBreath(bool bNewHoldingBreath) {
+	void ATslCharacter::ServerSetHoldingBreath(bool bNewHoldingBreath)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x29674cc8);
 
@@ -11990,7 +12545,8 @@ namespace Classes {
 	// Parameters:
 	// struct FRotator                InGunDirectionSway             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::ServerSetGunDirectionSway(const struct FRotator& InGunDirectionSway) {
+	void ATslCharacter::ServerSetGunDirectionSway(const struct FRotator& InGunDirectionSway)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x88f62438);
 
@@ -12011,7 +12567,8 @@ namespace Classes {
 	// Parameters:
 	// struct FVector_NetQuantizeNormal NewAimOffsets                  (CPF_Parm)
 
-	void ATslCharacter::ServerSetAimOffsets(const struct FVector_NetQuantizeNormal& NewAimOffsets) {
+	void ATslCharacter::ServerSetAimOffsets(const struct FVector_NetQuantizeNormal& NewAimOffsets)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa5c05dc8);
 
@@ -12032,15 +12589,18 @@ namespace Classes {
 	// Parameters:
 	// struct FHitResult              Hit                            (CPF_Parm, CPF_IsPlainOldData)
 	// TEnumAsByte<EPunchDamageType>  PunchDamageType                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	// TArray<float>                  AimSpeeds                      (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_ReferenceParm)
 	// uint32_t                       HitSeq                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::Server_UnarmedHitNotify(const struct FHitResult& Hit, TEnumAsByte<EPunchDamageType> PunchDamageType, uint32_t HitSeq) {
+	void ATslCharacter::Server_UnarmedHitNotify(const struct FHitResult& Hit, TEnumAsByte<EPunchDamageType> PunchDamageType, TArray<float> AimSpeeds, uint32_t HitSeq)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x40da1258);
 
 		ATslCharacter_Server_UnarmedHitNotify_Params params;
 		params.Hit = Hit;
 		params.PunchDamageType = PunchDamageType;
+		params.AimSpeeds = AimSpeeds;
 		params.HitSeq = HitSeq;
 
 		auto flags = fn->FunctionFlags;
@@ -12057,7 +12617,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bNewObstruction                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::Server_SetWeaponObstruction(bool bNewObstruction) {
+	void ATslCharacter::Server_SetWeaponObstruction(bool bNewObstruction)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x889152ec);
 
@@ -12078,7 +12639,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           InCancel                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::Server_SetVaultCancel(bool InCancel) {
+	void ATslCharacter::Server_SetVaultCancel(bool InCancel)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3b5edac0);
 
@@ -12099,7 +12661,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bNewVal                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::Server_SetThrowMode(bool bNewVal) {
+	void ATslCharacter::Server_SetThrowMode(bool bNewVal)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3e47e0ef);
 
@@ -12120,7 +12683,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bAssistActive                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::Server_SetParachuteLandingAssist(bool bAssistActive) {
+	void ATslCharacter::Server_SetParachuteLandingAssist(bool bAssistActive)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa99e6dc9);
 
@@ -12141,7 +12705,8 @@ namespace Classes {
 	// Parameters:
 	// TEnumAsByte<EFiringMode>       fMode                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::Server_SetFiringMode(TEnumAsByte<EFiringMode> fMode) {
+	void ATslCharacter::Server_SetFiringMode(TEnumAsByte<EFiringMode> fMode)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x67b629f6);
 
@@ -12162,7 +12727,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           IsEquipped                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::Server_SetCoatEquipped(bool IsEquipped) {
+	void ATslCharacter::Server_SetCoatEquipped(bool IsEquipped)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xbdcaab28);
 
@@ -12183,7 +12749,8 @@ namespace Classes {
 	// Parameters:
 	// TEnumAsByte<ECastAnim>         InCastAnim                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::Server_SetCastAnim(TEnumAsByte<ECastAnim> InCastAnim) {
+	void ATslCharacter::Server_SetCastAnim(TEnumAsByte<ECastAnim> InCastAnim)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb6db75b0);
 
@@ -12204,7 +12771,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bInCanGroggyDamage             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::Server_SetCanGroggyDamage(bool bInCanGroggyDamage) {
+	void ATslCharacter::Server_SetCanGroggyDamage(bool bInCanGroggyDamage)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2f539c7e);
 
@@ -12225,7 +12793,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           IsActive                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::Server_SetAimState(bool IsActive) {
+	void ATslCharacter::Server_SetAimState(bool IsActive)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x820af9cc);
 
@@ -12246,7 +12815,8 @@ namespace Classes {
 	// Parameters:
 	// int                            AnimationIndex                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::Server_PlayUnarmedAttack(int AnimationIndex) {
+	void ATslCharacter::Server_PlayUnarmedAttack(int AnimationIndex)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc9d9b1a2);
 
@@ -12265,7 +12835,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.Server_CastFinishNotify
 	// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Public, FUNC_NetServer, FUNC_NetValidate)
 
-	void ATslCharacter::Server_CastFinishNotify() {
+	void ATslCharacter::Server_CastFinishNotify()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4ceed6c5);
 
@@ -12283,7 +12854,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.Server_CastCancelNotify
 	// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Public, FUNC_NetServer, FUNC_NetValidate)
 
-	void ATslCharacter::Server_CastCancelNotify() {
+	void ATslCharacter::Server_CastCancelNotify()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x64c3a5fa);
 
@@ -12304,7 +12876,8 @@ namespace Classes {
 	// TEnumAsByte<ESystemMessageType> MessageType                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FText                   Message                        (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
 
-	void ATslCharacter::SendSystemMessage(TEnumAsByte<ESystemMessageType> MessageType, const struct FText& Message) {
+	void ATslCharacter::SendSystemMessage(TEnumAsByte<ESystemMessageType> MessageType, const struct FText& Message)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3e234300);
 
@@ -12324,7 +12897,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.RunVaultCheck_BP
 	// (FUNC_Native, FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
 
-	void ATslCharacter::RunVaultCheck_BP() {
+	void ATslCharacter::RunVaultCheck_BP()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe36f4546);
 
@@ -12342,7 +12916,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.ResetUnarmedAttack
 	// (FUNC_Final, FUNC_Native, FUNC_Public)
 
-	void ATslCharacter::ResetUnarmedAttack() {
+	void ATslCharacter::ResetUnarmedAttack()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x74a73777);
 
@@ -12360,7 +12935,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.ResetParachute
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ATslCharacter::ResetParachute() {
+	void ATslCharacter::ResetParachute()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd01f72c);
 
@@ -12378,7 +12954,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.RemoveCrosshair
 	// (FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
 
-	void ATslCharacter::RemoveCrosshair() {
+	void ATslCharacter::RemoveCrosshair()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9abae592);
 
@@ -12395,7 +12972,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.ReevaluaeTargetingState
 	// (FUNC_Final, FUNC_Native, FUNC_Public)
 
-	void ATslCharacter::ReevaluaeTargetingState() {
+	void ATslCharacter::ReevaluaeTargetingState()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x160026a);
 
@@ -12416,8 +12994,10 @@ namespace Classes {
 	// TEnumAsByte<EPunchDamageType>  PunchDamageType                (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 	// float                          PunchDistance                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          PunchRadius                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
+	// TArray<float>                  InAimSpeeds                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
 
-	void ATslCharacter::PunchStart(TEnumAsByte<EPunchDamageType> PunchDamageType, float PunchDistance, float PunchRadius) {
+	void ATslCharacter::PunchStart(TEnumAsByte<EPunchDamageType> PunchDamageType, float PunchDistance, float PunchRadius, TArray<float> InAimSpeeds)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5f75bb42);
 
@@ -12425,6 +13005,7 @@ namespace Classes {
 		params.PunchDamageType = PunchDamageType;
 		params.PunchDistance = PunchDistance;
 		params.PunchRadius = PunchRadius;
+		params.InAimSpeeds = InAimSpeeds;
 
 		auto flags = fn->FunctionFlags;
 		fn->FunctionFlags |= 0x400;
@@ -12440,7 +13021,8 @@ namespace Classes {
 	// Parameters:
 	// float                          RemainGroggyHealthPercent      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::ProcessRevive(float RemainGroggyHealthPercent) {
+	void ATslCharacter::ProcessRevive(float RemainGroggyHealthPercent)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe53ce82a);
 
@@ -12460,7 +13042,8 @@ namespace Classes {
 	// Parameters:
 	// float                          GroggyHealthPercent            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::ProcessDBNO(float GroggyHealthPercent) {
+	void ATslCharacter::ProcessDBNO(float GroggyHealthPercent)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4aab1732);
 
@@ -12480,7 +13063,8 @@ namespace Classes {
 	// Parameters:
 	// class UClass*                  ParachuteType                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::PrepareParachute(class UClass* ParachuteType) {
+	void ATslCharacter::PrepareParachute(class UClass* ParachuteType)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x52129f8);
 
@@ -12501,7 +13085,8 @@ namespace Classes {
 	// Parameters:
 	// class UCameraAnim*             CameraAnim                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::PlayCameraAnim(class UCameraAnim* CameraAnim) {
+	void ATslCharacter::PlayCameraAnim(class UCameraAnim* CameraAnim)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4b920eae);
 
@@ -12525,7 +13110,8 @@ namespace Classes {
 	// struct FString                 Options                        (CPF_Parm, CPF_ZeroConstructor)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::PickUpItem(class UItem* Item, const struct FName& TargetContainer, const struct FString& Options) {
+	bool ATslCharacter::PickUpItem(class UItem* Item, const struct FName& TargetContainer, const struct FString& Options)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x101545b7);
 
@@ -12548,7 +13134,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.OnWeapon_6
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ATslCharacter::OnWeapon_6() {
+	void ATslCharacter::OnWeapon_6()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xfd91faa2);
 
@@ -12566,7 +13153,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.OnWeapon_5
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ATslCharacter::OnWeapon_5() {
+	void ATslCharacter::OnWeapon_5()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd78f8039);
 
@@ -12584,7 +13172,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.OnWeapon_4
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ATslCharacter::OnWeapon_4() {
+	void ATslCharacter::OnWeapon_4()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb18d05d0);
 
@@ -12602,7 +13191,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.OnWeapon_3
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ATslCharacter::OnWeapon_3() {
+	void ATslCharacter::OnWeapon_3()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xbb9e5eaf);
 
@@ -12620,7 +13210,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.OnWeapon_2
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ATslCharacter::OnWeapon_2() {
+	void ATslCharacter::OnWeapon_2()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x959be446);
 
@@ -12638,7 +13229,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.OnUnarmPad
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ATslCharacter::OnUnarmPad() {
+	void ATslCharacter::OnUnarmPad()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x13cd096d);
 
@@ -12656,7 +13248,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.OnUnarm
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ATslCharacter::OnUnarm() {
+	void ATslCharacter::OnUnarm()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x921f410a);
 
@@ -12674,7 +13267,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.OnTest_SetupWeapon
 	// (FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
 
-	void ATslCharacter::OnTest_SetupWeapon() {
+	void ATslCharacter::OnTest_SetupWeapon()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa5100a93);
 
@@ -12691,7 +13285,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.OnTest_InspectObject
 	// (FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
 
-	void ATslCharacter::OnTest_InspectObject() {
+	void ATslCharacter::OnTest_InspectObject()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x109bd151);
 
@@ -12708,7 +13303,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.OnStopTargeting_HoldADS
 	// (FUNC_Final, FUNC_Native, FUNC_Public)
 
-	void ATslCharacter::OnStopTargeting_HoldADS() {
+	void ATslCharacter::OnStopTargeting_HoldADS()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x119b98d8);
 
@@ -12726,7 +13322,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.OnStopTargeting
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ATslCharacter::OnStopTargeting() {
+	void ATslCharacter::OnStopTargeting()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7ed08046);
 
@@ -12744,7 +13341,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.OnStopFire
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ATslCharacter::OnStopFire() {
+	void ATslCharacter::OnStopFire()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa5a8b945);
 
@@ -12762,7 +13360,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.OnStartTargeting_HoldADS
 	// (FUNC_Final, FUNC_Native, FUNC_Public)
 
-	void ATslCharacter::OnStartTargeting_HoldADS() {
+	void ATslCharacter::OnStartTargeting_HoldADS()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6187b3a);
 
@@ -12782,7 +13381,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslCharacter*           OtherCharacter                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::OnStartInteractBy(class ATslCharacter* OtherCharacter) {
+	void ATslCharacter::OnStartInteractBy(class ATslCharacter* OtherCharacter)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb05ad842);
 
@@ -12801,7 +13401,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.OnRep_WeaponProcessor
 	// (FUNC_Final, FUNC_Native, FUNC_Protected)
 
-	void ATslCharacter::OnRep_WeaponProcessor() {
+	void ATslCharacter::OnRep_WeaponProcessor()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x896e6a27);
 
@@ -12819,7 +13420,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.OnRep_TargetingType
 	// (FUNC_Final, FUNC_Native, FUNC_Protected)
 
-	void ATslCharacter::OnRep_TargetingType() {
+	void ATslCharacter::OnRep_TargetingType()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x61ebc0a6);
 
@@ -12837,7 +13439,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.OnRep_ShoesSoundType
 	// (FUNC_Final, FUNC_Native, FUNC_Protected)
 
-	void ATslCharacter::OnRep_ShoesSoundType() {
+	void ATslCharacter::OnRep_ShoesSoundType()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x830aca60);
 
@@ -12855,7 +13458,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.OnRep_ReviveCastingTime
 	// (FUNC_Final, FUNC_Native, FUNC_Protected)
 
-	void ATslCharacter::OnRep_ReviveCastingTime() {
+	void ATslCharacter::OnRep_ReviveCastingTime()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3eb2004a);
 
@@ -12875,7 +13479,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bLastOutSidePlayerArea         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::OnRep_OutSidePlayerArea(bool bLastOutSidePlayerArea) {
+	void ATslCharacter::OnRep_OutSidePlayerArea(bool bLastOutSidePlayerArea)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x8f2703d6);
 
@@ -12894,7 +13499,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.OnRep_LastTakeHitInfo
 	// (FUNC_Final, FUNC_Native, FUNC_Protected)
 
-	void ATslCharacter::OnRep_LastTakeHitInfo() {
+	void ATslCharacter::OnRep_LastTakeHitInfo()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xadf554c7);
 
@@ -12912,7 +13518,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.OnRep_IsGroggying
 	// (FUNC_Final, FUNC_Native, FUNC_Protected)
 
-	void ATslCharacter::OnRep_IsGroggying() {
+	void ATslCharacter::OnRep_IsGroggying()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3cf05a40);
 
@@ -12930,7 +13537,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.OnRep_IsCrouched
 	// (FUNC_Native, FUNC_Public)
 
-	void ATslCharacter::OnRep_IsCrouched() {
+	void ATslCharacter::OnRep_IsCrouched()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x81943a4);
 
@@ -12950,7 +13558,8 @@ namespace Classes {
 	// Parameters:
 	// float                          LastHealth                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::OnRep_Health(float LastHealth) {
+	void ATslCharacter::OnRep_Health(float LastHealth)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6df28dc7);
 
@@ -12971,7 +13580,8 @@ namespace Classes {
 	// Parameters:
 	// float                          LastGroggyHealth               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::OnRep_GroggyHealth(float LastGroggyHealth) {
+	void ATslCharacter::OnRep_GroggyHealth(float LastGroggyHealth)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xee0505e6);
 
@@ -12990,7 +13600,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.OnRep_CharacterState
 	// (FUNC_Final, FUNC_Native, FUNC_Protected)
 
-	void ATslCharacter::OnRep_CharacterState() {
+	void ATslCharacter::OnRep_CharacterState()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xae93019d);
 
@@ -13010,7 +13621,8 @@ namespace Classes {
 	// Parameters:
 	// float                          LastBoostGauge                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::OnRep_BoostGauge(float LastBoostGauge) {
+	void ATslCharacter::OnRep_BoostGauge(float LastBoostGauge)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x832f0c7f);
 
@@ -13031,7 +13643,8 @@ namespace Classes {
 	// Parameters:
 	// struct FVector_NetQuantizeNormal PrevAimOffsets                 (CPF_Parm)
 
-	void ATslCharacter::OnRep_AimOffsets(const struct FVector_NetQuantizeNormal& PrevAimOffsets) {
+	void ATslCharacter::OnRep_AimOffsets(const struct FVector_NetQuantizeNormal& PrevAimOffsets)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x19c2e718);
 
@@ -13050,7 +13663,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.OnInvulnerable
 	// (FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
 
-	void ATslCharacter::OnInvulnerable() {
+	void ATslCharacter::OnInvulnerable()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x742ba384);
 
@@ -13069,7 +13683,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslCharacter*           OtherCharacter                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::OnInteractBy(class ATslCharacter* OtherCharacter) {
+	void ATslCharacter::OnInteractBy(class ATslCharacter* OtherCharacter)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x63f7a718);
 
@@ -13088,7 +13703,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.OnIncreaseMaxFlyAccerleration
 	// (FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
 
-	void ATslCharacter::OnIncreaseMaxFlyAccerleration() {
+	void ATslCharacter::OnIncreaseMaxFlyAccerleration()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb5d2cb62);
 
@@ -13105,7 +13721,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.OnFreeMoveMode
 	// (FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
 
-	void ATslCharacter::OnFreeMoveMode() {
+	void ATslCharacter::OnFreeMoveMode()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2b22e081);
 
@@ -13122,7 +13739,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.OnDecreaseMaxFlyAccerleration
 	// (FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
 
-	void ATslCharacter::OnDecreaseMaxFlyAccerleration() {
+	void ATslCharacter::OnDecreaseMaxFlyAccerleration()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1279c472);
 
@@ -13143,7 +13761,8 @@ namespace Classes {
 	// float                          LastBreath                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          BreathMax                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::OnChangeBreath(float Breath, float LastBreath, float BreathMax) {
+	void ATslCharacter::OnChangeBreath(float Breath, float LastBreath, float BreathMax)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9d2242b3);
 
@@ -13166,7 +13785,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslCharacter*           OtherCharacter                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::OnCancelInteractBy(class ATslCharacter* OtherCharacter) {
+	void ATslCharacter::OnCancelInteractBy(class ATslCharacter* OtherCharacter)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x39b806fe);
 
@@ -13187,7 +13807,8 @@ namespace Classes {
 	// Parameters:
 	// class UWidget*                 Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::OnBlockingWidgetOpened(class UWidget* Widget) {
+	void ATslCharacter::OnBlockingWidgetOpened(class UWidget* Widget)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x42af28cb);
 
@@ -13208,7 +13829,8 @@ namespace Classes {
 	// Parameters:
 	// struct FText                   ItemName                       (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
 
-	void ATslCharacter::NotHaveThrowItemNotifyMessage(const struct FText& ItemName) {
+	void ATslCharacter::NotHaveThrowItemNotifyMessage(const struct FText& ItemName)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5c51cf44);
 
@@ -13228,7 +13850,8 @@ namespace Classes {
 	// Parameters:
 	// struct FText                   ItemName                       (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
 
-	void ATslCharacter::NotHaveHealItemNotifyMessage(const struct FText& ItemName) {
+	void ATslCharacter::NotHaveHealItemNotifyMessage(const struct FText& ItemName)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5d8daed8);
 
@@ -13246,7 +13869,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.NotHaveBoostItemNotifyMessage
 	// (FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
 
-	void ATslCharacter::NotHaveBoostItemNotifyMessage() {
+	void ATslCharacter::NotHaveBoostItemNotifyMessage()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf3ddb123);
 
@@ -13265,7 +13889,8 @@ namespace Classes {
 	// Parameters:
 	// struct FVector                 InitialVelocity                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::LocalMagazineDrop(const struct FVector& InitialVelocity) {
+	void ATslCharacter::LocalMagazineDrop(const struct FVector& InitialVelocity)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6060e722);
 
@@ -13285,7 +13910,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsZooming() {
+	bool ATslCharacter::IsZooming()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x704da4d9);
 
@@ -13307,7 +13933,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsZombie() {
+	bool ATslCharacter::IsZombie()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x35ec214c);
 
@@ -13329,7 +13956,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsWeaponUsingHighMagnificationScope() {
+	bool ATslCharacter::IsWeaponUsingHighMagnificationScope()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x88a8a3f3);
 
@@ -13351,7 +13979,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsWeaponArmed() {
+	bool ATslCharacter::IsWeaponArmed()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf49a79c3);
 
@@ -13373,7 +14002,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsVehiclePassenger() {
+	bool ATslCharacter::IsVehiclePassenger()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x40fcb6);
 
@@ -13395,7 +14025,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsVehicleDriver() {
+	bool ATslCharacter::IsVehicleDriver()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9b29c0f4);
 
@@ -13417,7 +14048,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsVaultingEnabled() {
+	bool ATslCharacter::IsVaultingEnabled()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe9814c11);
 
@@ -13439,7 +14071,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsVaultingDebugEnabled() {
+	bool ATslCharacter::IsVaultingDebugEnabled()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x675c97b6);
 
@@ -13461,7 +14094,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsVaulting() {
+	bool ATslCharacter::IsVaulting()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf23c458a);
 
@@ -13483,7 +14117,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsVaultCancelled() {
+	bool ATslCharacter::IsVaultCancelled()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xef351cef);
 
@@ -13505,7 +14140,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsUsingRightShoulderAiming() {
+	bool ATslCharacter::IsUsingRightShoulderAiming()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xfe11d255);
 
@@ -13527,7 +14163,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsUpperCollision() {
+	bool ATslCharacter::IsUpperCollision()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x671422a6);
 
@@ -13549,7 +14186,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsUnderwater() {
+	bool ATslCharacter::IsUnderwater()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xeef3f1e5);
 
@@ -13571,7 +14209,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsUnderRoof() {
+	bool ATslCharacter::IsUnderRoof()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xcda02202);
 
@@ -13593,7 +14232,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsTeamMatch() {
+	bool ATslCharacter::IsTeamMatch()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xdc4b4a70);
 
@@ -13615,7 +14255,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsTargeting() {
+	bool ATslCharacter::IsTargeting()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x181a1feb);
 
@@ -13637,7 +14278,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsSwimming() {
+	bool ATslCharacter::IsSwimming()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xdc5869c9);
 
@@ -13659,7 +14301,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsSprinting() {
+	bool ATslCharacter::IsSprinting()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2b9dc1c6);
 
@@ -13681,7 +14324,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsSpectatingCharacter() {
+	bool ATslCharacter::IsSpectatingCharacter()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe3a3988b);
 
@@ -13703,7 +14347,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsSitting() {
+	bool ATslCharacter::IsSitting()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7fc275d2);
 
@@ -13725,7 +14370,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsScoping() {
+	bool ATslCharacter::IsScoping()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x84680fc7);
 
@@ -13747,7 +14393,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsRunning() {
+	bool ATslCharacter::IsRunning()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x22040a67);
 
@@ -13769,7 +14416,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsRolling() {
+	bool ATslCharacter::IsRolling()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x93917cfd);
 
@@ -13791,7 +14439,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsReviving() {
+	bool ATslCharacter::IsReviving()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2b800df4);
 
@@ -13813,7 +14462,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsQuitter() {
+	bool ATslCharacter::IsQuitter()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x841a8910);
 
@@ -13835,7 +14485,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsQuickThrowHigh() {
+	bool ATslCharacter::IsQuickThrowHigh()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5018f285);
 
@@ -13857,7 +14508,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsPlayingPickUpAnimation() {
+	bool ATslCharacter::IsPlayingPickUpAnimation()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x87602e06);
 
@@ -13879,7 +14531,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsPeekRight() {
+	bool ATslCharacter::IsPeekRight()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7d52e53);
 
@@ -13901,7 +14554,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsPeekLeft() {
+	bool ATslCharacter::IsPeekLeft()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2804157c);
 
@@ -13923,7 +14577,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsParachuting() {
+	bool ATslCharacter::IsParachuting()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd5ce05b2);
 
@@ -13945,7 +14600,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsOutSidePlayerArea() {
+	bool ATslCharacter::IsOutSidePlayerArea()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5d91e1d7);
 
@@ -13967,7 +14623,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsMoving() {
+	bool ATslCharacter::IsMoving()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5b5c98c4);
 
@@ -13989,7 +14646,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsMouseUse() {
+	bool ATslCharacter::IsMouseUse()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xffd7f5c);
 
@@ -14011,7 +14669,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsMeleeAttacking() {
+	bool ATslCharacter::IsMeleeAttacking()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x15aa644a);
 
@@ -14033,7 +14692,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsMagazineHandAttached() {
+	bool ATslCharacter::IsMagazineHandAttached()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xaaf8e03);
 
@@ -14055,7 +14715,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsMagazineGunAttached() {
+	bool ATslCharacter::IsMagazineGunAttached()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x44fe9946);
 
@@ -14077,7 +14738,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsLocalOrSpectating() {
+	bool ATslCharacter::IsLocalOrSpectating()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x72f9c20c);
 
@@ -14099,7 +14761,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsInWaterVolume() {
+	bool ATslCharacter::IsInWaterVolume()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf95c1e8a);
 
@@ -14121,7 +14784,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsInVehicle() {
+	bool ATslCharacter::IsInVehicle()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x53d910d9);
 
@@ -14143,7 +14807,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsInteracting() {
+	bool ATslCharacter::IsInteracting()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9fc76798);
 
@@ -14165,7 +14830,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsIndoor() {
+	bool ATslCharacter::IsIndoor()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xfaa2c997);
 
@@ -14187,7 +14853,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsInAircraft() {
+	bool ATslCharacter::IsInAircraft()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x541c30fd);
 
@@ -14209,7 +14876,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsHoldingBreath() {
+	bool ATslCharacter::IsHoldingBreath()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1fdaf281);
 
@@ -14231,7 +14899,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsHitted() {
+	bool ATslCharacter::IsHitted()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x51f2a38);
 
@@ -14253,7 +14922,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsHipped() {
+	bool ATslCharacter::IsHipped()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5a2977b0);
 
@@ -14275,7 +14945,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsGroggying() {
+	bool ATslCharacter::IsGroggying()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x8cb61b2d);
 
@@ -14297,7 +14968,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsFreelooking() {
+	bool ATslCharacter::IsFreelooking()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x78fb8073);
 
@@ -14319,7 +14991,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsForcingFall() {
+	bool ATslCharacter::IsForcingFall()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9271dbd1);
 
@@ -14341,7 +15014,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsForceRotation() {
+	bool ATslCharacter::IsForceRotation()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7d0445ed);
 
@@ -14363,7 +15037,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsForcedProneAfterFall() {
+	bool ATslCharacter::IsForcedProneAfterFall()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x8ca7b04e);
 
@@ -14385,7 +15060,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsFloating() {
+	bool ATslCharacter::IsFloating()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xedef6c2c);
 
@@ -14407,7 +15083,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsFirstPerson() {
+	bool ATslCharacter::IsFirstPerson()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xfcabd76b);
 
@@ -14429,7 +15106,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsFiring() {
+	bool ATslCharacter::IsFiring()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd3f96a5f);
 
@@ -14451,7 +15129,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsFallingWithParachute() {
+	bool ATslCharacter::IsFallingWithParachute()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7fb4228);
 
@@ -14473,7 +15152,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsFallingFromHighAltitude() {
+	bool ATslCharacter::IsFallingFromHighAltitude()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7d7f35);
 
@@ -14495,7 +15175,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsDying() {
+	bool ATslCharacter::IsDying()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7170bf91);
 
@@ -14517,7 +15198,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsCycleInProgress() {
+	bool ATslCharacter::IsCycleInProgress()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x53f74110);
 
@@ -14539,7 +15221,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsCoatEquipped() {
+	bool ATslCharacter::IsCoatEquipped()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa43a9828);
 
@@ -14561,7 +15244,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsCasting() {
+	bool ATslCharacter::IsCasting()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9840e1c1);
 
@@ -14583,7 +15267,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsCameraUnderwater() {
+	bool ATslCharacter::IsCameraUnderwater()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2a00dd00);
 
@@ -14605,7 +15290,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsAudioTestEnabled() {
+	bool ATslCharacter::IsAudioTestEnabled()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x85b4bd07);
 
@@ -14627,7 +15313,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsAttacked() {
+	bool ATslCharacter::IsAttacked()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa7134491);
 
@@ -14649,7 +15336,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsAnimDynamicsEnabled() {
+	bool ATslCharacter::IsAnimDynamicsEnabled()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd7361be2);
 
@@ -14671,7 +15359,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsAlive() {
+	bool ATslCharacter::IsAlive()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x115df035);
 
@@ -14693,7 +15382,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::IsActiveRagdoll() {
+	bool ATslCharacter::IsActiveRagdoll()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7128ba29);
 
@@ -14713,7 +15403,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.HaveNotAnyHealItemNotifyMessage
 	// (FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
 
-	void ATslCharacter::HaveNotAnyHealItemNotifyMessage() {
+	void ATslCharacter::HaveNotAnyHealItemNotifyMessage()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf0caae4);
 
@@ -14732,7 +15423,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::HasWeaponLeftHandIKSocket() {
+	bool ATslCharacter::HasWeaponLeftHandIKSocket()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x64eeb331);
 
@@ -14755,7 +15447,8 @@ namespace Classes {
 	// class UClass*                  WeaponClass                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::HasWeapon(class UClass* WeaponClass) {
+	bool ATslCharacter::HasWeapon(class UClass* WeaponClass)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa542a6c6);
 
@@ -14778,7 +15471,8 @@ namespace Classes {
 	// Parameters:
 	// struct FVector                 InVaultEndVelocity             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::HandleVaultEnd_CP(const struct FVector& InVaultEndVelocity) {
+	void ATslCharacter::HandleVaultEnd_CP(const struct FVector& InVaultEndVelocity)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7776625f);
 
@@ -14797,7 +15491,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.HandleTargeting_HoldADS
 	// (FUNC_Final, FUNC_Native, FUNC_Public)
 
-	void ATslCharacter::HandleTargeting_HoldADS() {
+	void ATslCharacter::HandleTargeting_HoldADS()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3d2e973f);
 
@@ -14815,7 +15510,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.HandleCapsuleCollision
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ATslCharacter::HandleCapsuleCollision() {
+	void ATslCharacter::HandleCapsuleCollision()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xccdbd3cf);
 
@@ -14835,7 +15531,8 @@ namespace Classes {
 	// Parameters:
 	// class UClass*                  WeaponClass                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::GiveWeapon(class UClass* WeaponClass) {
+	void ATslCharacter::GiveWeapon(class UClass* WeaponClass)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x793d5039);
 
@@ -14856,7 +15553,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslWeapon_Throwable*    ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslWeapon_Throwable* ATslCharacter::GetWeaponThrowable() {
+	class ATslWeapon_Throwable* ATslCharacter::GetWeaponThrowable()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa253798e);
 
@@ -14878,7 +15576,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslCharacter::GetWeaponReloadPlayRate() {
+	float ATslCharacter::GetWeaponReloadPlayRate()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9b606a89);
 
@@ -14900,7 +15599,8 @@ namespace Classes {
 	// Parameters:
 	// class AWeaponProcessor*        ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class AWeaponProcessor* ATslCharacter::GetWeaponProcessor() {
+	class AWeaponProcessor* ATslCharacter::GetWeaponProcessor()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2a2f5cee);
 
@@ -14922,7 +15622,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::GetWeaponObstructionRemote() {
+	bool ATslCharacter::GetWeaponObstructionRemote()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4acee2ce);
 
@@ -14944,7 +15645,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslCharacter::GetWeaponMovementModifierScope() {
+	float ATslCharacter::GetWeaponMovementModifierScope()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe7bf773e);
 
@@ -14966,7 +15668,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslCharacter::GetWeaponMovementModifierAim() {
+	float ATslCharacter::GetWeaponMovementModifierAim()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x69a7bcf9);
 
@@ -14988,7 +15691,8 @@ namespace Classes {
 	// Parameters:
 	// struct FTransform              ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FTransform ATslCharacter::GetWeaponLeftHandIKTransform() {
+	struct FTransform ATslCharacter::GetWeaponLeftHandIKTransform()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1c29264a);
 
@@ -15010,7 +15714,8 @@ namespace Classes {
 	// Parameters:
 	// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FRotator ATslCharacter::GetWeaponInertia() {
+	struct FRotator ATslCharacter::GetWeaponInertia()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3a4b4180);
 
@@ -15032,7 +15737,8 @@ namespace Classes {
 	// Parameters:
 	// struct FTransform              ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FTransform ATslCharacter::GetWeaponHandIK_Right() {
+	struct FTransform ATslCharacter::GetWeaponHandIK_Right()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf88078ce);
 
@@ -15054,7 +15760,8 @@ namespace Classes {
 	// Parameters:
 	// struct FTransform              ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FTransform ATslCharacter::GetWeaponHandIK_Left() {
+	struct FTransform ATslCharacter::GetWeaponHandIK_Left()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x72423b9b);
 
@@ -15076,7 +15783,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslCharacter::GetWeaponGunCollisionAlpha() {
+	float ATslCharacter::GetWeaponGunCollisionAlpha()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xbf41f520);
 
@@ -15098,7 +15806,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslWeapon_Gun*          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslWeapon_Gun* ATslCharacter::GetWeaponGun() {
+	class ATslWeapon_Gun* ATslCharacter::GetWeaponGun()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1113b8ac);
 
@@ -15120,7 +15829,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslCharacter::GetWeaponADSTimeModifier() {
+	float ATslCharacter::GetWeaponADSTimeModifier()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb6616624);
 
@@ -15142,7 +15852,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslWeapon*              ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslWeapon* ATslCharacter::GetWeapon() {
+	class ATslWeapon* ATslCharacter::GetWeapon()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xbf687482);
 
@@ -15164,7 +15875,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::GetWantsToJump() {
+	bool ATslCharacter::GetWantsToJump()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x27d65800);
 
@@ -15186,7 +15898,8 @@ namespace Classes {
 	// Parameters:
 	// class UTslVehicleSeatComponent* ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
-	class UTslVehicleSeatComponent* ATslCharacter::GetVehicleSeatComponent() {
+	class UTslVehicleSeatComponent* ATslCharacter::GetVehicleSeatComponent()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x33d2299e);
 
@@ -15208,7 +15921,8 @@ namespace Classes {
 	// Parameters:
 	// class UVehicleSeatInteractionComponent* ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
-	class UVehicleSeatInteractionComponent* ATslCharacter::GetVehicleSeat() {
+	class UVehicleSeatInteractionComponent* ATslCharacter::GetVehicleSeat()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2b50e81d);
 
@@ -15230,7 +15944,8 @@ namespace Classes {
 	// Parameters:
 	// class UVehicleRiderComponent*  ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
-	class UVehicleRiderComponent* ATslCharacter::GetVehicleRiderComponent() {
+	class UVehicleRiderComponent* ATslCharacter::GetVehicleRiderComponent()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x51703e8f);
 
@@ -15252,7 +15967,8 @@ namespace Classes {
 	// Parameters:
 	// class APawn*                   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class APawn* ATslCharacter::GetVehiclePawn() {
+	class APawn* ATslCharacter::GetVehiclePawn()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x52117870);
 
@@ -15274,7 +15990,8 @@ namespace Classes {
 	// Parameters:
 	// TScriptInterface<class UTslVehicleInterface> ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	TScriptInterface<class UTslVehicleInterface> ATslCharacter::GetVehicleInterface() {
+	TScriptInterface<class UTslVehicleInterface> ATslCharacter::GetVehicleInterface()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xaabcc123);
 
@@ -15296,7 +16013,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslCharacter::GetVaultTimer() {
+	float ATslCharacter::GetVaultTimer()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc1badcf1);
 
@@ -15318,7 +16036,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslCharacter::GetVaultingDirection() {
+	float ATslCharacter::GetVaultingDirection()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xee214741);
 
@@ -15341,7 +16060,8 @@ namespace Classes {
 	// TEnumAsByte<EVaultAnimType>    InVaultType                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class UVaultingData*           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UVaultingData* ATslCharacter::GetVaultingDataByEnum(TEnumAsByte<EVaultAnimType> InVaultType) {
+	class UVaultingData* ATslCharacter::GetVaultingDataByEnum(TEnumAsByte<EVaultAnimType> InVaultType)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x19c4d62);
 
@@ -15364,7 +16084,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslPlayerState*         ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslPlayerState* ATslCharacter::GetTslPlayerState() {
+	class ATslPlayerState* ATslCharacter::GetTslPlayerState()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xbe4dbceb);
 
@@ -15386,7 +16107,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslPlayerController*    ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslPlayerController* ATslCharacter::GetTslPlayerController() {
+	class ATslPlayerController* ATslCharacter::GetTslPlayerController()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9614c7c);
 
@@ -15408,7 +16130,8 @@ namespace Classes {
 	// Parameters:
 	// class UTslCharacterMovement*   ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
-	class UTslCharacterMovement* ATslCharacter::GetTslCharacterMovement() {
+	class UTslCharacterMovement* ATslCharacter::GetTslCharacterMovement()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1d0834c3);
 
@@ -15430,7 +16153,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslCharacter::GetTPPSpringarmOffset() {
+	float ATslCharacter::GetTPPSpringarmOffset()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x679e1c20);
 
@@ -15452,7 +16176,8 @@ namespace Classes {
 	// Parameters:
 	// class UCurveFloat*             ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UCurveFloat* ATslCharacter::GetTPPCameraCurve() {
+	class UCurveFloat* ATslCharacter::GetTPPCameraCurve()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xad405b9c);
 
@@ -15474,7 +16199,8 @@ namespace Classes {
 	// Parameters:
 	// class ATeam*                   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATeam* ATslCharacter::GetTeam() {
+	class ATeam* ATslCharacter::GetTeam()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xbffc097d);
 
@@ -15496,7 +16222,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslCharacter::GetTargetingSpeedModifier() {
+	float ATslCharacter::GetTargetingSpeedModifier()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd4edbb77);
 
@@ -15518,7 +16245,8 @@ namespace Classes {
 	// Parameters:
 	// TEnumAsByte<EStanceMode>       ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	TEnumAsByte<EStanceMode> ATslCharacter::GetStance() {
+	TEnumAsByte<EStanceMode> ATslCharacter::GetStance()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf1cc905e);
 
@@ -15540,7 +16268,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslCharacter::GetSprintingSpeedModifier_Stand() {
+	float ATslCharacter::GetSprintingSpeedModifier_Stand()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x657bf49);
 
@@ -15562,7 +16291,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslCharacter::GetSprintingSpeedModifier_Prone() {
+	float ATslCharacter::GetSprintingSpeedModifier_Prone()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5fc926af);
 
@@ -15584,7 +16314,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslCharacter::GetSprintingSpeedModifier_Crouch() {
+	float ATslCharacter::GetSprintingSpeedModifier_Crouch()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc047cf21);
 
@@ -15606,7 +16337,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslCharacter::GetSprintCurrentValue() {
+	float ATslCharacter::GetSprintCurrentValue()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb321678c);
 
@@ -15628,7 +16360,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslCharacter::GetSpeedModifierByWeaponClass() {
+	float ATslCharacter::GetSpeedModifierByWeaponClass()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x29090c7d);
 
@@ -15650,7 +16383,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslCharacter::GetSpeedKmPerHour2D() {
+	float ATslCharacter::GetSpeedKmPerHour2D()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x765a5408);
 
@@ -15672,7 +16406,8 @@ namespace Classes {
 	// Parameters:
 	// struct FString                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	struct FString ATslCharacter::GetShortPlayerName() {
+	struct FString ATslCharacter::GetShortPlayerName()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x16dc11f2);
 
@@ -15694,7 +16429,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::GetServerVaultFinished() {
+	bool ATslCharacter::GetServerVaultFinished()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xca28fa07);
 
@@ -15716,7 +16452,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslCharacter::GetRunningSpeedModifier_Stand() {
+	float ATslCharacter::GetRunningSpeedModifier_Stand()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6a600df2);
 
@@ -15738,7 +16475,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslCharacter::GetRunningSpeedModifier_Prone() {
+	float ATslCharacter::GetRunningSpeedModifier_Prone()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x8005b3a0);
 
@@ -15760,7 +16498,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslCharacter::GetRunningSpeedModifier_Crouch() {
+	float ATslCharacter::GetRunningSpeedModifier_Crouch()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb0612388);
 
@@ -15783,7 +16522,8 @@ namespace Classes {
 	// struct FName                   BoneName                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FName                   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FName ATslCharacter::GetReactionBone(const struct FName& BoneName) {
+	struct FName ATslCharacter::GetReactionBone(const struct FName& BoneName)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x65e3ad1);
 
@@ -15806,7 +16546,8 @@ namespace Classes {
 	// Parameters:
 	// struct FString                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	struct FString ATslCharacter::GetPlayerName() {
+	struct FString ATslCharacter::GetPlayerName()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb790c584);
 
@@ -15828,7 +16569,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::GetParachuteLandingAssist() {
+	bool ATslCharacter::GetParachuteLandingAssist()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xecd4d721);
 
@@ -15850,7 +16592,8 @@ namespace Classes {
 	// Parameters:
 	// class AParachuteVehicle*       ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class AParachuteVehicle* ATslCharacter::GetParachute() {
+	class AParachuteVehicle* ATslCharacter::GetParachute()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6513730f);
 
@@ -15872,7 +16615,8 @@ namespace Classes {
 	// Parameters:
 	// TScriptInterface<class UInteractionInterface> ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	TScriptInterface<class UInteractionInterface> ATslCharacter::GetObjectCanInteract() {
+	TScriptInterface<class UInteractionInterface> ATslCharacter::GetObjectCanInteract()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xab03921d);
 
@@ -15894,7 +16638,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslCharacter::GetMaxSprintSpeed() {
+	float ATslCharacter::GetMaxSprintSpeed()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3e20c2b5);
 
@@ -15916,7 +16661,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslCharacter::GetMaxGroundSpeedOnSlope() {
+	float ATslCharacter::GetMaxGroundSpeedOnSlope()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x45176172);
 
@@ -15938,7 +16684,8 @@ namespace Classes {
 	// Parameters:
 	// struct FString                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	struct FString ATslCharacter::GetLocationString() {
+	struct FString ATslCharacter::GetLocationString()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xeb131660);
 
@@ -15960,7 +16707,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslCharacter::GetLeanRightAlpha() {
+	float ATslCharacter::GetLeanRightAlpha()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5901e4d4);
 
@@ -15982,7 +16730,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslCharacter::GetLeanLeftAlpha() {
+	float ATslCharacter::GetLeanLeftAlpha()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5aa7163b);
 
@@ -16004,7 +16753,8 @@ namespace Classes {
 	// Parameters:
 	// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FRotator ATslCharacter::GetLastMoveRotation() {
+	struct FRotator ATslCharacter::GetLastMoveRotation()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5006b52b);
 
@@ -16026,7 +16776,8 @@ namespace Classes {
 	// Parameters:
 	// class AInventoryFacade*        ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class AInventoryFacade* ATslCharacter::GetInventoryFacade() {
+	class AInventoryFacade* ATslCharacter::GetInventoryFacade()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2256568c);
 
@@ -16048,7 +16799,8 @@ namespace Classes {
 	// Parameters:
 	// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FVector ATslCharacter::GetInteractObjectLocation() {
+	struct FVector ATslCharacter::GetInteractObjectLocation()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x327cef68);
 
@@ -16070,7 +16822,8 @@ namespace Classes {
 	// Parameters:
 	// struct FString                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	struct FString ATslCharacter::GetInteractionString() {
+	struct FString ATslCharacter::GetInteractionString()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3dbebeed);
 
@@ -16092,7 +16845,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslCharacter::GetIndoorFactor() {
+	float ATslCharacter::GetIndoorFactor()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf03a882);
 
@@ -16114,7 +16868,8 @@ namespace Classes {
 	// Parameters:
 	// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FRotator ATslCharacter::GetFreelookSavedRotation() {
+	struct FRotator ATslCharacter::GetFreelookSavedRotation()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa2fee2a8);
 
@@ -16136,7 +16891,8 @@ namespace Classes {
 	// Parameters:
 	// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FRotator ATslCharacter::GetFreelookDeltaRotation() {
+	struct FRotator ATslCharacter::GetFreelookDeltaRotation()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3832360b);
 
@@ -16158,7 +16914,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::GetDynamicCrosshairHidden() {
+	bool ATslCharacter::GetDynamicCrosshairHidden()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xcb4e49b);
 
@@ -16180,7 +16937,8 @@ namespace Classes {
 	// Parameters:
 	// class UClass*                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UClass* ATslCharacter::GetDropPackageType() {
+	class UClass* ATslCharacter::GetDropPackageType()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc2f356a3);
 
@@ -16202,7 +16960,8 @@ namespace Classes {
 	// Parameters:
 	// struct FString                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	struct FString ATslCharacter::GetDirectionString() {
+	struct FString ATslCharacter::GetDirectionString()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xab63cb7a);
 
@@ -16225,7 +16984,8 @@ namespace Classes {
 	// TEnumAsByte<EMovementType>     StanceType                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslCharacter::GetDirectionalSpeedModifier(TEnumAsByte<EMovementType> StanceType) {
+	float ATslCharacter::GetDirectionalSpeedModifier(TEnumAsByte<EMovementType> StanceType)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5c200bd4);
 
@@ -16248,7 +17008,8 @@ namespace Classes {
 	// Parameters:
 	// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FRotator ATslCharacter::GetDesiredRotation() {
+	struct FRotator ATslCharacter::GetDesiredRotation()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5172603e);
 
@@ -16270,7 +17031,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslWeapon*              ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslWeapon* ATslCharacter::GetCurrentWeapon() {
+	class ATslWeapon* ATslCharacter::GetCurrentWeapon()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xdded52ad);
 
@@ -16292,7 +17054,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslCharacter::GetCurrentWaterSurfaceZ() {
+	float ATslCharacter::GetCurrentWaterSurfaceZ()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x892020bf);
 
@@ -16314,7 +17077,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslCharacter::GetCurrentWaterSurfaceBaseZ() {
+	float ATslCharacter::GetCurrentWaterSurfaceBaseZ()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x570ab43a);
 
@@ -16336,7 +17100,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslCharacter::GetCurrentWaterDepth() {
+	float ATslCharacter::GetCurrentWaterDepth()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xdd8c8685);
 
@@ -16358,7 +17123,8 @@ namespace Classes {
 	// Parameters:
 	// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FRotator ATslCharacter::GetCurrentSway() {
+	struct FRotator ATslCharacter::GetCurrentSway()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1e481bc9);
 
@@ -16380,7 +17146,8 @@ namespace Classes {
 	// Parameters:
 	// class UStaticMesh*             ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UStaticMesh* ATslCharacter::GetCurrentMagazineMesh() {
+	class UStaticMesh* ATslCharacter::GetCurrentMagazineMesh()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc34c0860);
 
@@ -16402,7 +17169,8 @@ namespace Classes {
 	// Parameters:
 	// struct FTransform              ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FTransform ATslCharacter::GetCurrentMagazineLocation() {
+	struct FTransform ATslCharacter::GetCurrentMagazineLocation()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x227b43b6);
 
@@ -16424,7 +17192,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslCharacter::GetCurrentHeightFromWaterFloor() {
+	float ATslCharacter::GetCurrentHeightFromWaterFloor()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x73a64349);
 
@@ -16446,7 +17215,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::GetCtrlShortCutOnOff() {
+	bool ATslCharacter::GetCtrlShortCutOnOff()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe096f617);
 
@@ -16468,7 +17238,8 @@ namespace Classes {
 	// Parameters:
 	// TScriptInterface<class UInteractionInterface> ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	TScriptInterface<class UInteractionInterface> ATslCharacter::GetComponentCanInteract() {
+	TScriptInterface<class UInteractionInterface> ATslCharacter::GetComponentCanInteract()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x39e839ed);
 
@@ -16490,7 +17261,8 @@ namespace Classes {
 	// Parameters:
 	// class UObject*                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UObject* ATslCharacter::GetCastObject() {
+	class UObject* ATslCharacter::GetCastObject()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x50f259e6);
 
@@ -16512,7 +17284,8 @@ namespace Classes {
 	// Parameters:
 	// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FVector ATslCharacter::GetCameraDOF() {
+	struct FVector ATslCharacter::GetCameraDOF()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9470cca2);
 
@@ -16534,7 +17307,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslCharacter::GetCameraAnimOverrideAlpha() {
+	float ATslCharacter::GetCameraAnimOverrideAlpha()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3506943c);
 
@@ -16556,7 +17330,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::GetBulletSpawnOverride() {
+	bool ATslCharacter::GetBulletSpawnOverride()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xac467353);
 
@@ -16578,7 +17353,8 @@ namespace Classes {
 	// Parameters:
 	// class UBuffComponet*           ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
-	class UBuffComponet* ATslCharacter::GetBuffComponent() {
+	class UBuffComponet* ATslCharacter::GetBuffComponent()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9e03744a);
 
@@ -16600,7 +17376,8 @@ namespace Classes {
 	// Parameters:
 	// class UCharacterBreathComponent* ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
-	class UCharacterBreathComponent* ATslCharacter::GetBreathComponent() {
+	class UCharacterBreathComponent* ATslCharacter::GetBreathComponent()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6f259cd5);
 
@@ -16622,7 +17399,8 @@ namespace Classes {
 	// Parameters:
 	// TEnumAsByte<EAnimWeaponType>   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	TEnumAsByte<EAnimWeaponType> ATslCharacter::GetAnimWeaponType() {
+	TEnumAsByte<EAnimWeaponType> ATslCharacter::GetAnimWeaponType()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xadb210a5);
 
@@ -16644,7 +17422,8 @@ namespace Classes {
 	// Parameters:
 	// TEnumAsByte<EAnimStance>       ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	TEnumAsByte<EAnimStance> ATslCharacter::GetAnimStance() {
+	TEnumAsByte<EAnimStance> ATslCharacter::GetAnimStance()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xbd5d4421);
 
@@ -16666,7 +17445,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslCharacter::GetAimStateTimer() {
+	float ATslCharacter::GetAimStateTimer()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x41fa3137);
 
@@ -16688,7 +17468,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslCharacter::GetAimStateAlpha() {
+	float ATslCharacter::GetAimStateAlpha()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc7dcb850);
 
@@ -16710,7 +17491,8 @@ namespace Classes {
 	// Parameters:
 	// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FRotator ATslCharacter::GetAimOffsets() {
+	struct FRotator ATslCharacter::GetAimOffsets()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xebb2253);
 
@@ -16732,7 +17514,8 @@ namespace Classes {
 	// Parameters:
 	// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FVector ATslCharacter::GetADSSocketOffset() {
+	struct FVector ATslCharacter::GetADSSocketOffset()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x842b85e2);
 
@@ -16754,7 +17537,8 @@ namespace Classes {
 	// Parameters:
 	// class AActor*                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class AActor* ATslCharacter::GetActorCanInteract() {
+	class AActor* ATslCharacter::GetActorCanInteract()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc14b1cdb);
 
@@ -16776,7 +17560,8 @@ namespace Classes {
 	// Parameters:
 	// class UCameraComponent*        ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
-	class UCameraComponent* ATslCharacter::GetActiveCamera() {
+	class UCameraComponent* ATslCharacter::GetActiveCamera()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x43d6128d);
 
@@ -16799,7 +17584,8 @@ namespace Classes {
 	// TEnumAsByte<EAccessorySlot>    Slot                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class UTslAccessoryComponent*  ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
-	class UTslAccessoryComponent* ATslCharacter::GetAccessorySlot(TEnumAsByte<EAccessorySlot> Slot) {
+	class UTslAccessoryComponent* ATslCharacter::GetAccessorySlot(TEnumAsByte<EAccessorySlot> Slot)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9a085580);
 
@@ -16820,7 +17606,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.FixupCamera
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ATslCharacter::FixupCamera() {
+	void ATslCharacter::FixupCamera()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe64df5);
 
@@ -16841,7 +17628,8 @@ namespace Classes {
 	// class UClass*                  WeaponClass                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class ATslWeapon*              ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslWeapon* ATslCharacter::FindWeapon(class UClass* WeaponClass) {
+	class ATslWeapon* ATslCharacter::FindWeapon(class UClass* WeaponClass)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x30343deb);
 
@@ -16862,7 +17650,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.EnableAudioTest
 	// (FUNC_Final, FUNC_Exec, FUNC_Native, FUNC_Public)
 
-	void ATslCharacter::EnableAudioTest() {
+	void ATslCharacter::EnableAudioTest()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1460c4f7);
 
@@ -16880,7 +17669,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.DisableCollision
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ATslCharacter::DisableCollision() {
+	void ATslCharacter::DisableCollision()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x62d499a6);
 
@@ -16898,7 +17688,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.DelayedFire
 	// (FUNC_Final, FUNC_Native, FUNC_Protected)
 
-	void ATslCharacter::DelayedFire() {
+	void ATslCharacter::DelayedFire()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x24b672e8);
 
@@ -16918,7 +17709,8 @@ namespace Classes {
 	// Parameters:
 	// class UAkAudioEvent*           SoundAk                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::ClientSoundPlay(class UAkAudioEvent* SoundAk) {
+	void ATslCharacter::ClientSoundPlay(class UAkAudioEvent* SoundAk)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xbae64416);
 
@@ -16940,7 +17732,8 @@ namespace Classes {
 	// TEnumAsByte<EEquipSlotID>      SlotID                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FTransform              Impact                         (CPF_Parm, CPF_IsPlainOldData)
 
-	void ATslCharacter::ClientSimulationArmorDestruction(TEnumAsByte<EEquipSlotID> SlotID, const struct FTransform& Impact) {
+	void ATslCharacter::ClientSimulationArmorDestruction(TEnumAsByte<EEquipSlotID> SlotID, const struct FTransform& Impact)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2847833d);
 
@@ -16962,7 +17755,8 @@ namespace Classes {
 	// Parameters:
 	// TEnumAsByte<ETargetingType>    NewTargetingType               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::ClientSetTargeting(TEnumAsByte<ETargetingType> NewTargetingType) {
+	void ATslCharacter::ClientSetTargeting(TEnumAsByte<ETargetingType> NewTargetingType)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd735f03a);
 
@@ -16987,7 +17781,8 @@ namespace Classes {
 	// TEnumAsByte<EDamageReason>     DamageReason                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FText                   DamageCauserName               (CPF_ConstParm, CPF_Parm, CPF_ReferenceParm)
 
-	void ATslCharacter::ClientSendGroggyMessage(class ATslPlayerState* GroggyCauserPlayerState, class ATslPlayerState* VictimPlayerState, class UDamageType* GroggyCauserDamageType, TEnumAsByte<EDamageReason> DamageReason, const struct FText& DamageCauserName) {
+	void ATslCharacter::ClientSendGroggyMessage(class ATslPlayerState* GroggyCauserPlayerState, class ATslPlayerState* VictimPlayerState, class UDamageType* GroggyCauserDamageType, TEnumAsByte<EDamageReason> DamageReason, const struct FText& DamageCauserName)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3ab3d9);
 
@@ -17012,7 +17807,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bVisible                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::ClientRevivedCastingWidgetShow(bool bVisible) {
+	void ATslCharacter::ClientRevivedCastingWidgetShow(bool bVisible)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x8085d38);
 
@@ -17033,7 +17829,8 @@ namespace Classes {
 	// Parameters:
 	// float                          RemainGroggyHealth             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::ClientProcessRevive(float RemainGroggyHealth) {
+	void ATslCharacter::ClientProcessRevive(float RemainGroggyHealth)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x25798879);
 
@@ -17054,7 +17851,8 @@ namespace Classes {
 	// Parameters:
 	// struct FVector_NetQuantize     InteractionObject              (CPF_ConstParm, CPF_Parm)
 
-	void ATslCharacter::ClientPlayPickUpAnimation(const struct FVector_NetQuantize& InteractionObject) {
+	void ATslCharacter::ClientPlayPickUpAnimation(const struct FVector_NetQuantize& InteractionObject)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xdb932d85);
 
@@ -17076,7 +17874,8 @@ namespace Classes {
 	// struct FVector_NetQuantize     LocationRelative               (CPF_Parm)
 	// float                          BulletVelocity                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::ClientNotifyCrack(const struct FVector_NetQuantize& LocationRelative, float BulletVelocity) {
+	void ATslCharacter::ClientNotifyCrack(const struct FVector_NetQuantize& LocationRelative, float BulletVelocity)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb22b9e22);
 
@@ -17099,7 +17898,8 @@ namespace Classes {
 	// struct FVector_NetQuantize     InteractionObject              (CPF_ConstParm, CPF_Parm)
 	// float                          Duration                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::ClientMyCharacterPlayPickUpAnimation(const struct FVector_NetQuantize& InteractionObject, float Duration) {
+	void ATslCharacter::ClientMyCharacterPlayPickUpAnimation(const struct FVector_NetQuantize& InteractionObject, float Duration)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2aa6ac16);
 
@@ -17121,7 +17921,8 @@ namespace Classes {
 	// Parameters:
 	// TEnumAsByte<EStanceMode>       ToStance                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::ClientForceInitStance(TEnumAsByte<EStanceMode> ToStance) {
+	void ATslCharacter::ClientForceInitStance(TEnumAsByte<EStanceMode> ToStance)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xcba46712);
 
@@ -17142,7 +17943,8 @@ namespace Classes {
 	// Parameters:
 	// int                            AnimationIndex                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::Client_PlayUnarmedAttack(int AnimationIndex) {
+	void ATslCharacter::Client_PlayUnarmedAttack(int AnimationIndex)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x90a8aa2e);
 
@@ -17161,7 +17963,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.Client_CastFinishNotify
 	// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_NetMulticast, FUNC_Public, FUNC_NetValidate)
 
-	void ATslCharacter::Client_CastFinishNotify() {
+	void ATslCharacter::Client_CastFinishNotify()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x372e79b1);
 
@@ -17179,7 +17982,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.Client_CastCancelNotify
 	// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_NetMulticast, FUNC_Public, FUNC_NetValidate)
 
-	void ATslCharacter::Client_CastCancelNotify() {
+	void ATslCharacter::Client_CastCancelNotify()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xae546d9e);
 
@@ -17197,7 +18001,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.CheckMuzzleCollision
 	// (FUNC_Final, FUNC_Native, FUNC_Public)
 
-	void ATslCharacter::CheckMuzzleCollision() {
+	void ATslCharacter::CheckMuzzleCollision()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3739d4b3);
 
@@ -17215,7 +18020,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.CheckMuzzleBulletSpawn
 	// (FUNC_Final, FUNC_Native, FUNC_Public)
 
-	void ATslCharacter::CheckMuzzleBulletSpawn() {
+	void ATslCharacter::CheckMuzzleBulletSpawn()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf3878b46);
 
@@ -17236,7 +18042,8 @@ namespace Classes {
 	// bool                           bForceVelocity                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FVector                 InForcedVelocity               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::CheckJumpAndVault(bool bForceVelocity, const struct FVector& InForcedVelocity) {
+	void ATslCharacter::CheckJumpAndVault(bool bForceVelocity, const struct FVector& InForcedVelocity)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x67cd4b6f);
 
@@ -17256,7 +18063,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.CheckForCoat
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ATslCharacter::CheckForCoat() {
+	void ATslCharacter::CheckForCoat()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1311e902);
 
@@ -17277,7 +18085,8 @@ namespace Classes {
 	// struct FEquipPosition          InSlotData                     (CPF_Parm)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::CheckEquipmentSlot(const struct FEquipPosition& InSlotData) {
+	bool ATslCharacter::CheckEquipmentSlot(const struct FEquipPosition& InSlotData)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf354600a);
 
@@ -17300,7 +18109,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::CanSwim() {
+	bool ATslCharacter::CanSwim()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6a9ea494);
 
@@ -17320,7 +18130,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.Camera_AimoffsetFix_TppToFpp
 	// (FUNC_Native, FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
 
-	void ATslCharacter::Camera_AimoffsetFix_TppToFpp() {
+	void ATslCharacter::Camera_AimoffsetFix_TppToFpp()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xfa19d8bb);
 
@@ -17338,7 +18149,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.Camera_AimoffsetFix_FppToTpp
 	// (FUNC_Native, FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
 
-	void ATslCharacter::Camera_AimoffsetFix_FppToTpp() {
+	void ATslCharacter::Camera_AimoffsetFix_FppToTpp()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc24efb6b);
 
@@ -17358,7 +18170,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslPlayerController*    InController                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::BindCallbackToHUD(class ATslPlayerController* InController) {
+	void ATslCharacter::BindCallbackToHUD(class ATslPlayerController* InController)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa034a764);
 
@@ -17377,7 +18190,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.ApplyRagdollPhysicsForce
 	// (FUNC_Final, FUNC_Native, FUNC_Public)
 
-	void ATslCharacter::ApplyRagdollPhysicsForce() {
+	void ATslCharacter::ApplyRagdollPhysicsForce()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x541a75fb);
 
@@ -17397,7 +18211,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bShow                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::Anim_MagazineShow(bool bShow) {
+	void ATslCharacter::Anim_MagazineShow(bool bShow)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x52a356b5);
 
@@ -17418,7 +18233,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bAttach                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::Anim_MagazineHandAttach(bool bAttach) {
+	void ATslCharacter::Anim_MagazineHandAttach(bool bAttach)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf8002926);
 
@@ -17439,7 +18255,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::Anim_IsMagazineVisible() {
+	bool ATslCharacter::Anim_IsMagazineVisible()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xdac916a4);
 
@@ -17462,7 +18279,8 @@ namespace Classes {
 	// class ATslCharacter*           OtherCharacter                 (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslCharacter::AllowInteract(class ATslCharacter* OtherCharacter) {
+	bool ATslCharacter::AllowInteract(class ATslCharacter* OtherCharacter)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9113ec17);
 
@@ -17483,7 +18301,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.AdminSetUpWeapon
 	// (FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
 
-	void ATslCharacter::AdminSetUpWeapon() {
+	void ATslCharacter::AdminSetUpWeapon()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x13ba069e);
 
@@ -17500,7 +18319,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.AdminInvulnerable
 	// (FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
 
-	void ATslCharacter::AdminInvulnerable() {
+	void ATslCharacter::AdminInvulnerable()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x327e8412);
 
@@ -17517,7 +18337,8 @@ namespace Classes {
 	// Function TslGame.TslCharacter.AdminFreeMoveMode
 	// (FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
 
-	void ATslCharacter::AdminFreeMoveMode() {
+	void ATslCharacter::AdminFreeMoveMode()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7cdcda6f);
 
@@ -17536,7 +18357,8 @@ namespace Classes {
 	// Parameters:
 	// float                          MoveSpeedFactor                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacter::AddBuffMoveSpeedFactor(float MoveSpeedFactor) {
+	void ATslCharacter::AddBuffMoveSpeedFactor(float MoveSpeedFactor)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa0839b61);
 
@@ -17558,7 +18380,8 @@ namespace Classes {
 	// struct FVector2D               Pos_UC                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           IsHidden                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UObserverTagWidget::SetCharacterIconPosition_UC(const struct FVector2D& Pos_UC, bool IsHidden) {
+	void UObserverTagWidget::SetCharacterIconPosition_UC(const struct FVector2D& Pos_UC, bool IsHidden)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7d0d7440);
 
@@ -17579,7 +18402,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UObserverTagWidget::IsTeamMember() {
+	bool UObserverTagWidget::IsTeamMember()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x58a4cf17);
 
@@ -17601,7 +18425,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UObserverTagWidget::IsLastSpectatedCharacter() {
+	bool UObserverTagWidget::IsLastSpectatedCharacter()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x22136ca2);
 
@@ -17623,7 +18448,8 @@ namespace Classes {
 	// Parameters:
 	// class USkeletalMeshComponent*  ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
-	class USkeletalMeshComponent* UTslVehicleInterface::GetVehicleMeshComponent() {
+	class USkeletalMeshComponent* UTslVehicleInterface::GetVehicleMeshComponent()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x82fec61c);
 
@@ -17645,7 +18471,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslPlayerController*    ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslPlayerController* UTslVehicleInterface::GetTslPlayerController() {
+	class ATslPlayerController* UTslVehicleInterface::GetTslPlayerController()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb63a2192);
 
@@ -17668,7 +18495,8 @@ namespace Classes {
 	// struct FText                   Message                        (CPF_Parm)
 	// float                          Duration                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslHUD::TestSendSystemMessage(const struct FText& Message, float Duration) {
+	void ATslHUD::TestSendSystemMessage(const struct FText& Message, float Duration)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x8ca6ce46);
 
@@ -17691,7 +18519,8 @@ namespace Classes {
 	// struct FText                   Message                        (CPF_Parm)
 	// float                          Duration                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslHUD::TestSendImportantMessage(const struct FText& Message, float Duration) {
+	void ATslHUD::TestSendImportantMessage(const struct FText& Message, float Duration)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd7f3cecd);
 
@@ -17716,7 +18545,8 @@ namespace Classes {
 	// bool                           bKillerIsOwner                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           bVictimIsOwner                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslHUD::TestKillMessage(const struct FString& KillerName, const struct FString& VictimName, bool bKillerIsOwner, bool bVictimIsOwner) {
+	void ATslHUD::TestKillMessage(const struct FString& KillerName, const struct FString& VictimName, bool bKillerIsOwner, bool bVictimIsOwner)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb3613121);
 
@@ -17738,7 +18568,8 @@ namespace Classes {
 	// Function TslGame.TslHUD.TestGameEvent_MatchEnded
 	// (FUNC_Final, FUNC_Exec, FUNC_Native, FUNC_Public)
 
-	void ATslHUD::TestGameEvent_MatchEnded() {
+	void ATslHUD::TestGameEvent_MatchEnded()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x95544a14);
 
@@ -17758,7 +18589,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bGroggy                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslHUD::TestGameEvent_KillOtherPlayer(bool bGroggy) {
+	void ATslHUD::TestGameEvent_KillOtherPlayer(bool bGroggy)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd1c88526);
 
@@ -17779,7 +18611,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bGroggy                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslHUD::TestGameEvent_Die(bool bGroggy) {
+	void ATslHUD::TestGameEvent_Die(bool bGroggy)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc54851ad);
 
@@ -17802,7 +18635,8 @@ namespace Classes {
 	// struct FTransform              SpawnTransform                 (CPF_ConstParm, CPF_Parm, CPF_IsPlainOldData)
 	// struct FScriptDelegate         DelegateToCall                 (CPF_Parm, CPF_ZeroConstructor)
 
-	void ATslHUD::SpawnActorInSceneCaptureWorld(class UClass* ActorClass, const struct FTransform& SpawnTransform, const struct FScriptDelegate& DelegateToCall) {
+	void ATslHUD::SpawnActorInSceneCaptureWorld(class UClass* ActorClass, const struct FTransform& SpawnTransform, const struct FScriptDelegate& DelegateToCall)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x20f1fc9);
 
@@ -17825,7 +18659,8 @@ namespace Classes {
 	// Parameters:
 	// struct FString                 Provider                       (CPF_Parm, CPF_ZeroConstructor)
 
-	void ATslHUD::SetHighlightProvider(const struct FString& Provider) {
+	void ATslHUD::SetHighlightProvider(const struct FString& Provider)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xaeedc19f);
 
@@ -17848,7 +18683,8 @@ namespace Classes {
 	// TScriptInterface<class USlotInterface> Slot                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// TScriptInterface<class USlotContainerInterface> OtherContainer                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslHUD::NotifyDropSlotOnOtherContainer(const TScriptInterface<class USlotContainerInterface>& Container, const TScriptInterface<class USlotInterface>& Slot, const TScriptInterface<class USlotContainerInterface>& OtherContainer) {
+	void ATslHUD::NotifyDropSlotOnOtherContainer(const TScriptInterface<class USlotContainerInterface>& Container, const TScriptInterface<class USlotInterface>& Slot, const TScriptInterface<class USlotContainerInterface>& OtherContainer)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3becbfd0);
 
@@ -17871,7 +18707,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslHUD::IsGameEnded() {
+	bool ATslHUD::IsGameEnded()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf38f26a);
 
@@ -17891,7 +18728,8 @@ namespace Classes {
 	// Function TslGame.TslHUD.InitCaptureWorld
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ATslHUD::InitCaptureWorld() {
+	void ATslHUD::InitCaptureWorld()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb6320584);
 
@@ -17909,7 +18747,8 @@ namespace Classes {
 	// Function TslGame.TslHUD.GoToLobby
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ATslHUD::GoToLobby() {
+	void ATslHUD::GoToLobby()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4202e653);
 
@@ -17929,7 +18768,8 @@ namespace Classes {
 	// Parameters:
 	// class APawn*                   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class APawn* ATslHUD::GetPossessPawn() {
+	class APawn* ATslHUD::GetPossessPawn()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3a4bcfce);
 
@@ -17951,7 +18791,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslCharacter*           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslCharacter* ATslHUD::GetPossessCharacter() {
+	class ATslCharacter* ATslHUD::GetPossessCharacter()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4f173b1);
 
@@ -17973,7 +18814,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslPlayerController*    InController                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslPawnInputBindingComponent::NotifyOwnerUnPossessed(class ATslPlayerController* InController) {
+	void UTslPawnInputBindingComponent::NotifyOwnerUnPossessed(class ATslPlayerController* InController)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb6304cf3);
 
@@ -17994,7 +18836,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslPlayerController*    InController                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslPawnInputBindingComponent::NotifyOwnerPossessed(class ATslPlayerController* InController) {
+	void UTslPawnInputBindingComponent::NotifyOwnerPossessed(class ATslPlayerController* InController)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd1c13ab8);
 
@@ -18013,7 +18856,8 @@ namespace Classes {
 	// Function TslGame.ParachuteVehicle.ServerRelease
 	// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Protected, FUNC_NetServer, FUNC_NetValidate)
 
-	void AParachuteVehicle::ServerRelease() {
+	void AParachuteVehicle::ServerRelease()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x10a269eb);
 
@@ -18033,7 +18877,8 @@ namespace Classes {
 	// Parameters:
 	// class APhysicsVolume*          NewVolume                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void AParachuteVehicle::PhysicsVolumeChanged(class APhysicsVolume* NewVolume) {
+	void AParachuteVehicle::PhysicsVolumeChanged(class APhysicsVolume* NewVolume)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xcfdd269e);
 
@@ -18054,7 +18899,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslCharacter*           Character                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void AParachuteVehicle::OnSecondInteractBy(class ATslCharacter* Character) {
+	void AParachuteVehicle::OnSecondInteractBy(class ATslCharacter* Character)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1330247f);
 
@@ -18076,7 +18922,8 @@ namespace Classes {
 	// class ATslCharacter*           Rider                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class UVehicleSeatInteractionComponent* Seat                           (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
-	void AParachuteVehicle::OnRide(class ATslCharacter* Rider, class UVehicleSeatInteractionComponent* Seat) {
+	void AParachuteVehicle::OnRide(class ATslCharacter* Rider, class UVehicleSeatInteractionComponent* Seat)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2e1dcc20);
 
@@ -18096,7 +18943,8 @@ namespace Classes {
 	// Function TslGame.ParachuteVehicle.OnRep_IsReleased
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void AParachuteVehicle::OnRep_IsReleased() {
+	void AParachuteVehicle::OnRep_IsReleased()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa105f16f);
 
@@ -18114,7 +18962,8 @@ namespace Classes {
 	// Function TslGame.ParachuteVehicle.OnRep_IsDriven
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void AParachuteVehicle::OnRep_IsDriven() {
+	void AParachuteVehicle::OnRep_IsDriven()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1da0cb98);
 
@@ -18132,7 +18981,8 @@ namespace Classes {
 	// Function TslGame.ParachuteVehicle.OnPostDriverLeave
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void AParachuteVehicle::OnPostDriverLeave() {
+	void AParachuteVehicle::OnPostDriverLeave()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1a93dfcb);
 
@@ -18152,7 +19002,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslCharacter*           Character                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void AParachuteVehicle::OnInteractBy(class ATslCharacter* Character) {
+	void AParachuteVehicle::OnInteractBy(class ATslCharacter* Character)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xaf7f29eb);
 
@@ -18171,7 +19022,8 @@ namespace Classes {
 	// Function TslGame.ParachuteVehicle.OnDriverRide
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void AParachuteVehicle::OnDriverRide() {
+	void AParachuteVehicle::OnDriverRide()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xbf6bd95a);
 
@@ -18189,7 +19041,8 @@ namespace Classes {
 	// Function TslGame.ParachuteVehicle.OnDriverLeave
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void AParachuteVehicle::OnDriverLeave() {
+	void AParachuteVehicle::OnDriverLeave()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2aca6471);
 
@@ -18207,7 +19060,8 @@ namespace Classes {
 	// Function TslGame.ParachuteVehicle.Land
 	// (FUNC_Final, FUNC_Net, FUNC_Native, FUNC_Event, FUNC_NetMulticast, FUNC_Private)
 
-	void AParachuteVehicle::Land() {
+	void AParachuteVehicle::Land()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x10638ff6);
 
@@ -18227,7 +19081,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool AParachuteVehicle::IsStuck() {
+	bool AParachuteVehicle::IsStuck()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe6586bb);
 
@@ -18249,7 +19104,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool AParachuteVehicle::IsReleased() {
+	bool AParachuteVehicle::IsReleased()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x185bd994);
 
@@ -18271,7 +19127,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool AParachuteVehicle::IsDriven() {
+	bool AParachuteVehicle::IsDriven()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb39fcacf);
 
@@ -18293,7 +19150,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float AParachuteVehicle::GetAltitudeFromFloor() {
+	float AParachuteVehicle::GetAltitudeFromFloor()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x47491d51);
 
@@ -18315,7 +19173,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool AParachuteVehicle::CanReleaseByInput() {
+	bool AParachuteVehicle::CanReleaseByInput()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x68708989);
 
@@ -18337,7 +19196,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool AParachuteVehicle::CanRelease() {
+	bool AParachuteVehicle::CanRelease()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x53629440);
 
@@ -18360,7 +19220,8 @@ namespace Classes {
 	// class ATslCharacter*           Character                      (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool AParachuteVehicle::AllowSecondInteractBy(class ATslCharacter* Character) {
+	bool AParachuteVehicle::AllowSecondInteractBy(class ATslCharacter* Character)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1a9fc4b9);
 
@@ -18384,7 +19245,8 @@ namespace Classes {
 	// class ATslCharacter*           Character                      (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool AParachuteVehicle::AllowInteractBy(class ATslCharacter* Character) {
+	bool AParachuteVehicle::AllowInteractBy(class ATslCharacter* Character)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x901dfd35);
 
@@ -18405,7 +19267,8 @@ namespace Classes {
 	// Function TslGame.ReplicationTrigger.EnableReplicationGroup
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void AReplicationTrigger::EnableReplicationGroup() {
+	void AReplicationTrigger::EnableReplicationGroup()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x34f211e4);
 
@@ -18425,7 +19288,8 @@ namespace Classes {
 	// Parameters:
 	// struct FText                   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
-	struct FText USceneInteractionComponent::GetInteractiveObjectName() {
+	struct FText USceneInteractionComponent::GetInteractiveObjectName()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x8b5bf3f7);
 
@@ -18447,7 +19311,8 @@ namespace Classes {
 	// Parameters:
 	// struct FText                   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
-	struct FText USceneInteractionComponent::GetInteractionVerb() {
+	struct FText USceneInteractionComponent::GetInteractionVerb()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xdd6c5cd0);
 
@@ -18470,7 +19335,8 @@ namespace Classes {
 	// class ATslCharacter*           Character                      (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool USceneInteractionComponent::AllowInteractBy(class ATslCharacter* Character) {
+	bool USceneInteractionComponent::AllowInteractBy(class ATslCharacter* Character)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x21ca2743);
 
@@ -18493,7 +19359,8 @@ namespace Classes {
 	// Parameters:
 	// TEnumAsByte<EDoorState>        PrevDoorState                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UDoorInteractionComponent::OnRep_DoorState(TEnumAsByte<EDoorState> PrevDoorState) {
+	void UDoorInteractionComponent::OnRep_DoorState(TEnumAsByte<EDoorState> PrevDoorState)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4e3a626f);
 
@@ -18515,7 +19382,8 @@ namespace Classes {
 	// class ATslCharacter*           OtherCharacter                 (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UDoorInteractionComponent::AllowInteract(class ATslCharacter* OtherCharacter) {
+	bool UDoorInteractionComponent::AllowInteract(class ATslCharacter* OtherCharacter)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x49d08c00);
 
@@ -18536,7 +19404,8 @@ namespace Classes {
 	// Function TslGame.DroppedItemInteractionComponent.OnRep_Item
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void UDroppedItemInteractionComponent::OnRep_Item() {
+	void UDroppedItemInteractionComponent::OnRep_Item()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1dfcf410);
 
@@ -18557,7 +19426,8 @@ namespace Classes {
 	// class ATslCharacter*           Character                      (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UDroppedItemInteractionComponent::AllowInteractBy(class ATslCharacter* Character) {
+	bool UDroppedItemInteractionComponent::AllowInteractBy(class ATslCharacter* Character)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xee5aa560);
 
@@ -18578,7 +19448,8 @@ namespace Classes {
 	// Function TslGame.VehicleSeatInteractionComponent.OnRep_Rider
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void UVehicleSeatInteractionComponent::OnRep_Rider() {
+	void UVehicleSeatInteractionComponent::OnRep_Rider()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x73fe68ef);
 
@@ -18598,7 +19469,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslCharacter*           OtherCharacter                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UVehicleSeatInteractionComponent::OnInteractDelegate(class ATslCharacter* OtherCharacter) {
+	void UVehicleSeatInteractionComponent::OnInteractDelegate(class ATslCharacter* OtherCharacter)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x89493afe);
 
@@ -18620,7 +19492,8 @@ namespace Classes {
 	// TEnumAsByte<EWeaponClass>      InClass                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UVehicleSeatInteractionComponent::IsWeaponClassAllowed(TEnumAsByte<EWeaponClass> InClass) {
+	bool UVehicleSeatInteractionComponent::IsWeaponClassAllowed(TEnumAsByte<EWeaponClass> InClass)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x56063b42);
 
@@ -18643,7 +19516,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UVehicleSeatInteractionComponent::IsEntryAllowedByVelocity() {
+	bool UVehicleSeatInteractionComponent::IsEntryAllowedByVelocity()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd034b4f0);
 
@@ -18665,7 +19539,8 @@ namespace Classes {
 	// Parameters:
 	// class UTslVehicleSeatComponent* ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
-	class UTslVehicleSeatComponent* UVehicleSeatInteractionComponent::GetVehicleSeatComponent() {
+	class UTslVehicleSeatComponent* UVehicleSeatInteractionComponent::GetVehicleSeatComponent()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x8f8a5bfa);
 
@@ -18687,7 +19562,8 @@ namespace Classes {
 	// Parameters:
 	// class APawn*                   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class APawn* UVehicleSeatInteractionComponent::GetVehiclePawn() {
+	class APawn* UVehicleSeatInteractionComponent::GetVehiclePawn()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x84a10c0c);
 
@@ -18709,7 +19585,8 @@ namespace Classes {
 	// Parameters:
 	// TScriptInterface<class UTslVehicleInterface> ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	TScriptInterface<class UTslVehicleInterface> UVehicleSeatInteractionComponent::GetVehicleInterface() {
+	TScriptInterface<class UTslVehicleInterface> UVehicleSeatInteractionComponent::GetVehicleInterface()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x763d43f);
 
@@ -18731,7 +19608,8 @@ namespace Classes {
 	// Parameters:
 	// TEnumAsByte<EVehicleAnimType>  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	TEnumAsByte<EVehicleAnimType> UVehicleSeatInteractionComponent::GetVehicleAnimType() {
+	TEnumAsByte<EVehicleAnimType> UVehicleSeatInteractionComponent::GetVehicleAnimType()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x8d34b79d);
 
@@ -18753,7 +19631,8 @@ namespace Classes {
 	// Parameters:
 	// class UBlendSpaceBase*         ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UBlendSpaceBase* UVehicleSeatInteractionComponent::GetTransitionOutBlendspace() {
+	class UBlendSpaceBase* UVehicleSeatInteractionComponent::GetTransitionOutBlendspace()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3e1362dc);
 
@@ -18775,7 +19654,8 @@ namespace Classes {
 	// Parameters:
 	// class UBlendSpaceBase*         ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UBlendSpaceBase* UVehicleSeatInteractionComponent::GetTransitionInBlendspace() {
+	class UBlendSpaceBase* UVehicleSeatInteractionComponent::GetTransitionInBlendspace()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9f1ac9eb);
 
@@ -18797,7 +19677,8 @@ namespace Classes {
 	// Parameters:
 	// class UAimOffsetBlendSpace*    ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UAimOffsetBlendSpace* UVehicleSeatInteractionComponent::GetSeatIdleAO() {
+	class UAimOffsetBlendSpace* UVehicleSeatInteractionComponent::GetSeatIdleAO()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd885649b);
 
@@ -18819,7 +19700,8 @@ namespace Classes {
 	// Parameters:
 	// class UAnimSequenceBase*       ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UAnimSequenceBase* UVehicleSeatInteractionComponent::GetSeatIdleAnimation() {
+	class UAnimSequenceBase* UVehicleSeatInteractionComponent::GetSeatIdleAnimation()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1f110b67);
 
@@ -18841,7 +19723,8 @@ namespace Classes {
 	// Parameters:
 	// class UBlendSpaceBase*         ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UBlendSpaceBase* UVehicleSeatInteractionComponent::GetSeatAimingFPPBlendspace() {
+	class UBlendSpaceBase* UVehicleSeatInteractionComponent::GetSeatAimingFPPBlendspace()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5113f4f);
 
@@ -18863,7 +19746,8 @@ namespace Classes {
 	// Parameters:
 	// class UBlendSpaceBase*         ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UBlendSpaceBase* UVehicleSeatInteractionComponent::GetSeatAimingBlendspace() {
+	class UBlendSpaceBase* UVehicleSeatInteractionComponent::GetSeatAimingBlendspace()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xca32659);
 
@@ -18885,7 +19769,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslCharacter*           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslCharacter* UVehicleSeatInteractionComponent::GetRider() {
+	class ATslCharacter* UVehicleSeatInteractionComponent::GetRider()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x409215aa);
 
@@ -18908,7 +19793,8 @@ namespace Classes {
 	// float                          CurrentYaw                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UVehicleSeatInteractionComponent::GetMinPitchByYaw(float CurrentYaw) {
+	float UVehicleSeatInteractionComponent::GetMinPitchByYaw(float CurrentYaw)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x13892bc);
 
@@ -18932,7 +19818,8 @@ namespace Classes {
 	// float                          CurrentYaw                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UVehicleSeatInteractionComponent::GetMaxPitchByYaw(float CurrentYaw) {
+	float UVehicleSeatInteractionComponent::GetMaxPitchByYaw(float CurrentYaw)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x616f553a);
 
@@ -18955,7 +19842,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UVehicleSeatInteractionComponent::GetCanFireOnlyWhileAimed() {
+	bool UVehicleSeatInteractionComponent::GetCanFireOnlyWhileAimed()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe9d23b6b);
 
@@ -18978,7 +19866,8 @@ namespace Classes {
 	// class ATslCharacter*           Character                      (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FText                   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
-	struct FText UVehicleSeatInteractionComponent::GetAdditionalMessage(class ATslCharacter* Character) {
+	struct FText UVehicleSeatInteractionComponent::GetAdditionalMessage(class ATslCharacter* Character)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x99eb6d12);
 
@@ -19002,7 +19891,8 @@ namespace Classes {
 	// class ATslCharacter*           OtherCharacter                 (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UVehicleSeatInteractionComponent::AllowInteractDelegate(class ATslCharacter* OtherCharacter) {
+	bool UVehicleSeatInteractionComponent::AllowInteractDelegate(class ATslCharacter* OtherCharacter)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5af2f30a);
 
@@ -19025,7 +19915,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UMotorbikeVehicleSeatInteraction::IsEntryAllowed() {
+	bool UMotorbikeVehicleSeatInteraction::IsEntryAllowed()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xade082b);
 
@@ -19045,7 +19936,8 @@ namespace Classes {
 	// Function TslGame.MotorbikeVehicleSeatInteraction.HandleFlipAndKickstand
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UMotorbikeVehicleSeatInteraction::HandleFlipAndKickstand() {
+	void UMotorbikeVehicleSeatInteraction::HandleFlipAndKickstand()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe9dda0b3);
 
@@ -19068,7 +19960,8 @@ namespace Classes {
 	// float                          InDesiredPitchRotation         (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          InDesiredYawRotation           (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UFreeFallMovement::ServerUpdateInput(float InForwardInput, float InRightInput, float InDesiredPitchRotation, float InDesiredYawRotation) {
+	void UFreeFallMovement::ServerUpdateInput(float InForwardInput, float InRightInput, float InDesiredPitchRotation, float InDesiredYawRotation)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x94202b2c);
 
@@ -19092,7 +19985,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UFreeFallMovement::GetRightInput() {
+	float UFreeFallMovement::GetRightInput()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6682a8ec);
 
@@ -19114,7 +20008,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UFreeFallMovement::GetForwardInput() {
+	float UFreeFallMovement::GetForwardInput()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9ca32a17);
 
@@ -19137,7 +20032,8 @@ namespace Classes {
 	// float                          InForwardInput                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          InRotationInput                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UParachuteVehicleMovement::ServerUpdateInput(float InForwardInput, float InRotationInput) {
+	void UParachuteVehicleMovement::ServerUpdateInput(float InForwardInput, float InRotationInput)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x16a735be);
 
@@ -19159,7 +20055,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UParachuteVehicleMovement::GetRotationYawRate() {
+	float UParachuteVehicleMovement::GetRotationYawRate()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7ca885c1);
 
@@ -19181,7 +20078,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UParachuteVehicleMovement::GetRotationInput() {
+	float UParachuteVehicleMovement::GetRotationInput()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xaccb086e);
 
@@ -19203,7 +20101,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UParachuteVehicleMovement::GetForwardInput() {
+	float UParachuteVehicleMovement::GetForwardInput()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x37d91649);
 
@@ -19225,7 +20124,8 @@ namespace Classes {
 	// Parameters:
 	// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FRotator UParachuteVehicleMovement::GetClientRotation() {
+	struct FRotator UParachuteVehicleMovement::GetClientRotation()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe359283);
 
@@ -19245,7 +20145,8 @@ namespace Classes {
 	// Function TslGame.StanceComponent.ServerForceInitStance
 	// (FUNC_Final, FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Private, FUNC_NetServer, FUNC_NetValidate)
 
-	void UStanceComponent::ServerForceInitStance() {
+	void UStanceComponent::ServerForceInitStance()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xbae67b5d);
 
@@ -19265,7 +20166,8 @@ namespace Classes {
 	// Parameters:
 	// TEnumAsByte<EStanceMode>       ToStance                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UStanceComponent::ServerChangeStance(TEnumAsByte<EStanceMode> ToStance) {
+	void UStanceComponent::ServerChangeStance(TEnumAsByte<EStanceMode> ToStance)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5c8dfe2a);
 
@@ -19284,7 +20186,8 @@ namespace Classes {
 	// Function TslGame.StanceComponent.OnRep_CurrentStance
 	// (FUNC_Native, FUNC_Public)
 
-	void UStanceComponent::OnRep_CurrentStance() {
+	void UStanceComponent::OnRep_CurrentStance()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3f5f2007);
 
@@ -19304,7 +20207,8 @@ namespace Classes {
 	// Parameters:
 	// TEnumAsByte<EStanceMode>       InitStance                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UStanceComponent::ClientInitByReconnection(TEnumAsByte<EStanceMode> InitStance) {
+	void UStanceComponent::ClientInitByReconnection(TEnumAsByte<EStanceMode> InitStance)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x88eb2850);
 
@@ -19325,7 +20229,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslPlayerStart::GetRandomStartYawRotation() {
+	float ATslPlayerStart::GetRandomStartYawRotation()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc20de6a0);
 
@@ -19347,7 +20252,8 @@ namespace Classes {
 	// Parameters:
 	// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FVector ATslPlayerStart::GetRandomStartLocation() {
+	struct FVector ATslPlayerStart::GetRandomStartLocation()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb83cdd00);
 
@@ -19370,7 +20276,8 @@ namespace Classes {
 	// TEnumAsByte<EEquipSlotID>      SlotID                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool AInventoryFacade::IsAutoSwappable(TEnumAsByte<EEquipSlotID> SlotID) {
+	bool AInventoryFacade::IsAutoSwappable(TEnumAsByte<EEquipSlotID> SlotID)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf3c1f76);
 
@@ -19394,7 +20301,8 @@ namespace Classes {
 	// class UClass*                  ItemClass                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool AInventoryFacade::HasItemByClass(class UClass* ItemClass) {
+	bool AInventoryFacade::HasItemByClass(class UClass* ItemClass)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1250b188);
 
@@ -19417,7 +20325,8 @@ namespace Classes {
 	// Parameters:
 	// class UClass*                  ItemClass                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void AInventoryFacade::GiveItem_Admin(class UClass* ItemClass) {
+	void AInventoryFacade::GiveItem_Admin(class UClass* ItemClass)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x385f7d8);
 
@@ -19438,7 +20347,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslCharacter*           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslCharacter* AInventoryFacade::GetOwnerCharacter() {
+	class ATslCharacter* AInventoryFacade::GetOwnerCharacter()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x54a4b77c);
 
@@ -19460,7 +20370,8 @@ namespace Classes {
 	// Parameters:
 	// class AInventory*              ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class AInventory* AInventoryFacade::GetInventory() {
+	class AInventory* AInventoryFacade::GetInventory()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x719a517e);
 
@@ -19482,7 +20393,8 @@ namespace Classes {
 	// Parameters:
 	// class AEquipment*              ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class AEquipment* AInventoryFacade::GetEquipment() {
+	class AEquipment* AInventoryFacade::GetEquipment()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x316da8a2);
 
@@ -19505,7 +20417,8 @@ namespace Classes {
 	// int                            WeaponIndex                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FEquipPosition          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
-	struct FEquipPosition AEquipment::WeaponIndexToEquipPosition(int WeaponIndex) {
+	struct FEquipPosition AEquipment::WeaponIndexToEquipPosition(int WeaponIndex)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa19c7f60);
 
@@ -19532,7 +20445,8 @@ namespace Classes {
 	// TEnumAsByte<EWeaponAttachmentSlotID> AttachmentSlotID               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           bSoundPlay                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void AEquipment::WeaponAttachmentSwap(const struct FEquipPosition& SourceWeapon, const struct FEquipPosition& TargetWeapon, const struct FName& ItemClassForVerify, TEnumAsByte<EWeaponAttachmentSlotID> AttachmentSlotID, bool bSoundPlay) {
+	void AEquipment::WeaponAttachmentSwap(const struct FEquipPosition& SourceWeapon, const struct FEquipPosition& TargetWeapon, const struct FName& ItemClassForVerify, TEnumAsByte<EWeaponAttachmentSlotID> AttachmentSlotID, bool bSoundPlay)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xdf8ce3c2);
 
@@ -19559,7 +20473,8 @@ namespace Classes {
 	// struct FName                   ItemClassForVerify             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           bSoundPlay                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void AEquipment::UnequipItem(const struct FEquipPosition& Position, const struct FName& ItemClassForVerify, bool bSoundPlay) {
+	void AEquipment::UnequipItem(const struct FEquipPosition& Position, const struct FName& ItemClassForVerify, bool bSoundPlay)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x86740fe6);
 
@@ -19584,7 +20499,8 @@ namespace Classes {
 	// bool                           bSoundPlay                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool AEquipment::TryEquipItem(class UItem* Item, bool bSoundPlay) {
+	bool AEquipment::TryEquipItem(class UItem* Item, bool bSoundPlay)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2f9440ac);
 
@@ -19609,7 +20525,8 @@ namespace Classes {
 	// struct FEquipPosition          EquipPosition                  (CPF_Parm)
 	// struct FString                 Options                        (CPF_Parm, CPF_ZeroConstructor)
 
-	void AEquipment::PrimaryWeaponSwap(const struct FEquipPosition& EquipPosition, const struct FString& Options) {
+	void AEquipment::PrimaryWeaponSwap(const struct FEquipPosition& EquipPosition, const struct FString& Options)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x974bdd47);
 
@@ -19629,7 +20546,8 @@ namespace Classes {
 	// Function TslGame.Equipment.Items_RepNotify
 	// (FUNC_Final, FUNC_Native, FUNC_Protected)
 
-	void AEquipment::Items_RepNotify() {
+	void AEquipment::Items_RepNotify()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x94af28c3);
 
@@ -19651,7 +20569,8 @@ namespace Classes {
 	// struct FString                 Options                        (CPF_Parm, CPF_ZeroConstructor)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool AEquipment::IsSwapablePrimaryWeapon(const struct FEquipPosition& EquipPosition, const struct FString& Options) {
+	bool AEquipment::IsSwapablePrimaryWeapon(const struct FEquipPosition& EquipPosition, const struct FString& Options)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x26449c91);
 
@@ -19678,7 +20597,8 @@ namespace Classes {
 	// bool                           bOnlyFree                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool AEquipment::IsAttachableToWeapon(int WeaponIndex, class UAttachableItem* AttachableItem, bool bOnlyFree) {
+	bool AEquipment::IsAttachableToWeapon(int WeaponIndex, class UAttachableItem* AttachableItem, bool bOnlyFree)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x89b19494);
 
@@ -19703,7 +20623,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslCharacter*           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslCharacter* AEquipment::GetOwnerCharacter() {
+	class ATslCharacter* AEquipment::GetOwnerCharacter()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7b516002);
 
@@ -19726,7 +20647,8 @@ namespace Classes {
 	// class UClass*                  ItemClass                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	int AEquipment::GetItemCountByClass(class UClass* ItemClass) {
+	int AEquipment::GetItemCountByClass(class UClass* ItemClass)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x51769f9b);
 
@@ -19750,7 +20672,8 @@ namespace Classes {
 	// struct FEquipPosition          Position                       (CPF_Parm)
 	// class UEquipableItem*          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UEquipableItem* AEquipment::GetItem(const struct FEquipPosition& Position) {
+	class UEquipableItem* AEquipment::GetItem(const struct FEquipPosition& Position)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7417c105);
 
@@ -19773,7 +20696,8 @@ namespace Classes {
 	// Parameters:
 	// class AInventoryFacade*        ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class AInventoryFacade* AEquipment::GetInventoryFacade() {
+	class AInventoryFacade* AEquipment::GetInventoryFacade()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2a76472a);
 
@@ -19796,7 +20720,8 @@ namespace Classes {
 	// class UItem*                   Item                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FEquipPosition          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
-	struct FEquipPosition AEquipment::FindPosition(class UItem* Item) {
+	struct FEquipPosition AEquipment::FindPosition(class UItem* Item)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x44b33834);
 
@@ -19821,7 +20746,8 @@ namespace Classes {
 	// bool                           bOnlyFree                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FEquipPosition          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
-	struct FEquipPosition AEquipment::FindEquipPosition(TEnumAsByte<EEquipSlotID> SlotID, bool bOnlyFree) {
+	struct FEquipPosition AEquipment::FindEquipPosition(TEnumAsByte<EEquipSlotID> SlotID, bool bOnlyFree)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd1f2e6ea);
 
@@ -19847,7 +20773,8 @@ namespace Classes {
 	// struct FString                 Options                        (CPF_Parm, CPF_ZeroConstructor)
 	// struct FEquipPosition          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
-	struct FEquipPosition AEquipment::FindEquipableWeaponPosition(class UEquipableItem* EquipableItem, const struct FString& Options) {
+	struct FEquipPosition AEquipment::FindEquipableWeaponPosition(class UEquipableItem* EquipableItem, const struct FString& Options)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5501f73e);
 
@@ -19873,7 +20800,8 @@ namespace Classes {
 	// struct FString                 Options                        (CPF_Parm, CPF_ZeroConstructor)
 	// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	int AEquipment::FindAttachableWeaponIndex(class UAttachableItem* AttachableItem, const struct FString& Options) {
+	int AEquipment::FindAttachableWeaponIndex(class UAttachableItem* AttachableItem, const struct FString& Options)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1fd79e46);
 
@@ -19898,7 +20826,8 @@ namespace Classes {
 	// struct FEquipPosition          Position                       (CPF_Parm)
 	// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	int AEquipment::EquipPositionToWeaponIndex(const struct FEquipPosition& Position) {
+	int AEquipment::EquipPositionToWeaponIndex(const struct FEquipPosition& Position)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf157e4e);
 
@@ -19925,7 +20854,8 @@ namespace Classes {
 	// bool                           bSoundPlay                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool AEquipment::EquipItem(const struct FEquipPosition& Position, class UEquipableItem* Item, bool bCheckViaCanEquipTo, bool bSoundPlay) {
+	bool AEquipment::EquipItem(const struct FEquipPosition& Position, class UEquipableItem* Item, bool bCheckViaCanEquipTo, bool bSoundPlay)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x269f54a5);
 
@@ -19954,7 +20884,8 @@ namespace Classes {
 	// bool                           bIsForce                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           bSoundPlay                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void AEquipment::DropItem(const struct FEquipPosition& Position, const struct FName& ItemClassForVerify, bool bIsForce, bool bSoundPlay) {
+	void AEquipment::DropItem(const struct FEquipPosition& Position, const struct FName& ItemClassForVerify, bool bIsForce, bool bSoundPlay)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9dffa0c6);
 
@@ -19981,7 +20912,8 @@ namespace Classes {
 	// TEnumAsByte<EWeaponAttachmentSlotID> SlotID                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           bSoundPlay                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void AEquipment::DropAttachedItem(const struct FEquipPosition& EquipPosition, const struct FName& ItemClassForVerify, TEnumAsByte<EWeaponAttachmentSlotID> SlotID, bool bSoundPlay) {
+	void AEquipment::DropAttachedItem(const struct FEquipPosition& EquipPosition, const struct FName& ItemClassForVerify, TEnumAsByte<EWeaponAttachmentSlotID> SlotID, bool bSoundPlay)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xaae18b76);
 
@@ -20008,7 +20940,8 @@ namespace Classes {
 	// TEnumAsByte<EWeaponAttachmentSlotID> SlotID                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           bSoundPlay                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void AEquipment::DetachItem(const struct FEquipPosition& EquipPosition, const struct FName& ItemClassForVerify, TEnumAsByte<EWeaponAttachmentSlotID> SlotID, bool bSoundPlay) {
+	void AEquipment::DetachItem(const struct FEquipPosition& EquipPosition, const struct FName& ItemClassForVerify, TEnumAsByte<EWeaponAttachmentSlotID> SlotID, bool bSoundPlay)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb7eeee64);
 
@@ -20033,7 +20966,8 @@ namespace Classes {
 	// int                            Index                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FName                   ItemClassForVerify             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void AInventory::UseItem(int Index, const struct FName& ItemClassForVerify) {
+	void AInventory::UseItem(int Index, const struct FName& ItemClassForVerify)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd31f8c0c);
 
@@ -20055,7 +20989,8 @@ namespace Classes {
 	// Parameters:
 	// class UObject*                 CastObject                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void AInventory::OnFinishUseCast(class UObject* CastObject) {
+	void AInventory::OnFinishUseCast(class UObject* CastObject)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x8674fa46);
 
@@ -20074,7 +21009,8 @@ namespace Classes {
 	// Function TslGame.Inventory.Items_RepNotify
 	// (FUNC_Final, FUNC_Native, FUNC_Protected)
 
-	void AInventory::Items_RepNotify() {
+	void AInventory::Items_RepNotify()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xeb994cdf);
 
@@ -20094,7 +21030,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslCharacter*           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslCharacter* AInventory::GetOwnerCharacter() {
+	class ATslCharacter* AInventory::GetOwnerCharacter()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5a7463e);
 
@@ -20116,7 +21053,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float AInventory::GetMaxSpace() {
+	float AInventory::GetMaxSpace()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xee077c5c);
 
@@ -20139,7 +21077,8 @@ namespace Classes {
 	// class UClass*                  ItemClass                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	int AInventory::GetItemCountByClass(class UClass* ItemClass) {
+	int AInventory::GetItemCountByClass(class UClass* ItemClass)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1effc947);
 
@@ -20162,7 +21101,8 @@ namespace Classes {
 	// Parameters:
 	// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	int AInventory::GetItemCount() {
+	int AInventory::GetItemCount()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc2ee77f6);
 
@@ -20184,7 +21124,8 @@ namespace Classes {
 	// Parameters:
 	// class AInventoryFacade*        ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class AInventoryFacade* AInventory::GetInventoryFacade() {
+	class AInventoryFacade* AInventory::GetInventoryFacade()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xff9962f6);
 
@@ -20206,7 +21147,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float AInventory::GetCurrentSpace() {
+	float AInventory::GetCurrentSpace()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x95b146eb);
 
@@ -20229,7 +21171,8 @@ namespace Classes {
 	// class UClass*                  ItemSuperClass                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// TArray<struct FInventoryItem>  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<struct FInventoryItem> AInventory::GetAllItemsByType(class UClass* ItemSuperClass) {
+	TArray<struct FInventoryItem> AInventory::GetAllItemsByType(class UClass* ItemSuperClass)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x830822d0);
 
@@ -20252,7 +21195,8 @@ namespace Classes {
 	// Parameters:
 	// TArray<struct FInventoryItem>  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<struct FInventoryItem> AInventory::GetAllItems() {
+	TArray<struct FInventoryItem> AInventory::GetAllItems()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3f66538b);
 
@@ -20275,7 +21219,8 @@ namespace Classes {
 	// class UItem*                   Item                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	int AInventory::GetAdditionalMaxCount(class UItem* Item) {
+	int AInventory::GetAdditionalMaxCount(class UItem* Item)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x380f0f04);
 
@@ -20299,7 +21244,8 @@ namespace Classes {
 	// class UItem*                   Item                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	int AInventory::FindItemIndex(class UItem* Item) {
+	int AInventory::FindItemIndex(class UItem* Item)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb854248);
 
@@ -20323,7 +21269,8 @@ namespace Classes {
 	// class UClass*                  ItemClass                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class UItem*                   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UItem* AInventory::FindItemHasMinStack(class UClass* ItemClass) {
+	class UItem* AInventory::FindItemHasMinStack(class UClass* ItemClass)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2daa3f18);
 
@@ -20347,7 +21294,8 @@ namespace Classes {
 	// class UClass*                  ItemClass                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class UItem*                   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UItem* AInventory::FindItem(class UClass* ItemClass) {
+	class UItem* AInventory::FindItem(class UClass* ItemClass)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1d8b5094);
 
@@ -20372,7 +21320,8 @@ namespace Classes {
 	// struct FName                   ItemClassForVerify             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           bSoundPlay                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void AInventory::EquipOrDropItem(int Index, const struct FName& ItemClassForVerify, bool bSoundPlay) {
+	void AInventory::EquipOrDropItem(int Index, const struct FName& ItemClassForVerify, bool bSoundPlay)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa1a43d7d);
 
@@ -20397,7 +21346,8 @@ namespace Classes {
 	// struct FName                   ItemClassForVerify             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           bSoundPlay                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void AInventory::EquipItem(int Index, const struct FName& ItemClassForVerify, bool bSoundPlay) {
+	void AInventory::EquipItem(int Index, const struct FName& ItemClassForVerify, bool bSoundPlay)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x83cd5e71);
 
@@ -20423,7 +21373,8 @@ namespace Classes {
 	// struct FString                 Options                        (CPF_Parm, CPF_ZeroConstructor)
 	// bool                           bSoundPlay                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void AInventory::DropItem(int Index, const struct FName& ItemClassForVerify, const struct FString& Options, bool bSoundPlay) {
+	void AInventory::DropItem(int Index, const struct FName& ItemClassForVerify, const struct FString& Options, bool bSoundPlay)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4168162a);
 
@@ -20449,7 +21400,8 @@ namespace Classes {
 	// int                            Count                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool AInventory::ConsumeItemByClass(class UClass* ItemClass, int Count) {
+	bool AInventory::ConsumeItemByClass(class UClass* ItemClass, int Count)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x89b75ee4);
 
@@ -20471,7 +21423,8 @@ namespace Classes {
 	// Function TslGame.Inventory.ClientBroadcastNoBagSpaceEvent
 	// (FUNC_Net, FUNC_Native, FUNC_Event, FUNC_Public, FUNC_NetClient)
 
-	void AInventory::ClientBroadcastNoBagSpaceEvent() {
+	void AInventory::ClientBroadcastNoBagSpaceEvent()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xffafe899);
 
@@ -20493,7 +21446,8 @@ namespace Classes {
 	// struct FName                   ItemClassForVerify             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           bSoundPlay                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void AInventory::AttachOrDropItem(int Index, const struct FName& ItemClassForVerify, bool bSoundPlay) {
+	void AInventory::AttachOrDropItem(int Index, const struct FName& ItemClassForVerify, bool bSoundPlay)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe50fc96e);
 
@@ -20519,7 +21473,8 @@ namespace Classes {
 	// struct FEquipPosition          EquipPosition                  (CPF_Parm)
 	// bool                           bSoundPlay                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void AInventory::AttachItem(int Index, const struct FName& ItemClassForVerify, const struct FEquipPosition& EquipPosition, bool bSoundPlay) {
+	void AInventory::AttachItem(int Index, const struct FName& ItemClassForVerify, const struct FEquipPosition& EquipPosition, bool bSoundPlay)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x15a56862);
 
@@ -20541,7 +21496,8 @@ namespace Classes {
 	// Function TslGame.ItemExplorerProxy.PropagateUpdateItemList
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void AItemExplorerProxy::PropagateUpdateItemList() {
+	void AItemExplorerProxy::PropagateUpdateItemList()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xccf1d6af);
 
@@ -20559,7 +21515,8 @@ namespace Classes {
 	// Function TslGame.ItemExplorerProxy.PropagateDestroyContextMenuWidget
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void AItemExplorerProxy::PropagateDestroyContextMenuWidget() {
+	void AItemExplorerProxy::PropagateDestroyContextMenuWidget()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x84318b4f);
 
@@ -20579,7 +21536,8 @@ namespace Classes {
 	// Parameters:
 	// TScriptInterface<class USlotContainerInterface> Param                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void AItemExplorerProxy::PropagateCreateAndShowContextMenuWidget(const TScriptInterface<class USlotContainerInterface>& Param) {
+	void AItemExplorerProxy::PropagateCreateAndShowContextMenuWidget(const TScriptInterface<class USlotContainerInterface>& Param)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa36f40f1);
 
@@ -20598,7 +21556,8 @@ namespace Classes {
 	// Function TslGame.ItemExplorerProxy.Pop
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void AItemExplorerProxy::Pop() {
+	void AItemExplorerProxy::Pop()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf25216a1);
 
@@ -20618,7 +21577,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool AItemExplorerProxy::IsBaseExplorer() {
+	bool AItemExplorerProxy::IsBaseExplorer()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc0202ada);
 
@@ -20640,7 +21600,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ACarePackageItem::IsPickupedItem() {
+	bool ACarePackageItem::IsPickupedItem()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6ef35266);
 
@@ -20662,7 +21623,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ACarePackageItem::IsFalling() {
+	bool ACarePackageItem::IsFalling()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4435b811);
 
@@ -20684,7 +21646,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bNewShowMapMarker              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATeam::ServerSetShowMapMarker(bool bNewShowMapMarker) {
+	void ATeam::ServerSetShowMapMarker(bool bNewShowMapMarker)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x20cd7909);
 
@@ -20705,7 +21668,8 @@ namespace Classes {
 	// Parameters:
 	// struct FVector2D               NewMapMarkerPosition           (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-	void ATeam::ServerSetMapMarkerPosition(const struct FVector2D& NewMapMarkerPosition) {
+	void ATeam::ServerSetMapMarkerPosition(const struct FVector2D& NewMapMarkerPosition)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc8f47661);
 
@@ -20726,7 +21690,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bLastDying                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATeam::OnRep_Dying(bool bLastDying) {
+	void ATeam::OnRep_Dying(bool bLastDying)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x99fb82a1);
 
@@ -20747,7 +21712,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATeam::IsShowMapMarker() {
+	bool ATeam::IsShowMapMarker()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x11233b2e);
 
@@ -20769,7 +21735,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATeam::IsQuitter() {
+	bool ATeam::IsQuitter()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xfcae7e3d);
 
@@ -20791,7 +21758,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATeam::IsGroggying() {
+	bool ATeam::IsGroggying()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9f9eee4);
 
@@ -20813,7 +21781,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATeam::IsDying() {
+	bool ATeam::IsDying()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x17a963c);
 
@@ -20835,7 +21804,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslCharacter*           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslCharacter* ATeam::GetTslCharacter() {
+	class ATslCharacter* ATeam::GetTslCharacter()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x899517dd);
 
@@ -20857,7 +21827,8 @@ namespace Classes {
 	// Parameters:
 	// TEnumAsByte<ETeamVehicleType>  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	TEnumAsByte<ETeamVehicleType> ATeam::GetRideVehicle() {
+	TEnumAsByte<ETeamVehicleType> ATeam::GetRideVehicle()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x51b21763);
 
@@ -20879,7 +21850,8 @@ namespace Classes {
 	// Parameters:
 	// struct FString                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	struct FString ATeam::GetPlayerUniqueId() {
+	struct FString ATeam::GetPlayerUniqueId()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xcc3bf282);
 
@@ -20901,7 +21873,8 @@ namespace Classes {
 	// Parameters:
 	// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FRotator ATeam::GetPlayerRotation() {
+	struct FRotator ATeam::GetPlayerRotation()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa6b08fd6);
 
@@ -20923,7 +21896,8 @@ namespace Classes {
 	// Parameters:
 	// struct FString                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	struct FString ATeam::GetPlayerName() {
+	struct FString ATeam::GetPlayerName()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x92154f5d);
 
@@ -20945,7 +21919,8 @@ namespace Classes {
 	// Parameters:
 	// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FVector ATeam::GetPlayerLocation() {
+	struct FVector ATeam::GetPlayerLocation()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xad3447d9);
 
@@ -20967,7 +21942,8 @@ namespace Classes {
 	// Parameters:
 	// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	int ATeam::GetMemberNumber() {
+	int ATeam::GetMemberNumber()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x743f4052);
 
@@ -20989,7 +21965,8 @@ namespace Classes {
 	// Parameters:
 	// struct FVector2D               ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FVector2D ATeam::GetMapMarkerPosition() {
+	struct FVector2D ATeam::GetMapMarkerPosition()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x8aafc78c);
 
@@ -21011,7 +21988,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATeam::GetHealthMax() {
+	float ATeam::GetHealthMax()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf5d65219);
 
@@ -21033,7 +22011,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATeam::GetHealth() {
+	float ATeam::GetHealth()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc4b428f1);
 
@@ -21055,7 +22034,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATeam::GetGroggyHealthMax() {
+	float ATeam::GetGroggyHealthMax()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x44eb03ee);
 
@@ -21077,7 +22057,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATeam::GetGroggyHealth() {
+	float ATeam::GetGroggyHealth()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5fd4fa14);
 
@@ -21099,7 +22080,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bSimulatePhysics               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslAccessoryComponent::SetPhysicsSimulation(bool bSimulatePhysics) {
+	void UTslAccessoryComponent::SetPhysicsSimulation(bool bSimulatePhysics)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4a189814);
 
@@ -21120,7 +22102,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bSimulatePhysics               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslAccessoryComponent::InitSetupComponent(bool bSimulatePhysics) {
+	void UTslAccessoryComponent::InitSetupComponent(bool bSimulatePhysics)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xef8cda24);
 
@@ -21139,7 +22122,8 @@ namespace Classes {
 	// Function TslGame.TslAIController.ShootEnemy
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ATslAIController::ShootEnemy() {
+	void ATslAIController::ShootEnemy()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x32e4393a);
 
@@ -21160,7 +22144,8 @@ namespace Classes {
 	// class ATslCharacter*           ExcludeEnemy                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslAIController::FindClosestEnemyWithLOS(class ATslCharacter* ExcludeEnemy) {
+	bool ATslAIController::FindClosestEnemyWithLOS(class ATslCharacter* ExcludeEnemy)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x357b96eb);
 
@@ -21181,7 +22166,8 @@ namespace Classes {
 	// Function TslGame.TslAIController.FindClosestEnemy
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ATslAIController::FindClosestEnemy() {
+	void ATslAIController::FindClosestEnemy()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x644f12ef);
 
@@ -21201,7 +22187,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool AAircraftCarePackage::IsPlayInEditor() {
+	bool AAircraftCarePackage::IsPlayInEditor()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xed6648d);
 
@@ -21224,7 +22211,8 @@ namespace Classes {
 	// class ATslCharacter*           Rider                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class UVehicleSeatInteractionComponent* Seat                           (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
-	void ATransportAircraftVehicle::OnRide(class ATslCharacter* Rider, class UVehicleSeatInteractionComponent* Seat) {
+	void ATransportAircraftVehicle::OnRide(class ATslCharacter* Rider, class UVehicleSeatInteractionComponent* Seat)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x55d37c0c);
 
@@ -21244,7 +22232,8 @@ namespace Classes {
 	// Function TslGame.TransportAircraftVehicle.OnLocalPlayerRide
 	// (FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
 
-	void ATransportAircraftVehicle::OnLocalPlayerRide() {
+	void ATransportAircraftVehicle::OnLocalPlayerRide()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2a10b39e);
 
@@ -21261,7 +22250,8 @@ namespace Classes {
 	// Function TslGame.TransportAircraftVehicle.OnLocalPlayerLeave
 	// (FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
 
-	void ATransportAircraftVehicle::OnLocalPlayerLeave() {
+	void ATransportAircraftVehicle::OnLocalPlayerLeave()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xef4e174d);
 
@@ -21281,7 +22271,8 @@ namespace Classes {
 	// class ATslCharacter*           Rider                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class UVehicleSeatInteractionComponent* Seat                           (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
-	void ATransportAircraftVehicle::OnLeave(class ATslCharacter* Rider, class UVehicleSeatInteractionComponent* Seat) {
+	void ATransportAircraftVehicle::OnLeave(class ATslCharacter* Rider, class UVehicleSeatInteractionComponent* Seat)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb2e68da7);
 
@@ -21303,7 +22294,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslCharacter*           Character                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATransportAircraftVehicle::OnInteractBy(class ATslCharacter* Character) {
+	void ATransportAircraftVehicle::OnInteractBy(class ATslCharacter* Character)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x67a92457);
 
@@ -21324,7 +22316,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATransportAircraftVehicle::IsInEjectionArea() {
+	bool ATransportAircraftVehicle::IsInEjectionArea()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5878d674);
 
@@ -21344,7 +22337,8 @@ namespace Classes {
 	// Function TslGame.TransportAircraftVehicle.EnterAtEjectionArea
 	// (FUNC_Final, FUNC_Native, FUNC_Public)
 
-	void ATransportAircraftVehicle::EnterAtEjectionArea() {
+	void ATransportAircraftVehicle::EnterAtEjectionArea()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe78082d2);
 
@@ -21362,7 +22356,8 @@ namespace Classes {
 	// Function TslGame.TransportAircraftVehicle.EjectAll
 	// (FUNC_Final, FUNC_Native, FUNC_Public)
 
-	void ATransportAircraftVehicle::EjectAll() {
+	void ATransportAircraftVehicle::EjectAll()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd4e2a281);
 
@@ -21383,7 +22378,8 @@ namespace Classes {
 	// class ATslCharacter*           Character                      (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATransportAircraftVehicle::AllowInteractBy(class ATslCharacter* Character) {
+	bool ATransportAircraftVehicle::AllowInteractBy(class ATslCharacter* Character)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5f2489a9);
 
@@ -21404,7 +22400,8 @@ namespace Classes {
 	// Function TslGame.TslWheeledVehicle.UpdateWheelSound
 	// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ATslWheeledVehicle::UpdateWheelSound() {
+	void ATslWheeledVehicle::UpdateWheelSound()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x22f87928);
 
@@ -21422,7 +22419,8 @@ namespace Classes {
 	// Function TslGame.TslWheeledVehicle.UpdateWheelCaching
 	// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ATslWheeledVehicle::UpdateWheelCaching() {
+	void ATslWheeledVehicle::UpdateWheelCaching()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2e41cc46);
 
@@ -21440,7 +22438,8 @@ namespace Classes {
 	// Function TslGame.TslWheeledVehicle.UpdateBasicInfoCaching
 	// (FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ATslWheeledVehicle::UpdateBasicInfoCaching() {
+	void ATslWheeledVehicle::UpdateBasicInfoCaching()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x92ffda93);
 
@@ -21460,7 +22459,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslPlayerController*    InController                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslWheeledVehicle::UnBindCallbackToHUD(class ATslPlayerController* InController) {
+	void ATslWheeledVehicle::UnBindCallbackToHUD(class ATslPlayerController* InController)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x420dfdf2);
 
@@ -21481,7 +22481,8 @@ namespace Classes {
 	// Parameters:
 	// float                          DeltaSeconds                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslWheeledVehicle::TickHorn(float DeltaSeconds) {
+	void ATslWheeledVehicle::TickHorn(float DeltaSeconds)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x747b6ad5);
 
@@ -21502,7 +22503,8 @@ namespace Classes {
 	// Parameters:
 	// float                          InInput                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslWheeledVehicle::SetAirControlPitchInput(float InInput) {
+	void ATslWheeledVehicle::SetAirControlPitchInput(float InInput)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf118cf4a);
 
@@ -21523,7 +22525,8 @@ namespace Classes {
 	// Parameters:
 	// struct FHornPlayInfo           InHornPlayInfo                 (CPF_Parm)
 
-	void ATslWheeledVehicle::ServerSetHorn(const struct FHornPlayInfo& InHornPlayInfo) {
+	void ATslWheeledVehicle::ServerSetHorn(const struct FHornPlayInfo& InHornPlayInfo)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xee702e8b);
 
@@ -21544,7 +22547,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bNewBoosting                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslWheeledVehicle::ServerSetBoosting(bool bNewBoosting) {
+	void ATslWheeledVehicle::ServerSetBoosting(bool bNewBoosting)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd59eee5f);
 
@@ -21563,7 +22567,8 @@ namespace Classes {
 	// Function TslGame.TslWheeledVehicle.PlayInstantHorn
 	// (FUNC_Final, FUNC_Native, FUNC_Protected)
 
-	void ATslWheeledVehicle::PlayInstantHorn() {
+	void ATslWheeledVehicle::PlayInstantHorn()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc2782b21);
 
@@ -21584,7 +22589,8 @@ namespace Classes {
 	// bool                           bIsLocalPlay                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// TEnumAsByte<EHornSoundType>    InHornSoundType                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslWheeledVehicle::PlayHorn(bool bIsLocalPlay, TEnumAsByte<EHornSoundType> InHornSoundType) {
+	void ATslWheeledVehicle::PlayHorn(bool bIsLocalPlay, TEnumAsByte<EHornSoundType> InHornSoundType)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc1ca59b4);
 
@@ -21604,7 +22610,8 @@ namespace Classes {
 	// Function TslGame.TslWheeledVehicle.OnVehicleEjected
 	// (FUNC_Native, FUNC_Public)
 
-	void ATslWheeledVehicle::OnVehicleEjected() {
+	void ATslWheeledVehicle::OnVehicleEjected()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x521ce3d2);
 
@@ -21625,7 +22632,8 @@ namespace Classes {
 	// class ATslCharacter*           Rider                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class UVehicleSeatInteractionComponent* Seat                           (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
-	void ATslWheeledVehicle::OnRide(class ATslCharacter* Rider, class UVehicleSeatInteractionComponent* Seat) {
+	void ATslWheeledVehicle::OnRide(class ATslCharacter* Rider, class UVehicleSeatInteractionComponent* Seat)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4b948eb4);
 
@@ -21645,7 +22653,8 @@ namespace Classes {
 	// Function TslGame.TslWheeledVehicle.OnRep_SetHornPlayInfo
 	// (FUNC_Final, FUNC_Native, FUNC_Protected)
 
-	void ATslWheeledVehicle::OnRep_SetHornPlayInfo() {
+	void ATslWheeledVehicle::OnRep_SetHornPlayInfo()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa802e417);
 
@@ -21663,7 +22672,8 @@ namespace Classes {
 	// Function TslGame.TslWheeledVehicle.OnPostDriverRide
 	// (FUNC_Native, FUNC_Public)
 
-	void ATslWheeledVehicle::OnPostDriverRide() {
+	void ATslWheeledVehicle::OnPostDriverRide()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb74ec784);
 
@@ -21681,7 +22691,8 @@ namespace Classes {
 	// Function TslGame.TslWheeledVehicle.OnPostDriverLeave
 	// (FUNC_Native, FUNC_Public)
 
-	void ATslWheeledVehicle::OnPostDriverLeave() {
+	void ATslWheeledVehicle::OnPostDriverLeave()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9f92f30f);
 
@@ -21699,7 +22710,8 @@ namespace Classes {
 	// Function TslGame.TslWheeledVehicle.OnHornKeyUp
 	// (FUNC_Final, FUNC_Native, FUNC_Protected)
 
-	void ATslWheeledVehicle::OnHornKeyUp() {
+	void ATslWheeledVehicle::OnHornKeyUp()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x989c010d);
 
@@ -21717,7 +22729,8 @@ namespace Classes {
 	// Function TslGame.TslWheeledVehicle.OnHornKeyDown
 	// (FUNC_Final, FUNC_Native, FUNC_Protected)
 
-	void ATslWheeledVehicle::OnHornKeyDown() {
+	void ATslWheeledVehicle::OnHornKeyDown()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2e501c0e);
 
@@ -21735,7 +22748,8 @@ namespace Classes {
 	// Function TslGame.TslWheeledVehicle.OnHornEnd
 	// (FUNC_Final, FUNC_Native, FUNC_Protected)
 
-	void ATslWheeledVehicle::OnHornEnd() {
+	void ATslWheeledVehicle::OnHornEnd()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x67c1a618);
 
@@ -21756,7 +22770,8 @@ namespace Classes {
 	// class ATslCharacter*           HitCharacter                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          HitDamage                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslWheeledVehicle::OnCharacterHit(class ATslCharacter* HitCharacter, float HitDamage) {
+	void ATslWheeledVehicle::OnCharacterHit(class ATslCharacter* HitCharacter, float HitDamage)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xbe78f192);
 
@@ -21776,7 +22791,8 @@ namespace Classes {
 	// Function TslGame.TslWheeledVehicle.OnBreak
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void ATslWheeledVehicle::OnBreak() {
+	void ATslWheeledVehicle::OnBreak()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb0c5de27);
 
@@ -21796,7 +22812,8 @@ namespace Classes {
 	// Parameters:
 	// class UWidget*                 Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslWheeledVehicle::OnBlockingWidgetOpened(class UWidget* Widget) {
+	void ATslWheeledVehicle::OnBlockingWidgetOpened(class UWidget* Widget)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd4559e10);
 
@@ -21817,7 +22834,8 @@ namespace Classes {
 	// Parameters:
 	// struct FHornPlayInfo           InHornPlayInfo                 (CPF_Parm)
 
-	void ATslWheeledVehicle::MulticastSetInstantHorn(const struct FHornPlayInfo& InHornPlayInfo) {
+	void ATslWheeledVehicle::MulticastSetInstantHorn(const struct FHornPlayInfo& InHornPlayInfo)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5cf137a1);
 
@@ -21839,7 +22857,8 @@ namespace Classes {
 	// class ATslCharacter*           CharacterHit                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          HitDamage                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslWheeledVehicle::MulticastCharacterHitEffects(class ATslCharacter* CharacterHit, float HitDamage) {
+	void ATslWheeledVehicle::MulticastCharacterHitEffects(class ATslCharacter* CharacterHit, float HitDamage)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x596f862d);
 
@@ -21861,7 +22880,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslWheeledVehicle::IsSunken() {
+	bool ATslWheeledVehicle::IsSunken()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1e252a05);
 
@@ -21883,7 +22903,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslWheeledVehicle::IsStablizeOverrideActive() {
+	bool ATslWheeledVehicle::IsStablizeOverrideActive()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4be88045);
 
@@ -21905,7 +22926,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslWheeledVehicle::IsStabilizeOverrideEnabled() {
+	bool ATslWheeledVehicle::IsStabilizeOverrideEnabled()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x23e82d13);
 
@@ -21927,7 +22949,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslWheeledVehicle::IsInWaterVolume() {
+	bool ATslWheeledVehicle::IsInWaterVolume()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x18024087);
 
@@ -21949,7 +22972,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslWheeledVehicle::IsEnabledOptimizeTick() {
+	bool ATslWheeledVehicle::IsEnabledOptimizeTick()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9bcedede);
 
@@ -21971,7 +22995,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslWheeledVehicle::IsBoosting() {
+	bool ATslWheeledVehicle::IsBoosting()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xbed3ad9a);
 
@@ -21993,7 +23018,8 @@ namespace Classes {
 	// Parameters:
 	// class UTslWheeledVehicleMovement* ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
-	class UTslWheeledVehicleMovement* ATslWheeledVehicle::GetTslVehicleMovement() {
+	class UTslWheeledVehicleMovement* ATslWheeledVehicle::GetTslVehicleMovement()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x91bf4163);
 
@@ -22015,7 +23041,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslWheeledVehicle::GetSteeringInput() {
+	float ATslWheeledVehicle::GetSteeringInput()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3bbadfea);
 
@@ -22037,7 +23064,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslWheeledVehicle::GetCurrentWaterSurfaceZ() {
+	float ATslWheeledVehicle::GetCurrentWaterSurfaceZ()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2c7476a6);
 
@@ -22059,7 +23087,8 @@ namespace Classes {
 	// Parameters:
 	// class UBuffComponet*           ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
-	class UBuffComponet* ATslWheeledVehicle::GetBuffComponent() {
+	class UBuffComponet* ATslWheeledVehicle::GetBuffComponent()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3e6352b1);
 
@@ -22081,7 +23110,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslWheeledVehicle::GetAirControlPitchInput() {
+	float ATslWheeledVehicle::GetAirControlPitchInput()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x405d1106);
 
@@ -22103,7 +23133,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslPlayerController*    InController                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslWheeledVehicle::BindCallbackToHUD(class ATslPlayerController* InController) {
+	void ATslWheeledVehicle::BindCallbackToHUD(class ATslPlayerController* InController)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa5569705);
 
@@ -22126,7 +23157,8 @@ namespace Classes {
 	// class UPrimitiveComponent*     OtherComp                      (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 	// int                            OtherBodyIndex                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslWheeledVehicle::ActivationTriggerEndOverlap(class AActor* Other, class UPrimitiveComponent* OtherComp, int OtherBodyIndex) {
+	void ATslWheeledVehicle::ActivationTriggerEndOverlap(class AActor* Other, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1b2bc797);
 
@@ -22153,7 +23185,8 @@ namespace Classes {
 	// bool                           bFromSweep                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FHitResult              OverlapInfo                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-	void ATslWheeledVehicle::ActivationTriggerBeginOverlap(class AActor* Other, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& OverlapInfo) {
+	void ATslWheeledVehicle::ActivationTriggerBeginOverlap(class AActor* Other, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& OverlapInfo)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3101d50b);
 
@@ -22178,7 +23211,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslFloatingVehicle::IsBoosting() {
+	bool ATslFloatingVehicle::IsBoosting()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xcf2dbb24);
 
@@ -22200,7 +23234,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslFloatingVehicle::GetVehicleEngineImmersionDepth() {
+	float ATslFloatingVehicle::GetVehicleEngineImmersionDepth()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x619dea85);
 
@@ -22222,7 +23257,8 @@ namespace Classes {
 	// Parameters:
 	// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FVector ATslFloatingVehicle::GetVehicleAcceleration() {
+	struct FVector ATslFloatingVehicle::GetVehicleAcceleration()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf78ef37f);
 
@@ -22244,7 +23280,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslFloatingVehicle::GetSteerYawAngle() {
+	float ATslFloatingVehicle::GetSteerYawAngle()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb60e2b7a);
 
@@ -22266,7 +23303,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bSimulate                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslWheeledVehicleMovement::SetSimulateVehicle(bool bSimulate) {
+	void UTslWheeledVehicleMovement::SetSimulateVehicle(bool bSimulate)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3d3b50e2);
 
@@ -22287,7 +23325,8 @@ namespace Classes {
 	// Parameters:
 	// int                            TargetGear                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslWheeledVehicleMovement::ServerUpdateAdditionalState(int TargetGear) {
+	void UTslWheeledVehicleMovement::ServerUpdateAdditionalState(int TargetGear)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x207253f0);
 
@@ -22306,7 +23345,8 @@ namespace Classes {
 	// Function TslGame.TslWheeledVehicleMovement.OnDriverRide
 	// (FUNC_Final, FUNC_Native, FUNC_Public)
 
-	void UTslWheeledVehicleMovement::OnDriverRide() {
+	void UTslWheeledVehicleMovement::OnDriverRide()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x626c3d1b);
 
@@ -22324,7 +23364,8 @@ namespace Classes {
 	// Function TslGame.TslWheeledVehicleMovement.OnDriverLeave
 	// (FUNC_Final, FUNC_Native, FUNC_Public)
 
-	void UTslWheeledVehicleMovement::OnDriverLeave() {
+	void UTslWheeledVehicleMovement::OnDriverLeave()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x74764cba);
 
@@ -22342,7 +23383,8 @@ namespace Classes {
 	// Function TslGame.TslWheeledVehicleMovement.OnBreak
 	// (FUNC_Final, FUNC_Native, FUNC_Public)
 
-	void UTslWheeledVehicleMovement::OnBreak() {
+	void UTslWheeledVehicleMovement::OnBreak()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1f9ac814);
 
@@ -22362,7 +23404,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslWheeledVehicleMovement::IsSimulatingVehicle() {
+	bool UTslWheeledVehicleMovement::IsSimulatingVehicle()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3276129d);
 
@@ -22385,7 +23428,8 @@ namespace Classes {
 	// int                            Index                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UTslWheeledVehicleMovement::GetWheelWaterDepth(int Index) {
+	float UTslWheeledVehicleMovement::GetWheelWaterDepth(int Index)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x72c8f361);
 
@@ -22409,7 +23453,8 @@ namespace Classes {
 	// int                            Index                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UTslWheeledVehicleMovement::GetWheelSuspensionMaxRaise(int Index) {
+	float UTslWheeledVehicleMovement::GetWheelSuspensionMaxRaise(int Index)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf4f7fd5c);
 
@@ -22433,7 +23478,8 @@ namespace Classes {
 	// int                            Index                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UTslWheeledVehicleMovement::GetWheelSuspensionMaxDrop(int Index) {
+	float UTslWheeledVehicleMovement::GetWheelSuspensionMaxDrop(int Index)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x8a4c6283);
 
@@ -22457,7 +23503,8 @@ namespace Classes {
 	// int                            Index                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UTslWheeledVehicleMovement::GetWheelRotationSpeed(int Index) {
+	float UTslWheeledVehicleMovement::GetWheelRotationSpeed(int Index)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc7d9ca18);
 
@@ -22480,7 +23527,8 @@ namespace Classes {
 	// Parameters:
 	// TArray<float>                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<float> UTslWheeledVehicleMovement::GetWheelHealthPercentages() {
+	TArray<float> UTslWheeledVehicleMovement::GetWheelHealthPercentages()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf5a39126);
 
@@ -22507,7 +23555,8 @@ namespace Classes {
 	// float                          SuspOffsetForContact           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// TEnumAsByte<EWheelContactType> ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	TEnumAsByte<EWheelContactType> UTslWheeledVehicleMovement::GetWheelContactType(int Index, float MinVelocity, float MinSkid, float MinSpin, float SuspOffsetForContact) {
+	TEnumAsByte<EWheelContactType> UTslWheeledVehicleMovement::GetWheelContactType(int Index, float MinVelocity, float MinSkid, float MinSpin, float SuspOffsetForContact)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xfc39a767);
 
@@ -22535,7 +23584,8 @@ namespace Classes {
 	// int                            Index                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class UPhysicalMaterial*       ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UPhysicalMaterial* UTslWheeledVehicleMovement::GetWheelContactSurfaceMaterial(int Index) {
+	class UPhysicalMaterial* UTslWheeledVehicleMovement::GetWheelContactSurfaceMaterial(int Index)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x388370bf);
 
@@ -22563,7 +23613,8 @@ namespace Classes {
 	// float                          SuspOffsetForContact           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FWheelContactData       ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
-	struct FWheelContactData UTslWheeledVehicleMovement::GetWheelContactData(int Index, float MinVelocity, float MinSkid, float MinSpin, float SuspOffsetForContact) {
+	struct FWheelContactData UTslWheeledVehicleMovement::GetWheelContactData(int Index, float MinVelocity, float MinSkid, float MinSpin, float SuspOffsetForContact)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd407b1af);
 
@@ -22590,7 +23641,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UTslWheeledVehicleMovement::GetThrottleInput() {
+	float UTslWheeledVehicleMovement::GetThrottleInput()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6195a36c);
 
@@ -22612,7 +23664,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UTslWheeledVehicleMovement::GetSteeringInputClamped() {
+	float UTslWheeledVehicleMovement::GetSteeringInputClamped()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x94e22693);
 
@@ -22634,7 +23687,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UTslWheeledVehicleMovement::GetSteeringInput() {
+	float UTslWheeledVehicleMovement::GetSteeringInput()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x293627c3);
 
@@ -22656,7 +23710,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UTslWheeledVehicleMovement::GetHandbrakeInput() {
+	float UTslWheeledVehicleMovement::GetHandbrakeInput()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xad1dac64);
 
@@ -22678,7 +23733,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UTslWheeledVehicleMovement::GetBrakeInput() {
+	float UTslWheeledVehicleMovement::GetBrakeInput()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe61260f7);
 
@@ -22700,7 +23756,8 @@ namespace Classes {
 	// Parameters:
 	// int                            WheelIndex                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslWheeledVehicleMovement::ClientPunctureTire(int WheelIndex) {
+	void UTslWheeledVehicleMovement::ClientPunctureTire(int WheelIndex)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4ae8ebe5);
 
@@ -22723,7 +23780,8 @@ namespace Classes {
 	// float                          InRotationInput                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           bInIsBoosting                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslFloatingVehicleMovement::ServerUpdateInput(float InForwardInput, float InRotationInput, bool bInIsBoosting) {
+	void UTslFloatingVehicleMovement::ServerUpdateInput(float InForwardInput, float InRotationInput, bool bInIsBoosting)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3a8f80c);
 
@@ -22744,7 +23802,8 @@ namespace Classes {
 	// Function TslGame.TslFloatingVehicleMovement.OnDriverLeave
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void UTslFloatingVehicleMovement::OnDriverLeave() {
+	void UTslFloatingVehicleMovement::OnDriverLeave()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa787ab0);
 
@@ -22764,7 +23823,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslFloatingVehicleMovement::IsBoosting() {
+	bool UTslFloatingVehicleMovement::IsBoosting()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1624b1f5);
 
@@ -22786,7 +23846,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UTslFloatingVehicleMovement::GetRotationYawAngle() {
+	float UTslFloatingVehicleMovement::GetRotationYawAngle()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x451d92e);
 
@@ -22808,7 +23869,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UTslFloatingVehicleMovement::GetMaxRotationYawAngle() {
+	float UTslFloatingVehicleMovement::GetMaxRotationYawAngle()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf9bd0d58);
 
@@ -22830,7 +23892,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UTslFloatingVehicleMovement::GetMaxAcceleration() {
+	float UTslFloatingVehicleMovement::GetMaxAcceleration()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa1ae1fa8);
 
@@ -22852,7 +23915,8 @@ namespace Classes {
 	// Parameters:
 	// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FVector UTslFloatingVehicleMovement::GetCalculatedAcceleration() {
+	struct FVector UTslFloatingVehicleMovement::GetCalculatedAcceleration()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xeb7eaee);
 
@@ -22874,7 +23938,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UTslFloatingVehicleMovement::GetAcceleration() {
+	float UTslFloatingVehicleMovement::GetAcceleration()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x57caa446);
 
@@ -22896,7 +23961,8 @@ namespace Classes {
 	// Parameters:
 	// struct FVaultingTask           InVaultTask                    (CPF_Parm)
 
-	void UTslCharacterMovement::StartVaultingTask(const struct FVaultingTask& InVaultTask) {
+	void UTslCharacterMovement::StartVaultingTask(const struct FVaultingTask& InVaultTask)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x67f626e);
 
@@ -22917,7 +23983,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UTslCharacterMovement::GetVTimer() {
+	float UTslCharacterMovement::GetVTimer()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4d1a43fc);
 
@@ -22940,7 +24007,8 @@ namespace Classes {
 	// TEnumAsByte<EVaultAnimType>    InVaultType                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class UVaultingData*           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UVaultingData* UTslCharacterMovement::GetVaultingDataFromAnim(TEnumAsByte<EVaultAnimType> InVaultType) {
+	class UVaultingData* UTslCharacterMovement::GetVaultingDataFromAnim(TEnumAsByte<EVaultAnimType> InVaultType)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x99f9c5a2);
 
@@ -22963,7 +24031,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UTslCharacterMovement::GetGlobalVaultingSpeedMultiplier() {
+	float UTslCharacterMovement::GetGlobalVaultingSpeedMultiplier()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4f8cbc94);
 
@@ -22985,7 +24054,8 @@ namespace Classes {
 	// Parameters:
 	// TEnumAsByte<EVaultAnimType>    ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	TEnumAsByte<EVaultAnimType> UTslCharacterMovement::GetCurrentVaultType() {
+	TEnumAsByte<EVaultAnimType> UTslCharacterMovement::GetCurrentVaultType()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf57ac0c0);
 
@@ -23013,7 +24083,8 @@ namespace Classes {
 	// float                          CharVelocity                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// TEnumAsByte<EVaultAnimType>    ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	TEnumAsByte<EVaultAnimType> UTslCharacterMovement::EvaluateVaultAnimType(int FirstRow, int ApexAdditiveStepCounter, float AverageCellCount, bool bForceVault, bool bForceClimb, float CharVelocity) {
+	TEnumAsByte<EVaultAnimType> UTslCharacterMovement::EvaluateVaultAnimType(int FirstRow, int ApexAdditiveStepCounter, float AverageCellCount, bool bForceVault, bool bForceClimb, float CharVelocity)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x52f9b0f1);
 
@@ -23041,7 +24112,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslCharacterMovement::EndCurrentTaskToFall() {
+	bool UTslCharacterMovement::EndCurrentTaskToFall()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x61828156);
 
@@ -23063,7 +24135,8 @@ namespace Classes {
 	// Parameters:
 	// float                          Time                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslAnimInstance::SetWeaponStatesEvaluationCooldown(float Time) {
+	void UTslAnimInstance::SetWeaponStatesEvaluationCooldown(float Time)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xafddb12c);
 
@@ -23084,7 +24157,8 @@ namespace Classes {
 	// Parameters:
 	// struct FVector                 newLandVector                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslAnimInstance::SetLandPredictionVector(const struct FVector& newLandVector) {
+	void UTslAnimInstance::SetLandPredictionVector(const struct FVector& newLandVector)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x59a11e2);
 
@@ -23106,7 +24180,8 @@ namespace Classes {
 	// struct FVector                 NewLocation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          DefaultFallHeight              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslAnimInstance::SetJumpStartLocation(const struct FVector& NewLocation, float DefaultFallHeight) {
+	void UTslAnimInstance::SetJumpStartLocation(const struct FVector& NewLocation, float DefaultFallHeight)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x174cf670);
 
@@ -23126,7 +24201,8 @@ namespace Classes {
 	// Function TslGame.TslAnimInstance.ResetRecoilRoll
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslAnimInstance::ResetRecoilRoll() {
+	void UTslAnimInstance::ResetRecoilRoll()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x25a56c81);
 
@@ -23144,7 +24220,8 @@ namespace Classes {
 	// Function TslGame.TslAnimInstance.ResetIdle
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslAnimInstance::ResetIdle() {
+	void UTslAnimInstance::ResetIdle()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb271f8b8);
 
@@ -23164,7 +24241,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ExludeLastIndex                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslAnimInstance::RandomizeIdleIndex_CP(bool ExludeLastIndex) {
+	void UTslAnimInstance::RandomizeIdleIndex_CP(bool ExludeLastIndex)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7642d92a);
 
@@ -23183,7 +24261,8 @@ namespace Classes {
 	// Function TslGame.TslAnimInstance.ProcessCodePaths
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslAnimInstance::ProcessCodePaths() {
+	void UTslAnimInstance::ProcessCodePaths()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5e35c999);
 
@@ -23201,7 +24280,8 @@ namespace Classes {
 	// Function TslGame.TslAnimInstance.PreEvaluatePawnState
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslAnimInstance::PreEvaluatePawnState() {
+	void UTslAnimInstance::PreEvaluatePawnState()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc33267f6);
 
@@ -23223,7 +24303,8 @@ namespace Classes {
 	// struct FName                   BoneName                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FVector                 Direction                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslAnimInstance::OnHitReaction(TEnumAsByte<EAnimWeaponType> WeaponType, const struct FName& BoneName, const struct FVector& Direction) {
+	void UTslAnimInstance::OnHitReaction(TEnumAsByte<EAnimWeaponType> WeaponType, const struct FName& BoneName, const struct FVector& Direction)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb808c2c8);
 
@@ -23243,7 +24324,8 @@ namespace Classes {
 	// Function TslGame.TslAnimInstance.HandleSpeedAndDirection_CP
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslAnimInstance::HandleSpeedAndDirection_CP() {
+	void UTslAnimInstance::HandleSpeedAndDirection_CP()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x8437fe4c);
 
@@ -23264,7 +24346,8 @@ namespace Classes {
 	// float                          InDirection                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// unsigned char                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	unsigned char UTslAnimInstance::HandleCardinalDirection90(float InDirection) {
+	unsigned char UTslAnimInstance::HandleCardinalDirection90(float InDirection)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x61ce7f69);
 
@@ -23285,7 +24368,8 @@ namespace Classes {
 	// Function TslGame.TslAnimInstance.HandleAnimCurves
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslAnimInstance::HandleAnimCurves() {
+	void UTslAnimInstance::HandleAnimCurves()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4f5d1ec4);
 
@@ -23303,7 +24387,8 @@ namespace Classes {
 	// Function TslGame.TslAnimInstance.HandleADSSocketOffset
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslAnimInstance::HandleADSSocketOffset() {
+	void UTslAnimInstance::HandleADSSocketOffset()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xca973bfd);
 
@@ -23325,7 +24410,8 @@ namespace Classes {
 	// class UAnimSequenceBase*       InAnimSequence                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UTslAnimInstance::FindPositionFromDistanceCurve(float Distance, class UAnimSequenceBase* InAnimSequence) {
+	float UTslAnimInstance::FindPositionFromDistanceCurve(float Distance, class UAnimSequenceBase* InAnimSequence)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf175086d);
 
@@ -23347,7 +24433,8 @@ namespace Classes {
 	// Function TslGame.TslAnimInstance.EvaluateWeaponStates
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslAnimInstance::EvaluateWeaponStates() {
+	void UTslAnimInstance::EvaluateWeaponStates()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xdc7e9aaa);
 
@@ -23365,7 +24452,8 @@ namespace Classes {
 	// Function TslGame.TslAnimInstance.EvaluateWeaponStability
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslAnimInstance::EvaluateWeaponStability() {
+	void UTslAnimInstance::EvaluateWeaponStability()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xec19cd0d);
 
@@ -23383,7 +24471,8 @@ namespace Classes {
 	// Function TslGame.TslAnimInstance.EvaluateWeaponInertia
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslAnimInstance::EvaluateWeaponInertia() {
+	void UTslAnimInstance::EvaluateWeaponInertia()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x63ad0536);
 
@@ -23401,7 +24490,8 @@ namespace Classes {
 	// Function TslGame.TslAnimInstance.EvaluateWeaponCollision
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslAnimInstance::EvaluateWeaponCollision() {
+	void UTslAnimInstance::EvaluateWeaponCollision()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9e52eb04);
 
@@ -23419,7 +24509,8 @@ namespace Classes {
 	// Function TslGame.TslAnimInstance.EvaluateVehicle
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslAnimInstance::EvaluateVehicle() {
+	void UTslAnimInstance::EvaluateVehicle()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe8bf03d0);
 
@@ -23437,7 +24528,8 @@ namespace Classes {
 	// Function TslGame.TslAnimInstance.EvaluateVaulting
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslAnimInstance::EvaluateVaulting() {
+	void UTslAnimInstance::EvaluateVaulting()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd5a4767c);
 
@@ -23455,7 +24547,8 @@ namespace Classes {
 	// Function TslGame.TslAnimInstance.EvaluateSwimming
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslAnimInstance::EvaluateSwimming() {
+	void UTslAnimInstance::EvaluateSwimming()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x152f787f);
 
@@ -23473,7 +24566,8 @@ namespace Classes {
 	// Function TslGame.TslAnimInstance.EvaluateRotations
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslAnimInstance::EvaluateRotations() {
+	void UTslAnimInstance::EvaluateRotations()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x27b5e91d);
 
@@ -23491,7 +24585,8 @@ namespace Classes {
 	// Function TslGame.TslAnimInstance.EvaluateRecoilRoll
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslAnimInstance::EvaluateRecoilRoll() {
+	void UTslAnimInstance::EvaluateRecoilRoll()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xce8e5bbb);
 
@@ -23509,7 +24604,8 @@ namespace Classes {
 	// Function TslGame.TslAnimInstance.EvaluatePawnStates
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslAnimInstance::EvaluatePawnStates() {
+	void UTslAnimInstance::EvaluatePawnStates()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4478d3d8);
 
@@ -23527,7 +24623,8 @@ namespace Classes {
 	// Function TslGame.TslAnimInstance.EvaluateMeleeAttack
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslAnimInstance::EvaluateMeleeAttack() {
+	void UTslAnimInstance::EvaluateMeleeAttack()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6dcfe048);
 
@@ -23545,7 +24642,8 @@ namespace Classes {
 	// Function TslGame.TslAnimInstance.EvaluateLocalPawnStates
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslAnimInstance::EvaluateLocalPawnStates() {
+	void UTslAnimInstance::EvaluateLocalPawnStates()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xbbd26979);
 
@@ -23563,7 +24661,8 @@ namespace Classes {
 	// Function TslGame.TslAnimInstance.EvaluateLeaning
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslAnimInstance::EvaluateLeaning() {
+	void UTslAnimInstance::EvaluateLeaning()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe3e7aac0);
 
@@ -23581,7 +24680,8 @@ namespace Classes {
 	// Function TslGame.TslAnimInstance.EvaluateJumping
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslAnimInstance::EvaluateJumping() {
+	void UTslAnimInstance::EvaluateJumping()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1e5a0244);
 
@@ -23599,7 +24699,8 @@ namespace Classes {
 	// Function TslGame.TslAnimInstance.EvaluateJumpCamera
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslAnimInstance::EvaluateJumpCamera() {
+	void UTslAnimInstance::EvaluateJumpCamera()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x27f64001);
 
@@ -23617,7 +24718,8 @@ namespace Classes {
 	// Function TslGame.TslAnimInstance.EvaluateItemOffsets
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslAnimInstance::EvaluateItemOffsets() {
+	void UTslAnimInstance::EvaluateItemOffsets()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2d92ec9f);
 
@@ -23635,7 +24737,8 @@ namespace Classes {
 	// Function TslGame.TslAnimInstance.EvaluateIdle
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslAnimInstance::EvaluateIdle() {
+	void UTslAnimInstance::EvaluateIdle()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x972ad2b6);
 
@@ -23653,7 +24756,8 @@ namespace Classes {
 	// Function TslGame.TslAnimInstance.EvaluateFreelook
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslAnimInstance::EvaluateFreelook() {
+	void UTslAnimInstance::EvaluateFreelook()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x810d3a7f);
 
@@ -23671,7 +24775,8 @@ namespace Classes {
 	// Function TslGame.TslAnimInstance.EvaluateFreefallAndParachute
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslAnimInstance::EvaluateFreefallAndParachute() {
+	void UTslAnimInstance::EvaluateFreefallAndParachute()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x34488d35);
 
@@ -23689,7 +24794,8 @@ namespace Classes {
 	// Function TslGame.TslAnimInstance.EvaluateFallingAndLanding
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslAnimInstance::EvaluateFallingAndLanding() {
+	void UTslAnimInstance::EvaluateFallingAndLanding()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x43b53161);
 
@@ -23707,7 +24813,8 @@ namespace Classes {
 	// Function TslGame.TslAnimInstance.EvaluateCoatExternalForce
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslAnimInstance::EvaluateCoatExternalForce() {
+	void UTslAnimInstance::EvaluateCoatExternalForce()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf512622d);
 
@@ -23725,7 +24832,8 @@ namespace Classes {
 	// Function TslGame.TslAnimInstance.EvaluateCharacterStates
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslAnimInstance::EvaluateCharacterStates() {
+	void UTslAnimInstance::EvaluateCharacterStates()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x482b367b);
 
@@ -23743,7 +24851,8 @@ namespace Classes {
 	// Function TslGame.TslAnimInstance.EvaluateCasting
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslAnimInstance::EvaluateCasting() {
+	void UTslAnimInstance::EvaluateCasting()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2d18d54b);
 
@@ -23761,7 +24870,8 @@ namespace Classes {
 	// Function TslGame.TslAnimInstance.EvaluateAnimDynamics
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslAnimInstance::EvaluateAnimDynamics() {
+	void UTslAnimInstance::EvaluateAnimDynamics()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x42bedec5);
 
@@ -23779,7 +24889,8 @@ namespace Classes {
 	// Function TslGame.TslAnimInstance.EvaluateAimStates
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslAnimInstance::EvaluateAimStates() {
+	void UTslAnimInstance::EvaluateAimStates()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1b9499b1);
 
@@ -23797,7 +24908,8 @@ namespace Classes {
 	// Function TslGame.TslAnimInstance.EvaluateAimOffsets
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslAnimInstance::EvaluateAimOffsets() {
+	void UTslAnimInstance::EvaluateAimOffsets()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x69c46a1d);
 
@@ -23817,7 +24929,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslCharacter*           InCharacter                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslAnimInstance::CacheCharacterReference(class ATslCharacter* InCharacter) {
+	void UTslAnimInstance::CacheCharacterReference(class ATslCharacter* InCharacter)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x990908b5);
 
@@ -23839,7 +24952,8 @@ namespace Classes {
 	// int                            ViewIndex                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class UCoherentUIGTWidget*     Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ALobbyHUD::SetWidgetForBinding(int ViewIndex, class UCoherentUIGTWidget* Widget) {
+	void ALobbyHUD::SetWidgetForBinding(int ViewIndex, class UCoherentUIGTWidget* Widget)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6a2c327);
 
@@ -23861,7 +24975,8 @@ namespace Classes {
 	// Parameters:
 	// struct FString                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	struct FString ALobbyHUD::GetStartUrl() {
+	struct FString ALobbyHUD::GetStartUrl()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7e30f478);
 
@@ -23883,7 +24998,8 @@ namespace Classes {
 	// Parameters:
 	// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	int ALobbyHUD::GetLobbyCharacterNum() {
+	int ALobbyHUD::GetLobbyCharacterNum()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x253dd8be);
 
@@ -23906,7 +25022,8 @@ namespace Classes {
 	// int                            SlotIndex                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class ALobbyCharacter*         ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ALobbyCharacter* ALobbyHUD::GetLobbyCharacter(int SlotIndex) {
+	class ALobbyCharacter* ALobbyHUD::GetLobbyCharacter(int SlotIndex)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x38e02806);
 
@@ -23927,11 +25044,53 @@ namespace Classes {
 	// Function TslGame.LobbyHUD.ClearAllWidget
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ALobbyHUD::ClearAllWidget() {
+	void ALobbyHUD::ClearAllWidget()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd6324ff5);
 
 		ALobbyHUD_ClearAllWidget_Params params;
+
+		auto flags = fn->FunctionFlags;
+		fn->FunctionFlags |= 0x400;
+
+		UObject::ProcessEvent(fn, &params);
+
+		fn->FunctionFlags = flags;
+	}
+
+
+	// Function TslGame.TslEntryPlayerController.LoadReplay
+	// (FUNC_Final, FUNC_Exec, FUNC_Native, FUNC_Private)
+	// Parameters:
+	// struct FString                 SessionName                    (CPF_Parm, CPF_ZeroConstructor)
+
+	void ATslEntryPlayerController::LoadReplay(const struct FString& SessionName)
+	{
+		static UFunction* fn = nullptr;
+		if (!fn) fn = UObject::FindObject<UFunction>(0xe1e0d77d);
+
+		ATslEntryPlayerController_LoadReplay_Params params;
+		params.SessionName = SessionName;
+
+		auto flags = fn->FunctionFlags;
+		fn->FunctionFlags |= 0x400;
+
+		UObject::ProcessEvent(fn, &params);
+
+		fn->FunctionFlags = flags;
+	}
+
+
+	// Function TslGame.TslEntryPlayerController.HandleClipboard
+	// (FUNC_Final, FUNC_Native, FUNC_Private)
+
+	void ATslEntryPlayerController::HandleClipboard()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn) fn = UObject::FindObject<UFunction>(0xfc554f4);
+
+		ATslEntryPlayerController_HandleClipboard_Params params;
 
 		auto flags = fn->FunctionFlags;
 		fn->FunctionFlags |= 0x400;
@@ -23947,7 +25106,8 @@ namespace Classes {
 	// Parameters:
 	// struct FVector                 Location                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void APerfBotPlayerController::ServerMoveToLocation(const struct FVector& Location) {
+	void APerfBotPlayerController::ServerMoveToLocation(const struct FVector& Location)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4863a1ed);
 
@@ -23966,7 +25126,8 @@ namespace Classes {
 	// Function TslGame.PerfBotPlayerController.ClientQuit
 	// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Public, FUNC_NetClient)
 
-	void APerfBotPlayerController::ClientQuit() {
+	void APerfBotPlayerController::ClientQuit()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc62fee5);
 
@@ -23986,7 +25147,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslCharacter*           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslCharacter* ACharacterBreathBuff::GetCharacter() {
+	class ATslCharacter* ACharacterBreathBuff::GetCharacter()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd84ab20d);
 
@@ -24008,7 +25170,8 @@ namespace Classes {
 	// Parameters:
 	// class UCharacterBreathComponent* ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
-	class UCharacterBreathComponent* ACharacterBreathBuff::GetBreathComponent() {
+	class UCharacterBreathComponent* ACharacterBreathBuff::GetBreathComponent()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xadfdd483);
 
@@ -24028,7 +25191,8 @@ namespace Classes {
 	// Function TslGame.TslCharacterProxy.UpdateEquippedWeapons
 	// (FUNC_Final, FUNC_Native, FUNC_Public)
 
-	void ATslCharacterProxy::UpdateEquippedWeapons() {
+	void ATslCharacterProxy::UpdateEquippedWeapons()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa7340ca5);
 
@@ -24046,7 +25210,8 @@ namespace Classes {
 	// Function TslGame.TslCharacterProxy.UpdateCharacterAppearance
 	// (FUNC_Final, FUNC_Native, FUNC_Public)
 
-	void ATslCharacterProxy::UpdateCharacterAppearance() {
+	void ATslCharacterProxy::UpdateCharacterAppearance()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5c41e278);
 
@@ -24064,7 +25229,8 @@ namespace Classes {
 	// Function TslGame.TslCharacterProxy.UpdateArmedWeapons
 	// (FUNC_Final, FUNC_Native, FUNC_Public)
 
-	void ATslCharacterProxy::UpdateArmedWeapons() {
+	void ATslCharacterProxy::UpdateArmedWeapons()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc1f4bde9);
 
@@ -24085,7 +25251,8 @@ namespace Classes {
 	// class UTslAccessoryComponent*  AccessoryComponent             (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 	// TEnumAsByte<EAccessorySlot>    Slot                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslCharacterProxy::SetAccessorySlot(class UTslAccessoryComponent* AccessoryComponent, TEnumAsByte<EAccessorySlot> Slot) {
+	void ATslCharacterProxy::SetAccessorySlot(class UTslAccessoryComponent* AccessoryComponent, TEnumAsByte<EAccessorySlot> Slot)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x99a392fc);
 
@@ -24108,7 +25275,8 @@ namespace Classes {
 	// TEnumAsByte<EAccessorySlot>    Slot                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class UTslAccessoryComponent*  ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
-	class UTslAccessoryComponent* ATslCharacterProxy::GetAccessorySlot(TEnumAsByte<EAccessorySlot> Slot) {
+	class UTslAccessoryComponent* ATslCharacterProxy::GetAccessorySlot(TEnumAsByte<EAccessorySlot> Slot)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x12c1db90);
 
@@ -24129,7 +25297,8 @@ namespace Classes {
 	// Function TslGame.TslCheatManager.ToggleVisibilityOfDestructibleComponents
 	// (FUNC_Final, FUNC_Exec, FUNC_Native, FUNC_Public)
 
-	void UTslCheatManager::ToggleVisibilityOfDestructibleComponents() {
+	void UTslCheatManager::ToggleVisibilityOfDestructibleComponents()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6236da3c);
 
@@ -24147,7 +25316,8 @@ namespace Classes {
 	// Function TslGame.TslCheatManager.ToggleMatchTimer
 	// (FUNC_Final, FUNC_Exec, FUNC_Native, FUNC_Public)
 
-	void UTslCheatManager::ToggleMatchTimer() {
+	void UTslCheatManager::ToggleMatchTimer()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc98b9cb7);
 
@@ -24165,7 +25335,8 @@ namespace Classes {
 	// Function TslGame.TslCheatManager.ToggleCollisionOfDestructibleComponents
 	// (FUNC_Final, FUNC_Exec, FUNC_Native, FUNC_Public)
 
-	void UTslCheatManager::ToggleCollisionOfDestructibleComponents() {
+	void UTslCheatManager::ToggleCollisionOfDestructibleComponents()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3f04f4ee);
 
@@ -24183,7 +25354,8 @@ namespace Classes {
 	// Function TslGame.TslCheatManager.TestVoiceAccessToken
 	// (FUNC_Final, FUNC_Exec, FUNC_Native, FUNC_Public)
 
-	void UTslCheatManager::TestVoiceAccessToken() {
+	void UTslCheatManager::TestVoiceAccessToken()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe2513686);
 
@@ -24201,7 +25373,8 @@ namespace Classes {
 	// Function TslGame.TslCheatManager.SpawnBot
 	// (FUNC_Final, FUNC_Exec, FUNC_Native, FUNC_Public)
 
-	void UTslCheatManager::SpawnBot() {
+	void UTslCheatManager::SpawnBot()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd0c451c1);
 
@@ -24223,7 +25396,8 @@ namespace Classes {
 	// float                          AngularInterpAlpha             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          AngularRecipFixTime            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslCheatManager::SetVehicleRepRotCorrection(float AngularDeltaThreshold, float AngularInterpAlpha, float AngularRecipFixTime) {
+	void UTslCheatManager::SetVehicleRepRotCorrection(float AngularDeltaThreshold, float AngularInterpAlpha, float AngularRecipFixTime)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xfd32b3d1);
 
@@ -24249,7 +25423,8 @@ namespace Classes {
 	// float                          LinearRecipFixTime             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          BodySpeedThresholdSq           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslCheatManager::SetVehicleRepPosCorrection(float LinearDeltaThresholdSq, float LinearInterpAlpha, float LinearRecipFixTime, float BodySpeedThresholdSq) {
+	void UTslCheatManager::SetVehicleRepPosCorrection(float LinearDeltaThresholdSq, float LinearInterpAlpha, float LinearRecipFixTime, float BodySpeedThresholdSq)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x106b3c40);
 
@@ -24275,7 +25450,8 @@ namespace Classes {
 	// float                          Pitch                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          RevertSmoothSpeed              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslCheatManager::SetSpectatorYawAndPitch(float Yaw, float Pitch, float RevertSmoothSpeed) {
+	void UTslCheatManager::SetSpectatorYawAndPitch(float Yaw, float Pitch, float RevertSmoothSpeed)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc570fabc);
 
@@ -24298,7 +25474,8 @@ namespace Classes {
 	// Parameters:
 	// float                          TimeoutSeconds                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslCheatManager::SetClientConnectionTimeout(float TimeoutSeconds) {
+	void UTslCheatManager::SetClientConnectionTimeout(float TimeoutSeconds)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x238305bf);
 
@@ -24317,7 +25494,8 @@ namespace Classes {
 	// Function TslGame.TslCheatManager.ReturnLookAt
 	// (FUNC_Final, FUNC_Exec, FUNC_Native, FUNC_Public)
 
-	void UTslCheatManager::ReturnLookAt() {
+	void UTslCheatManager::ReturnLookAt()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe052a849);
 
@@ -24339,7 +25517,8 @@ namespace Classes {
 	// float                          Y                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          Z                              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslCheatManager::MoveVehicleOnClient(float X, float Y, float Z) {
+	void UTslCheatManager::MoveVehicleOnClient(float X, float Y, float Z)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe7354064);
 
@@ -24364,7 +25543,8 @@ namespace Classes {
 	// float                          Yaw                            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          Roll                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslCheatManager::LookAt(float Pitch, float Yaw, float Roll) {
+	void UTslCheatManager::LookAt(float Pitch, float Yaw, float Roll)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x46a0554b);
 
@@ -24385,7 +25565,8 @@ namespace Classes {
 	// Function TslGame.TslCheatManager.InsertCrashMeCommand
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void UTslCheatManager::InsertCrashMeCommand() {
+	void UTslCheatManager::InsertCrashMeCommand()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2f127928);
 
@@ -24403,7 +25584,8 @@ namespace Classes {
 	// Function TslGame.TslCheatManager.ForceMatchStart
 	// (FUNC_Final, FUNC_Exec, FUNC_Native, FUNC_Public)
 
-	void UTslCheatManager::ForceMatchStart() {
+	void UTslCheatManager::ForceMatchStart()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x16039483);
 
@@ -24421,7 +25603,8 @@ namespace Classes {
 	// Function TslGame.TslCheatManager.DumpVoiceDevices
 	// (FUNC_Final, FUNC_Exec, FUNC_Native, FUNC_Public)
 
-	void UTslCheatManager::DumpVoiceDevices() {
+	void UTslCheatManager::DumpVoiceDevices()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2b059200);
 
@@ -24439,7 +25622,8 @@ namespace Classes {
 	// Function TslGame.TslCheatManager.DumpReplicatedItems
 	// (FUNC_Final, FUNC_Exec, FUNC_Native, FUNC_Public)
 
-	void UTslCheatManager::DumpReplicatedItems() {
+	void UTslCheatManager::DumpReplicatedItems()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2d5589c8);
 
@@ -24457,7 +25641,8 @@ namespace Classes {
 	// Function TslGame.TslCheatManager.DumpDestructibleComponents
 	// (FUNC_Final, FUNC_Exec, FUNC_Native, FUNC_Public)
 
-	void UTslCheatManager::DumpDestructibleComponents() {
+	void UTslCheatManager::DumpDestructibleComponents()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x983bdfd1);
 
@@ -24475,7 +25660,8 @@ namespace Classes {
 	// Function TslGame.TslCheatManager.DrawVehicleCenterOfMass
 	// (FUNC_Final, FUNC_Exec, FUNC_Native, FUNC_Public)
 
-	void UTslCheatManager::DrawVehicleCenterOfMass() {
+	void UTslCheatManager::DrawVehicleCenterOfMass()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x84a417ed);
 
@@ -24495,7 +25681,8 @@ namespace Classes {
 	// Parameters:
 	// float                          DelaySeconds                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslCheatManager::DelayCrash(float DelaySeconds) {
+	void UTslCheatManager::DelayCrash(float DelaySeconds)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1b149ee3);
 
@@ -24516,7 +25703,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           OnOff                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslCheatManager::CtrlShortCutOnOff(bool OnOff) {
+	void UTslCheatManager::CtrlShortCutOnOff(bool OnOff)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe6eef3ba);
 
@@ -24535,7 +25723,8 @@ namespace Classes {
 	// Function TslGame.TslCheatManager.CopyDebugInfo
 	// (FUNC_Final, FUNC_Exec, FUNC_Native, FUNC_Public)
 
-	void UTslCheatManager::CopyDebugInfo() {
+	void UTslCheatManager::CopyDebugInfo()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x766beb9b);
 
@@ -24555,7 +25744,8 @@ namespace Classes {
 	// Parameters:
 	// struct FString                 Msg                            (CPF_Parm, CPF_ZeroConstructor)
 
-	void UTslCheatManager::Cheat(const struct FString& Msg) {
+	void UTslCheatManager::Cheat(const struct FString& Msg)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6bf743ca);
 
@@ -24576,7 +25766,8 @@ namespace Classes {
 	// Parameters:
 	// int                            NewTeamNumber                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslCheatManager::ChangeTeam(int NewTeamNumber) {
+	void UTslCheatManager::ChangeTeam(int NewTeamNumber)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa04b86ae);
 
@@ -24595,7 +25786,8 @@ namespace Classes {
 	// Function TslGame.TslCoherentWidget.GoBack
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslCoherentWidget::GoBack() {
+	void UTslCoherentWidget::GoBack()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9e1b31d6);
 
@@ -24618,7 +25810,8 @@ namespace Classes {
 	// class AController*             EventInstigator                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class AActor*                  DamageCauser                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslDestructibleComponent::ClientReceiveComponentDamage(float DamageAmount, const struct FDamageEvent& DamageEvent, class AController* EventInstigator, class AActor* DamageCauser) {
+	void UTslDestructibleComponent::ClientReceiveComponentDamage(float DamageAmount, const struct FDamageEvent& DamageEvent, class AController* EventInstigator, class AActor* DamageCauser)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6d3ceffe);
 
@@ -24640,7 +25833,8 @@ namespace Classes {
 	// Function TslGame.TslDestructibleContainer.OnRep_Flag
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void ATslDestructibleContainer::OnRep_Flag() {
+	void ATslDestructibleContainer::OnRep_Flag()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x285a2139);
 
@@ -24658,7 +25852,8 @@ namespace Classes {
 	// Function TslGame.TslDoor.OnRep_DoorOpened
 	// (FUNC_Final, FUNC_Native, FUNC_Protected)
 
-	void ATslDoor::OnRep_DoorOpened() {
+	void ATslDoor::OnRep_DoorOpened()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x653217bf);
 
@@ -24676,7 +25871,8 @@ namespace Classes {
 	// Function TslGame.TslDoor.OnRep_DoorBreakingState
 	// (FUNC_Final, FUNC_Native, FUNC_Protected)
 
-	void ATslDoor::OnRep_DoorBreakingState() {
+	void ATslDoor::OnRep_DoorBreakingState()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4b8c1e02);
 
@@ -24696,7 +25892,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslCharacter*           OtherCharacter                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslDoor::OnInteractBy(class ATslCharacter* OtherCharacter) {
+	void ATslDoor::OnInteractBy(class ATslCharacter* OtherCharacter)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xce1968dd);
 
@@ -24720,7 +25917,8 @@ namespace Classes {
 	// float                          DamageRadius                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          Impulse                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslDoor::ClientTakeDamage(float Damage, const struct FVector_NetQuantize& HitLocation, float DamageRadius, float Impulse) {
+	void ATslDoor::ClientTakeDamage(float Damage, const struct FVector_NetQuantize& HitLocation, float DamageRadius, float Impulse)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3eee3a00);
 
@@ -24751,7 +25949,8 @@ namespace Classes {
 	// struct FVector                 Normal                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FName                   BoneName                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslExplosionEffect::OnParticleCollide(const struct FName& EventName, float EmitterTime, int ParticleTime, const struct FVector& Location, const struct FVector& Velocity, const struct FVector& Direction, const struct FVector& Normal, const struct FName& BoneName) {
+	void ATslExplosionEffect::OnParticleCollide(const struct FName& EventName, float EmitterTime, int ParticleTime, const struct FVector& Location, const struct FVector& Velocity, const struct FVector& Direction, const struct FVector& Normal, const struct FName& BoneName)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xbbd80c84);
 
@@ -24783,7 +25982,8 @@ namespace Classes {
 	// class AController*             EventInstigator                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class AActor*                  DamageCauser                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslExplosionReactionInterface::OnExplode(float DamageAmout, const struct FVector& Origin, TArray<struct FHitResult> ComponentHits, class AController* EventInstigator, class AActor* DamageCauser) {
+	void UTslExplosionReactionInterface::OnExplode(float DamageAmout, const struct FVector& Origin, TArray<struct FHitResult> ComponentHits, class AController* EventInstigator, class AActor* DamageCauser)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1c2df4b2);
 
@@ -24807,7 +26007,8 @@ namespace Classes {
 	// Parameters:
 	// class USplineComponent*        ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
-	class USplineComponent* ATslFence::GetSplineComponent() {
+	class USplineComponent* ATslFence::GetSplineComponent()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x923b7108);
 
@@ -24827,7 +26028,8 @@ namespace Classes {
 	// Function TslGame.TslReactionComponent.OnRep_PendingDestroy
 	// (FUNC_Final, FUNC_Native, FUNC_Protected)
 
-	void UTslReactionComponent::OnRep_PendingDestroy() {
+	void UTslReactionComponent::OnRep_PendingDestroy()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x52051ad5);
 
@@ -24849,7 +26051,8 @@ namespace Classes {
 	// struct FVector                 ImpulseDir                     (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FVector                 Velocity                       (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-	void UTslReactionComponent::Client_ReactByVehicle(const struct FVector& Impact, const struct FVector& ImpulseDir, const struct FVector& Velocity) {
+	void UTslReactionComponent::Client_ReactByVehicle(const struct FVector& Impact, const struct FVector& ImpulseDir, const struct FVector& Velocity)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2020b467);
 
@@ -24876,7 +26079,8 @@ namespace Classes {
 	// struct FVector                 ImpulseDir                     (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          OuterRadius                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslReactionComponent::Client_ReactByRadialDamage(float DamageAmount, const struct FVector& Origin, const struct FVector& Impact, const struct FVector& ImpulseDir, float OuterRadius) {
+	void UTslReactionComponent::Client_ReactByRadialDamage(float DamageAmount, const struct FVector& Origin, const struct FVector& Impact, const struct FVector& ImpulseDir, float OuterRadius)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x96d24107);
 
@@ -24903,7 +26107,8 @@ namespace Classes {
 	// struct FVector                 Impact                         (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 	// struct FVector                 ImpulseDir                     (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslReactionComponent::Client_ReactByPointDamage(float DamageAmount, const struct FVector& Impact, const struct FVector& ImpulseDir) {
+	void UTslReactionComponent::Client_ReactByPointDamage(float DamageAmount, const struct FVector& Impact, const struct FVector& ImpulseDir)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9078699a);
 
@@ -24926,7 +26131,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslFocusableWidgetInterface::Up() {
+	bool UTslFocusableWidgetInterface::Up()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa0ab1f1f);
 
@@ -24948,7 +26154,8 @@ namespace Classes {
 	// bool                           NewFocus                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslFocusableWidgetInterface::SetFocus(bool NewFocus) {
+	bool UTslFocusableWidgetInterface::SetFocus(bool NewFocus)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5957f2b0);
 
@@ -24970,7 +26177,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslFocusableWidgetInterface::Right() {
+	bool UTslFocusableWidgetInterface::Right()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7e4978de);
 
@@ -24991,7 +26199,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslFocusableWidgetInterface::Left() {
+	bool UTslFocusableWidgetInterface::Left()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6833c66b);
 
@@ -25012,7 +26221,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslFocusableWidgetInterface::IsFocusable() {
+	bool UTslFocusableWidgetInterface::IsFocusable()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb57ea380);
 
@@ -25033,7 +26243,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslFocusableWidgetInterface::IsFocus() {
+	bool UTslFocusableWidgetInterface::IsFocus()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xbe470058);
 
@@ -25054,7 +26265,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslFocusableWidgetInterface::InputY() {
+	bool UTslFocusableWidgetInterface::InputY()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x30c1681d);
 
@@ -25075,7 +26287,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslFocusableWidgetInterface::InputX() {
+	bool UTslFocusableWidgetInterface::InputX()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xabeedb4);
 
@@ -25096,7 +26309,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslFocusableWidgetInterface::InputRT() {
+	bool UTslFocusableWidgetInterface::InputRT()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xcc14109e);
 
@@ -25117,7 +26331,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslFocusableWidgetInterface::InputRB() {
+	bool UTslFocusableWidgetInterface::InputRB()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x482cd8b8);
 
@@ -25138,7 +26353,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslFocusableWidgetInterface::InputLT() {
+	bool UTslFocusableWidgetInterface::InputLT()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2d5a5af4);
 
@@ -25159,7 +26375,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslFocusableWidgetInterface::InputLB() {
+	bool UTslFocusableWidgetInterface::InputLB()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x812dbf92);
 
@@ -25180,7 +26397,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslFocusableWidgetInterface::InputB() {
+	bool UTslFocusableWidgetInterface::InputB()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x26b00f3e);
 
@@ -25201,7 +26419,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslFocusableWidgetInterface::InputA() {
+	bool UTslFocusableWidgetInterface::InputA()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xad94d5);
 
@@ -25222,7 +26441,8 @@ namespace Classes {
 	// Parameters:
 	// class UUserWidget*             ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UUserWidget* UTslFocusableWidgetInterface::GetUpWidget() {
+	class UUserWidget* UTslFocusableWidgetInterface::GetUpWidget()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1b652593);
 
@@ -25243,7 +26463,8 @@ namespace Classes {
 	// Parameters:
 	// class UUserWidget*             ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UUserWidget* UTslFocusableWidgetInterface::GetRightWidget() {
+	class UUserWidget* UTslFocusableWidgetInterface::GetRightWidget()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4ec8086);
 
@@ -25264,7 +26485,8 @@ namespace Classes {
 	// Parameters:
 	// class UUserWidget*             ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UUserWidget* UTslFocusableWidgetInterface::GetLeftWidget() {
+	class UUserWidget* UTslFocusableWidgetInterface::GetLeftWidget()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3f52a71f);
 
@@ -25285,7 +26507,8 @@ namespace Classes {
 	// Parameters:
 	// class UUserWidget*             ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UUserWidget* UTslFocusableWidgetInterface::GetFocusingChildWidget() {
+	class UUserWidget* UTslFocusableWidgetInterface::GetFocusingChildWidget()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x55ed3ee2);
 
@@ -25306,7 +26529,8 @@ namespace Classes {
 	// Parameters:
 	// class UUserWidget*             ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UUserWidget* UTslFocusableWidgetInterface::GetDownWidget() {
+	class UUserWidget* UTslFocusableWidgetInterface::GetDownWidget()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xfb267134);
 
@@ -25327,7 +26551,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslFocusableWidgetInterface::Down() {
+	bool UTslFocusableWidgetInterface::Down()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x66cb32ac);
 
@@ -25348,7 +26573,8 @@ namespace Classes {
 	// Parameters:
 	// class UTextureRenderTarget2D*  rt                             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslSettings::SetCharacterStudioRenderTarget(class UTextureRenderTarget2D* rt) {
+	void UTslSettings::SetCharacterStudioRenderTarget(class UTextureRenderTarget2D* rt)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x37beebde);
 
@@ -25369,7 +26595,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslSettings::IsForKoreanRating() {
+	bool UTslSettings::IsForKoreanRating()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9e34a6f4);
 
@@ -25391,7 +26618,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslSettings::IsForChineseLicensing() {
+	bool UTslSettings::IsForChineseLicensing()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb1d9d86c);
 
@@ -25413,7 +26641,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslSettings::IsESports() {
+	bool UTslSettings::IsESports()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x961fed1a);
 
@@ -25435,7 +26664,8 @@ namespace Classes {
 	// Parameters:
 	// class UTslSettings*            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UTslSettings* UTslSettings::STATIC_GetTslSettings() {
+	class UTslSettings* UTslSettings::STATIC_GetTslSettings()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf0dc86d4);
 
@@ -25457,7 +26687,8 @@ namespace Classes {
 	// Parameters:
 	// class UTextureRenderTarget2D*  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UTextureRenderTarget2D* UTslSettings::GetCharacterStudioRenderTarget() {
+	class UTextureRenderTarget2D* UTslSettings::GetCharacterStudioRenderTarget()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb504e2a);
 
@@ -25479,7 +26710,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslGameInstance::UseLobbyWidget() {
+	bool UTslGameInstance::UseLobbyWidget()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9b6df685);
 
@@ -25501,7 +26733,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslGameInstance::UnPause() {
+	bool UTslGameInstance::UnPause()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1c8b85ff);
 
@@ -25521,7 +26754,8 @@ namespace Classes {
 	// Function TslGame.TslGameInstance.ShowLoadingScreen
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslGameInstance::ShowLoadingScreen() {
+	void UTslGameInstance::ShowLoadingScreen()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x265ac13);
 
@@ -25541,7 +26775,8 @@ namespace Classes {
 	// Parameters:
 	// float                          TimeSpeed                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGameInstance::SetReplayTimeSpeed(float TimeSpeed) {
+	void UTslGameInstance::SetReplayTimeSpeed(float TimeSpeed)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xdf941019);
 
@@ -25562,7 +26797,8 @@ namespace Classes {
 	// Parameters:
 	// struct FString                 EventID                        (CPF_Parm, CPF_ZeroConstructor)
 
-	void UTslGameInstance::RequestReplayAKillEvent(const struct FString& EventID) {
+	void UTslGameInstance::RequestReplayAKillEvent(const struct FString& EventID)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xfededabf);
 
@@ -25583,7 +26819,8 @@ namespace Classes {
 	// Parameters:
 	// float                          TimelinePercentage             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGameInstance::ReplayJump(float TimelinePercentage) {
+	void UTslGameInstance::ReplayJump(float TimelinePercentage)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x250394b3);
 
@@ -25602,7 +26839,8 @@ namespace Classes {
 	// Function TslGame.TslGameInstance.RemoveAllKillEvents
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslGameInstance::RemoveAllKillEvents() {
+	void UTslGameInstance::RemoveAllKillEvents()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf00e0a3c);
 
@@ -25620,7 +26858,8 @@ namespace Classes {
 	// DelegateFunction TslGame.TslGameInstance.RecordStartedDelegate__DelegateSignature
 	// (FUNC_MulticastDelegate, FUNC_Public, FUNC_Delegate)
 
-	void UTslGameInstance::RecordStartedDelegate__DelegateSignature() {
+	void UTslGameInstance::RecordStartedDelegate__DelegateSignature()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xedc6f67b);
 
@@ -25640,7 +26879,8 @@ namespace Classes {
 	// struct FString                 RegionOrLocal                  (CPF_Parm, CPF_ZeroConstructor)
 	// struct FString                 SessionOrFriendlyName          (CPF_Parm, CPF_ZeroConstructor)
 
-	void UTslGameInstance::PlayReplayBPByRegionOrLocal(const struct FString& RegionOrLocal, const struct FString& SessionOrFriendlyName) {
+	void UTslGameInstance::PlayReplayBPByRegionOrLocal(const struct FString& RegionOrLocal, const struct FString& SessionOrFriendlyName)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc02af298);
 
@@ -25662,7 +26902,8 @@ namespace Classes {
 	// Parameters:
 	// struct FString                 SessionOrFriendlyName          (CPF_Parm, CPF_ZeroConstructor)
 
-	void UTslGameInstance::PlayReplayBP(const struct FString& SessionOrFriendlyName) {
+	void UTslGameInstance::PlayReplayBP(const struct FString& SessionOrFriendlyName)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6386645f);
 
@@ -25683,7 +26924,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslGameInstance::Pause() {
+	bool UTslGameInstance::Pause()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xee461928);
 
@@ -25705,7 +26947,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslGameInstance::IsReplaying() {
+	bool UTslGameInstance::IsReplaying()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa9fc6169);
 
@@ -25727,7 +26970,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslGameInstance::IsRecording() {
+	bool UTslGameInstance::IsRecording()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9a86bcd3);
 
@@ -25749,7 +26993,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslGameInstance::IsPaused() {
+	bool UTslGameInstance::IsPaused()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x62b600d0);
 
@@ -25771,7 +27016,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslGameInstance::IsLive() {
+	bool UTslGameInstance::IsLive()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb3da1468);
 
@@ -25791,7 +27037,8 @@ namespace Classes {
 	// DelegateFunction TslGame.TslGameInstance.GotoTimelineDoneDelegate__DelegateSignature
 	// (FUNC_MulticastDelegate, FUNC_Public, FUNC_Delegate)
 
-	void UTslGameInstance::GotoTimelineDoneDelegate__DelegateSignature() {
+	void UTslGameInstance::GotoTimelineDoneDelegate__DelegateSignature()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf9c80d0f);
 
@@ -25808,7 +27055,8 @@ namespace Classes {
 	// Function TslGame.TslGameInstance.GotoReplayList
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslGameInstance::GotoReplayList() {
+	void UTslGameInstance::GotoReplayList()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xaae165da);
 
@@ -25830,7 +27078,8 @@ namespace Classes {
 	// struct FString                 NotFoundValue                  (CPF_Parm, CPF_ZeroConstructor)
 	// struct FString                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	struct FString UTslGameInstance::GetStartParameterStringValue(const struct FString& Key, const struct FString& NotFoundValue) {
+	struct FString UTslGameInstance::GetStartParameterStringValue(const struct FString& Key, const struct FString& NotFoundValue)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2fd7e32b);
 
@@ -25854,7 +27103,8 @@ namespace Classes {
 	// Parameters:
 	// struct FTslStartParameter      ReturnValue                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_ReferenceParm)
 
-	struct FTslStartParameter UTslGameInstance::GetStartParameter() {
+	struct FTslStartParameter UTslGameInstance::GetStartParameter()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5ba4809f);
 
@@ -25876,7 +27126,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UTslGameInstance::GetReplayTotalTime() {
+	float UTslGameInstance::GetReplayTotalTime()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x27cd6b14);
 
@@ -25899,7 +27150,8 @@ namespace Classes {
 	// int                            PageIndex                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// int                            PageSize                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGameInstance::GetReplayListLocal(int PageIndex, int PageSize) {
+	void UTslGameInstance::GetReplayListLocal(int PageIndex, int PageSize)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x998a895c);
 
@@ -25919,7 +27171,8 @@ namespace Classes {
 	// DelegateFunction TslGame.TslGameInstance.GetReplayListDoneDelegate__DelegateSignature
 	// (FUNC_MulticastDelegate, FUNC_Public, FUNC_Delegate)
 
-	void UTslGameInstance::GetReplayListDoneDelegate__DelegateSignature() {
+	void UTslGameInstance::GetReplayListDoneDelegate__DelegateSignature()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1a2e0c92);
 
@@ -25940,7 +27193,8 @@ namespace Classes {
 	// int                            PageIndex                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// int                            PageSize                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGameInstance::GetReplayListByRegionOrLocal(const struct FString& RegionOrLocal, int PageIndex, int PageSize) {
+	void UTslGameInstance::GetReplayListByRegionOrLocal(const struct FString& RegionOrLocal, int PageIndex, int PageSize)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x97008504);
 
@@ -25961,7 +27215,8 @@ namespace Classes {
 	// Function TslGame.TslGameInstance.GetReplayList
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslGameInstance::GetReplayList() {
+	void UTslGameInstance::GetReplayList()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x24482af3);
 
@@ -25979,7 +27234,8 @@ namespace Classes {
 	// DelegateFunction TslGame.TslGameInstance.GetReplayKill__DelegateSignature
 	// (FUNC_MulticastDelegate, FUNC_Public, FUNC_Delegate)
 
-	void UTslGameInstance::GetReplayKill__DelegateSignature() {
+	void UTslGameInstance::GetReplayKill__DelegateSignature()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xac399931);
 
@@ -25998,7 +27254,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UTslGameInstance::GetReplayCurrentTime() {
+	float UTslGameInstance::GetReplayCurrentTime()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x85e25a81);
 
@@ -26020,7 +27277,8 @@ namespace Classes {
 	// Parameters:
 	// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	int UTslGameInstance::GetNumTotalReplays() {
+	int UTslGameInstance::GetNumTotalReplays()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x78262998);
 
@@ -26042,7 +27300,8 @@ namespace Classes {
 	// Parameters:
 	// class UGameEventObserver*      ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UGameEventObserver* UTslGameInstance::GetGameEventObserver() {
+	class UGameEventObserver* UTslGameInstance::GetGameEventObserver()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2db8c29e);
 
@@ -26064,7 +27323,8 @@ namespace Classes {
 	// Parameters:
 	// struct FName                   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FName UTslGameInstance::GetCurrentGameState() {
+	struct FName UTslGameInstance::GetCurrentGameState()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf84540fe);
 
@@ -26084,7 +27344,8 @@ namespace Classes {
 	// Function TslGame.TslGameInstance.EnumerateReplayKillEvents
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslGameInstance::EnumerateReplayKillEvents() {
+	void UTslGameInstance::EnumerateReplayKillEvents()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x61967fea);
 
@@ -26106,7 +27367,8 @@ namespace Classes {
 	// struct FText                   Message                        (CPF_Parm)
 	// float                          MessageDuration                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslGameMode::SendSystemMessageToAll(TEnumAsByte<ESystemMessageType> MessageType, const struct FText& Message, float MessageDuration) {
+	void ATslGameMode::SendSystemMessageToAll(TEnumAsByte<ESystemMessageType> MessageType, const struct FText& Message, float MessageDuration)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x62c94f80);
 
@@ -26127,7 +27389,8 @@ namespace Classes {
 	// Function TslGame.TslGameMode.NotifyRestrictingPlayAreaToAll
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ATslGameMode::NotifyRestrictingPlayAreaToAll() {
+	void ATslGameMode::NotifyRestrictingPlayAreaToAll()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4d1ce976);
 
@@ -26148,7 +27411,8 @@ namespace Classes {
 	// struct FVector                 PoisonGasWarningPosition       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          PoisonGasWarningRadius         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslGameMode::NotifyNextGasInToAll(const struct FVector& PoisonGasWarningPosition, float PoisonGasWarningRadius) {
+	void ATslGameMode::NotifyNextGasInToAll(const struct FVector& PoisonGasWarningPosition, float PoisonGasWarningRadius)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa61e8874);
 
@@ -26170,7 +27434,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslGameMode::IsPreventFinishMatch() {
+	bool ATslGameMode::IsPreventFinishMatch()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xbf3f4628);
 
@@ -26192,7 +27457,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslGameMode::IsPlayInEditor() {
+	bool ATslGameMode::IsPlayInEditor()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x93c64a76);
 
@@ -26214,7 +27480,8 @@ namespace Classes {
 	// Parameters:
 	// class UVivoxManager*           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UVivoxManager* ATslGameMode::GetVivoxManager() {
+	class UVivoxManager* ATslGameMode::GetVivoxManager()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x8c8cfad);
 
@@ -26236,7 +27503,8 @@ namespace Classes {
 	// Parameters:
 	// class UThingSpawnProcessor*    ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UThingSpawnProcessor* ATslGameMode::GetThingSpawnProcessor() {
+	class UThingSpawnProcessor* ATslGameMode::GetThingSpawnProcessor()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2ea15ed5);
 
@@ -26258,7 +27526,8 @@ namespace Classes {
 	// Parameters:
 	// class ULobbyLink*              ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ULobbyLink* ATslGameMode::GetLobbyLink() {
+	class ULobbyLink* ATslGameMode::GetLobbyLink()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x773abf02);
 
@@ -26280,7 +27549,8 @@ namespace Classes {
 	// Parameters:
 	// class UItemSpawnProcessor*     ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UItemSpawnProcessor* ATslGameMode::GetItemSpawnProcessor() {
+	class UItemSpawnProcessor* ATslGameMode::GetItemSpawnProcessor()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9309514c);
 
@@ -26302,7 +27572,8 @@ namespace Classes {
 	// Parameters:
 	// TArray<class APawn*>           OutPawns                       (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor)
 
-	void ATslGameMode::GetAllPawns(TArray<class APawn*>* OutPawns) {
+	void ATslGameMode::GetAllPawns(TArray<class APawn*>* OutPawns)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x51e4b268);
 
@@ -26323,7 +27594,8 @@ namespace Classes {
 	// Function TslGame.TslGameMode.FinishMatch
 	// (FUNC_Final, FUNC_Exec, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ATslGameMode::FinishMatch() {
+	void ATslGameMode::FinishMatch()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5197b722);
 
@@ -26344,7 +27616,8 @@ namespace Classes {
 	// class APlayerState*            State                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class ATslCharacter*           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslCharacter* ATslGameMode::FindCharacterByPlayerState(class APlayerState* State) {
+	class ATslCharacter* ATslGameMode::FindCharacterByPlayerState(class APlayerState* State)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x90e60faf);
 
@@ -26369,7 +27642,8 @@ namespace Classes {
 	// class ATslPlayerState*         DamagedPlayer                  (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslGameMode::CanDealDamage(class ATslPlayerState* DamageInstigator, class ATslPlayerState* DamagedPlayer) {
+	bool ATslGameMode::CanDealDamage(class ATslPlayerState* DamageInstigator, class ATslPlayerState* DamagedPlayer)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2a710609);
 
@@ -26394,7 +27668,8 @@ namespace Classes {
 	// struct FName                   EventName                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FString                 Parameter                      (CPF_Parm, CPF_ZeroConstructor)
 
-	void ATslGameMode::BroadcastGameModeEvent(const struct FName& EventName, const struct FString& Parameter) {
+	void ATslGameMode::BroadcastGameModeEvent(const struct FName& EventName, const struct FString& Parameter)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd87d3830);
 
@@ -26414,7 +27689,8 @@ namespace Classes {
 	// Function TslGame.TslGameMode.BenchmarkFinished
 	// (FUNC_Final, FUNC_Native, FUNC_Protected)
 
-	void ATslGameMode::BenchmarkFinished() {
+	void ATslGameMode::BenchmarkFinished()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x180c347d);
 
@@ -26436,7 +27712,8 @@ namespace Classes {
 	// float                          InAxisScale                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FText                   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
-	struct FText UTslGameOption::STATIC_WheelAxisNameToWheelActionName(const struct FTslInputKey& Key, float InAxisScale) {
+	struct FText UTslGameOption::STATIC_WheelAxisNameToWheelActionName(const struct FTslInputKey& Key, float InAxisScale)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x821298d6);
 
@@ -26460,7 +27737,8 @@ namespace Classes {
 	// Parameters:
 	// int                            NewZoomLevel                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGameOption::STATIC_SetWorldMapZoomLevel(int NewZoomLevel) {
+	void UTslGameOption::STATIC_SetWorldMapZoomLevel(int NewZoomLevel)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x49b4c4f);
 
@@ -26481,7 +27759,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bEnable                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGameOption::STATIC_SetVSyncEnabled(bool bEnable) {
+	void UTslGameOption::STATIC_SetVSyncEnabled(bool bEnable)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3765c162);
 
@@ -26502,7 +27781,8 @@ namespace Classes {
 	// Parameters:
 	// int                            Volume                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGameOption::STATIC_SetVoiceOutputVolume(int Volume) {
+	void UTslGameOption::STATIC_SetVoiceOutputVolume(int Volume)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb8e93b1b);
 
@@ -26523,7 +27803,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bIsMute                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGameOption::STATIC_SetVoiceOutputMute(bool bIsMute) {
+	void UTslGameOption::STATIC_SetVoiceOutputMute(bool bIsMute)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x89686fc2);
 
@@ -26544,7 +27825,8 @@ namespace Classes {
 	// Parameters:
 	// int                            Volume                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGameOption::STATIC_SetVoiceInputVolume(int Volume) {
+	void UTslGameOption::STATIC_SetVoiceInputVolume(int Volume)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x41c1d54);
 
@@ -26565,7 +27847,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bIsMute                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGameOption::STATIC_SetVoiceInputMute(bool bIsMute) {
+	void UTslGameOption::STATIC_SetVoiceInputMute(bool bIsMute)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x37b0e271);
 
@@ -26586,7 +27869,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bUse                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGameOption::STATIC_SetUseTeamVoice(bool bUse) {
+	void UTslGameOption::STATIC_SetUseTeamVoice(bool bUse)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x64203ae8);
 
@@ -26607,7 +27891,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bUse                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGameOption::STATIC_SetUsePushToTalk(bool bUse) {
+	void UTslGameOption::STATIC_SetUsePushToTalk(bool bUse)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x40086118);
 
@@ -26628,7 +27913,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bUse                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGameOption::STATIC_SetUseGlobalVoice(bool bUse) {
+	void UTslGameOption::STATIC_SetUseGlobalVoice(bool bUse)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe37b94d2);
 
@@ -26649,7 +27935,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bUseCharacterCapture           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGameOption::STATIC_SetUseCharacterCapture(bool bUseCharacterCapture) {
+	void UTslGameOption::STATIC_SetUseCharacterCapture(bool bUseCharacterCapture)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xfcc30764);
 
@@ -26670,7 +27957,8 @@ namespace Classes {
 	// Parameters:
 	// float                          Volume                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGameOption::STATIC_SetUISoundVolume(float Volume) {
+	void UTslGameOption::STATIC_SetUISoundVolume(float Volume)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3eeb15d);
 
@@ -26691,7 +27979,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bIsMute                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGameOption::STATIC_SetUISoundMute(bool bIsMute) {
+	void UTslGameOption::STATIC_SetUISoundMute(bool bIsMute)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7afccd7c);
 
@@ -26713,7 +28002,8 @@ namespace Classes {
 	// TEnumAsByte<EInputModeSettingActions> eAction                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// TEnumAsByte<ETslInputModes>    eTslInputMode                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGameOption::STATIC_SetTslInputMode(TEnumAsByte<EInputModeSettingActions> eAction, TEnumAsByte<ETslInputModes> eTslInputMode) {
+	void UTslGameOption::STATIC_SetTslInputMode(TEnumAsByte<EInputModeSettingActions> eAction, TEnumAsByte<ETslInputModes> eTslInputMode)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x47318586);
 
@@ -26735,7 +28025,8 @@ namespace Classes {
 	// Parameters:
 	// TEnumAsByte<EUiShowType>       NewShowType                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGameOption::STATIC_SetTpsWeaponIconShowType(TEnumAsByte<EUiShowType> NewShowType) {
+	void UTslGameOption::STATIC_SetTpsWeaponIconShowType(TEnumAsByte<EUiShowType> NewShowType)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x24c019fb);
 
@@ -26756,7 +28047,8 @@ namespace Classes {
 	// Parameters:
 	// int                            Index                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGameOption::STATIC_SetSelectMinimapTypeIndex(int Index) {
+	void UTslGameOption::STATIC_SetSelectMinimapTypeIndex(int Index)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf1b00383);
 
@@ -26777,7 +28069,8 @@ namespace Classes {
 	// Parameters:
 	// float                          Value                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGameOption::STATIC_SetScreenScale(float Value) {
+	void UTslGameOption::STATIC_SetScreenScale(float Value)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb8609fe);
 
@@ -26798,7 +28091,8 @@ namespace Classes {
 	// Parameters:
 	// struct FScreenResolution       ScreenResolution               (CPF_Parm)
 
-	void UTslGameOption::STATIC_SetScreenResoultion(const struct FScreenResolution& ScreenResolution) {
+	void UTslGameOption::STATIC_SetScreenResoultion(const struct FScreenResolution& ScreenResolution)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xbdb2a2f4);
 
@@ -26820,7 +28114,8 @@ namespace Classes {
 	// TEnumAsByte<EQualityType>      Quality                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// int                            QualityLevel                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGameOption::STATIC_SetQualityLevel(TEnumAsByte<EQualityType> Quality, int QualityLevel) {
+	void UTslGameOption::STATIC_SetQualityLevel(TEnumAsByte<EQualityType> Quality, int QualityLevel)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5d4b4bcf);
 
@@ -26842,7 +28137,8 @@ namespace Classes {
 	// Parameters:
 	// int                            Value                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGameOption::STATIC_SetOverallScalabilityLevel(int Value) {
+	void UTslGameOption::STATIC_SetOverallScalabilityLevel(int Value)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x8afc94be);
 
@@ -26864,7 +28160,8 @@ namespace Classes {
 	// struct FName                   InMouseSensitiveName           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          InMouseSensitivity             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGameOption::STATIC_SetMouseSensitivity(const struct FName& InMouseSensitiveName, float InMouseSensitivity) {
+	void UTslGameOption::STATIC_SetMouseSensitivity(const struct FName& InMouseSensitiveName, float InMouseSensitivity)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc1a66fde);
 
@@ -26886,7 +28183,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bEnabled                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGameOption::STATIC_SetMotionBlur(bool bEnabled) {
+	void UTslGameOption::STATIC_SetMotionBlur(bool bEnabled)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3c672265);
 
@@ -26907,7 +28205,8 @@ namespace Classes {
 	// Parameters:
 	// float                          Volume                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGameOption::STATIC_SetMasterSoundVolume(float Volume) {
+	void UTslGameOption::STATIC_SetMasterSoundVolume(float Volume)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa65e8f51);
 
@@ -26928,7 +28227,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bIsMute                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGameOption::STATIC_SetMasterSoundMute(bool bIsMute) {
+	void UTslGameOption::STATIC_SetMasterSoundMute(bool bIsMute)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xfbd18470);
 
@@ -26949,7 +28249,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bInvert                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGameOption::STATIC_SetInvertMouse(bool bInvert) {
+	void UTslGameOption::STATIC_SetInvertMouse(bool bInvert)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc6e75b31);
 
@@ -26973,7 +28274,8 @@ namespace Classes {
 	// TEnumAsByte<EKeyBindingSlot>   InKeyBindingSlot               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           bGamepad                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGameOption::STATIC_SetInputKey_Internal(const struct FTslInputKey& NewKey, TEnumAsByte<EKeyBindingSlot> InKeyBindingSlot, bool bGamepad, TArray<struct FTslInputKey>* OutKeyList) {
+	void UTslGameOption::STATIC_SetInputKey_Internal(const struct FTslInputKey& NewKey, TEnumAsByte<EKeyBindingSlot> InKeyBindingSlot, bool bGamepad, TArray<struct FTslInputKey>* OutKeyList)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x58027653);
 
@@ -26999,7 +28301,8 @@ namespace Classes {
 	// Parameters:
 	// float                          Gamma                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGameOption::STATIC_SetGamma(float Gamma) {
+	void UTslGameOption::STATIC_SetGamma(float Gamma)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x910808d7);
 
@@ -27020,7 +28323,8 @@ namespace Classes {
 	// Parameters:
 	// TEnumAsByte<EWindowMode>       InFullscreenMode               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGameOption::STATIC_SetFullScreen(TEnumAsByte<EWindowMode> InFullscreenMode) {
+	void UTslGameOption::STATIC_SetFullScreen(TEnumAsByte<EWindowMode> InFullscreenMode)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xdf4b77f);
 
@@ -27041,7 +28345,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bNewShow                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGameOption::STATIC_SetFpsWeaponSlotShow(bool bNewShow) {
+	void UTslGameOption::STATIC_SetFpsWeaponSlotShow(bool bNewShow)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2257595e);
 
@@ -27062,7 +28367,8 @@ namespace Classes {
 	// Parameters:
 	// float                          NewFovValue                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGameOption::STATIC_SetFpsCameraFov(float NewFovValue) {
+	void UTslGameOption::STATIC_SetFpsCameraFov(float NewFovValue)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7531475d);
 
@@ -27083,7 +28389,8 @@ namespace Classes {
 	// Parameters:
 	// TEnumAsByte<EUiShowType>       NewShowType                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGameOption::STATIC_SetFppWeaponIconShowType(TEnumAsByte<EUiShowType> NewShowType) {
+	void UTslGameOption::STATIC_SetFppWeaponIconShowType(TEnumAsByte<EUiShowType> NewShowType)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd19c88aa);
 
@@ -27104,7 +28411,8 @@ namespace Classes {
 	// Parameters:
 	// TEnumAsByte<EUiShowType>       NewShowType                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGameOption::STATIC_SetFppEquipableItemIconShowType(TEnumAsByte<EUiShowType> NewShowType) {
+	void UTslGameOption::STATIC_SetFppEquipableItemIconShowType(TEnumAsByte<EUiShowType> NewShowType)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd31356f7);
 
@@ -27125,7 +28433,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bNewShow                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGameOption::STATIC_SetEquipableIteIconShow(bool bNewShow) {
+	void UTslGameOption::STATIC_SetEquipableIteIconShow(bool bNewShow)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x11ab8460);
 
@@ -27146,7 +28455,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bEnabled                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGameOption::STATIC_SetEnablePreloadingMap(bool bEnabled) {
+	void UTslGameOption::STATIC_SetEnablePreloadingMap(bool bEnabled)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xfdbcb8e2);
 
@@ -27168,7 +28478,8 @@ namespace Classes {
 	// TEnumAsByte<EGameplayFunctionalities> eAction                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           bValue                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGameOption::STATIC_SetEnableFunctionality(TEnumAsByte<EGameplayFunctionalities> eAction, bool bValue) {
+	void UTslGameOption::STATIC_SetEnableFunctionality(TEnumAsByte<EGameplayFunctionalities> eAction, bool bValue)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1b044492);
 
@@ -27190,7 +28501,8 @@ namespace Classes {
 	// Parameters:
 	// float                          Volume                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGameOption::STATIC_SetEffectSoundVolume(float Volume) {
+	void UTslGameOption::STATIC_SetEffectSoundVolume(float Volume)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x33b9b1c2);
 
@@ -27211,7 +28523,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bIsMute                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGameOption::STATIC_SetEffectSoundMute(bool bIsMute) {
+	void UTslGameOption::STATIC_SetEffectSoundMute(bool bIsMute)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x17a85887);
 
@@ -27232,7 +28545,8 @@ namespace Classes {
 	// Parameters:
 	// struct FString                 ProviderName                   (CPF_Parm, CPF_ZeroConstructor)
 
-	void UTslGameOption::STATIC_SetCurrentProvider(const struct FString& ProviderName) {
+	void UTslGameOption::STATIC_SetCurrentProvider(const struct FString& ProviderName)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x978c0350);
 
@@ -27253,7 +28567,8 @@ namespace Classes {
 	// Parameters:
 	// struct FString                 InCultureName                  (CPF_Parm, CPF_ZeroConstructor)
 
-	void UTslGameOption::STATIC_SetCurrentCultureName(const struct FString& InCultureName) {
+	void UTslGameOption::STATIC_SetCurrentCultureName(const struct FString& InCultureName)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2f8ecb42);
 
@@ -27274,7 +28589,8 @@ namespace Classes {
 	// Parameters:
 	// struct FString                 CrosshairColorStr              (CPF_Parm, CPF_ZeroConstructor)
 
-	void UTslGameOption::STATIC_SetCurrentCrosshairColorString(const struct FString& CrosshairColorStr) {
+	void UTslGameOption::STATIC_SetCurrentCrosshairColorString(const struct FString& CrosshairColorStr)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6cf37695);
 
@@ -27295,7 +28611,8 @@ namespace Classes {
 	// Parameters:
 	// int                            ColorBlindKey                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGameOption::STATIC_SetCurrentColorBlindKeyByInt(int ColorBlindKey) {
+	void UTslGameOption::STATIC_SetCurrentColorBlindKeyByInt(int ColorBlindKey)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xbf02ac9c);
 
@@ -27316,7 +28633,8 @@ namespace Classes {
 	// Parameters:
 	// TEnumAsByte<EColorBlindType>   ColorBlindKey                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGameOption::STATIC_SetCurrentColorBlindKey(TEnumAsByte<EColorBlindType> ColorBlindKey) {
+	void UTslGameOption::STATIC_SetCurrentColorBlindKey(TEnumAsByte<EColorBlindType> ColorBlindKey)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x33ef86a6);
 
@@ -27337,7 +28655,8 @@ namespace Classes {
 	// Parameters:
 	// float                          Volume                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGameOption::STATIC_SetBGMSoundVolume(float Volume) {
+	void UTslGameOption::STATIC_SetBGMSoundVolume(float Volume)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x21a8caa5);
 
@@ -27358,7 +28677,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bIsMute                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGameOption::STATIC_SetBGMSoundMute(bool bIsMute) {
+	void UTslGameOption::STATIC_SetBGMSoundMute(bool bIsMute)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1332ef04);
 
@@ -27380,7 +28700,8 @@ namespace Classes {
 	// struct FName                   AxisName                       (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 	// float                          Scale                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGameOption::STATIC_SetAxisKeysToDefault(const struct FName& AxisName, float Scale) {
+	void UTslGameOption::STATIC_SetAxisKeysToDefault(const struct FName& AxisName, float Scale)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xfa098d1b);
 
@@ -27404,7 +28725,8 @@ namespace Classes {
 	// float                          Scale                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// TArray<struct FTslInputKey>    NewKeys                        (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
 
-	void UTslGameOption::STATIC_SetAxisKeys(const struct FName& AxisName, float Scale, TArray<struct FTslInputKey> NewKeys) {
+	void UTslGameOption::STATIC_SetAxisKeys(const struct FName& AxisName, float Scale, TArray<struct FTslInputKey> NewKeys)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x78043dff);
 
@@ -27431,7 +28753,8 @@ namespace Classes {
 	// TEnumAsByte<EKeyBindingSlot>   InKeyBindingSlot               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           bGamepad                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGameOption::STATIC_SetAxisKey(const struct FName& AxisName, float Scale, const struct FTslInputKey& NewKey, TEnumAsByte<EKeyBindingSlot> InKeyBindingSlot, bool bGamepad) {
+	void UTslGameOption::STATIC_SetAxisKey(const struct FName& AxisName, float Scale, const struct FTslInputKey& NewKey, TEnumAsByte<EKeyBindingSlot> InKeyBindingSlot, bool bGamepad)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x8a6d8c3c);
 
@@ -27456,7 +28779,8 @@ namespace Classes {
 	// Parameters:
 	// struct FName                   ActionName                     (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-	void UTslGameOption::STATIC_SetActionKeysToDefault(const struct FName& ActionName) {
+	void UTslGameOption::STATIC_SetActionKeysToDefault(const struct FName& ActionName)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x8a5f3660);
 
@@ -27478,7 +28802,8 @@ namespace Classes {
 	// struct FName                   ActionName                     (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 	// TArray<struct FTslInputKey>    NewKeys                        (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
 
-	void UTslGameOption::STATIC_SetActionKeys(const struct FName& ActionName, TArray<struct FTslInputKey> NewKeys) {
+	void UTslGameOption::STATIC_SetActionKeys(const struct FName& ActionName, TArray<struct FTslInputKey> NewKeys)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4f1bf526);
 
@@ -27503,7 +28828,8 @@ namespace Classes {
 	// TEnumAsByte<EKeyBindingSlot>   InKeyBindingSlot               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           bGamepad                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGameOption::STATIC_SetActionKey(const struct FName& ActionName, const struct FTslInputKey& NewKey, TEnumAsByte<EKeyBindingSlot> InKeyBindingSlot, bool bGamepad) {
+	void UTslGameOption::STATIC_SetActionKey(const struct FName& ActionName, const struct FTslInputKey& NewKey, TEnumAsByte<EKeyBindingSlot> InKeyBindingSlot, bool bGamepad)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa3339d9f);
 
@@ -27528,7 +28854,8 @@ namespace Classes {
 	// struct FName                   CatecoryName                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// TArray<struct FName>           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<struct FName> UTslGameOption::STATIC_NotDuplicateCategoryNames(const struct FName& CatecoryName) {
+	TArray<struct FName> UTslGameOption::STATIC_NotDuplicateCategoryNames(const struct FName& CatecoryName)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xde38a1de);
 
@@ -27551,7 +28878,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslGameOption::STATIC_IsVSyncEnabled() {
+	bool UTslGameOption::STATIC_IsVSyncEnabled()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x198f9fe2);
 
@@ -27573,7 +28901,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslGameOption::STATIC_IsVoiceOutputMute() {
+	bool UTslGameOption::STATIC_IsVoiceOutputMute()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf9401f42);
 
@@ -27595,7 +28924,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslGameOption::STATIC_IsVoiceInputMute() {
+	bool UTslGameOption::STATIC_IsVoiceInputMute()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xabe624f1);
 
@@ -27617,7 +28947,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslGameOption::STATIC_IsUISoundMute() {
+	bool UTslGameOption::STATIC_IsUISoundMute()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9f7084fc);
 
@@ -27640,7 +28971,8 @@ namespace Classes {
 	// struct FTslInputKey            InInputedKey                   (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslGameOption::STATIC_IsMouseWheelInput(const struct FTslInputKey& InInputedKey) {
+	bool UTslGameOption::STATIC_IsMouseWheelInput(const struct FTslInputKey& InInputedKey)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x72731e9e);
 
@@ -27664,7 +28996,8 @@ namespace Classes {
 	// struct FTslInputKey            Key                            (CPF_Parm)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslGameOption::STATIC_IsModifierKey(const struct FTslInputKey& Key) {
+	bool UTslGameOption::STATIC_IsModifierKey(const struct FTslInputKey& Key)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa444e67c);
 
@@ -27687,7 +29020,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslGameOption::STATIC_IsMasterSoundMute() {
+	bool UTslGameOption::STATIC_IsMasterSoundMute()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6ba933f0);
 
@@ -27710,7 +29044,8 @@ namespace Classes {
 	// struct FTslInputKey            Key                            (CPF_Parm)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslGameOption::STATIC_IsKeyValid(const struct FTslInputKey& Key) {
+	bool UTslGameOption::STATIC_IsKeyValid(const struct FTslInputKey& Key)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xdf5152c5);
 
@@ -27734,7 +29069,8 @@ namespace Classes {
 	// struct FTslInputKey            Key                            (CPF_Parm)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslGameOption::STATIC_IsKeyUsed(const struct FTslInputKey& Key) {
+	bool UTslGameOption::STATIC_IsKeyUsed(const struct FTslInputKey& Key)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x8923430e);
 
@@ -27757,7 +29093,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslGameOption::STATIC_IsInvertMouse() {
+	bool UTslGameOption::STATIC_IsInvertMouse()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xeb5b12b1);
 
@@ -27780,7 +29117,8 @@ namespace Classes {
 	// struct FTslInputKey            Key                            (CPF_Parm)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslGameOption::STATIC_IsGamepadKey(const struct FTslInputKey& Key) {
+	bool UTslGameOption::STATIC_IsGamepadKey(const struct FTslInputKey& Key)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1087c13a);
 
@@ -27804,7 +29142,8 @@ namespace Classes {
 	// TEnumAsByte<EGameplayFunctionalities> eAction                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslGameOption::STATIC_IsFunctionalityEnabled(TEnumAsByte<EGameplayFunctionalities> eAction) {
+	bool UTslGameOption::STATIC_IsFunctionalityEnabled(TEnumAsByte<EGameplayFunctionalities> eAction)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd8a99b7c);
 
@@ -27827,7 +29166,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslGameOption::STATIC_IsEnabledPreloadingMap() {
+	bool UTslGameOption::STATIC_IsEnabledPreloadingMap()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x13775d84);
 
@@ -27849,7 +29189,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslGameOption::STATIC_IsEnabledMotionBlur() {
+	bool UTslGameOption::STATIC_IsEnabledMotionBlur()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x378e20be);
 
@@ -27871,7 +29212,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslGameOption::STATIC_IsEffectSoundMute() {
+	bool UTslGameOption::STATIC_IsEffectSoundMute()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x87800807);
 
@@ -27894,7 +29236,8 @@ namespace Classes {
 	// TEnumAsByte<EInputModeSettingActions> eAction                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslGameOption::STATIC_IsDoubleTapSupported(TEnumAsByte<EInputModeSettingActions> eAction) {
+	bool UTslGameOption::STATIC_IsDoubleTapSupported(TEnumAsByte<EInputModeSettingActions> eAction)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xfef4e1cc);
 
@@ -27918,7 +29261,8 @@ namespace Classes {
 	// TEnumAsByte<EGameplayFunctionalities> eAction                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslGameOption::STATIC_IsDefaultFunctionalityEnabled(TEnumAsByte<EGameplayFunctionalities> eAction) {
+	bool UTslGameOption::STATIC_IsDefaultFunctionalityEnabled(TEnumAsByte<EGameplayFunctionalities> eAction)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9ef8e957);
 
@@ -27941,7 +29285,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslGameOption::STATIC_IsBGMSoundMute() {
+	bool UTslGameOption::STATIC_IsBGMSoundMute()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf55ccd84);
 
@@ -27963,7 +29308,8 @@ namespace Classes {
 	// Parameters:
 	// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	int UTslGameOption::STATIC_GetWorldMapZoomSpeedLevel() {
+	int UTslGameOption::STATIC_GetWorldMapZoomSpeedLevel()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x26e872b6);
 
@@ -27985,7 +29331,8 @@ namespace Classes {
 	// Parameters:
 	// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	int UTslGameOption::STATIC_GetVoiceOutputVolume() {
+	int UTslGameOption::STATIC_GetVoiceOutputVolume()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x967dfe4f);
 
@@ -28007,7 +29354,8 @@ namespace Classes {
 	// Parameters:
 	// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	int UTslGameOption::STATIC_GetVoiceInputVolume() {
+	int UTslGameOption::STATIC_GetVoiceInputVolume()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa83a74d0);
 
@@ -28029,7 +29377,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslGameOption::STATIC_GetUseTeamVoice() {
+	bool UTslGameOption::STATIC_GetUseTeamVoice()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x44fcec64);
 
@@ -28051,7 +29400,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslGameOption::STATIC_GetUsePushToTalk() {
+	bool UTslGameOption::STATIC_GetUsePushToTalk()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd0d89c24);
 
@@ -28073,7 +29423,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslGameOption::STATIC_GetUseGlobalVoice() {
+	bool UTslGameOption::STATIC_GetUseGlobalVoice()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe5de2a86);
 
@@ -28095,7 +29446,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslGameOption::STATIC_GetUseCharacterCapture() {
+	bool UTslGameOption::STATIC_GetUseCharacterCapture()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x611e2f10);
 
@@ -28117,7 +29469,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UTslGameOption::STATIC_GetUISoundVolume() {
+	float UTslGameOption::STATIC_GetUISoundVolume()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb7fc4f09);
 
@@ -28140,7 +29493,8 @@ namespace Classes {
 	// TEnumAsByte<EInputModeSettingActions> eAction                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// TEnumAsByte<ETslInputModes>    ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	TEnumAsByte<ETslInputModes> UTslGameOption::STATIC_GetTslInputMode(TEnumAsByte<EInputModeSettingActions> eAction) {
+	TEnumAsByte<ETslInputModes> UTslGameOption::STATIC_GetTslInputMode(TEnumAsByte<EInputModeSettingActions> eAction)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xbb8a9c5a);
 
@@ -28163,7 +29517,8 @@ namespace Classes {
 	// Parameters:
 	// TEnumAsByte<EUiShowType>       ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	TEnumAsByte<EUiShowType> UTslGameOption::STATIC_GetTpsWeaponIconShowType() {
+	TEnumAsByte<EUiShowType> UTslGameOption::STATIC_GetTpsWeaponIconShowType()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x15802da7);
 
@@ -28185,7 +29540,8 @@ namespace Classes {
 	// Parameters:
 	// TArray<struct FScreenResolution> ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<struct FScreenResolution> UTslGameOption::STATIC_GetSupportedScreenResolutions() {
+	TArray<struct FScreenResolution> UTslGameOption::STATIC_GetSupportedScreenResolutions()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xcef6579b);
 
@@ -28207,7 +29563,8 @@ namespace Classes {
 	// Parameters:
 	// TArray<struct FSurportQualityLevel> ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<struct FSurportQualityLevel> UTslGameOption::STATIC_GetSupportedQualityLevels() {
+	TArray<struct FSurportQualityLevel> UTslGameOption::STATIC_GetSupportedQualityLevels()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb1d866a0);
 
@@ -28229,7 +29586,8 @@ namespace Classes {
 	// Parameters:
 	// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	int UTslGameOption::STATIC_GetSelectMiniMapTypeIndex() {
+	int UTslGameOption::STATIC_GetSelectMiniMapTypeIndex()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5e8dbef);
 
@@ -28251,7 +29609,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UTslGameOption::STATIC_GetScreenScale() {
+	float UTslGameOption::STATIC_GetScreenScale()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x63c9a49a);
 
@@ -28273,7 +29632,8 @@ namespace Classes {
 	// Parameters:
 	// struct FScreenResolution       ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
-	struct FScreenResolution UTslGameOption::STATIC_GetScreenResolution() {
+	struct FScreenResolution UTslGameOption::STATIC_GetScreenResolution()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe8b980ba);
 
@@ -28296,7 +29656,8 @@ namespace Classes {
 	// TEnumAsByte<EQualityType>      Quality                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	int UTslGameOption::STATIC_GetQualityLevel(TEnumAsByte<EQualityType> Quality) {
+	int UTslGameOption::STATIC_GetQualityLevel(TEnumAsByte<EQualityType> Quality)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5e8686fb);
 
@@ -28319,7 +29680,8 @@ namespace Classes {
 	// Parameters:
 	// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	int UTslGameOption::STATIC_GetOverallScalabilityLevel() {
+	int UTslGameOption::STATIC_GetOverallScalabilityLevel()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1b41f17a);
 
@@ -28342,7 +29704,8 @@ namespace Classes {
 	// struct FString                 InCultureName                  (CPF_Parm, CPF_ZeroConstructor)
 	// struct FString                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	struct FString UTslGameOption::STATIC_GetNativeLanguage(const struct FString& InCultureName) {
+	struct FString UTslGameOption::STATIC_GetNativeLanguage(const struct FString& InCultureName)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xafa6aa37);
 
@@ -28366,7 +29729,8 @@ namespace Classes {
 	// struct FName                   InMouseSensitiveName           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UTslGameOption::STATIC_GetMouseSensitivity(const struct FName& InMouseSensitiveName) {
+	float UTslGameOption::STATIC_GetMouseSensitivity(const struct FName& InMouseSensitiveName)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe0102a32);
 
@@ -28389,7 +29753,8 @@ namespace Classes {
 	// Parameters:
 	// TArray<struct FUiType>         ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<struct FUiType> UTslGameOption::STATIC_GetMiniMapTypes() {
+	TArray<struct FUiType> UTslGameOption::STATIC_GetMiniMapTypes()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xfa1ea0c4);
 
@@ -28411,7 +29776,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UTslGameOption::STATIC_GetMasterSoundVolume() {
+	float UTslGameOption::STATIC_GetMasterSoundVolume()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x55bfd02d);
 
@@ -28434,7 +29800,8 @@ namespace Classes {
 	// struct FTslInputKey            Key                            (CPF_Parm)
 	// struct FText                   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
-	struct FText UTslGameOption::STATIC_GetKeyName(const struct FTslInputKey& Key) {
+	struct FText UTslGameOption::STATIC_GetKeyName(const struct FTslInputKey& Key)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3aedd6b4);
 
@@ -28457,7 +29824,8 @@ namespace Classes {
 	// Parameters:
 	// TArray<struct FKeyInputModeName> ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<struct FKeyInputModeName> UTslGameOption::STATIC_GetKeyInputModeNames() {
+	TArray<struct FKeyInputModeName> UTslGameOption::STATIC_GetKeyInputModeNames()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xea7e7cc2);
 
@@ -28479,7 +29847,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UTslGameOption::STATIC_GetGamma() {
+	float UTslGameOption::STATIC_GetGamma()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xdcd1e113);
 
@@ -28501,7 +29870,8 @@ namespace Classes {
 	// Parameters:
 	// TEnumAsByte<EWindowMode>       ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	TEnumAsByte<EWindowMode> UTslGameOption::STATIC_GetFullScreenMode() {
+	TEnumAsByte<EWindowMode> UTslGameOption::STATIC_GetFullScreenMode()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd96d52aa);
 
@@ -28523,7 +29893,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UTslGameOption::STATIC_GetFpsCameraFov() {
+	float UTslGameOption::STATIC_GetFpsCameraFov()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x37b1a939);
 
@@ -28545,7 +29916,8 @@ namespace Classes {
 	// Parameters:
 	// TEnumAsByte<EUiShowType>       ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	TEnumAsByte<EUiShowType> UTslGameOption::STATIC_GetFppWeaponIconShowType() {
+	TEnumAsByte<EUiShowType> UTslGameOption::STATIC_GetFppWeaponIconShowType()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf8a9d256);
 
@@ -28567,7 +29939,8 @@ namespace Classes {
 	// Parameters:
 	// TEnumAsByte<EUiShowType>       ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	TEnumAsByte<EUiShowType> UTslGameOption::STATIC_GetFppEquipableItemIconShowType() {
+	TEnumAsByte<EUiShowType> UTslGameOption::STATIC_GetFppEquipableItemIconShowType()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x24387f43);
 
@@ -28589,7 +29962,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UTslGameOption::STATIC_GetEffectSoundVolume() {
+	float UTslGameOption::STATIC_GetEffectSoundVolume()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1fc7915e);
 
@@ -28612,7 +29986,8 @@ namespace Classes {
 	// TEnumAsByte<EInputModeSettingActions> eAction                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// TEnumAsByte<ETslInputModes>    ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	TEnumAsByte<ETslInputModes> UTslGameOption::STATIC_GetDefaultInputModeSetting(TEnumAsByte<EInputModeSettingActions> eAction) {
+	TEnumAsByte<ETslInputModes> UTslGameOption::STATIC_GetDefaultInputModeSetting(TEnumAsByte<EInputModeSettingActions> eAction)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x47f75888);
 
@@ -28635,7 +30010,8 @@ namespace Classes {
 	// Parameters:
 	// struct FString                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	struct FString UTslGameOption::STATIC_GetDefaultCultureName() {
+	struct FString UTslGameOption::STATIC_GetDefaultCultureName()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5bff926);
 
@@ -28657,7 +30033,8 @@ namespace Classes {
 	// Parameters:
 	// struct FString                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	struct FString UTslGameOption::STATIC_GetCurrentProvider() {
+	struct FString UTslGameOption::STATIC_GetCurrentProvider()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x894f0fb4);
 
@@ -28679,7 +30056,8 @@ namespace Classes {
 	// Parameters:
 	// struct FString                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	struct FString UTslGameOption::STATIC_GetCurrentCultureName() {
+	struct FString UTslGameOption::STATIC_GetCurrentCultureName()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd73ea55e);
 
@@ -28701,7 +30079,8 @@ namespace Classes {
 	// Parameters:
 	// struct FString                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	struct FString UTslGameOption::STATIC_GetCurrentCrosshairColorStr() {
+	struct FString UTslGameOption::STATIC_GetCurrentCrosshairColorStr()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x655bbb5f);
 
@@ -28723,7 +30102,8 @@ namespace Classes {
 	// Parameters:
 	// TEnumAsByte<EColorBlindType>   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	TEnumAsByte<EColorBlindType> UTslGameOption::STATIC_GetCurrentColorBlindKey() {
+	TEnumAsByte<EColorBlindType> UTslGameOption::STATIC_GetCurrentColorBlindKey()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4893cdea);
 
@@ -28745,7 +30125,8 @@ namespace Classes {
 	// Parameters:
 	// TArray<struct FPresetColor>    ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<struct FPresetColor> UTslGameOption::STATIC_GetCrosshairColors() {
+	TArray<struct FPresetColor> UTslGameOption::STATIC_GetCrosshairColors()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x22bf9d48);
 
@@ -28768,7 +30149,8 @@ namespace Classes {
 	// struct FName                   InMouseSensitiveName           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UTslGameOption::STATIC_GetConvertedMouseSensitivity(const struct FName& InMouseSensitiveName) {
+	float UTslGameOption::STATIC_GetConvertedMouseSensitivity(const struct FName& InMouseSensitiveName)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x74e1af94);
 
@@ -28791,7 +30173,8 @@ namespace Classes {
 	// Parameters:
 	// TArray<struct FColorBlindType> ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<struct FColorBlindType> UTslGameOption::STATIC_GetColorBlindTypes() {
+	TArray<struct FColorBlindType> UTslGameOption::STATIC_GetColorBlindTypes()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x57f4cc71);
 
@@ -28813,7 +30196,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UTslGameOption::STATIC_GetBGMSoundVolume() {
+	float UTslGameOption::STATIC_GetBGMSoundVolume()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xee7fe0c1);
 
@@ -28838,7 +30222,8 @@ namespace Classes {
 	// bool                           bDefault                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// TArray<struct FTslInputKey>    ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<struct FTslInputKey> UTslGameOption::STATIC_GetAxisKeys(const struct FName& AxisName, float Scale, bool bDefault) {
+	TArray<struct FTslInputKey> UTslGameOption::STATIC_GetAxisKeys(const struct FName& AxisName, float Scale, bool bDefault)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7e6ea193);
 
@@ -28869,7 +30254,8 @@ namespace Classes {
 	// TEnumAsByte<EKeyBindingSlot>   eKeySlot                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FTslInputKey            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
-	struct FTslInputKey UTslGameOption::STATIC_GetAxisKey(const struct FName& AxisName, float Scale, bool bGamepad, bool bDefault, bool bWantAnyKey, TEnumAsByte<EKeyBindingSlot> eKeySlot) {
+	struct FTslInputKey UTslGameOption::STATIC_GetAxisKey(const struct FName& AxisName, float Scale, bool bGamepad, bool bDefault, bool bWantAnyKey, TEnumAsByte<EKeyBindingSlot> eKeySlot)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x217b5938);
 
@@ -28897,7 +30283,8 @@ namespace Classes {
 	// Parameters:
 	// TArray<struct FString>         ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<struct FString> UTslGameOption::STATIC_GetAvailableProviderNames() {
+	TArray<struct FString> UTslGameOption::STATIC_GetAvailableProviderNames()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x938819e2);
 
@@ -28919,7 +30306,8 @@ namespace Classes {
 	// Parameters:
 	// TArray<struct FText>           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<struct FText> UTslGameOption::STATIC_GetAvailableProviderDisplayNames() {
+	TArray<struct FText> UTslGameOption::STATIC_GetAvailableProviderDisplayNames()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xec410b30);
 
@@ -28944,7 +30332,8 @@ namespace Classes {
 	// float                          GPUMultiplier                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// TArray<struct FQualityLevelInfo> ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<struct FQualityLevelInfo> UTslGameOption::STATIC_GetAutoQualityLevels(int WorkScale, float CPUMultiplier, float GPUMultiplier) {
+	TArray<struct FQualityLevelInfo> UTslGameOption::STATIC_GetAutoQualityLevels(int WorkScale, float CPUMultiplier, float GPUMultiplier)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x37607aa9);
 
@@ -28971,7 +30360,8 @@ namespace Classes {
 	// bool                           bDefault                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// TArray<struct FTslInputKey>    ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<struct FTslInputKey> UTslGameOption::STATIC_GetActionKeys(const struct FName& ActionName, bool bDefault) {
+	TArray<struct FTslInputKey> UTslGameOption::STATIC_GetActionKeys(const struct FName& ActionName, bool bDefault)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2ad6c4f2);
 
@@ -29000,7 +30390,8 @@ namespace Classes {
 	// TEnumAsByte<EKeyBindingSlot>   eKeySlot                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FTslInputKey            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
-	struct FTslInputKey UTslGameOption::STATIC_GetActionKey(const struct FName& ActionName, bool bGamepad, bool bDefault, bool bWantAnyKey, TEnumAsByte<EKeyBindingSlot> eKeySlot) {
+	struct FTslInputKey UTslGameOption::STATIC_GetActionKey(const struct FName& ActionName, bool bGamepad, bool bDefault, bool bWantAnyKey, TEnumAsByte<EKeyBindingSlot> eKeySlot)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x48d1d083);
 
@@ -29027,7 +30418,8 @@ namespace Classes {
 	// Parameters:
 	// TArray<struct FCustomizableMouseSensitiveName> ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<struct FCustomizableMouseSensitiveName> UTslGameOption::STATIC_CustomizableMouseSensitiveNames() {
+	TArray<struct FCustomizableMouseSensitiveName> UTslGameOption::STATIC_CustomizableMouseSensitiveNames()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9d8176d9);
 
@@ -29049,7 +30441,8 @@ namespace Classes {
 	// Parameters:
 	// TArray<struct FTslGame_FCustomizableCategoryData> ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<struct FTslGame_FCustomizableCategoryData> UTslGameOption::STATIC_CustomizableCategoryData() {
+	TArray<struct FTslGame_FCustomizableCategoryData> UTslGameOption::STATIC_CustomizableCategoryData()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe1faf4e0);
 
@@ -29071,7 +30464,8 @@ namespace Classes {
 	// Parameters:
 	// TArray<struct FTslGame_FCustomizableAxisName> ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<struct FTslGame_FCustomizableAxisName> UTslGameOption::STATIC_CustomizableAxisName() {
+	TArray<struct FTslGame_FCustomizableAxisName> UTslGameOption::STATIC_CustomizableAxisName()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe798bae);
 
@@ -29093,7 +30487,8 @@ namespace Classes {
 	// Parameters:
 	// TArray<struct FCustomizableActionName> ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<struct FCustomizableActionName> UTslGameOption::STATIC_CustomizableActionNames() {
+	TArray<struct FCustomizableActionName> UTslGameOption::STATIC_CustomizableActionNames()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xee1afd62);
 
@@ -29115,7 +30510,8 @@ namespace Classes {
 	// Parameters:
 	// TArray<struct FString>         ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<struct FString> UTslGameOption::STATIC_CultureNames() {
+	TArray<struct FString> UTslGameOption::STATIC_CultureNames()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe48eca46);
 
@@ -29138,7 +30534,8 @@ namespace Classes {
 	// struct FName                   InputModeName                  (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 	// TEnumAsByte<ETslInputModes>    ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	TEnumAsByte<ETslInputModes> UTslGameOption::STATIC_CastTslInputModeFromName(const struct FName& InputModeName) {
+	TEnumAsByte<ETslInputModes> UTslGameOption::STATIC_CastTslInputModeFromName(const struct FName& InputModeName)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x75fe6b6a);
 
@@ -29159,7 +30556,8 @@ namespace Classes {
 	// Function TslGame.TslGameOption.ApplyMouseSensitivity
 	// (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslGameOption::STATIC_ApplyMouseSensitivity() {
+	void UTslGameOption::STATIC_ApplyMouseSensitivity()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5052d93a);
 
@@ -29179,7 +30577,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bCheckForCommandLineOverrides  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGameOption::STATIC_ApplyGameUserSettings(bool bCheckForCommandLineOverrides) {
+	void UTslGameOption::STATIC_ApplyGameUserSettings(bool bCheckForCommandLineOverrides)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xac1d1b60);
 
@@ -29198,7 +30597,8 @@ namespace Classes {
 	// Function TslGame.TslGameOption.ApplyAutoQualitySetting
 	// (FUNC_Final, FUNC_Native, FUNC_Static, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslGameOption::STATIC_ApplyAutoQualitySetting() {
+	void UTslGameOption::STATIC_ApplyAutoQualitySetting()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5520ee00);
 
@@ -29218,7 +30618,8 @@ namespace Classes {
 	// Parameters:
 	// float                          DeltaSeconds                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslGameState::UpdateWorldTimeSecondsDelta(float DeltaSeconds) {
+	void ATslGameState::UpdateWorldTimeSecondsDelta(float DeltaSeconds)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf00b67a3);
 
@@ -29237,7 +30638,8 @@ namespace Classes {
 	// Function TslGame.TslGameState.ShowPlayerStateList
 	// (FUNC_Final, FUNC_Exec, FUNC_Native, FUNC_Public, FUNC_Const)
 
-	void ATslGameState::ShowPlayerStateList() {
+	void ATslGameState::ShowPlayerStateList()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x95a2d789);
 
@@ -29257,7 +30659,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           InbIsGasRelease                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslGameState::OnStartGasRelease(bool InbIsGasRelease) {
+	void ATslGameState::OnStartGasRelease(bool InbIsGasRelease)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1887d7ed);
 
@@ -29276,7 +30679,8 @@ namespace Classes {
 	// Function TslGame.TslGameState.OnRep_MatchShortGuid
 	// (FUNC_Final, FUNC_Native, FUNC_Public)
 
-	void ATslGameState::OnRep_MatchShortGuid() {
+	void ATslGameState::OnRep_MatchShortGuid()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xca4f2b5);
 
@@ -29296,7 +30700,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bLastIsGasRelease              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslGameState::OnRep_GasRelease(bool bLastIsGasRelease) {
+	void ATslGameState::OnRep_GasRelease(bool bLastIsGasRelease)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x52213df3);
 
@@ -29317,7 +30722,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslGameState::IsMatchInProgressBP() {
+	bool ATslGameState::IsMatchInProgressBP()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xaec444f);
 
@@ -29339,7 +30745,8 @@ namespace Classes {
 	// Parameters:
 	// class ALevelAttribute*         ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ALevelAttribute* ATslGameState::GetLevelAttribute() {
+	class ALevelAttribute* ATslGameState::GetLevelAttribute()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x29a18464);
 
@@ -29361,7 +30768,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bLastReplicatedOnClient        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGlassWindowComponent::OnRep_ReplicatedOnClient(bool bLastReplicatedOnClient) {
+	void UTslGlassWindowComponent::OnRep_ReplicatedOnClient(bool bLastReplicatedOnClient)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x130fcb72);
 
@@ -29382,7 +30790,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bLastDestroyed                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGlassWindowComponent::OnRep_Destroyed(bool bLastDestroyed) {
+	void UTslGlassWindowComponent::OnRep_Destroyed(bool bLastDestroyed)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc5f14820);
 
@@ -29405,7 +30814,8 @@ namespace Classes {
 	// struct FVector_NetQuantize     Location                       (CPF_ConstParm, CPF_Parm, CPF_ReferenceParm)
 	// struct FVector_NetQuantizeNormal ImpactNormal                   (CPF_ConstParm, CPF_Parm, CPF_ReferenceParm)
 
-	void UTslGlassWindowComponent::ClientNotifyHit(bool bBlockingHit, const struct FVector_NetQuantize& Location, const struct FVector_NetQuantizeNormal& ImpactNormal) {
+	void UTslGlassWindowComponent::ClientNotifyHit(bool bBlockingHit, const struct FVector_NetQuantize& Location, const struct FVector_NetQuantizeNormal& ImpactNormal)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x919a0981);
 
@@ -29428,7 +30838,8 @@ namespace Classes {
 	// Parameters:
 	// class UAnimMontage*            FireModeMontage                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslGunAnimInstance::HandleFiremodeMontage(class UAnimMontage* FireModeMontage) {
+	void UTslGunAnimInstance::HandleFiremodeMontage(class UAnimMontage* FireModeMontage)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb258b455);
 
@@ -29450,7 +30861,8 @@ namespace Classes {
 	// float                          HealthPercent                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FLinearColor            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FLinearColor UTslHealthGaugeData::GetGaugeColor(float HealthPercent) {
+	struct FLinearColor UTslHealthGaugeData::GetGaugeColor(float HealthPercent)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5f3d912a);
 
@@ -29473,7 +30885,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bLastReplicatedOnClient        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslInstancedGlassWindowComponent::OnRep_ReplicatedOnClient(bool bLastReplicatedOnClient) {
+	void UTslInstancedGlassWindowComponent::OnRep_ReplicatedOnClient(bool bLastReplicatedOnClient)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x81384975);
 
@@ -29492,7 +30905,8 @@ namespace Classes {
 	// Function TslGame.TslInstancedGlassWindowComponent.OnRep_PendingDestroy
 	// (FUNC_Final, FUNC_Native, FUNC_Protected)
 
-	void UTslInstancedGlassWindowComponent::OnRep_PendingDestroy() {
+	void UTslInstancedGlassWindowComponent::OnRep_PendingDestroy()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x79a77ce5);
 
@@ -29510,7 +30924,8 @@ namespace Classes {
 	// Function TslGame.TslInstancedGlassWindowComponent.OnRep_Destroyed
 	// (FUNC_Final, FUNC_Native, FUNC_Protected)
 
-	void UTslInstancedGlassWindowComponent::OnRep_Destroyed() {
+	void UTslInstancedGlassWindowComponent::OnRep_Destroyed()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x54058cad);
 
@@ -29533,7 +30948,8 @@ namespace Classes {
 	// struct FVector_NetQuantizeNormal ImpactNormal                   (CPF_ConstParm, CPF_Parm, CPF_ReferenceParm)
 	// int                            InstanceIndex                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslInstancedGlassWindowComponent::ClientNotifyHit(bool bBlockingHit, const struct FVector_NetQuantize& Location, const struct FVector_NetQuantizeNormal& ImpactNormal, int InstanceIndex) {
+	void UTslInstancedGlassWindowComponent::ClientNotifyHit(bool bBlockingHit, const struct FVector_NetQuantize& Location, const struct FVector_NetQuantizeNormal& ImpactNormal, int InstanceIndex)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9f04bee4);
 
@@ -29555,7 +30971,8 @@ namespace Classes {
 	// Function TslGame.TslInstancedReactionComponent.OnRep_PendingDestroy
 	// (FUNC_Final, FUNC_Native, FUNC_Protected)
 
-	void UTslInstancedReactionComponent::OnRep_PendingDestroy() {
+	void UTslInstancedReactionComponent::OnRep_PendingDestroy()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe6005adc);
 
@@ -29578,7 +30995,8 @@ namespace Classes {
 	// struct FVector                 ImpulseDir                     (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FVector                 Velocity                       (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-	void UTslInstancedReactionComponent::Client_ReactByVehicle(int InstanceIndex, const struct FVector& Impact, const struct FVector& ImpulseDir, const struct FVector& Velocity) {
+	void UTslInstancedReactionComponent::Client_ReactByVehicle(int InstanceIndex, const struct FVector& Impact, const struct FVector& ImpulseDir, const struct FVector& Velocity)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4a14b93c);
 
@@ -29607,7 +31025,8 @@ namespace Classes {
 	// struct FVector                 ImpulseDir                     (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          OuterRadius                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslInstancedReactionComponent::Client_ReactByRadialDamage(int InstanceIndex, float DamageAmount, const struct FVector& Origin, const struct FVector& Impact, const struct FVector& ImpulseDir, float OuterRadius) {
+	void UTslInstancedReactionComponent::Client_ReactByRadialDamage(int InstanceIndex, float DamageAmount, const struct FVector& Origin, const struct FVector& Impact, const struct FVector& ImpulseDir, float OuterRadius)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4c5a375a);
 
@@ -29636,7 +31055,8 @@ namespace Classes {
 	// struct FVector                 Impact                         (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 	// struct FVector                 ImpulseDir                     (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslInstancedReactionComponent::Client_ReactByPointDamage(int InstanceIndex, float DamageAmount, const struct FVector& Impact, const struct FVector& ImpulseDir) {
+	void UTslInstancedReactionComponent::Client_ReactByPointDamage(int InstanceIndex, float DamageAmount, const struct FVector& Impact, const struct FVector& ImpulseDir)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x159dfc3d);
 
@@ -29660,7 +31080,8 @@ namespace Classes {
 	// Parameters:
 	// struct FString                 EventID                        (CPF_Parm, CPF_ZeroConstructor)
 
-	void ATslLevelScriptActor::RequestReplayALevelWeatherEvent(const struct FString& EventID) {
+	void ATslLevelScriptActor::RequestReplayALevelWeatherEvent(const struct FString& EventID)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x761044ac);
 
@@ -29679,7 +31100,8 @@ namespace Classes {
 	// Function TslGame.TslLevelScriptActor.RecordWeatherAsCustomEvent
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void ATslLevelScriptActor::RecordWeatherAsCustomEvent() {
+	void ATslLevelScriptActor::RecordWeatherAsCustomEvent()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xbbe17e9);
 
@@ -29697,7 +31119,8 @@ namespace Classes {
 	// Function TslGame.TslLevelScriptActor.OnRep_SelectedWeatherIndex
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void ATslLevelScriptActor::OnRep_SelectedWeatherIndex() {
+	void ATslLevelScriptActor::OnRep_SelectedWeatherIndex()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3c59a96d);
 
@@ -29715,7 +31138,8 @@ namespace Classes {
 	// Function TslGame.TslLevelScriptActor.EnumerateReplayLevelEvents
 	// (FUNC_Final, FUNC_Native, FUNC_Private, FUNC_BlueprintCallable)
 
-	void ATslLevelScriptActor::EnumerateReplayLevelEvents() {
+	void ATslLevelScriptActor::EnumerateReplayLevelEvents()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x23544395);
 
@@ -29735,7 +31159,8 @@ namespace Classes {
 	// Parameters:
 	// TArray<class UChildActorComponent*> Floors                         (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
 
-	void ATslModularBuilding::PassSeparatedFloors(TArray<class UChildActorComponent*> Floors) {
+	void ATslModularBuilding::PassSeparatedFloors(TArray<class UChildActorComponent*> Floors)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd27818f4);
 
@@ -29758,7 +31183,8 @@ namespace Classes {
 	// struct FString                 Keyword                        (CPF_Parm, CPF_ZeroConstructor)
 	// TArray<class UStaticMeshComponent*> ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<class UStaticMeshComponent*> ATslModularBuilding::GetMeshOnSapartedFloor(int SepartedFloor, const struct FString& Keyword) {
+	TArray<class UStaticMeshComponent*> ATslModularBuilding::GetMeshOnSapartedFloor(int SepartedFloor, const struct FString& Keyword)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9575dd41);
 
@@ -29783,7 +31209,8 @@ namespace Classes {
 	// struct FString                 Keyword                        (CPF_Parm, CPF_ZeroConstructor)
 	// TArray<class UStaticMeshComponent*> ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<class UStaticMeshComponent*> ATslModularBuilding::GetBuildingModuleFromTable(const struct FString& Keyword) {
+	TArray<class UStaticMeshComponent*> ATslModularBuilding::GetBuildingModuleFromTable(const struct FString& Keyword)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x778b4247);
 
@@ -29807,7 +31234,8 @@ namespace Classes {
 	// struct FString                 Keyword                        (CPF_Parm, CPF_ZeroConstructor)
 	// TArray<class UStaticMeshComponent*> ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<class UStaticMeshComponent*> ATslModularBuilding::GetAttachmentsFromTable(const struct FString& Keyword) {
+	TArray<class UStaticMeshComponent*> ATslModularBuilding::GetAttachmentsFromTable(const struct FString& Keyword)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf6111dbb);
 
@@ -29828,7 +31256,8 @@ namespace Classes {
 	// Function TslGame.TslModularBuilding.ClearBuildingModuleTable
 	// (FUNC_Final, FUNC_Native, FUNC_Protected, FUNC_BlueprintCallable)
 
-	void ATslModularBuilding::ClearBuildingModuleTable() {
+	void ATslModularBuilding::ClearBuildingModuleTable()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x66a012ea);
 
@@ -29846,7 +31275,8 @@ namespace Classes {
 	// Function TslGame.TslModularBuilding.ClearAttachmentTable
 	// (FUNC_Final, FUNC_Native, FUNC_Protected, FUNC_BlueprintCallable)
 
-	void ATslModularBuilding::ClearAttachmentTable() {
+	void ATslModularBuilding::ClearAttachmentTable()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x79d5e51b);
 
@@ -29867,7 +31297,8 @@ namespace Classes {
 	// struct FString                 Keyword                        (CPF_Parm, CPF_ZeroConstructor)
 	// class UStaticMeshComponent*    Building                       (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
-	void ATslModularBuilding::AddBuildingModuleToTable(const struct FString& Keyword, class UStaticMeshComponent* Building) {
+	void ATslModularBuilding::AddBuildingModuleToTable(const struct FString& Keyword, class UStaticMeshComponent* Building)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe57a7675);
 
@@ -29890,7 +31321,8 @@ namespace Classes {
 	// struct FString                 Keyword                        (CPF_Parm, CPF_ZeroConstructor)
 	// class UStaticMeshComponent*    Attachment                     (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
-	void ATslModularBuilding::AddAttachmentToTable(const struct FString& Keyword, class UStaticMeshComponent* Attachment) {
+	void ATslModularBuilding::AddAttachmentToTable(const struct FString& Keyword, class UStaticMeshComponent* Attachment)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x96db4144);
 
@@ -29914,7 +31346,8 @@ namespace Classes {
 	// float                          Value                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           bEnableRTPC                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslParticle::SetParticleParameter(const struct FString& Name, float Value, bool bEnableRTPC) {
+	void ATslParticle::SetParticleParameter(const struct FString& Name, float Value, bool bEnableRTPC)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7704b07e);
 
@@ -29937,7 +31370,8 @@ namespace Classes {
 	// Parameters:
 	// class UParticleSystemComponent* PSystem                        (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
-	void ATslParticle::OnParticleFinish(class UParticleSystemComponent* PSystem) {
+	void ATslParticle::OnParticleFinish(class UParticleSystemComponent* PSystem)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x280d5b7d);
 
@@ -29966,7 +31400,8 @@ namespace Classes {
 	// struct FName                   BoneName                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class UPhysicalMaterial*       PhysMat                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslParticle::OnParticleCollide(const struct FName& EventName, float EmitterTime, int ParticleTime, const struct FVector& Location, const struct FVector& Velocity, const struct FVector& Direction, const struct FVector& Normal, const struct FName& BoneName, class UPhysicalMaterial* PhysMat) {
+	void ATslParticle::OnParticleCollide(const struct FName& EventName, float EmitterTime, int ParticleTime, const struct FVector& Location, const struct FVector& Velocity, const struct FVector& Direction, const struct FVector& Normal, const struct FName& BoneName, class UPhysicalMaterial* PhysMat)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3167e2ca);
 
@@ -29993,7 +31428,8 @@ namespace Classes {
 	// Function TslGame.TslParticle.OnParameterUpdated
 	// (FUNC_Event, FUNC_Protected, FUNC_BlueprintEvent)
 
-	void ATslParticle::OnParameterUpdated() {
+	void ATslParticle::OnParameterUpdated()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x65038b2c);
 
@@ -30014,7 +31450,8 @@ namespace Classes {
 	// float                          DefaultValue                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslParticle::GetParticleParamter(const struct FString& Name, float DefaultValue) {
+	float ATslParticle::GetParticleParamter(const struct FString& Name, float DefaultValue)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3ff20985);
 
@@ -30038,7 +31475,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslParticle::STATIC_GetEmitterGlobalSpawnRateScale() {
+	float ATslParticle::STATIC_GetEmitterGlobalSpawnRateScale()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x431248ed);
 
@@ -30061,7 +31499,8 @@ namespace Classes {
 	// int                            emitterIndex                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FVector                 InLocation                     (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslParticle::ForceSpawn(int emitterIndex, const struct FVector& InLocation) {
+	void ATslParticle::ForceSpawn(int emitterIndex, const struct FVector& InLocation)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9d1a6c07);
 
@@ -30081,7 +31520,8 @@ namespace Classes {
 	// Function TslGame.TslParticle.AttachToParent
 	// (FUNC_Final, FUNC_Native, FUNC_Protected)
 
-	void ATslParticle::AttachToParent() {
+	void ATslParticle::AttachToParent()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9d5eb791);
 
@@ -30101,7 +31541,8 @@ namespace Classes {
 	// Parameters:
 	// struct FTslPlayerStatistics    OldPlayerStatistics            (CPF_Parm)
 
-	void ATslPlayerState::OnRep_PlayerStatistics(const struct FTslPlayerStatistics& OldPlayerStatistics) {
+	void ATslPlayerState::OnRep_PlayerStatistics(const struct FTslPlayerStatistics& OldPlayerStatistics)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe56a21b6);
 
@@ -30120,7 +31561,8 @@ namespace Classes {
 	// Function TslGame.TslPlayerState.OnRep_LastHitTime
 	// (FUNC_Final, FUNC_Native, FUNC_Protected)
 
-	void ATslPlayerState::OnRep_LastHitTime() {
+	void ATslPlayerState::OnRep_LastHitTime()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xbd411a94);
 
@@ -30140,7 +31582,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslPlayerState::IsQuitter() {
+	bool ATslPlayerState::IsQuitter()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1298982f);
 
@@ -30162,7 +31605,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslPlayerState::IsObserver() {
+	bool ATslPlayerState::IsObserver()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf2d950f9);
 
@@ -30185,7 +31629,8 @@ namespace Classes {
 	// class UDamageType*             KillerDamageType               (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class ATslPlayerState*         KilledPlayerState              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslPlayerState::InformAboutKill(class UDamageType* KillerDamageType, class ATslPlayerState* KilledPlayerState) {
+	void ATslPlayerState::InformAboutKill(class UDamageType* KillerDamageType, class ATslPlayerState* KilledPlayerState)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x23cad537);
 
@@ -30207,7 +31652,8 @@ namespace Classes {
 	// Parameters:
 	// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	int ATslPlayerState::GetTeamNum() {
+	int ATslPlayerState::GetTeamNum()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe6be20e6);
 
@@ -30229,7 +31675,8 @@ namespace Classes {
 	// Parameters:
 	// struct FString                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	struct FString ATslPlayerState::GetShortPlayerName() {
+	struct FString ATslPlayerState::GetShortPlayerName()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf5ada4ab);
 
@@ -30251,7 +31698,8 @@ namespace Classes {
 	// Parameters:
 	// struct FTslPlayerScores        ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FTslPlayerScores ATslPlayerState::GetPlayerScores() {
+	struct FTslPlayerScores ATslPlayerState::GetPlayerScores()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa3fd5fe3);
 
@@ -30273,7 +31721,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslPlayerState::GetPing() {
+	float ATslPlayerState::GetPing()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x643e2e15);
 
@@ -30295,7 +31744,8 @@ namespace Classes {
 	// Parameters:
 	// TEnumAsByte<EObserverAuthorityType> ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	TEnumAsByte<EObserverAuthorityType> ATslPlayerState::GetObserverAuthorityType() {
+	TEnumAsByte<EObserverAuthorityType> ATslPlayerState::GetObserverAuthorityType()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2141cce2);
 
@@ -30317,7 +31767,8 @@ namespace Classes {
 	// Parameters:
 	// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	int ATslPlayerState::GetKills() {
+	int ATslPlayerState::GetKills()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x8bc81b90);
 
@@ -30346,7 +31797,8 @@ namespace Classes {
 	// int                            AliveTeamNum                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           InbIsStealKilled               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslPlayerState::BroadcastDeath(class ATslPlayerState* KillerPlayerState, class ATslPlayerState* GroggyPlayerInstigator, class UDamageType* KillerDamageType, TEnumAsByte<EDamageReason> DamageReason, const struct FText& DamageCauserName, int AlivePlayerNum, int AliveTeamNum, bool InbIsStealKilled) {
+	void ATslPlayerState::BroadcastDeath(class ATslPlayerState* KillerPlayerState, class ATslPlayerState* GroggyPlayerInstigator, class UDamageType* KillerDamageType, TEnumAsByte<EDamageReason> DamageReason, const struct FText& DamageCauserName, int AlivePlayerNum, int AliveTeamNum, bool InbIsStealKilled)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe910cb6);
 
@@ -30377,7 +31829,8 @@ namespace Classes {
 	// struct FLinearColor            Value                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslPostProcessEffect::SetMaterialVectorParameter(int idx, const struct FName& ParameterName, const struct FLinearColor& Value) {
+	bool ATslPostProcessEffect::SetMaterialVectorParameter(int idx, const struct FName& ParameterName, const struct FLinearColor& Value)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x82cb8c18);
 
@@ -30405,7 +31858,8 @@ namespace Classes {
 	// float                          Value                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslPostProcessEffect::SetMaterialParameter(int idx, const struct FName& ParameterName, float Value) {
+	bool ATslPostProcessEffect::SetMaterialParameter(int idx, const struct FName& ParameterName, float Value)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5baf2c43);
 
@@ -30432,7 +31886,8 @@ namespace Classes {
 	// float                          Value                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslPostProcessEffect::SetMaterialBlendWeight(int idx, float Value) {
+	bool ATslPostProcessEffect::SetMaterialBlendWeight(int idx, float Value)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xbac99c0b);
 
@@ -30458,7 +31913,8 @@ namespace Classes {
 	// float                          Value                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslPostProcessEffect::SetEffectParameter(const struct FString& ParameterName, float Value) {
+	bool ATslPostProcessEffect::SetEffectParameter(const struct FString& ParameterName, float Value)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x15cd647);
 
@@ -30484,7 +31940,8 @@ namespace Classes {
 	// float                          DefaultValue                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslPostProcessEffect::GetEffectParameter(const struct FString& ParameterName, float DefaultValue) {
+	float ATslPostProcessEffect::GetEffectParameter(const struct FString& ParameterName, float DefaultValue)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x511747bb);
 
@@ -30509,7 +31966,8 @@ namespace Classes {
 	// struct FVector                 Origin                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FVector_NetQuantizeNormal ShootDir                       (CPF_Parm)
 
-	void ATslWeapon_Projectile::ServerFireProjectile(const struct FVector& Origin, const struct FVector_NetQuantizeNormal& ShootDir) {
+	void ATslWeapon_Projectile::ServerFireProjectile(const struct FVector& Origin, const struct FVector_NetQuantizeNormal& ShootDir)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x52213a67);
 
@@ -30529,7 +31987,8 @@ namespace Classes {
 	// Function TslGame.TslProjectile.SetMeshRotationFromServer
 	// (FUNC_Final, FUNC_Native, FUNC_Protected)
 
-	void ATslProjectile::SetMeshRotationFromServer() {
+	void ATslProjectile::SetMeshRotationFromServer()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xcb3d0ef4);
 
@@ -30547,7 +32006,8 @@ namespace Classes {
 	// Function TslGame.TslProjectile.OnRep_Exploded
 	// (FUNC_Final, FUNC_Native, FUNC_Protected)
 
-	void ATslProjectile::OnRep_Exploded() {
+	void ATslProjectile::OnRep_Exploded()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xdb125f6a);
 
@@ -30565,7 +32025,8 @@ namespace Classes {
 	// Function TslGame.TslProjectile.OnRep_ClientActivate
 	// (FUNC_Final, FUNC_Native, FUNC_Protected)
 
-	void ATslProjectile::OnRep_ClientActivate() {
+	void ATslProjectile::OnRep_ClientActivate()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x15f9e225);
 
@@ -30583,7 +32044,8 @@ namespace Classes {
 	// Function TslGame.TslProjectile.OnRep_ActiveParticle
 	// (FUNC_Final, FUNC_Native, FUNC_Protected)
 
-	void ATslProjectile::OnRep_ActiveParticle() {
+	void ATslProjectile::OnRep_ActiveParticle()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x74a58e1b);
 
@@ -30604,7 +32066,8 @@ namespace Classes {
 	// struct FHitResult              ImpactResult                   (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
 	// struct FVector                 ImpactVelocity                 (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-	void ATslProjectile::OnImpact(const struct FHitResult& ImpactResult, const struct FVector& ImpactVelocity) {
+	void ATslProjectile::OnImpact(const struct FHitResult& ImpactResult, const struct FVector& ImpactVelocity)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9102bfe5);
 
@@ -30630,7 +32093,8 @@ namespace Classes {
 	// struct FVector                 NormalImpulse                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FHitResult              Hit                            (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-	void ATslProjectile::OnHit(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit) {
+	void ATslProjectile::OnHit(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1e11480e);
 
@@ -30658,7 +32122,8 @@ namespace Classes {
 	// struct FHitResult              Impact                         (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
 	// float                          Radius                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslProjectile::ExplodeBP(const struct FVector& Location, const struct FRotator& Rotation, const struct FHitResult& Impact, float Radius) {
+	void ATslProjectile::ExplodeBP(const struct FVector& Location, const struct FRotator& Rotation, const struct FHitResult& Impact, float Radius)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xbaec26b1);
 
@@ -30679,7 +32144,8 @@ namespace Classes {
 	// Function TslGame.TslProjectile.CheckVelocityForStart
 	// (FUNC_Final, FUNC_Native, FUNC_Protected)
 
-	void ATslProjectile::CheckVelocityForStart() {
+	void ATslProjectile::CheckVelocityForStart()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf57a47b6);
 
@@ -30697,7 +32163,8 @@ namespace Classes {
 	// Function TslGame.TslReactionDoorComponent.OnRep_DoorBreakingState
 	// (FUNC_Final, FUNC_Native, FUNC_Protected)
 
-	void UTslReactionDoorComponent::OnRep_DoorBreakingState() {
+	void UTslReactionDoorComponent::OnRep_DoorBreakingState()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd9e49666);
 
@@ -30720,7 +32187,8 @@ namespace Classes {
 	// float                          DamageRadius                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          Impulse                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslReactionDoorComponent::ClientTakeDamage(float Damage, const struct FVector_NetQuantize& HitLocation, float DamageRadius, float Impulse) {
+	void UTslReactionDoorComponent::ClientTakeDamage(float Damage, const struct FVector_NetQuantize& HitLocation, float DamageRadius, float Impulse)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe437e3f4);
 
@@ -30742,7 +32210,8 @@ namespace Classes {
 	// Function TslGame.TslSceneCaptureComponent2D.CaptureScene
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslSceneCaptureComponent2D::CaptureScene() {
+	void UTslSceneCaptureComponent2D::CaptureScene()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xfec504e8);
 
@@ -30763,7 +32232,8 @@ namespace Classes {
 	// class UGameInstance*           GameInstance                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FString                 SceneCapturePackageName        (CPF_Parm, CPF_ZeroConstructor)
 
-	void UTslSceneCaptureWorld::InitWorld(class UGameInstance* GameInstance, const struct FString& SceneCapturePackageName) {
+	void UTslSceneCaptureWorld::InitWorld(class UGameInstance* GameInstance, const struct FString& SceneCapturePackageName)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2e450d73);
 
@@ -30783,7 +32253,8 @@ namespace Classes {
 	// Function TslGame.TslSceneCaptureWorld.DestroyWorld
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslSceneCaptureWorld::DestroyWorld() {
+	void UTslSceneCaptureWorld::DestroyWorld()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xfe4a8d21);
 
@@ -30801,7 +32272,8 @@ namespace Classes {
 	// Function TslGame.TslServerParticle.StopParticleMulticast
 	// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_NetMulticast, FUNC_Public)
 
-	void ATslServerParticle::StopParticleMulticast() {
+	void ATslServerParticle::StopParticleMulticast()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x502f9e0a);
 
@@ -30821,7 +32293,8 @@ namespace Classes {
 	// Parameters:
 	// class UParticleSystemComponent* PSystem                        (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
-	void ATslServerParticle::OnParticleFinish(class UParticleSystemComponent* PSystem) {
+	void ATslServerParticle::OnParticleFinish(class UParticleSystemComponent* PSystem)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa647d45a);
 
@@ -30837,12 +32310,32 @@ namespace Classes {
 	}
 
 
+	// Function TslGame.TslSpectatorPawn.TickMonitoring
+	// (FUNC_Final, FUNC_Native, FUNC_Private)
+
+	void ATslSpectatorPawn::TickMonitoring()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn) fn = UObject::FindObject<UFunction>(0x33231e5b);
+
+		ATslSpectatorPawn_TickMonitoring_Params params;
+
+		auto flags = fn->FunctionFlags;
+		fn->FunctionFlags |= 0x400;
+
+		UObject::ProcessEvent(fn, &params);
+
+		fn->FunctionFlags = flags;
+	}
+
+
 	// Function TslGame.TslSpectatorPawn.SetShowPlayerInfoDistance
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 	// Parameters:
 	// float                          Distance                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslSpectatorPawn::SetShowPlayerInfoDistance(float Distance) {
+	void ATslSpectatorPawn::SetShowPlayerInfoDistance(float Distance)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x82b594df);
 
@@ -30863,7 +32356,8 @@ namespace Classes {
 	// Parameters:
 	// class AActor*                  NewViewTarget                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslSpectatorPawn::SetPlayerCamera(class AActor* NewViewTarget) {
+	void ATslSpectatorPawn::SetPlayerCamera(class AActor* NewViewTarget)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd2c624c);
 
@@ -30886,7 +32380,8 @@ namespace Classes {
 	// class AActor*                  NewViewTarget                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           IsBlend                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslSpectatorPawn::SetObserverCameraMode(TEnumAsByte<EObserverCameraMode> NewCameraMode, class AActor* NewViewTarget, bool IsBlend) {
+	void ATslSpectatorPawn::SetObserverCameraMode(TEnumAsByte<EObserverCameraMode> NewCameraMode, class AActor* NewViewTarget, bool IsBlend)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xeb7452dc);
 
@@ -30910,7 +32405,8 @@ namespace Classes {
 	// struct FVector                 HitterLoc                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FVector                 AttackedLoc                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslSpectatorPawn::SetFreeCamBattleLocation(const struct FVector& HitterLoc, const struct FVector& AttackedLoc) {
+	void ATslSpectatorPawn::SetFreeCamBattleLocation(const struct FVector& HitterLoc, const struct FVector& AttackedLoc)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x299040da);
 
@@ -30930,7 +32426,8 @@ namespace Classes {
 	// Function TslGame.TslSpectatorPawn.RestoreTargetCharacter
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ATslSpectatorPawn::RestoreTargetCharacter() {
+	void ATslSpectatorPawn::RestoreTargetCharacter()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xec164a84);
 
@@ -30950,7 +32447,8 @@ namespace Classes {
 	// Parameters:
 	// class AActor*                  NewViewTarget                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslSpectatorPawn::OnViewTargetUpdate(class AActor* NewViewTarget) {
+	void ATslSpectatorPawn::OnViewTargetUpdate(class AActor* NewViewTarget)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1d415e72);
 
@@ -30969,7 +32467,8 @@ namespace Classes {
 	// Function TslGame.TslSpectatorPawn.OnToggleShowObseverTagWeapon
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void ATslSpectatorPawn::OnToggleShowObseverTagWeapon() {
+	void ATslSpectatorPawn::OnToggleShowObseverTagWeapon()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x47482a8);
 
@@ -30987,7 +32486,8 @@ namespace Classes {
 	// Function TslGame.TslSpectatorPawn.OnToggleObseverTagWidget
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void ATslSpectatorPawn::OnToggleObseverTagWidget() {
+	void ATslSpectatorPawn::OnToggleObseverTagWidget()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb28a5207);
 
@@ -31008,7 +32508,8 @@ namespace Classes {
 	// class UActorComponent*         InThirdPersonCamera            (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 	// bool                           bReset                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslSpectatorPawn::OnThirdPersonActivated(class UActorComponent* InThirdPersonCamera, bool bReset) {
+	void ATslSpectatorPawn::OnThirdPersonActivated(class UActorComponent* InThirdPersonCamera, bool bReset)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xbe998ea8);
 
@@ -31028,7 +32529,8 @@ namespace Classes {
 	// Function TslGame.TslSpectatorPawn.OnSwitchCameraSpectator
 	// (FUNC_Final, FUNC_Native, FUNC_Public)
 
-	void ATslSpectatorPawn::OnSwitchCameraSpectator() {
+	void ATslSpectatorPawn::OnSwitchCameraSpectator()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2ad9271b);
 
@@ -31046,7 +32548,8 @@ namespace Classes {
 	// Function TslGame.TslSpectatorPawn.OnSwitchCameraFollow
 	// (FUNC_Final, FUNC_Native, FUNC_Public)
 
-	void ATslSpectatorPawn::OnSwitchCameraFollow() {
+	void ATslSpectatorPawn::OnSwitchCameraFollow()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xbf494c3);
 
@@ -31064,7 +32567,8 @@ namespace Classes {
 	// Function TslGame.TslSpectatorPawn.OnStopSlowMove
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void ATslSpectatorPawn::OnStopSlowMove() {
+	void ATslSpectatorPawn::OnStopSlowMove()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd5f0b425);
 
@@ -31082,7 +32586,8 @@ namespace Classes {
 	// Function TslGame.TslSpectatorPawn.OnStopFastMove
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void ATslSpectatorPawn::OnStopFastMove() {
+	void ATslSpectatorPawn::OnStopFastMove()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xafe75fec);
 
@@ -31100,7 +32605,8 @@ namespace Classes {
 	// Function TslGame.TslSpectatorPawn.OnStartSlowMove
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void ATslSpectatorPawn::OnStartSlowMove() {
+	void ATslSpectatorPawn::OnStartSlowMove()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xfa4f73cb);
 
@@ -31118,7 +32624,8 @@ namespace Classes {
 	// Function TslGame.TslSpectatorPawn.OnStartFastMove
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void ATslSpectatorPawn::OnStartFastMove() {
+	void ATslSpectatorPawn::OnStartFastMove()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc3592356);
 
@@ -31136,7 +32643,8 @@ namespace Classes {
 	// Function TslGame.TslSpectatorPawn.OnSetSpectator
 	// (FUNC_Final, FUNC_Native, FUNC_Public)
 
-	void ATslSpectatorPawn::OnSetSpectator() {
+	void ATslSpectatorPawn::OnSetSpectator()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xea2f404a);
 
@@ -31156,7 +32664,8 @@ namespace Classes {
 	// Parameters:
 	// unsigned char                  idx                            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslSpectatorPawn::OnSetLocation(unsigned char idx) {
+	void ATslSpectatorPawn::OnSetLocation(unsigned char idx)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x205ffae);
 
@@ -31175,7 +32684,8 @@ namespace Classes {
 	// Function TslGame.TslSpectatorPawn.OnSetFree
 	// (FUNC_Final, FUNC_Native, FUNC_Public)
 
-	void ATslSpectatorPawn::OnSetFree() {
+	void ATslSpectatorPawn::OnSetFree()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3d39cddd);
 
@@ -31193,7 +32703,8 @@ namespace Classes {
 	// Function TslGame.TslSpectatorPawn.OnSetFollow
 	// (FUNC_Final, FUNC_Native, FUNC_Public)
 
-	void ATslSpectatorPawn::OnSetFollow() {
+	void ATslSpectatorPawn::OnSetFollow()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6ebd98a4);
 
@@ -31213,7 +32724,8 @@ namespace Classes {
 	// Parameters:
 	// unsigned char                  idx                            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslSpectatorPawn::OnSetCharacterSpec(unsigned char idx) {
+	void ATslSpectatorPawn::OnSetCharacterSpec(unsigned char idx)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x803a55e5);
 
@@ -31234,7 +32746,8 @@ namespace Classes {
 	// Parameters:
 	// unsigned char                  idx                            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslSpectatorPawn::OnSetCharacter(unsigned char idx) {
+	void ATslSpectatorPawn::OnSetCharacter(unsigned char idx)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xeb85b53c);
 
@@ -31255,7 +32768,8 @@ namespace Classes {
 	// Parameters:
 	// unsigned char                  idx                            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslSpectatorPawn::OnSaveLocation(unsigned char idx) {
+	void ATslSpectatorPawn::OnSaveLocation(unsigned char idx)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x48d10bef);
 
@@ -31276,7 +32790,8 @@ namespace Classes {
 	// Parameters:
 	// unsigned char                  idx                            (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslSpectatorPawn::OnSaveCharacter(unsigned char idx) {
+	void ATslSpectatorPawn::OnSaveCharacter(unsigned char idx)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3733328b);
 
@@ -31295,7 +32810,8 @@ namespace Classes {
 	// Function TslGame.TslSpectatorPawn.OnPlayerInfoDistanceUpHold
 	// (FUNC_Final, FUNC_Native, FUNC_Public)
 
-	void ATslSpectatorPawn::OnPlayerInfoDistanceUpHold() {
+	void ATslSpectatorPawn::OnPlayerInfoDistanceUpHold()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3205a96b);
 
@@ -31313,7 +32829,8 @@ namespace Classes {
 	// Function TslGame.TslSpectatorPawn.OnPlayerInfoDistanceUp
 	// (FUNC_Final, FUNC_Native, FUNC_Public)
 
-	void ATslSpectatorPawn::OnPlayerInfoDistanceUp() {
+	void ATslSpectatorPawn::OnPlayerInfoDistanceUp()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf9e095dc);
 
@@ -31331,7 +32848,8 @@ namespace Classes {
 	// Function TslGame.TslSpectatorPawn.OnPlayerInfoDistanceDownHold
 	// (FUNC_Final, FUNC_Native, FUNC_Public)
 
-	void ATslSpectatorPawn::OnPlayerInfoDistanceDownHold() {
+	void ATslSpectatorPawn::OnPlayerInfoDistanceDownHold()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x28a18e64);
 
@@ -31349,7 +32867,8 @@ namespace Classes {
 	// Function TslGame.TslSpectatorPawn.OnPlayerInfoDistanceDown
 	// (FUNC_Final, FUNC_Native, FUNC_Public)
 
-	void ATslSpectatorPawn::OnPlayerInfoDistanceDown() {
+	void ATslSpectatorPawn::OnPlayerInfoDistanceDown()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf275f2d3);
 
@@ -31369,7 +32888,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslSpectatorPawn::IsObserverTagWeaponShow() {
+	bool ATslSpectatorPawn::IsObserverTagWeaponShow()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7aa2cd87);
 
@@ -31386,12 +32906,32 @@ namespace Classes {
 	}
 
 
+	// Function TslGame.TslSpectatorPawn.HandleClipboard
+	// (FUNC_Final, FUNC_Native, FUNC_Private)
+
+	void ATslSpectatorPawn::HandleClipboard()
+	{
+		static UFunction* fn = nullptr;
+		if (!fn) fn = UObject::FindObject<UFunction>(0x828b3156);
+
+		ATslSpectatorPawn_HandleClipboard_Params params;
+
+		auto flags = fn->FunctionFlags;
+		fn->FunctionFlags |= 0x400;
+
+		UObject::ProcessEvent(fn, &params);
+
+		fn->FunctionFlags = flags;
+	}
+
+
 	// Function TslGame.TslSpectatorPawn.GetSpectatableCharacter
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
 	// Parameters:
 	// class ATslCharacter*           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslCharacter* ATslSpectatorPawn::GetSpectatableCharacter() {
+	class ATslCharacter* ATslSpectatorPawn::GetSpectatableCharacter()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x51b6072b);
 
@@ -31413,7 +32953,8 @@ namespace Classes {
 	// Parameters:
 	// class ACarePackageItem*        ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ACarePackageItem* ATslSpectatorPawn::GetSpectableCarePackageItem() {
+	class ACarePackageItem* ATslSpectatorPawn::GetSpectableCarePackageItem()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x62425dab);
 
@@ -31435,7 +32976,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslSpectatorPawn::GetShowPlayerInfoDistance() {
+	float ATslSpectatorPawn::GetShowPlayerInfoDistance()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1e45056b);
 
@@ -31457,7 +32999,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslSpectatorPawn::GetObserverTagShow() {
+	bool ATslSpectatorPawn::GetObserverTagShow()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6dfad143);
 
@@ -31479,7 +33022,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslCharacter*           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslCharacter* ATslSpectatorPawn::GetLastSpectatedCharacter() {
+	class ATslCharacter* ATslSpectatorPawn::GetLastSpectatedCharacter()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x56b1d102);
 
@@ -31501,7 +33045,8 @@ namespace Classes {
 	// Parameters:
 	// TEnumAsByte<EObserverCameraMode> ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	TEnumAsByte<EObserverCameraMode> ATslSpectatorPawn::GetCameraMode() {
+	TEnumAsByte<EObserverCameraMode> ATslSpectatorPawn::GetCameraMode()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe07abf36);
 
@@ -31521,7 +33066,8 @@ namespace Classes {
 	// Function TslGame.TslSpectatorPawn.BackupTargetCharacterID
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ATslSpectatorPawn::BackupTargetCharacterID() {
+	void ATslSpectatorPawn::BackupTargetCharacterID()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x436943d7);
 
@@ -31541,7 +33087,8 @@ namespace Classes {
 	// Parameters:
 	// class APlayerController*       PlayerController               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslStatics::STATIC_UseHighPrecisionMouseMovement(class APlayerController* PlayerController) {
+	void UTslStatics::STATIC_UseHighPrecisionMouseMovement(class APlayerController* PlayerController)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1b665521);
 
@@ -31563,7 +33110,8 @@ namespace Classes {
 	// class APlayerController*       Controller                     (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          XYDistanceToShift              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslStatics::STATIC_SetWorldOriginByDistance(class APlayerController* Controller, float XYDistanceToShift) {
+	void UTslStatics::STATIC_SetWorldOriginByDistance(class APlayerController* Controller, float XYDistanceToShift)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x544b2e86);
 
@@ -31585,7 +33133,8 @@ namespace Classes {
 	// Parameters:
 	// class APlayerController*       Controller                     (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslStatics::STATIC_SetWorldOrigin(class APlayerController* Controller) {
+	void UTslStatics::STATIC_SetWorldOrigin(class APlayerController* Controller)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x364b7d38);
 
@@ -31608,7 +33157,8 @@ namespace Classes {
 	// struct FString                 SwitchGroup                    (CPF_Parm, CPF_ZeroConstructor)
 	// struct FString                 SwitchState                    (CPF_Parm, CPF_ZeroConstructor)
 
-	void UTslStatics::STATIC_SetAnimationAkSwitch(class ACharacter* Character, const struct FString& SwitchGroup, const struct FString& SwitchState) {
+	void UTslStatics::STATIC_SetAnimationAkSwitch(class ACharacter* Character, const struct FString& SwitchGroup, const struct FString& SwitchState)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3a2ebd8c);
 
@@ -31633,7 +33183,8 @@ namespace Classes {
 	// struct FString                 RTPCName                       (CPF_Parm, CPF_ZeroConstructor)
 	// float                          RTPCValue                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslStatics::STATIC_SetAnimationAkRTPC(class ACharacter* Character, const struct FString& RTPCName, float RTPCValue) {
+	void UTslStatics::STATIC_SetAnimationAkRTPC(class ACharacter* Character, const struct FString& RTPCName, float RTPCValue)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x92be1731);
 
@@ -31658,7 +33209,8 @@ namespace Classes {
 	// struct FVector                 Server                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FVector UTslStatics::STATIC_ServerPositionToLocal(class UObject* WorldContextObject, const struct FVector& Server) {
+	struct FVector UTslStatics::STATIC_ServerPositionToLocal(class UObject* WorldContextObject, const struct FVector& Server)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd4a61b8a);
 
@@ -31685,7 +33237,8 @@ namespace Classes {
 	// int                            DivideByZeroValue              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	int UTslStatics::STATIC_SafeDivide_IntInt(int A, int B, int DivideByZeroValue) {
+	int UTslStatics::STATIC_SafeDivide_IntInt(int A, int B, int DivideByZeroValue)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5418b1c7);
 
@@ -31713,7 +33266,8 @@ namespace Classes {
 	// float                          DivideByZeroValue              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UTslStatics::STATIC_SafeDivide_FloatFloat(float A, float B, float DivideByZeroValue) {
+	float UTslStatics::STATIC_SafeDivide_FloatFloat(float A, float B, float DivideByZeroValue)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xaaa71a91);
 
@@ -31738,7 +33292,8 @@ namespace Classes {
 	// Parameters:
 	// class APlayerController*       PlayerController               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslStatics::STATIC_ReleaseMouseCaptureFromPlayerController(class APlayerController* PlayerController) {
+	void UTslStatics::STATIC_ReleaseMouseCaptureFromPlayerController(class APlayerController* PlayerController)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x37a9d16f);
 
@@ -31763,7 +33318,8 @@ namespace Classes {
 	// float                          Length                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FVector UTslStatics::STATIC_ProjectPointToFloor(class UObject* WorldContextObject, const struct FVector& Origin, float Length, bool* bOutHit) {
+	struct FVector UTslStatics::STATIC_ProjectPointToFloor(class UObject* WorldContextObject, const struct FVector& Origin, float Length, bool* bOutHit)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4ea37358);
 
@@ -31796,7 +33352,8 @@ namespace Classes {
 	// float                          RayLength                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FVector UTslStatics::STATIC_ProjectPointsToHighFloor(class UObject* WorldContextObject, const struct FVector& Origin, float AroundLength, float RayLength, bool* bOutHit) {
+	struct FVector UTslStatics::STATIC_ProjectPointsToHighFloor(class UObject* WorldContextObject, const struct FVector& Origin, float AroundLength, float RayLength, bool* bOutHit)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xde14d3b3);
 
@@ -31841,7 +33398,8 @@ namespace Classes {
 	// float                          OverrideGravityZ               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslStatics::STATIC_PredictProjectilePathCapsule(class UObject* WorldContextObject, const struct FVector& StartPos, const struct FVector& LaunchVelocity, bool bTracePath, const struct FVector& ProjectileBox, TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, float DrawDebugTime, float SimFrequency, float MaxSimTime, float OverrideGravityZ, struct FHitResult* OutHit, TArray<struct FVector>* OutPathPositions, struct FVector* OutLastTraceDestination) {
+	bool UTslStatics::STATIC_PredictProjectilePathCapsule(class UObject* WorldContextObject, const struct FVector& StartPos, const struct FVector& LaunchVelocity, bool bTracePath, const struct FVector& ProjectileBox, TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, float DrawDebugTime, float SimFrequency, float MaxSimTime, float OverrideGravityZ, struct FHitResult* OutHit, TArray<struct FVector>* OutPathPositions, struct FVector* OutLastTraceDestination)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x757c52f6);
 
@@ -31899,7 +33457,8 @@ namespace Classes {
 	// float                          OverrideGravityZ               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslStatics::STATIC_PredictProjectilePathBox(class UObject* WorldContextObject, const struct FVector& StartPos, const struct FVector& LaunchVelocity, bool bTracePath, const struct FVector& ProjectileBox, TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, float DrawDebugTime, float SimFrequency, float MaxSimTime, float OverrideGravityZ, struct FHitResult* OutHit, TArray<struct FVector>* OutPathPositions, struct FVector* OutLastTraceDestination) {
+	bool UTslStatics::STATIC_PredictProjectilePathBox(class UObject* WorldContextObject, const struct FVector& StartPos, const struct FVector& LaunchVelocity, bool bTracePath, const struct FVector& ProjectileBox, TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes, bool bTraceComplex, TArray<class AActor*> ActorsToIgnore, TEnumAsByte<EDrawDebugTrace> DrawDebugType, float DrawDebugTime, float SimFrequency, float MaxSimTime, float OverrideGravityZ, struct FHitResult* OutHit, TArray<struct FVector>* OutPathPositions, struct FVector* OutLastTraceDestination)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa8226180);
 
@@ -31942,7 +33501,8 @@ namespace Classes {
 	// TEnumAsByte<EPhysicalSurface>  Type                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FString                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	struct FString UTslStatics::STATIC_PhysicalSurfaceToString(TEnumAsByte<EPhysicalSurface> Type) {
+	struct FString UTslStatics::STATIC_PhysicalSurfaceToString(TEnumAsByte<EPhysicalSurface> Type)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc1eb2dbe);
 
@@ -31966,7 +33526,8 @@ namespace Classes {
 	// TEnumAsByte<EPhysicalSurface>  Type                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FName                   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FName UTslStatics::STATIC_PhysicalSurfaceToName(TEnumAsByte<EPhysicalSurface> Type) {
+	struct FName UTslStatics::STATIC_PhysicalSurfaceToName(TEnumAsByte<EPhysicalSurface> Type)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x44bcb254);
 
@@ -31991,7 +33552,8 @@ namespace Classes {
 	// struct FVector                 Local                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FVector UTslStatics::STATIC_LocalPositionToServer(class UObject* WorldContextObject, const struct FVector& Local) {
+	struct FVector UTslStatics::STATIC_LocalPositionToServer(class UObject* WorldContextObject, const struct FVector& Local)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x679b3760);
 
@@ -32021,7 +33583,8 @@ namespace Classes {
 	// float                          Radius                         (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslStatics::STATIC_LineSphereIntersection(const struct FVector& Center, const struct FVector& Origion, const struct FVector& Direction, float Radius, struct FVector* Intersection1, struct FVector* Intersection2) {
+	bool UTslStatics::STATIC_LineSphereIntersection(const struct FVector& Center, const struct FVector& Origion, const struct FVector& Direction, float Radius, struct FVector* Intersection1, struct FVector* Intersection2)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4daa0d58);
 
@@ -32052,7 +33615,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslStatics::STATIC_IsShipping() {
+	bool UTslStatics::STATIC_IsShipping()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb37ef2ec);
 
@@ -32075,7 +33639,8 @@ namespace Classes {
 	// class AActor*                  Actor                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslStatics::STATIC_IsServerActor(class AActor* Actor) {
+	bool UTslStatics::STATIC_IsServerActor(class AActor* Actor)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5530ccba);
 
@@ -32099,7 +33664,8 @@ namespace Classes {
 	// class UWorld*                  World                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslStatics::STATIC_IsMapFullyLoaded(class UWorld* World) {
+	bool UTslStatics::STATIC_IsMapFullyLoaded(class UWorld* World)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xedc1e6eb);
 
@@ -32123,7 +33689,8 @@ namespace Classes {
 	// class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslStatics::STATIC_IsLastInputGamepad(class UObject* WorldContextObject) {
+	bool UTslStatics::STATIC_IsLastInputGamepad(class UObject* WorldContextObject)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa5c5af7b);
 
@@ -32146,7 +33713,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslStatics::STATIC_IsGamepadConnected() {
+	bool UTslStatics::STATIC_IsGamepadConnected()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x85c673f4);
 
@@ -32168,7 +33736,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslStatics::STATIC_IsForKoreanRating() {
+	bool UTslStatics::STATIC_IsForKoreanRating()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa36dc7e4);
 
@@ -32190,7 +33759,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslStatics::STATIC_IsForChineseLicensing() {
+	bool UTslStatics::STATIC_IsForChineseLicensing()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xefb226fc);
 
@@ -32212,7 +33782,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslStatics::STATIC_IsESports() {
+	bool UTslStatics::STATIC_IsESports()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd20066ea);
 
@@ -32234,7 +33805,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslStatics::STATIC_IsEditor() {
+	bool UTslStatics::STATIC_IsEditor()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x88763c55);
 
@@ -32257,7 +33829,8 @@ namespace Classes {
 	// class AActor*                  Actor                          (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslStatics::STATIC_IsClientActor(class AActor* Actor) {
+	bool UTslStatics::STATIC_IsClientActor(class AActor* Actor)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x42f3280e);
 
@@ -32282,7 +33855,8 @@ namespace Classes {
 	// struct FVector                 CurLocation                    (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UTslStatics::STATIC_GetWaterSurfaceHeight(class APhysicsVolume* PhysicsVolume, const struct FVector& CurLocation) {
+	float UTslStatics::STATIC_GetWaterSurfaceHeight(class APhysicsVolume* PhysicsVolume, const struct FVector& CurLocation)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb64af411);
 
@@ -32307,7 +33881,8 @@ namespace Classes {
 	// class AActor*                  Actor                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class UTslVehicleSeatComponent* ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
-	class UTslVehicleSeatComponent* UTslStatics::STATIC_GetVehicleSeatComponent(class AActor* Actor) {
+	class UTslVehicleSeatComponent* UTslStatics::STATIC_GetVehicleSeatComponent(class AActor* Actor)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x41122506);
 
@@ -32331,7 +33906,8 @@ namespace Classes {
 	// class AActor*                  Actor                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class UTslVehicleCommonComponent* ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
-	class UTslVehicleCommonComponent* UTslStatics::STATIC_GetVehicleCommonComponent(class AActor* Actor) {
+	class UTslVehicleCommonComponent* UTslStatics::STATIC_GetVehicleCommonComponent(class AActor* Actor)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3ad87802);
 
@@ -32355,7 +33931,8 @@ namespace Classes {
 	// class APawn*                   Pawn                           (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class ATslPlayerController*    ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslPlayerController* UTslStatics::STATIC_GetTslPlayerController(class APawn* Pawn) {
+	class ATslPlayerController* UTslStatics::STATIC_GetTslPlayerController(class APawn* Pawn)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe11ded74);
 
@@ -32378,7 +33955,8 @@ namespace Classes {
 	// Parameters:
 	// struct FString                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	struct FString UTslStatics::STATIC_GetTslPlatformName() {
+	struct FString UTslStatics::STATIC_GetTslPlatformName()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7da7c9ff);
 
@@ -32401,7 +33979,8 @@ namespace Classes {
 	// class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class ATslGameState*           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslGameState* UTslStatics::STATIC_GetTslGameState(class UObject* WorldContextObject) {
+	class ATslGameState* UTslStatics::STATIC_GetTslGameState(class UObject* WorldContextObject)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x227b5584);
 
@@ -32425,7 +34004,8 @@ namespace Classes {
 	// class UObject*                 WorldContextObject             (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class ATslCharacter*           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslCharacter* UTslStatics::STATIC_GetTslCharacter(class UObject* WorldContextObject) {
+	class ATslCharacter* UTslStatics::STATIC_GetTslCharacter(class UObject* WorldContextObject)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xafc3ea7c);
 
@@ -32449,7 +34029,8 @@ namespace Classes {
 	// class UPrimitiveComponent*     PrimitiveComponent             (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 	// class UPhysicalMaterial*       ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UPhysicalMaterial* UTslStatics::STATIC_GetSimplePhysicalMaterial(class UPrimitiveComponent* PrimitiveComponent) {
+	class UPhysicalMaterial* UTslStatics::STATIC_GetSimplePhysicalMaterial(class UPrimitiveComponent* PrimitiveComponent)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9b600514);
 
@@ -32473,7 +34054,8 @@ namespace Classes {
 	// class UObject*                 ActorOrComponent               (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FVector UTslStatics::STATIC_GetServerLocation(class UObject* ActorOrComponent) {
+	struct FVector UTslStatics::STATIC_GetServerLocation(class UObject* ActorOrComponent)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9d5e3f46);
 
@@ -32497,7 +34079,8 @@ namespace Classes {
 	// class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UTslStatics::STATIC_GetNextPlayzoneRadius(class UObject* WorldContextObject) {
+	float UTslStatics::STATIC_GetNextPlayzoneRadius(class UObject* WorldContextObject)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb9760083);
 
@@ -32521,7 +34104,8 @@ namespace Classes {
 	// class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FVector UTslStatics::STATIC_GetNextPlayzonePosition(class UObject* WorldContextObject) {
+	struct FVector UTslStatics::STATIC_GetNextPlayzonePosition(class UObject* WorldContextObject)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x88d5c030);
 
@@ -32544,7 +34128,8 @@ namespace Classes {
 	// Parameters:
 	// struct FString                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	struct FString UTslStatics::STATIC_GetGameVersion() {
+	struct FString UTslStatics::STATIC_GetGameVersion()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1d078b38);
 
@@ -32566,7 +34151,8 @@ namespace Classes {
 	// Parameters:
 	// struct FString                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	struct FString UTslStatics::STATIC_GetFullGameVersion() {
+	struct FString UTslStatics::STATIC_GetFullGameVersion()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x42abcf0d);
 
@@ -32592,7 +34178,8 @@ namespace Classes {
 	// struct FString                 OutValueString                 (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslStatics::STATIC_GetConsoleValue(const struct FString& ConsloeName, float* OutValueFloat, int* OutValueInt, struct FString* OutValueString) {
+	bool UTslStatics::STATIC_GetConsoleValue(const struct FString& ConsloeName, float* OutValueFloat, int* OutValueInt, struct FString* OutValueString)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf1472194);
 
@@ -32623,7 +34210,8 @@ namespace Classes {
 	// class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UTslStatics::STATIC_GetBluezoneRadius(class UObject* WorldContextObject) {
+	float UTslStatics::STATIC_GetBluezoneRadius(class UObject* WorldContextObject)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc8c7f07a);
 
@@ -32647,7 +34235,8 @@ namespace Classes {
 	// class UObject*                 WorldContextObject             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FVector UTslStatics::STATIC_GetBluezonePosition(class UObject* WorldContextObject) {
+	struct FVector UTslStatics::STATIC_GetBluezonePosition(class UObject* WorldContextObject)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x8dbb0381);
 
@@ -32675,7 +34264,8 @@ namespace Classes {
 	// float                          RayLength                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslStatics::STATIC_ConeVolumeLineTraceSingle(class UObject* WorldContextObject, const struct FVector& Origin, float HalfConeAngle, float RayLength, struct FVector* OutHitPoint) {
+	bool UTslStatics::STATIC_ConeVolumeLineTraceSingle(class UObject* WorldContextObject, const struct FVector& Origin, float HalfConeAngle, float RayLength, struct FVector* OutHitPoint)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd0c7df1e);
 
@@ -32710,7 +34300,8 @@ namespace Classes {
 	// float                          RayLength                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	int UTslStatics::STATIC_ConeVolumeLineTraceMulti(class UObject* WorldContextObject, const struct FVector& Origin, int SamplingNum, float HalfConeAngle, float RayLength, TArray<struct FVector>* OutHitPoints) {
+	int UTslStatics::STATIC_ConeVolumeLineTraceMulti(class UObject* WorldContextObject, const struct FVector& Origin, int SamplingNum, float HalfConeAngle, float RayLength, TArray<struct FVector>* OutHitPoints)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x8abae8e9);
 
@@ -32755,7 +34346,8 @@ namespace Classes {
 	// bool                           bExplode                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslStatics::STATIC_ApplyRadialDamageWithFalloff(class UObject* WorldContextObject, float BaseDamage, float MinimumDamage, const struct FVector& Origin, float DamageInnerRadius, float DamageOuterRadius, float DamageFalloff, class UClass* DamageTypeClass, TArray<class AActor*> IgnoreActors, const struct FAttackId& AttackId, bool bIsTargetDestructible, class AActor* DamageCauser, class AController* InstigatedByController, TEnumAsByte<ECollisionChannel> DamagePreventionChannel, bool bExplode) {
+	bool UTslStatics::STATIC_ApplyRadialDamageWithFalloff(class UObject* WorldContextObject, float BaseDamage, float MinimumDamage, const struct FVector& Origin, float DamageInnerRadius, float DamageOuterRadius, float DamageFalloff, class UClass* DamageTypeClass, TArray<class AActor*> IgnoreActors, const struct FAttackId& AttackId, bool bIsTargetDestructible, class AActor* DamageCauser, class AController* InstigatedByController, TEnumAsByte<ECollisionChannel> DamagePreventionChannel, bool bExplode)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd27cd83e);
 
@@ -32805,7 +34397,8 @@ namespace Classes {
 	// bool                           bExplode                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslStatics::STATIC_ApplyRadialDamageWithCurve(class UObject* WorldContextObject, float BaseDamage, const struct FVector& Origin, float DamageRadius, class UCurveFloat* DamageCurve, class UClass* DamageTypeClass, TArray<class AActor*> IgnoreActors, const struct FAttackId& AttackId, bool bIsTargetDestructible, class AActor* DamageCauser, class AController* InstigatedByController, TEnumAsByte<ECollisionChannel> DamagePreventionChannel, bool bExplode) {
+	bool UTslStatics::STATIC_ApplyRadialDamageWithCurve(class UObject* WorldContextObject, float BaseDamage, const struct FVector& Origin, float DamageRadius, class UCurveFloat* DamageCurve, class UClass* DamageTypeClass, TArray<class AActor*> IgnoreActors, const struct FAttackId& AttackId, bool bIsTargetDestructible, class AActor* DamageCauser, class AController* InstigatedByController, TEnumAsByte<ECollisionChannel> DamagePreventionChannel, bool bExplode)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x58df01d);
 
@@ -32853,7 +34446,8 @@ namespace Classes {
 	// bool                           bExplode                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslStatics::STATIC_ApplyRadialDamage(class UObject* WorldContextObject, float BaseDamage, const struct FVector& Origin, float DamageRadius, class UClass* DamageTypeClass, TArray<class AActor*> IgnoreActors, const struct FAttackId& AttackId, bool bIsTargetDestructible, class AActor* DamageCauser, class AController* InstigatedByController, bool bDoFullDamage, TEnumAsByte<ECollisionChannel> DamagePreventionChannel, bool bExplode) {
+	bool UTslStatics::STATIC_ApplyRadialDamage(class UObject* WorldContextObject, float BaseDamage, const struct FVector& Origin, float DamageRadius, class UClass* DamageTypeClass, TArray<class AActor*> IgnoreActors, const struct FAttackId& AttackId, bool bIsTargetDestructible, class AActor* DamageCauser, class AController* InstigatedByController, bool bDoFullDamage, TEnumAsByte<ECollisionChannel> DamagePreventionChannel, bool bExplode)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x46069f24);
 
@@ -32893,7 +34487,8 @@ namespace Classes {
 	// class UClass*                  DamageTypeClass                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FAttackId               AttackId                       (CPF_Parm)
 
-	void UTslStatics::STATIC_ApplyDamage(class AActor* DamagedActor, float BaseDamage, class AController* EventInstigator, class AActor* DamageCauser, class UClass* DamageTypeClass, const struct FAttackId& AttackId) {
+	void UTslStatics::STATIC_ApplyDamage(class AActor* DamagedActor, float BaseDamage, class AController* EventInstigator, class AActor* DamageCauser, class UClass* DamageTypeClass, const struct FAttackId& AttackId)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6a935335);
 
@@ -32921,7 +34516,8 @@ namespace Classes {
 	// struct FIntVector              From                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FIntVector              To                             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslStreamer::OnOriginShiftedInternal(class UWorld* InWorld, const struct FIntVector& From, const struct FIntVector& To) {
+	void UTslStreamer::OnOriginShiftedInternal(class UWorld* InWorld, const struct FIntVector& From, const struct FIntVector& To)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7e9bdcab);
 
@@ -32942,7 +34538,8 @@ namespace Classes {
 	// Function TslGame.TslStreamer.OnLevelChangedInternal
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void UTslStreamer::OnLevelChangedInternal() {
+	void UTslStreamer::OnLevelChangedInternal()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb8ea0aea);
 
@@ -32962,7 +34559,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslWeapon_Throwable*    ThrowableIn                    (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslThrowableTrajectoryViewComponent::AttachToThrowable(class ATslWeapon_Throwable* ThrowableIn) {
+	void UTslThrowableTrajectoryViewComponent::AttachToThrowable(class ATslWeapon_Throwable* ThrowableIn)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf656e3bc);
 
@@ -32981,7 +34579,8 @@ namespace Classes {
 	// Function TslGame.TslUserWidget.StopListeningForAllInputAxises
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslUserWidget::StopListeningForAllInputAxises() {
+	void UTslUserWidget::StopListeningForAllInputAxises()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x22d506fc);
 
@@ -33004,7 +34603,8 @@ namespace Classes {
 	// bool                           bConsume                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FScriptDelegate         Callback                       (CPF_Parm, CPF_ZeroConstructor)
 
-	void UTslUserWidget::ListenForInputAxis(const struct FName& AxisName, float Scale, bool bConsume, const struct FScriptDelegate& Callback) {
+	void UTslUserWidget::ListenForInputAxis(const struct FName& AxisName, float Scale, bool bConsume, const struct FScriptDelegate& Callback)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6feb4ca5);
 
@@ -33028,7 +34628,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslCharacter*           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslCharacter* UTslUserWidget::GetCachedViewTargetTslCharacter() {
+	class ATslCharacter* UTslUserWidget::GetCachedViewTargetTslCharacter()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xfc7763b0);
 
@@ -33050,7 +34651,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslGameState*           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslGameState* UTslUserWidget::GetCachedGameState() {
+	class ATslGameState* UTslUserWidget::GetCachedGameState()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7ee72b13);
 
@@ -33072,7 +34674,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslCharacter*           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslCharacter* UTslUserWidget::GetCachedCharacter() {
+	class ATslCharacter* UTslUserWidget::GetCachedCharacter()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe93f5b3);
 
@@ -33094,7 +34697,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UUmgBaseWidget::IsMouseOn() {
+	bool UUmgBaseWidget::IsMouseOn()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xed7f49b4);
 
@@ -33116,7 +34720,8 @@ namespace Classes {
 	// Parameters:
 	// class UWidget*                 Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UUmgBaseWidget::HandleMainPrepass(class UWidget* Widget) {
+	void UUmgBaseWidget::HandleMainPrepass(class UWidget* Widget)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xbb66d195);
 
@@ -33138,7 +34743,8 @@ namespace Classes {
 	// struct FVector                 PoisonGasWarningPosition       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          PoisonGasWarningRadius         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UBluezoneGpsBaseWidget::OnNotifyNextGasIn(const struct FVector& PoisonGasWarningPosition, float PoisonGasWarningRadius) {
+	void UBluezoneGpsBaseWidget::OnNotifyNextGasIn(const struct FVector& PoisonGasWarningPosition, float PoisonGasWarningRadius)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd83de9c2);
 
@@ -33158,7 +34764,8 @@ namespace Classes {
 	// Function TslGame.EquipableItemIconBaseWidget.OnNoBagSpaceEvent
 	// (FUNC_Final, FUNC_Native, FUNC_Public)
 
-	void UEquipableItemIconBaseWidget::OnNoBagSpaceEvent() {
+	void UEquipableItemIconBaseWidget::OnNoBagSpaceEvent()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf5599e17);
 
@@ -33178,7 +34785,8 @@ namespace Classes {
 	// Parameters:
 	// int                            NewKillCount                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UKillCountBaseWidget::OnUpdateKillCount(int NewKillCount) {
+	void UKillCountBaseWidget::OnUpdateKillCount(int NewKillCount)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4f90131b);
 
@@ -33199,7 +34807,8 @@ namespace Classes {
 	// Parameters:
 	// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	int UKillCountBaseWidget::GetLastKillCount() {
+	int UKillCountBaseWidget::GetLastKillCount()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4acad5a3);
 
@@ -33222,7 +34831,8 @@ namespace Classes {
 	// float                          Damage                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// TEnumAsByte<EDamageTypeCategory> DamageType                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ULifeGaugeBaseWidget::OnNotifyHit(float Damage, TEnumAsByte<EDamageTypeCategory> DamageType) {
+	void ULifeGaugeBaseWidget::OnNotifyHit(float Damage, TEnumAsByte<EDamageTypeCategory> DamageType)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa9a3eedb);
 
@@ -33246,7 +34856,8 @@ namespace Classes {
 	// float                          GoalHealth                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          MaxHealth                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ULifeGaugeBaseWidget::OnNotifyHeal(float StartHealth, float GoalHealth, float MaxHealth) {
+	void ULifeGaugeBaseWidget::OnNotifyHeal(float StartHealth, float GoalHealth, float MaxHealth)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xef2b264a);
 
@@ -33271,7 +34882,8 @@ namespace Classes {
 	// struct FPointerEvent           MouseEvent                     (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
 	// struct FEventReply             ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
-	struct FEventReply UMapCarePackageItemIconBaseWidget::OnButtonDown(const struct FGeometry& Geometry, const struct FPointerEvent& MouseEvent) {
+	struct FEventReply UMapCarePackageItemIconBaseWidget::OnButtonDown(const struct FGeometry& Geometry, const struct FPointerEvent& MouseEvent)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x65b79499);
 
@@ -33297,7 +34909,8 @@ namespace Classes {
 	// struct FPointerEvent           MouseEvent                     (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
 	// struct FEventReply             ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
-	struct FEventReply UMapCharacterIconBaseWidget::OnButtonDown(const struct FGeometry& Geometry, const struct FPointerEvent& MouseEvent) {
+	struct FEventReply UMapCharacterIconBaseWidget::OnButtonDown(const struct FGeometry& Geometry, const struct FPointerEvent& MouseEvent)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5229452);
 
@@ -33322,7 +34935,8 @@ namespace Classes {
 	// float                          Zoom                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FVector2D               WidgetSize                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UMapGridWidget::UpdateZoomAndWidgetSize(float Zoom, const struct FVector2D& WidgetSize) {
+	void UMapGridWidget::UpdateZoomAndWidgetSize(float Zoom, const struct FVector2D& WidgetSize)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf8017134);
 
@@ -33344,7 +34958,8 @@ namespace Classes {
 	// Parameters:
 	// struct FVector2D               WidgetSize                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UMapGridWidget::UpdateWidgetSize_UC(const struct FVector2D& WidgetSize) {
+	void UMapGridWidget::UpdateWidgetSize_UC(const struct FVector2D& WidgetSize)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x719535f5);
 
@@ -33363,7 +34978,8 @@ namespace Classes {
 	// Function TslGame.MapGridWidget.UpdateReplicatedCharacterList
 	// (FUNC_Final, FUNC_Native, FUNC_Public)
 
-	void UMapGridWidget::UpdateReplicatedCharacterList() {
+	void UMapGridWidget::UpdateReplicatedCharacterList()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf40a1a7f);
 
@@ -33381,7 +34997,8 @@ namespace Classes {
 	// Function TslGame.MapGridWidget.UpdateReplicatedCarePackageItemList
 	// (FUNC_Final, FUNC_Native, FUNC_Public)
 
-	void UMapGridWidget::UpdateReplicatedCarePackageItemList() {
+	void UMapGridWidget::UpdateReplicatedCarePackageItemList()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf1a82b36);
 
@@ -33401,7 +35018,8 @@ namespace Classes {
 	// Parameters:
 	// struct FVector2D               WidgetSize                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UMapGridWidget::UpdateRectangleViewByWidgetSize(const struct FVector2D& WidgetSize) {
+	void UMapGridWidget::UpdateRectangleViewByWidgetSize(const struct FVector2D& WidgetSize)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x57e4485f);
 
@@ -33419,7 +35037,8 @@ namespace Classes {
 	// Function TslGame.MapGridWidget.UpdateRectangleView
 	// (FUNC_Event, FUNC_Public, FUNC_BlueprintEvent)
 
-	void UMapGridWidget::UpdateRectangleView() {
+	void UMapGridWidget::UpdateRectangleView()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3ea6bc73);
 
@@ -33439,7 +35058,8 @@ namespace Classes {
 	// struct FVector2D               UC                             (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 	// struct FVector2D               ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FVector2D UMapGridWidget::UCtoMC(const struct FVector2D& UC) {
+	struct FVector2D UMapGridWidget::UCtoMC(const struct FVector2D& UC)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xbbfda8b5);
 
@@ -33462,7 +35082,8 @@ namespace Classes {
 	// Parameters:
 	// float                          NewZoomLevel                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UMapGridWidget::SetZoomLevel(float NewZoomLevel) {
+	void UMapGridWidget::SetZoomLevel(float NewZoomLevel)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf00ddf03);
 
@@ -33483,7 +35104,8 @@ namespace Classes {
 	// Parameters:
 	// class UMaterialInstanceDynamic* NewMatInst                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UMapGridWidget::SetImageBrush(class UMaterialInstanceDynamic* NewMatInst) {
+	void UMapGridWidget::SetImageBrush(class UMaterialInstanceDynamic* NewMatInst)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2cc73b4f);
 
@@ -33504,7 +35126,8 @@ namespace Classes {
 	// struct FVector2D               Pos_UC                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          Angle                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UMapGridWidget::SetCharacterIconPositionAndRotation_UC(const struct FVector2D& Pos_UC, float Angle) {
+	void UMapGridWidget::SetCharacterIconPositionAndRotation_UC(const struct FVector2D& Pos_UC, float Angle)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x883bb17d);
 
@@ -33525,7 +35148,8 @@ namespace Classes {
 	// Parameters:
 	// struct FVector2D               Center                         (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-	void UMapGridWidget::SetCenter_MC(const struct FVector2D& Center) {
+	void UMapGridWidget::SetCenter_MC(const struct FVector2D& Center)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3bad020c);
 
@@ -33546,7 +35170,8 @@ namespace Classes {
 	// Parameters:
 	// class UMapCharacterIconBaseWidget* MapIconWidget                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UMapGridWidget::OnMapIconClicked(class UMapCharacterIconBaseWidget* MapIconWidget) {
+	void UMapGridWidget::OnMapIconClicked(class UMapCharacterIconBaseWidget* MapIconWidget)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x28a40371);
 
@@ -33567,7 +35192,8 @@ namespace Classes {
 	// Parameters:
 	// class UMapCarePackageItemIconBaseWidget* MapIconWidget                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UMapGridWidget::OnMapCarePackageItemIconClicked(class UMapCarePackageItemIconBaseWidget* MapIconWidget) {
+	void UMapGridWidget::OnMapCarePackageItemIconClicked(class UMapCarePackageItemIconBaseWidget* MapIconWidget)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd71d09a7);
 
@@ -33589,7 +35215,8 @@ namespace Classes {
 	// struct FVector2D               MapCoord                       (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 	// struct FVector2D               ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FVector2D UMapGridWidget::MCtoUC(const struct FVector2D& MapCoord) {
+	struct FVector2D UMapGridWidget::MCtoUC(const struct FVector2D& MapCoord)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3ed97225);
 
@@ -33612,7 +35239,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UMapGridWidget::IsMouseInMarker() {
+	bool UMapGridWidget::IsMouseInMarker()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2a87a734);
 
@@ -33634,7 +35262,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UMapGridWidget::GetZoomLevel() {
+	float UMapGridWidget::GetZoomLevel()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x827933af);
 
@@ -33656,7 +35285,8 @@ namespace Classes {
 	// Parameters:
 	// struct FVector2D               ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FVector2D UMapGridWidget::GetWidgetSize() {
+	struct FVector2D UMapGridWidget::GetWidgetSize()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x16df5841);
 
@@ -33678,7 +35308,8 @@ namespace Classes {
 	// Parameters:
 	// struct FVector2D               ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FVector2D UMapGridWidget::GetWidgetPosition() {
+	struct FVector2D UMapGridWidget::GetWidgetPosition()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xda512bd7);
 
@@ -33700,7 +35331,8 @@ namespace Classes {
 	// Parameters:
 	// struct FVector2D               ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FVector2D UMapGridWidget::GetScreenOffset() {
+	struct FVector2D UMapGridWidget::GetScreenOffset()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6a5540bf);
 
@@ -33723,7 +35355,8 @@ namespace Classes {
 	// struct FVector2D               WidgetSize                     (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FVector2D               ImageOffset                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UMapGridWidget::GetMapImageWigetSizeAndImageOffset(struct FVector2D* WidgetSize, struct FVector2D* ImageOffset) {
+	void UMapGridWidget::GetMapImageWigetSizeAndImageOffset(struct FVector2D* WidgetSize, struct FVector2D* ImageOffset)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x84ebdacd);
 
@@ -33747,7 +35380,8 @@ namespace Classes {
 	// Parameters:
 	// struct FVector2D               ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FVector2D UMapGridWidget::GetLocalMousePosition() {
+	struct FVector2D UMapGridWidget::GetLocalMousePosition()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x645d5c65);
 
@@ -33769,7 +35403,8 @@ namespace Classes {
 	// Parameters:
 	// struct FString                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	struct FString UMapGridWidget::GetCharacterGridVertical() {
+	struct FString UMapGridWidget::GetCharacterGridVertical()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa650a1);
 
@@ -33791,7 +35426,8 @@ namespace Classes {
 	// Parameters:
 	// struct FString                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	struct FString UMapGridWidget::GetCharacterGridTextHorizental() {
+	struct FString UMapGridWidget::GetCharacterGridTextHorizental()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x85e7ed18);
 
@@ -33813,7 +35449,8 @@ namespace Classes {
 	// Parameters:
 	// struct FVector2D               ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FVector2D UMapGridWidget::GetAlignment() {
+	struct FVector2D UMapGridWidget::GetAlignment()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xfab269);
 
@@ -33836,7 +35473,8 @@ namespace Classes {
 	// struct FVector2D               Center_UC                      (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 	// float                          Radius_UC                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UMapGridWidget::DrawRedZone_UC(const struct FVector2D& Center_UC, float Radius_UC) {
+	void UMapGridWidget::DrawRedZone_UC(const struct FVector2D& Center_UC, float Radius_UC)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb0ca49ce);
 
@@ -33857,7 +35495,8 @@ namespace Classes {
 	// Parameters:
 	// struct FVector2D               MarkerCenter_UC                (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-	void UMapGridWidget::DrawMarker_UC(const struct FVector2D& MarkerCenter_UC) {
+	void UMapGridWidget::DrawMarker_UC(const struct FVector2D& MarkerCenter_UC)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xbfb30621);
 
@@ -33879,7 +35518,8 @@ namespace Classes {
 	// struct FVector2D               Offest_MC                      (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           bUpdate                        (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UMapGridWidget::CursorUCtoCenterMC(const struct FVector2D& UC, struct FVector2D* Offest_MC, bool* bUpdate) {
+	void UMapGridWidget::CursorUCtoCenterMC(const struct FVector2D& UC, struct FVector2D* Offest_MC, bool* bUpdate)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd08743a0);
 
@@ -33907,7 +35547,8 @@ namespace Classes {
 	// struct FVector2D               WidgetSize                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FVector2D               ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FVector2D UMapGridWidget::ClampPositionByWidgetSize_UC(const struct FVector2D& Positon, const struct FVector2D& WidgetSize) {
+	struct FVector2D UMapGridWidget::ClampPositionByWidgetSize_UC(const struct FVector2D& Positon, const struct FVector2D& WidgetSize)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe75937b9);
 
@@ -33932,7 +35573,8 @@ namespace Classes {
 	// struct FVector2D               Positon                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FVector2D               ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FVector2D UMapGridWidget::ClampPosition_UC(const struct FVector2D& Positon) {
+	struct FVector2D UMapGridWidget::ClampPosition_UC(const struct FVector2D& Positon)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3b128fd1);
 
@@ -33955,7 +35597,8 @@ namespace Classes {
 	// Parameters:
 	// struct FVector2D               Offset_UC                      (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-	void UMapGridWidget::AddCenter_UC(const struct FVector2D& Offset_UC) {
+	void UMapGridWidget::AddCenter_UC(const struct FVector2D& Offset_UC)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc4d24e2b);
 
@@ -33974,7 +35617,8 @@ namespace Classes {
 	// Function TslGame.TeamMarkWidget.InitializeTeamMarkGrid
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTeamMarkWidget::InitializeTeamMarkGrid() {
+	void UTeamMarkWidget::InitializeTeamMarkGrid()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x334caec2);
 
@@ -33994,7 +35638,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bShow                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslAdaptiveCrosshairWidget::SetShowCrosshairWidget(bool bShow) {
+	void UTslAdaptiveCrosshairWidget::SetShowCrosshairWidget(bool bShow)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x349b5282);
 
@@ -34015,7 +35660,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bVisible                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslAdaptiveCrosshairWidget::SetCenterCrosshairVisibility(bool bVisible) {
+	void UTslAdaptiveCrosshairWidget::SetCenterCrosshairVisibility(bool bVisible)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x29298e46);
 
@@ -34036,7 +35682,8 @@ namespace Classes {
 	// Parameters:
 	// float                          InDeviation                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslAdaptiveCrosshairWidget::SetCenterCrosshairDeviation(float InDeviation) {
+	void UTslAdaptiveCrosshairWidget::SetCenterCrosshairDeviation(float InDeviation)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb7e7d99f);
 
@@ -34058,7 +35705,8 @@ namespace Classes {
 	// TEnumAsByte<EWeaponClass>      InWeaponClass                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           bHasWeapon                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslAdaptiveCrosshairWidget::SetCenterCrosshairClass(TEnumAsByte<EWeaponClass> InWeaponClass, bool bHasWeapon) {
+	void UTslAdaptiveCrosshairWidget::SetCenterCrosshairClass(TEnumAsByte<EWeaponClass> InWeaponClass, bool bHasWeapon)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xda8c691e);
 
@@ -34080,7 +35728,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bVisible                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslAdaptiveCrosshairWidget::SetAdaptiveCrosshairVisibility(bool bVisible) {
+	void UTslAdaptiveCrosshairWidget::SetAdaptiveCrosshairVisibility(bool bVisible)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4acbb409);
 
@@ -34102,7 +35751,8 @@ namespace Classes {
 	// struct FVector2D               ScreenPosition                 (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 	// float                          Distance                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslAdaptiveCrosshairWidget::SetAdaptiveCrosshairPosition(const struct FVector2D& ScreenPosition, float Distance) {
+	void UTslAdaptiveCrosshairWidget::SetAdaptiveCrosshairPosition(const struct FVector2D& ScreenPosition, float Distance)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb2c9080c);
 
@@ -34122,7 +35772,8 @@ namespace Classes {
 	// Function TslGame.TslAdaptiveCrosshairWidget.HandleGameUserSettingApplied
 	// (FUNC_Final, FUNC_Native, FUNC_Public)
 
-	void UTslAdaptiveCrosshairWidget::HandleGameUserSettingApplied() {
+	void UTslAdaptiveCrosshairWidget::HandleGameUserSettingApplied()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf4cb8cbd);
 
@@ -34140,7 +35791,8 @@ namespace Classes {
 	// Function TslGame.TslAdaptiveCrosshairWidget.DecideAdaptiveCrosshairColor
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslAdaptiveCrosshairWidget::DecideAdaptiveCrosshairColor() {
+	void UTslAdaptiveCrosshairWidget::DecideAdaptiveCrosshairColor()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc5afef70);
 
@@ -34158,7 +35810,8 @@ namespace Classes {
 	// Function TslGame.TslBaseOptionWidget.OnReset
 	// (FUNC_Native, FUNC_Event, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
-	void UTslBaseOptionWidget::OnReset() {
+	void UTslBaseOptionWidget::OnReset()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf3b2d25d);
 
@@ -34176,7 +35829,8 @@ namespace Classes {
 	// Function TslGame.TslBaseOptionWidget.OnDefault
 	// (FUNC_Native, FUNC_Event, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
-	void UTslBaseOptionWidget::OnDefault() {
+	void UTslBaseOptionWidget::OnDefault()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6b0e20d7);
 
@@ -34194,7 +35848,8 @@ namespace Classes {
 	// Function TslGame.TslBaseOptionWidget.OnApply
 	// (FUNC_Native, FUNC_Event, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintEvent)
 
-	void UTslBaseOptionWidget::OnApply() {
+	void UTslBaseOptionWidget::OnApply()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3f2f88c);
 
@@ -34214,7 +35869,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslBaseOptionWidget::IsKeyUp() {
+	bool UTslBaseOptionWidget::IsKeyUp()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x606bdb3);
 
@@ -34236,7 +35892,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslBaseOptionWidget::IsEnableApply() {
+	bool UTslBaseOptionWidget::IsEnableApply()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x682a1d12);
 
@@ -34258,7 +35915,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslBaseOptionWidget::IsChanged() {
+	bool UTslBaseOptionWidget::IsChanged()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd22330d1);
 
@@ -34280,7 +35938,8 @@ namespace Classes {
 	// Parameters:
 	// struct FTslInputKey            TslInputKey                    (CPF_Parm)
 
-	void UTslKeyDisplayWidget::TransferInputEvent(const struct FTslInputKey& TslInputKey) {
+	void UTslKeyDisplayWidget::TransferInputEvent(const struct FTslInputKey& TslInputKey)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5a190f81);
 
@@ -34306,7 +35965,8 @@ namespace Classes {
 	// float                          InAxisScale                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           InbGamepad                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslKeyDisplayWidget::SetupKeyDisplayWidget(const struct FName& InInputName, const struct FText& InDisplayName, const struct FName& InCategoryName, bool InbAxisInput, float InAxisScale, bool InbGamepad) {
+	void UTslKeyDisplayWidget::SetupKeyDisplayWidget(const struct FName& InInputName, const struct FText& InDisplayName, const struct FName& InCategoryName, bool InbAxisInput, float InAxisScale, bool InbGamepad)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x75d785a2);
 
@@ -34332,7 +35992,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bDefault                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslKeyDisplayWidget::InitializeKeyDisplayWidget(bool bDefault) {
+	void UTslKeyDisplayWidget::InitializeKeyDisplayWidget(bool bDefault)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe3574e87);
 
@@ -34351,7 +36012,8 @@ namespace Classes {
 	// Function TslGame.TslKeyDisplayWidget.ApplyKey
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslKeyDisplayWidget::ApplyKey() {
+	void UTslKeyDisplayWidget::ApplyKey()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb5dfff69);
 
@@ -34372,7 +36034,8 @@ namespace Classes {
 	// class UTslKeyDisplayWidget*    InKeyDisplayWidget             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FTslInputKey            InInputedKey                   (CPF_Parm)
 
-	void UTslKeyOptionWidget::OnKeyChanged(class UTslKeyDisplayWidget* InKeyDisplayWidget, const struct FTslInputKey& InInputedKey) {
+	void UTslKeyOptionWidget::OnKeyChanged(class UTslKeyDisplayWidget* InKeyDisplayWidget, const struct FTslInputKey& InInputedKey)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe24e9f63);
 
@@ -34392,7 +36055,8 @@ namespace Classes {
 	// Function TslGame.TslKeyOptionWidget.InitializeKeyAndMouseSetting
 	// (FUNC_Final, FUNC_Native, FUNC_Public)
 
-	void UTslKeyOptionWidget::InitializeKeyAndMouseSetting() {
+	void UTslKeyOptionWidget::InitializeKeyAndMouseSetting()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xfdc410ca);
 
@@ -34413,7 +36077,8 @@ namespace Classes {
 	// class UTslKeyDisplayWidget*    KeyDisplayWidget               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FTslInputKey            TslInputKey                    (CPF_Parm)
 
-	void UTslKeySettingWidget::TransferInputEvent(class UTslKeyDisplayWidget* KeyDisplayWidget, const struct FTslInputKey& TslInputKey) {
+	void UTslKeySettingWidget::TransferInputEvent(class UTslKeyDisplayWidget* KeyDisplayWidget, const struct FTslInputKey& TslInputKey)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1e8283db);
 
@@ -34436,7 +36101,8 @@ namespace Classes {
 	// struct FName                   InCategoryName                 (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 	// struct FText                   InDisplayText                  (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
 
-	void UTslKeySettingWidget::StartupKeySettingWidget(const struct FName& InCategoryName, const struct FText& InDisplayText) {
+	void UTslKeySettingWidget::StartupKeySettingWidget(const struct FName& InCategoryName, const struct FText& InDisplayText)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x79e1369e);
 
@@ -34456,7 +36122,8 @@ namespace Classes {
 	// Function TslGame.TslKeySettingWidget.SetToDefault
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslKeySettingWidget::SetToDefault() {
+	void UTslKeySettingWidget::SetToDefault()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x67a4b904);
 
@@ -34474,7 +36141,8 @@ namespace Classes {
 	// Function TslGame.TslKeySettingWidget.InitializeKeySettingWidget
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslKeySettingWidget::InitializeKeySettingWidget() {
+	void UTslKeySettingWidget::InitializeKeySettingWidget()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xdaa75243);
 
@@ -34495,7 +36163,8 @@ namespace Classes {
 	// struct FName                   BuffName                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           bStart                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslBreatheBarWidget::OnStartBuff(const struct FName& BuffName, bool bStart) {
+	void UTslBreatheBarWidget::OnStartBuff(const struct FName& BuffName, bool bStart)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa3714e09);
 
@@ -34515,7 +36184,8 @@ namespace Classes {
 	// Function TslGame.TslBuffIconListWidget.UpdateRunBuffIconVisibility
 	// (FUNC_Final, FUNC_Native, FUNC_Public)
 
-	void UTslBuffIconListWidget::UpdateRunBuffIconVisibility() {
+	void UTslBuffIconListWidget::UpdateRunBuffIconVisibility()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xcaa92bf3);
 
@@ -34533,7 +36203,8 @@ namespace Classes {
 	// Function TslGame.TslBuffIconListWidget.UpdateRunBuffIcon
 	// (FUNC_Final, FUNC_Native, FUNC_Public)
 
-	void UTslBuffIconListWidget::UpdateRunBuffIcon() {
+	void UTslBuffIconListWidget::UpdateRunBuffIcon()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x8e17835b);
 
@@ -34551,7 +36222,8 @@ namespace Classes {
 	// Function TslGame.TslBuffIconListWidget.UpdateHealBuffIconVisibility
 	// (FUNC_Final, FUNC_Native, FUNC_Public)
 
-	void UTslBuffIconListWidget::UpdateHealBuffIconVisibility() {
+	void UTslBuffIconListWidget::UpdateHealBuffIconVisibility()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4abbe9fe);
 
@@ -34569,7 +36241,8 @@ namespace Classes {
 	// Function TslGame.TslBuffIconListWidget.UpdateHealBuffIcon
 	// (FUNC_Final, FUNC_Native, FUNC_Public)
 
-	void UTslBuffIconListWidget::UpdateHealBuffIcon() {
+	void UTslBuffIconListWidget::UpdateHealBuffIcon()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x8d62dea6);
 
@@ -34590,7 +36263,8 @@ namespace Classes {
 	// struct FName                   BuffName                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           bStart                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslBuffIconListWidget::OnStartBuff(const struct FName& BuffName, bool bStart) {
+	void UTslBuffIconListWidget::OnStartBuff(const struct FName& BuffName, bool bStart)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x84cc4187);
 
@@ -34612,7 +36286,8 @@ namespace Classes {
 	// Parameters:
 	// TEnumAsByte<ESlateVisibility>  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	TEnumAsByte<ESlateVisibility> UTslBuffIconListWidget::GetRunBuffVisibility() {
+	TEnumAsByte<ESlateVisibility> UTslBuffIconListWidget::GetRunBuffVisibility()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xeaccb8f3);
 
@@ -34634,7 +36309,8 @@ namespace Classes {
 	// Parameters:
 	// struct FLinearColor            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FLinearColor UTslBuffIconListWidget::GetRunBuffIconOpacity() {
+	struct FLinearColor UTslBuffIconListWidget::GetRunBuffIconOpacity()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf7ed62b3);
 
@@ -34656,7 +36332,8 @@ namespace Classes {
 	// Parameters:
 	// TEnumAsByte<ESlateVisibility>  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	TEnumAsByte<ESlateVisibility> UTslBuffIconListWidget::GetHealBuffVisibility() {
+	TEnumAsByte<ESlateVisibility> UTslBuffIconListWidget::GetHealBuffVisibility()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x611dcce8);
 
@@ -34678,7 +36355,8 @@ namespace Classes {
 	// Parameters:
 	// struct FLinearColor            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FLinearColor UTslBuffIconListWidget::GetHealBuffIconOpacity() {
+	struct FLinearColor UTslBuffIconListWidget::GetHealBuffIconOpacity()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4b066b2);
 
@@ -34700,7 +36378,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UTslBuffIconListWidget::GetBoostPercent() {
+	float UTslBuffIconListWidget::GetBoostPercent()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2abf8039);
 
@@ -34722,7 +36401,8 @@ namespace Classes {
 	// Parameters:
 	// struct FKey                    InKey                          (CPF_Parm)
 
-	void UTslKeyReceiverWidget::UpdateKeyUp(const struct FKey& InKey) {
+	void UTslKeyReceiverWidget::UpdateKeyUp(const struct FKey& InKey)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x27ff941a);
 
@@ -34743,7 +36423,8 @@ namespace Classes {
 	// Parameters:
 	// struct FKey                    InKey                          (CPF_Parm)
 
-	void UTslKeyReceiverWidget::UpdateKeyDown(const struct FKey& InKey) {
+	void UTslKeyReceiverWidget::UpdateKeyDown(const struct FKey& InKey)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x206f1d05);
 
@@ -34764,7 +36445,8 @@ namespace Classes {
 	// Parameters:
 	// struct FKey                    InKey                          (CPF_Parm)
 
-	void UTslKeyReceiverWidget::KeyUp(const struct FKey& InKey) {
+	void UTslKeyReceiverWidget::KeyUp(const struct FKey& InKey)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1a9e71cb);
 
@@ -34785,7 +36467,8 @@ namespace Classes {
 	// Parameters:
 	// struct FKey                    InKey                          (CPF_Parm)
 
-	void UTslKeyReceiverWidget::KeyDown(const struct FKey& InKey) {
+	void UTslKeyReceiverWidget::KeyDown(const struct FKey& InKey)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2c7a6d70);
 
@@ -34806,7 +36489,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslKeyReceiverWidget::IsInputKeyDown() {
+	bool UTslKeyReceiverWidget::IsInputKeyDown()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x77aba606);
 
@@ -34828,7 +36512,8 @@ namespace Classes {
 	// Parameters:
 	// struct FText                   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
-	struct FText UTslKeyReceiverWidget::GetLastDownedKeyName() {
+	struct FText UTslKeyReceiverWidget::GetLastDownedKeyName()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xca5a89be);
 
@@ -34848,7 +36533,8 @@ namespace Classes {
 	// Function TslGame.TslTeamInfoWidget.UpdateVoiceImage
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void UTslTeamInfoWidget::UpdateVoiceImage() {
+	void UTslTeamInfoWidget::UpdateVoiceImage()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa07513d8);
 
@@ -34871,7 +36557,8 @@ namespace Classes {
 	// bool                           InbSpeaking                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          InMeterEnergy                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslTeamInfoWidget::UpdateVivoxChat(const struct FString& UniqueId, bool bIsTeamChannel, bool InbSpeaking, float InMeterEnergy) {
+	void UTslTeamInfoWidget::UpdateVivoxChat(const struct FString& UniqueId, bool bIsTeamChannel, bool InbSpeaking, float InMeterEnergy)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb9845ab3);
 
@@ -34893,7 +36580,8 @@ namespace Classes {
 	// Function TslGame.TslTeamInfoWidget.UpdateTeamMemberName
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void UTslTeamInfoWidget::UpdateTeamMemberName() {
+	void UTslTeamInfoWidget::UpdateTeamMemberName()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc3287ec1);
 
@@ -34911,7 +36599,8 @@ namespace Classes {
 	// Function TslGame.TslTeamInfoWidget.UpdateTeamMemberColor
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void UTslTeamInfoWidget::UpdateTeamMemberColor() {
+	void UTslTeamInfoWidget::UpdateTeamMemberColor()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xfe8eb51d);
 
@@ -34929,7 +36618,8 @@ namespace Classes {
 	// Function TslGame.TslTeamInfoWidget.UpdateTeamMarker
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void UTslTeamInfoWidget::UpdateTeamMarker() {
+	void UTslTeamInfoWidget::UpdateTeamMarker()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2b5c391c);
 
@@ -34947,7 +36637,8 @@ namespace Classes {
 	// Function TslGame.TslTeamInfoWidget.UpdateTeamInfoIcon
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void UTslTeamInfoWidget::UpdateTeamInfoIcon() {
+	void UTslTeamInfoWidget::UpdateTeamInfoIcon()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x51bfc391);
 
@@ -34965,7 +36656,8 @@ namespace Classes {
 	// Function TslGame.TslTeamInfoWidget.UpdateHealthGaugeAndVisibility
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void UTslTeamInfoWidget::UpdateHealthGaugeAndVisibility() {
+	void UTslTeamInfoWidget::UpdateHealthGaugeAndVisibility()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe6e17cc7);
 
@@ -34985,7 +36677,8 @@ namespace Classes {
 	// Parameters:
 	// class ATeam*                   InTeam                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslTeamInfoWidget::SetTeam(class ATeam* InTeam) {
+	void UTslTeamInfoWidget::SetTeam(class ATeam* InTeam)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x82037fd5);
 
@@ -35007,7 +36700,8 @@ namespace Classes {
 	// bool                           InbSpeaking                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          InMeterEnergy                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslTeamInfoWidget::OnVoiceChat(bool InbSpeaking, float InMeterEnergy) {
+	void UTslTeamInfoWidget::OnVoiceChat(bool InbSpeaking, float InMeterEnergy)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4f2981a7);
 
@@ -35027,7 +36721,8 @@ namespace Classes {
 	// Function TslGame.TslTeamInfoWidget.DecideTeamNameColor
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void UTslTeamInfoWidget::DecideTeamNameColor() {
+	void UTslTeamInfoWidget::DecideTeamNameColor()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x87a80cdd);
 
@@ -35045,7 +36740,8 @@ namespace Classes {
 	// Function TslGame.TslTeamInfoWidget.BindVoiceChatIfNeed
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void UTslTeamInfoWidget::BindVoiceChatIfNeed() {
+	void UTslTeamInfoWidget::BindVoiceChatIfNeed()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3bed3488);
 
@@ -35065,7 +36761,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bIsUnarmed                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UWeaponSlotHudBaseWidget::OnNotifyWeaponUnarm(bool bIsUnarmed) {
+	void UWeaponSlotHudBaseWidget::OnNotifyWeaponUnarm(bool bIsUnarmed)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x20077bc1);
 
@@ -35087,7 +36784,8 @@ namespace Classes {
 	// int                            WeaponIndex                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          Duration                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UWeaponSlotHudBaseWidget::OnNotifyWeaponChange(int WeaponIndex, float Duration) {
+	void UWeaponSlotHudBaseWidget::OnNotifyWeaponChange(int WeaponIndex, float Duration)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3f951070);
 
@@ -35107,7 +36805,8 @@ namespace Classes {
 	// Function TslGame.WeaponSlotHudBaseWidget.OnNotifyWeaponArmed
 	// (FUNC_Final, FUNC_Native, FUNC_Public)
 
-	void UWeaponSlotHudBaseWidget::OnNotifyWeaponArmed() {
+	void UWeaponSlotHudBaseWidget::OnNotifyWeaponArmed()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5603a199);
 
@@ -35125,7 +36824,8 @@ namespace Classes {
 	// Function TslGame.WeaponSlotHudBaseWidget.OnMovingStarted
 	// (FUNC_Final, FUNC_Native, FUNC_Public)
 
-	void UWeaponSlotHudBaseWidget::OnMovingStarted() {
+	void UWeaponSlotHudBaseWidget::OnMovingStarted()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x341df1b4);
 
@@ -35143,7 +36843,8 @@ namespace Classes {
 	// Function TslGame.WeaponSlotHudBaseWidget.OnMovingFinished
 	// (FUNC_Final, FUNC_Native, FUNC_Public)
 
-	void UWeaponSlotHudBaseWidget::OnMovingFinished() {
+	void UWeaponSlotHudBaseWidget::OnMovingFinished()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9efbc3fb);
 
@@ -35163,7 +36864,8 @@ namespace Classes {
 	// Parameters:
 	// float                          NewHealth                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslVehicleCommonComponent::SetVehicleHealth(float NewHealth) {
+	void UTslVehicleCommonComponent::SetVehicleHealth(float NewHealth)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9cea3505);
 
@@ -35184,7 +36886,8 @@ namespace Classes {
 	// Parameters:
 	// float                          Percent                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslVehicleCommonComponent::SetVehicleFuelPercent(float Percent) {
+	void UTslVehicleCommonComponent::SetVehicleFuelPercent(float Percent)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf5e04a0e);
 
@@ -35205,7 +36908,8 @@ namespace Classes {
 	// Parameters:
 	// float                          NewFuel                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslVehicleCommonComponent::SetVehicleFuel(float NewFuel) {
+	void UTslVehicleCommonComponent::SetVehicleFuel(float NewFuel)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf871079f);
 
@@ -35224,7 +36928,8 @@ namespace Classes {
 	// Function TslGame.TslVehicleCommonComponent.Repair
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslVehicleCommonComponent::Repair() {
+	void UTslVehicleCommonComponent::Repair()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4c048fb8);
 
@@ -35244,7 +36949,8 @@ namespace Classes {
 	// Parameters:
 	// float                          LastHealth                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslVehicleCommonComponent::OnRep_Health(float LastHealth) {
+	void UTslVehicleCommonComponent::OnRep_Health(float LastHealth)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4e852ba);
 
@@ -35265,7 +36971,8 @@ namespace Classes {
 	// Parameters:
 	// float                          LastFuel                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslVehicleCommonComponent::OnRep_Fuel(float LastFuel) {
+	void UTslVehicleCommonComponent::OnRep_Fuel(float LastFuel)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd81c95f4);
 
@@ -35284,7 +36991,8 @@ namespace Classes {
 	// Function TslGame.TslVehicleCommonComponent.OnRep_Dying
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void UTslVehicleCommonComponent::OnRep_Dying() {
+	void UTslVehicleCommonComponent::OnRep_Dying()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc93dc7a3);
 
@@ -35302,7 +37010,8 @@ namespace Classes {
 	// Function TslGame.TslVehicleCommonComponent.OnRep_Broken
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void UTslVehicleCommonComponent::OnRep_Broken() {
+	void UTslVehicleCommonComponent::OnRep_Broken()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd2d12817);
 
@@ -35322,7 +37031,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslVehicleCommonComponent::IsDying() {
+	bool UTslVehicleCommonComponent::IsDying()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xdf3bde5a);
 
@@ -35344,7 +37054,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslVehicleCommonComponent::IsBroken() {
+	bool UTslVehicleCommonComponent::IsBroken()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc681ed2c);
 
@@ -35366,7 +37077,8 @@ namespace Classes {
 	// Parameters:
 	// class UClass*                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UClass* UTslVehicleCommonComponent::GetVehicleUI() {
+	class UClass* UTslVehicleCommonComponent::GetVehicleUI()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x987188bd);
 
@@ -35388,7 +37100,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UTslVehicleCommonComponent::GetVehicleHealthPercent() {
+	float UTslVehicleCommonComponent::GetVehicleHealthPercent()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf68a560);
 
@@ -35410,7 +37123,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UTslVehicleCommonComponent::GetVehicleHealth() {
+	float UTslVehicleCommonComponent::GetVehicleHealth()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x13edce9);
 
@@ -35432,7 +37146,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UTslVehicleCommonComponent::GetVehicleFuelPercent() {
+	float UTslVehicleCommonComponent::GetVehicleFuelPercent()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5b1480b2);
 
@@ -35454,7 +37169,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UTslVehicleCommonComponent::GetVehicleFuel() {
+	float UTslVehicleCommonComponent::GetVehicleFuel()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3e19cf3b);
 
@@ -35476,7 +37192,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UTslVehicleCommonComponent::GetVehicleBaseHealth() {
+	float UTslVehicleCommonComponent::GetVehicleBaseHealth()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xae08107e);
 
@@ -35498,7 +37215,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UTslVehicleCommonComponent::GetVehicleBaseFuel() {
+	float UTslVehicleCommonComponent::GetVehicleBaseFuel()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb541d0b0);
 
@@ -35521,7 +37239,8 @@ namespace Classes {
 	// TEnumAsByte<EDamageTypeCategory> DamageTypeCategory             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UTslVehicleCommonComponent::CanIgnoreCharacterDamage(TEnumAsByte<EDamageTypeCategory> DamageTypeCategory) {
+	bool UTslVehicleCommonComponent::CanIgnoreCharacterDamage(TEnumAsByte<EDamageTypeCategory> DamageTypeCategory)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa4c2c7d9);
 
@@ -35542,7 +37261,8 @@ namespace Classes {
 	// Function TslGame.TslVehicleCommonComponent.Break
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslVehicleCommonComponent::Break() {
+	void UTslVehicleCommonComponent::Break()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xfcb214c);
 
@@ -35562,7 +37282,8 @@ namespace Classes {
 	// Parameters:
 	// float                          Delta                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslVehicleCommonComponent::AddVehicleFuel(float Delta) {
+	void UTslVehicleCommonComponent::AddVehicleFuel(float Delta)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf0392374);
 
@@ -35581,7 +37302,8 @@ namespace Classes {
 	// Function TslGame.TslVehicleEffectComponent.SetVehicleMaterialsToDestroyed
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslVehicleEffectComponent::SetVehicleMaterialsToDestroyed() {
+	void UTslVehicleEffectComponent::SetVehicleMaterialsToDestroyed()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa33248ed);
 
@@ -35602,7 +37324,8 @@ namespace Classes {
 	// struct FString                 RTPC                           (CPF_Parm, CPF_ZeroConstructor)
 	// float                          Value                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslVehicleEffectComponent::SetEngineSoundRTPC(const struct FString& RTPC, float Value) {
+	void UTslVehicleEffectComponent::SetEngineSoundRTPC(const struct FString& RTPC, float Value)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x99fea35);
 
@@ -35627,7 +37350,8 @@ namespace Classes {
 	// struct FVector                 NormalImpulse                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FHitResult              Hit                            (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-	void UTslVehicleEffectComponent::OnHit(class AActor* SelfActor, class AActor* OtherActor, const struct FVector& NormalImpulse, const struct FHitResult& Hit) {
+	void UTslVehicleEffectComponent::OnHit(class AActor* SelfActor, class AActor* OtherActor, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7f292c8f);
 
@@ -35654,7 +37378,8 @@ namespace Classes {
 	// float                          HealthMax                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           bIsDying                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslVehicleEffectComponent::OnHealthChange(float CurrentHealth, float LastHealth, float HealthMax, bool bIsDying) {
+	void UTslVehicleEffectComponent::OnHealthChange(float CurrentHealth, float LastHealth, float HealthMax, bool bIsDying)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xcdab4e16);
 
@@ -35678,7 +37403,8 @@ namespace Classes {
 	// Parameters:
 	// class AActor*                  DestroyedActor                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslVehicleEffectComponent::OnDestroyedImpactEffect(class AActor* DestroyedActor) {
+	void UTslVehicleEffectComponent::OnDestroyedImpactEffect(class AActor* DestroyedActor)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb743b508);
 
@@ -35702,7 +37428,8 @@ namespace Classes {
 	// class ATslPlayerState*         PlayerInstigator               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class AActor*                  DamageCauser                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslVehicleEffectComponent::OnDeath(float KillingDamage, const struct FDamageEvent& DamageEvent, class ATslPlayerState* PlayerInstigator, class AActor* DamageCauser) {
+	void UTslVehicleEffectComponent::OnDeath(float KillingDamage, const struct FDamageEvent& DamageEvent, class ATslPlayerState* PlayerInstigator, class AActor* DamageCauser)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xba444986);
 
@@ -35726,7 +37453,8 @@ namespace Classes {
 	// Parameters:
 	// class UAkComponent*            ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
-	class UAkComponent* UTslVehicleEffectComponent::GetEngineSoundComponent() {
+	class UAkComponent* UTslVehicleEffectComponent::GetEngineSoundComponent()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe2e1513d);
 
@@ -35746,7 +37474,8 @@ namespace Classes {
 	// Function TslGame.TslVehicleEffectComponent.ApplyDestoyedMaterialWithDelay
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void UTslVehicleEffectComponent::ApplyDestoyedMaterialWithDelay() {
+	void UTslVehicleEffectComponent::ApplyDestoyedMaterialWithDelay()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa2b81a22);
 
@@ -35767,7 +37496,8 @@ namespace Classes {
 	// struct FVector                 NormalImpulse                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FHitResult              Hit                            (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-	void UTslVehicleHitComponent::OnSyncHit(const struct FVector& NormalImpulse, const struct FHitResult& Hit) {
+	void UTslVehicleHitComponent::OnSyncHit(const struct FVector& NormalImpulse, const struct FHitResult& Hit)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa10f7b46);
 
@@ -35792,7 +37522,8 @@ namespace Classes {
 	// struct FVector                 NormalImpulse                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FHitResult              Hit                            (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-	void UTslVehicleHitComponent::OnHit(class AActor* SelfActor, class AActor* OtherActor, const struct FVector& NormalImpulse, const struct FHitResult& Hit) {
+	void UTslVehicleHitComponent::OnHit(class AActor* SelfActor, class AActor* OtherActor, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa2c1ca1d);
 
@@ -35819,7 +37550,8 @@ namespace Classes {
 	// class ATslPlayerState*         PlayerInstigator               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class AActor*                  DamageCauser                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslVehicleHitComponent::OnDeath(float KillingDamage, const struct FDamageEvent& DamageEvent, class ATslPlayerState* PlayerInstigator, class AActor* DamageCauser) {
+	void UTslVehicleHitComponent::OnDeath(float KillingDamage, const struct FDamageEvent& DamageEvent, class ATslPlayerState* PlayerInstigator, class AActor* DamageCauser)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9276f054);
 
@@ -35844,7 +37576,8 @@ namespace Classes {
 	// struct FHitResult              Hit                            (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
 	// struct FVector                 Velocity                       (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-	void UTslVehicleReactionInterface::OnImpactedByVehicle(const struct FHitResult& Hit, const struct FVector& Velocity) {
+	void UTslVehicleReactionInterface::OnImpactedByVehicle(const struct FHitResult& Hit, const struct FVector& Velocity)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9e0b1bc4);
 
@@ -35863,7 +37596,8 @@ namespace Classes {
 	// Function TslGame.TslVehicleSeatComponent.TryToStabilize
 	// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_NetMulticast, FUNC_Public)
 
-	void UTslVehicleSeatComponent::TryToStabilize() {
+	void UTslVehicleSeatComponent::TryToStabilize()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3754f9c0);
 
@@ -35884,7 +37618,8 @@ namespace Classes {
 	// class ATslCharacter*           Rider                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class UVehicleSeatInteractionComponent* Seat                           (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
-	void UTslVehicleSeatComponent::TryToRide(class ATslCharacter* Rider, class UVehicleSeatInteractionComponent* Seat) {
+	void UTslVehicleSeatComponent::TryToRide(class ATslCharacter* Rider, class UVehicleSeatInteractionComponent* Seat)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x570461b7);
 
@@ -35907,7 +37642,8 @@ namespace Classes {
 	// class ATslCharacter*           Rider                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           bForce                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslVehicleSeatComponent::TryToLeave(class ATslCharacter* Rider, bool bForce) {
+	void UTslVehicleSeatComponent::TryToLeave(class ATslCharacter* Rider, bool bForce)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x45f57e9e);
 
@@ -35927,7 +37663,8 @@ namespace Classes {
 	// Function TslGame.TslVehicleSeatComponent.TryToFlip
 	// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_NetMulticast, FUNC_Public)
 
-	void UTslVehicleSeatComponent::TryToFlip() {
+	void UTslVehicleSeatComponent::TryToFlip()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x996ee3e4);
 
@@ -35948,7 +37685,8 @@ namespace Classes {
 	// class ATslCharacter*           Rider                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class UVehicleSeatInteractionComponent* Seat                           (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
-	void UTslVehicleSeatComponent::Ride(class ATslCharacter* Rider, class UVehicleSeatInteractionComponent* Seat) {
+	void UTslVehicleSeatComponent::Ride(class ATslCharacter* Rider, class UVehicleSeatInteractionComponent* Seat)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5de417d1);
 
@@ -35968,7 +37706,8 @@ namespace Classes {
 	// Function TslGame.TslVehicleSeatComponent.PostDriverRide
 	// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_NetMulticast, FUNC_Public)
 
-	void UTslVehicleSeatComponent::PostDriverRide() {
+	void UTslVehicleSeatComponent::PostDriverRide()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x50f23f71);
 
@@ -35986,7 +37725,8 @@ namespace Classes {
 	// Function TslGame.TslVehicleSeatComponent.PostDriverLeave
 	// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_NetMulticast, FUNC_Public)
 
-	void UTslVehicleSeatComponent::PostDriverLeave() {
+	void UTslVehicleSeatComponent::PostDriverLeave()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7e51fbdc);
 
@@ -36008,7 +37748,8 @@ namespace Classes {
 	// float                          LastFuel                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          FuelMax                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslVehicleSeatComponent::OnFuelChange(float CurrentFuel, float LastFuel, float FuelMax) {
+	void UTslVehicleSeatComponent::OnFuelChange(float CurrentFuel, float LastFuel, float FuelMax)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6a21b3d8);
 
@@ -36033,7 +37774,8 @@ namespace Classes {
 	// class UVehicleSeatInteractionComponent* Seat                           (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 	// bool                           bForce                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslVehicleSeatComponent::Leave(class ATslCharacter* Rider, class UVehicleSeatInteractionComponent* Seat, bool bForce) {
+	void UTslVehicleSeatComponent::Leave(class ATslCharacter* Rider, class UVehicleSeatInteractionComponent* Seat, bool bForce)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xbe6b00bc);
 
@@ -36059,7 +37801,8 @@ namespace Classes {
 	// class ATslPlayerState*         PlayerInstigator               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class AActor*                  DamageCauser                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslVehicleSeatComponent::KillAllRiders(float KillingDamage, const struct FDamageEvent& DamageEvent, class ATslPlayerState* PlayerInstigator, class AActor* DamageCauser) {
+	void UTslVehicleSeatComponent::KillAllRiders(float KillingDamage, const struct FDamageEvent& DamageEvent, class ATslPlayerState* PlayerInstigator, class AActor* DamageCauser)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xcd3759f);
 
@@ -36084,7 +37827,8 @@ namespace Classes {
 	// class UVehicleSeatInteractionComponent* Seat                           (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 	// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	int UTslVehicleSeatComponent::GetVehicleSeatIndex(class UVehicleSeatInteractionComponent* Seat) {
+	int UTslVehicleSeatComponent::GetVehicleSeatIndex(class UVehicleSeatInteractionComponent* Seat)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7185dae0);
 
@@ -36107,7 +37851,8 @@ namespace Classes {
 	// Parameters:
 	// TArray<class UVehicleSeatInteractionComponent*> ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<class UVehicleSeatInteractionComponent*> UTslVehicleSeatComponent::GetSeats() {
+	TArray<class UVehicleSeatInteractionComponent*> UTslVehicleSeatComponent::GetSeats()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x839b2841);
 
@@ -36130,7 +37875,8 @@ namespace Classes {
 	// int                            SeatIndex                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class UVehicleSeatInteractionComponent* ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
-	class UVehicleSeatInteractionComponent* UTslVehicleSeatComponent::GetSeat(int SeatIndex) {
+	class UVehicleSeatInteractionComponent* UTslVehicleSeatComponent::GetSeat(int SeatIndex)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x333f22de);
 
@@ -36153,7 +37899,8 @@ namespace Classes {
 	// Parameters:
 	// TArray<class ATslCharacter*>   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<class ATslCharacter*> UTslVehicleSeatComponent::GetRiders() {
+	TArray<class ATslCharacter*> UTslVehicleSeatComponent::GetRiders()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x94caf10a);
 
@@ -36176,7 +37923,8 @@ namespace Classes {
 	// float                          LastDuration                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class ATslCharacter*           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslCharacter* UTslVehicleSeatComponent::GetLastDriver(float LastDuration) {
+	class ATslCharacter* UTslVehicleSeatComponent::GetLastDriver(float LastDuration)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4c33b53);
 
@@ -36199,7 +37947,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslCharacter*           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslCharacter* UTslVehicleSeatComponent::GetDriver() {
+	class ATslCharacter* UTslVehicleSeatComponent::GetDriver()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xdc90e833);
 
@@ -36226,7 +37975,8 @@ namespace Classes {
 	// struct FVector_NetQuantize100  ServerAngularVelocity          (CPF_Parm)
 	// bool                           bIsSnap                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UTslVehicleSyncComponent::SendServerMoveToClient(int InCorrectionId, const struct FVector_NetQuantize100& ServerLocation, const struct FVector_NetQuantize100& ServerLinearVelocity, const struct FVector_NetQuantizeNormal& ServerRotator, const struct FVector_NetQuantize100& ServerAngularVelocity, bool bIsSnap) {
+	void UTslVehicleSyncComponent::SendServerMoveToClient(int InCorrectionId, const struct FVector_NetQuantize100& ServerLocation, const struct FVector_NetQuantize100& ServerLinearVelocity, const struct FVector_NetQuantizeNormal& ServerRotator, const struct FVector_NetQuantize100& ServerAngularVelocity, bool bIsSnap)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb36029c3);
 
@@ -36256,7 +38006,8 @@ namespace Classes {
 	// struct FVector_NetQuantizeNormal ClientRotator                  (CPF_Parm)
 	// struct FVector_NetQuantize100  ClientAngularVelocity          (CPF_Parm)
 
-	void UTslVehicleSyncComponent::SendClientMoveToServerUnreliably(int InCorrectionId, const struct FVector_NetQuantize100& ClientLocation, const struct FVector_NetQuantize100& ClientLinearVelocity, const struct FVector_NetQuantizeNormal& ClientRotator, const struct FVector_NetQuantize100& ClientAngularVelocity) {
+	void UTslVehicleSyncComponent::SendClientMoveToServerUnreliably(int InCorrectionId, const struct FVector_NetQuantize100& ClientLocation, const struct FVector_NetQuantize100& ClientLinearVelocity, const struct FVector_NetQuantizeNormal& ClientRotator, const struct FVector_NetQuantize100& ClientAngularVelocity)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9219b750);
 
@@ -36285,7 +38036,8 @@ namespace Classes {
 	// struct FVector_NetQuantizeNormal ClientRotator                  (CPF_Parm)
 	// struct FVector_NetQuantize100  ClientAngularVelocity          (CPF_Parm)
 
-	void UTslVehicleSyncComponent::SendClientMoveToServerReliably(int InCorrectionId, const struct FVector_NetQuantize100& ClientLocation, const struct FVector_NetQuantize100& ClientLinearVelocity, const struct FVector_NetQuantizeNormal& ClientRotator, const struct FVector_NetQuantize100& ClientAngularVelocity) {
+	void UTslVehicleSyncComponent::SendClientMoveToServerReliably(int InCorrectionId, const struct FVector_NetQuantize100& ClientLocation, const struct FVector_NetQuantize100& ClientLinearVelocity, const struct FVector_NetQuantizeNormal& ClientRotator, const struct FVector_NetQuantize100& ClientAngularVelocity)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc9b0d279);
 
@@ -36316,7 +38068,8 @@ namespace Classes {
 	// struct FVector_NetQuantize100  NormalImpulse                  (CPF_Parm)
 	// struct FHitResult              Hit                            (CPF_Parm, CPF_IsPlainOldData)
 
-	void UTslVehicleSyncComponent::SendClientHitToServerUnreliably(int InCorrectionId, const struct FVector_NetQuantize100& ClientLocation, const struct FVector_NetQuantize100& ClientLinearVelocity, const struct FVector_NetQuantizeNormal& ClientRotator, const struct FVector_NetQuantize100& ClientAngularVelocity, const struct FVector_NetQuantize100& NormalImpulse, const struct FHitResult& Hit) {
+	void UTslVehicleSyncComponent::SendClientHitToServerUnreliably(int InCorrectionId, const struct FVector_NetQuantize100& ClientLocation, const struct FVector_NetQuantize100& ClientLinearVelocity, const struct FVector_NetQuantizeNormal& ClientRotator, const struct FVector_NetQuantize100& ClientAngularVelocity, const struct FVector_NetQuantize100& NormalImpulse, const struct FHitResult& Hit)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa30586fc);
 
@@ -36349,7 +38102,8 @@ namespace Classes {
 	// struct FVector_NetQuantize100  NormalImpulse                  (CPF_Parm)
 	// struct FHitResult              Hit                            (CPF_Parm, CPF_IsPlainOldData)
 
-	void UTslVehicleSyncComponent::SendClientHitToServerReliably(int InCorrectionId, const struct FVector_NetQuantize100& ClientLocation, const struct FVector_NetQuantize100& ClientLinearVelocity, const struct FVector_NetQuantizeNormal& ClientRotator, const struct FVector_NetQuantize100& ClientAngularVelocity, const struct FVector_NetQuantize100& NormalImpulse, const struct FHitResult& Hit) {
+	void UTslVehicleSyncComponent::SendClientHitToServerReliably(int InCorrectionId, const struct FVector_NetQuantize100& ClientLocation, const struct FVector_NetQuantize100& ClientLinearVelocity, const struct FVector_NetQuantizeNormal& ClientRotator, const struct FVector_NetQuantize100& ClientAngularVelocity, const struct FVector_NetQuantize100& NormalImpulse, const struct FHitResult& Hit)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3d71fcd5);
 
@@ -36379,7 +38133,8 @@ namespace Classes {
 	// struct FVector                 NormalImpulse                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FHitResult              Hit                            (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-	void UTslVehicleSyncComponent::OnHitAtServer(class AActor* SelfActor, class AActor* OtherActor, const struct FVector& NormalImpulse, const struct FHitResult& Hit) {
+	void UTslVehicleSyncComponent::OnHitAtServer(class AActor* SelfActor, class AActor* OtherActor, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7e1b582f);
 
@@ -36406,7 +38161,8 @@ namespace Classes {
 	// struct FVector                 NormalImpulse                  (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FHitResult              Hit                            (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-	void UTslVehicleSyncComponent::OnHitAtClient(class AActor* SelfActor, class AActor* OtherActor, const struct FVector& NormalImpulse, const struct FHitResult& Hit) {
+	void UTslVehicleSyncComponent::OnHitAtClient(class AActor* SelfActor, class AActor* OtherActor, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xefaf8223);
 
@@ -36428,7 +38184,8 @@ namespace Classes {
 	// Function TslGame.TslVehicleSyncComponent.OnDriverRide
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void UTslVehicleSyncComponent::OnDriverRide() {
+	void UTslVehicleSyncComponent::OnDriverRide()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xdacc1fd6);
 
@@ -36449,7 +38206,8 @@ namespace Classes {
 	// class USceneComponent*         TempComponent                  (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 	// struct FScriptDelegate         DelegateToCall                 (CPF_Parm, CPF_ZeroConstructor)
 
-	void UTslViewTargetTempComponent::AddTempComponentWithDelegate(class USceneComponent* TempComponent, const struct FScriptDelegate& DelegateToCall) {
+	void UTslViewTargetTempComponent::AddTempComponentWithDelegate(class USceneComponent* TempComponent, const struct FScriptDelegate& DelegateToCall)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x52b35935);
 
@@ -36471,7 +38229,8 @@ namespace Classes {
 	// Parameters:
 	// class USceneComponent*         TempComponent                  (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
-	void UTslViewTargetTempComponent::AddTempComponent(class USceneComponent* TempComponent) {
+	void UTslViewTargetTempComponent::AddTempComponent(class USceneComponent* TempComponent)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb3eb98);
 
@@ -36493,7 +38252,8 @@ namespace Classes {
 	// struct FHitResult              Impact                         (CPF_ConstParm, CPF_Parm, CPF_ReferenceParm, CPF_IsPlainOldData)
 	// struct FVector                 RelLocation                    (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslWeapon_Trajectory::SimulateHit_UnReliable(const struct FHitResult& Impact, const struct FVector& RelLocation) {
+	void ATslWeapon_Trajectory::SimulateHit_UnReliable(const struct FHitResult& Impact, const struct FVector& RelLocation)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xfd423d8e);
 
@@ -36516,7 +38276,8 @@ namespace Classes {
 	// struct FHitResult              Impact                         (CPF_ConstParm, CPF_Parm, CPF_ReferenceParm, CPF_IsPlainOldData)
 	// struct FVector                 RelLocation                    (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslWeapon_Trajectory::SimulateHit_Reliable(const struct FHitResult& Impact, const struct FVector& RelLocation) {
+	void ATslWeapon_Trajectory::SimulateHit_Reliable(const struct FHitResult& Impact, const struct FVector& RelLocation)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6a7ceb2b);
 
@@ -36537,6 +38298,7 @@ namespace Classes {
 	// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Protected, FUNC_NetServer, FUNC_HasDefaults, FUNC_NetValidate)
 	// Parameters:
 	// struct FHitResult              Impact                         (CPF_ConstParm, CPF_Parm, CPF_ReferenceParm, CPF_IsPlainOldData)
+	// TArray<float>                  AimSpeeds                      (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_ReferenceParm)
 	// struct FVector_NetQuantize     Origin                         (CPF_ConstParm, CPF_Parm, CPF_ReferenceParm)
 	// struct FVector                 TraceStart                     (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 	// struct FVector                 PreLocation                    (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
@@ -36546,12 +38308,14 @@ namespace Classes {
 	// uint32_t                       HitSeq                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FVector                 RelLocation                    (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslWeapon_Trajectory::ServerNotifyHit(const struct FHitResult& Impact, const struct FVector_NetQuantize& Origin, const struct FVector& TraceStart, const struct FVector& PreLocation, const struct FVector_NetQuantizeNormal& ShootDir, float TravelDistance, const struct FAttackId& AttackId, uint32_t HitSeq, const struct FVector& RelLocation) {
+	void ATslWeapon_Trajectory::ServerNotifyHit(const struct FHitResult& Impact, TArray<float> AimSpeeds, const struct FVector_NetQuantize& Origin, const struct FVector& TraceStart, const struct FVector& PreLocation, const struct FVector_NetQuantizeNormal& ShootDir, float TravelDistance, const struct FAttackId& AttackId, uint32_t HitSeq, const struct FVector& RelLocation)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x60909602);
 
 		ATslWeapon_Trajectory_ServerNotifyHit_Params params;
 		params.Impact = Impact;
+		params.AimSpeeds = AimSpeeds;
 		params.Origin = Origin;
 		params.TraceStart = TraceStart;
 		params.PreLocation = PreLocation;
@@ -36577,7 +38341,8 @@ namespace Classes {
 	// struct FVector_NetQuantize     LocationRelative               (CPF_Parm)
 	// float                          BulletVelocity                 (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslWeapon_Trajectory::ServerNotifyCrack(class ATslCharacter* TargetCharacter, const struct FVector_NetQuantize& LocationRelative, float BulletVelocity) {
+	void ATslWeapon_Trajectory::ServerNotifyCrack(class ATslCharacter* TargetCharacter, const struct FVector_NetQuantize& LocationRelative, float BulletVelocity)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7a6d5e1f);
 
@@ -36600,7 +38365,8 @@ namespace Classes {
 	// Parameters:
 	// float                          LastWeaponSpread               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslWeapon_Trajectory::OnRep_WeaponSpread(float LastWeaponSpread) {
+	void ATslWeapon_Trajectory::OnRep_WeaponSpread(float LastWeaponSpread)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd171ddb3);
 
@@ -36621,7 +38387,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslWeapon_Trajectory::IsBulletInAir() {
+	bool ATslWeapon_Trajectory::IsBulletInAir()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4d8c1138);
 
@@ -36643,7 +38410,8 @@ namespace Classes {
 	// Parameters:
 	// struct FTrajectoryWeaponData   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
-	struct FTrajectoryWeaponData ATslWeapon_Trajectory::GetTrajectoryConfig() {
+	struct FTrajectoryWeaponData ATslWeapon_Trajectory::GetTrajectoryConfig()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x24021452);
 
@@ -36665,7 +38433,8 @@ namespace Classes {
 	// Parameters:
 	// struct FRecoilInfo             ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 
-	struct FRecoilInfo ATslWeapon_Trajectory::GetRecoilInfo() {
+	struct FRecoilInfo ATslWeapon_Trajectory::GetRecoilInfo()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe8aab399);
 
@@ -36687,7 +38456,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslWeapon_Trajectory::GetCurrentStabilityVar() {
+	float ATslWeapon_Trajectory::GetCurrentStabilityVar()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x75d6f7f6);
 
@@ -36709,7 +38479,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslWeapon_Trajectory::GetCurrentReoveryTarget() {
+	float ATslWeapon_Trajectory::GetCurrentReoveryTarget()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x77613bdf);
 
@@ -36731,7 +38502,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslWeapon_Trajectory::GetCurrentRecoilValue() {
+	float ATslWeapon_Trajectory::GetCurrentRecoilValue()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xcaa4a27);
 
@@ -36753,7 +38525,8 @@ namespace Classes {
 	// Parameters:
 	// struct FVector2D               ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FVector2D ATslWeapon_Trajectory::GetCurrentRecoilTarget() {
+	struct FVector2D ATslWeapon_Trajectory::GetCurrentRecoilTarget()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1c41f437);
 
@@ -36775,7 +38548,8 @@ namespace Classes {
 	// Parameters:
 	// struct FRotator                ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FRotator ATslWeapon_Trajectory::GetBulletRotation() {
+	struct FRotator ATslWeapon_Trajectory::GetBulletRotation()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc350e071);
 
@@ -36797,7 +38571,8 @@ namespace Classes {
 	// Parameters:
 	// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FVector ATslWeapon_Trajectory::GetBulletLocation() {
+	struct FVector ATslWeapon_Trajectory::GetBulletLocation()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x85519996);
 
@@ -36817,15 +38592,18 @@ namespace Classes {
 	// Function TslGame.TslWeapon_Melee.ServerNotifyHit
 	// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Protected, FUNC_NetServer, FUNC_NetValidate)
 	// Parameters:
+	// TArray<float>                  AimSpeeds                      (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_ReferenceParm)
 	// TArray<struct FHitResult>      Impacts                        (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_ReferenceParm)
 	// struct FAttackId               AttackId                       (CPF_Parm)
 	// uint32_t                       HitSeq                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslWeapon_Melee::ServerNotifyHit(TArray<struct FHitResult> Impacts, const struct FAttackId& AttackId, uint32_t HitSeq) {
+	void ATslWeapon_Melee::ServerNotifyHit(TArray<float> AimSpeeds, TArray<struct FHitResult> Impacts, const struct FAttackId& AttackId, uint32_t HitSeq)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x874b4829);
 
 		ATslWeapon_Melee_ServerNotifyHit_Params params;
+		params.AimSpeeds = AimSpeeds;
 		params.Impacts = Impacts;
 		params.AttackId = AttackId;
 		params.HitSeq = HitSeq;
@@ -36844,7 +38622,8 @@ namespace Classes {
 	// Parameters:
 	// int                            AnimIndex                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslWeapon_Melee::ServerAttack(int AnimIndex) {
+	void ATslWeapon_Melee::ServerAttack(int AnimIndex)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6d56633d);
 
@@ -36866,7 +38645,8 @@ namespace Classes {
 	// class UAnimMontage*            Montage                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           bInterrupted                   (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslWeapon_Melee::OnMontageEnded(class UAnimMontage* Montage, bool bInterrupted) {
+	void ATslWeapon_Melee::OnMontageEnded(class UAnimMontage* Montage, bool bInterrupted)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x19cac82e);
 
@@ -36888,7 +38668,8 @@ namespace Classes {
 	// Parameters:
 	// struct FName                   NotifyName                     (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-	void ATslWeapon_Melee::OnAnimationNotify(const struct FName& NotifyName) {
+	void ATslWeapon_Melee::OnAnimationNotify(const struct FName& NotifyName)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x88efcb44);
 
@@ -36909,7 +38690,8 @@ namespace Classes {
 	// Parameters:
 	// struct FHitResult              Impact                         (CPF_ConstParm, CPF_Parm, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-	void ATslWeapon_Melee::ClientHit_Confirmed(const struct FHitResult& Impact) {
+	void ATslWeapon_Melee::ClientHit_Confirmed(const struct FHitResult& Impact)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf09a42b6);
 
@@ -36930,7 +38712,8 @@ namespace Classes {
 	// Parameters:
 	// int                            AnimIndex                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslWeapon_Melee::ClientAttack(int AnimIndex) {
+	void ATslWeapon_Melee::ClientAttack(int AnimIndex)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1ff55e71);
 
@@ -36949,7 +38732,8 @@ namespace Classes {
 	// Function TslGame.TslWeapon_Throwable.ServerStartPinOff
 	// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Protected, FUNC_NetServer, FUNC_NetValidate)
 
-	void ATslWeapon_Throwable::ServerStartPinOff() {
+	void ATslWeapon_Throwable::ServerStartPinOff()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x895b92d7);
 
@@ -36967,7 +38751,8 @@ namespace Classes {
 	// Function TslGame.TslWeapon_Throwable.ServerStartCooking
 	// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Protected, FUNC_NetServer, FUNC_NetValidate)
 
-	void ATslWeapon_Throwable::ServerStartCooking() {
+	void ATslWeapon_Throwable::ServerStartCooking()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2fd7c219);
 
@@ -36985,7 +38770,8 @@ namespace Classes {
 	// Function TslGame.TslWeapon_Throwable.ServerRequestCancelThrow
 	// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Public, FUNC_NetServer, FUNC_NetValidate)
 
-	void ATslWeapon_Throwable::ServerRequestCancelThrow() {
+	void ATslWeapon_Throwable::ServerRequestCancelThrow()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xcdf6b882);
 
@@ -37006,7 +38792,8 @@ namespace Classes {
 	// struct FVector                 RelativeLocation               (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 	// struct FVector                 AimDirection                   (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-	void ATslWeapon_Throwable::ServerFireProjectile(const struct FVector& RelativeLocation, const struct FVector& AimDirection) {
+	void ATslWeapon_Throwable::ServerFireProjectile(const struct FVector& RelativeLocation, const struct FVector& AimDirection)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb1689214);
 
@@ -37028,7 +38815,8 @@ namespace Classes {
 	// Parameters:
 	// TEnumAsByte<EThrowableState>   LastThrowableState             (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslWeapon_Throwable::OnRep_ThrowableState(TEnumAsByte<EThrowableState> LastThrowableState) {
+	void ATslWeapon_Throwable::OnRep_ThrowableState(TEnumAsByte<EThrowableState> LastThrowableState)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x778d5048);
 
@@ -37049,7 +38837,8 @@ namespace Classes {
 	// Parameters:
 	// struct FName                   NotifyName                     (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 
-	void ATslWeapon_Throwable::OnAnimationNotify(const struct FName& NotifyName) {
+	void ATslWeapon_Throwable::OnAnimationNotify(const struct FName& NotifyName)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x260be098);
 
@@ -37070,7 +38859,8 @@ namespace Classes {
 	// Parameters:
 	// TEnumAsByte<EThrowableState>   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	TEnumAsByte<EThrowableState> ATslWeapon_Throwable::GetThrowableState() {
+	TEnumAsByte<EThrowableState> ATslWeapon_Throwable::GetThrowableState()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x31d226e3);
 
@@ -37092,7 +38882,8 @@ namespace Classes {
 	// Parameters:
 	// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	int ATslWeapon_Throwable::GetThrowableCountInInventory() {
+	int ATslWeapon_Throwable::GetThrowableCountInInventory()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa2effec);
 
@@ -37114,7 +38905,8 @@ namespace Classes {
 	// Parameters:
 	// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	int ATslWeapon_Throwable::GetThrowableCount() {
+	int ATslWeapon_Throwable::GetThrowableCount()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe863809);
 
@@ -37134,7 +38926,8 @@ namespace Classes {
 	// Function TslGame.TslWeapon_Throwable.ClientNotifyReset
 	// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_NetMulticast, FUNC_Protected)
 
-	void ATslWeapon_Throwable::ClientNotifyReset() {
+	void ATslWeapon_Throwable::ClientNotifyReset()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x398b6fd7);
 
@@ -37155,7 +38948,8 @@ namespace Classes {
 	// struct FVector                 AimDirection                   (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 	// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FVector ATslWeapon_Throwable::CalculateFinalThrowVelocity(const struct FVector& AimDirection) {
+	struct FVector ATslWeapon_Throwable::CalculateFinalThrowVelocity(const struct FVector& AimDirection)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xdf73425d);
 
@@ -37178,7 +38972,8 @@ namespace Classes {
 	// Parameters:
 	// struct FWebPopupParam          Param                          (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ReferenceParm)
 
-	void UTslWebPopupInterface::ShowWebPopup(const struct FWebPopupParam& Param) {
+	void UTslWebPopupInterface::ShowWebPopup(const struct FWebPopupParam& Param)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa532ae11);
 
@@ -37198,7 +38993,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslMotorbikeVehicle::VehicleHasDriver() {
+	bool ATslMotorbikeVehicle::VehicleHasDriver()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xed7c0771);
 
@@ -37220,7 +39016,8 @@ namespace Classes {
 	// Parameters:
 	// float                          inFloat                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslMotorbikeVehicle::SetAirControlR(float inFloat) {
+	void ATslMotorbikeVehicle::SetAirControlR(float inFloat)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x17eb1760);
 
@@ -37241,7 +39038,8 @@ namespace Classes {
 	// Parameters:
 	// float                          inFloat                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslMotorbikeVehicle::SetAirControlQ(float inFloat) {
+	void ATslMotorbikeVehicle::SetAirControlQ(float inFloat)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x89f2869b);
 
@@ -37262,7 +39060,8 @@ namespace Classes {
 	// Parameters:
 	// float                          inFloat                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslMotorbikeVehicle::SetAirControlL(float inFloat) {
+	void ATslMotorbikeVehicle::SetAirControlL(float inFloat)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x8c356fae);
 
@@ -37283,7 +39082,8 @@ namespace Classes {
 	// Parameters:
 	// float                          inFloat                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslMotorbikeVehicle::SetAirControlF(float inFloat) {
+	void ATslMotorbikeVehicle::SetAirControlF(float inFloat)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x101ca794);
 
@@ -37304,7 +39104,8 @@ namespace Classes {
 	// Parameters:
 	// float                          inFloat                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslMotorbikeVehicle::SetAirControlE(float inFloat) {
+	void ATslMotorbikeVehicle::SetAirControlE(float inFloat)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x822416cf);
 
@@ -37325,7 +39126,8 @@ namespace Classes {
 	// Parameters:
 	// float                          inFloat                        (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslMotorbikeVehicle::SetAirControlB(float inFloat) {
+	void ATslMotorbikeVehicle::SetAirControlB(float inFloat)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7812bdf0);
 
@@ -37344,7 +39146,8 @@ namespace Classes {
 	// Function TslGame.TslMotorbikeVehicle.ProcessFlipAndStabilize
 	// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Public, FUNC_NetServer, FUNC_BlueprintCallable, FUNC_NetValidate)
 
-	void ATslMotorbikeVehicle::ProcessFlipAndStabilize() {
+	void ATslMotorbikeVehicle::ProcessFlipAndStabilize()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x309bc7a9);
 
@@ -37362,7 +39165,8 @@ namespace Classes {
 	// Function TslGame.TslMotorbikeVehicle.OnVehicleEjected
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void ATslMotorbikeVehicle::OnVehicleEjected() {
+	void ATslMotorbikeVehicle::OnVehicleEjected()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x683b0fcc);
 
@@ -37380,7 +39184,8 @@ namespace Classes {
 	// Function TslGame.TslMotorbikeVehicle.OnPostDriverRide
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void ATslMotorbikeVehicle::OnPostDriverRide() {
+	void ATslMotorbikeVehicle::OnPostDriverRide()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd19a1b06);
 
@@ -37398,7 +39203,8 @@ namespace Classes {
 	// Function TslGame.TslMotorbikeVehicle.OnPostDriverLeave
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void ATslMotorbikeVehicle::OnPostDriverLeave() {
+	void ATslMotorbikeVehicle::OnPostDriverLeave()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x8803af25);
 
@@ -37418,7 +39224,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslMotorbikeVehicle::IsUsingActiveStabilize() {
+	bool ATslMotorbikeVehicle::IsUsingActiveStabilize()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x377a84c2);
 
@@ -37440,7 +39247,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslMotorbikeVehicle::IsKickstandActive() {
+	bool ATslMotorbikeVehicle::IsKickstandActive()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x515bfa4d);
 
@@ -37462,7 +39270,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslMotorbikeVehicle::IsFlippingEnabled() {
+	bool ATslMotorbikeVehicle::IsFlippingEnabled()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x143bc6d5);
 
@@ -37484,7 +39293,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslMotorbikeVehicle::HasContact() {
+	bool ATslMotorbikeVehicle::HasContact()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x8c9254d3);
 
@@ -37506,7 +39316,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float ATslMotorbikeVehicle::GetCOMSteerOffset() {
+	float ATslMotorbikeVehicle::GetCOMSteerOffset()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5092573a);
 
@@ -37530,7 +39341,8 @@ namespace Classes {
 	// bool                           bDescendingOrder               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// TArray<class UWidget*>         ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<class UWidget*> UUiHelperFunctions::STATIC_SortWidgetFormPositionY(TArray<class UWidget*> Widgets, bool bDescendingOrder) {
+	TArray<class UWidget*> UUiHelperFunctions::STATIC_SortWidgetFormPositionY(TArray<class UWidget*> Widgets, bool bDescendingOrder)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xdabb6755);
 
@@ -37556,7 +39368,8 @@ namespace Classes {
 	// bool                           bDescendingOrder               (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// TArray<class UWidget*>         ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<class UWidget*> UUiHelperFunctions::STATIC_SortWidgetFormPositionX(TArray<class UWidget*> Widgets, bool bDescendingOrder) {
+	TArray<class UWidget*> UUiHelperFunctions::STATIC_SortWidgetFormPositionX(TArray<class UWidget*> Widgets, bool bDescendingOrder)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb4b8ecec);
 
@@ -37581,7 +39394,8 @@ namespace Classes {
 	// TArray<struct FTslPlayerMatchResultInfo> PlayerMatchResultInfos         (CPF_Parm, CPF_ZeroConstructor)
 	// TArray<struct FTslPlayerMatchResultInfo> ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<struct FTslPlayerMatchResultInfo> UUiHelperFunctions::STATIC_SortPlayerMatchResultInfosByRanking(TArray<struct FTslPlayerMatchResultInfo> PlayerMatchResultInfos) {
+	TArray<struct FTslPlayerMatchResultInfo> UUiHelperFunctions::STATIC_SortPlayerMatchResultInfosByRanking(TArray<struct FTslPlayerMatchResultInfo> PlayerMatchResultInfos)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xfa43a4fa);
 
@@ -37605,7 +39419,8 @@ namespace Classes {
 	// TArray<TScriptInterface<class USlotInterface>> InItemList                     (CPF_Parm, CPF_ZeroConstructor)
 	// TArray<TScriptInterface<class USlotInterface>> ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<TScriptInterface<class USlotInterface>> UUiHelperFunctions::STATIC_SortItem(TArray<TScriptInterface<class USlotInterface>> InItemList) {
+	TArray<TScriptInterface<class USlotInterface>> UUiHelperFunctions::STATIC_SortItem(TArray<TScriptInterface<class USlotInterface>> InItemList)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x64121652);
 
@@ -37629,7 +39444,8 @@ namespace Classes {
 	// class UUserWidget*             Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UUiHelperFunctions::STATIC_IsWarning(class UUserWidget* Widget) {
+	bool UUiHelperFunctions::STATIC_IsWarning(class UUserWidget* Widget)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x8fefb3a1);
 
@@ -37654,7 +39470,8 @@ namespace Classes {
 	// TArray<class UWidgetAnimation*> AnimationArray                 (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UUiHelperFunctions::STATIC_IsThereAnyPlayingAnimation(class UUserWidget* Widget, TArray<class UWidgetAnimation*> AnimationArray) {
+	bool UUiHelperFunctions::STATIC_IsThereAnyPlayingAnimation(class UUserWidget* Widget, TArray<class UWidgetAnimation*> AnimationArray)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x86908df3);
 
@@ -37680,7 +39497,8 @@ namespace Classes {
 	// class ATslCharacter*           Character                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UUiHelperFunctions::STATIC_IsLastSpectatorTeam(class UUserWidget* Widget, class ATslCharacter* Character) {
+	bool UUiHelperFunctions::STATIC_IsLastSpectatorTeam(class UUserWidget* Widget, class ATslCharacter* Character)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x75faa559);
 
@@ -37706,7 +39524,8 @@ namespace Classes {
 	// class ATslCharacter*           Character                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UUiHelperFunctions::STATIC_IsLastSpectatedCharacter(class UUserWidget* Widget, class ATslCharacter* Character) {
+	bool UUiHelperFunctions::STATIC_IsLastSpectatedCharacter(class UUserWidget* Widget, class ATslCharacter* Character)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa7d55bff);
 
@@ -37731,7 +39550,8 @@ namespace Classes {
 	// class ATslCharacter*           Character                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UUiHelperFunctions::STATIC_IsKickEnableCharacter(class ATslCharacter* Character) {
+	bool UUiHelperFunctions::STATIC_IsKickEnableCharacter(class ATslCharacter* Character)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9bfa7709);
 
@@ -37755,7 +39575,8 @@ namespace Classes {
 	// class UUserWidget*             Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UUiHelperFunctions::STATIC_IsInNextPlayzone(class UUserWidget* Widget) {
+	bool UUiHelperFunctions::STATIC_IsInNextPlayzone(class UUserWidget* Widget)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x384bf155);
 
@@ -37779,7 +39600,8 @@ namespace Classes {
 	// int                            State                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UUiHelperFunctions::STATIC_IsHitted(int State) {
+	bool UUiHelperFunctions::STATIC_IsHitted(int State)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd3d9d5bd);
 
@@ -37803,7 +39625,8 @@ namespace Classes {
 	// class ATeam*                   Team                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UUiHelperFunctions::STATIC_IsGroggyByTeam(class ATeam* Team) {
+	bool UUiHelperFunctions::STATIC_IsGroggyByTeam(class ATeam* Team)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x73a66652);
 
@@ -37827,7 +39650,8 @@ namespace Classes {
 	// class UUserWidget*             Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UUiHelperFunctions::STATIC_IsBluezoneGpsReset(class UUserWidget* Widget) {
+	bool UUiHelperFunctions::STATIC_IsBluezoneGpsReset(class UUserWidget* Widget)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7826b60);
 
@@ -37851,7 +39675,8 @@ namespace Classes {
 	// int                            State                          (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UUiHelperFunctions::STATIC_IsAttacked(int State) {
+	bool UUiHelperFunctions::STATIC_IsAttacked(int State)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf192ec38);
 
@@ -37875,7 +39700,8 @@ namespace Classes {
 	// TScriptInterface<class USlotInterface> ItemSlot                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UUiHelperFunctions::STATIC_HaveDurability(const TScriptInterface<class USlotInterface>& ItemSlot) {
+	bool UUiHelperFunctions::STATIC_HaveDurability(const TScriptInterface<class USlotInterface>& ItemSlot)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2c675a00);
 
@@ -37899,7 +39725,8 @@ namespace Classes {
 	// class UUserWidget*             Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class ATslCharacter*           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslCharacter* UUiHelperFunctions::STATIC_GetViewTargetTslCharacter(class UUserWidget* Widget) {
+	class ATslCharacter* UUiHelperFunctions::STATIC_GetViewTargetTslCharacter(class UUserWidget* Widget)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1747805b);
 
@@ -37923,7 +39750,8 @@ namespace Classes {
 	// class APawn*                   VehiclePawn                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class UClass*                  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UClass* UUiHelperFunctions::STATIC_GetVehicleUI(class APawn* VehiclePawn) {
+	class UClass* UUiHelperFunctions::STATIC_GetVehicleUI(class APawn* VehiclePawn)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x8032c875);
 
@@ -37947,7 +39775,8 @@ namespace Classes {
 	// class UWidget*                 Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class UWidget*                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UWidget* UUiHelperFunctions::STATIC_GetUpWidgetByTslFocusableWidget(class UWidget* Widget) {
+	class UWidget* UUiHelperFunctions::STATIC_GetUpWidgetByTslFocusableWidget(class UWidget* Widget)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x19710a72);
 
@@ -37971,7 +39800,8 @@ namespace Classes {
 	// class UUserWidget*             Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class ATslSpectatorPawn*       ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslSpectatorPawn* UUiHelperFunctions::STATIC_GetTslSpectatorPawn(class UUserWidget* Widget) {
+	class ATslSpectatorPawn* UUiHelperFunctions::STATIC_GetTslSpectatorPawn(class UUserWidget* Widget)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xec2649d3);
 
@@ -37995,7 +39825,8 @@ namespace Classes {
 	// class UUserWidget*             Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class ATslHUD*                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslHUD* UUiHelperFunctions::STATIC_GetTslHUD(class UUserWidget* Widget) {
+	class ATslHUD* UUiHelperFunctions::STATIC_GetTslHUD(class UUserWidget* Widget)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x8679e1bd);
 
@@ -38019,7 +39850,8 @@ namespace Classes {
 	// class ATslCharacter*           Character                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	int UUiHelperFunctions::STATIC_GetTeamId(class ATslCharacter* Character) {
+	int UUiHelperFunctions::STATIC_GetTeamId(class ATslCharacter* Character)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd0f5f2fd);
 
@@ -38043,7 +39875,8 @@ namespace Classes {
 	// int                            TeamCount                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// TArray<struct FLinearColor>    ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<struct FLinearColor> UUiHelperFunctions::STATIC_GetTeamColors(int TeamCount) {
+	TArray<struct FLinearColor> UUiHelperFunctions::STATIC_GetTeamColors(int TeamCount)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x94073436);
 
@@ -38067,7 +39900,8 @@ namespace Classes {
 	// class UUserWidget*             Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// TEnumAsByte<ESubjectToReport>  ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	TEnumAsByte<ESubjectToReport> UUiHelperFunctions::STATIC_GetSubjectToReportType(class UUserWidget* Widget) {
+	TEnumAsByte<ESubjectToReport> UUiHelperFunctions::STATIC_GetSubjectToReportType(class UUserWidget* Widget)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb155b4d6);
 
@@ -38090,7 +39924,8 @@ namespace Classes {
 	// Parameters:
 	// TArray<struct FSubjectToReport> ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<struct FSubjectToReport> UUiHelperFunctions::STATIC_GetSubjectToReport() {
+	TArray<struct FSubjectToReport> UUiHelperFunctions::STATIC_GetSubjectToReport()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x95ab8846);
 
@@ -38113,7 +39948,8 @@ namespace Classes {
 	// class UUserWidget*             Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// TArray<class ATslCharacter*>   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<class ATslCharacter*> UUiHelperFunctions::STATIC_GetSortedReplicateCharactersBySpectatorPawnDistance(class UUserWidget* Widget) {
+	TArray<class ATslCharacter*> UUiHelperFunctions::STATIC_GetSortedReplicateCharactersBySpectatorPawnDistance(class UUserWidget* Widget)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x888bd43c);
 
@@ -38137,7 +39973,8 @@ namespace Classes {
 	// class UUserWidget*             Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// TArray<class ATslCharacter*>   ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<class ATslCharacter*> UUiHelperFunctions::STATIC_GetSortedReplicateCharactersByLastHitTime(class UUserWidget* Widget) {
+	TArray<class ATslCharacter*> UUiHelperFunctions::STATIC_GetSortedReplicateCharactersByLastHitTime(class UUserWidget* Widget)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9cb3f74);
 
@@ -38161,7 +39998,8 @@ namespace Classes {
 	// class UWidget*                 Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class UWidget*                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UWidget* UUiHelperFunctions::STATIC_GetRightWidgetByTslFocusableWidget(class UWidget* Widget) {
+	class UWidget* UUiHelperFunctions::STATIC_GetRightWidgetByTslFocusableWidget(class UWidget* Widget)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe7cc0ced);
 
@@ -38184,7 +40022,8 @@ namespace Classes {
 	// Parameters:
 	// TArray<struct FReportCauseData> ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	TArray<struct FReportCauseData> UUiHelperFunctions::STATIC_GetReportCauses() {
+	TArray<struct FReportCauseData> UUiHelperFunctions::STATIC_GetReportCauses()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc186773b);
 
@@ -38207,7 +40046,8 @@ namespace Classes {
 	// class ATslCharacter*           Character                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FString                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm)
 
-	struct FString UUiHelperFunctions::STATIC_GetPlayerName(class ATslCharacter* Character) {
+	struct FString UUiHelperFunctions::STATIC_GetPlayerName(class ATslCharacter* Character)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe8954c53);
 
@@ -38231,7 +40071,8 @@ namespace Classes {
 	// class UUserWidget*             Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class ATslPlayerController*    ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslPlayerController* UUiHelperFunctions::STATIC_GetOwningTslPlayerController(class UUserWidget* Widget) {
+	class ATslPlayerController* UUiHelperFunctions::STATIC_GetOwningTslPlayerController(class UUserWidget* Widget)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3fb540ad);
 
@@ -38255,7 +40096,8 @@ namespace Classes {
 	// class UUserWidget*             Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class ATslCharacter*           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslCharacter* UUiHelperFunctions::STATIC_GetOwningTslCharacter(class UUserWidget* Widget) {
+	class ATslCharacter* UUiHelperFunctions::STATIC_GetOwningTslCharacter(class UUserWidget* Widget)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf384b1f7);
 
@@ -38279,7 +40121,8 @@ namespace Classes {
 	// class UUserWidget*             Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UUiHelperFunctions::STATIC_GetNextPlayzoneRadius_BluezoneGPS(class UUserWidget* Widget) {
+	float UUiHelperFunctions::STATIC_GetNextPlayzoneRadius_BluezoneGPS(class UUserWidget* Widget)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x928b65b3);
 
@@ -38303,7 +40146,8 @@ namespace Classes {
 	// class UUserWidget*             Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FVector UUiHelperFunctions::STATIC_GetNextPlayzonePosition_BluezoneGPS(class UUserWidget* Widget) {
+	struct FVector UUiHelperFunctions::STATIC_GetNextPlayzonePosition_BluezoneGPS(class UUserWidget* Widget)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x68ec4db4);
 
@@ -38327,7 +40171,8 @@ namespace Classes {
 	// int                            MarkerNum                      (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FLinearColor            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FLinearColor UUiHelperFunctions::STATIC_GetMarkerColor(int MarkerNum) {
+	struct FLinearColor UUiHelperFunctions::STATIC_GetMarkerColor(int MarkerNum)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2af80324);
 
@@ -38351,7 +40196,8 @@ namespace Classes {
 	// class UWidget*                 Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class UWidget*                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UWidget* UUiHelperFunctions::STATIC_GetLeftWidgetByTslFocusableWidget(class UWidget* Widget) {
+	class UWidget* UUiHelperFunctions::STATIC_GetLeftWidgetByTslFocusableWidget(class UWidget* Widget)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2bb127e6);
 
@@ -38375,7 +40221,8 @@ namespace Classes {
 	// class UUserWidget*             Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class ATslCharacter*           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslCharacter* UUiHelperFunctions::STATIC_GetLastSpectatedCharacter(class UUserWidget* Widget) {
+	class ATslCharacter* UUiHelperFunctions::STATIC_GetLastSpectatedCharacter(class UUserWidget* Widget)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6ea1cf01);
 
@@ -38399,7 +40246,8 @@ namespace Classes {
 	// class ATeam*                   Team                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UUiHelperFunctions::STATIC_GetHealthRatioByTeam(class ATeam* Team) {
+	float UUiHelperFunctions::STATIC_GetHealthRatioByTeam(class ATeam* Team)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x717eabf8);
 
@@ -38423,7 +40271,8 @@ namespace Classes {
 	// class ATeam*                   Team                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UUiHelperFunctions::STATIC_GetGroggyHealthRatioByTeam(class ATeam* Team) {
+	float UUiHelperFunctions::STATIC_GetGroggyHealthRatioByTeam(class ATeam* Team)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x6f33d2ab);
 
@@ -38447,7 +40296,8 @@ namespace Classes {
 	// TScriptInterface<class USlotInterface> ItemSlot                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UUiHelperFunctions::STATIC_GetDurabilityRatio(const TScriptInterface<class USlotInterface>& ItemSlot) {
+	float UUiHelperFunctions::STATIC_GetDurabilityRatio(const TScriptInterface<class USlotInterface>& ItemSlot)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa04271a5);
 
@@ -38471,7 +40321,8 @@ namespace Classes {
 	// class UWidget*                 Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class UWidget*                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class UWidget* UUiHelperFunctions::STATIC_GetDownWidgetByTslFocusableWidget(class UWidget* Widget) {
+	class UWidget* UUiHelperFunctions::STATIC_GetDownWidgetByTslFocusableWidget(class UWidget* Widget)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xbd938cc5);
 
@@ -38495,7 +40346,8 @@ namespace Classes {
 	// class UUserWidget*             Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UUiHelperFunctions::STATIC_GetCurrentPlayzoneRadius_BluezoneGPS(class UUserWidget* Widget) {
+	float UUiHelperFunctions::STATIC_GetCurrentPlayzoneRadius_BluezoneGPS(class UUserWidget* Widget)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb168a671);
 
@@ -38519,7 +40371,8 @@ namespace Classes {
 	// class UUserWidget*             Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FVector                 ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FVector UUiHelperFunctions::STATIC_GetCurrentPlayzonePosition_BluezoneGPS(class UUserWidget* Widget) {
+	struct FVector UUiHelperFunctions::STATIC_GetCurrentPlayzonePosition_BluezoneGPS(class UUserWidget* Widget)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x103f93d2);
 
@@ -38543,7 +40396,8 @@ namespace Classes {
 	// class ATeam*                   Team                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	int UUiHelperFunctions::STATIC_GetCharacterStateByTeam(class ATeam* Team) {
+	int UUiHelperFunctions::STATIC_GetCharacterStateByTeam(class ATeam* Team)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xdd262c21);
 
@@ -38567,7 +40421,8 @@ namespace Classes {
 	// class UUserWidget*             Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UUiHelperFunctions::STATIC_GetBluezoneWarningTime(class UUserWidget* Widget) {
+	float UUiHelperFunctions::STATIC_GetBluezoneWarningTime(class UUserWidget* Widget)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd8671802);
 
@@ -38591,7 +40446,8 @@ namespace Classes {
 	// class UUserWidget*             Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UUiHelperFunctions::STATIC_GetBluezoneReleaseTime(class UUserWidget* Widget) {
+	float UUiHelperFunctions::STATIC_GetBluezoneReleaseTime(class UUserWidget* Widget)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3e3d7d);
 
@@ -38615,7 +40471,8 @@ namespace Classes {
 	// class UUserWidget*             Widget                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	int UUiHelperFunctions::STATIC_GetBluezoneGpsState(class UUserWidget* Widget) {
+	int UUiHelperFunctions::STATIC_GetBluezoneGpsState(class UUserWidget* Widget)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xef7899a4);
 
@@ -38644,7 +40501,8 @@ namespace Classes {
 	// struct FLinearColor            Tint                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           bAntiAlias                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UUiHelperFunctions::STATIC_DrawDottedLine(const struct FVector2D& PositionA, const struct FVector2D& PositionB, float DottedLength, float DottedInterval, const struct FLinearColor& Tint, bool bAntiAlias, struct FPaintContext* Context) {
+	void UUiHelperFunctions::STATIC_DrawDottedLine(const struct FVector2D& PositionA, const struct FVector2D& PositionB, float DottedLength, float DottedInterval, const struct FLinearColor& Tint, bool bAntiAlias, struct FPaintContext* Context)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf9d04c6b);
 
@@ -38673,7 +40531,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool ATslMotoSeatActor::IsEntryAllowed() {
+	bool ATslMotoSeatActor::IsEntryAllowed()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x175156a8);
 
@@ -38693,7 +40552,8 @@ namespace Classes {
 	// Function TslGame.TslMotoSeatActor.HandleFlipAndKickstand
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 
-	void ATslMotoSeatActor::HandleFlipAndKickstand() {
+	void ATslMotoSeatActor::HandleFlipAndKickstand()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2f4b881c);
 
@@ -38711,7 +40571,8 @@ namespace Classes {
 	// Function TslGame.VivoxBaseComponent.UpdatePosition
 	// (FUNC_Native, FUNC_Protected)
 
-	void UVivoxBaseComponent::UpdatePosition() {
+	void UVivoxBaseComponent::UpdatePosition()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x9c10a584);
 
@@ -38731,7 +40592,8 @@ namespace Classes {
 	// Parameters:
 	// TEnumAsByte<EVivoxChannelType> ChannelType                    (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UVivoxBaseComponent::SetVoiceChannelType(TEnumAsByte<EVivoxChannelType> ChannelType) {
+	void UVivoxBaseComponent::SetVoiceChannelType(TEnumAsByte<EVivoxChannelType> ChannelType)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1547d339);
 
@@ -38752,7 +40614,8 @@ namespace Classes {
 	// Parameters:
 	// int                            UserSettingVolume              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UVivoxBaseComponent::SetLocalVoiceOutputVolume(int UserSettingVolume) {
+	void UVivoxBaseComponent::SetLocalVoiceOutputVolume(int UserSettingVolume)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x46c216a6);
 
@@ -38773,7 +40636,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bIsMuted                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UVivoxBaseComponent::SetLocalVoiceOutputMuted(bool bIsMuted) {
+	void UVivoxBaseComponent::SetLocalVoiceOutputMuted(bool bIsMuted)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2e927505);
 
@@ -38794,7 +40658,8 @@ namespace Classes {
 	// Parameters:
 	// int                            UserSettingVolume              (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UVivoxBaseComponent::SetLocalVoiceInputVolume(int UserSettingVolume) {
+	void UVivoxBaseComponent::SetLocalVoiceInputVolume(int UserSettingVolume)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd56ab23b);
 
@@ -38815,7 +40680,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           bIsMuted                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UVivoxBaseComponent::SetLocalVoiceInputMuted(bool bIsMuted) {
+	void UVivoxBaseComponent::SetLocalVoiceInputMuted(bool bIsMuted)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xef45a102);
 
@@ -38834,7 +40700,8 @@ namespace Classes {
 	// Function TslGame.VivoxBaseComponent.ServerLogin
 	// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Protected, FUNC_NetServer, FUNC_NetValidate)
 
-	void UVivoxBaseComponent::ServerLogin() {
+	void UVivoxBaseComponent::ServerLogin()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd6986a82);
 
@@ -38852,7 +40719,8 @@ namespace Classes {
 	// Function TslGame.VivoxBaseComponent.ServerJoinTeamChannel
 	// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Protected, FUNC_NetServer, FUNC_NetValidate)
 
-	void UVivoxBaseComponent::ServerJoinTeamChannel() {
+	void UVivoxBaseComponent::ServerJoinTeamChannel()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3133abfd);
 
@@ -38870,7 +40738,8 @@ namespace Classes {
 	// Function TslGame.VivoxBaseComponent.ServerJoinGlobalChannel
 	// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Protected, FUNC_NetServer, FUNC_NetValidate)
 
-	void UVivoxBaseComponent::ServerJoinGlobalChannel() {
+	void UVivoxBaseComponent::ServerJoinGlobalChannel()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xf36fdb7b);
 
@@ -38888,7 +40757,8 @@ namespace Classes {
 	// Function TslGame.VivoxBaseComponent.ResetTeamChannelJoinState
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void UVivoxBaseComponent::ResetTeamChannelJoinState() {
+	void UVivoxBaseComponent::ResetTeamChannelJoinState()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3cfb8cec);
 
@@ -38906,7 +40776,8 @@ namespace Classes {
 	// Function TslGame.VivoxBaseComponent.ResetLoginState
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void UVivoxBaseComponent::ResetLoginState() {
+	void UVivoxBaseComponent::ResetLoginState()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xbf039fa9);
 
@@ -38924,7 +40795,8 @@ namespace Classes {
 	// Function TslGame.VivoxBaseComponent.ResetGlobalChannelJoinState
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void UVivoxBaseComponent::ResetGlobalChannelJoinState() {
+	void UVivoxBaseComponent::ResetGlobalChannelJoinState()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x1c1125ce);
 
@@ -38942,7 +40814,8 @@ namespace Classes {
 	// Function TslGame.VivoxBaseComponent.ResetConnectionState
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void UVivoxBaseComponent::ResetConnectionState() {
+	void UVivoxBaseComponent::ResetConnectionState()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xaad65a22);
 
@@ -38960,7 +40833,8 @@ namespace Classes {
 	// Function TslGame.VivoxBaseComponent.RefreshDevices
 	// (FUNC_Final, FUNC_Native, FUNC_Private)
 
-	void UVivoxBaseComponent::RefreshDevices() {
+	void UVivoxBaseComponent::RefreshDevices()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7e591e98);
 
@@ -38980,7 +40854,8 @@ namespace Classes {
 	// Parameters:
 	// TEnumAsByte<EVivoxChannelType> ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	TEnumAsByte<EVivoxChannelType> UVivoxBaseComponent::GetVoiceChannelType() {
+	TEnumAsByte<EVivoxChannelType> UVivoxBaseComponent::GetVoiceChannelType()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4b3584d);
 
@@ -39002,7 +40877,8 @@ namespace Classes {
 	// Parameters:
 	// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	int UVivoxBaseComponent::GetLocalVoiceOutputVolume() {
+	int UVivoxBaseComponent::GetLocalVoiceOutputVolume()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd81a4fea);
 
@@ -39024,7 +40900,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UVivoxBaseComponent::GetLocalVoiceOutputMuted() {
+	bool UVivoxBaseComponent::GetLocalVoiceOutputMuted()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4146db99);
 
@@ -39046,7 +40923,8 @@ namespace Classes {
 	// Parameters:
 	// int                            ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	int UVivoxBaseComponent::GetLocalVoiceInputVolume() {
+	int UVivoxBaseComponent::GetLocalVoiceInputVolume()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x280ddd67);
 
@@ -39068,7 +40946,8 @@ namespace Classes {
 	// Parameters:
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UVivoxBaseComponent::GetLocalVoiceInputMuted() {
+	bool UVivoxBaseComponent::GetLocalVoiceInputMuted()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc243c9ae);
 
@@ -39090,7 +40969,8 @@ namespace Classes {
 	// Parameters:
 	// struct FString                 AccessToken                    (CPF_Parm, CPF_ZeroConstructor)
 
-	void UVivoxBaseComponent::ClientLogin(const struct FString& AccessToken) {
+	void UVivoxBaseComponent::ClientLogin(const struct FString& AccessToken)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xb3fcf8a6);
 
@@ -39109,7 +40989,8 @@ namespace Classes {
 	// Function TslGame.VivoxBaseComponent.ClientLeaveTeamChannel
 	// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Protected, FUNC_NetClient)
 
-	void UVivoxBaseComponent::ClientLeaveTeamChannel() {
+	void UVivoxBaseComponent::ClientLeaveTeamChannel()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xc00480e0);
 
@@ -39127,7 +41008,8 @@ namespace Classes {
 	// Function TslGame.VivoxBaseComponent.ClientLeaveGlobalChannel
 	// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Protected, FUNC_NetClient)
 
-	void UVivoxBaseComponent::ClientLeaveGlobalChannel() {
+	void UVivoxBaseComponent::ClientLeaveGlobalChannel()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xfbc8fef2);
 
@@ -39147,7 +41029,8 @@ namespace Classes {
 	// Parameters:
 	// struct FString                 AccessToken                    (CPF_Parm, CPF_ZeroConstructor)
 
-	void UVivoxBaseComponent::ClientJoinTeamChannel(const struct FString& AccessToken) {
+	void UVivoxBaseComponent::ClientJoinTeamChannel(const struct FString& AccessToken)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x5b0ad6a9);
 
@@ -39168,7 +41051,8 @@ namespace Classes {
 	// Parameters:
 	// struct FString                 AccessToken                    (CPF_Parm, CPF_ZeroConstructor)
 
-	void UVivoxBaseComponent::ClientJoinGlobalChannel(const struct FString& AccessToken) {
+	void UVivoxBaseComponent::ClientJoinGlobalChannel(const struct FString& AccessToken)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd06c777f);
 
@@ -39189,7 +41073,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UVivoxBaseComponent::CalculateOutputVolumeFromModifiers() {
+	float UVivoxBaseComponent::CalculateOutputVolumeFromModifiers()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x64870d47);
 
@@ -39211,7 +41096,8 @@ namespace Classes {
 	// Parameters:
 	// float                          ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	float UVivoxBaseComponent::CalculateInputVolumeFromModifiers() {
+	float UVivoxBaseComponent::CalculateInputVolumeFromModifiers()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x3a55361e);
 
@@ -39231,7 +41117,8 @@ namespace Classes {
 	// Function TslGame.VivoxComponent.ServerTestAccessToken
 	// (FUNC_Final, FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Private, FUNC_NetServer, FUNC_NetValidate)
 
-	void UVivoxComponent::ServerTestAccessToken() {
+	void UVivoxComponent::ServerTestAccessToken()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x73e1dbfd);
 
@@ -39251,7 +41138,8 @@ namespace Classes {
 	// Parameters:
 	// int                            NewTeamNum                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UVivoxComponent::ServerSetObserverTeamNum(int NewTeamNum) {
+	void UVivoxComponent::ServerSetObserverTeamNum(int NewTeamNum)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7ae65a0f);
 
@@ -39275,7 +41163,8 @@ namespace Classes {
 	// float                          Duration                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          RestoreDuration                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UVivoxComponent::ApplyTimedVolumeModifier(TEnumAsByte<EVivoxChannelType> ChannelType, float NewModifier, float Duration, float RestoreDuration) {
+	void UVivoxComponent::ApplyTimedVolumeModifier(TEnumAsByte<EVivoxChannelType> ChannelType, float NewModifier, float Duration, float RestoreDuration)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x4f754ad9);
 
@@ -39299,7 +41188,8 @@ namespace Classes {
 	// Parameters:
 	// class UVivoxResponse*          Response                       (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UVivoxManager::OnRevokeKeySuccess(class UVivoxResponse* Response) {
+	void UVivoxManager::OnRevokeKeySuccess(class UVivoxResponse* Response)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xdd315d6e);
 
@@ -39320,7 +41210,8 @@ namespace Classes {
 	// Parameters:
 	// class UVivoxResponse*          Response                       (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UVivoxManager::OnRevokeKeyFail(class UVivoxResponse* Response) {
+	void UVivoxManager::OnRevokeKeyFail(class UVivoxResponse* Response)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa7e36769);
 
@@ -39341,7 +41232,8 @@ namespace Classes {
 	// Parameters:
 	// class UVivoxResponse*          Response                       (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UVivoxManager::OnChannelSuccess(class UVivoxResponse* Response) {
+	void UVivoxManager::OnChannelSuccess(class UVivoxResponse* Response)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xcea04bc8);
 
@@ -39362,7 +41254,8 @@ namespace Classes {
 	// Parameters:
 	// class UVivoxResponse*          Response                       (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UVivoxManager::OnChannelFail(class UVivoxResponse* Response) {
+	void UVivoxManager::OnChannelFail(class UVivoxResponse* Response)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x307b7b3f);
 
@@ -39383,7 +41276,8 @@ namespace Classes {
 	// Parameters:
 	// class UVivoxResponse*          Response                       (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UVivoxManager::OnAddKeySuccess(class UVivoxResponse* Response) {
+	void UVivoxManager::OnAddKeySuccess(class UVivoxResponse* Response)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa4a65d51);
 
@@ -39404,7 +41298,8 @@ namespace Classes {
 	// Parameters:
 	// class UVivoxResponse*          Response                       (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UVivoxManager::OnAddKeyFail(class UVivoxResponse* Response) {
+	void UVivoxManager::OnAddKeyFail(class UVivoxResponse* Response)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xa5790b14);
 
@@ -39426,7 +41321,8 @@ namespace Classes {
 	// class UTslAccessoryComponent*  NewAccessoryComponent          (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 	// TEnumAsByte<EAccessorySlot>    Slot                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UWeaponAnimInfoComponent::SetAccessorySlot(class UTslAccessoryComponent* NewAccessoryComponent, TEnumAsByte<EAccessorySlot> Slot) {
+	void UWeaponAnimInfoComponent::SetAccessorySlot(class UTslAccessoryComponent* NewAccessoryComponent, TEnumAsByte<EAccessorySlot> Slot)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xfd2cd336);
 
@@ -39449,7 +41345,8 @@ namespace Classes {
 	// class ATslWeapon*              Weapon                         (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// bool                           ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	bool UWeaponAnimInfoComponent::HasWeaponLeftHandIKSocket(class ATslWeapon* Weapon) {
+	bool UWeaponAnimInfoComponent::HasWeaponLeftHandIKSocket(class ATslWeapon* Weapon)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x724c479f);
 
@@ -39473,7 +41370,8 @@ namespace Classes {
 	// class ATslWeapon*              Weapon                         (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FTransform              ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FTransform UWeaponAnimInfoComponent::GetWeaponLeftHandIKTransform(class ATslWeapon* Weapon) {
+	struct FTransform UWeaponAnimInfoComponent::GetWeaponLeftHandIKTransform(class ATslWeapon* Weapon)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x2d3ed544);
 
@@ -39497,7 +41395,8 @@ namespace Classes {
 	// class ATslWeapon*              Weapon                         (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FTransform              ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FTransform UWeaponAnimInfoComponent::GetWeaponHandIK_Right(class ATslWeapon* Weapon) {
+	struct FTransform UWeaponAnimInfoComponent::GetWeaponHandIK_Right(class ATslWeapon* Weapon)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xfc5f8b44);
 
@@ -39521,7 +41420,8 @@ namespace Classes {
 	// class ATslWeapon*              Weapon                         (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FTransform              ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	struct FTransform UWeaponAnimInfoComponent::GetWeaponHandIK_Left(class ATslWeapon* Weapon) {
+	struct FTransform UWeaponAnimInfoComponent::GetWeaponHandIK_Left(class ATslWeapon* Weapon)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x7c947a99);
 
@@ -39544,7 +41444,8 @@ namespace Classes {
 	// Parameters:
 	// class ATslWeapon*              ReturnValue                    (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 
-	class ATslWeapon* UWeaponAnimInfoComponent::GetCurrentWeapon() {
+	class ATslWeapon* UWeaponAnimInfoComponent::GetCurrentWeapon()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xe390bc63);
 
@@ -39567,7 +41468,8 @@ namespace Classes {
 	// TEnumAsByte<EAccessorySlot>    Slot                           (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// class UTslAccessoryComponent*  ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 
-	class UTslAccessoryComponent* UWeaponAnimInfoComponent::GetAccessorySlot(TEnumAsByte<EAccessorySlot> Slot) {
+	class UTslAccessoryComponent* UWeaponAnimInfoComponent::GetAccessorySlot(TEnumAsByte<EAccessorySlot> Slot)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x70c2d442);
 
@@ -39588,7 +41490,8 @@ namespace Classes {
 	// Function TslGame.WeaponClone.Update
 	// (FUNC_Final, FUNC_Native, FUNC_Public)
 
-	void UWeaponClone::Update() {
+	void UWeaponClone::Update()
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xdcc88946);
 

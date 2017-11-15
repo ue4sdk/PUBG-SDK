@@ -6,14 +6,16 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// AnimBlueprintGeneratedClass ABP_Parachute.ABP_Parachute_C
 	// 0x0AAE (0x0F46 - 0x0498)
-	class UABP_Parachute_C : public UAnimInstance {
+	class UABP_Parachute_C : public UAnimInstance
+	{
 	public:
 		struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0498(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_DuplicateTransient)
 		struct FAnimNode_Root                              AnimGraphNode_Root_A0B3F323477FE0C51FB4DAB7A5A80380;      // 0x04A0(0x0048)
@@ -52,7 +54,8 @@ namespace Classes {
 		bool                                               bIsLanding;                                               // 0x0F44(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		bool                                               bMoving;                                                  // 0x0F45(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x3419aeb8);
 			return ptr;

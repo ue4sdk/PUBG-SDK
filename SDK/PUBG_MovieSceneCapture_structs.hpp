@@ -6,13 +6,15 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Enums
 	//---------------------------------------------------------------------------
 
 	// Enum MovieSceneCapture.EHDRCaptureGamut
-	enum class EHDRCaptureGamut : uint8_t {
+	enum class EHDRCaptureGamut : uint8_t
+	{
 		HCGM_Rec709 = 0,
 		HCGM_P3DCI = 1,
 		HCGM_Rec2020 = 2,
@@ -29,20 +31,23 @@ namespace Classes {
 
 	// ScriptStruct MovieSceneCapture.CaptureProtocolID
 	// 0x0008
-	struct FCaptureProtocolID {
+	struct FCaptureProtocolID
+	{
 		struct FName                                       Identifier;                                               // 0x0000(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
 	};
 
 	// ScriptStruct MovieSceneCapture.CaptureResolution
 	// 0x0008
-	struct FCaptureResolution {
+	struct FCaptureResolution
+	{
 		uint32_t                                           ResX;                                                     // 0x0000(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 		uint32_t                                           ResY;                                                     // 0x0004(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 	};
 
 	// ScriptStruct MovieSceneCapture.MovieSceneCaptureSettings
 	// 0x0050
-	struct FMovieSceneCaptureSettings {
+	struct FMovieSceneCaptureSettings
+	{
 		struct FDirectoryPath                              OutputDirectory;                                          // 0x0000(0x0010) (CPF_Edit, CPF_Config)
 		bool                                               bCreateTemporaryCopiesOfLevels;                           // 0x0010(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0011(0x0007) MISSED OFFSET
@@ -67,7 +72,8 @@ namespace Classes {
 
 	// ScriptStruct MovieSceneCapture.CompositionGraphCapturePasses
 	// 0x0010
-	struct FCompositionGraphCapturePasses {
+	struct FCompositionGraphCapturePasses
+	{
 		TArray<struct FString>                             Value;                                                    // 0x0000(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 	};
 

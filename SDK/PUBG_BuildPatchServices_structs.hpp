@@ -6,13 +6,15 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Enums
 	//---------------------------------------------------------------------------
 
 	// Enum BuildPatchServices.EManifestFileHeader
-	enum class EManifestFileHeader : uint8_t {
+	enum class EManifestFileHeader : uint8_t
+	{
 		EManifestFileHeader__STORED_RAW = 0,
 		EManifestFileHeader__STORED_COMPRESSED = 1,
 		EManifestFileHeader__STORED_MAX = 2
@@ -26,13 +28,15 @@ namespace Classes {
 
 	// ScriptStruct BuildPatchServices.SHAHashData
 	// 0x0014
-	struct FSHAHashData {
+	struct FSHAHashData
+	{
 		unsigned char                                      Hash[0x14];                                               // 0x0000(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	};
 
 	// ScriptStruct BuildPatchServices.ChunkPartData
 	// 0x0018
-	struct FChunkPartData {
+	struct FChunkPartData
+	{
 		struct FGuid                                       Guid;                                                     // 0x0000(0x0010) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		uint32_t                                           Offset;                                                   // 0x0010(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		uint32_t                                           Size;                                                     // 0x0014(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -40,7 +44,8 @@ namespace Classes {
 
 	// ScriptStruct BuildPatchServices.FileManifestData
 	// 0x0070
-	struct FFileManifestData {
+	struct FFileManifestData
+	{
 		struct FString                                     Filename;                                                 // 0x0000(0x0010) (CPF_ZeroConstructor)
 		struct FSHAHashData                                FileHash;                                                 // 0x0010(0x0014)
 		unsigned char                                      UnknownData00[0x4];                                       // 0x0024(0x0004) MISSED OFFSET
@@ -56,7 +61,8 @@ namespace Classes {
 
 	// ScriptStruct BuildPatchServices.ChunkInfoData
 	// 0x0040
-	struct FChunkInfoData {
+	struct FChunkInfoData
+	{
 		struct FGuid                                       Guid;                                                     // 0x0000(0x0010) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		uint64_t                                           Hash;                                                     // 0x0010(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		struct FSHAHashData                                ShaHash;                                                  // 0x0018(0x0014)
@@ -68,7 +74,8 @@ namespace Classes {
 
 	// ScriptStruct BuildPatchServices.CustomFieldData
 	// 0x0020
-	struct FCustomFieldData {
+	struct FCustomFieldData
+	{
 		struct FString                                     Key;                                                      // 0x0000(0x0010) (CPF_ZeroConstructor)
 		struct FString                                     Value;                                                    // 0x0010(0x0010) (CPF_ZeroConstructor)
 	};

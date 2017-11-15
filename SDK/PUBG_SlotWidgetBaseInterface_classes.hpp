@@ -6,17 +6,20 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// BlueprintGeneratedClass SlotWidgetBaseInterface.SlotWidgetBaseInterface_C
 	// 0x0000 (0x0028 - 0x0028)
-	class USlotWidgetBaseInterface_C : public UInterface {
+	class USlotWidgetBaseInterface_C : public UInterface
+	{
 	public:
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x5731f0d5);
 			return ptr;

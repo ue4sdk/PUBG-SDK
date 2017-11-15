@@ -8,24 +8,28 @@
 
 #include "../SDK.hpp"
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Parameters
 	//---------------------------------------------------------------------------
 
 	// Function ToolTipGauageWidget.ToolTipGauageWidget_C.Update
-	struct UToolTipGauageWidget_C_Update_Params {
+	struct UToolTipGauageWidget_C_Update_Params
+	{
 		float                                              BeginGap;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		float                                              EndGap;                                                   // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		bool                                               bCompareMode;                                             // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	};
 
 	// Function ToolTipGauageWidget.ToolTipGauageWidget_C.Construct
-	struct UToolTipGauageWidget_C_Construct_Params {
+	struct UToolTipGauageWidget_C_Construct_Params
+	{
 	};
 
 	// Function ToolTipGauageWidget.ToolTipGauageWidget_C.ExecuteUbergraph_ToolTipGauageWidget
-	struct UToolTipGauageWidget_C_ExecuteUbergraph_ToolTipGauageWidget_Params {
+	struct UToolTipGauageWidget_C_ExecuteUbergraph_ToolTipGauageWidget_Params
+	{
 		int                                                EntryPoint;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	};
 

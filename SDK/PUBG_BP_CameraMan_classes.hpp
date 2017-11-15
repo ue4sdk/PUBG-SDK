@@ -6,14 +6,16 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// BlueprintGeneratedClass BP_CameraMan.BP_CameraMan_C
 	// 0x0050 (0x03F0 - 0x03A0)
-	class ABP_CameraMan_C : public AActor {
+	class ABP_CameraMan_C : public AActor
+	{
 	public:
 		struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x03A0(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_DuplicateTransient)
 		class UCameraComponent*                            Camera;                                                   // 0x03A8(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -32,7 +34,8 @@ namespace Classes {
 		unsigned char                                      UnknownData01[0x4];                                       // 0x03E4(0x0004) MISSED OFFSET
 		class ABP_Motorbike_03_C*                          ParentRefMoto;                                            // 0x03E8(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnTemplate, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xc8284395);
 			return ptr;

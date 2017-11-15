@@ -6,20 +6,23 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// Class RoadRuntime.CrossActor
 	// 0x0030 (0x03E0 - 0x03B0)
-	class ACrossActor : public AStaticMeshActor {
+	class ACrossActor : public AStaticMeshActor
+	{
 	public:
 		struct FString                                     UniqueKey;                                                // 0x03B0(0x0010) (CPF_ZeroConstructor)
 		TArray<struct FCrossActorManager>                  SideActors;                                               // 0x03C0(0x0010) (CPF_ZeroConstructor)
 		TArray<struct FCrossMeshManager>                   SideMeshes;                                               // 0x03D0(0x0010) (CPF_ZeroConstructor)
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x1abe78bc);
 			return ptr;
@@ -36,7 +39,8 @@ namespace Classes {
 
 	// Class RoadRuntime.RoadActor
 	// 0x0078 (0x0418 - 0x03A0)
-	class ARoadActor : public AActor {
+	class ARoadActor : public AActor
+	{
 	public:
 		TEnumAsByte<ESplineMeshAxis>                       SplineMeshAxis;                                           // 0x03A0(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x3];                                       // 0x03A1(0x0003) MISSED OFFSET
@@ -53,7 +57,8 @@ namespace Classes {
 		TArray<struct FSideActorManager>                   SideActors;                                               // 0x03F8(0x0010) (CPF_ZeroConstructor)
 		TArray<struct FSideMeshManager>                    SideMeshes;                                               // 0x0408(0x0010) (CPF_ZeroConstructor)
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xb38f0c0c);
 			return ptr;

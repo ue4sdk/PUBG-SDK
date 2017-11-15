@@ -6,20 +6,23 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// Class CustomizableObject.CustomizableMeshComponent
 	// 0x0070 (0x0370 - 0x0300)
-	class UCustomizableMeshComponent : public USceneComponent {
+	class UCustomizableMeshComponent : public USceneComponent
+	{
 	public:
 		unsigned char                                      UnknownData00[0x58];                                      // 0x0300(0x0058) MISSED OFFSET
 		TArray<TWeakObjectPtr<class UTexture2D>>           CreatedTextures;                                          // 0x0358(0x0010) (CPF_ZeroConstructor, CPF_Transient)
 		unsigned char                                      UnknownData01[0x8];                                       // 0x0368(0x0008) MISSED OFFSET
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xc6dd67a8);
 			return ptr;
@@ -30,12 +33,14 @@ namespace Classes {
 
 	// Class CustomizableObject.CustomizableSkeletalComponent
 	// 0x0050 (0x03C0 - 0x0370)
-	class UCustomizableSkeletalComponent : public UCustomizableMeshComponent {
+	class UCustomizableSkeletalComponent : public UCustomizableMeshComponent
+	{
 	public:
 		class USkeletalMesh*                               SkeletalMesh;                                             // 0x0370(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_Transient, CPF_EditConst, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x48];                                      // 0x0378(0x0048) MISSED OFFSET
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x7819def2);
 			return ptr;
@@ -46,7 +51,8 @@ namespace Classes {
 
 	// Class CustomizableObject.CustomizableInstancePrivateData
 	// 0x00D8 (0x0100 - 0x0028)
-	class UCustomizableInstancePrivateData : public UObject {
+	class UCustomizableInstancePrivateData : public UObject
+	{
 	public:
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
 		TArray<struct FGeneratedMaterial>                  GeneratedMaterials;                                       // 0x0030(0x0010) (CPF_ZeroConstructor, CPF_Transient)
@@ -54,7 +60,8 @@ namespace Classes {
 		TArray<struct FGeneratedTexture>                   GeneratedTextures;                                        // 0x0050(0x0010) (CPF_ZeroConstructor, CPF_Transient)
 		unsigned char                                      UnknownData01[0xA0];                                      // 0x0060(0x00A0) MISSED OFFSET
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x2308bdda);
 			return ptr;
@@ -65,7 +72,8 @@ namespace Classes {
 
 	// Class CustomizableObject.CustomizableObject
 	// 0x00C0 (0x00E8 - 0x0028)
-	class UCustomizableObject : public UObject {
+	class UCustomizableObject : public UObject
+	{
 	public:
 		class USkeletalMesh*                               ReferenceSkeletalMesh;                                    // 0x0028(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class UStaticMesh*                                 ReferenceStaticMesh;                                      // 0x0030(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -78,7 +86,8 @@ namespace Classes {
 		TArray<struct FMutableModelParameterProperties>    ParameterProperties;                                      // 0x00C8(0x0010) (CPF_ZeroConstructor)
 		unsigned char                                      UnknownData01[0x10];                                      // 0x00D8(0x0010) MISSED OFFSET
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xcbbbb06d);
 			return ptr;
@@ -89,7 +98,8 @@ namespace Classes {
 
 	// Class CustomizableObject.CustomizableObjectInstance
 	// 0x0108 (0x0130 - 0x0028)
-	class UCustomizableObjectInstance : public UObject {
+	class UCustomizableObjectInstance : public UObject
+	{
 	public:
 		class UCustomizableObject*                         CustomizableObject;                                       // 0x0028(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
 		int                                                State;                                                    // 0x0030(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
@@ -105,7 +115,8 @@ namespace Classes {
 		class UCustomizableInstancePrivateData*            PrivateData;                                              // 0x0120(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData02[0x8];                                       // 0x0128(0x0008) MISSED OFFSET
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xeb5a3a94);
 			return ptr;
@@ -118,7 +129,8 @@ namespace Classes {
 
 	// Class CustomizableObject.CustomizableObjectSystem
 	// 0x00C8 (0x00F0 - 0x0028)
-	class UCustomizableObjectSystem : public UObject {
+	class UCustomizableObjectSystem : public UObject
+	{
 	public:
 		unsigned char                                      UnknownData00[0x20];                                      // 0x0028(0x0020) MISSED OFFSET
 		TArray<struct FMutableSkeletalMeshTracker>         SkeletalMeshTrackerArray;                                 // 0x0048(0x0010) (CPF_ZeroConstructor)
@@ -127,7 +139,8 @@ namespace Classes {
 		class UCustomizableSkeletalComponent*              CurrentBeginUpdateComponent;                              // 0x0088(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData02[0x60];                                      // 0x0090(0x0060) MISSED OFFSET
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x6dbf909a);
 			return ptr;

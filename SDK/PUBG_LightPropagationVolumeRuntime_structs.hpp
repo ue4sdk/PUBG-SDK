@@ -6,14 +6,16 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Script Structs
 	//---------------------------------------------------------------------------
 
 	// ScriptStruct LightPropagationVolumeRuntime.LightPropagationVolumeSettings
 	// 0x0038
-	struct FLightPropagationVolumeSettings {
+	struct FLightPropagationVolumeSettings
+	{
 		unsigned char                                      bOverride_LPVIntensity : 1;                               // 0x0000(0x0001) (CPF_Edit, CPF_BlueprintVisible)
 		unsigned char                                      bOverride_LPVDirectionalOcclusionIntensity : 1;           // 0x0000(0x0001) (CPF_Edit, CPF_BlueprintVisible)
 		unsigned char                                      bOverride_LPVDirectionalOcclusionRadius : 1;              // 0x0000(0x0001) (CPF_Edit, CPF_BlueprintVisible)

@@ -6,14 +6,16 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// Class UdpMessaging.UdpMessagingSettings
 	// 0x0078 (0x00A0 - 0x0028)
-	class UUdpMessagingSettings : public UObject {
+	class UUdpMessagingSettings : public UObject
+	{
 	public:
 		bool                                               EnableTransport;                                          // 0x0028(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0029(0x0007) MISSED OFFSET
@@ -28,7 +30,8 @@ namespace Classes {
 		struct FString                                     TunnelMulticastEndpoint;                                  // 0x0080(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
 		TArray<struct FString>                             RemoteTunnelEndpoints;                                    // 0x0090(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x6deef3ce);
 			return ptr;

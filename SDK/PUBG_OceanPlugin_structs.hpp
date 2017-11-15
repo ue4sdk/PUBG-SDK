@@ -6,13 +6,15 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Enums
 	//---------------------------------------------------------------------------
 
 	// Enum OceanPlugin.EFollowMethod
-	enum class EFollowMethod : uint8_t {
+	enum class EFollowMethod : uint8_t
+	{
 		LookAtLocation = 0,
 		FollowCamera = 1,
 		FollowPawn = 2,
@@ -28,7 +30,8 @@ namespace Classes {
 
 	// ScriptStruct OceanPlugin.StructBoneOverride
 	// 0x0010
-	struct FStructBoneOverride {
+	struct FStructBoneOverride
+	{
 		struct FName                                       BoneName;                                                 // 0x0000(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		float                                              Density;                                                  // 0x0008(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		float                                              TestRadius;                                               // 0x000C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -36,7 +39,8 @@ namespace Classes {
 
 	// ScriptStruct OceanPlugin.WaveParameter
 	// 0x0014
-	struct FWaveParameter {
+	struct FWaveParameter
+	{
 		float                                              Rotation;                                                 // 0x0000(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		float                                              Length;                                                   // 0x0004(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		float                                              Amplitude;                                                // 0x0008(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -46,7 +50,8 @@ namespace Classes {
 
 	// ScriptStruct OceanPlugin.WaveSetParameters
 	// 0x00A0
-	struct FWaveSetParameters {
+	struct FWaveSetParameters
+	{
 		struct FWaveParameter                              Wave01;                                                   // 0x0000(0x0014) (CPF_Edit, CPF_BlueprintVisible)
 		struct FWaveParameter                              Wave02;                                                   // 0x0014(0x0014) (CPF_Edit, CPF_BlueprintVisible)
 		struct FWaveParameter                              Wave03;                                                   // 0x0028(0x0014) (CPF_Edit, CPF_BlueprintVisible)
@@ -59,7 +64,8 @@ namespace Classes {
 
 	// ScriptStruct OceanPlugin.TimeDate
 	// 0x001C
-	struct FTimeDate {
+	struct FTimeDate
+	{
 		int                                                Millisecond;                                              // 0x0000(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		int                                                Second;                                                   // 0x0004(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		int                                                Minute;                                                   // 0x0008(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)

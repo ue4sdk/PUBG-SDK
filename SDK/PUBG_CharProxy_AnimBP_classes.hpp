@@ -6,14 +6,16 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// AnimBlueprintGeneratedClass CharProxy_AnimBP.CharProxy_AnimBP_C
 	// 0x1A50 (0x1EE8 - 0x0498)
-	class UCharProxy_AnimBP_C : public UAnimInstance {
+	class UCharProxy_AnimBP_C : public UAnimInstance
+	{
 	public:
 		struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0498(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_DuplicateTransient)
 		struct FAnimNode_SequencePlayer                    AnimGraphNode_SequencePlayer_88CAAB864B27793D6A4FEA9278275EBA;// 0x04A0(0x0070)
@@ -83,7 +85,8 @@ namespace Classes {
 		unsigned char                                      UnknownData03[0x4];                                       // 0x1EDC(0x0004) MISSED OFFSET
 		class UBlendSpaceBase*                             LH_GripBS;                                                // 0x1EE0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xaeb393d8);
 			return ptr;

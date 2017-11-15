@@ -6,14 +6,16 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// Class SubstanceCore.SubstanceGraphInstance
 	// 0x0028 (0x0050 - 0x0028)
-	class USubstanceGraphInstance : public UObject {
+	class USubstanceGraphInstance : public UObject
+	{
 	public:
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
 		class USubstanceInstanceFactory*                   Parent;                                                   // 0x0030(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -21,7 +23,8 @@ namespace Classes {
 		bool                                               bFreezed;                                                 // 0x0048(0x0001) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData01[0x7];                                       // 0x0049(0x0007) MISSED OFFSET
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xc0e9f30b);
 			return ptr;
@@ -43,7 +46,8 @@ namespace Classes {
 
 	// Class SubstanceCore.SubstanceImageInput
 	// 0x0138 (0x0160 - 0x0028)
-	class USubstanceImageInput : public UObject {
+	class USubstanceImageInput : public UObject
+	{
 	public:
 		unsigned char                                      UnknownData00[0xF0];                                      // 0x0028(0x00F0) MISSED OFFSET
 		int                                                CompressionRGB;                                           // 0x0118(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -56,7 +60,8 @@ namespace Classes {
 		struct FString                                     SourceFileTimestamp;                                      // 0x0140(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst)
 		TArray<class USubstanceGraphInstance*>             Consumers;                                                // 0x0150(0x0010) (CPF_ZeroConstructor, CPF_Transient)
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x1899bd8b);
 			return ptr;
@@ -67,13 +72,15 @@ namespace Classes {
 
 	// Class SubstanceCore.SubstanceInstanceFactory
 	// 0x0010 (0x0038 - 0x0028)
-	class USubstanceInstanceFactory : public UObject {
+	class USubstanceInstanceFactory : public UObject
+	{
 	public:
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
 		TEnumAsByte<ESubstanceGenerationMode>              GenerationMode;                                           // 0x0030(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData01[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x71ee996b);
 			return ptr;
@@ -84,7 +91,8 @@ namespace Classes {
 
 	// Class SubstanceCore.SubstanceSettings
 	// 0x0010 (0x0038 - 0x0028)
-	class USubstanceSettings : public UObject {
+	class USubstanceSettings : public UObject
+	{
 	public:
 		int                                                MemoryBudgetMb;                                           // 0x0028(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 		int                                                CPUCores;                                                 // 0x002C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
@@ -93,7 +101,8 @@ namespace Classes {
 		TEnumAsByte<ESubstanceEngineType>                  SubstanceEngine;                                          // 0x0035(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x2];                                       // 0x0036(0x0002) MISSED OFFSET
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x48b64cd9);
 			return ptr;
@@ -104,7 +113,8 @@ namespace Classes {
 
 	// Class SubstanceCore.SubstanceTexture2D
 	// 0x0038 (0x0118 - 0x00E0)
-	class USubstanceTexture2D : public UTexture2DDynamic {
+	class USubstanceTexture2D : public UTexture2DDynamic
+	{
 	public:
 		unsigned char                                      UnknownData00[0x18];                                      // 0x00E0(0x0018) MISSED OFFSET
 		class USubstanceGraphInstance*                     ParentInstance;                                           // 0x00F8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
@@ -112,7 +122,8 @@ namespace Classes {
 		TEnumAsByte<ETextureAddress>                       AddressY;                                                 // 0x0101(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData01[0x16];                                      // 0x0102(0x0016) MISSED OFFSET
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x11c46dd);
 			return ptr;
@@ -123,10 +134,12 @@ namespace Classes {
 
 	// Class SubstanceCore.SubstanceUtility
 	// 0x0000 (0x0028 - 0x0028)
-	class USubstanceUtility : public UBlueprintFunctionLibrary {
+	class USubstanceUtility : public UBlueprintFunctionLibrary
+	{
 	public:
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x9e86cb76);
 			return ptr;

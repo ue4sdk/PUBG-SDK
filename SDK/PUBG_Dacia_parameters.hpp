@@ -8,13 +8,15 @@
 
 #include "../SDK.hpp"
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Parameters
 	//---------------------------------------------------------------------------
 
 	// Function Dacia.Dacia_C.UserConstructionScript
-	struct ADacia_C_UserConstructionScript_Params {
+	struct ADacia_C_UserConstructionScript_Params
+	{
 	};
 
 }

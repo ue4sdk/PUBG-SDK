@@ -6,17 +6,20 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// BlueprintGeneratedClass Buggy_Seat_Passenger.Buggy_Seat_Passenger_C
 	// 0x0000 (0x0454 - 0x0454)
-	class ABuggy_Seat_Passenger_C : public AVehicleSeatPassenger_C {
+	class ABuggy_Seat_Passenger_C : public AVehicleSeatPassenger_C
+	{
 	public:
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x222c593);
 			return ptr;

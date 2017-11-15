@@ -8,22 +8,26 @@
 
 #include "../SDK.hpp"
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Parameters
 	//---------------------------------------------------------------------------
 
 	// Function Buggy.Buggy_C.UserConstructionScript
-	struct ABuggy_C_UserConstructionScript_Params {
+	struct ABuggy_C_UserConstructionScript_Params
+	{
 	};
 
 	// Function Buggy.Buggy_C.ReceiveTick
-	struct ABuggy_C_ReceiveTick_Params {
+	struct ABuggy_C_ReceiveTick_Params
+	{
 		float*                                             DeltaSeconds;                                             // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	};
 
 	// Function Buggy.Buggy_C.ExecuteUbergraph_Buggy
-	struct ABuggy_C_ExecuteUbergraph_Buggy_Params {
+	struct ABuggy_C_ExecuteUbergraph_Buggy_Params
+	{
 		int                                                EntryPoint;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	};
 

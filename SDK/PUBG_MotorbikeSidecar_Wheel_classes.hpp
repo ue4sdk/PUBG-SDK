@@ -6,17 +6,20 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// BlueprintGeneratedClass MotorbikeSidecar_Wheel.MotorbikeSidecar_Wheel_C
 	// 0x0000 (0x0200 - 0x0200)
-	class UMotorbikeSidecar_Wheel_C : public UTslVehicleWheel {
+	class UMotorbikeSidecar_Wheel_C : public UTslVehicleWheel
+	{
 	public:
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x637b7ef7);
 			return ptr;

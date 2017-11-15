@@ -6,17 +6,20 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// WidgetBlueprintGeneratedClass BuggyStanceWidget.BuggyStanceWidget_C
 	// 0x0000 (0x0240 - 0x0240)
-	class UBuggyStanceWidget_C : public UUserWidget {
+	class UBuggyStanceWidget_C : public UUserWidget
+	{
 	public:
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x25440a8d);
 			return ptr;

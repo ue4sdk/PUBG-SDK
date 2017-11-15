@@ -8,22 +8,26 @@
 
 #include "../SDK.hpp"
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Parameters
 	//---------------------------------------------------------------------------
 
 	// Function NetworkProblemWidget.NetworkProblemWidget_C.On_NetProblemIndicator_Prepass_1
-	struct UNetworkProblemWidget_C_On_NetProblemIndicator_Prepass_1_Params {
+	struct UNetworkProblemWidget_C_On_NetProblemIndicator_Prepass_1_Params
+	{
 		class UWidget*                                     BoundWidget;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	};
 
 	// Function NetworkProblemWidget.NetworkProblemWidget_C.Construct
-	struct UNetworkProblemWidget_C_Construct_Params {
+	struct UNetworkProblemWidget_C_Construct_Params
+	{
 	};
 
 	// Function NetworkProblemWidget.NetworkProblemWidget_C.ExecuteUbergraph_NetworkProblemWidget
-	struct UNetworkProblemWidget_C_ExecuteUbergraph_NetworkProblemWidget_Params {
+	struct UNetworkProblemWidget_C_ExecuteUbergraph_NetworkProblemWidget_Params
+	{
 		int                                                EntryPoint;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	};
 

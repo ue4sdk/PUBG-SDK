@@ -6,14 +6,16 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// AnimBlueprintGeneratedClass Dacia_Animation.Dacia_Animation_C
 	// 0x17CC (0x204C - 0x0880)
-	class UDacia_Animation_C : public UVehicleAnimInstance {
+	class UDacia_Animation_C : public UVehicleAnimInstance
+	{
 	public:
 		struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0880(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_DuplicateTransient)
 		struct FAnimNode_Root                              AnimGraphNode_Root_06BCC8CF44B3168075C84E85BC8BCF71;      // 0x0888(0x0048)
@@ -56,7 +58,8 @@ namespace Classes {
 		struct FRotator                                    SpeedNeedleRot;                                           // 0x2034(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		struct FRotator                                    RPMNeedleRot;                                             // 0x2040(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x96450078);
 			return ptr;

@@ -8,13 +8,15 @@
 
 #include "../SDK.hpp"
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Parameters
 	//---------------------------------------------------------------------------
 
 	// Function Foliage.FoliageStatistics.FoliageOverlappingSphereCount
-	struct UFoliageStatistics_FoliageOverlappingSphereCount_Params {
+	struct UFoliageStatistics_FoliageOverlappingSphereCount_Params
+	{
 		class UObject*                                     WorldContextObject;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class UStaticMesh*                                 StaticMesh;                                               // (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		struct FVector                                     CenterPosition;                                           // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -23,7 +25,8 @@ namespace Classes {
 	};
 
 	// Function Foliage.FoliageStatistics.FoliageOverlappingBoxCount
-	struct UFoliageStatistics_FoliageOverlappingBoxCount_Params {
+	struct UFoliageStatistics_FoliageOverlappingBoxCount_Params
+	{
 		class UObject*                                     WorldContextObject;                                       // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class UStaticMesh*                                 StaticMesh;                                               // (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		struct FBox                                        Box;                                                      // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -31,7 +34,8 @@ namespace Classes {
 	};
 
 	// Function Foliage.InteractiveFoliageActor.CapsuleTouched
-	struct AInteractiveFoliageActor_CapsuleTouched_Params {
+	struct AInteractiveFoliageActor_CapsuleTouched_Params
+	{
 		class UPrimitiveComponent*                         OverlappedComp;                                           // (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 		class AActor*                                      Other;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class UPrimitiveComponent*                         OtherComp;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
@@ -41,7 +45,8 @@ namespace Classes {
 	};
 
 	// Function Foliage.ProceduralFoliageSpawner.Simulate
-	struct UProceduralFoliageSpawner_Simulate_Params {
+	struct UProceduralFoliageSpawner_Simulate_Params
+	{
 		int                                                NumSteps;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	};
 

@@ -8,13 +8,15 @@
 
 #include "../SDK.hpp"
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Parameters
 	//---------------------------------------------------------------------------
 
 	// Function CinematicCamera.CineCameraActor.GetCineCameraComponent
-	struct ACineCameraActor_GetCineCameraComponent_Params {
+	struct ACineCameraActor_GetCineCameraComponent_Params
+	{
 		class UCineCameraComponent*                        ReturnValue;                                              // (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 	};
 

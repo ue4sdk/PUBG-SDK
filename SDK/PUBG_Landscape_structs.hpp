@@ -6,13 +6,15 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Enums
 	//---------------------------------------------------------------------------
 
 	// Enum Landscape.ELandscapeGizmoType
-	enum class ELandscapeGizmoType : uint8_t {
+	enum class ELandscapeGizmoType : uint8_t
+	{
 		LGT_None = 0,
 		LGT_Height = 1,
 		LGT_Weight = 2,
@@ -21,7 +23,8 @@ namespace Classes {
 
 
 	// Enum Landscape.EGrassScaling
-	enum class EGrassScaling : uint8_t {
+	enum class EGrassScaling : uint8_t
+	{
 		EGrassScaling__Uniform = 0,
 		EGrassScaling__Free = 1,
 		EGrassScaling__LockXY = 2,
@@ -30,7 +33,8 @@ namespace Classes {
 
 
 	// Enum Landscape.ELandscapeLODFalloff
-	enum class ELandscapeLODFalloff : uint8_t {
+	enum class ELandscapeLODFalloff : uint8_t
+	{
 		ELandscapeLODFalloff__Linear = 0,
 		ELandscapeLODFalloff__SquareRoot = 1,
 		ELandscapeLODFalloff__ELandscapeLODFalloff_MAX = 2
@@ -38,7 +42,8 @@ namespace Classes {
 
 
 	// Enum Landscape.ELandscapeLayerPaintingRestriction
-	enum class ELandscapeLayerPaintingRestriction : uint8_t {
+	enum class ELandscapeLayerPaintingRestriction : uint8_t
+	{
 		ELandscapeLayerPaintingRestriction__None = 0,
 		ELandscapeLayerPaintingRestriction__UseMaxLayers = 1,
 		ELandscapeLayerPaintingRestriction__ExistingOnly = 2,
@@ -48,7 +53,8 @@ namespace Classes {
 
 
 	// Enum Landscape.ELandscapeImportAlphamapType
-	enum class ELandscapeImportAlphamapType : uint8_t {
+	enum class ELandscapeImportAlphamapType : uint8_t
+	{
 		ELandscapeImportAlphamapType__Additive = 0,
 		ELandscapeImportAlphamapType__Layered = 1,
 		ELandscapeImportAlphamapType__ELandscapeImportAlphamapType_MAX = 2
@@ -56,7 +62,8 @@ namespace Classes {
 
 
 	// Enum Landscape.ELandscapeSetupErrors
-	enum class ELandscapeSetupErrors : uint8_t {
+	enum class ELandscapeSetupErrors : uint8_t
+	{
 		LSE_None = 0,
 		LSE_NoLandscapeInfo = 1,
 		LSE_CollsionXY = 2,
@@ -66,7 +73,8 @@ namespace Classes {
 
 
 	// Enum Landscape.LandscapeSplineMeshOrientation
-	enum class ELandscapeSplineMeshOrientation : uint8_t {
+	enum class ELandscapeSplineMeshOrientation : uint8_t
+	{
 		LSMO_XUp = 0,
 		LSMO_YUp = 1,
 		LSMO_MAX = 2
@@ -74,7 +82,8 @@ namespace Classes {
 
 
 	// Enum Landscape.ELandscapeLayerBlendType
-	enum class ELandscapeLayerBlendType : uint8_t {
+	enum class ELandscapeLayerBlendType : uint8_t
+	{
 		LB_WeightBlend = 0,
 		LB_AlphaBlend = 1,
 		LB_HeightBlend = 2,
@@ -83,7 +92,8 @@ namespace Classes {
 
 
 	// Enum Landscape.ELandscapeCustomizedCoordType
-	enum class ELandscapeCustomizedCoordType : uint8_t {
+	enum class ELandscapeCustomizedCoordType : uint8_t
+	{
 		LCCT_None = 0,
 		LCCT_CustomUV0 = 1,
 		LCCT_CustomUV1 = 2,
@@ -94,7 +104,8 @@ namespace Classes {
 
 
 	// Enum Landscape.ETerrainCoordMappingType
-	enum class ETerrainCoordMappingType : uint8_t {
+	enum class ETerrainCoordMappingType : uint8_t
+	{
 		TCMT_Auto = 0,
 		TCMT_XY = 1,
 		TCMT_XZ = 2,
@@ -110,7 +121,8 @@ namespace Classes {
 
 	// ScriptStruct Landscape.WeightmapLayerAllocationInfo
 	// 0x0010
-	struct FWeightmapLayerAllocationInfo {
+	struct FWeightmapLayerAllocationInfo
+	{
 		class ULandscapeLayerInfoObject*                   LayerInfo;                                                // 0x0000(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      WeightmapTextureIndex;                                    // 0x0008(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      WeightmapTextureChannel;                                  // 0x0009(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -119,7 +131,8 @@ namespace Classes {
 
 	// ScriptStruct Landscape.GrassVariety
 	// 0x0048
-	struct FGrassVariety {
+	struct FGrassVariety
+	{
 		class UStaticMesh*                                 GrassMesh;                                                // 0x0000(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		float                                              GrassDensity;                                             // 0x0008(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		bool                                               bUseGrid;                                                 // 0x000C(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -143,7 +156,8 @@ namespace Classes {
 
 	// ScriptStruct Landscape.LandscapeSplineSegmentConnection
 	// 0x0018
-	struct FLandscapeSplineSegmentConnection {
+	struct FLandscapeSplineSegmentConnection
+	{
 		class ULandscapeSplineControlPoint*                ControlPoint;                                             // 0x0000(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		float                                              TangentLen;                                               // 0x0008(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
@@ -152,7 +166,8 @@ namespace Classes {
 
 	// ScriptStruct Landscape.LandscapeSplineInterpPoint
 	// 0x0040
-	struct FLandscapeSplineInterpPoint {
+	struct FLandscapeSplineInterpPoint
+	{
 		struct FVector                                     Center;                                                   // 0x0000(0x000C) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		struct FVector                                     Left;                                                     // 0x000C(0x000C) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		struct FVector                                     Right;                                                    // 0x0018(0x000C) (CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -163,7 +178,8 @@ namespace Classes {
 
 	// ScriptStruct Landscape.LandscapeSplineConnection
 	// 0x0010
-	struct FLandscapeSplineConnection {
+	struct FLandscapeSplineConnection
+	{
 		class ULandscapeSplineSegment*                     Segment;                                                  // 0x0000(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      End : 1;                                                  // 0x0008(0x0001)
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0009(0x0007) MISSED OFFSET
@@ -171,7 +187,8 @@ namespace Classes {
 
 	// ScriptStruct Landscape.GrassInput
 	// 0x0048
-	struct FGrassInput {
+	struct FGrassInput
+	{
 		struct FName                                       Name;                                                     // 0x0000(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class ULandscapeGrassType*                         GrassType;                                                // 0x0008(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		struct FExpressionInput                            Input;                                                    // 0x0010(0x0038)
@@ -179,7 +196,8 @@ namespace Classes {
 
 	// ScriptStruct Landscape.LayerBlendInput
 	// 0x0098
-	struct FLayerBlendInput {
+	struct FLayerBlendInput
+	{
 		struct FName                                       LayerName;                                                // 0x0000(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		TEnumAsByte<ELandscapeLayerBlendType>              BlendType;                                                // 0x0008(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0009(0x0007) MISSED OFFSET
@@ -193,44 +211,51 @@ namespace Classes {
 
 	// ScriptStruct Landscape.GizmoSelectData
 	// 0x0050
-	struct FGizmoSelectData {
+	struct FGizmoSelectData
+	{
 		unsigned char                                      UnknownData00[0x50];                                      // 0x0000(0x0050) MISSED OFFSET
 	};
 
 	// ScriptStruct Landscape.LandscapeInfoLayerSettings
 	// 0x0010
-	struct FLandscapeInfoLayerSettings {
+	struct FLandscapeInfoLayerSettings
+	{
 		class ULandscapeLayerInfoObject*                   LayerInfoObj;                                             // 0x0000(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		struct FName                                       LayerName;                                                // 0x0008(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	};
 
 	// ScriptStruct Landscape.LandscapeImportLayerInfo
 	// 0x0001
-	struct FLandscapeImportLayerInfo {
+	struct FLandscapeImportLayerInfo
+	{
 		unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 	};
 
 	// ScriptStruct Landscape.LandscapeLayerStruct
 	// 0x0008
-	struct FLandscapeLayerStruct {
+	struct FLandscapeLayerStruct
+	{
 		class ULandscapeLayerInfoObject*                   LayerInfoObj;                                             // 0x0000(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	};
 
 	// ScriptStruct Landscape.LandscapeEditorLayerSettings
 	// 0x0001
-	struct FLandscapeEditorLayerSettings {
+	struct FLandscapeEditorLayerSettings
+	{
 		unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 	};
 
 	// ScriptStruct Landscape.LandscapeWeightmapUsage
 	// 0x0020
-	struct FLandscapeWeightmapUsage {
+	struct FLandscapeWeightmapUsage
+	{
 		class ULandscapeComponent*                         ChannelUsage[0x4];                                        // 0x0000(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 	};
 
 	// ScriptStruct Landscape.LandscapeSplineMeshEntry
 	// 0x0038
-	struct FLandscapeSplineMeshEntry {
+	struct FLandscapeSplineMeshEntry
+	{
 		class UStaticMesh*                                 Mesh;                                                     // 0x0000(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		TArray<class UMaterialInterface*>                  MaterialOverrides;                                        // 0x0008(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 		unsigned char                                      bCenterH : 1;                                             // 0x0018(0x0001) (CPF_Edit)
@@ -247,19 +272,22 @@ namespace Classes {
 
 	// ScriptStruct Landscape.ForeignWorldSplineData
 	// 0x0001
-	struct FForeignWorldSplineData {
+	struct FForeignWorldSplineData
+	{
 		unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 	};
 
 	// ScriptStruct Landscape.ForeignSplineSegmentData
 	// 0x0001
-	struct FForeignSplineSegmentData {
+	struct FForeignSplineSegmentData
+	{
 		unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 	};
 
 	// ScriptStruct Landscape.ForeignControlPointData
 	// 0x0001
-	struct FForeignControlPointData {
+	struct FForeignControlPointData
+	{
 		unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 	};
 

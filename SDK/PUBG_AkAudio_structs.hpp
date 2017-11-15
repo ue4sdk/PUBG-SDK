@@ -6,14 +6,16 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Script Structs
 	//---------------------------------------------------------------------------
 
 	// ScriptStruct AkAudio.AkAudioEventTrackKey
 	// 0x0020
-	struct FAkAudioEventTrackKey {
+	struct FAkAudioEventTrackKey
+	{
 		float                                              Time;                                                     // 0x0000(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
 		class UAkAudioEvent*                               AkAudioEvent;                                             // 0x0008(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)

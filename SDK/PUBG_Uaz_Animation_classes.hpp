@@ -6,14 +6,16 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// AnimBlueprintGeneratedClass Uaz_Animation.Uaz_Animation_C
 	// 0x1600 (0x1E80 - 0x0880)
-	class UUaz_Animation_C : public UVehicleAnimInstance {
+	class UUaz_Animation_C : public UVehicleAnimInstance
+	{
 	public:
 		struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0880(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_DuplicateTransient)
 		struct FAnimNode_CopyBone                          AnimGraphNode_CopyBone_F0D8C80D499C3C446BC5DDBBE8F2D24F;  // 0x0888(0x0098)
@@ -51,7 +53,8 @@ namespace Classes {
 		struct FRotator                                    SteeringWheelRotation;                                    // 0x1E68(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		struct FRotator                                    VelocityNeedleRot;                                        // 0x1E74(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x2e15f070);
 			return ptr;

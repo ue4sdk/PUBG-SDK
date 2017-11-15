@@ -8,13 +8,15 @@
 
 #include "../SDK.hpp"
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Parameters
 	//---------------------------------------------------------------------------
 
 	// Function CoreUObject.Object.ExecuteUbergraph
-	struct UObject_ExecuteUbergraph_Params {
+	struct UObject_ExecuteUbergraph_Params
+	{
 		int                                                EntryPoint;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	};
 

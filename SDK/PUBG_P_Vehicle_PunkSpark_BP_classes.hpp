@@ -6,20 +6,23 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// BlueprintGeneratedClass P_Vehicle_PunkSpark_BP.P_Vehicle_PunkSpark_BP_C
 	// 0x0010 (0x0408 - 0x03F8)
-	class AP_Vehicle_PunkSpark_BP_C : public ATslParticle {
+	class AP_Vehicle_PunkSpark_BP_C : public ATslParticle
+	{
 	public:
 		struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x03F8(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_DuplicateTransient)
 		float                                              fSign;                                                    // 0x0400(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		float                                              spawnFactor;                                              // 0x0404(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x42bbeb35);
 			return ptr;

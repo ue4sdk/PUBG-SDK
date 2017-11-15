@@ -6,13 +6,15 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Enums
 	//---------------------------------------------------------------------------
 
 	// Enum MaterialShaderQualitySettings.EMobileCSMQuality
-	enum class EMobileCSMQuality : uint8_t {
+	enum class EMobileCSMQuality : uint8_t
+	{
 		EMobileCSMQuality__NoFiltering = 0,
 		EMobileCSMQuality__PCF_1x1 = 1,
 		EMobileCSMQuality__PCF_2x2 = 2,
@@ -27,7 +29,8 @@ namespace Classes {
 
 	// ScriptStruct MaterialShaderQualitySettings.MaterialQualityOverrides
 	// 0x0006
-	struct FMaterialQualityOverrides {
+	struct FMaterialQualityOverrides
+	{
 		bool                                               bEnableOverride;                                          // 0x0000(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 		bool                                               bForceFullyRough;                                         // 0x0001(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 		bool                                               bForceNonMetal;                                           // 0x0002(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)

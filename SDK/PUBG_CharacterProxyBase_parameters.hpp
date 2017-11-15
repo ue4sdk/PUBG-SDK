@@ -8,21 +8,25 @@
 
 #include "../SDK.hpp"
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Parameters
 	//---------------------------------------------------------------------------
 
 	// Function CharacterProxyBase.CharacterProxyBase_C.UserConstructionScript
-	struct ACharacterProxyBase_C_UserConstructionScript_Params {
+	struct ACharacterProxyBase_C_UserConstructionScript_Params
+	{
 	};
 
 	// Function CharacterProxyBase.CharacterProxyBase_C.ReceiveBeginPlay
-	struct ACharacterProxyBase_C_ReceiveBeginPlay_Params {
+	struct ACharacterProxyBase_C_ReceiveBeginPlay_Params
+	{
 	};
 
 	// Function CharacterProxyBase.CharacterProxyBase_C.ExecuteUbergraph_CharacterProxyBase
-	struct ACharacterProxyBase_C_ExecuteUbergraph_CharacterProxyBase_Params {
+	struct ACharacterProxyBase_C_ExecuteUbergraph_CharacterProxyBase_Params
+	{
 		int                                                EntryPoint;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	};
 

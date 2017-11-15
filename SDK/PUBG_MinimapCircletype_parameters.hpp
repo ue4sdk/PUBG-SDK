@@ -8,13 +8,15 @@
 
 #include "../SDK.hpp"
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Parameters
 	//---------------------------------------------------------------------------
 
 	// Function MinimapCircletype.MinimapCircletype_C.OnPrepass_1
-	struct UMinimapCircletype_C_OnPrepass_1_Params {
+	struct UMinimapCircletype_C_OnPrepass_1_Params
+	{
 		class UWidget*                                     BoundWidget;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	};
 

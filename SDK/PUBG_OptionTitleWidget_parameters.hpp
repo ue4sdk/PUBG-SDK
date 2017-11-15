@@ -8,13 +8,15 @@
 
 #include "../SDK.hpp"
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Parameters
 	//---------------------------------------------------------------------------
 
 	// Function OptionTitleWidget.OptionTitleWidget_C.GetText_1
-	struct UOptionTitleWidget_C_GetText_1_Params {
+	struct UOptionTitleWidget_C_GetText_1_Params
+	{
 		struct FText                                       ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 	};
 

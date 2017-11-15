@@ -6,18 +6,21 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// Class MobilePatchingUtils.MobileInstalledContent
 	// 0x0020 (0x0048 - 0x0028)
-	class UMobileInstalledContent : public UObject {
+	class UMobileInstalledContent : public UObject
+	{
 	public:
 		unsigned char                                      UnknownData00[0x20];                                      // 0x0028(0x0020) MISSED OFFSET
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xcc9dfa3f);
 			return ptr;
@@ -32,11 +35,13 @@ namespace Classes {
 
 	// Class MobilePatchingUtils.MobilePendingContent
 	// 0x0040 (0x0088 - 0x0048)
-	class UMobilePendingContent : public UMobileInstalledContent {
+	class UMobilePendingContent : public UMobileInstalledContent
+	{
 	public:
 		unsigned char                                      UnknownData00[0x40];                                      // 0x0048(0x0040) MISSED OFFSET
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x105b13be);
 			return ptr;
@@ -55,10 +60,12 @@ namespace Classes {
 
 	// Class MobilePatchingUtils.MobilePatchingLibrary
 	// 0x0000 (0x0028 - 0x0028)
-	class UMobilePatchingLibrary : public UBlueprintFunctionLibrary {
+	class UMobilePatchingLibrary : public UBlueprintFunctionLibrary
+	{
 	public:
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xc8af1749);
 			return ptr;

@@ -8,13 +8,15 @@
 
 #include "../SDK.hpp"
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Parameters
 	//---------------------------------------------------------------------------
 
 	// Function ReplayTimelineKillEventItem.ReplayTimelineKillEventItem_C.GetToolTipText
-	struct UReplayTimelineKillEventItem_C_GetToolTipText_Params {
+	struct UReplayTimelineKillEventItem_C_GetToolTipText_Params
+	{
 		struct FText                                       ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ReturnParm)
 	};
 

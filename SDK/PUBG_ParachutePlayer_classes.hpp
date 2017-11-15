@@ -6,14 +6,16 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// BlueprintGeneratedClass ParachutePlayer.ParachutePlayer_C
 	// 0x00F4 (0x062C - 0x0538)
-	class AParachutePlayer_C : public AParachuteVehicle {
+	class AParachutePlayer_C : public AParachuteVehicle
+	{
 	public:
 		struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0538(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_DuplicateTransient)
 		class UParachuteVehicleSeatInteraction*            ParachuteVehicleSeatInteraction;                          // 0x0540(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -55,7 +57,8 @@ namespace Classes {
 		struct FVector                                     LastVelocity;                                             // 0x061C(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		float                                              RelativeVelocity;                                         // 0x0628(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x3f8fe905);
 			return ptr;

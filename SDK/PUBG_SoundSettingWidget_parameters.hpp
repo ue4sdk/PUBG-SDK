@@ -8,38 +8,46 @@
 
 #include "../SDK.hpp"
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Parameters
 	//---------------------------------------------------------------------------
 
 	// Function SoundSettingWidget.SoundSettingWidget_C.IsChanged
-	struct USoundSettingWidget_C_IsChanged_Params {
+	struct USoundSettingWidget_C_IsChanged_Params
+	{
 		bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 	};
 
 	// Function SoundSettingWidget.SoundSettingWidget_C.UpdateSoundSettings
-	struct USoundSettingWidget_C_UpdateSoundSettings_Params {
+	struct USoundSettingWidget_C_UpdateSoundSettings_Params
+	{
 	};
 
 	// Function SoundSettingWidget.SoundSettingWidget_C.Construct
-	struct USoundSettingWidget_C_Construct_Params {
+	struct USoundSettingWidget_C_Construct_Params
+	{
 	};
 
 	// Function SoundSettingWidget.SoundSettingWidget_C.OnReset
-	struct USoundSettingWidget_C_OnReset_Params {
+	struct USoundSettingWidget_C_OnReset_Params
+	{
 	};
 
 	// Function SoundSettingWidget.SoundSettingWidget_C.OnDefault
-	struct USoundSettingWidget_C_OnDefault_Params {
+	struct USoundSettingWidget_C_OnDefault_Params
+	{
 	};
 
 	// Function SoundSettingWidget.SoundSettingWidget_C.OnApply
-	struct USoundSettingWidget_C_OnApply_Params {
+	struct USoundSettingWidget_C_OnApply_Params
+	{
 	};
 
 	// Function SoundSettingWidget.SoundSettingWidget_C.ExecuteUbergraph_SoundSettingWidget
-	struct USoundSettingWidget_C_ExecuteUbergraph_SoundSettingWidget_Params {
+	struct USoundSettingWidget_C_ExecuteUbergraph_SoundSettingWidget_Params
+	{
 		int                                                EntryPoint;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	};
 

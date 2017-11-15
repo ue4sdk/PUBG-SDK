@@ -8,21 +8,25 @@
 
 #include "../SDK.hpp"
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Parameters
 	//---------------------------------------------------------------------------
 
 	// Function BP_StanceManagerWidget.BP_StanceManagerWidget_C.OnDriver
-	struct UBP_StanceManagerWidget_C_OnDriver_Params {
+	struct UBP_StanceManagerWidget_C_OnDriver_Params
+	{
 	};
 
 	// Function BP_StanceManagerWidget.BP_StanceManagerWidget_C.OnRider
-	struct UBP_StanceManagerWidget_C_OnRider_Params {
+	struct UBP_StanceManagerWidget_C_OnRider_Params
+	{
 	};
 
 	// Function BP_StanceManagerWidget.BP_StanceManagerWidget_C.ExecuteUbergraph_BP_StanceManagerWidget
-	struct UBP_StanceManagerWidget_C_ExecuteUbergraph_BP_StanceManagerWidget_Params {
+	struct UBP_StanceManagerWidget_C_ExecuteUbergraph_BP_StanceManagerWidget_Params
+	{
 		int                                                EntryPoint;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	};
 

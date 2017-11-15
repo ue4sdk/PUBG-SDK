@@ -6,14 +6,16 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// WidgetBlueprintGeneratedClass InventorySlotBaseWidget.InventorySlotBaseWidget_C
 	// 0x00A0 (0x02F0 - 0x0250)
-	class UInventorySlotBaseWidget_C : public USlotBaseWidget_C {
+	class UInventorySlotBaseWidget_C : public USlotBaseWidget_C
+	{
 	public:
 		struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0250(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_DuplicateTransient)
 		TEnumAsByte<EEquipSlotID>                          EquipSlotID;                                              // 0x0258(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -40,7 +42,8 @@ namespace Classes {
 		class UInventoryWidget_C*                          InventoryWidget;                                          // 0x02D8(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		struct FScriptMulticastDelegate                    RefreshFocus;                                             // 0x02E0(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_BlueprintAssignable)
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x24f7dcdd);
 			return ptr;

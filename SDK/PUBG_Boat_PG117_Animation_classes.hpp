@@ -6,14 +6,16 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// AnimBlueprintGeneratedClass Boat_PG117_Animation.Boat_PG117_Animation_C
 	// 0x0308 (0x07A0 - 0x0498)
-	class UBoat_PG117_Animation_C : public UAnimInstance {
+	class UBoat_PG117_Animation_C : public UAnimInstance
+	{
 	public:
 		struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0498(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_DuplicateTransient)
 		struct FAnimNode_Root                              AnimGraphNode_Root_6F449E654EF7DE9DD0A9D7822CA89D21;      // 0x04A0(0x0048)
@@ -29,7 +31,8 @@ namespace Classes {
 		struct FRotator                                    SteeringWheelRot;                                         // 0x0788(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		struct FRotator                                    PropellerRot;                                             // 0x0794(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xa5482488);
 			return ptr;

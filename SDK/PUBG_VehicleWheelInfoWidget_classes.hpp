@@ -6,18 +6,21 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// WidgetBlueprintGeneratedClass VehicleWheelInfoWidget.VehicleWheelInfoWidget_C
 	// 0x0008 (0x02E8 - 0x02E0)
-	class UVehicleWheelInfoWidget_C : public UVehicleWheelInfoBaseWidget {
+	class UVehicleWheelInfoWidget_C : public UVehicleWheelInfoBaseWidget
+	{
 	public:
 		class UTslWheeledVehicleMovement*                  TslWheeledVehicleMovement;                                // 0x02E0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xab1caf4f);
 			return ptr;

@@ -8,23 +8,27 @@
 
 #include "../SDK.hpp"
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Parameters
 	//---------------------------------------------------------------------------
 
 	// Function CustomMeshComponent.CustomMeshComponent.SetCustomMeshTriangles
-	struct UCustomMeshComponent_SetCustomMeshTriangles_Params {
+	struct UCustomMeshComponent_SetCustomMeshTriangles_Params
+	{
 		TArray<struct FCustomMeshTriangle>                 Triangles;                                                // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
 		bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 	};
 
 	// Function CustomMeshComponent.CustomMeshComponent.ClearCustomMeshTriangles
-	struct UCustomMeshComponent_ClearCustomMeshTriangles_Params {
+	struct UCustomMeshComponent_ClearCustomMeshTriangles_Params
+	{
 	};
 
 	// Function CustomMeshComponent.CustomMeshComponent.AddCustomMeshTriangles
-	struct UCustomMeshComponent_AddCustomMeshTriangles_Params {
+	struct UCustomMeshComponent_AddCustomMeshTriangles_Params
+	{
 		TArray<struct FCustomMeshTriangle>                 Triangles;                                                // (CPF_ConstParm, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm)
 	};
 

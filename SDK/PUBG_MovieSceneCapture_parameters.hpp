@@ -8,18 +8,21 @@
 
 #include "../SDK.hpp"
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Parameters
 	//---------------------------------------------------------------------------
 
 	// Function MovieSceneCapture.MovieSceneCaptureEnvironment.GetCaptureFrameNumber
-	struct UMovieSceneCaptureEnvironment_GetCaptureFrameNumber_Params {
+	struct UMovieSceneCaptureEnvironment_GetCaptureFrameNumber_Params
+	{
 		int                                                ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 	};
 
 	// Function MovieSceneCapture.MovieSceneCaptureEnvironment.GetCaptureElapsedTime
-	struct UMovieSceneCaptureEnvironment_GetCaptureElapsedTime_Params {
+	struct UMovieSceneCaptureEnvironment_GetCaptureElapsedTime_Params
+	{
 		float                                              ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 	};
 

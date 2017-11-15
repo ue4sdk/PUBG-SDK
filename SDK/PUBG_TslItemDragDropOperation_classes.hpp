@@ -6,14 +6,16 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// BlueprintGeneratedClass TslItemDragDropOperation.TslItemDragDropOperation_C
 	// 0x0080 (0x0108 - 0x0088)
-	class UTslItemDragDropOperation_C : public UDragDropOperation {
+	class UTslItemDragDropOperation_C : public UDragDropOperation
+	{
 	public:
 		class UItem*                                       DragDroppingItem;                                         // 0x0088(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		int                                                MouseOverWeaponSlotIndex;                                 // 0x0090(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -39,7 +41,8 @@ namespace Classes {
 		TArray<TScriptInterface<class USlotContainerInterface>> OtherContainerStack;                                      // 0x00F0(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
 		struct FName                                       ActionName;                                               // 0x0100(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xec86f0b5);
 			return ptr;

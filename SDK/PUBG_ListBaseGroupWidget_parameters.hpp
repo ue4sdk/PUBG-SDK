@@ -8,32 +8,38 @@
 
 #include "../SDK.hpp"
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Parameters
 	//---------------------------------------------------------------------------
 
 	// Function ListBaseGroupWidget.ListBaseGroupWidget_C.GetChilderenCount
-	struct UListBaseGroupWidget_C_GetChilderenCount_Params {
+	struct UListBaseGroupWidget_C_GetChilderenCount_Params
+	{
 		int                                                Count;                                                    // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	};
 
 	// Function ListBaseGroupWidget.ListBaseGroupWidget_C.AddChild
-	struct UListBaseGroupWidget_C_AddChild_Params {
+	struct UListBaseGroupWidget_C_AddChild_Params
+	{
 		class UWidget*                                     Content;                                                  // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 	};
 
 	// Function ListBaseGroupWidget.ListBaseGroupWidget_C.Clear
-	struct UListBaseGroupWidget_C_Clear_Params {
+	struct UListBaseGroupWidget_C_Clear_Params
+	{
 	};
 
 	// Function ListBaseGroupWidget.ListBaseGroupWidget_C.On_List_Prepass_1
-	struct UListBaseGroupWidget_C_On_List_Prepass_1_Params {
+	struct UListBaseGroupWidget_C_On_List_Prepass_1_Params
+	{
 		class UWidget*                                     BoundWidget;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	};
 
 	// Function ListBaseGroupWidget.ListBaseGroupWidget_C.AddCategoryGroup
-	struct UListBaseGroupWidget_C_AddCategoryGroup_Params {
+	struct UListBaseGroupWidget_C_AddCategoryGroup_Params
+	{
 		class UCategoryGroupWidget_C*                      CategoryGroup;                                            // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	};
 

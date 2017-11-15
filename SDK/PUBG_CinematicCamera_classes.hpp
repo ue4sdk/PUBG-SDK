@@ -6,14 +6,16 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// Class CinematicCamera.CameraRig_Crane
 	// 0x0050 (0x03F0 - 0x03A0)
-	class ACameraRig_Crane : public AActor {
+	class ACameraRig_Crane : public AActor
+	{
 	public:
 		float                                              CranePitch;                                               // 0x03A0(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		float                                              CraneYaw;                                                 // 0x03A4(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -30,7 +32,8 @@ namespace Classes {
 		class UStaticMeshComponent*                        PreviewMesh_CraneMount;                                   // 0x03E0(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 		class UStaticMeshComponent*                        PreviewMesh_CraneCounterWeight;                           // 0x03E8(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x5c2895d6);
 			return ptr;
@@ -41,7 +44,8 @@ namespace Classes {
 
 	// Class CinematicCamera.CameraRig_Rail
 	// 0x0048 (0x03E8 - 0x03A0)
-	class ACameraRig_Rail : public AActor {
+	class ACameraRig_Rail : public AActor
+	{
 	public:
 		float                                              CurrentPositionOnRail;                                    // 0x03A0(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x4];                                       // 0x03A4(0x0004) MISSED OFFSET
@@ -53,7 +57,8 @@ namespace Classes {
 		class UStaticMesh*                                 PreviewRailStaticMesh;                                    // 0x03D8(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class UStaticMeshComponent*                        PreviewMesh_Mount;                                        // 0x03E0(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xd0cfa9bf);
 			return ptr;
@@ -64,7 +69,8 @@ namespace Classes {
 
 	// Class CinematicCamera.CineCameraComponent
 	// 0x00B0 (0x0910 - 0x0860)
-	class UCineCameraComponent : public UCameraComponent {
+	class UCineCameraComponent : public UCameraComponent
+	{
 	public:
 		struct FCameraFilmbackSettings                     FilmbackSettings;                                         // 0x0860(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		struct FCameraLensSettings                         LensSettings;                                             // 0x086C(0x0014) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -80,7 +86,8 @@ namespace Classes {
 		float                                              DefaultLensFocalLength;                                   // 0x0908(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 		float                                              DefaultLensFStop;                                         // 0x090C(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x8f8958aa);
 			return ptr;
@@ -91,12 +98,14 @@ namespace Classes {
 
 	// Class CinematicCamera.CineCameraActor
 	// 0x0040 (0x08F0 - 0x08B0)
-	class ACineCameraActor : public ACameraActor {
+	class ACineCameraActor : public ACameraActor
+	{
 	public:
 		struct FCameraLookatTrackingSettings               LookatTrackingSettings;                                   // 0x08B0(0x0030) (CPF_Edit, CPF_BlueprintVisible)
 		unsigned char                                      UnknownData00[0x10];                                      // 0x08E0(0x0010) MISSED OFFSET
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x2e004158);
 			return ptr;

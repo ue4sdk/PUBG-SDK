@@ -6,18 +6,21 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// Class CableComponent.CableActor
 	// 0x0008 (0x03A8 - 0x03A0)
-	class ACableActor : public AActor {
+	class ACableActor : public AActor
+	{
 	public:
 		class UCableComponent*                             CableComponent;                                           // 0x03A0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xc93468f9);
 			return ptr;
@@ -28,7 +31,8 @@ namespace Classes {
 
 	// Class CableComponent.CableComponent
 	// 0x0080 (0x0800 - 0x0780)
-	class UCableComponent : public UMeshComponent {
+	class UCableComponent : public UMeshComponent
+	{
 	public:
 		bool                                               bAttachStart;                                             // 0x0780(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		bool                                               bAttachEnd;                                               // 0x0781(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -51,7 +55,8 @@ namespace Classes {
 		float                                              TileMaterial;                                             // 0x07E4(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData02[0x18];                                      // 0x07E8(0x0018) MISSED OFFSET
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xfeb13f83);
 			return ptr;

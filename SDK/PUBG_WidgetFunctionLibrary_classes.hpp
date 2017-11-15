@@ -6,17 +6,20 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// BlueprintGeneratedClass WidgetFunctionLibrary.WidgetFunctionLibrary_C
 	// 0x0000 (0x0028 - 0x0028)
-	class UWidgetFunctionLibrary_C : public UBlueprintFunctionLibrary {
+	class UWidgetFunctionLibrary_C : public UBlueprintFunctionLibrary
+	{
 	public:
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x6955d4e5);
 			return ptr;

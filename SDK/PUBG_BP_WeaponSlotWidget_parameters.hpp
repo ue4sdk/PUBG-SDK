@@ -8,25 +8,30 @@
 
 #include "../SDK.hpp"
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Parameters
 	//---------------------------------------------------------------------------
 
 	// Function BP_WeaponSlotWidget.BP_WeaponSlotWidget_C.HIddenEnd__DelegateSignature
-	struct UBP_WeaponSlotWidget_C_HIddenEnd__DelegateSignature_Params {
+	struct UBP_WeaponSlotWidget_C_HIddenEnd__DelegateSignature_Params
+	{
 	};
 
 	// Function BP_WeaponSlotWidget.BP_WeaponSlotWidget_C.HIddenStart__DelegateSignature
-	struct UBP_WeaponSlotWidget_C_HIddenStart__DelegateSignature_Params {
+	struct UBP_WeaponSlotWidget_C_HIddenStart__DelegateSignature_Params
+	{
 	};
 
 	// Function BP_WeaponSlotWidget.BP_WeaponSlotWidget_C.ShowEnd__DelegateSignature
-	struct UBP_WeaponSlotWidget_C_ShowEnd__DelegateSignature_Params {
+	struct UBP_WeaponSlotWidget_C_ShowEnd__DelegateSignature_Params
+	{
 	};
 
 	// Function BP_WeaponSlotWidget.BP_WeaponSlotWidget_C.ShowStart__DelegateSignature
-	struct UBP_WeaponSlotWidget_C_ShowStart__DelegateSignature_Params {
+	struct UBP_WeaponSlotWidget_C_ShowStart__DelegateSignature_Params
+	{
 	};
 
 }

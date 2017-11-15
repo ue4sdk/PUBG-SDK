@@ -6,14 +6,16 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// BlueprintGeneratedClass BP_Motorbike_04.BP_Motorbike_04_C
 	// 0x00EC (0x0954 - 0x0868)
-	class ABP_Motorbike_04_C : public ATslMotorbikeVehicle_Standalone {
+	class ABP_Motorbike_04_C : public ATslMotorbikeVehicle_Standalone
+	{
 	public:
 		struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0868(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_DuplicateTransient)
 		class USphereComponent*                            Sphere1;                                                  // 0x0870(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -52,7 +54,8 @@ namespace Classes {
 		class UTslWheeledVehicleMovement*                  TslMovementRef;                                           // 0x0948(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		float                                              FuelEfficiency;                                           // 0x0950(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x37388b05);
 			return ptr;

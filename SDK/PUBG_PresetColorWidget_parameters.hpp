@@ -8,13 +8,15 @@
 
 #include "../SDK.hpp"
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Parameters
 	//---------------------------------------------------------------------------
 
 	// Function PresetColorWidget.PresetColorWidget_C.GetContentColorAndOpacity_1
-	struct UPresetColorWidget_C_GetContentColorAndOpacity_1_Params {
+	struct UPresetColorWidget_C_GetContentColorAndOpacity_1_Params
+	{
 		struct FLinearColor                                ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 	};
 

@@ -6,13 +6,15 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Enums
 	//---------------------------------------------------------------------------
 
 	// Enum VectorVM.EVectorVMOp
-	enum class EVectorVMOp : uint8_t {
+	enum class EVectorVMOp : uint8_t
+	{
 		EVectorVMOp__done = 0,
 		EVectorVMOp__add = 1,
 		EVectorVMOp__sub = 2,
@@ -82,7 +84,8 @@ namespace Classes {
 
 
 	// Enum VectorVM.EVectorVMOperandLocation
-	enum class EVectorVMOperandLocation : uint8_t {
+	enum class EVectorVMOperandLocation : uint8_t
+	{
 		EVectorVMOperandLocation__TemporaryRegister = 0,
 		EVectorVMOperandLocation__InputRegister = 1,
 		EVectorVMOperandLocation__OutputRegister = 2,

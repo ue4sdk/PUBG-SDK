@@ -6,14 +6,16 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// Class EngineSettings.ConsoleSettings
 	// 0x0048 (0x0070 - 0x0028)
-	class UConsoleSettings : public UObject {
+	class UConsoleSettings : public UObject
+	{
 	public:
 		int                                                MaxScrollbackSize;                                        // 0x0028(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_GlobalConfig, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
@@ -29,7 +31,8 @@ namespace Classes {
 		struct FColor                                      AutoCompleteFadedColor;                                   // 0x0068(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData02[0x4];                                       // 0x006C(0x0004) MISSED OFFSET
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xe44e239c);
 			return ptr;
@@ -40,7 +43,8 @@ namespace Classes {
 
 	// Class EngineSettings.GameMapsSettings
 	// 0x00A8 (0x00D0 - 0x0028)
-	class UGameMapsSettings : public UObject {
+	class UGameMapsSettings : public UObject
+	{
 	public:
 		struct FStringAssetReference                       EditorStartupMap;                                         // 0x0028(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
 		struct FString                                     LocalMapOptions;                                          // 0x0038(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
@@ -58,7 +62,8 @@ namespace Classes {
 		TArray<struct FGameModeName>                       GameModeMapPrefixes;                                      // 0x00B0(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
 		TArray<struct FGameModeName>                       GameModeClassAliases;                                     // 0x00C0(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x4dfa2900);
 			return ptr;
@@ -69,7 +74,8 @@ namespace Classes {
 
 	// Class EngineSettings.GameNetworkManagerSettings
 	// 0x0030 (0x0058 - 0x0028)
-	class UGameNetworkManagerSettings : public UObject {
+	class UGameNetworkManagerSettings : public UObject
+	{
 	public:
 		int                                                MinDynamicBandwidth;                                      // 0x0028(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_GlobalConfig, CPF_IsPlainOldData)
 		int                                                MaxDynamicBandwidth;                                      // 0x002C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_GlobalConfig, CPF_IsPlainOldData)
@@ -85,7 +91,8 @@ namespace Classes {
 		float                                              JoinInProgressStandbyWaitTime;                            // 0x0050(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData01[0x4];                                       // 0x0054(0x0004) MISSED OFFSET
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x3b3fb406);
 			return ptr;
@@ -96,14 +103,16 @@ namespace Classes {
 
 	// Class EngineSettings.GameSessionSettings
 	// 0x0010 (0x0038 - 0x0028)
-	class UGameSessionSettings : public UObject {
+	class UGameSessionSettings : public UObject
+	{
 	public:
 		int                                                MaxSpectators;                                            // 0x0028(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_GlobalConfig, CPF_IsPlainOldData)
 		int                                                MaxPlayers;                                               // 0x002C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_GlobalConfig, CPF_IsPlainOldData)
 		unsigned char                                      bRequiresPushToTalk : 1;                                  // 0x0030(0x0001) (CPF_Edit, CPF_Config, CPF_GlobalConfig)
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x5115eeb9);
 			return ptr;
@@ -114,10 +123,12 @@ namespace Classes {
 
 	// Class EngineSettings.GeneralEngineSettings
 	// 0x0000 (0x0028 - 0x0028)
-	class UGeneralEngineSettings : public UObject {
+	class UGeneralEngineSettings : public UObject
+	{
 	public:
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x30902dad);
 			return ptr;
@@ -128,7 +139,8 @@ namespace Classes {
 
 	// Class EngineSettings.GeneralProjectSettings
 	// 0x00E8 (0x0110 - 0x0028)
-	class UGeneralProjectSettings : public UObject {
+	class UGeneralProjectSettings : public UObject
+	{
 	public:
 		struct FString                                     CompanyName;                                              // 0x0028(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
 		struct FString                                     CompanyDistinguishedName;                                 // 0x0038(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
@@ -152,7 +164,8 @@ namespace Classes {
 		bool                                               bAllowMinimize;                                           // 0x010E(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x1];                                       // 0x010F(0x0001) MISSED OFFSET
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x37647a10);
 			return ptr;
@@ -163,13 +176,15 @@ namespace Classes {
 
 	// Class EngineSettings.HudSettings
 	// 0x0018 (0x0040 - 0x0028)
-	class UHudSettings : public UObject {
+	class UHudSettings : public UObject
+	{
 	public:
 		unsigned char                                      bShowHUD : 1;                                             // 0x0028(0x0001) (CPF_Edit, CPF_Config)
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0029(0x0007) MISSED OFFSET
 		TArray<struct FName>                               DebugDisplay;                                             // 0x0030(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_GlobalConfig)
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x9f579c4c);
 			return ptr;

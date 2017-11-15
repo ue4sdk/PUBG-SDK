@@ -8,13 +8,15 @@
 
 #include "../SDK.hpp"
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Parameters
 	//---------------------------------------------------------------------------
 
 	// Function CustomizableObject.CustomizableObjectInstance.SetRandomValues
-	struct UCustomizableObjectInstance_SetRandomValues_Params {
+	struct UCustomizableObjectInstance_SetRandomValues_Params
+	{
 	};
 
 }

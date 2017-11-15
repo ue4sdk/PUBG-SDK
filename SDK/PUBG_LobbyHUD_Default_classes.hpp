@@ -6,17 +6,20 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// BlueprintGeneratedClass LobbyHUD_Default.LobbyHUD_Default_C
 	// 0x0000 (0x09B0 - 0x09B0)
-	class ALobbyHUD_Default_C : public ALobbyHUD {
+	class ALobbyHUD_Default_C : public ALobbyHUD
+	{
 	public:
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x40fa287f);
 			return ptr;

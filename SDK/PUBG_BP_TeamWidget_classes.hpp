@@ -6,17 +6,20 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// WidgetBlueprintGeneratedClass BP_TeamWidget.BP_TeamWidget_C
 	// 0x0000 (0x02B0 - 0x02B0)
-	class UBP_TeamWidget_C : public UTslTeamWidget {
+	class UBP_TeamWidget_C : public UTslTeamWidget
+	{
 	public:
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xd8c00185);
 			return ptr;

@@ -6,18 +6,21 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// BlueprintGeneratedClass P_Boat_Drive_Ripples_BP.P_Boat_Drive_Ripples_BP_C
 	// 0x0008 (0x0400 - 0x03F8)
-	class AP_Boat_Drive_Ripples_BP_C : public ATslParticle {
+	class AP_Boat_Drive_Ripples_BP_C : public ATslParticle
+	{
 	public:
 		struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x03F8(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_DuplicateTransient)
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x297c71d);
 			return ptr;

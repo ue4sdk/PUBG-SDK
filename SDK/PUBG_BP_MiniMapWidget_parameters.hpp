@@ -8,13 +8,15 @@
 
 #include "../SDK.hpp"
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Parameters
 	//---------------------------------------------------------------------------
 
 	// Function BP_MiniMapWidget.BP_MiniMapWidget_C.OnPrepass_1
-	struct UBP_MiniMapWidget_C_OnPrepass_1_Params {
+	struct UBP_MiniMapWidget_C_OnPrepass_1_Params
+	{
 		class UWidget*                                     BoundWidget;                                              // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	};
 

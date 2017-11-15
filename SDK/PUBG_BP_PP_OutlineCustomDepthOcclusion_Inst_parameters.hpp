@@ -8,13 +8,15 @@
 
 #include "../SDK.hpp"
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Parameters
 	//---------------------------------------------------------------------------
 
 	// Function BP_PP_OutlineCustomDepthOcclusion_Inst.BP_PP_OutlineCustomDepthOcclusion_Inst_C.UserConstructionScript
-	struct ABP_PP_OutlineCustomDepthOcclusion_Inst_C_UserConstructionScript_Params {
+	struct ABP_PP_OutlineCustomDepthOcclusion_Inst_C_UserConstructionScript_Params
+	{
 	};
 
 }

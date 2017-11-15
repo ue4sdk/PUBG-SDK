@@ -8,21 +8,25 @@
 
 #include "../SDK.hpp"
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Parameters
 	//---------------------------------------------------------------------------
 
 	// Function BloodSpotWidget.BloodSpotWidget_C.Construct
-	struct UBloodSpotWidget_C_Construct_Params {
+	struct UBloodSpotWidget_C_Construct_Params
+	{
 	};
 
 	// Function BloodSpotWidget.BloodSpotWidget_C.Finish
-	struct UBloodSpotWidget_C_Finish_Params {
+	struct UBloodSpotWidget_C_Finish_Params
+	{
 	};
 
 	// Function BloodSpotWidget.BloodSpotWidget_C.ExecuteUbergraph_BloodSpotWidget
-	struct UBloodSpotWidget_C_ExecuteUbergraph_BloodSpotWidget_Params {
+	struct UBloodSpotWidget_C_ExecuteUbergraph_BloodSpotWidget_Params
+	{
 		int                                                EntryPoint;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	};
 

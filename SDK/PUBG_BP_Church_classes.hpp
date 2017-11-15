@@ -6,14 +6,16 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// BlueprintGeneratedClass BP_Church.BP_Church_C
 	// 0x0280 (0x0620 - 0x03A0)
-	class ABP_Church_C : public AActor {
+	class ABP_Church_C : public AActor
+	{
 	public:
 		class USpotLightComponent*                         SpotLight9;                                               // 0x03A0(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class UPointLightComponent*                        PointLight1;                                              // 0x03A8(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -96,7 +98,8 @@ namespace Classes {
 		class UStaticMeshComponent*                        StaticMesh;                                               // 0x0610(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class USceneComponent*                             SharedRoot;                                               // 0x0618(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x159ce651);
 			return ptr;

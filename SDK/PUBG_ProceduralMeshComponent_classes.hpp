@@ -6,14 +6,16 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// Class ProceduralMeshComponent.ProceduralMeshComponent
 	// 0x0060 (0x07E0 - 0x0780)
-	class UProceduralMeshComponent : public UMeshComponent {
+	class UProceduralMeshComponent : public UMeshComponent
+	{
 	public:
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0780(0x0008) MISSED OFFSET
 		bool                                               bUseComplexAsSimpleCollision;                             // 0x0788(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -24,7 +26,8 @@ namespace Classes {
 		struct FBoxSphereBounds                            LocalBounds;                                              // 0x07B8(0x001C) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData02[0xC];                                       // 0x07D4(0x000C) MISSED OFFSET
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x10b2ee33);
 			return ptr;
@@ -47,10 +50,12 @@ namespace Classes {
 
 	// Class ProceduralMeshComponent.KismetProceduralMeshLibrary
 	// 0x0000 (0x0028 - 0x0028)
-	class UKismetProceduralMeshLibrary : public UBlueprintFunctionLibrary {
+	class UKismetProceduralMeshLibrary : public UBlueprintFunctionLibrary
+	{
 	public:
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xba59bada);
 			return ptr;

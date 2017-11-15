@@ -6,17 +6,20 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// WidgetBlueprintGeneratedClass MinimapOriginalType.MinimapOriginalType_C
 	// 0x0000 (0x0240 - 0x0240)
-	class UMinimapOriginalType_C : public UUserWidget {
+	class UMinimapOriginalType_C : public UUserWidget
+	{
 	public:
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x8ed15a91);
 			return ptr;

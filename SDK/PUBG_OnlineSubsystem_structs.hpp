@@ -6,13 +6,15 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Enums
 	//---------------------------------------------------------------------------
 
 	// Enum OnlineSubsystem.EInAppPurchaseState
-	enum class EInAppPurchaseState : uint8_t {
+	enum class EInAppPurchaseState : uint8_t
+	{
 		EInAppPurchaseState__Unknown = 0,
 		EInAppPurchaseState__Success = 1,
 		EInAppPurchaseState__Failed = 2,
@@ -26,7 +28,8 @@ namespace Classes {
 
 
 	// Enum OnlineSubsystem.EMPMatchOutcome
-	enum class EMPMatchOutcome : uint8_t {
+	enum class EMPMatchOutcome : uint8_t
+	{
 		EMPMatchOutcome__None = 0,
 		EMPMatchOutcome__Quit = 1,
 		EMPMatchOutcome__Won = 2,
@@ -48,21 +51,24 @@ namespace Classes {
 
 	// ScriptStruct OnlineSubsystem.NamedInterface
 	// 0x0010
-	struct FNamedInterface {
+	struct FNamedInterface
+	{
 		struct FName                                       InterfaceName;                                            // 0x0000(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class UObject*                                     InterfaceObject;                                          // 0x0008(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 	};
 
 	// ScriptStruct OnlineSubsystem.NamedInterfaceDef
 	// 0x0018
-	struct FNamedInterfaceDef {
+	struct FNamedInterfaceDef
+	{
 		struct FName                                       InterfaceName;                                            // 0x0000(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		struct FString                                     InterfaceClassName;                                       // 0x0008(0x0010) (CPF_ZeroConstructor)
 	};
 
 	// ScriptStruct OnlineSubsystem.InAppPurchaseProductInfo
 	// 0x00A8
-	struct FInAppPurchaseProductInfo {
+	struct FInAppPurchaseProductInfo
+	{
 		struct FString                                     Identifier;                                               // 0x0000(0x0010) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor)
 		struct FString                                     TransactionIdentifier;                                    // 0x0010(0x0010) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor)
 		struct FString                                     DisplayName;                                              // 0x0020(0x0010) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor)
@@ -79,7 +85,8 @@ namespace Classes {
 
 	// ScriptStruct OnlineSubsystem.InAppPurchaseRestoreInfo
 	// 0x0030
-	struct FInAppPurchaseRestoreInfo {
+	struct FInAppPurchaseRestoreInfo
+	{
 		struct FString                                     Identifier;                                               // 0x0000(0x0010) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor)
 		struct FString                                     ReceiptData;                                              // 0x0010(0x0010) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor)
 		struct FString                                     TransactionIdentifier;                                    // 0x0020(0x0010) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor)
@@ -87,7 +94,8 @@ namespace Classes {
 
 	// ScriptStruct OnlineSubsystem.InAppPurchaseProductRequest
 	// 0x0018
-	struct FInAppPurchaseProductRequest {
+	struct FInAppPurchaseProductRequest
+	{
 		struct FString                                     ProductIdentifier;                                        // 0x0000(0x0010) (CPF_BlueprintVisible, CPF_ZeroConstructor)
 		bool                                               bIsConsumable;                                            // 0x0010(0x0001) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0011(0x0007) MISSED OFFSET

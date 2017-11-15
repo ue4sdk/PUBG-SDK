@@ -6,13 +6,15 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Enums
 	//---------------------------------------------------------------------------
 
 	// Enum SubstanceCore.ESubstanceInputType
-	enum class ESubstanceInputType : uint8_t {
+	enum class ESubstanceInputType : uint8_t
+	{
 		SIT_Float = 0,
 		SIT_Float2 = 1,
 		SIT_Float3 = 2,
@@ -29,7 +31,8 @@ namespace Classes {
 
 
 	// Enum SubstanceCore.ESubstanceGenerationMode
-	enum class ESubstanceGenerationMode : uint8_t {
+	enum class ESubstanceGenerationMode : uint8_t
+	{
 		SGM_PlatformDefault = 0,
 		SGM_Baked = 1,
 		SGM_OnLoadSync = 2,
@@ -41,7 +44,8 @@ namespace Classes {
 
 
 	// Enum SubstanceCore.ESubstanceEngineType
-	enum class ESubstanceEngineType : uint8_t {
+	enum class ESubstanceEngineType : uint8_t
+	{
 		SET_CPU = 0,
 		SET_GPU = 1,
 		SET_MAX = 2
@@ -49,7 +53,8 @@ namespace Classes {
 
 
 	// Enum SubstanceCore.ESubstanceTextureSize
-	enum class ESubstanceTextureSize : uint8_t {
+	enum class ESubstanceTextureSize : uint8_t
+	{
 		ERL = 0,
 		ERL01 = 1,
 		ERL02 = 2,
@@ -69,7 +74,8 @@ namespace Classes {
 
 	// ScriptStruct SubstanceCore.SubstanceInputDesc
 	// 0x0018
-	struct FSubstanceInputDesc {
+	struct FSubstanceInputDesc
+	{
 		struct FString                                     Name;                                                     // 0x0000(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst)
 		TEnumAsByte<ESubstanceInputType>                   Type;                                                     // 0x0010(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0011(0x0007) MISSED OFFSET
@@ -77,7 +83,8 @@ namespace Classes {
 
 	// ScriptStruct SubstanceCore.SubstanceIntInputDesc
 	// 0x0030 (0x0048 - 0x0018)
-	struct FSubstanceIntInputDesc : public FSubstanceInputDesc {
+	struct FSubstanceIntInputDesc : public FSubstanceInputDesc
+	{
 		TArray<int>                                        Min;                                                      // 0x0018(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst)
 		TArray<int>                                        Max;                                                      // 0x0028(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst)
 		TArray<int>                                        Default;                                                  // 0x0038(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst)
@@ -85,14 +92,16 @@ namespace Classes {
 
 	// ScriptStruct SubstanceCore.SubstanceInstanceDesc
 	// 0x0020
-	struct FSubstanceInstanceDesc {
+	struct FSubstanceInstanceDesc
+	{
 		struct FString                                     Name;                                                     // 0x0000(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst)
 		TArray<struct FSubstanceInputDesc>                 Inputs;                                                   // 0x0010(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst)
 	};
 
 	// ScriptStruct SubstanceCore.SubstanceFloatInputDesc
 	// 0x0030 (0x0048 - 0x0018)
-	struct FSubstanceFloatInputDesc : public FSubstanceInputDesc {
+	struct FSubstanceFloatInputDesc : public FSubstanceInputDesc
+	{
 		TArray<float>                                      Min;                                                      // 0x0018(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst)
 		TArray<float>                                      Max;                                                      // 0x0028(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst)
 		TArray<float>                                      Default;                                                  // 0x0038(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst)

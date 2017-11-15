@@ -6,13 +6,15 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Enums
 	//---------------------------------------------------------------------------
 
 	// Enum Foliage.EFoliageScaling
-	enum class EFoliageScaling : uint8_t {
+	enum class EFoliageScaling : uint8_t
+	{
 		EFoliageScaling__Uniform = 0,
 		EFoliageScaling__Free = 1,
 		EFoliageScaling__LockXY = 2,
@@ -23,7 +25,8 @@ namespace Classes {
 
 
 	// Enum Foliage.EVertexColorMaskChannel
-	enum class EVertexColorMaskChannel : uint8_t {
+	enum class EVertexColorMaskChannel : uint8_t
+	{
 		EVertexColorMaskChannel__Red = 0,
 		EVertexColorMaskChannel__Green = 1,
 		EVertexColorMaskChannel__Blue = 2,
@@ -34,7 +37,8 @@ namespace Classes {
 
 
 	// Enum Foliage.FoliageVertexColorMask
-	enum class EFoliageVertexColorMask : uint8_t {
+	enum class EFoliageVertexColorMask : uint8_t
+	{
 		FOLIAGEVERTEXCOLORMASK_Disabled = 0,
 		FOLIAGEVERTEXCOLORMASK_Red = 1,
 		FOLIAGEVERTEXCOLORMASK_Green = 2,
@@ -45,7 +49,8 @@ namespace Classes {
 
 
 	// Enum Foliage.ESimulationQuery
-	enum class ESimulationQuery : uint8_t {
+	enum class ESimulationQuery : uint8_t
+	{
 		ESimulationQuery__CollisionOverlap = 0,
 		ESimulationQuery__ShadeOverlap = 1,
 		ESimulationQuery__AnyOverlap = 2,
@@ -54,7 +59,8 @@ namespace Classes {
 
 
 	// Enum Foliage.ESimulationOverlap
-	enum class ESimulationOverlap : uint8_t {
+	enum class ESimulationOverlap : uint8_t
+	{
 		ESimulationOverlap__CollisionOverlap = 0,
 		ESimulationOverlap__ShadeOverlap = 1,
 		ESimulationOverlap__None = 2,
@@ -69,7 +75,8 @@ namespace Classes {
 
 	// ScriptStruct Foliage.FoliageVertexColorChannelMask
 	// 0x000C
-	struct FFoliageVertexColorChannelMask {
+	struct FFoliageVertexColorChannelMask
+	{
 		unsigned char                                      UseMask : 1;                                              // 0x0000(0x0001) (CPF_Edit)
 		unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
 		float                                              MaskThreshold;                                            // 0x0004(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -79,7 +86,8 @@ namespace Classes {
 
 	// ScriptStruct Foliage.FoliageTypeObject
 	// 0x0020
-	struct FFoliageTypeObject {
+	struct FFoliageTypeObject
+	{
 		class UObject*                                     FoliageTypeObject;                                        // 0x0000(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class UFoliageType_InstancedStaticMesh*            TypeInstance;                                             // 0x0008(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 		bool                                               bIsAsset;                                                 // 0x0010(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -89,7 +97,8 @@ namespace Classes {
 
 	// ScriptStruct Foliage.ProceduralFoliageInstance
 	// 0x0060
-	struct FProceduralFoliageInstance {
+	struct FProceduralFoliageInstance
+	{
 		struct FVector                                     Location;                                                 // 0x0000(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
 		struct FQuat                                       Rotation;                                                 // 0x0010(0x0010) (CPF_IsPlainOldData)

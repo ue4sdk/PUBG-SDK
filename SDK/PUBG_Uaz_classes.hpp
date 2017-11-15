@@ -6,14 +6,16 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// BlueprintGeneratedClass Uaz.Uaz_C
 	// 0x0054 (0x08E0 - 0x088C)
-	class AUaz_C : public AVehicleBase_C {
+	class AUaz_C : public AVehicleBase_C
+	{
 	public:
 		unsigned char                                      UnknownData00[0x4];                                       // 0x088C(0x0004) MISSED OFFSET
 		class USphereComponent*                            Sphere4;                                                  // 0x0890(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -27,7 +29,8 @@ namespace Classes {
 		class USphereComponent*                            Sphere;                                                   // 0x08D0(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class UVehicleSeatInteractionComponent*            DriverSeat;                                               // 0x08D8(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xa28ff6b1);
 			return ptr;

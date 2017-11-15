@@ -6,14 +6,16 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// WidgetBlueprintGeneratedClass BlueZoneGpsWidget_Circle.BlueZoneGpsWidget_Circle_C
 	// 0x006C (0x02ED - 0x0281)
-	class UBlueZoneGpsWidget_Circle_C : public UBlueZoneGpsWidget_Base_C {
+	class UBlueZoneGpsWidget_Circle_C : public UBlueZoneGpsWidget_Base_C
+	{
 	public:
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0281(0x0007) MISSED OFFSET
 		struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0288(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_DuplicateTransient)
@@ -31,7 +33,8 @@ namespace Classes {
 		float                                              LastPlayzoneGauge;                                        // 0x02E8(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		bool                                               isSafezoneDirectionVanishing;                             // 0x02EC(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x3dec9c7);
 			return ptr;

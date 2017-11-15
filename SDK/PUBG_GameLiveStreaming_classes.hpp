@@ -6,17 +6,20 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// Class GameLiveStreaming.GameLiveStreamingFunctionLibrary
 	// 0x0000 (0x0028 - 0x0028)
-	class UGameLiveStreamingFunctionLibrary : public UBlueprintFunctionLibrary {
+	class UGameLiveStreamingFunctionLibrary : public UBlueprintFunctionLibrary
+	{
 	public:
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x6730bcc8);
 			return ptr;
@@ -34,12 +37,14 @@ namespace Classes {
 
 	// Class GameLiveStreaming.QueryLiveStreamsCallbackProxy
 	// 0x0020 (0x0048 - 0x0028)
-	class UQueryLiveStreamsCallbackProxy : public UOnlineBlueprintCallProxyBase {
+	class UQueryLiveStreamsCallbackProxy : public UOnlineBlueprintCallProxyBase
+	{
 	public:
 		struct FScriptMulticastDelegate                    OnQueriedLiveStreams;                                     // 0x0028(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 		unsigned char                                      UnknownData00[0x10];                                      // 0x0038(0x0010) MISSED OFFSET
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xb70cc03b);
 			return ptr;

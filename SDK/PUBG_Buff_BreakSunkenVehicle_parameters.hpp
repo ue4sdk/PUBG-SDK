@@ -8,26 +8,31 @@
 
 #include "../SDK.hpp"
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Parameters
 	//---------------------------------------------------------------------------
 
 	// Function Buff_BreakSunkenVehicle.Buff_BreakSunkenVehicle_C.UserConstructionScript
-	struct ABuff_BreakSunkenVehicle_C_UserConstructionScript_Params {
+	struct ABuff_BreakSunkenVehicle_C_UserConstructionScript_Params
+	{
 	};
 
 	// Function Buff_BreakSunkenVehicle.Buff_BreakSunkenVehicle_C.TickBuff
-	struct ABuff_BreakSunkenVehicle_C_TickBuff_Params {
+	struct ABuff_BreakSunkenVehicle_C_TickBuff_Params
+	{
 	};
 
 	// Function Buff_BreakSunkenVehicle.Buff_BreakSunkenVehicle_C.StopBuffBlueprint
-	struct ABuff_BreakSunkenVehicle_C_StopBuffBlueprint_Params {
+	struct ABuff_BreakSunkenVehicle_C_StopBuffBlueprint_Params
+	{
 		bool*                                              bCanceled;                                                // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	};
 
 	// Function Buff_BreakSunkenVehicle.Buff_BreakSunkenVehicle_C.ExecuteUbergraph_Buff_BreakSunkenVehicle
-	struct ABuff_BreakSunkenVehicle_C_ExecuteUbergraph_Buff_BreakSunkenVehicle_Params {
+	struct ABuff_BreakSunkenVehicle_C_ExecuteUbergraph_Buff_BreakSunkenVehicle_Params
+	{
 		int                                                EntryPoint;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	};
 

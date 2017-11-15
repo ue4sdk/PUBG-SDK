@@ -6,17 +6,20 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// WidgetBlueprintGeneratedClass InputHookingWidget.InputHookingWidget_C
 	// 0x0000 (0x0290 - 0x0290)
-	class UInputHookingWidget_C : public UBlockInputUserWidget {
+	class UInputHookingWidget_C : public UBlockInputUserWidget
+	{
 	public:
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x59b10aff);
 			return ptr;

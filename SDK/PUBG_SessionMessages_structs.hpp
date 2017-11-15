@@ -6,26 +6,30 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Script Structs
 	//---------------------------------------------------------------------------
 
 	// ScriptStruct SessionMessages.SessionServiceLogUnsubscribe
 	// 0x0001
-	struct FSessionServiceLogUnsubscribe {
+	struct FSessionServiceLogUnsubscribe
+	{
 		unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 	};
 
 	// ScriptStruct SessionMessages.SessionServiceLogSubscribe
 	// 0x0001
-	struct FSessionServiceLogSubscribe {
+	struct FSessionServiceLogSubscribe
+	{
 		unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 	};
 
 	// ScriptStruct SessionMessages.SessionServiceLog
 	// 0x0038
-	struct FSessionServiceLog {
+	struct FSessionServiceLog
+	{
 		struct FName                                       Category;                                                 // 0x0000(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		struct FString                                     Data;                                                     // 0x0008(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 		struct FGuid                                       InstanceId;                                               // 0x0018(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -36,7 +40,8 @@ namespace Classes {
 
 	// ScriptStruct SessionMessages.SessionServicePong
 	// 0x0098
-	struct FSessionServicePong {
+	struct FSessionServicePong
+	{
 		bool                                               Authorized;                                               // 0x0000(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
 		struct FString                                     BuildDate;                                                // 0x0008(0x0010) (CPF_Edit, CPF_ZeroConstructor)
@@ -55,7 +60,8 @@ namespace Classes {
 
 	// ScriptStruct SessionMessages.SessionServicePing
 	// 0x0010
-	struct FSessionServicePing {
+	struct FSessionServicePing
+	{
 		struct FString                                     UserName;                                                 // 0x0000(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 	};
 

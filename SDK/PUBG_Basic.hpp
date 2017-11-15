@@ -6,15 +6,18 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	template<typename Fn>
-	inline Fn GetVFunction(const void *instance, std::size_t index) {
-		auto vtable = *reinterpret_cast<const void***>(const_cast<void*>(instance));
+	inline Fn GetVFunction(const void *instance, std::size_t index)
+	{
+		auto vtable = *reinterpret_cast<void***>(const_cast<void*>(instance));
 		return reinterpret_cast<Fn>(vtable[index]);
 	}
 
 	// Credits to namazso <3
-	static unsigned fnv_hash_runtime(const char* str) {
+	static unsigned fnv_hash_runtime(const char* str)
+	{
 		static constexpr auto k_fnv_prime = 16777619u;
 		static constexpr auto k_offset_basis = 2166136261u;
 
@@ -29,14 +32,16 @@ namespace Classes {
 
 	class UObject;
 
-	class FUObjectItem {
+	class FUObjectItem
+	{
 	public:
 		UObject* Object;
 		int32_t Flags;
 		int32_t SerialNumber;
 		void* unk;
 
-		enum class EInternalObjectFlags : int32_t {
+		enum class EInternalObjectFlags : int32_t
+		{
 			None = 0,
 			Native = 1 << 25,
 			Async = 1 << 26,
@@ -47,26 +52,33 @@ namespace Classes {
 			NoStrongReference = 1 << 31
 		};
 
-		inline bool IsUnreachable() const {
+		inline bool IsUnreachable() const
+		{
 			return !!(Flags & static_cast<std::underlying_type_t<EInternalObjectFlags>>(EInternalObjectFlags::Unreachable));
 		}
-		inline bool IsPendingKill() const {
+		inline bool IsPendingKill() const
+		{
 			return !!(Flags & static_cast<std::underlying_type_t<EInternalObjectFlags>>(EInternalObjectFlags::PendingKill));
 		}
 	};
 
-	class TUObjectArray {
+	class TUObjectArray
+	{
 	public:
-		inline int32_t Num() const {
+		inline int32_t Num() const
+		{
 			return NumElements;
 		}
 
-		inline UObject* GetByIndex(int32_t index) const {
+		inline UObject* GetByIndex(int32_t index) const
+		{
 			return Objects[index].Object;
 		}
 
-		inline FUObjectItem* GetItemByIndex(int32_t index) const {
-			if (index < NumElements) {
+		inline FUObjectItem* GetItemByIndex(int32_t index) const
+		{
+			if (index < NumElements)
+			{
 				return &Objects[index];
 			}
 			return nullptr;
@@ -78,7 +90,8 @@ namespace Classes {
 		int32_t NumElements;
 	};
 
-	class FUObjectArray {
+	class FUObjectArray
+	{
 	public:
 		int32_t ObjFirstGCIndex;
 		int32_t ObjLastNonGCIndex;
@@ -88,28 +101,34 @@ namespace Classes {
 	};
 
 	template<class T>
-	struct TArray {
+	struct TArray
+	{
 		friend struct FString;
 
 	public:
-		inline TArray() {
+		inline TArray()
+		{
 			Data = nullptr;
 			Count = Max = 0;
 		};
 
-		inline int Num() const {
+		inline int Num() const
+		{
 			return Count;
 		};
 
-		inline T& operator[](int i) {
+		inline T& operator[](int i)
+		{
 			return Data[i];
 		};
 
-		inline const T& operator[](int i) const {
+		inline const T& operator[](int i) const
+		{
 			return Data[i];
 		};
 
-		inline bool IsValidIndex(int i) const {
+		inline bool IsValidIndex(int i) const
+		{
 			return i < Num();
 		}
 
@@ -119,7 +138,8 @@ namespace Classes {
 		int32_t Max;
 	};
 
-	class FNameEntry {
+	class FNameEntry
+	{
 	public:
 		static const auto NAME_WIDE_MASK = 0x1;
 		static const auto NAME_INDEX_SHIFT = 1;
@@ -127,52 +147,63 @@ namespace Classes {
 		int32_t Index;
 		char UnknownData00[0x04];
 		FNameEntry* HashNext;
-		union {
+		union
+		{
 			char AnsiName[1024];
 			wchar_t WideName[1024];
 		};
 
-		inline const int32_t GetIndex() const {
+		inline const int32_t GetIndex() const
+		{
 			return Index >> NAME_INDEX_SHIFT;
 		}
 
-		inline bool IsWide() const {
+		inline bool IsWide() const
+		{
 			return Index & NAME_WIDE_MASK;
 		}
 
-		inline const char* GetAnsiName() const {
+		inline const char* GetAnsiName() const
+		{
 			return AnsiName;
 		}
 
-		inline const wchar_t* GetWideName() const {
+		inline const wchar_t* GetWideName() const
+		{
 			return WideName;
 		}
 	};
 
 	template<typename ElementType, int32_t MaxTotalElements, int32_t ElementsPerChunk>
-	class TStaticIndirectArrayThreadSafeRead {
+	class TStaticIndirectArrayThreadSafeRead
+	{
 	public:
-		inline size_t Num() const {
+		inline size_t Num() const
+		{
 			return NumElements;
 		}
 
-		inline bool IsValidIndex(int32_t index) const {
+		inline bool IsValidIndex(int32_t index) const
+		{
 			return index < Num() && index >= 0;
 		}
 
-		inline ElementType const* const& operator[](int32_t index) const {
+		inline ElementType const* const& operator[](int32_t index) const
+		{
 			return *GetItemPtr(index);
 		}
 
 	private:
-		inline ElementType const* const* GetItemPtr(int32_t Index) const {
+		inline ElementType const* const* GetItemPtr(int32_t Index) const
+		{
 			int32_t ChunkIndex = Index / ElementsPerChunk;
 			int32_t WithinChunkIndex = Index % ElementsPerChunk;
 			ElementType** Chunk = Chunks[ChunkIndex];
 			return Chunk + WithinChunkIndex;
 		}
 
-		enum {
+		enum
+		{
 			ChunkTableSize = (MaxTotalElements + ElementsPerChunk - 1) / ElementsPerChunk
 		};
 
@@ -183,9 +214,12 @@ namespace Classes {
 
 	using TNameEntryArray = TStaticIndirectArrayThreadSafeRead<FNameEntry, 2 * 1024 * 1024, 16384>;
 
-	struct FName {
-		union {
-			struct {
+	struct FName
+	{
+		union
+		{
+			struct
+			{
 				int32_t ComparisonIndex;
 				int32_t Number;
 			};
@@ -196,30 +230,38 @@ namespace Classes {
 
 		inline FName()
 			: ComparisonIndex(0),
-			Number(0) {
+			Number(0)
+		{
 		};
 
 		inline FName(int32_t i)
 			: ComparisonIndex(i),
-			Number(0) {
+			Number(0)
+		{
 		};
 
 		FName(const char* nameToFind)
 			: ComparisonIndex(0),
-			Number(0) {
+			Number(0)
+		{
 			static std::set<int> cache;
 
-			for (auto i : cache) {
-				if (!std::strcmp(GetGlobalNames()[i]->GetAnsiName(), nameToFind)) {
+			for (auto i : cache)
+			{
+				if (!std::strcmp(GetGlobalNames()[i]->GetAnsiName(), nameToFind))
+				{
 					ComparisonIndex = i;
 
 					return;
 				}
 			}
 
-			for (auto i = 0; i < GetGlobalNames().Num(); ++i) {
-				if (GetGlobalNames()[i] != nullptr) {
-					if (!std::strcmp(GetGlobalNames()[i]->GetAnsiName(), nameToFind)) {
+			for (auto i = 0; i < GetGlobalNames().Num(); ++i)
+			{
+				if (GetGlobalNames()[i] != nullptr)
+				{
+					if (!std::strcmp(GetGlobalNames()[i]->GetAnsiName(), nameToFind))
+					{
 						cache.insert(i);
 
 						ComparisonIndex = i;
@@ -231,40 +273,50 @@ namespace Classes {
 		};
 
 		static TNameEntryArray *GNames;
-		static inline TNameEntryArray& GetGlobalNames() {
+		static inline TNameEntryArray& GetGlobalNames()
+		{
 			return *GNames;
 		};
 
-		inline const char* GetName() const {
+		inline const char* GetName() const
+		{
 			return GetGlobalNames()[ComparisonIndex]->GetAnsiName();
 		};
 
-		inline bool operator==(const FName &other) const {
+		inline bool operator==(const FName &other) const
+		{
 			return ComparisonIndex == other.ComparisonIndex;
 		};
 	};
 
-	struct FString : private TArray<wchar_t> {
-		inline FString() {
+	struct FString : private TArray<wchar_t>
+	{
+		inline FString()
+		{
 		};
 
-		FString(const wchar_t* other) {
+		FString(const wchar_t* other)
+		{
 			Max = Count = *other ? (int32_t)std::wcslen(other) + 1 : 0;
 
-			if (Count) {
+			if (Count)
+			{
 				Data = const_cast<wchar_t*>(other);
 			}
 		};
 
-		inline bool IsValid() const {
+		inline bool IsValid() const
+		{
 			return Data != nullptr;
 		}
 
-		inline const wchar_t* c_str() const {
+		inline const wchar_t* c_str() const
+		{
 			return Data;
 		}
 
-		std::string ToString() const {
+		std::string ToString() const
+		{
 			auto length = std::wcslen(Data);
 
 			std::string str(length, '\0');
@@ -276,28 +328,35 @@ namespace Classes {
 	};
 
 	template<class TEnum>
-	class TEnumAsByte {
+	class TEnumAsByte
+	{
 	public:
-		inline TEnumAsByte() {
+		inline TEnumAsByte()
+		{
 		}
 
 		inline TEnumAsByte(TEnum _value)
-			: value(static_cast<uint8_t>(_value)) {
+			: value(static_cast<uint8_t>(_value))
+		{
 		}
 
 		explicit inline TEnumAsByte(int32_t _value)
-			: value(static_cast<uint8_t>(_value)) {
+			: value(static_cast<uint8_t>(_value))
+		{
 		}
 
 		explicit inline TEnumAsByte(uint8_t _value)
-			: value(_value) {
+			: value(_value)
+		{
 		}
 
-		inline operator TEnum() const {
+		inline operator TEnum() const
+		{
 			return (TEnum)value;
 		}
 
-		inline TEnum GetValue() const {
+		inline TEnum GetValue() const
+		{
 			return (TEnum)value;
 		}
 
@@ -305,42 +364,51 @@ namespace Classes {
 		uint8_t value;
 	};
 
-	class FScriptInterface {
+	class FScriptInterface
+	{
 	private:
 		UObject* ObjectPointer;
 		void* InterfacePointer;
 
 	public:
-		inline UObject* GetObject() const {
+		inline UObject* GetObject() const
+		{
 			return ObjectPointer;
 		}
 
-		inline UObject*& GetObjectRef() {
+		inline UObject*& GetObjectRef()
+		{
 			return ObjectPointer;
 		}
 
-		inline void* GetInterface() const {
+		inline void* GetInterface() const
+		{
 			return ObjectPointer != nullptr ? InterfacePointer : nullptr;
 		}
 	};
 
 	template<class InterfaceType>
-	class TScriptInterface : public FScriptInterface {
+	class TScriptInterface : public FScriptInterface
+	{
 	public:
-		inline InterfaceType* operator->() const {
+		inline InterfaceType* operator->() const
+		{
 			return (InterfaceType*)GetInterface();
 		}
 
-		inline InterfaceType& operator*() const {
+		inline InterfaceType& operator*() const
+		{
 			return *((InterfaceType*)GetInterface());
 		}
 
-		inline operator bool() const {
+		inline operator bool() const
+		{
 			return GetInterface() != nullptr;
 		}
 	};
 
-	class FTextData {
+	class FTextData
+	{
 	public:
 		char pad_0x0000[0x28];  //0x0000
 		wchar_t* Name;          //0x0028 
@@ -348,12 +416,15 @@ namespace Classes {
 
 	};
 
-	struct FText {
+	struct FText
+	{
 		FTextData* Data;
 		char UnknownData[0x10];
 
-		wchar_t* Get() const {
-			if (Data) {
+		wchar_t* Get() const
+		{
+			if (Data)
+			{
 				return Data->Name;
 			}
 
@@ -361,22 +432,27 @@ namespace Classes {
 		}
 	};
 
-	struct FScriptDelegate {
+	struct FScriptDelegate
+	{
 		char UnknownData[16];
 	};
 
-	struct FScriptMulticastDelegate {
+	struct FScriptMulticastDelegate
+	{
 		char UnknownData[16];
 	};
 
 	template<typename Key, typename Value>
-	class TMap {
+	class TMap
+	{
 		char UnknownData[0x50];
 	};
 
-	struct FWeakObjectPtr {
+	struct FWeakObjectPtr
+	{
 	public:
-		inline bool SerialNumbersMatch(FUObjectItem* ObjectItem) const {
+		inline bool SerialNumbersMatch(FUObjectItem* ObjectItem) const
+		{
 			return ObjectItem->SerialNumber == ObjectSerialNumber;
 		}
 
@@ -389,77 +465,94 @@ namespace Classes {
 	};
 
 	template<class T, class TWeakObjectPtrBase = FWeakObjectPtr>
-	struct TWeakObjectPtr : private TWeakObjectPtrBase {
+	struct TWeakObjectPtr : private TWeakObjectPtrBase
+	{
 	public:
-		inline T* Get() const {
+		inline T* Get() const
+		{
 			return (T*)TWeakObjectPtrBase::Get();
 		}
 
-		inline T& operator*() const {
+		inline T& operator*() const
+		{
 			return *Get();
 		}
 
-		inline T* operator->() const {
+		inline T* operator->() const
+		{
 			return Get();
 		}
 
-		inline bool IsValid() const {
+		inline bool IsValid() const
+		{
 			return TWeakObjectPtrBase::IsValid();
 		}
 	};
 
 	template<class T, class TBASE>
-	class TAutoPointer : public TBASE {
+	class TAutoPointer : public TBASE
+	{
 	public:
-		inline operator T*() const {
+		inline operator T*() const
+		{
 			return TBASE::Get();
 		}
 
-		inline operator const T*() const {
+		inline operator const T*() const
+		{
 			return (const T*)TBASE::Get();
 		}
 
-		explicit inline operator bool() const {
+		explicit inline operator bool() const
+		{
 			return TBASE::Get() != nullptr;
 		}
 	};
 
 	template<class T>
-	class TAutoWeakObjectPtr : public TAutoPointer<T, TWeakObjectPtr<T>> {
+	class TAutoWeakObjectPtr : public TAutoPointer<T, TWeakObjectPtr<T>>
+	{
 	public:
 	};
 
 	template<typename TObjectID>
-	class TPersistentObjectPtr {
+	class TPersistentObjectPtr
+	{
 	public:
 		FWeakObjectPtr WeakPtr;
 		int64_t TagAtLastTest;
 		TObjectID ObjectID;
 	};
 
-	struct FStringAssetReference_ {
+	struct FStringAssetReference_
+	{
 		char UnknownData[0x10];
 	};
 
-	class FAssetPtr : public TPersistentObjectPtr<FStringAssetReference_> {
+	class FAssetPtr : public TPersistentObjectPtr<FStringAssetReference_>
+	{
 
 	};
 
 	template<typename ObjectType>
-	class TAssetPtr : FAssetPtr {
+	class TAssetPtr : FAssetPtr
+	{
 
 	};
 
-	struct FUniqueObjectGuid_ {
+	struct FUniqueObjectGuid_
+	{
 		char UnknownData[0x10];
 	};
 
-	class FLazyObjectPtr : public TPersistentObjectPtr<FUniqueObjectGuid_> {
+	class FLazyObjectPtr : public TPersistentObjectPtr<FUniqueObjectGuid_>
+	{
 
 	};
 
 	template<typename ObjectType>
-	class TLazyObjectPtr : FLazyObjectPtr {
+	class TLazyObjectPtr : FLazyObjectPtr
+	{
 
 	};
 }

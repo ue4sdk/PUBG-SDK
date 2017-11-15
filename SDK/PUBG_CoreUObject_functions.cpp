@@ -6,31 +6,38 @@
 
 #include "../SDK.hpp"
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Functions
 	//---------------------------------------------------------------------------
 
-	std::string UObject::GetName() const {
+	std::string UObject::GetName() const
+	{
 		std::string name(Name.GetName());
-		if (Name.Number > 0) {
+		if (Name.Number > 0)
+		{
 			name += '_' + std::to_string(Name.Number);
 		}
 
 		auto pos = name.rfind('/');
-		if (pos == std::string::npos) {
+		if (pos == std::string::npos)
+		{
 			return name;
 		}
 
 		return name.substr(pos + 1);
 	}
 
-	std::string UObject::GetFullName() const {
+	std::string UObject::GetFullName() const
+	{
 		std::string name;
 
-		if (Class != nullptr) {
+		if (Class != nullptr)
+		{
 			std::string temp;
-			for (auto p = Outer; p; p = p->Outer) {
+			for (auto p = Outer; p; p = p->Outer)
+			{
 				temp = p->GetName() + "." + temp;
 			}
 
@@ -43,9 +50,12 @@ namespace Classes {
 		return name;
 	}
 
-	bool UObject::IsA(UClass* cmp) const {
-		for (auto super = Class; super; super = static_cast<UClass*>(super->SuperField)) {
-			if (super == cmp) {
+	bool UObject::IsA(UClass* cmp) const
+	{
+		for (auto super = Class; super; super = static_cast<UClass*>(super->SuperField))
+		{
+			if (super == cmp)
+			{
 				return true;
 			}
 		}
@@ -58,7 +68,8 @@ namespace Classes {
 	// Parameters:
 	// int                            EntryPoint                     (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UObject::ExecuteUbergraph(int EntryPoint) {
+	void UObject::ExecuteUbergraph(int EntryPoint)
+	{
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x56df4fec);
 

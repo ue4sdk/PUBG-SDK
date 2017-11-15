@@ -6,14 +6,16 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// Class CoherentUIGTPlugin.CoherentUIGTWidget
 	// 0x0338 (0x0460 - 0x0128)
-	class UCoherentUIGTWidget : public UWidget {
+	class UCoherentUIGTWidget : public UWidget
+	{
 	public:
 		unsigned char                                      UnknownData00[0x18];                                      // 0x0128(0x0018) MISSED OFFSET
 		class AActor*                                      Owner;                                                    // 0x0140(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -47,7 +49,8 @@ namespace Classes {
 		bool                                               Transparent;                                              // 0x0454(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData04[0xB];                                       // 0x0455(0x000B) MISSED OFFSET
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xac05e136);
 			return ptr;
@@ -72,10 +75,12 @@ namespace Classes {
 
 	// Class CoherentUIGTPlugin.CoherentUIGTAssetReferencer
 	// 0x0000 (0x0028 - 0x0028)
-	class UCoherentUIGTAssetReferencer : public UObject {
+	class UCoherentUIGTAssetReferencer : public UObject
+	{
 	public:
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xc3493115);
 			return ptr;
@@ -86,11 +91,13 @@ namespace Classes {
 
 	// Class CoherentUIGTPlugin.CoherentUIGTJSEvent
 	// 0x0080 (0x00A8 - 0x0028)
-	class UCoherentUIGTJSEvent : public UObject {
+	class UCoherentUIGTJSEvent : public UObject
+	{
 	public:
 		unsigned char                                      UnknownData00[0x80];                                      // 0x0028(0x0080) MISSED OFFSET
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xdbe289c5);
 			return ptr;
@@ -110,10 +117,12 @@ namespace Classes {
 
 	// Class CoherentUIGTPlugin.CoherentUIGTBlueprintFunctionLibrary
 	// 0x0000 (0x0028 - 0x0028)
-	class UCoherentUIGTBlueprintFunctionLibrary : public UBlueprintFunctionLibrary {
+	class UCoherentUIGTBlueprintFunctionLibrary : public UBlueprintFunctionLibrary
+	{
 	public:
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x796b1a20);
 			return ptr;
@@ -136,12 +145,14 @@ namespace Classes {
 
 	// Class CoherentUIGTPlugin.CoherentUIGTJSPayload
 	// 0x0018 (0x0040 - 0x0028)
-	class UCoherentUIGTJSPayload : public UObject {
+	class UCoherentUIGTJSPayload : public UObject
+	{
 	public:
 		struct FString                                     EventName;                                                // 0x0028(0x0010) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor)
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0038(0x0008) MISSED OFFSET
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xcde32097);
 			return ptr;
@@ -158,10 +169,12 @@ namespace Classes {
 
 	// Class CoherentUIGTPlugin.CoherentUIGTEventHelpers
 	// 0x0000 (0x0028 - 0x0028)
-	class UCoherentUIGTEventHelpers : public UObject {
+	class UCoherentUIGTEventHelpers : public UObject
+	{
 	public:
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x2712c705);
 			return ptr;
@@ -172,7 +185,8 @@ namespace Classes {
 
 	// Class CoherentUIGTPlugin.CoherentUIGTSettings
 	// 0x0040 (0x0068 - 0x0028)
-	class UCoherentUIGTSettings : public UObject {
+	class UCoherentUIGTSettings : public UObject
+	{
 	public:
 		bool                                               EnableLiveReload;                                         // 0x0028(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x3];                                       // 0x0029(0x0003) MISSED OFFSET
@@ -193,7 +207,8 @@ namespace Classes {
 		TEnumAsByte<ECoherentUIGTMSAA>                     MSAA;                                                     // 0x0061(0x0001) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData02[0x6];                                       // 0x0062(0x0006) MISSED OFFSET
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x8d251021);
 			return ptr;

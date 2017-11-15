@@ -6,14 +6,16 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// AnimBlueprintGeneratedClass ABP_Motorbike_04_Sidecar.ABP_Motorbike_04_Sidecar_C
 	// 0x0FD4 (0x1854 - 0x0880)
-	class UABP_Motorbike_04_Sidecar_C : public UVehicleAnimInstance {
+	class UABP_Motorbike_04_Sidecar_C : public UVehicleAnimInstance
+	{
 	public:
 		struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0880(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_DuplicateTransient)
 		struct FAnimNode_ConvertComponentToLocalSpace      AnimGraphNode_ComponentToLocalSpace_2BA4401C41D527D1F4CA91ADBD401744;// 0x0888(0x0048)
@@ -44,7 +46,8 @@ namespace Classes {
 		struct FVector                                     LastVelocity;                                             // 0x183C(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		struct FVector                                     EF;                                                       // 0x1848(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x6552982);
 			return ptr;

@@ -6,13 +6,15 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Enums
 	//---------------------------------------------------------------------------
 
 	// Enum Paper2D.ESpritePivotMode
-	enum class ESpritePivotMode : uint8_t {
+	enum class ESpritePivotMode : uint8_t
+	{
 		ESpritePivotMode__Top_Left = 0,
 		ESpritePivotMode__Top_Center = 1,
 		ESpritePivotMode__Top_Right = 2,
@@ -28,7 +30,8 @@ namespace Classes {
 
 
 	// Enum Paper2D.ESpritePolygonMode
-	enum class ESpritePolygonMode : uint8_t {
+	enum class ESpritePolygonMode : uint8_t
+	{
 		ESpritePolygonMode__SourceBoundingBox = 0,
 		ESpritePolygonMode__TightBoundingBox = 1,
 		ESpritePolygonMode__ShrinkWrapped = 2,
@@ -39,7 +42,8 @@ namespace Classes {
 
 
 	// Enum Paper2D.ESpriteShapeType
-	enum class ESpriteShapeType : uint8_t {
+	enum class ESpriteShapeType : uint8_t
+	{
 		ESpriteShapeType__Box = 0,
 		ESpriteShapeType__Circle = 1,
 		ESpriteShapeType__Polygon = 2,
@@ -48,7 +52,8 @@ namespace Classes {
 
 
 	// Enum Paper2D.ESpriteCollisionMode
-	enum class ESpriteCollisionMode : uint8_t {
+	enum class ESpriteCollisionMode : uint8_t
+	{
 		ESpriteCollisionMode__None = 0,
 		ESpriteCollisionMode__Use2DPhysics = 1,
 		ESpriteCollisionMode__Use3DPhysics = 2,
@@ -57,7 +62,8 @@ namespace Classes {
 
 
 	// Enum Paper2D.EFlipbookCollisionMode
-	enum class EFlipbookCollisionMode : uint8_t {
+	enum class EFlipbookCollisionMode : uint8_t
+	{
 		EFlipbookCollisionMode__NoCollision = 0,
 		EFlipbookCollisionMode__FirstFrameCollision = 1,
 		EFlipbookCollisionMode__EachFrameCollision = 2,
@@ -66,7 +72,8 @@ namespace Classes {
 
 
 	// Enum Paper2D.EPaperSpriteAtlasPadding
-	enum class EPaperSpriteAtlasPadding : uint8_t {
+	enum class EPaperSpriteAtlasPadding : uint8_t
+	{
 		EPaperSpriteAtlasPadding__DilateBorder = 0,
 		EPaperSpriteAtlasPadding__PadWithZero = 1,
 		EPaperSpriteAtlasPadding__EPaperSpriteAtlasPadding_MAX = 2
@@ -74,7 +81,8 @@ namespace Classes {
 
 
 	// Enum Paper2D.ETileMapProjectionMode
-	enum class ETileMapProjectionMode : uint8_t {
+	enum class ETileMapProjectionMode : uint8_t
+	{
 		ETileMapProjectionMode__Orthogonal = 0,
 		ETileMapProjectionMode__IsometricDiamond = 1,
 		ETileMapProjectionMode__IsometricStaggered = 2,
@@ -90,7 +98,8 @@ namespace Classes {
 
 	// ScriptStruct Paper2D.PaperSpriteSocket
 	// 0x0040
-	struct FPaperSpriteSocket {
+	struct FPaperSpriteSocket
+	{
 		struct FTransform                                  LocalTransform;                                           // 0x0000(0x0030) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_IsPlainOldData)
 		struct FName                                       SocketName;                                               // 0x0030(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0038(0x0008) MISSED OFFSET
@@ -98,7 +107,8 @@ namespace Classes {
 
 	// ScriptStruct Paper2D.PaperFlipbookKeyFrame
 	// 0x0010
-	struct FPaperFlipbookKeyFrame {
+	struct FPaperFlipbookKeyFrame
+	{
 		class UPaperSprite*                                Sprite;                                                   // 0x0000(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		int                                                FrameRun;                                                 // 0x0008(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
@@ -106,7 +116,8 @@ namespace Classes {
 
 	// ScriptStruct Paper2D.SpriteInstanceData
 	// 0x0050
-	struct FSpriteInstanceData {
+	struct FSpriteInstanceData
+	{
 		struct FMatrix                                     Transform;                                                // 0x0000(0x0040) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class UPaperSprite*                                SourceSprite;                                             // 0x0040(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		struct FColor                                      VertexColor;                                              // 0x0048(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -115,7 +126,8 @@ namespace Classes {
 
 	// ScriptStruct Paper2D.PaperTerrainMaterialRule
 	// 0x0038
-	struct FPaperTerrainMaterialRule {
+	struct FPaperTerrainMaterialRule
+	{
 		class UPaperSprite*                                StartCap;                                                 // 0x0000(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		TArray<class UPaperSprite*>                        Body;                                                     // 0x0008(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 		class UPaperSprite*                                EndCap;                                                   // 0x0018(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -130,7 +142,8 @@ namespace Classes {
 
 	// ScriptStruct Paper2D.IntMargin
 	// 0x0010
-	struct FIntMargin {
+	struct FIntMargin
+	{
 		int                                                Left;                                                     // 0x0000(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		int                                                Top;                                                      // 0x0004(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		int                                                Right;                                                    // 0x0008(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -139,7 +152,8 @@ namespace Classes {
 
 	// ScriptStruct Paper2D.SpriteGeometryShape
 	// 0x0030
-	struct FSpriteGeometryShape {
+	struct FSpriteGeometryShape
+	{
 		TEnumAsByte<ESpriteShapeType>                      ShapeType;                                                // 0x0000(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
 		TArray<struct FVector2D>                           Vertices;                                                 // 0x0008(0x0010) (CPF_Edit, CPF_ZeroConstructor)
@@ -152,7 +166,8 @@ namespace Classes {
 
 	// ScriptStruct Paper2D.SpriteGeometryCollection
 	// 0x0030
-	struct FSpriteGeometryCollection {
+	struct FSpriteGeometryCollection
+	{
 		TArray<struct FSpriteGeometryShape>                Shapes;                                                   // 0x0000(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 		TEnumAsByte<ESpritePolygonMode>                    GeometryType;                                             // 0x0010(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x3];                                       // 0x0011(0x0003) MISSED OFFSET
@@ -168,7 +183,8 @@ namespace Classes {
 
 	// ScriptStruct Paper2D.PaperTileMetadata
 	// 0x0040
-	struct FPaperTileMetadata {
+	struct FPaperTileMetadata
+	{
 		struct FName                                       UserDataName;                                             // 0x0000(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		struct FSpriteGeometryCollection                   CollisionData;                                            // 0x0008(0x0030) (CPF_Edit)
 		unsigned char                                      TerrainMembership[0x4];                                   // 0x0038(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -177,7 +193,8 @@ namespace Classes {
 
 	// ScriptStruct Paper2D.PaperTileSetTerrain
 	// 0x0018
-	struct FPaperTileSetTerrain {
+	struct FPaperTileSetTerrain
+	{
 		struct FString                                     TerrainName;                                              // 0x0000(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 		int                                                CenterTileIndex;                                          // 0x0010(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
@@ -185,7 +202,8 @@ namespace Classes {
 
 	// ScriptStruct Paper2D.PaperTileInfo
 	// 0x0010
-	struct FPaperTileInfo {
+	struct FPaperTileInfo
+	{
 		class UPaperTileSet*                               TileSet;                                                  // 0x0000(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		int                                                PackedTileIndex;                                          // 0x0008(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
@@ -193,13 +211,15 @@ namespace Classes {
 
 	// ScriptStruct Paper2D.SpriteAssetInitParameters
 	// 0x0040
-	struct FSpriteAssetInitParameters {
+	struct FSpriteAssetInitParameters
+	{
 		unsigned char                                      UnknownData00[0x40];                                      // 0x0000(0x0040) MISSED OFFSET
 	};
 
 	// ScriptStruct Paper2D.PaperSpriteAtlasSlot
 	// 0x0038
-	struct FPaperSpriteAtlasSlot {
+	struct FPaperSpriteAtlasSlot
+	{
 		TAssetPtr<class UPaperSprite>                      SpriteRef;                                                // 0x0000(0x0020)
 		int                                                AtlasIndex;                                               // 0x0020(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		int                                                X;                                                        // 0x0024(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -211,7 +231,8 @@ namespace Classes {
 
 	// ScriptStruct Paper2D.SpriteDrawCallRecord
 	// 0x00D0
-	struct FSpriteDrawCallRecord {
+	struct FSpriteDrawCallRecord
+	{
 		struct FVector                                     Destination;                                              // 0x0000(0x000C) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
 		class UTexture*                                    BaseTexture;                                              // 0x0010(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)

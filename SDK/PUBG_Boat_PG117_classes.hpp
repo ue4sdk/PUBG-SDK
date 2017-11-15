@@ -6,14 +6,16 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// BlueprintGeneratedClass Boat_PG117.Boat_PG117_C
 	// 0x0064 (0x0578 - 0x0514)
-	class ABoat_PG117_C : public ABoatBase_C {
+	class ABoat_PG117_C : public ABoatBase_C
+	{
 	public:
 		unsigned char                                      UnknownData00[0x4];                                       // 0x0514(0x0004) MISSED OFFSET
 		struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0518(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_DuplicateTransient)
@@ -29,7 +31,8 @@ namespace Classes {
 		class UVehicleSeatInteractionComponent*            DriverSeat;                                               // 0x0568(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class UStaticMeshComponent*                        StaticMesh;                                               // 0x0570(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x72542c6f);
 			return ptr;

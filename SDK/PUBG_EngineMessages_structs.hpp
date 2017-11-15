@@ -6,48 +6,55 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Script Structs
 	//---------------------------------------------------------------------------
 
 	// ScriptStruct EngineMessages.EngineServiceNotification
 	// 0x0018
-	struct FEngineServiceNotification {
+	struct FEngineServiceNotification
+	{
 		struct FString                                     Text;                                                     // 0x0000(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 		double                                             TimeSeconds;                                              // 0x0010(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	};
 
 	// ScriptStruct EngineMessages.EngineServiceTerminate
 	// 0x0010
-	struct FEngineServiceTerminate {
+	struct FEngineServiceTerminate
+	{
 		struct FString                                     UserName;                                                 // 0x0000(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 	};
 
 	// ScriptStruct EngineMessages.EngineServiceExecuteCommand
 	// 0x0020
-	struct FEngineServiceExecuteCommand {
+	struct FEngineServiceExecuteCommand
+	{
 		struct FString                                     Command;                                                  // 0x0000(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 		struct FString                                     UserName;                                                 // 0x0010(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 	};
 
 	// ScriptStruct EngineMessages.EngineServiceAuthGrant
 	// 0x0020
-	struct FEngineServiceAuthGrant {
+	struct FEngineServiceAuthGrant
+	{
 		struct FString                                     UserName;                                                 // 0x0000(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 		struct FString                                     UserToGrant;                                              // 0x0010(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 	};
 
 	// ScriptStruct EngineMessages.EngineServiceAuthDeny
 	// 0x0020
-	struct FEngineServiceAuthDeny {
+	struct FEngineServiceAuthDeny
+	{
 		struct FString                                     UserName;                                                 // 0x0000(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 		struct FString                                     UserToDeny;                                               // 0x0010(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 	};
 
 	// ScriptStruct EngineMessages.EngineServicePong
 	// 0x0050
-	struct FEngineServicePong {
+	struct FEngineServicePong
+	{
 		struct FString                                     CurrentLevel;                                             // 0x0000(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 		int                                                EngineVersion;                                            // 0x0010(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		bool                                               HasBegunPlay;                                             // 0x0014(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -61,7 +68,8 @@ namespace Classes {
 
 	// ScriptStruct EngineMessages.EngineServicePing
 	// 0x0001
-	struct FEngineServicePing {
+	struct FEngineServicePing
+	{
 		unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 	};
 

@@ -6,19 +6,22 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// WidgetBlueprintGeneratedClass BP_VehicleFuelWidget.BP_VehicleFuelWidget_C
 	// 0x0008 (0x0340 - 0x0338)
-	class UBP_VehicleFuelWidget_C : public UVehicleFuelBaseWidget {
+	class UBP_VehicleFuelWidget_C : public UVehicleFuelBaseWidget
+	{
 	public:
 		float                                              GaugeWhidth;                                              // 0x0338(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		float                                              GaugePosition;                                            // 0x033C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xfa88d883);
 			return ptr;

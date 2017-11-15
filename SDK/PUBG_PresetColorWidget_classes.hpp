@@ -6,19 +6,22 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// WidgetBlueprintGeneratedClass PresetColorWidget.PresetColorWidget_C
 	// 0x0028 (0x0268 - 0x0240)
-	class UPresetColorWidget_C : public UUserWidget {
+	class UPresetColorWidget_C : public UUserWidget
+	{
 	public:
 		struct FText                                       DisplayName;                                              // 0x0240(0x0018) (CPF_Edit, CPF_BlueprintVisible)
 		struct FLinearColor                                Color;                                                    // 0x0258(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xc3e70395);
 			return ptr;

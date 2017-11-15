@@ -8,17 +8,20 @@
 
 #include "../SDK.hpp"
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Parameters
 	//---------------------------------------------------------------------------
 
 	// Function TslLobby.TslLobby_v2_C.ReceiveBeginPlay
-	struct ATslLobby_v2_C_ReceiveBeginPlay_Params {
+	struct ATslLobby_v2_C_ReceiveBeginPlay_Params
+	{
 	};
 
 	// Function TslLobby.TslLobby_v2_C.ExecuteUbergraph_TslLobby
-	struct ATslLobby_v2_C_ExecuteUbergraph_TslLobby_Params {
+	struct ATslLobby_v2_C_ExecuteUbergraph_TslLobby_Params
+	{
 		int                                                EntryPoint;                                               // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	};
 

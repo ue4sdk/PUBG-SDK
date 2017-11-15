@@ -395,7 +395,8 @@ namespace Classes {
 				vector.X = X / length;
 				vector.Y = Y / length;
 				vector.Z = Z / length;
-			} else
+			}
+			else
 				vector.X = vector.Y = 0.0f;
 			vector.Z = 1.0f;
 
@@ -533,7 +534,8 @@ namespace Classes {
 			if (length != 0) {
 				vector.X = X / length;
 				vector.Y = Y / length;
-			} else
+			}
+			else
 				vector.X = vector.Y = 0.0f;
 
 			return vector;

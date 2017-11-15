@@ -6,17 +6,20 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// WidgetBlueprintGeneratedClass VehicleSeatInfoWidget.VehicleSeatInfoWidget_C
 	// 0x0000 (0x02C0 - 0x02C0)
-	class UVehicleSeatInfoWidget_C : public UVehicleSeatInfoBaseWidget {
+	class UVehicleSeatInfoWidget_C : public UVehicleSeatInfoBaseWidget
+	{
 	public:
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x54419481);
 			return ptr;

@@ -8,18 +8,21 @@
 
 #include "../SDK.hpp"
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Parameters
 	//---------------------------------------------------------------------------
 
 	// Function InputHookingWidget.InputHookingWidget_C.OnInputAxis
-	struct UInputHookingWidget_C_OnInputAxis_Params {
+	struct UInputHookingWidget_C_OnInputAxis_Params
+	{
 		float                                              Scale;                                                    // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	};
 
 	// Function InputHookingWidget.InputHookingWidget_C.OnInputAction
-	struct UInputHookingWidget_C_OnInputAction_Params {
+	struct UInputHookingWidget_C_OnInputAction_Params
+	{
 	};
 
 }

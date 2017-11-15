@@ -6,17 +6,20 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// BlueprintGeneratedClass Uaz_A_01.Uaz_A_01_C
 	// 0x0000 (0x08E0 - 0x08E0)
-	class AUaz_A_01_C : public AUaz_C {
+	class AUaz_A_01_C : public AUaz_C
+	{
 	public:
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x1c3e035);
 			return ptr;

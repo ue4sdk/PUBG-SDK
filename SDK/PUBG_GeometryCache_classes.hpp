@@ -6,18 +6,21 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// Class GeometryCache.GeometryCacheTrack
 	// 0x0028 (0x0050 - 0x0028)
-	class UGeometryCacheTrack : public UObject {
+	class UGeometryCacheTrack : public UObject
+	{
 	public:
 		unsigned char                                      UnknownData00[0x28];                                      // 0x0028(0x0028) MISSED OFFSET
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xa918258);
 			return ptr;
@@ -28,14 +31,16 @@ namespace Classes {
 
 	// Class GeometryCache.GeometryCache
 	// 0x0038 (0x0060 - 0x0028)
-	class UGeometryCache : public UObject {
+	class UGeometryCache : public UObject
+	{
 	public:
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
 		TArray<class UMaterialInterface*>                  Materials;                                                // 0x0030(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst)
 		TArray<class UGeometryCacheTrack*>                 Tracks;                                                   // 0x0040(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst)
 		unsigned char                                      UnknownData01[0x10];                                      // 0x0050(0x0010) MISSED OFFSET
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x25a1fd43);
 			return ptr;
@@ -46,11 +51,13 @@ namespace Classes {
 
 	// Class GeometryCache.GeometryCacheActor
 	// 0x0008 (0x03A8 - 0x03A0)
-	class AGeometryCacheActor : public AActor {
+	class AGeometryCacheActor : public AActor
+	{
 	public:
 		class UGeometryCacheComponent*                     GeometryCacheComponent;                                   // 0x03A0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x8e1d83a);
 			return ptr;
@@ -63,7 +70,8 @@ namespace Classes {
 
 	// Class GeometryCache.GeometryCacheComponent
 	// 0x0080 (0x0800 - 0x0780)
-	class UGeometryCacheComponent : public UMeshComponent {
+	class UGeometryCacheComponent : public UMeshComponent
+	{
 	public:
 		class UGeometryCache*                              GeometryCache;                                            // 0x0780(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		bool                                               bRunning;                                                 // 0x0788(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -75,7 +83,8 @@ namespace Classes {
 		float                                              ElapsedTime;                                              // 0x0798(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData01[0x64];                                      // 0x079C(0x0064) MISSED OFFSET
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x806d3804);
 			return ptr;
@@ -100,12 +109,14 @@ namespace Classes {
 
 	// Class GeometryCache.GeometryCacheTrack_FlipbookAnimation
 	// 0x0028 (0x0078 - 0x0050)
-	class UGeometryCacheTrack_FlipbookAnimation : public UGeometryCacheTrack {
+	class UGeometryCacheTrack_FlipbookAnimation : public UGeometryCacheTrack
+	{
 	public:
 		uint32_t                                           NumMeshSamples;                                           // 0x0050(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x24];                                      // 0x0054(0x0024) MISSED OFFSET
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xf8bb7cf9);
 			return ptr;
@@ -118,11 +129,13 @@ namespace Classes {
 
 	// Class GeometryCache.GeometryCacheTrack_TransformAnimation
 	// 0x0050 (0x00A0 - 0x0050)
-	class UGeometryCacheTrack_TransformAnimation : public UGeometryCacheTrack {
+	class UGeometryCacheTrack_TransformAnimation : public UGeometryCacheTrack
+	{
 	public:
 		unsigned char                                      UnknownData00[0x50];                                      // 0x0050(0x0050) MISSED OFFSET
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x2609dca9);
 			return ptr;
@@ -135,11 +148,13 @@ namespace Classes {
 
 	// Class GeometryCache.GeometryCacheTrack_TransformGroupAnimation
 	// 0x0050 (0x00A0 - 0x0050)
-	class UGeometryCacheTrack_TransformGroupAnimation : public UGeometryCacheTrack {
+	class UGeometryCacheTrack_TransformGroupAnimation : public UGeometryCacheTrack
+	{
 	public:
 		unsigned char                                      UnknownData00[0x50];                                      // 0x0050(0x0050) MISSED OFFSET
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x5fa7e810);
 			return ptr;

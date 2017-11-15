@@ -6,14 +6,16 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// Class MovieScene.MovieScene
 	// 0x0080 (0x00A8 - 0x0028)
-	class UMovieScene : public UObject {
+	class UMovieScene : public UObject
+	{
 	public:
 		TArray<struct FMovieSceneSpawnable>                Spawnables;                                               // 0x0028(0x0010) (CPF_ZeroConstructor)
 		TArray<struct FMovieScenePossessable>              Possessables;                                             // 0x0038(0x0010) (CPF_ZeroConstructor)
@@ -30,7 +32,8 @@ namespace Classes {
 		float                                              StartTime;                                                // 0x00A0(0x0004) (CPF_ZeroConstructor, CPF_Deprecated, CPF_IsPlainOldData)
 		float                                              EndTime;                                                  // 0x00A4(0x0004) (CPF_ZeroConstructor, CPF_Deprecated, CPF_IsPlainOldData)
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xad0d0963);
 			return ptr;
@@ -41,7 +44,8 @@ namespace Classes {
 
 	// Class MovieScene.MovieSceneFolder
 	// 0x0048 (0x0070 - 0x0028)
-	class UMovieSceneFolder : public UObject {
+	class UMovieSceneFolder : public UObject
+	{
 	public:
 		struct FName                                       FolderName;                                               // 0x0028(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		TArray<class UMovieSceneFolder*>                   ChildFolders;                                             // 0x0030(0x0010) (CPF_ZeroConstructor)
@@ -49,7 +53,8 @@ namespace Classes {
 		TArray<struct FString>                             ChildObjectBindingStrings;                                // 0x0050(0x0010) (CPF_ZeroConstructor)
 		unsigned char                                      UnknownData00[0x10];                                      // 0x0060(0x0010) MISSED OFFSET
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x18373ba3);
 			return ptr;
@@ -60,7 +65,8 @@ namespace Classes {
 
 	// Class MovieScene.MovieSceneSection
 	// 0x0018 (0x0040 - 0x0028)
-	class UMovieSceneSection : public UObject {
+	class UMovieSceneSection : public UObject
+	{
 	public:
 		float                                              StartTime;                                                // 0x0028(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		float                                              EndTime;                                                  // 0x002C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -71,7 +77,8 @@ namespace Classes {
 		unsigned char                                      bIsInfinite : 1;                                          // 0x0038(0x0001) (CPF_Edit)
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0039(0x0007) MISSED OFFSET
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xccefd5d0);
 			return ptr;
@@ -82,10 +89,12 @@ namespace Classes {
 
 	// Class MovieScene.MovieSceneSequence
 	// 0x0000 (0x0028 - 0x0028)
-	class UMovieSceneSequence : public UObject {
+	class UMovieSceneSequence : public UObject
+	{
 	public:
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xdca4ab94);
 			return ptr;
@@ -96,10 +105,12 @@ namespace Classes {
 
 	// Class MovieScene.MovieSceneTrack
 	// 0x0000 (0x0028 - 0x0028)
-	class UMovieSceneTrack : public UObject {
+	class UMovieSceneTrack : public UObject
+	{
 	public:
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x72a9e938);
 			return ptr;
@@ -110,10 +121,12 @@ namespace Classes {
 
 	// Class MovieScene.MovieSceneNameableTrack
 	// 0x0000 (0x0028 - 0x0028)
-	class UMovieSceneNameableTrack : public UMovieSceneTrack {
+	class UMovieSceneNameableTrack : public UMovieSceneTrack
+	{
 	public:
 
-		static UClass* StaticClass() {
+		static UClass* StaticClass()
+		{
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x1adf3ae7);
 			return ptr;

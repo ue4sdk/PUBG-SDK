@@ -6,14 +6,16 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes {
+namespace Classes
+{
 	//---------------------------------------------------------------------------
 	//Script Structs
 	//---------------------------------------------------------------------------
 
 	// ScriptStruct UdpMessaging.UdpMockMessage
 	// 0x0010
-	struct FUdpMockMessage {
+	struct FUdpMockMessage
+	{
 		TArray<unsigned char>                              Data;                                                     // 0x0000(0x0010) (CPF_ZeroConstructor)
 	};
 
