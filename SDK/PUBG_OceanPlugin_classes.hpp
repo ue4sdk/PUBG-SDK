@@ -6,16 +6,14 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes
-{
+namespace Classes {
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// Class OceanPlugin.BuoyancyForceComponent
 	// 0x00A0 (0x03A0 - 0x0300)
-	class UBuoyancyForceComponent : public USceneComponent
-	{
+	class UBuoyancyForceComponent : public USceneComponent {
 	public:
 		class AOceanManager*                               OceanManager;                                             // 0x0300(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		float                                              MeshDensity;                                              // 0x0308(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -46,8 +44,7 @@ namespace Classes
 		TEnumAsByte<ETickingGroup>                         TickGroup;                                                // 0x0388(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData04[0x17];                                      // 0x0389(0x0017) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x85888168);
 			return ptr;
@@ -58,8 +55,7 @@ namespace Classes
 
 	// Class OceanPlugin.OceanManager
 	// 0x0088 (0x0428 - 0x03A0)
-	class AOceanManager : public AActor
-	{
+	class AOceanManager : public AActor {
 	public:
 		bool                                               EnableGerstnerWaves;                                      // 0x03A0(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x3];                                       // 0x03A1(0x0003) MISSED OFFSET
@@ -80,8 +76,7 @@ namespace Classes
 		class UTexture2D*                                  HeightmapTexture;                                         // 0x03F8(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData03[0x28];                                      // 0x0400(0x0028) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xbc14f367);
 			return ptr;
@@ -96,8 +91,7 @@ namespace Classes
 
 	// Class OceanPlugin.BuoyancyComponent
 	// 0x0088 (0x01C8 - 0x0140)
-	class UBuoyancyComponent : public UMovementComponent
-	{
+	class UBuoyancyComponent : public UMovementComponent {
 	public:
 		class AOceanManager*                               OceanManager;                                             // 0x0140(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		float                                              MeshDensity;                                              // 0x0148(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -122,8 +116,7 @@ namespace Classes
 		float                                              WaveForceMultiplier;                                      // 0x01AC(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData03[0x18];                                      // 0x01B0(0x0018) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x89656e7f);
 			return ptr;
@@ -134,8 +127,7 @@ namespace Classes
 
 	// Class OceanPlugin.BuoyantDestructibleComponent
 	// 0x0050 (0x0A10 - 0x09C0)
-	class UBuoyantDestructibleComponent : public UDestructibleComponent
-	{
+	class UBuoyantDestructibleComponent : public UDestructibleComponent {
 	public:
 		unsigned char                                      UnknownData00[0x8];                                       // 0x09C0(0x0008) MISSED OFFSET
 		class AOceanManager*                               OceanManager;                                             // 0x09C8(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -156,8 +148,7 @@ namespace Classes
 		float                                              ChunkStabilizationThreshold;                              // 0x0A04(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData03[0x8];                                       // 0x0A08(0x0008) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xd0568395);
 			return ptr;
@@ -168,13 +159,11 @@ namespace Classes
 
 	// Class OceanPlugin.BuoyantDestructible
 	// 0x0008 (0x03A8 - 0x03A0)
-	class ABuoyantDestructible : public AActor
-	{
+	class ABuoyantDestructible : public AActor {
 	public:
 		class UBuoyantDestructibleComponent*               BuoyantDestructibleComponent;                             // 0x03A0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x7c40a4b8);
 			return ptr;
@@ -185,8 +174,7 @@ namespace Classes
 
 	// Class OceanPlugin.BuoyantMeshComponent
 	// 0x0060 (0x0870 - 0x0810)
-	class UBuoyantMeshComponent : public UStaticMeshComponent
-	{
+	class UBuoyantMeshComponent : public UStaticMeshComponent {
 	public:
 		bool                                               bVerticalForcesOnly;                                      // 0x0810(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		bool                                               bUseWaterPatch;                                           // 0x0811(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -211,8 +199,7 @@ namespace Classes
 		unsigned char                                      UnknownData04[0x28];                                      // 0x0840(0x0028) MISSED OFFSET
 		class UWaterHeightmapComponent*                    WaterHeightmap;                                           // 0x0868(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xe6f89efa);
 			return ptr;
@@ -223,13 +210,11 @@ namespace Classes
 
 	// Class OceanPlugin.CustomVehicleController
 	// 0x0008 (0x06D8 - 0x06D0)
-	class ACustomVehicleController : public APlayerController
-	{
+	class ACustomVehicleController : public APlayerController {
 	public:
 		class APawn*                                       PlayerPawn;                                               // 0x06D0(0x0008) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xc43163b7);
 			return ptr;
@@ -246,8 +231,7 @@ namespace Classes
 
 	// Class OceanPlugin.FishManager
 	// 0x0058 (0x03F8 - 0x03A0)
-	class AFishManager : public AActor
-	{
+	class AFishManager : public AActor {
 	public:
 		TArray<class UClass*>                              flockTypes;                                               // 0x03A0(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
 		TArray<float>                                      numInFlock;                                               // 0x03B0(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
@@ -260,8 +244,7 @@ namespace Classes
 		class UClass*                                      playerType;                                               // 0x03D0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData01[0x20];                                      // 0x03D8(0x0020) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xcf538e83);
 			return ptr;
@@ -272,8 +255,7 @@ namespace Classes
 
 	// Class OceanPlugin.FlockFish
 	// 0x0180 (0x0580 - 0x0400)
-	class AFlockFish : public APawn
-	{
+	class AFlockFish : public APawn {
 	public:
 		unsigned char                                      UnknownData00[0x10];                                      // 0x0400(0x0010) MISSED OFFSET
 		class USphereComponent*                            FishInteractionSphere;                                    // 0x0410(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
@@ -307,8 +289,7 @@ namespace Classes
 		bool                                               DebugMode;                                                // 0x04C0(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData03[0xBF];                                      // 0x04C1(0x00BF) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x94f68ff1);
 			return ptr;
@@ -322,8 +303,7 @@ namespace Classes
 
 	// Class OceanPlugin.InfiniteSystemComponent
 	// 0x0030 (0x0330 - 0x0300)
-	class UInfiniteSystemComponent : public USceneComponent
-	{
+	class UInfiniteSystemComponent : public USceneComponent {
 	public:
 		bool                                               UpdateInEditor;                                           // 0x0300(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		TEnumAsByte<EFollowMethod>                         FollowMethod;                                             // 0x0301(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -338,8 +318,7 @@ namespace Classes
 		float                                              ScaleMax;                                                 // 0x031C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData02[0x10];                                      // 0x0320(0x0010) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x63362c4);
 			return ptr;
@@ -350,8 +329,7 @@ namespace Classes
 
 	// Class OceanPlugin.TimeManager
 	// 0x00C8 (0x0468 - 0x03A0)
-	class ATimeManager : public AActor
-	{
+	class ATimeManager : public AActor {
 	public:
 		struct FTimeDate                                   CurrentLocalTime;                                         // 0x03A0(0x001C) (CPF_BlueprintVisible, CPF_BlueprintReadOnly)
 		float                                              Latitude;                                                 // 0x03BC(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -387,8 +365,7 @@ namespace Classes
 		float                                              PartF;                                                    // 0x042C(0x0004) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData01[0x38];                                      // 0x0430(0x0038) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xd91fe338);
 			return ptr;
@@ -413,8 +390,7 @@ namespace Classes
 
 	// Class OceanPlugin.WaterHeightmapComponent
 	// 0x0078 (0x0170 - 0x00F8)
-	class UWaterHeightmapComponent : public UActorComponent
-	{
+	class UWaterHeightmapComponent : public UActorComponent {
 	public:
 		float                                              DesiredCellSize;                                          // 0x00F8(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		bool                                               bOnlyCollidingComponents;                                 // 0x00FC(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -425,8 +401,7 @@ namespace Classes
 		unsigned char                                      UnknownData01[0x62];                                      // 0x0106(0x0062) MISSED OFFSET
 		class AOceanManager*                               OceanManager;                                             // 0x0168(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x1844b99f);
 			return ptr;

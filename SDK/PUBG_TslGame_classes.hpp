@@ -6,20 +6,17 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes
-{
+namespace Classes {
 	//---------------------------------------------------------------------------
 	//Classes
 	//---------------------------------------------------------------------------
 
 	// Class TslGame.TslPopupInterface
 	// 0x0000 (0x0028 - 0x0028)
-	class UTslPopupInterface : public UInterface
-	{
+	class UTslPopupInterface : public UInterface {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xbcea04b6);
 			return ptr;
@@ -32,13 +29,11 @@ namespace Classes
 
 	// Class TslGame.ActionInputEventHolder
 	// 0x0028 (0x0050 - 0x0028)
-	class UActionInputEventHolder : public UObject
-	{
+	class UActionInputEventHolder : public UObject {
 	public:
 		unsigned char                                      UnknownData00[0x28];                                      // 0x0028(0x0028) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xc2242ac8);
 			return ptr;
@@ -49,8 +44,7 @@ namespace Classes
 
 	// Class TslGame.TslBaseHUD
 	// 0x0088 (0x0510 - 0x0488)
-	class ATslBaseHUD : public AHUD
-	{
+	class ATslBaseHUD : public AHUD {
 	public:
 		class UClass*                                      MainUMGHudClass;                                          // 0x0488(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0490(0x0008) MISSED OFFSET
@@ -59,8 +53,7 @@ namespace Classes
 		TArray<struct FString>                             UseMouseWidgetStack;                                      // 0x04F8(0x0010) (CPF_ZeroConstructor, CPF_Transient)
 		class UUserWidget*                                 MainUMGHud;                                               // 0x0508(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x51605e21);
 			return ptr;
@@ -84,15 +77,13 @@ namespace Classes
 
 	// Class TslGame.AirborneEjectionArea
 	// 0x0010 (0x03B0 - 0x03A0)
-	class AAirborneEjectionArea : public AActor
-	{
+	class AAirborneEjectionArea : public AActor {
 	public:
 		class USphereComponent*                            SphereComponent;                                          // 0x03A0(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 		float                                              Radius;                                                   // 0x03A8(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnTemplate, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x4];                                       // 0x03AC(0x0004) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xf67e0bea);
 			return ptr;
@@ -103,8 +94,7 @@ namespace Classes
 
 	// Class TslGame.AnimDB
 	// 0x0148 (0x0170 - 0x0028)
-	class UAnimDB : public UDataAsset
-	{
+	class UAnimDB : public UDataAsset {
 	public:
 		struct FAnimInfo                                   Stand_Info;                                               // 0x0028(0x0068) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		struct FAnimInfo                                   Crouch_Info;                                              // 0x0090(0x0068) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
@@ -114,8 +104,7 @@ namespace Classes
 		float                                              BlendSpaceSpeed_Sprint;                                   // 0x0168(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x4];                                       // 0x016C(0x0004) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x5ac2fac1);
 			return ptr;
@@ -130,13 +119,11 @@ namespace Classes
 
 	// Class TslGame.AnimNotify_CharacterAnimationNotify
 	// 0x0008 (0x0040 - 0x0038)
-	class UAnimNotify_CharacterAnimationNotify : public UAnimNotify
-	{
+	class UAnimNotify_CharacterAnimationNotify : public UAnimNotify {
 	public:
 		struct FName                                       NotifyName;                                               // 0x0038(0x0008) (CPF_Edit, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x80fab4cd);
 			return ptr;
@@ -147,13 +134,11 @@ namespace Classes
 
 	// Class TslGame.AnimNotify_UnarmedAttack
 	// 0x0008 (0x0040 - 0x0038)
-	class UAnimNotify_UnarmedAttack : public UAnimNotify
-	{
+	class UAnimNotify_UnarmedAttack : public UAnimNotify {
 	public:
 		struct FName                                       NotifyName;                                               // 0x0038(0x0008) (CPF_Edit, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x859baba3);
 			return ptr;
@@ -164,13 +149,11 @@ namespace Classes
 
 	// Class TslGame.AnimNotify_WeaponAnimationNotify
 	// 0x0008 (0x0040 - 0x0038)
-	class UAnimNotify_WeaponAnimationNotify : public UAnimNotify
-	{
+	class UAnimNotify_WeaponAnimationNotify : public UAnimNotify {
 	public:
 		struct FName                                       NotifyName;                                               // 0x0038(0x0008) (CPF_Edit, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xf3b10964);
 			return ptr;
@@ -181,8 +164,7 @@ namespace Classes
 
 	// Class TslGame.AsyncStaticMeshComponent
 	// 0x0070 (0x0880 - 0x0810)
-	class UAsyncStaticMeshComponent : public UStaticMeshComponent
-	{
+	class UAsyncStaticMeshComponent : public UStaticMeshComponent {
 	public:
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0810(0x0008) MISSED OFFSET
 		TAssetPtr<class UStaticMesh>                       StaticMeshAsset;                                          // 0x0818(0x0020) (CPF_Edit, CPF_DisableEditOnInstance)
@@ -192,8 +174,7 @@ namespace Classes
 		TAssetPtr<class UStaticMesh>                       PendingStaticMeshAsset;                                   // 0x0850(0x0020) (CPF_Transient)
 		unsigned char                                      UnknownData02[0x10];                                      // 0x0870(0x0010) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xe1d8fd52);
 			return ptr;
@@ -209,13 +190,11 @@ namespace Classes
 
 	// Class TslGame.BTDecorator_HasLoSTo
 	// 0x0028 (0x0090 - 0x0068)
-	class UBTDecorator_HasLoSTo : public UBTDecorator
-	{
+	class UBTDecorator_HasLoSTo : public UBTDecorator {
 	public:
 		struct FBlackboardKeySelector                      EnemyKey;                                                 // 0x0068(0x0028) (CPF_Edit)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x547cb835);
 			return ptr;
@@ -226,12 +205,10 @@ namespace Classes
 
 	// Class TslGame.BTTask_FindPointNearEnemy
 	// 0x0000 (0x0098 - 0x0098)
-	class UBTTask_FindPointNearEnemy : public UBTTask_BlackboardBase
-	{
+	class UBTTask_FindPointNearEnemy : public UBTTask_BlackboardBase {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x97e5c76d);
 			return ptr;
@@ -242,8 +219,7 @@ namespace Classes
 
 	// Class TslGame.TslBuff
 	// 0x0060 (0x0400 - 0x03A0)
-	class ATslBuff : public AActor
-	{
+	class ATslBuff : public AActor {
 	public:
 		struct FName                                       OverlapId;                                                // 0x03A0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		TEnumAsByte<EBuffOverlapSolveMethod>               OverlapSolveMethod;                                       // 0x03A8(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
@@ -262,8 +238,7 @@ namespace Classes
 		class ATslServerParticle*                          AttachedServerPaticle;                                    // 0x03F0(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData04[0x8];                                       // 0x03F8(0x0008) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xa85da242);
 			return ptr;
@@ -281,13 +256,11 @@ namespace Classes
 
 	// Class TslGame.BuffComponet
 	// 0x0010 (0x0108 - 0x00F8)
-	class UBuffComponet : public UActorComponent
-	{
+	class UBuffComponet : public UActorComponent {
 	public:
 		TArray<class ATslBuff*>                            Buffs;                                                    // 0x00F8(0x0010) (CPF_ZeroConstructor)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x3b082262);
 			return ptr;
@@ -302,8 +275,7 @@ namespace Classes
 
 	// Class TslGame.CameraSettings
 	// 0x0070 (0x0098 - 0x0028)
-	class UCameraSettings : public UObject
-	{
+	class UCameraSettings : public UObject {
 	public:
 		float                                              CameraPitchMinStand;                                      // 0x0028(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 		float                                              CameraPitchMaxStand;                                      // 0x002C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
@@ -324,8 +296,7 @@ namespace Classes
 		TArray<struct FString>                             HideMaterialsOnScopeMode;                                 // 0x0078(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
 		TArray<struct FString>                             HideMaterialsOnHighScopeMode;                             // 0x0088(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xb0f350ae);
 			return ptr;
@@ -336,12 +307,10 @@ namespace Classes
 
 	// Class TslGame.CastableInterface
 	// 0x0000 (0x0028 - 0x0028)
-	class UCastableInterface : public UInterface
-	{
+	class UCastableInterface : public UInterface {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x9b028446);
 			return ptr;
@@ -356,15 +325,13 @@ namespace Classes
 
 	// Class TslGame.CastComponent
 	// 0x0028 (0x0120 - 0x00F8)
-	class UCastComponent : public UActorComponent
-	{
+	class UCastComponent : public UActorComponent {
 	public:
 		struct FScriptDelegate                             OnFinishCast;                                             // 0x00F8(0x0010) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_InstancedReference)
 		struct FScriptDelegate                             OnCancelCast;                                             // 0x0108(0x0010) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_InstancedReference)
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0118(0x0008) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x589836);
 			return ptr;
@@ -385,8 +352,7 @@ namespace Classes
 
 	// Class TslGame.CharacterBreathComponent
 	// 0x0098 (0x0190 - 0x00F8)
-	class UCharacterBreathComponent : public UActorComponent
-	{
+	class UCharacterBreathComponent : public UActorComponent {
 	public:
 		unsigned char                                      UnknownData00[0x10];                                      // 0x00F8(0x0010) MISSED OFFSET
 		float                                              Breath;                                                   // 0x0108(0x0004) (CPF_Edit, CPF_Net, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
@@ -404,8 +370,7 @@ namespace Classes
 		float                                              MinimumBreathStartSprinting;                              // 0x0168(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData02[0x24];                                      // 0x016C(0x0024) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xa14c0b74);
 			return ptr;
@@ -426,8 +391,7 @@ namespace Classes
 
 	// Class TslGame.CharacterStudio
 	// 0x0090 (0x0430 - 0x03A0)
-	class ACharacterStudio : public AActor
-	{
+	class ACharacterStudio : public AActor {
 	public:
 		class USpringArmComponent*                         SpringArmComponent;                                       // 0x03A0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_ZeroConstructor, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
 		class UCameraComponent*                            CameraComponent;                                          // 0x03A8(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_ZeroConstructor, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
@@ -445,8 +409,7 @@ namespace Classes
 		class UMaterialInstanceDynamic*                    SceneCaptureMaterial;                                     // 0x0420(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData02[0x8];                                       // 0x0428(0x0008) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xea068f87);
 			return ptr;
@@ -466,15 +429,13 @@ namespace Classes
 
 	// Class TslGame.CoherentCommonBinder
 	// 0x0078 (0x00A0 - 0x0028)
-	class UCoherentCommonBinder : public UObject
-	{
+	class UCoherentCommonBinder : public UObject {
 	public:
 		unsigned char                                      UnknownData00[0x60];                                      // 0x0028(0x0060) MISSED OFFSET
 		struct FString                                     DefaultLobbyUrl;                                          // 0x0088(0x0010) (CPF_ZeroConstructor, CPF_Config)
 		unsigned char                                      UnknownData01[0x8];                                       // 0x0098(0x0008) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xa1596455);
 			return ptr;
@@ -490,13 +451,11 @@ namespace Classes
 
 	// Class TslGame.CoherentWidgetBinder
 	// 0x0010 (0x00B0 - 0x00A0)
-	class UCoherentWidgetBinder : public UCoherentCommonBinder
-	{
+	class UCoherentWidgetBinder : public UCoherentCommonBinder {
 	public:
 		unsigned char                                      UnknownData00[0x10];                                      // 0x00A0(0x0010) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x65646626);
 			return ptr;
@@ -507,12 +466,10 @@ namespace Classes
 
 	// Class TslGame.LobbyCoherentWidgetBinder
 	// 0x0000 (0x00B0 - 0x00B0)
-	class ULobbyCoherentWidgetBinder : public UCoherentWidgetBinder
-	{
+	class ULobbyCoherentWidgetBinder : public UCoherentWidgetBinder {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x866fe52e);
 			return ptr;
@@ -523,12 +480,10 @@ namespace Classes
 
 	// Class TslGame.TslBasePlayerController
 	// 0x0000 (0x06D0 - 0x06D0)
-	class ATslBasePlayerController : public APlayerController
-	{
+	class ATslBasePlayerController : public APlayerController {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xf2b13279);
 			return ptr;
@@ -539,8 +494,7 @@ namespace Classes
 
 	// Class TslGame.TslPlayerController
 	// 0x0338 (0x0A08 - 0x06D0)
-	class ATslPlayerController : public ATslBasePlayerController
-	{
+	class ATslPlayerController : public ATslBasePlayerController {
 	public:
 		struct FScriptMulticastDelegate                    OnShowReplayTimeline;                                     // 0x06D0(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 		unsigned char                                      UnknownData00[0x28];                                      // 0x06E0(0x0028) MISSED OFFSET
@@ -577,8 +531,7 @@ namespace Classes
 		struct FPingPongSummary                            PingPongSummary;                                          // 0x09A0(0x000C) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Net, CPF_Transient)
 		unsigned char                                      UnknownData12[0x5C];                                      // 0x09AC(0x005C) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x65f0e266);
 			return ptr;
@@ -727,12 +680,10 @@ namespace Classes
 
 	// Class TslGame.ConnectionHandlerInterface
 	// 0x0000 (0x0028 - 0x0028)
-	class UConnectionHandlerInterface : public UInterface
-	{
+	class UConnectionHandlerInterface : public UInterface {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x5ca49bad);
 			return ptr;
@@ -743,16 +694,14 @@ namespace Classes
 
 	// Class TslGame.DeployedItem
 	// 0x0018 (0x03B8 - 0x03A0)
-	class ADeployedItem : public AActor
-	{
+	class ADeployedItem : public AActor {
 	public:
 		class UClass*                                      ItemType;                                                 // 0x03A0(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		int                                                StackCount;                                               // 0x03A8(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x4];                                       // 0x03AC(0x0004) MISSED OFFSET
 		class USceneComponent*                             SceneComponent;                                           // 0x03B0(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x1561fc03);
 			return ptr;
@@ -763,13 +712,11 @@ namespace Classes
 
 	// Class TslGame.SubActor
 	// 0x0008 (0x03A8 - 0x03A0)
-	class ASubActor : public AActor
-	{
+	class ASubActor : public AActor {
 	public:
 		class ATslCharacter*                               NetOwnerCharacter;                                        // 0x03A0(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x54d8f6f1);
 			return ptr;
@@ -780,12 +727,10 @@ namespace Classes
 
 	// Class TslGame.SlotInterface
 	// 0x0000 (0x0028 - 0x0028)
-	class USlotInterface : public UInterface
-	{
+	class USlotInterface : public UInterface {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x64fe685);
 			return ptr;
@@ -817,12 +762,10 @@ namespace Classes
 
 	// Class TslGame.SlotContainerInterface
 	// 0x0000 (0x0028 - 0x0028)
-	class USlotContainerInterface : public UInterface
-	{
+	class USlotContainerInterface : public UInterface {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x77798eee);
 			return ptr;
@@ -848,16 +791,14 @@ namespace Classes
 
 	// Class TslGame.ItemSlotContainer
 	// 0x0030 (0x03D8 - 0x03A8)
-	class AItemSlotContainer : public ASubActor
-	{
+	class AItemSlotContainer : public ASubActor {
 	public:
 		unsigned char                                      UnknownData00[0x8];                                       // 0x03A8(0x0008) MISSED OFFSET
 		struct FScriptDelegate                             OnCreateAndShowContextMenuWidget;                         // 0x03B0(0x0010) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_InstancedReference)
 		struct FScriptDelegate                             OnDestroyContextMenuWidget;                               // 0x03C0(0x0010) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_InstancedReference)
 		unsigned char                                      UnknownData01[0x8];                                       // 0x03D0(0x0008) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xb69f09f2);
 			return ptr;
@@ -868,12 +809,10 @@ namespace Classes
 
 	// Class TslGame.ItemExplorerInterface
 	// 0x0000 (0x0028 - 0x0028)
-	class UItemExplorerInterface : public UInterface
-	{
+	class UItemExplorerInterface : public UInterface {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x20cc8fd1);
 			return ptr;
@@ -887,16 +826,14 @@ namespace Classes
 
 	// Class TslGame.ItemExplorer
 	// 0x0030 (0x0408 - 0x03D8)
-	class AItemExplorer : public AItemSlotContainer
-	{
+	class AItemExplorer : public AItemSlotContainer {
 	public:
 		unsigned char                                      UnknownData00[0x8];                                       // 0x03D8(0x0008) MISSED OFFSET
 		struct FScriptDelegate                             OnUpdateItemList;                                         // 0x03E0(0x0010) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_InstancedReference)
 		struct FScriptDelegate                             OnClearItemList;                                          // 0x03F0(0x0010) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_InstancedReference)
 		unsigned char                                      UnknownData01[0x8];                                       // 0x0400(0x0008) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xf275a188);
 			return ptr;
@@ -907,12 +844,10 @@ namespace Classes
 
 	// Class TslGame.ExplorableItemInterface
 	// 0x0000 (0x0028 - 0x0028)
-	class UExplorableItemInterface : public UInterface
-	{
+	class UExplorableItemInterface : public UInterface {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x44f6718a);
 			return ptr;
@@ -927,8 +862,7 @@ namespace Classes
 
 	// Class TslGame.Item
 	// 0x0160 (0x0188 - 0x0028)
-	class UItem : public UObject
-	{
+	class UItem : public UObject {
 	public:
 		unsigned char                                      UnknownData00[0x10];                                      // 0x0028(0x0010) MISSED OFFSET
 		unsigned char                                      bStackable : 1;                                           // 0x0038(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_DisableEditOnInstance)
@@ -963,8 +897,7 @@ namespace Classes
 		bool                                               bIsToy;                                                   // 0x0180(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData05[0x7];                                       // 0x0181(0x0007) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x1889ae15);
 			return ptr;
@@ -985,8 +918,7 @@ namespace Classes
 
 	// Class TslGame.ItemPackage
 	// 0x00F8 (0x0500 - 0x0408)
-	class AItemPackage : public AItemExplorer
-	{
+	class AItemPackage : public AItemExplorer {
 	public:
 		unsigned char                                      UnknownData00[0x10];                                      // 0x0408(0x0010) MISSED OFFSET
 		struct FText                                       PackageName;                                              // 0x0418(0x0018) (CPF_Edit, CPF_DisableEditOnInstance)
@@ -1009,8 +941,7 @@ namespace Classes
 		int                                                SortPriority;                                             // 0x04F0(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData04[0xC];                                       // 0x04F4(0x000C) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xc2be39b7);
 			return ptr;
@@ -1026,14 +957,12 @@ namespace Classes
 
 	// Class TslGame.DeployedItemPackage
 	// 0x0018 (0x03B8 - 0x03A0)
-	class ADeployedItemPackage : public AActor
-	{
+	class ADeployedItemPackage : public AActor {
 	public:
 		class UClass*                                      ItemPackageType;                                          // 0x03A0(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		TArray<struct FPackagedItemInfo>                   ItemInfos;                                                // 0x03A8(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xfbf7f6dd);
 			return ptr;
@@ -1044,8 +973,7 @@ namespace Classes
 
 	// Class TslGame.DoorDataAsset
 	// 0x0038 (0x0060 - 0x0028)
-	class UDoorDataAsset : public UDataAsset
-	{
+	class UDoorDataAsset : public UDataAsset {
 	public:
 		float                                              OpenAngle;                                                // 0x0028(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
@@ -1058,8 +986,7 @@ namespace Classes
 		class UAkAudioEvent*                               OpenSound;                                                // 0x0050(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class UAkAudioEvent*                               CloseSound;                                               // 0x0058(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xd762ca30);
 			return ptr;
@@ -1070,8 +997,7 @@ namespace Classes
 
 	// Class TslGame.TslReactionDoorData
 	// 0x0040 (0x0068 - 0x0028)
-	class UTslReactionDoorData : public UDataAsset
-	{
+	class UTslReactionDoorData : public UDataAsset {
 	public:
 		float                                              PointDamageImpulse;                                       // 0x0028(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		float                                              PointDamageRadius;                                        // 0x002C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -1086,8 +1012,7 @@ namespace Classes
 		struct FName                                       BottomImpactSoketName;                                    // 0x0058(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class UAkAudioEvent*                               DestructibleSoundAk;                                      // 0x0060(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xa0916cf0);
 			return ptr;
@@ -1098,8 +1023,7 @@ namespace Classes
 
 	// Class TslGame.DoorFrameComponent
 	// 0x0070 (0x0880 - 0x0810)
-	class UDoorFrameComponent : public UStaticMeshComponent
-	{
+	class UDoorFrameComponent : public UStaticMeshComponent {
 	public:
 		struct FTransform                                  DoorTransform;                                            // 0x0810(0x0030) (CPF_Edit, CPF_BlueprintVisible, CPF_IsPlainOldData)
 		struct FVector                                     SoundOffsetFromDoor;                                      // 0x0840(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -1110,8 +1034,7 @@ namespace Classes
 		class UTslReactionDoorData*                        ReactionDoorData;                                         // 0x0868(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData01[0x10];                                      // 0x0870(0x0010) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x3fc8ac80);
 			return ptr;
@@ -1124,13 +1047,11 @@ namespace Classes
 
 	// Class TslGame.DroppedItem
 	// 0x0008 (0x03A8 - 0x03A0)
-	class ADroppedItem : public AActor
-	{
+	class ADroppedItem : public AActor {
 	public:
 		class UItem*                                       Item;                                                     // 0x03A0(0x0008) (CPF_BlueprintVisible, CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xdc8aab77);
 			return ptr;
@@ -1143,16 +1064,14 @@ namespace Classes
 
 	// Class TslGame.DroppedItemGridManager
 	// 0x00B0 (0x0450 - 0x03A0)
-	class ADroppedItemGridManager : public AInfo
-	{
+	class ADroppedItemGridManager : public AInfo {
 	public:
 		float                                              MaxGridSize;                                              // 0x03A0(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 		int                                                MaxGridLayerNum;                                          // 0x03A4(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 		int                                                MaxItemNumPerGroup;                                       // 0x03A8(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0xA4];                                      // 0x03AC(0x00A4) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xc1075c58);
 			return ptr;
@@ -1163,16 +1082,14 @@ namespace Classes
 
 	// Class TslGame.DroppedItemGroup
 	// 0x0010 (0x03B0 - 0x03A0)
-	class ADroppedItemGroup : public AActor
-	{
+	class ADroppedItemGroup : public AActor {
 	public:
 		unsigned char                                      UnknownData00[0x4];                                       // 0x03A0(0x0004) MISSED OFFSET
 		float                                              RandomSpawnRadius;                                        // 0x03A4(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 		int                                                MaxRandomSpawnCount;                                      // 0x03A8(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData01[0x4];                                       // 0x03AC(0x0004) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xb45540bc);
 			return ptr;
@@ -1187,12 +1104,10 @@ namespace Classes
 
 	// Class TslGame.DroppedItemInterface
 	// 0x0000 (0x0028 - 0x0028)
-	class UDroppedItemInterface : public UInterface
-	{
+	class UDroppedItemInterface : public UInterface {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x5a498158);
 			return ptr;
@@ -1205,14 +1120,12 @@ namespace Classes
 
 	// Class TslGame.ExportableDataAsset
 	// 0x0020 (0x0048 - 0x0028)
-	class UExportableDataAsset : public UDataAsset
-	{
+	class UExportableDataAsset : public UDataAsset {
 	public:
 		struct FDirectoryPath                              JsonSaveDirectory;                                        // 0x0028(0x0010) (CPF_Edit)
 		struct FString                                     JsonSaveFileName;                                         // 0x0038(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xb46f3362);
 			return ptr;
@@ -1223,14 +1136,12 @@ namespace Classes
 
 	// Class TslGame.LobbyCustomizableData
 	// 0x0020 (0x0068 - 0x0048)
-	class ULobbyCustomizableData : public UExportableDataAsset
-	{
+	class ULobbyCustomizableData : public UExportableDataAsset {
 	public:
 		TArray<struct FLobbyFaceElement>                   Faces;                                                    // 0x0048(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 		TArray<struct FLobbyHairElement>                   Hairs;                                                    // 0x0058(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x3872b2ec);
 			return ptr;
@@ -1241,12 +1152,10 @@ namespace Classes
 
 	// Class TslGame.LobbyItemExporter
 	// 0x0000 (0x0048 - 0x0048)
-	class ULobbyItemExporter : public UExportableDataAsset
-	{
+	class ULobbyItemExporter : public UExportableDataAsset {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xecb9f5ea);
 			return ptr;
@@ -1257,8 +1166,7 @@ namespace Classes
 
 	// Class TslGame.FlashBangCaptureActor
 	// 0x0030 (0x03D0 - 0x03A0)
-	class AFlashBangCaptureActor : public AActor
-	{
+	class AFlashBangCaptureActor : public AActor {
 	public:
 		class USceneComponent*                             SceneRootComponent;                                       // 0x03A0(0x0008) (CPF_Edit, CPF_ExportObject, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
 		class USceneCaptureComponent2D*                    SceneCapture;                                             // 0x03A8(0x0008) (CPF_Edit, CPF_ExportObject, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
@@ -1266,8 +1174,7 @@ namespace Classes
 		class UTextureRenderTarget2D*                      CaptureTexture;                                           // 0x03B8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_EditConst, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x10];                                      // 0x03C0(0x0010) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xb26ac459);
 			return ptr;
@@ -1281,8 +1188,7 @@ namespace Classes
 
 	// Class TslGame.GameEventObserver
 	// 0x0050 (0x0078 - 0x0028)
-	class UGameEventObserver : public UObject
-	{
+	class UGameEventObserver : public UObject {
 	public:
 		struct FScriptMulticastDelegate                    OnMatchStarted;                                           // 0x0028(0x0010) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_InstancedReference)
 		struct FScriptMulticastDelegate                    OnMatchEnded;                                             // 0x0038(0x0010) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_InstancedReference)
@@ -1290,8 +1196,7 @@ namespace Classes
 		struct FScriptMulticastDelegate                    OnDie;                                                    // 0x0058(0x0010) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_InstancedReference)
 		struct FScriptMulticastDelegate                    OnDamage;                                                 // 0x0068(0x0010) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_InstancedReference)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x8946a8);
 			return ptr;
@@ -1302,14 +1207,12 @@ namespace Classes
 
 	// Class TslGame.GameStateListenerComponent
 	// 0x0020 (0x0118 - 0x00F8)
-	class UGameStateListenerComponent : public UActorComponent
-	{
+	class UGameStateListenerComponent : public UActorComponent {
 	public:
 		struct FScriptMulticastDelegate                    OnMatchStateChange;                                       // 0x00F8(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 		struct FScriptMulticastDelegate                    OnGameModeEvent;                                          // 0x0108(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xb4005fee);
 			return ptr;
@@ -1320,12 +1223,10 @@ namespace Classes
 
 	// Class TslGame.GeneralItemSpawner
 	// 0x0000 (0x0028 - 0x0028)
-	class UGeneralItemSpawner : public UObject
-	{
+	class UGeneralItemSpawner : public UObject {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x12177c67);
 			return ptr;
@@ -1339,16 +1240,14 @@ namespace Classes
 
 	// Class TslGame.TableGeneralItemSpawner
 	// 0x00C0 (0x00E8 - 0x0028)
-	class UTableGeneralItemSpawner : public UGeneralItemSpawner
-	{
+	class UTableGeneralItemSpawner : public UGeneralItemSpawner {
 	public:
 		class UDataTable*                                  RawItemSpawnDataTable;                                    // 0x0028(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		class UDataTable*                                  RawItemSpawnTogetherDataTable;                            // 0x0030(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		TArray<struct FGeneralItemSpawnProb>               SpawnProbArray;                                           // 0x0038(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
 		unsigned char                                      UnknownData00[0xA0];                                      // 0x0048(0x00A0) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xbde872cb);
 			return ptr;
@@ -1359,13 +1258,11 @@ namespace Classes
 
 	// Class TslGame.HackReporterComponent
 	// 0x0188 (0x0280 - 0x00F8)
-	class UHackReporterComponent : public UActorComponent
-	{
+	class UHackReporterComponent : public UActorComponent {
 	public:
 		unsigned char                                      UnknownData00[0x188];                                     // 0x00F8(0x0188) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xdb66e9b9);
 			return ptr;
@@ -1378,8 +1275,7 @@ namespace Classes
 
 	// Class TslGame.HighlightSession
 	// 0x0070 (0x0098 - 0x0028)
-	class UHighlightSession : public UObject
-	{
+	class UHighlightSession : public UObject {
 	public:
 		struct FHighlightRecordConfig                      Config_Kill;                                              // 0x0028(0x000C) (CPF_Config)
 		struct FHighlightRecordConfig                      Config_KillGroggy;                                        // 0x0034(0x000C) (CPF_Config)
@@ -1390,8 +1286,7 @@ namespace Classes
 		class ATslHUD*                                     TslHUD;                                                   // 0x0068(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData01[0x28];                                      // 0x0070(0x0028) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x3927485c);
 			return ptr;
@@ -1407,12 +1302,10 @@ namespace Classes
 
 	// Class TslGame.InteractionInterface
 	// 0x0000 (0x0028 - 0x0028)
-	class UInteractionInterface : public UInterface
-	{
+	class UInteractionInterface : public UInterface {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x705ab5e9);
 			return ptr;
@@ -1427,8 +1320,7 @@ namespace Classes
 
 	// Class TslGame.InteractionComponent
 	// 0x0188 (0x0280 - 0x00F8)
-	class UInteractionComponent : public UActorComponent
-	{
+	class UInteractionComponent : public UActorComponent {
 	public:
 		unsigned char                                      UnknownData00[0x10];                                      // 0x00F8(0x0010) MISSED OFFSET
 		float                                              MaxInteractableDistance;                                  // 0x0108(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
@@ -1442,8 +1334,7 @@ namespace Classes
 		struct FScriptMulticastDelegate                    ClientOnInteractBy;                                       // 0x0188(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 		unsigned char                                      UnknownData03[0xE8];                                      // 0x0198(0x00E8) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xf0b3f38d);
 			return ptr;
@@ -1458,8 +1349,7 @@ namespace Classes
 
 	// Class TslGame.DoublePhaseInteractionComponent
 	// 0x00D0 (0x0350 - 0x0280)
-	class UDoublePhaseInteractionComponent : public UInteractionComponent
-	{
+	class UDoublePhaseInteractionComponent : public UInteractionComponent {
 	public:
 		struct FText                                       FirstInteractionVerb;                                     // 0x0280(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
 		struct FText                                       FirstInteractiveObjectName;                               // 0x0298(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnInstance)
@@ -1469,8 +1359,7 @@ namespace Classes
 		struct FScriptMulticastDelegate                    ClientOnSecondInteractBy;                                 // 0x02F0(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 		unsigned char                                      UnknownData00[0x50];                                      // 0x0300(0x0050) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xe9d82d0d);
 			return ptr;
@@ -1481,13 +1370,11 @@ namespace Classes
 
 	// Class TslGame.DroppedItemActorComponent
 	// 0x0020 (0x02A0 - 0x0280)
-	class UDroppedItemActorComponent : public UInteractionComponent
-	{
+	class UDroppedItemActorComponent : public UInteractionComponent {
 	public:
 		unsigned char                                      UnknownData00[0x20];                                      // 0x0280(0x0020) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x4b593f73);
 			return ptr;
@@ -1501,13 +1388,11 @@ namespace Classes
 
 	// Class TslGame.OnceInteractionComponent
 	// 0x0010 (0x0290 - 0x0280)
-	class UOnceInteractionComponent : public UInteractionComponent
-	{
+	class UOnceInteractionComponent : public UInteractionComponent {
 	public:
 		TArray<struct FName>                               CharacterHistory;                                         // 0x0280(0x0010) (CPF_Net, CPF_ZeroConstructor, CPF_Transient)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x47163876);
 			return ptr;
@@ -1518,12 +1403,10 @@ namespace Classes
 
 	// Class TslGame.InteractorComponent
 	// 0x0000 (0x00F8 - 0x00F8)
-	class UInteractorComponent : public UActorComponent
-	{
+	class UInteractorComponent : public UActorComponent {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x9dbd50a);
 			return ptr;
@@ -1534,15 +1417,13 @@ namespace Classes
 
 	// Class TslGame.AmmoItem
 	// 0x0010 (0x0198 - 0x0188)
-	class UAmmoItem : public UItem
-	{
+	class UAmmoItem : public UItem {
 	public:
 		class UTexture*                                    AmmoIcon;                                                 // 0x0188(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		float                                              AmmoIconRatio;                                            // 0x0190(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x4];                                       // 0x0194(0x0004) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x5761c3bf);
 			return ptr;
@@ -1553,8 +1434,7 @@ namespace Classes
 
 	// Class TslGame.AttachableItem
 	// 0x00F8 (0x0280 - 0x0188)
-	class UAttachableItem : public UItem
-	{
+	class UAttachableItem : public UItem {
 	public:
 		struct FWeaponAttachmentData                       AttachmentData;                                           // 0x0188(0x00B8) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_DisableEditOnInstance)
 		TAssetPtr<class UStaticMesh>                       AttachmentMeshAsset;                                      // 0x0240(0x0020) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_DisableEditOnInstance)
@@ -1563,8 +1443,7 @@ namespace Classes
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0271(0x0007) MISSED OFFSET
 		class UAkAudioEvent*                               AttachedSoundAk;                                          // 0x0278(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xe5c699ea);
 			return ptr;
@@ -1578,15 +1457,13 @@ namespace Classes
 
 	// Class TslGame.CastableItem
 	// 0x0038 (0x01C0 - 0x0188)
-	class UCastableItem : public UItem
-	{
+	class UCastableItem : public UItem {
 	public:
 		struct FCastConfig                                 CastConfig;                                               // 0x0188(0x0030) (CPF_Edit, CPF_DisableEditOnInstance)
 		bool                                               bCanUseInWater;                                           // 0x01B8(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x7];                                       // 0x01B9(0x0007) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xaab2227c);
 			return ptr;
@@ -1597,8 +1474,7 @@ namespace Classes
 
 	// Class TslGame.EquipableItem
 	// 0x00B8 (0x0240 - 0x0188)
-	class UEquipableItem : public UItem
-	{
+	class UEquipableItem : public UItem {
 	public:
 		TEnumAsByte<EEquipSlotID>                          EquipSlotID;                                              // 0x0188(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x3];                                       // 0x0189(0x0003) MISSED OFFSET
@@ -1621,8 +1497,7 @@ namespace Classes
 		TAssetPtr<class UTexture>                          HudDisplayEquipIcon;                                      // 0x0218(0x0020) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Net, CPF_DisableEditOnInstance)
 		unsigned char                                      UnknownData04[0x8];                                       // 0x0238(0x0008) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x4e606221);
 			return ptr;
@@ -1637,8 +1512,7 @@ namespace Classes
 
 	// Class TslGame.CustomEquipableItem
 	// 0x0100 (0x0340 - 0x0240)
-	class UCustomEquipableItem : public UEquipableItem
-	{
+	class UCustomEquipableItem : public UEquipableItem {
 	public:
 		int                                                ItemLevel;                                                // 0x0240(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0xC];                                       // 0x0244(0x000C) MISSED OFFSET
@@ -1648,8 +1522,7 @@ namespace Classes
 		struct FTransform                                  SlotOffset_Melee;                                         // 0x02E0(0x0030) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		struct FTransform                                  SlotOffset_Thrown;                                        // 0x0310(0x0030) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x7ec6ec22);
 			return ptr;
@@ -1667,13 +1540,11 @@ namespace Classes
 
 	// Class TslGame.ParachuteItem
 	// 0x0008 (0x0248 - 0x0240)
-	class UParachuteItem : public UEquipableItem
-	{
+	class UParachuteItem : public UEquipableItem {
 	public:
 		class UClass*                                      ParachuteType;                                            // 0x0240(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x7ac9b08c);
 			return ptr;
@@ -1684,15 +1555,13 @@ namespace Classes
 
 	// Class TslGame.ThrowableItem
 	// 0x0018 (0x0258 - 0x0240)
-	class UThrowableItem : public UEquipableItem
-	{
+	class UThrowableItem : public UEquipableItem {
 	public:
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0240(0x0008) MISSED OFFSET
 		class UClass*                                      WeaponType;                                               // 0x0248(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		class ATslWeapon*                                  EquippedWeapon;                                           // 0x0250(0x0008) (CPF_Net, CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x5f0c81c5);
 			return ptr;
@@ -1706,8 +1575,7 @@ namespace Classes
 
 	// Class TslGame.TslWeapon
 	// 0x0408 (0x07A8 - 0x03A0)
-	class ATslWeapon : public AActor
-	{
+	class ATslWeapon : public AActor {
 	public:
 		unsigned char                                      UnknownData00[0x8];                                       // 0x03A0(0x0008) MISSED OFFSET
 		class UTexture*                                    WeaponIcon;                                               // 0x03A8(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
@@ -1777,8 +1645,7 @@ namespace Classes
 		unsigned char                                      bLoopedFireSound : 1;                                     // 0x0774(0x0001) (CPF_Edit, CPF_DisableEditOnInstance)
 		unsigned char                                      UnknownData09[0x33];                                      // 0x0775(0x0033) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xf343efc1);
 			return ptr;
@@ -1830,8 +1697,7 @@ namespace Classes
 
 	// Class TslGame.WeaponItem
 	// 0x0050 (0x0290 - 0x0240)
-	class UWeaponItem : public UEquipableItem
-	{
+	class UWeaponItem : public UEquipableItem {
 	public:
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0240(0x0008) MISSED OFFSET
 		class UClass*                                      WeaponType;                                               // 0x0248(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
@@ -1844,8 +1710,7 @@ namespace Classes
 		unsigned char                                      UnknownData01[0x7];                                       // 0x0281(0x0007) MISSED OFFSET
 		class ATslWeapon*                                  EquippedWeapon;                                           // 0x0288(0x0008) (CPF_Net, CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xbbb04b49);
 			return ptr;
@@ -1868,8 +1733,7 @@ namespace Classes
 
 	// Class TslGame.RandomlyGeneratableItem
 	// 0x0068 (0x01F0 - 0x0188)
-	class URandomlyGeneratableItem : public UItem
-	{
+	class URandomlyGeneratableItem : public UItem {
 	public:
 		struct FString                                     RandomExpression;                                         // 0x0188(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 		unsigned char                                      bOpenByKey : 1;                                           // 0x0198(0x0001) (CPF_Edit)
@@ -1883,8 +1747,7 @@ namespace Classes
 		TArray<struct FLobbyItemBundle>                    BundleList;                                               // 0x01D0(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
 		TArray<TAssetPtr<class UClass>>                    ReferenceItems;                                           // 0x01E0(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_EditConst)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xad7dd245);
 			return ptr;
@@ -1895,12 +1758,10 @@ namespace Classes
 
 	// Class TslGame.UseByPickupItem
 	// 0x0000 (0x0188 - 0x0188)
-	class UUseByPickupItem : public UItem
-	{
+	class UUseByPickupItem : public UItem {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xd8dd976b);
 			return ptr;
@@ -1911,13 +1772,11 @@ namespace Classes
 
 	// Class TslGame.ItemSpawnProcessor
 	// 0x0010 (0x0038 - 0x0028)
-	class UItemSpawnProcessor : public UObject
-	{
+	class UItemSpawnProcessor : public UObject {
 	public:
 		unsigned char                                      UnknownData00[0x10];                                      // 0x0028(0x0010) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xd84120f2);
 			return ptr;
@@ -1932,8 +1791,7 @@ namespace Classes
 
 	// Class TslGame.SpawnTableItemSpawnProcessor
 	// 0x0F30 (0x0F68 - 0x0038)
-	class USpawnTableItemSpawnProcessor : public UItemSpawnProcessor
-	{
+	class USpawnTableItemSpawnProcessor : public UItemSpawnProcessor {
 	public:
 		TArray<struct FItemSpotGroupTypeProperty>          RawSpotGroupProperties;                                   // 0x0038(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
 		class UDataTable*                                  RawItemSpawnDataTable;                                    // 0x0048(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
@@ -1942,8 +1800,7 @@ namespace Classes
 		bool                                               bUseActorSpawn;                                           // 0x0F10(0x0001) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData01[0x57];                                      // 0x0F11(0x0057) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xfa81e6f1);
 			return ptr;
@@ -1954,13 +1811,11 @@ namespace Classes
 
 	// Class TslGame.ItemSpot
 	// 0x0008 (0x03A8 - 0x03A0)
-	class AItemSpot : public AActor
-	{
+	class AItemSpot : public AActor {
 	public:
 		class UItemSpotGroupComponent*                     SpotGroupComponent;                                       // 0x03A0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_InstancedReference, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x637ea2dd);
 			return ptr;
@@ -1971,14 +1826,12 @@ namespace Classes
 
 	// Class TslGame.ItemSpotComponent
 	// 0x0010 (0x0310 - 0x0300)
-	class UItemSpotComponent : public USceneComponent
-	{
+	class UItemSpotComponent : public USceneComponent {
 	public:
 		TEnumAsByte<EItemSpotType>                         ItemSpotType;                                             // 0x0300(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0xF];                                       // 0x0301(0x000F) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xda516f5e);
 			return ptr;
@@ -1989,14 +1842,12 @@ namespace Classes
 
 	// Class TslGame.ItemSpotGroupComponent
 	// 0x0010 (0x0310 - 0x0300)
-	class UItemSpotGroupComponent : public USceneComponent
-	{
+	class UItemSpotGroupComponent : public USceneComponent {
 	public:
 		TEnumAsByte<EItemSpotGroupType>                    SpotGroupType;                                            // 0x0300(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0xF];                                       // 0x0301(0x000F) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xc56aa9bf);
 			return ptr;
@@ -2007,8 +1858,7 @@ namespace Classes
 
 	// Class TslGame.ItemStudio
 	// 0x0060 (0x0400 - 0x03A0)
-	class AItemStudio : public AActor
-	{
+	class AItemStudio : public AActor {
 	public:
 		struct FName                                       CameraSocketName;                                         // 0x03A0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		class UTextureRenderTarget2D*                      TextureTarget;                                            // 0x03A8(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -2019,8 +1869,7 @@ namespace Classes
 		unsigned char                                      UnknownData01[0x8];                                       // 0x03C8(0x0008) MISSED OFFSET
 		struct FTransform                                  DefaultCameraSocketTransform;                             // 0x03D0(0x0030) (CPF_Edit, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xc37c8117);
 			return ptr;
@@ -2036,12 +1885,10 @@ namespace Classes
 
 	// Class TslGame.ItemToolTipWidget
 	// 0x0000 (0x0240 - 0x0240)
-	class UItemToolTipWidget : public UUserWidget
-	{
+	class UItemToolTipWidget : public UUserWidget {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x2e43d9ee);
 			return ptr;
@@ -2057,15 +1904,13 @@ namespace Classes
 
 	// Class TslGame.LevelAttribute
 	// 0x0020 (0x03C0 - 0x03A0)
-	class ALevelAttribute : public AInfo
-	{
+	class ALevelAttribute : public AInfo {
 	public:
 		int                                                NumMapBlock;                                              // 0x03A0(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		struct FBox2D                                      MapRect2D;                                                // 0x03A4(0x0014) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class UMaterialInterface*                          MapImageMaterial;                                         // 0x03B8(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x98446dfe);
 			return ptr;
@@ -2076,14 +1921,12 @@ namespace Classes
 
 	// Class TslGame.LobbyItemBundleIdPublisher
 	// 0x0028 (0x0050 - 0x0028)
-	class ULobbyItemBundleIdPublisher : public UObject
-	{
+	class ULobbyItemBundleIdPublisher : public UObject {
 	public:
 		struct FString                                     LobbyItemPath;                                            // 0x0028(0x0010) (CPF_ZeroConstructor, CPF_Config)
 		unsigned char                                      UnknownData00[0x18];                                      // 0x0038(0x0018) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xba1ad3be);
 			return ptr;
@@ -2094,13 +1937,11 @@ namespace Classes
 
 	// Class TslGame.LobbyLink
 	// 0x00A8 (0x00D0 - 0x0028)
-	class ULobbyLink : public UObject
-	{
+	class ULobbyLink : public UObject {
 	public:
 		unsigned char                                      UnknownData00[0xA8];                                      // 0x0028(0x00A8) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x9c0d7950);
 			return ptr;
@@ -2111,12 +1952,10 @@ namespace Classes
 
 	// Class TslGame.LobbyWidget
 	// 0x0000 (0x0240 - 0x0240)
-	class ULobbyWidget : public UUserWidget
-	{
+	class ULobbyWidget : public UUserWidget {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xda1e5aa4);
 			return ptr;
@@ -2129,15 +1968,13 @@ namespace Classes
 
 	// Class TslGame.MatchPreparer
 	// 0x0030 (0x0058 - 0x0028)
-	class UMatchPreparer : public UObject
-	{
+	class UMatchPreparer : public UObject {
 	public:
 		int                                                WarmupTime;                                               // 0x0028(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 		int                                                WarmupTimeInPIE;                                          // 0x002C(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x28];                                      // 0x0030(0x0028) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xad8ba25a);
 			return ptr;
@@ -2150,8 +1987,7 @@ namespace Classes
 
 	// Class TslGame.AirborneMatchPreparer
 	// 0x0048 (0x00A0 - 0x0058)
-	class UAirborneMatchPreparer : public UMatchPreparer
-	{
+	class UAirborneMatchPreparer : public UMatchPreparer {
 	public:
 		class UClass*                                      AircraftClass;                                            // 0x0058(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		TArray<class ATransportAircraftVehicle*>           Aircrafts;                                                // 0x0060(0x0010) (CPF_ZeroConstructor, CPF_Transient)
@@ -2162,8 +1998,7 @@ namespace Classes
 		float                                              AircraftIntervalDistance;                                 // 0x0080(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x1C];                                      // 0x0084(0x001C) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x93ac6d3c);
 			return ptr;
@@ -2176,15 +2011,13 @@ namespace Classes
 
 	// Class TslGame.NormalMatchPreparer
 	// 0x0018 (0x0070 - 0x0058)
-	class UNormalMatchPreparer : public UMatchPreparer
-	{
+	class UNormalMatchPreparer : public UMatchPreparer {
 	public:
 		unsigned char                                      UnknownData00[0x10];                                      // 0x0058(0x0010) MISSED OFFSET
 		int                                                AvailablePlayerStartCount;                                // 0x0068(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData01[0x4];                                       // 0x006C(0x0004) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x1551c45d);
 			return ptr;
@@ -2195,8 +2028,7 @@ namespace Classes
 
 	// Class TslGame.MaterialMergeSettings
 	// 0x0080 (0x00A8 - 0x0028)
-	class UMaterialMergeSettings : public UObject
-	{
+	class UMaterialMergeSettings : public UObject {
 	public:
 		unsigned char                                      UnknownData00[0x58];                                      // 0x0028(0x0058) MISSED OFFSET
 		class UMaterial*                                   MasterMaterial;                                           // 0x0080(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -2205,8 +2037,7 @@ namespace Classes
 		bool                                               bUpdateParameterList;                                     // 0x00A0(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData01[0x7];                                       // 0x00A1(0x0007) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xa789fce2);
 			return ptr;
@@ -2217,12 +2048,10 @@ namespace Classes
 
 	// Class TslGame.ModeController
 	// 0x0000 (0x0498 - 0x0498)
-	class AModeController : public AAIController
-	{
+	class AModeController : public AAIController {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x51013e55);
 			return ptr;
@@ -2240,8 +2069,7 @@ namespace Classes
 
 	// Class TslGame.BattleRoyaleModeController
 	// 0x0080 (0x0518 - 0x0498)
-	class ABattleRoyaleModeController : public AModeController
-	{
+	class ABattleRoyaleModeController : public AModeController {
 	public:
 		TArray<struct FBattleRoyalePoisionGasData>         NormalPoisonGasDataArray;                                 // 0x0498(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
 		TArray<struct FBattleRoyalePoisionGasData>         FastPoisonGasDataArray;                                   // 0x04A8(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
@@ -2254,8 +2082,7 @@ namespace Classes
 		TArray<class ATslPassBluezoneArea*>                PassBluezoneAreas;                                        // 0x04F0(0x0010) (CPF_ZeroConstructor, CPF_Transient)
 		unsigned char                                      UnknownData01[0x18];                                      // 0x0500(0x0018) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xb36a2369);
 			return ptr;
@@ -2271,8 +2098,7 @@ namespace Classes
 
 	// Class TslGame.CarePackageController
 	// 0x0030 (0x04C8 - 0x0498)
-	class ACarePackageController : public AModeController
-	{
+	class ACarePackageController : public AModeController {
 	public:
 		class UClass*                                      AircraftCarePackageClass;                                 // 0x0498(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		struct FVector2D                                   StartDelay;                                               // 0x04A0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
@@ -2283,8 +2109,7 @@ namespace Classes
 		float                                              DropAreaRate;                                             // 0x04BC(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x8];                                       // 0x04C0(0x0008) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x39f86d51);
 			return ptr;
@@ -2300,8 +2125,7 @@ namespace Classes
 
 	// Class TslGame.RedZoneController
 	// 0x0080 (0x0518 - 0x0498)
-	class ARedZoneController : public AModeController
-	{
+	class ARedZoneController : public AModeController {
 	public:
 		class UClass*                                      BombTemplateClass;                                        // 0x0498(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		float                                              StartDelay;                                               // 0x04A0(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
@@ -2321,8 +2145,7 @@ namespace Classes
 		unsigned char                                      UnknownData00[0x10];                                      // 0x04F8(0x0010) MISSED OFFSET
 		TArray<class ATslPhysicsVolume*>                   OceanPhysicsVolume;                                       // 0x0508(0x0010) (CPF_ZeroConstructor, CPF_Transient)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xc14987eb);
 			return ptr;
@@ -2338,8 +2161,7 @@ namespace Classes
 
 	// Class TslGame.MutableCharacter
 	// 0x0050 (0x0810 - 0x07C0)
-	class AMutableCharacter : public ACharacter
-	{
+	class AMutableCharacter : public ACharacter {
 	public:
 		unsigned char                                      UnknownData00[0x20];                                      // 0x07C0(0x0020) MISSED OFFSET
 		TEnumAsByte<EGender>                               Gender;                                                   // 0x07E0(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
@@ -2349,8 +2171,7 @@ namespace Classes
 		TArray<unsigned char>                              InstanceDescriptor;                                       // 0x07F8(0x0010) (CPF_Edit, CPF_Net, CPF_ZeroConstructor, CPF_EditConst)
 		unsigned char                                      UnknownData02[0x8];                                       // 0x0808(0x0008) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xa8399d7f);
 			return ptr;
@@ -2365,13 +2186,11 @@ namespace Classes
 
 	// Class TslGame.LobbyCharacter
 	// 0x0030 (0x0840 - 0x0810)
-	class ALobbyCharacter : public AMutableCharacter
-	{
+	class ALobbyCharacter : public AMutableCharacter {
 	public:
 		unsigned char                                      UnknownData00[0x30];                                      // 0x0810(0x0030) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xb822a24d);
 			return ptr;
@@ -2385,12 +2204,10 @@ namespace Classes
 
 	// Class TslGame.TestMutableCharacter
 	// 0x0000 (0x0810 - 0x0810)
-	class ATestMutableCharacter : public AMutableCharacter
-	{
+	class ATestMutableCharacter : public AMutableCharacter {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xd9631703);
 			return ptr;
@@ -2401,14 +2218,12 @@ namespace Classes
 
 	// Class TslGame.TslVaultingHelper
 	// 0x0010 (0x03B0 - 0x03A0)
-	class ATslVaultingHelper : public AActor
-	{
+	class ATslVaultingHelper : public AActor {
 	public:
 		class USceneComponent*                             RootSceneComponent;                                       // 0x03A0(0x0008) (CPF_Edit, CPF_ExportObject, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
 		class USceneComponent*                             ActorAttachScene;                                         // 0x03A8(0x0008) (CPF_Edit, CPF_ExportObject, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xfe1e0045);
 			return ptr;
@@ -2421,8 +2236,7 @@ namespace Classes
 
 	// Class TslGame.TslWeapon_Gun
 	// 0x0278 (0x0A20 - 0x07A8)
-	class ATslWeapon_Gun : public ATslWeapon
-	{
+	class ATslWeapon_Gun : public ATslWeapon {
 	public:
 		bool                                               bSpawnBulletFromBarrel;                                   // 0x07A8(0x0001) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x7];                                       // 0x07A9(0x0007) MISSED OFFSET
@@ -2438,8 +2252,7 @@ namespace Classes
 		struct FWeaponDeviationData                        WeaponDeviationConfig;                                    // 0x08F0(0x0040) (CPF_Edit, CPF_DisableEditOnInstance)
 		struct FWeaponGunAnim                              WeaponGunAnim;                                            // 0x0930(0x00F0) (CPF_Edit, CPF_DisableEditOnInstance)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x3c430512);
 			return ptr;
@@ -2532,8 +2345,7 @@ namespace Classes
 
 	// Class TslGame.VehicleSeatActor
 	// 0x0088 (0x0428 - 0x03A0)
-	class AVehicleSeatActor : public AActor
-	{
+	class AVehicleSeatActor : public AActor {
 	public:
 		float                                              ViewPitchMin;                                             // 0x03A0(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		float                                              ViewPitchMax;                                             // 0x03A4(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -2559,8 +2371,7 @@ namespace Classes
 		TEnumAsByte<EVehicleAnimType>                      SeatAnimationType;                                        // 0x0424(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData04[0x3];                                       // 0x0425(0x0003) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xf1b6eb42);
 			return ptr;
@@ -2590,8 +2401,7 @@ namespace Classes
 
 	// Class TslGame.WeaponProcessor
 	// 0x00D0 (0x0470 - 0x03A0)
-	class AWeaponProcessor : public AActor
-	{
+	class AWeaponProcessor : public AActor {
 	public:
 		unsigned char                                      UnknownData00[0x8];                                       // 0x03A0(0x0008) MISSED OFFSET
 		struct FScriptMulticastDelegate                    OnWeaponProcessorArmed;                                   // 0x03A8(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
@@ -2600,8 +2410,7 @@ namespace Classes
 		int                                                CurrentWeaponIndex;                                       // 0x0448(0x0004) (CPF_Net, CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData02[0x24];                                      // 0x044C(0x0024) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x409b1fe8);
 			return ptr;
@@ -2633,8 +2442,7 @@ namespace Classes
 
 	// Class TslGame.VaultingData
 	// 0x00C8 (0x00F0 - 0x0028)
-	class UVaultingData : public UDataAsset
-	{
+	class UVaultingData : public UDataAsset {
 	public:
 		float                                              LocationStartNormalScale;                                 // 0x0028(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		float                                              LocationStartZOffset;                                     // 0x002C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
@@ -2677,8 +2485,7 @@ namespace Classes
 		float                                              MaxCancelVTimer;                                          // 0x00E8(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		float                                              TaskEndVTimer;                                            // 0x00EC(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x16cd727c);
 			return ptr;
@@ -2694,8 +2501,7 @@ namespace Classes
 
 	// Class TslGame.TslCharacter
 	// 0x0D10 (0x1520 - 0x0810)
-	class ATslCharacter : public AMutableCharacter
-	{
+	class ATslCharacter : public AMutableCharacter {
 	public:
 		class UTslPawnInputBindingComponent*               TslPawnInputBindingComponent;                             // 0x0810(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 		struct FTimerHandle                                TimerHandle_Targeting_HoldADS;                            // 0x0818(0x0008)
@@ -3063,8 +2869,7 @@ namespace Classes
 		bool                                               bTickOptimization_Actor_Active;                           // 0x1512(0x0001) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData60[0xD];                                       // 0x1513(0x000D) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x88be4a9e);
 			return ptr;
@@ -3394,12 +3199,10 @@ namespace Classes
 
 	// Class TslGame.TslBot
 	// 0x0000 (0x1520 - 0x1520)
-	class ATslBot : public ATslCharacter
-	{
+	class ATslBot : public ATslCharacter {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x96889338);
 			return ptr;
@@ -3410,15 +3213,13 @@ namespace Classes
 
 	// Class TslGame.ObserverTagWidget
 	// 0x0010 (0x0250 - 0x0240)
-	class UObserverTagWidget : public UUserWidget
-	{
+	class UObserverTagWidget : public UUserWidget {
 	public:
 		class ATslCharacter*                               Character;                                                // 0x0240(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		float                                              OffsetZ;                                                  // 0x0248(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		float                                              Distance;                                                 // 0x024C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xbc368af2);
 			return ptr;
@@ -3433,12 +3234,10 @@ namespace Classes
 
 	// Class TslGame.TslVehicleInterface
 	// 0x0000 (0x0028 - 0x0028)
-	class UTslVehicleInterface : public UInterface
-	{
+	class UTslVehicleInterface : public UInterface {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x808f7a1c);
 			return ptr;
@@ -3452,8 +3251,7 @@ namespace Classes
 
 	// Class TslGame.TslDamageType
 	// 0x0050 (0x0090 - 0x0040)
-	class UTslDamageType : public UDamageType
-	{
+	class UTslDamageType : public UDamageType {
 	public:
 		TEnumAsByte<EDamageTypeCategory>                   DamageTypeCategory;                                       // 0x0040(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0041(0x0007) MISSED OFFSET
@@ -3466,8 +3264,7 @@ namespace Classes
 		bool                                               HitReaction;                                              // 0x0088(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData02[0x7];                                       // 0x0089(0x0007) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x9bcd5a1e);
 			return ptr;
@@ -3478,8 +3275,7 @@ namespace Classes
 
 	// Class TslGame.TslHUD
 	// 0x03C0 (0x08D0 - 0x0510)
-	class ATslHUD : public ATslBaseHUD
-	{
+	class ATslHUD : public ATslBaseHUD {
 	public:
 		struct FScriptMulticastDelegate                    OnPossessPawnChange;                                      // 0x0510(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 		struct FScriptMulticastDelegate                    OnDisplaySystemMessage;                                   // 0x0520(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
@@ -3529,8 +3325,7 @@ namespace Classes
 		class UHighlightSession*                           HighlightSession;                                         // 0x08B8(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData06[0x10];                                      // 0x08C0(0x0010) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xf8765ac0);
 			return ptr;
@@ -3556,14 +3351,12 @@ namespace Classes
 
 	// Class TslGame.TslPawnInputBindingComponent
 	// 0x0020 (0x0118 - 0x00F8)
-	class UTslPawnInputBindingComponent : public UActorComponent
-	{
+	class UTslPawnInputBindingComponent : public UActorComponent {
 	public:
 		struct FScriptMulticastDelegate                    OnOwnerPossessed;                                         // 0x00F8(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference)
 		struct FScriptMulticastDelegate                    OnOwnerUnPossessed;                                       // 0x0108(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xc391b3e5);
 			return ptr;
@@ -3577,8 +3370,7 @@ namespace Classes
 
 	// Class TslGame.ParachuteVehicle
 	// 0x0138 (0x0538 - 0x0400)
-	class AParachuteVehicle : public APawn
-	{
+	class AParachuteVehicle : public APawn {
 	public:
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0400(0x0008) MISSED OFFSET
 		struct FScriptDelegate                             OnRelease;                                                // 0x0408(0x0010) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_InstancedReference)
@@ -3628,8 +3420,7 @@ namespace Classes
 		struct FVector                                     LeaveSocketOffset;                                        // 0x0528(0x000C) (CPF_Net, CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData08[0x4];                                       // 0x0534(0x0004) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x119e63);
 			return ptr;
@@ -3660,12 +3451,10 @@ namespace Classes
 
 	// Class TslGame.ReplicatedRootComponent
 	// 0x0000 (0x0300 - 0x0300)
-	class UReplicatedRootComponent : public USceneComponent
-	{
+	class UReplicatedRootComponent : public USceneComponent {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x20c0ca2c);
 			return ptr;
@@ -3676,8 +3465,7 @@ namespace Classes
 
 	// Class TslGame.ReplicationTrigger
 	// 0x0030 (0x03D0 - 0x03A0)
-	class AReplicationTrigger : public AActor
-	{
+	class AReplicationTrigger : public AActor {
 	public:
 		unsigned char                                      UnknownData00[0x8];                                       // 0x03A0(0x0008) MISSED OFFSET
 		TArray<class AActor*>                              TargetReplicatedActors;                                   // 0x03A8(0x0010) (CPF_ZeroConstructor)
@@ -3687,8 +3475,7 @@ namespace Classes
 		float                                              ReplicationGroupIntervalSeconds;                          // 0x03C4(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData03[0x8];                                       // 0x03C8(0x0008) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xf828a7aa);
 			return ptr;
@@ -3701,16 +3488,14 @@ namespace Classes
 
 	// Class TslGame.ReplicationTriggerManager
 	// 0x0028 (0x03C8 - 0x03A0)
-	class AReplicationTriggerManager : public AInfo
-	{
+	class AReplicationTriggerManager : public AInfo {
 	public:
 		TArray<class UClass*>                              TargetReplicatedActorClasses;                             // 0x03A0(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnTemplate)
 		float                                              TriggerRadius;                                            // 0x03B0(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnTemplate, CPF_IsPlainOldData)
 		float                                              TriggerInterval;                                          // 0x03B4(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnTemplate, CPF_IsPlainOldData)
 		TArray<class AReplicationTrigger*>                 Triggers;                                                 // 0x03B8(0x0010) (CPF_ZeroConstructor, CPF_Transient)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x5c307c67);
 			return ptr;
@@ -3721,16 +3506,14 @@ namespace Classes
 
 	// Class TslGame.RewardData
 	// 0x0028 (0x0050 - 0x0028)
-	class URewardData : public UDataAsset
-	{
+	class URewardData : public UDataAsset {
 	public:
 		float                                              DefaultScoreMultiplierByDamage;                           // 0x0028(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		float                                              DefaultScoreMultiplierByKill;                             // 0x002C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		TArray<float>                                      ScoreByReverseRanking;                                    // 0x0030(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 		TArray<float>                                      ScoreMultiplierByRanking;                                 // 0x0040(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xd0199085);
 			return ptr;
@@ -3741,8 +3524,7 @@ namespace Classes
 
 	// Class TslGame.SceneInteractionComponent
 	// 0x0110 (0x0410 - 0x0300)
-	class USceneInteractionComponent : public USceneComponent
-	{
+	class USceneInteractionComponent : public USceneComponent {
 	public:
 		unsigned char                                      UnknownData00[0x10];                                      // 0x0300(0x0010) MISSED OFFSET
 		float                                              MaxInteractableDistance;                                  // 0x0310(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
@@ -3757,8 +3539,7 @@ namespace Classes
 		struct FScriptMulticastDelegate                    ClientOnInteractBy;                                       // 0x0398(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 		unsigned char                                      UnknownData04[0x68];                                      // 0x03A8(0x0068) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xfe62eb45);
 			return ptr;
@@ -3773,8 +3554,7 @@ namespace Classes
 
 	// Class TslGame.DoorInteractionComponent
 	// 0x01F0 (0x0600 - 0x0410)
-	class UDoorInteractionComponent : public USceneInteractionComponent
-	{
+	class UDoorInteractionComponent : public USceneInteractionComponent {
 	public:
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0410(0x0008) MISSED OFFSET
 		TEnumAsByte<EDoorState>                            DoorState;                                                // 0x0418(0x0001) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -3787,8 +3567,7 @@ namespace Classes
 		class UAkComponent*                                AkAudioComponent;                                         // 0x05F0(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_Transient, CPF_InstancedReference, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData03[0x8];                                       // 0x05F8(0x0008) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xb668b6bd);
 			return ptr;
@@ -3802,8 +3581,7 @@ namespace Classes
 
 	// Class TslGame.DroppedItemInteractionComponent
 	// 0x0060 (0x0470 - 0x0410)
-	class UDroppedItemInteractionComponent : public USceneInteractionComponent
-	{
+	class UDroppedItemInteractionComponent : public USceneInteractionComponent {
 	public:
 		unsigned char                                      UnknownData00[0x38];                                      // 0x0410(0x0038) MISSED OFFSET
 		class UItem*                                       Item;                                                     // 0x0448(0x0008) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -3811,8 +3589,7 @@ namespace Classes
 		class UAsyncStaticMeshComponent*                   StaticMeshComponent;                                      // 0x0458(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_Transient, CPF_InstancedReference, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData02[0x10];                                      // 0x0460(0x0010) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xb3c8c8ca);
 			return ptr;
@@ -3826,8 +3603,7 @@ namespace Classes
 
 	// Class TslGame.VehicleSeatInteractionComponent
 	// 0x00C0 (0x04D0 - 0x0410)
-	class UVehicleSeatInteractionComponent : public USceneInteractionComponent
-	{
+	class UVehicleSeatInteractionComponent : public USceneInteractionComponent {
 	public:
 		class ATslCharacter*                               Rider;                                                    // 0x0410(0x0008) (CPF_Net, CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0xC];                                       // 0x0418(0x000C) MISSED OFFSET
@@ -3861,8 +3637,7 @@ namespace Classes
 		float                                              InteractionBlockDuration;                                 // 0x04C0(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData05[0xC];                                       // 0x04C4(0x000C) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x6ee44f76);
 			return ptr;
@@ -3894,12 +3669,10 @@ namespace Classes
 
 	// Class TslGame.MotorbikeVehicleSeatInteraction
 	// 0x0000 (0x04D0 - 0x04D0)
-	class UMotorbikeVehicleSeatInteraction : public UVehicleSeatInteractionComponent
-	{
+	class UMotorbikeVehicleSeatInteraction : public UVehicleSeatInteractionComponent {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xe5a30321);
 			return ptr;
@@ -3913,12 +3686,10 @@ namespace Classes
 
 	// Class TslGame.ParachuteVehicleSeatInteraction
 	// 0x0000 (0x04D0 - 0x04D0)
-	class UParachuteVehicleSeatInteraction : public UVehicleSeatInteractionComponent
-	{
+	class UParachuteVehicleSeatInteraction : public UVehicleSeatInteractionComponent {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x9cef207c);
 			return ptr;
@@ -3929,8 +3700,7 @@ namespace Classes
 
 	// Class TslGame.SimpleInterpolationMovement
 	// 0x00A0 (0x0220 - 0x0180)
-	class USimpleInterpolationMovement : public UPawnMovementComponent
-	{
+	class USimpleInterpolationMovement : public UPawnMovementComponent {
 	public:
 		unsigned char                                      UnknownData00[0x18];                                      // 0x0180(0x0018) MISSED OFFSET
 		float                                              LocationInterpTime;                                       // 0x0198(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -3944,8 +3714,7 @@ namespace Classes
 		float                                              ForceMoveTime;                                            // 0x0214(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData04[0x8];                                       // 0x0218(0x0008) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x4e40841f);
 			return ptr;
@@ -3956,8 +3725,7 @@ namespace Classes
 
 	// Class TslGame.FreeFallMovement
 	// 0x0050 (0x0270 - 0x0220)
-	class UFreeFallMovement : public USimpleInterpolationMovement
-	{
+	class UFreeFallMovement : public USimpleInterpolationMovement {
 	public:
 		float                                              MinPitch;                                                 // 0x0220(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		float                                              MaxPitch;                                                 // 0x0224(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
@@ -3975,8 +3743,7 @@ namespace Classes
 		float                                              InputUpdateTime;                                          // 0x0260(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData01[0xC];                                       // 0x0264(0x000C) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x6d4424ee);
 			return ptr;
@@ -3991,8 +3758,7 @@ namespace Classes
 
 	// Class TslGame.ParachuteVehicleMovement
 	// 0x0100 (0x0320 - 0x0220)
-	class UParachuteVehicleMovement : public USimpleInterpolationMovement
-	{
+	class UParachuteVehicleMovement : public USimpleInterpolationMovement {
 	public:
 		unsigned char                                      UnknownData00[0x4];                                       // 0x0220(0x0004) MISSED OFFSET
 		float                                              MaxSpeed;                                                 // 0x0224(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -4046,8 +3812,7 @@ namespace Classes
 		float                                              GroundTraceDampingMin;                                    // 0x0318(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		float                                              GroundTraceDampingMax;                                    // 0x031C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x5de7cb2c);
 			return ptr;
@@ -4064,13 +3829,11 @@ namespace Classes
 
 	// Class TslGame.TslAircraftVehicleMovement
 	// 0x0008 (0x0228 - 0x0220)
-	class UTslAircraftVehicleMovement : public USimpleInterpolationMovement
-	{
+	class UTslAircraftVehicleMovement : public USimpleInterpolationMovement {
 	public:
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0220(0x0008) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x835c58ae);
 			return ptr;
@@ -4081,12 +3844,10 @@ namespace Classes
 
 	// Class TslGame.SpringArmInVehicleComponent
 	// 0x0000 (0x0390 - 0x0390)
-	class USpringArmInVehicleComponent : public USpringArmComponent
-	{
+	class USpringArmInVehicleComponent : public USpringArmComponent {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x9cd1af13);
 			return ptr;
@@ -4097,16 +3858,14 @@ namespace Classes
 
 	// Class TslGame.StanceComponent
 	// 0x0080 (0x0178 - 0x00F8)
-	class UStanceComponent : public UActorComponent
-	{
+	class UStanceComponent : public UActorComponent {
 	public:
 		unsigned char                                      UnknownData00[0x8];                                       // 0x00F8(0x0008) MISSED OFFSET
 		struct FStanceTransitionData                       StanceTransitionData;                                     // 0x0100(0x0060) (CPF_Edit, CPF_DisableEditOnInstance)
 		TEnumAsByte<EStanceMode>                           CurrentStance;                                            // 0x0160(0x0001) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData01[0x17];                                      // 0x0161(0x0017) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xff59e935);
 			return ptr;
@@ -4122,8 +3881,7 @@ namespace Classes
 
 	// Class TslGame.TslPlayerStart
 	// 0x0028 (0x03F8 - 0x03D0)
-	class ATslPlayerStart : public APlayerStart
-	{
+	class ATslPlayerStart : public APlayerStart {
 	public:
 		TEnumAsByte<EMatchStartType>                       MatchStartType;                                           // 0x03D0(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x3];                                       // 0x03D1(0x0003) MISSED OFFSET
@@ -4133,8 +3891,7 @@ namespace Classes
 		TArray<class AStartActivationVolume*>              ActivationVolumes;                                        // 0x03E0(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor)
 		unsigned char                                      UnknownData02[0x8];                                       // 0x03F0(0x0008) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x7db328e6);
 			return ptr;
@@ -4148,13 +3905,11 @@ namespace Classes
 
 	// Class TslGame.StartActivationVolume
 	// 0x0008 (0x03E0 - 0x03D8)
-	class AStartActivationVolume : public AVolume
-	{
+	class AStartActivationVolume : public AVolume {
 	public:
 		unsigned char                                      UnknownData00[0x8];                                       // 0x03D8(0x0008) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x264c0a3a);
 			return ptr;
@@ -4165,12 +3920,10 @@ namespace Classes
 
 	// Class TslGame.ThingActivationVolume
 	// 0x0000 (0x03E0 - 0x03E0)
-	class AThingActivationVolume : public AStartActivationVolume
-	{
+	class AThingActivationVolume : public AStartActivationVolume {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xa96f2e0a);
 			return ptr;
@@ -4181,15 +3934,13 @@ namespace Classes
 
 	// Class TslGame.InventoryFacade
 	// 0x0020 (0x03C8 - 0x03A8)
-	class AInventoryFacade : public ASubActor
-	{
+	class AInventoryFacade : public ASubActor {
 	public:
 		TArray<TEnumAsByte<EEquipSlotID>>                  AutoSwapEquipSlotID;                                      // 0x03A8(0x0010) (CPF_ZeroConstructor, CPF_Config)
 		class AInventory*                                  Inventory;                                                // 0x03B8(0x0008) (CPF_Net, CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 		class AEquipment*                                  Equipment;                                                // 0x03C0(0x0008) (CPF_Net, CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x7e74fd7a);
 			return ptr;
@@ -4207,15 +3958,13 @@ namespace Classes
 
 	// Class TslGame.Equipment
 	// 0x0050 (0x0428 - 0x03D8)
-	class AEquipment : public AItemSlotContainer
-	{
+	class AEquipment : public AItemSlotContainer {
 	public:
 		struct FScriptMulticastDelegate                    OnEquipmentUpdated;                                       // 0x03D8(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 		unsigned char                                      UnknownData00[0x30];                                      // 0x03E8(0x0030) MISSED OFFSET
 		TArray<class UEquipableItem*>                      Items;                                                    // 0x0418(0x0010) (CPF_Net, CPF_ZeroConstructor, CPF_Transient)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xa196db80);
 			return ptr;
@@ -4248,16 +3997,14 @@ namespace Classes
 
 	// Class TslGame.Inventory
 	// 0x0028 (0x0400 - 0x03D8)
-	class AInventory : public AItemSlotContainer
-	{
+	class AInventory : public AItemSlotContainer {
 	public:
 		struct FScriptMulticastDelegate                    OnInventoryUpdated;                                       // 0x03D8(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 		TArray<class UItem*>                               Items;                                                    // 0x03E8(0x0010) (CPF_Net, CPF_ZeroConstructor, CPF_Transient)
 		float                                              MaxSpace;                                                 // 0x03F8(0x0004) (CPF_Edit, CPF_Net, CPF_ZeroConstructor, CPF_Transient, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x4];                                       // 0x03FC(0x0004) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x30882c84);
 			return ptr;
@@ -4291,14 +4038,12 @@ namespace Classes
 
 	// Class TslGame.ItemExplorerProxy
 	// 0x0020 (0x0428 - 0x0408)
-	class AItemExplorerProxy : public AItemExplorer
-	{
+	class AItemExplorerProxy : public AItemExplorer {
 	public:
 		struct FScriptDelegate                             OnChangeItemExplorerProxy;                                // 0x0408(0x0010) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_InstancedReference)
 		unsigned char                                      UnknownData00[0x10];                                      // 0x0418(0x0010) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xfa7015f8);
 			return ptr;
@@ -4315,8 +4060,7 @@ namespace Classes
 
 	// Class TslGame.CarePackageItem
 	// 0x00B0 (0x05B0 - 0x0500)
-	class ACarePackageItem : public AItemPackage
-	{
+	class ACarePackageItem : public AItemPackage {
 	public:
 		class UClass*                                      ParachuteClass;                                           // 0x0500(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		class UClass*                                      SmokeFxClass;                                             // 0x0508(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
@@ -4344,8 +4088,7 @@ namespace Classes
 		class UAkComponent*                                AkComponent;                                              // 0x0590(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_Transient, CPF_InstancedReference, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData02[0x18];                                      // 0x0598(0x0018) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x61982210);
 			return ptr;
@@ -4359,8 +4102,7 @@ namespace Classes
 
 	// Class TslGame.FloorSnapItemPackage
 	// 0x0018 (0x0518 - 0x0500)
-	class AFloorSnapItemPackage : public AItemPackage
-	{
+	class AFloorSnapItemPackage : public AItemPackage {
 	public:
 		float                                              RayLength;                                                // 0x0500(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		bool                                               bUseWaterSurface;                                         // 0x0504(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
@@ -4369,8 +4111,7 @@ namespace Classes
 		unsigned char                                      UnknownData01[0x4];                                       // 0x050C(0x0004) MISSED OFFSET
 		class UBuoyancyForceComponent*                     BuoyancyForceComponent;                                   // 0x0510(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x393f5a5d);
 			return ptr;
@@ -4381,13 +4122,11 @@ namespace Classes
 
 	// Class TslGame.NearbyInteractiveItemExplorer
 	// 0x0010 (0x0418 - 0x0408)
-	class ANearbyInteractiveItemExplorer : public AItemExplorer
-	{
+	class ANearbyInteractiveItemExplorer : public AItemExplorer {
 	public:
 		TArray<TWeakObjectPtr<class UObject>>              ExplorableItems;                                          // 0x0408(0x0010) (CPF_ZeroConstructor)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x40e68e53);
 			return ptr;
@@ -4398,13 +4137,11 @@ namespace Classes
 
 	// Class TslGame.ThingSpawnProcessor
 	// 0x0010 (0x0038 - 0x0028)
-	class UThingSpawnProcessor : public UObject
-	{
+	class UThingSpawnProcessor : public UObject {
 	public:
 		unsigned char                                      UnknownData00[0x10];                                      // 0x0028(0x0010) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x2ba75a17);
 			return ptr;
@@ -4415,12 +4152,10 @@ namespace Classes
 
 	// Class TslGame.SubThingSpawnProcessor
 	// 0x0000 (0x0028 - 0x0028)
-	class USubThingSpawnProcessor : public UObject
-	{
+	class USubThingSpawnProcessor : public UObject {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xbde5a1f9);
 			return ptr;
@@ -4431,14 +4166,12 @@ namespace Classes
 
 	// Class TslGame.CombinedThingSpawnProcessor
 	// 0x0020 (0x0058 - 0x0038)
-	class UCombinedThingSpawnProcessor : public UThingSpawnProcessor
-	{
+	class UCombinedThingSpawnProcessor : public UThingSpawnProcessor {
 	public:
 		TArray<class UClass*>                              SubProcessorClasses;                                      // 0x0038(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 		TArray<class USubThingSpawnProcessor*>             SubProcessors;                                            // 0x0048(0x0010) (CPF_ZeroConstructor, CPF_Transient)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x17215a24);
 			return ptr;
@@ -4449,16 +4182,14 @@ namespace Classes
 
 	// Class TslGame.PackageSubThingSpawnProcessor
 	// 0x03D0 (0x03F8 - 0x0028)
-	class UPackageSubThingSpawnProcessor : public USubThingSpawnProcessor
-	{
+	class UPackageSubThingSpawnProcessor : public USubThingSpawnProcessor {
 	public:
 		class UDataTable*                                  RawItemSpawnDataTable;                                    // 0x0028(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		class UDataTable*                                  RawItemSpawnTogetherDataTable;                            // 0x0030(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		TArray<struct FPackageSpotGroupProperty>           RawSpotGroupProperties;                                   // 0x0038(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
 		unsigned char                                      UnknownData00[0x3B0];                                     // 0x0048(0x03B0) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x75b53549);
 			return ptr;
@@ -4469,16 +4200,14 @@ namespace Classes
 
 	// Class TslGame.VehicleSubThingSpawnProcessor
 	// 0x03F0 (0x0418 - 0x0028)
-	class UVehicleSubThingSpawnProcessor : public USubThingSpawnProcessor
-	{
+	class UVehicleSubThingSpawnProcessor : public USubThingSpawnProcessor {
 	public:
 		TArray<struct FVehicleSpotGroupProperty>           RawSpotGroupProperties;                                   // 0x0028(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
 		class UDataTable*                                  RawVehicleSpawnDataTable;                                 // 0x0038(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		float                                              SpawnZOffsetFromFloor;                                    // 0x0040(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x3D4];                                     // 0x0044(0x03D4) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xd6217ec9);
 			return ptr;
@@ -4489,8 +4218,7 @@ namespace Classes
 
 	// Class TslGame.Team
 	// 0x0068 (0x0408 - 0x03A0)
-	class ATeam : public AActor
-	{
+	class ATeam : public AActor {
 	public:
 		struct FVector_NetQuantize100                      PlayerLocation;                                           // 0x03A0(0x000C) (CPF_Net, CPF_Transient)
 		struct FRotator                                    PlayerRotation;                                           // 0x03AC(0x000C) (CPF_Net, CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
@@ -4513,8 +4241,7 @@ namespace Classes
 		unsigned char                                      UnknownData02[0x10];                                      // 0x03E8(0x0010) MISSED OFFSET
 		struct FString                                     UniqueId;                                                 // 0x03F8(0x0010) (CPF_Net, CPF_ZeroConstructor, CPF_Transient)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x368865e3);
 			return ptr;
@@ -4545,13 +4272,11 @@ namespace Classes
 
 	// Class TslGame.ThingHolder
 	// 0x00A0 (0x0440 - 0x03A0)
-	class AThingHolder : public AActor
-	{
+	class AThingHolder : public AActor {
 	public:
 		unsigned char                                      UnknownData00[0xA0];                                      // 0x03A0(0x00A0) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x1a0227b6);
 			return ptr;
@@ -4562,13 +4287,11 @@ namespace Classes
 
 	// Class TslGame.ThingSpot
 	// 0x0008 (0x03A8 - 0x03A0)
-	class AThingSpot : public AActor
-	{
+	class AThingSpot : public AActor {
 	public:
 		class UThingSpotComponent*                         SpotComponent;                                            // 0x03A0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x42147084);
 			return ptr;
@@ -4579,16 +4302,14 @@ namespace Classes
 
 	// Class TslGame.ThingSpotComponent
 	// 0x0010 (0x0310 - 0x0300)
-	class UThingSpotComponent : public USceneComponent
-	{
+	class UThingSpotComponent : public USceneComponent {
 	public:
 		TEnumAsByte<EThingSpotGroupType>                   SpotGroupType;                                            // 0x0300(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x3];                                       // 0x0301(0x0003) MISSED OFFSET
 		struct FVector2D                                   RandomRotatorRange;                                       // 0x0304(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData01[0x4];                                       // 0x030C(0x0004) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x5d865c51);
 			return ptr;
@@ -4599,14 +4320,12 @@ namespace Classes
 
 	// Class TslGame.TslAccessoryComponent
 	// 0x0040 (0x0340 - 0x0300)
-	class UTslAccessoryComponent : public USceneComponent
-	{
+	class UTslAccessoryComponent : public USceneComponent {
 	public:
 		struct FTransform                                  InitialTransformAttachmentScene;                          // 0x0300(0x0030) (CPF_Edit, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x10];                                      // 0x0330(0x0010) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x144cfaba);
 			return ptr;
@@ -4620,13 +4339,11 @@ namespace Classes
 
 	// Class TslGame.TslAchievement
 	// 0x0018 (0x03B8 - 0x03A0)
-	class ATslAchievement : public AActor
-	{
+	class ATslAchievement : public AActor {
 	public:
 		unsigned char                                      UnknownData00[0x18];                                      // 0x03A0(0x0018) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xff341342);
 			return ptr;
@@ -4637,15 +4354,13 @@ namespace Classes
 
 	// Class TslGame.TslAIController
 	// 0x0020 (0x04B8 - 0x0498)
-	class ATslAIController : public AAIController
-	{
+	class ATslAIController : public AAIController {
 	public:
 		class UBlackboardComponent*                        BlackboardComp;                                           // 0x0498(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_Transient, CPF_InstancedReference, CPF_IsPlainOldData)
 		class UBehaviorTreeComponent*                      BehaviorComp;                                             // 0x04A0(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_Transient, CPF_InstancedReference, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x10];                                      // 0x04A8(0x0010) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x4828f943);
 			return ptr;
@@ -4660,8 +4375,7 @@ namespace Classes
 
 	// Class TslGame.TslAircraftVehicle
 	// 0x0090 (0x0490 - 0x0400)
-	class ATslAircraftVehicle : public APawn
-	{
+	class ATslAircraftVehicle : public APawn {
 	public:
 		TArray<struct FAircraftParticle>                   AircraftParticles;                                        // 0x0400(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
 		TArray<class ATslParticle*>                        AttachedParticles;                                        // 0x0410(0x0010) (CPF_ZeroConstructor)
@@ -4672,8 +4386,7 @@ namespace Classes
 		float                                              TotalFlyingTime;                                          // 0x0480(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData01[0xC];                                       // 0x0484(0x000C) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xd8c10b59);
 			return ptr;
@@ -4684,8 +4397,7 @@ namespace Classes
 
 	// Class TslGame.AircraftCarePackage
 	// 0x0048 (0x04D8 - 0x0490)
-	class AAircraftCarePackage : public ATslAircraftVehicle
-	{
+	class AAircraftCarePackage : public ATslAircraftVehicle {
 	public:
 		class UClass*                                      CarePackageItemSpawnerClass;                              // 0x0490(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		class UClass*                                      CarePackageItemClass;                                     // 0x0498(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -4693,8 +4405,7 @@ namespace Classes
 		class UGeneralItemSpawner*                         CarePackageItemSpawner;                                   // 0x04B0(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x20];                                      // 0x04B8(0x0020) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xd86cbb7);
 			return ptr;
@@ -4707,8 +4418,7 @@ namespace Classes
 
 	// Class TslGame.TransportAircraftVehicle
 	// 0x0078 (0x0508 - 0x0490)
-	class ATransportAircraftVehicle : public ATslAircraftVehicle
-	{
+	class ATransportAircraftVehicle : public ATslAircraftVehicle {
 	public:
 		unsigned char                                      UnknownData00[0x28];                                      // 0x0490(0x0028) MISSED OFFSET
 		class UAkAudioEvent*                               RideSound;                                                // 0x04B8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
@@ -4723,8 +4433,7 @@ namespace Classes
 		float                                              MaxEjectSpeed;                                            // 0x04F0(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData02[0x14];                                      // 0x04F4(0x0014) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xcdbd3ebb);
 			return ptr;
@@ -4745,8 +4454,7 @@ namespace Classes
 
 	// Class TslGame.TslWheeledVehicle
 	// 0x02C0 (0x06D0 - 0x0410)
-	class ATslWheeledVehicle : public AWheeledVehicle
-	{
+	class ATslWheeledVehicle : public AWheeledVehicle {
 	public:
 		unsigned char                                      UnknownData00[0x10];                                      // 0x0410(0x0010) MISSED OFFSET
 		struct FTimerHandle                                TimerHandle_Horn;                                         // 0x0420(0x0008)
@@ -4831,8 +4539,7 @@ namespace Classes
 		float                                              SteeringYawBias;                                          // 0x06C8(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData12[0x4];                                       // 0x06CC(0x0004) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x1a13103b);
 			return ptr;
@@ -4881,8 +4588,7 @@ namespace Classes
 
 	// Class TslGame.TslFloatingVehicle
 	// 0x0098 (0x0498 - 0x0400)
-	class ATslFloatingVehicle : public APawn
-	{
+	class ATslFloatingVehicle : public APawn {
 	public:
 		unsigned char                                      UnknownData00[0x10];                                      // 0x0400(0x0010) MISSED OFFSET
 		class USkeletalMeshComponent*                      MeshComponent;                                            // 0x0410(0x0008) (CPF_Edit, CPF_ExportObject, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
@@ -4905,8 +4611,7 @@ namespace Classes
 		float                                              FuelMax;                                                  // 0x0490(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData01[0x4];                                       // 0x0494(0x0004) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x389c49e1);
 			return ptr;
@@ -4922,14 +4627,12 @@ namespace Classes
 
 	// Class TslGame.TslWheeledVehicleMovement
 	// 0x0018 (0x0438 - 0x0420)
-	class UTslWheeledVehicleMovement : public UWheeledVehicleMovementComponent4W
-	{
+	class UTslWheeledVehicleMovement : public UWheeledVehicleMovementComponent4W {
 	public:
 		TArray<float>                                      WheelHealthPercentages;                                   // 0x0420(0x0010) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Net, CPF_ZeroConstructor)
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0430(0x0008) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xea00de4);
 			return ptr;
@@ -4961,8 +4664,7 @@ namespace Classes
 
 	// Class TslGame.TslFloatingVehicleMovement
 	// 0x0040 (0x01C0 - 0x0180)
-	class UTslFloatingVehicleMovement : public UPawnMovementComponent
-	{
+	class UTslFloatingVehicleMovement : public UPawnMovementComponent {
 	public:
 		float                                              MaxAcceleration;                                          // 0x0180(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		float                                              Acceleration;                                             // 0x0184(0x0004) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
@@ -4981,8 +4683,7 @@ namespace Classes
 		unsigned char                                      UnknownData02[0x4];                                       // 0x01B8(0x0004) MISSED OFFSET
 		float                                              HitCharacterDuration;                                     // 0x01BC(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x80990fb6);
 			return ptr;
@@ -5002,8 +4703,7 @@ namespace Classes
 
 	// Class TslGame.TslCharacterMovement
 	// 0x0230 (0x0980 - 0x0750)
-	class UTslCharacterMovement : public UCharacterMovementComponent
-	{
+	class UTslCharacterMovement : public UCharacterMovementComponent {
 	public:
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0750(0x0008) MISSED OFFSET
 		float                                              MaxProneSpeed;                                            // 0x0758(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -5075,8 +4775,7 @@ namespace Classes
 		float                                              FallingDamageFactor;                                      // 0x0978(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData05[0x4];                                       // 0x097C(0x0004) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x7a2415d1);
 			return ptr;
@@ -5095,8 +4794,7 @@ namespace Classes
 
 	// Class TslGame.TslVehicleWheel
 	// 0x0100 (0x0200 - 0x0100)
-	class UTslVehicleWheel : public UVehicleWheel
-	{
+	class UTslVehicleWheel : public UVehicleWheel {
 	public:
 		float                                              Health;                                                   // 0x0100(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		float                                              HealthMax;                                                // 0x0104(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
@@ -5137,8 +4835,7 @@ namespace Classes
 		bool                                               bHasLastStatus;                                           // 0x01FB(0x0001) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData07[0x4];                                       // 0x01FC(0x0004) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xe871e98);
 			return ptr;
@@ -5149,8 +4846,7 @@ namespace Classes
 
 	// Class TslGame.TslAnimInstance
 	// 0x0898 (0x0D30 - 0x0498)
-	class UTslAnimInstance : public UAnimInstance
-	{
+	class UTslAnimInstance : public UAnimInstance {
 	public:
 		struct FScriptMulticastDelegate                    WeaponFire;                                               // 0x0498(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 		struct FScriptMulticastDelegate                    WeaponFireCycle;                                          // 0x04A8(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
@@ -5461,8 +5157,7 @@ namespace Classes
 		float                                              SprintWeaponLoweringScalar_CP;                            // 0x0D28(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		float                                              ThrowStateSwitchInterpSpeed;                              // 0x0D2C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x37118367);
 			return ptr;
@@ -5515,8 +5210,7 @@ namespace Classes
 
 	// Class TslGame.LobbyHUD
 	// 0x00E0 (0x09B0 - 0x08D0)
-	class ALobbyHUD : public ATslHUD
-	{
+	class ALobbyHUD : public ATslHUD {
 	public:
 		struct FScriptMulticastDelegate                    OnCreateCharacter;                                        // 0x08D0(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 		struct FScriptMulticastDelegate                    OnDestroyCharacter;                                       // 0x08E0(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
@@ -5530,8 +5224,7 @@ namespace Classes
 		unsigned char                                      UnknownData01[0x50];                                      // 0x0950(0x0050) MISSED OFFSET
 		struct FViewTargetTransitionParams                 ViewTargetTransitionParams;                               // 0x09A0(0x0010) (CPF_Edit)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xcc35ff4b);
 			return ptr;
@@ -5548,13 +5241,11 @@ namespace Classes
 
 	// Class TslGame.TslEntryPlayerController
 	// 0x0008 (0x06D8 - 0x06D0)
-	class ATslEntryPlayerController : public ATslBasePlayerController
-	{
+	class ATslEntryPlayerController : public ATslBasePlayerController {
 	public:
 		class UVivoxLobbyComponent*                        VivoxComponent;                                           // 0x06D0(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x70c47e8);
 			return ptr;
@@ -5568,16 +5259,14 @@ namespace Classes
 
 	// Class TslGame.PerfBotPlayerController
 	// 0x0060 (0x0A68 - 0x0A08)
-	class APerfBotPlayerController : public ATslPlayerController
-	{
+	class APerfBotPlayerController : public ATslPlayerController {
 	public:
 		int                                                AmmoClips;                                                // 0x0A08(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x4];                                       // 0x0A0C(0x0004) MISSED OFFSET
 		class UClass*                                      WeaponType;                                               // 0x0A10(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData01[0x50];                                      // 0x0A18(0x0050) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x22a9e47b);
 			return ptr;
@@ -5591,13 +5280,11 @@ namespace Classes
 
 	// Class TslGame.TslDemoSpectator
 	// 0x0028 (0x0A30 - 0x0A08)
-	class ATslDemoSpectator : public ATslPlayerController
-	{
+	class ATslDemoSpectator : public ATslPlayerController {
 	public:
 		unsigned char                                      UnknownData00[0x28];                                      // 0x0A08(0x0028) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x80e47297);
 			return ptr;
@@ -5608,12 +5295,10 @@ namespace Classes
 
 	// Class TslGame.TslPlayerController_Menu
 	// 0x0000 (0x0A08 - 0x0A08)
-	class ATslPlayerController_Menu : public ATslPlayerController
-	{
+	class ATslPlayerController_Menu : public ATslPlayerController {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x15f37e28);
 			return ptr;
@@ -5624,13 +5309,11 @@ namespace Classes
 
 	// Class TslGame.TslBotAIController
 	// 0x0020 (0x04B8 - 0x0498)
-	class ATslBotAIController : public AAIController
-	{
+	class ATslBotAIController : public AAIController {
 	public:
 		unsigned char                                      UnknownData00[0x20];                                      // 0x0498(0x0020) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x94df8d82);
 			return ptr;
@@ -5641,14 +5324,12 @@ namespace Classes
 
 	// Class TslGame.CharacterBreathBuff
 	// 0x0008 (0x0408 - 0x0400)
-	class ACharacterBreathBuff : public ATslBuff
-	{
+	class ACharacterBreathBuff : public ATslBuff {
 	public:
 		float                                              BreathPerTick;                                            // 0x0400(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x4];                                       // 0x0404(0x0004) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x24abda40);
 			return ptr;
@@ -5662,12 +5343,10 @@ namespace Classes
 
 	// Class TslGame.TslBuoyancyForceComponent
 	// 0x0000 (0x03A0 - 0x03A0)
-	class UTslBuoyancyForceComponent : public UBuoyancyForceComponent
-	{
+	class UTslBuoyancyForceComponent : public UBuoyancyForceComponent {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xc11cbb1d);
 			return ptr;
@@ -5678,13 +5357,11 @@ namespace Classes
 
 	// Class TslGame.TslCameraComponent
 	// 0x0010 (0x0870 - 0x0860)
-	class UTslCameraComponent : public UCameraComponent
-	{
+	class UTslCameraComponent : public UCameraComponent {
 	public:
 		unsigned char                                      UnknownData00[0x10];                                      // 0x0860(0x0010) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xea183b81);
 			return ptr;
@@ -5695,8 +5372,7 @@ namespace Classes
 
 	// Class TslGame.TslCharacterProxy
 	// 0x0030 (0x07F0 - 0x07C0)
-	class ATslCharacterProxy : public ACharacter
-	{
+	class ATslCharacterProxy : public ACharacter {
 	public:
 		unsigned char                                      UnknownData00[0x8];                                       // 0x07C0(0x0008) MISSED OFFSET
 		TArray<class UWeaponClone*>                        ArmedWeapons;                                             // 0x07C8(0x0010) (CPF_ZeroConstructor)
@@ -5704,8 +5380,7 @@ namespace Classes
 		float                                              WeaponUpdateIntervalSeconds;                              // 0x07E0(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData01[0xC];                                       // 0x07E4(0x000C) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x510e5612);
 			return ptr;
@@ -5722,8 +5397,7 @@ namespace Classes
 
 	// Class TslGame.TslCharacterSpringArmComponent
 	// 0x00D0 (0x0460 - 0x0390)
-	class UTslCharacterSpringArmComponent : public USpringArmComponent
-	{
+	class UTslCharacterSpringArmComponent : public USpringArmComponent {
 	public:
 		unsigned char                                      UnknownData00[0x4];                                       // 0x0390(0x0004) MISSED OFFSET
 		struct FVector                                     DefaultSocketOffset;                                      // 0x0394(0x000C) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -5753,8 +5427,7 @@ namespace Classes
 		float                                              SpringArmRestoreInterpSpeed;                              // 0x0454(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData02[0x8];                                       // 0x0458(0x0008) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x4fd00896);
 			return ptr;
@@ -5765,8 +5438,7 @@ namespace Classes
 
 	// Class TslGame.TslCharacterValidateLocationComponent
 	// 0x0028 (0x0120 - 0x00F8)
-	class UTslCharacterValidateLocationComponent : public UActorComponent
-	{
+	class UTslCharacterValidateLocationComponent : public UActorComponent {
 	public:
 		float                                              ValidLocationCacheInterval;                               // 0x00F8(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x10];                                      // 0x00FC(0x0010) MISSED OFFSET
@@ -5776,8 +5448,7 @@ namespace Classes
 		float                                              MaxAdjustRange;                                           // 0x0118(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		int                                                MaxAdjustCount;                                           // 0x011C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x3b2bd3aa);
 			return ptr;
@@ -5788,13 +5459,11 @@ namespace Classes
 
 	// Class TslGame.TslChatWidgetStyle
 	// 0x0988 (0x09B8 - 0x0030)
-	class UTslChatWidgetStyle : public USlateWidgetStyleContainerBase
-	{
+	class UTslChatWidgetStyle : public USlateWidgetStyleContainerBase {
 	public:
 		struct FTslChatStyle                               ChatStyle;                                                // 0x0030(0x0988) (CPF_Edit)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xc92724b2);
 			return ptr;
@@ -5805,13 +5474,11 @@ namespace Classes
 
 	// Class TslGame.TslCheatManager
 	// 0x0010 (0x0088 - 0x0078)
-	class UTslCheatManager : public UCheatManager
-	{
+	class UTslCheatManager : public UCheatManager {
 	public:
 		unsigned char                                      UnknownData00[0x10];                                      // 0x0078(0x0010) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x9db2fdd3);
 			return ptr;
@@ -5846,14 +5513,12 @@ namespace Classes
 
 	// Class TslGame.TslCoherentWidget
 	// 0x0010 (0x0470 - 0x0460)
-	class UTslCoherentWidget : public UCoherentUIGTWidget
-	{
+	class UTslCoherentWidget : public UCoherentUIGTWidget {
 	public:
 		class UCoherentWidgetBinder*                       WidgetBinder;                                             // 0x0460(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0468(0x0008) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x5d0b9bcb);
 			return ptr;
@@ -5866,13 +5531,11 @@ namespace Classes
 
 	// Class TslGame.TslConsole
 	// 0x0008 (0x0138 - 0x0130)
-	class UTslConsole : public UConsole
-	{
+	class UTslConsole : public UConsole {
 	public:
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0130(0x0008) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x4581d690);
 			return ptr;
@@ -5883,8 +5546,7 @@ namespace Classes
 
 	// Class TslGame.TslConsoleSetting
 	// 0x0090 (0x0100 - 0x0070)
-	class UTslConsoleSetting : public UConsoleSettings
-	{
+	class UTslConsoleSetting : public UConsoleSettings {
 	public:
 		TArray<struct FString>                             AutoCompleteItemPaths;                                    // 0x0070(0x0010) (CPF_ZeroConstructor, CPF_Config)
 		TArray<struct FString>                             AutoCompleteItemKinds;                                    // 0x0080(0x0010) (CPF_ZeroConstructor, CPF_Config)
@@ -5896,8 +5558,7 @@ namespace Classes
 		TArray<struct FString>                             AutoCompleteFemaleHair;                                   // 0x00E0(0x0010) (CPF_ZeroConstructor, CPF_Config)
 		TArray<struct FString>                             AutoCompleteFemaleFace;                                   // 0x00F0(0x0010) (CPF_ZeroConstructor, CPF_Config)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x58196754);
 			return ptr;
@@ -5908,12 +5569,10 @@ namespace Classes
 
 	// Class TslGame.TslCustomizableSkeletalComponent
 	// 0x0000 (0x03C0 - 0x03C0)
-	class UTslCustomizableSkeletalComponent : public UCustomizableSkeletalComponent
-	{
+	class UTslCustomizableSkeletalComponent : public UCustomizableSkeletalComponent {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x6470eacd);
 			return ptr;
@@ -5924,8 +5583,7 @@ namespace Classes
 
 	// Class TslGame.TslDamageField
 	// 0x0038 (0x03D8 - 0x03A0)
-	class ATslDamageField : public AActor
-	{
+	class ATslDamageField : public AActor {
 	public:
 		unsigned char                                      UnknownData00[0x4];                                       // 0x03A0(0x0004) MISSED OFFSET
 		float                                              DamageRadius;                                             // 0x03A4(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
@@ -5936,8 +5594,7 @@ namespace Classes
 		unsigned char                                      UnknownData01[0x10];                                      // 0x03C0(0x0010) MISSED OFFSET
 		class UClass*                                      DebuffTemplate;                                           // 0x03D0(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x44e47e5a);
 			return ptr;
@@ -5948,8 +5605,7 @@ namespace Classes
 
 	// Class TslGame.TslDamageFieldContainer
 	// 0x0040 (0x03E0 - 0x03A0)
-	class ATslDamageFieldContainer : public AActor
-	{
+	class ATslDamageFieldContainer : public AActor {
 	public:
 		unsigned char                                      UnknownData00[0x8];                                       // 0x03A0(0x0008) MISSED OFFSET
 		TArray<struct FDamageFieldLayout>                  DamageFieldLayouts;                                       // 0x03A8(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
@@ -5961,8 +5617,7 @@ namespace Classes
 		float                                              FlameDelayInWall;                                         // 0x03D0(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData03[0xC];                                       // 0x03D4(0x000C) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xf56a25d7);
 			return ptr;
@@ -5973,12 +5628,10 @@ namespace Classes
 
 	// Class TslGame.TslDestructibleComponent
 	// 0x0000 (0x09C0 - 0x09C0)
-	class UTslDestructibleComponent : public UDestructibleComponent
-	{
+	class UTslDestructibleComponent : public UDestructibleComponent {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x7561279c);
 			return ptr;
@@ -5991,14 +5644,12 @@ namespace Classes
 
 	// Class TslGame.TslDestructibleContainer
 	// 0x0008 (0x03A8 - 0x03A0)
-	class ATslDestructibleContainer : public AActor
-	{
+	class ATslDestructibleContainer : public AActor {
 	public:
 		unsigned char                                      bFlag : 1;                                                // 0x03A0(0x0001) (CPF_Net)
 		unsigned char                                      UnknownData00[0x7];                                       // 0x03A1(0x0007) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xfe0125c4);
 			return ptr;
@@ -6011,8 +5662,7 @@ namespace Classes
 
 	// Class TslGame.TslDoor
 	// 0x0290 (0x0640 - 0x03B0)
-	class ATslDoor : public AStaticMeshActor
-	{
+	class ATslDoor : public AStaticMeshActor {
 	public:
 		class UStaticMeshComponent*                        DoorMeshComponent;                                        // 0x03B0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
 		class UAkComponent*                                AkSound;                                                  // 0x03B8(0x0008) (CPF_Edit, CPF_ExportObject, CPF_ZeroConstructor, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
@@ -6044,8 +5694,7 @@ namespace Classes
 		struct FDoorBreakingStateLegacy                    DoorBreakingState;                                        // 0x0620(0x0001) (CPF_Net)
 		unsigned char                                      UnknownData05[0x1F];                                      // 0x0621(0x001F) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xd3ab8951);
 			return ptr;
@@ -6061,12 +5710,10 @@ namespace Classes
 
 	// Class TslGame.TslEngine
 	// 0x0000 (0x0D50 - 0x0D50)
-	class UTslEngine : public UGameEngine
-	{
+	class UTslEngine : public UGameEngine {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xf9e024af);
 			return ptr;
@@ -6077,12 +5724,10 @@ namespace Classes
 
 	// Class TslGame.TslEntryGameMode
 	// 0x0000 (0x0470 - 0x0470)
-	class ATslEntryGameMode : public AGameMode
-	{
+	class ATslEntryGameMode : public AGameMode {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xfabf1490);
 			return ptr;
@@ -6093,8 +5738,7 @@ namespace Classes
 
 	// Class TslGame.TslExplosionEffect
 	// 0x0228 (0x05C8 - 0x03A0)
-	class ATslExplosionEffect : public AActor
-	{
+	class ATslExplosionEffect : public AActor {
 	public:
 		class UParticleSystem*                             ExplosionFX;                                              // 0x03A0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		class UPointLightComponent*                        ExplosionLight;                                           // 0x03A8(0x0008) (CPF_Edit, CPF_ExportObject, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
@@ -6107,8 +5751,7 @@ namespace Classes
 		struct FHitResult                                  SurfaceHit;                                               // 0x0530(0x0088) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData02[0x10];                                      // 0x05B8(0x0010) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x8c0a82dd);
 			return ptr;
@@ -6121,12 +5764,10 @@ namespace Classes
 
 	// Class TslGame.TslExplosionReactionInterface
 	// 0x0000 (0x0028 - 0x0028)
-	class UTslExplosionReactionInterface : public UInterface
-	{
+	class UTslExplosionReactionInterface : public UInterface {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x120c16a0);
 			return ptr;
@@ -6139,8 +5780,7 @@ namespace Classes
 
 	// Class TslGame.TslFence
 	// 0x0098 (0x0438 - 0x03A0)
-	class ATslFence : public AActor
-	{
+	class ATslFence : public AActor {
 	public:
 		class USplineComponent*                            SplineComponent;                                          // 0x03A0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
 		TEnumAsByte<ETslFenceSelector>                     BeginSelector;                                            // 0x03A8(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -6167,8 +5807,7 @@ namespace Classes
 		class UStaticMesh*                                 MiddleMesh4;                                              // 0x0428(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		struct FCollisionProfileName                       FenceCollisionProfile;                                    // 0x0430(0x0008) (CPF_Edit)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x8a457a94);
 			return ptr;
@@ -6181,8 +5820,7 @@ namespace Classes
 
 	// Class TslGame.TslReactionData
 	// 0x0040 (0x0068 - 0x0028)
-	class UTslReactionData : public UDataAsset
-	{
+	class UTslReactionData : public UDataAsset {
 	public:
 		float                                              DestroyDelay;                                             // 0x0028(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		struct FVehicleReactionData                        VehicleReactionData;                                      // 0x002C(0x000C) (CPF_Edit)
@@ -6192,8 +5830,7 @@ namespace Classes
 		class UAkAudioEvent*                               PhysicsReactionSoundAk;                                   // 0x0058(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class UAkAudioEvent*                               DestructibleReactionSoundAk;                              // 0x0060(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x1d79cfe0);
 			return ptr;
@@ -6204,15 +5841,13 @@ namespace Classes
 
 	// Class TslGame.TslReactionComponent
 	// 0x0040 (0x0850 - 0x0810)
-	class UTslReactionComponent : public UStaticMeshComponent
-	{
+	class UTslReactionComponent : public UStaticMeshComponent {
 	public:
 		class UTslReactionData*                            ReactionData;                                             // 0x0810(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class UDestructibleMesh*                           ReactionDM;                                               // 0x0818(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x30];                                      // 0x0820(0x0030) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xf44011c5);
 			return ptr;
@@ -6228,8 +5863,7 @@ namespace Classes
 
 	// Class TslGame.TslBreakableFence
 	// 0x0068 (0x04A0 - 0x0438)
-	class ATslBreakableFence : public ATslFence
-	{
+	class ATslBreakableFence : public ATslFence {
 	public:
 		class UTslReactionData*                            ReactionData;                                             // 0x0438(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class UDestructibleMesh*                           BeginDestuctible1;                                        // 0x0440(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -6245,8 +5879,7 @@ namespace Classes
 		class UDestructibleMesh*                           MiddleDestuctible3;                                       // 0x0490(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class UDestructibleMesh*                           MiddleDestuctible4;                                       // 0x0498(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xd0f8c229);
 			return ptr;
@@ -6257,12 +5890,10 @@ namespace Classes
 
 	// Class TslGame.TslStaticFence
 	// 0x0000 (0x0438 - 0x0438)
-	class ATslStaticFence : public ATslFence
-	{
+	class ATslStaticFence : public ATslFence {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x9de685be);
 			return ptr;
@@ -6273,12 +5904,10 @@ namespace Classes
 
 	// Class TslGame.TslFocusableWidgetInterface
 	// 0x0000 (0x0028 - 0x0028)
-	class UTslFocusableWidgetInterface : public UInterface
-	{
+	class UTslFocusableWidgetInterface : public UInterface {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xc1148688);
 			return ptr;
@@ -6310,12 +5939,10 @@ namespace Classes
 
 	// Class TslGame.TslGame_Menu
 	// 0x0000 (0x0470 - 0x0470)
-	class ATslGame_Menu : public AGameMode
-	{
+	class ATslGame_Menu : public AGameMode {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x1b59995f);
 			return ptr;
@@ -6325,9 +5952,8 @@ namespace Classes
 
 
 	// Class TslGame.TslSettings
-	// 0x0380 (0x03A8 - 0x0028)
-	class UTslSettings : public UObject
-	{
+	// 0x0388 (0x03B0 - 0x0028)
+	class UTslSettings : public UObject {
 	public:
 		float                                              RepDistance_Item;                                         // 0x0028(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 		float                                              RepDistance_Character;                                    // 0x002C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
@@ -6415,27 +6041,28 @@ namespace Classes
 		float                                              ClientSideHitLeeway;                                      // 0x0288(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 		float                                              LogClientSideHitLeeway;                                   // 0x028C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 		float                                              ClientSideOriginDistanceLeeway;                           // 0x0290(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-		float                                              TravelDistanceLeeway;                                     // 0x0294(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-		float                                              AllowedHitLag;                                            // 0x0298(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-		float                                              LogMinHitLag;                                             // 0x029C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-		float                                              HackDetectionSpeed;                                       // 0x02A0(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-		unsigned char                                      UnknownData07[0x4];                                       // 0x02A4(0x0004) MISSED OFFSET
-		TArray<struct FOverrideScalability>                OverrideScalabilities;                                    // 0x02A8(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
-		float                                              FakeDoorBlockMaxY;                                        // 0x02B8(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-		unsigned char                                      UnknownData08[0x4];                                       // 0x02BC(0x0004) MISSED OFFSET
-		TArray<struct FReportCauseData>                    ReportCauses;                                             // 0x02C0(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
-		TArray<struct FSubjectToReport>                    SubjectToReport;                                          // 0x02D0(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
-		float                                              FreelookRecoveryInterpSpeed;                              // 0x02E0(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-		unsigned char                                      UnknownData09[0x4];                                       // 0x02E4(0x0004) MISSED OFFSET
-		TMap<struct FName, float>                          GamepadSensitiveMultiplier;                               // 0x02E8(0x0050) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
-		bool                                               bIsESports;                                               // 0x0338(0x0001) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-		unsigned char                                      UnknownData10[0x57];                                      // 0x0339(0x0057) MISSED OFFSET
-		class UCurveFloat*                                 LoadedMouseSensitivityCurve;                              // 0x0390(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-		class UCurveFloat*                                 LoadedGammaCurve;                                         // 0x0398(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-		class UTextureRenderTarget2D*                      CharacterStudioRenderTarget;                              // 0x03A0(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+		float                                              ClientSideOriginDistanceLeewayInPlace;                    // 0x0294(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+		float                                              ClientSideOriginDistanceMax;                              // 0x0298(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+		float                                              TravelDistanceLeeway;                                     // 0x029C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+		float                                              AllowedHitLag;                                            // 0x02A0(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+		float                                              LogMinHitLag;                                             // 0x02A4(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+		float                                              HackDetectionSpeed;                                       // 0x02A8(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+		unsigned char                                      UnknownData07[0x4];                                       // 0x02AC(0x0004) MISSED OFFSET
+		TArray<struct FOverrideScalability>                OverrideScalabilities;                                    // 0x02B0(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
+		float                                              FakeDoorBlockMaxY;                                        // 0x02C0(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+		unsigned char                                      UnknownData08[0x4];                                       // 0x02C4(0x0004) MISSED OFFSET
+		TArray<struct FReportCauseData>                    ReportCauses;                                             // 0x02C8(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
+		TArray<struct FSubjectToReport>                    SubjectToReport;                                          // 0x02D8(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
+		float                                              FreelookRecoveryInterpSpeed;                              // 0x02E8(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+		unsigned char                                      UnknownData09[0x4];                                       // 0x02EC(0x0004) MISSED OFFSET
+		TMap<struct FName, float>                          GamepadSensitiveMultiplier;                               // 0x02F0(0x0050) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
+		bool                                               bIsESports;                                               // 0x0340(0x0001) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+		unsigned char                                      UnknownData10[0x57];                                      // 0x0341(0x0057) MISSED OFFSET
+		class UCurveFloat*                                 LoadedMouseSensitivityCurve;                              // 0x0398(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+		class UCurveFloat*                                 LoadedGammaCurve;                                         // 0x03A0(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+		class UTextureRenderTarget2D*                      CharacterStudioRenderTarget;                              // 0x03A8(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xa6f787e2);
 			return ptr;
@@ -6453,8 +6080,7 @@ namespace Classes
 
 	// Class TslGame.TslGameInstance
 	// 0x04F0 (0x05E0 - 0x00F0)
-	class UTslGameInstance : public UGameInstance
-	{
+	class UTslGameInstance : public UGameInstance {
 	public:
 		struct FString                                     WelcomeScreenMap;                                         // 0x00F0(0x0010) (CPF_ZeroConstructor, CPF_Config)
 		bool                                               bUseLobbyWidget;                                          // 0x0100(0x0001) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
@@ -6480,8 +6106,7 @@ namespace Classes
 		class UGameEventObserver*                          GameEventObserver;                                        // 0x05A0(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData07[0x38];                                      // 0x05A8(0x0038) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xa0813ce2);
 			return ptr;
@@ -6523,8 +6148,7 @@ namespace Classes
 
 	// Class TslGame.TslGameMode
 	// 0x0340 (0x07B0 - 0x0470)
-	class ATslGameMode : public AGameMode
-	{
+	class ATslGameMode : public AGameMode {
 	public:
 		class UClass*                                      MalePawnClass;                                            // 0x0470(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class UClass*                                      PerfBotPlayerControllerClass;                             // 0x0478(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_NoClear, CPF_IsPlainOldData)
@@ -6585,8 +6209,7 @@ namespace Classes
 		TArray<struct FTeams>                              Teams;                                                    // 0x06F0(0x0010) (CPF_ZeroConstructor, CPF_Transient)
 		unsigned char                                      UnknownData07[0xB0];                                      // 0x0700(0x00B0) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x11317352);
 			return ptr;
@@ -6613,12 +6236,10 @@ namespace Classes
 
 	// Class TslGame.TslGameOption
 	// 0x0000 (0x0028 - 0x0028)
-	class UTslGameOption : public UBlueprintFunctionLibrary
-	{
+	class UTslGameOption : public UBlueprintFunctionLibrary {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xe5eec5e8);
 			return ptr;
@@ -6754,13 +6375,11 @@ namespace Classes
 
 	// Class TslGame.TslGameSession
 	// 0x0318 (0x06D0 - 0x03B8)
-	class ATslGameSession : public AGameSession
-	{
+	class ATslGameSession : public AGameSession {
 	public:
 		unsigned char                                      UnknownData00[0x318];                                     // 0x03B8(0x0318) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x15775c11);
 			return ptr;
@@ -6771,8 +6390,7 @@ namespace Classes
 
 	// Class TslGame.TslGameState
 	// 0x00B0 (0x04B0 - 0x0400)
-	class ATslGameState : public AGameState
-	{
+	class ATslGameState : public AGameState {
 	public:
 		struct FString                                     MatchId;                                                  // 0x0400(0x0010) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_Transient)
 		struct FString                                     MatchShortGuid;                                           // 0x0410(0x0010) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Net, CPF_ZeroConstructor, CPF_Transient)
@@ -6805,8 +6423,7 @@ namespace Classes
 		float                                              SafetyZoneBeginRadius;                                    // 0x04A4(0x0004) (CPF_BlueprintVisible, CPF_Net, CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 		class ALevelAttribute*                             LevelAttribute;                                           // 0x04A8(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xeae441be);
 			return ptr;
@@ -6825,8 +6442,7 @@ namespace Classes
 
 	// Class TslGame.TslGameUserSettings
 	// 0x0108 (0x0208 - 0x0100)
-	class UTslGameUserSettings : public UGameUserSettings
-	{
+	class UTslGameUserSettings : public UGameUserSettings {
 	public:
 		float                                              ScreenScale;                                              // 0x0100(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 		float                                              Gamma;                                                    // 0x0104(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
@@ -6885,8 +6501,7 @@ namespace Classes
 		TArray<struct FString>                             PreloadingMaps;                                           // 0x01E8(0x0010) (CPF_ZeroConstructor, CPF_Config)
 		struct FScriptMulticastDelegate                    OnGameUserSettingApplied;                                 // 0x01F8(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xec293359);
 			return ptr;
@@ -6897,13 +6512,11 @@ namespace Classes
 
 	// Class TslGame.TslGameViewportClient
 	// 0x0060 (0x04F0 - 0x0490)
-	class UTslGameViewportClient : public UGameViewportClient
-	{
+	class UTslGameViewportClient : public UGameViewportClient {
 	public:
 		unsigned char                                      UnknownData00[0x60];                                      // 0x0490(0x0060) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xb11ab0f0);
 			return ptr;
@@ -6914,8 +6527,7 @@ namespace Classes
 
 	// Class TslGame.TslGlassWindowComponent
 	// 0x0030 (0x0840 - 0x0810)
-	class UTslGlassWindowComponent : public UStaticMeshComponent
-	{
+	class UTslGlassWindowComponent : public UStaticMeshComponent {
 	public:
 		float                                              DestroyDelayAfterDestructed;                              // 0x0810(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x4];                                       // 0x0814(0x0004) MISSED OFFSET
@@ -6925,8 +6537,7 @@ namespace Classes
 		unsigned char                                      bDestroyed : 1;                                           // 0x0828(0x0001) (CPF_Net)
 		unsigned char                                      UnknownData01[0x17];                                      // 0x0829(0x0017) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xe2dec544);
 			return ptr;
@@ -6941,8 +6552,7 @@ namespace Classes
 
 	// Class TslGame.TslGunAnimInstance
 	// 0x00D8 (0x0570 - 0x0498)
-	class UTslGunAnimInstance : public UAnimInstance
-	{
+	class UTslGunAnimInstance : public UAnimInstance {
 	public:
 		struct FScriptMulticastDelegate                    WeaponFire;                                               // 0x0498(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 		struct FScriptMulticastDelegate                    WeaponFireCycle;                                          // 0x04A8(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
@@ -6960,8 +6570,7 @@ namespace Classes
 		struct FName                                       Name_FireMode_Burst;                                      // 0x0560(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		struct FName                                       Name_FireMode_Fullauto;                                   // 0x0568(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xd61b04db);
 			return ptr;
@@ -6974,15 +6583,13 @@ namespace Classes
 
 	// Class TslGame.TslHealthGaugeData
 	// 0x0020 (0x0048 - 0x0028)
-	class UTslHealthGaugeData : public UDataAsset
-	{
+	class UTslHealthGaugeData : public UDataAsset {
 	public:
 		TArray<struct FHealthColorData>                    HealthGaugeColors;                                        // 0x0028(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
 		struct FFloatInterval                              WarningRage;                                              // 0x0038(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		class UCurveLinearColor*                           GroggyColorCurve;                                         // 0x0040(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x86bb53b0);
 			return ptr;
@@ -6995,8 +6602,7 @@ namespace Classes
 
 	// Class TslGame.TslImpactEffect
 	// 0x0250 (0x05F0 - 0x03A0)
-	class ATslImpactEffect : public AActor
-	{
+	class ATslImpactEffect : public AActor {
 	public:
 		class UParticleSystem*                             DefaultFX;                                                // 0x03A0(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		class UParticleSystem*                             ConcreteFX;                                               // 0x03A8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
@@ -7013,8 +6619,7 @@ namespace Classes
 		class UParticleSystemComponent*                    ParticleCom;                                              // 0x05E0(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 		class UAkComponent*                                AKCom;                                                    // 0x05E8(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xda03748);
 			return ptr;
@@ -7025,8 +6630,7 @@ namespace Classes
 
 	// Class TslGame.TslInstancedGlassWindowComponent
 	// 0x0110 (0x0AF0 - 0x09E0)
-	class UTslInstancedGlassWindowComponent : public UGridInstancedStaticMeshComponent
-	{
+	class UTslInstancedGlassWindowComponent : public UGridInstancedStaticMeshComponent {
 	public:
 		unsigned char                                      UnknownData00[0x8];                                       // 0x09E0(0x0008) MISSED OFFSET
 		class UDestructibleMesh*                           DestructibleMesh;                                         // 0x09E8(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -7039,8 +6643,7 @@ namespace Classes
 		TArray<int>                                        PendingDestroyInstances;                                  // 0x0A18(0x0010) (CPF_Net, CPF_ZeroConstructor)
 		unsigned char                                      UnknownData03[0xC8];                                      // 0x0A28(0x00C8) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xb4d08509);
 			return ptr;
@@ -7056,8 +6659,7 @@ namespace Classes
 
 	// Class TslGame.TslInstancedReactionComponent
 	// 0x01E0 (0x0BC0 - 0x09E0)
-	class UTslInstancedReactionComponent : public UGridInstancedStaticMeshComponent
-	{
+	class UTslInstancedReactionComponent : public UGridInstancedStaticMeshComponent {
 	public:
 		unsigned char                                      UnknownData00[0x8];                                       // 0x09E0(0x0008) MISSED OFFSET
 		TArray<int>                                        PendingDestroyInstances;                                  // 0x09E8(0x0010) (CPF_Net, CPF_ZeroConstructor)
@@ -7065,8 +6667,7 @@ namespace Classes
 		class UDestructibleMesh*                           ReactionDM;                                               // 0x0A00(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData01[0x1B8];                                     // 0x0A08(0x01B8) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x86f1453e);
 			return ptr;
@@ -7082,16 +6683,14 @@ namespace Classes
 
 	// Class TslGame.TslLevelScriptActor
 	// 0x00A8 (0x0450 - 0x03A8)
-	class ATslLevelScriptActor : public ALevelScriptActor
-	{
+	class ATslLevelScriptActor : public ALevelScriptActor {
 	public:
 		TArray<struct FWeatherLevelInfo>                   WeatherLevelInfos;                                        // 0x03A8(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
 		class UMaterialParameterCollection*                GlobalMPC;                                                // 0x03B8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		int                                                SelectedWeatherLevelIndex;                                // 0x03C0(0x0004) (CPF_Net, CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x8C];                                      // 0x03C4(0x008C) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xd2a141cf);
 			return ptr;
@@ -7107,8 +6706,7 @@ namespace Classes
 
 	// Class TslGame.TslPersistentUser
 	// 0x0030 (0x0058 - 0x0028)
-	class UTslPersistentUser : public USaveGame
-	{
+	class UTslPersistentUser : public USaveGame {
 	public:
 		float                                              Gamma;                                                    // 0x0028(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		float                                              AimSensitivity;                                           // 0x002C(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -7117,8 +6715,7 @@ namespace Classes
 		float                                              ScreenScalePercentage;                                    // 0x0034(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData01[0x20];                                      // 0x0038(0x0020) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xf0fd784b);
 			return ptr;
@@ -7129,13 +6726,11 @@ namespace Classes
 
 	// Class TslGame.TslLocalPlayer
 	// 0x0008 (0x0198 - 0x0190)
-	class UTslLocalPlayer : public ULocalPlayer
-	{
+	class UTslLocalPlayer : public ULocalPlayer {
 	public:
 		class UTslPersistentUser*                          PersistentUser;                                           // 0x0190(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xcbe4cd69);
 			return ptr;
@@ -7146,13 +6741,11 @@ namespace Classes
 
 	// Class TslGame.TslMenuItemWidgetStyle
 	// 0x01B8 (0x01E8 - 0x0030)
-	class UTslMenuItemWidgetStyle : public USlateWidgetStyleContainerBase
-	{
+	class UTslMenuItemWidgetStyle : public USlateWidgetStyleContainerBase {
 	public:
 		struct FTslMenuItemStyle                           MenuItemStyle;                                            // 0x0030(0x01B8) (CPF_Edit)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x98bfdbec);
 			return ptr;
@@ -7163,13 +6756,11 @@ namespace Classes
 
 	// Class TslGame.TslMenuSoundsWidgetStyle
 	// 0x0038 (0x0068 - 0x0030)
-	class UTslMenuSoundsWidgetStyle : public USlateWidgetStyleContainerBase
-	{
+	class UTslMenuSoundsWidgetStyle : public USlateWidgetStyleContainerBase {
 	public:
 		struct FTslMenuSoundsStyle                         SoundsStyle;                                              // 0x0030(0x0038) (CPF_Edit)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xa59dd723);
 			return ptr;
@@ -7180,13 +6771,11 @@ namespace Classes
 
 	// Class TslGame.TslMenuWidgetStyle
 	// 0x0218 (0x0248 - 0x0030)
-	class UTslMenuWidgetStyle : public USlateWidgetStyleContainerBase
-	{
+	class UTslMenuWidgetStyle : public USlateWidgetStyleContainerBase {
 	public:
 		struct FTslMenuStyle                               MenuStyle;                                                // 0x0030(0x0218) (CPF_Edit)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x9f39a77f);
 			return ptr;
@@ -7197,13 +6786,11 @@ namespace Classes
 
 	// Class TslGame.TslModularBuilding
 	// 0x0100 (0x04A0 - 0x03A0)
-	class ATslModularBuilding : public AActor
-	{
+	class ATslModularBuilding : public AActor {
 	public:
 		unsigned char                                      UnknownData00[0x100];                                     // 0x03A0(0x0100) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xafb9228d);
 			return ptr;
@@ -7223,8 +6810,7 @@ namespace Classes
 
 	// Class TslGame.TslParticle
 	// 0x0058 (0x03F8 - 0x03A0)
-	class ATslParticle : public AActor
-	{
+	class ATslParticle : public AActor {
 	public:
 		bool                                               bAutoDestroyOnParticleFinish;                             // 0x03A0(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		bool                                               bAutoPlaySound;                                           // 0x03A1(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -7241,8 +6827,7 @@ namespace Classes
 		class UAkComponent*                                AkSound;                                                  // 0x03D8(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData03[0x18];                                      // 0x03E0(0x0018) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x17380bdf);
 			return ptr;
@@ -7262,16 +6847,14 @@ namespace Classes
 
 	// Class TslGame.TslParticleEnvironment
 	// 0x0020 (0x0418 - 0x03F8)
-	class ATslParticleEnvironment : public ATslParticle
-	{
+	class ATslParticleEnvironment : public ATslParticle {
 	public:
 		unsigned char                                      UnknownData00[0x10];                                      // 0x03F8(0x0010) MISSED OFFSET
 		float                                              AutoParticleActivateDistance;                             // 0x0408(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		float                                              AutoPlayDistance;                                         // 0x040C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData01[0x8];                                       // 0x0410(0x0008) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xa831692e);
 			return ptr;
@@ -7282,15 +6865,13 @@ namespace Classes
 
 	// Class TslGame.TslPassBluezoneArea
 	// 0x0010 (0x03B0 - 0x03A0)
-	class ATslPassBluezoneArea : public AActor
-	{
+	class ATslPassBluezoneArea : public AActor {
 	public:
 		class USphereComponent*                            SphereComponent;                                          // 0x03A0(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 		float                                              Radius;                                                   // 0x03A8(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnTemplate, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x4];                                       // 0x03AC(0x0004) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x4e5ad8e3);
 			return ptr;
@@ -7301,16 +6882,14 @@ namespace Classes
 
 	// Class TslGame.TslPhysicsVolume
 	// 0x0028 (0x0410 - 0x03E8)
-	class ATslPhysicsVolume : public APhysicsVolume
-	{
+	class ATslPhysicsVolume : public APhysicsVolume {
 	public:
 		class AOceanManager*                               OceanManager;                                             // 0x03E8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnTemplate, CPF_IsPlainOldData)
 		class UClass*                                      DefaultWaterSplash;                                       // 0x03F0(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class UClass*                                      VehicleWaterSplash;                                       // 0x03F8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x10];                                      // 0x0400(0x0010) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xfb5dfa76);
 			return ptr;
@@ -7321,13 +6900,11 @@ namespace Classes
 
 	// Class TslGame.TslPlayerCameraManager
 	// 0x0020 (0x1A80 - 0x1A60)
-	class ATslPlayerCameraManager : public APlayerCameraManager
-	{
+	class ATslPlayerCameraManager : public APlayerCameraManager {
 	public:
 		unsigned char                                      UnknownData00[0x20];                                      // 0x1A60(0x0020) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xdfc04d8);
 			return ptr;
@@ -7338,8 +6915,7 @@ namespace Classes
 
 	// Class TslGame.TslPlayerState
 	// 0x0210 (0x0640 - 0x0430)
-	class ATslPlayerState : public APlayerState
-	{
+	class ATslPlayerState : public APlayerState {
 	public:
 		int                                                Ranking;                                                  // 0x0430(0x0004) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Net, CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 		unsigned char                                      bKilled : 1;                                              // 0x0434(0x0001)
@@ -7360,8 +6936,7 @@ namespace Classes
 		struct FVector_NetQuantize                         CurrentAttackedPlayerLocation;                            // 0x0630(0x000C) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_Net)
 		unsigned char                                      UnknownData05[0x4];                                       // 0x063C(0x0004) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xca25c8fd);
 			return ptr;
@@ -7385,8 +6960,7 @@ namespace Classes
 
 	// Class TslGame.TslPostProcessEffect
 	// 0x0048 (0x03E8 - 0x03A0)
-	class ATslPostProcessEffect : public AActor
-	{
+	class ATslPostProcessEffect : public AActor {
 	public:
 		TArray<struct FPostProcessMaterial>                PostProcessMaterials;                                     // 0x03A0(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
 		TArray<struct FPostProcessEffectParameter>         DefaultPostProcessEffectParameter;                        // 0x03B0(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor)
@@ -7394,8 +6968,7 @@ namespace Classes
 		class APostProcessVolume*                          PostProcessVolume;                                        // 0x03D0(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x10];                                      // 0x03D8(0x0010) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x6267d40d);
 			return ptr;
@@ -7412,13 +6985,11 @@ namespace Classes
 
 	// Class TslGame.TslWeapon_Projectile
 	// 0x0008 (0x0A28 - 0x0A20)
-	class ATslWeapon_Projectile : public ATslWeapon_Gun
-	{
+	class ATslWeapon_Projectile : public ATslWeapon_Gun {
 	public:
 		struct FProjectileWeaponData                       ProjectileConfig;                                         // 0x0A20(0x0008) (CPF_Edit, CPF_DisableEditOnInstance)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x544c6021);
 			return ptr;
@@ -7431,8 +7002,7 @@ namespace Classes
 
 	// Class TslGame.TslProjectile
 	// 0x0130 (0x04D0 - 0x03A0)
-	class ATslProjectile : public AActor
-	{
+	class ATslProjectile : public AActor {
 	public:
 		unsigned char                                      UnknownData00[0x8];                                       // 0x03A0(0x0008) MISSED OFFSET
 		class UProjectileMovementComponent*                MovementComp;                                             // 0x03A8(0x0008) (CPF_Edit, CPF_ExportObject, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
@@ -7472,8 +7042,7 @@ namespace Classes
 		struct FProjectileData                             ProjectileConfig;                                         // 0x0470(0x0030) (CPF_Edit, CPF_DisableEditOnInstance)
 		unsigned char                                      UnknownData08[0x30];                                      // 0x04A0(0x0030) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xbac07138);
 			return ptr;
@@ -7493,8 +7062,7 @@ namespace Classes
 
 	// Class TslGame.TslProjectileMolotov
 	// 0x0050 (0x0520 - 0x04D0)
-	class ATslProjectileMolotov : public ATslProjectile
-	{
+	class ATslProjectileMolotov : public ATslProjectile {
 	public:
 		TEnumAsByte<EMolotovSimulationType>                MolotovSimulation;                                        // 0x04D0(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x7];                                       // 0x04D1(0x0007) MISSED OFFSET
@@ -7506,8 +7074,7 @@ namespace Classes
 		int                                                ImpactMaxCount;                                           // 0x0500(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData01[0x1C];                                      // 0x0504(0x001C) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xa5296d06);
 			return ptr;
@@ -7518,16 +7085,14 @@ namespace Classes
 
 	// Class TslGame.TslReactionDoorComponent
 	// 0x0050 (0x0860 - 0x0810)
-	class UTslReactionDoorComponent : public UStaticMeshComponent
-	{
+	class UTslReactionDoorComponent : public UStaticMeshComponent {
 	public:
 		class UTslReactionDoorData*                        ReactionDoorData;                                         // 0x0810(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class UDestructibleMesh*                           DoorDestructibleMesh;                                     // 0x0818(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		struct FDoorBreakingState                          DoorBreakingState;                                        // 0x0820(0x0001) (CPF_Net)
 		unsigned char                                      UnknownData00[0x3F];                                      // 0x0821(0x003F) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xa79ec295);
 			return ptr;
@@ -7541,12 +7106,10 @@ namespace Classes
 
 	// Class TslGame.TslReactionBoxComponent
 	// 0x0000 (0x0700 - 0x0700)
-	class UTslReactionBoxComponent : public UBoxComponent
-	{
+	class UTslReactionBoxComponent : public UBoxComponent {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x36fdff24);
 			return ptr;
@@ -7557,12 +7120,10 @@ namespace Classes
 
 	// Class TslGame.TslReactionClientComponent
 	// 0x0000 (0x0810 - 0x0810)
-	class UTslReactionClientComponent : public UStaticMeshComponent
-	{
+	class UTslReactionClientComponent : public UStaticMeshComponent {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x5eb04e36);
 			return ptr;
@@ -7573,12 +7134,10 @@ namespace Classes
 
 	// Class TslGame.TslReplayData
 	// 0x0000 (0x0028 - 0x0028)
-	class UTslReplayData : public UObject
-	{
+	class UTslReplayData : public UObject {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xf50764e4);
 			return ptr;
@@ -7589,14 +7148,12 @@ namespace Classes
 
 	// Class TslGame.TslSceneCaptureComponent2D
 	// 0x0010 (0x08E0 - 0x08D0)
-	class UTslSceneCaptureComponent2D : public USceneCaptureComponent2D
-	{
+	class UTslSceneCaptureComponent2D : public USceneCaptureComponent2D {
 	public:
 		class UWorld*                                      World;                                                    // 0x08D0(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x8];                                       // 0x08D8(0x0008) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xf06c3a92);
 			return ptr;
@@ -7609,15 +7166,13 @@ namespace Classes
 
 	// Class TslGame.TslSceneCaptureWorld
 	// 0x0078 (0x00A0 - 0x0028)
-	class UTslSceneCaptureWorld : public UObject
-	{
+	class UTslSceneCaptureWorld : public UObject {
 	public:
 		unsigned char                                      UnknownData00[0x28];                                      // 0x0028(0x0028) MISSED OFFSET
 		class UWorld*                                      World;                                                    // 0x0050(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData01[0x48];                                      // 0x0058(0x0048) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x87cb5279);
 			return ptr;
@@ -7631,8 +7186,7 @@ namespace Classes
 
 	// Class TslGame.TslServerParticle
 	// 0x0028 (0x03C8 - 0x03A0)
-	class ATslServerParticle : public AActor
-	{
+	class ATslServerParticle : public AActor {
 	public:
 		bool                                               bAutoDestroyOnParticleFinish;                             // 0x03A0(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		bool                                               bAutoPlaySound;                                           // 0x03A1(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -7641,8 +7195,7 @@ namespace Classes
 		class UAkComponent*                                AkSound;                                                  // 0x03B0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData01[0x10];                                      // 0x03B8(0x0010) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xb3756d06);
 			return ptr;
@@ -7656,13 +7209,11 @@ namespace Classes
 
 	// Class TslGame.TslSingleton
 	// 0x00F0 (0x0118 - 0x0028)
-	class UTslSingleton : public UObject
-	{
+	class UTslSingleton : public UObject {
 	public:
 		unsigned char                                      UnknownData00[0xF0];                                      // 0x0028(0x00F0) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x331c17b0);
 			return ptr;
@@ -7673,8 +7224,7 @@ namespace Classes
 
 	// Class TslGame.TslSpectatorPawn
 	// 0x01B0 (0x05D8 - 0x0428)
-	class ATslSpectatorPawn : public ASpectatorPawn
-	{
+	class ATslSpectatorPawn : public ASpectatorPawn {
 	public:
 		class UClass*                                      ReplayHUD;                                                // 0x0428(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		class UClass*                                      LevelAttribute_BattleRoyalRule;                           // 0x0430(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
@@ -7728,8 +7278,7 @@ namespace Classes
 		struct FScriptMulticastDelegate                    OnPlayerInfoDistanceDelegate;                             // 0x05B0(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 		unsigned char                                      UnknownData12[0x18];                                      // 0x05C0(0x0018) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x80257f16);
 			return ptr;
@@ -7778,8 +7327,7 @@ namespace Classes
 
 	// Class TslGame.TslSpectatorPawnMovement
 	// 0x0028 (0x01C8 - 0x01A0)
-	class UTslSpectatorPawnMovement : public USpectatorPawnMovement
-	{
+	class UTslSpectatorPawnMovement : public USpectatorPawnMovement {
 	public:
 		unsigned char                                      UnknownData00[0x4];                                       // 0x01A0(0x0004) MISSED OFFSET
 		float                                              FastMoveModifier;                                         // 0x01A4(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
@@ -7792,8 +7340,7 @@ namespace Classes
 		float                                              AbsoluteMaxZ;                                             // 0x01C0(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData01[0x4];                                       // 0x01C4(0x0004) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x5592aa9);
 			return ptr;
@@ -7804,12 +7351,10 @@ namespace Classes
 
 	// Class TslGame.TslStatics
 	// 0x0000 (0x0028 - 0x0028)
-	class UTslStatics : public UBlueprintFunctionLibrary
-	{
+	class UTslStatics : public UBlueprintFunctionLibrary {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x6388dae2);
 			return ptr;
@@ -7870,13 +7415,11 @@ namespace Classes
 
 	// Class TslGame.TslStreamer
 	// 0x0020 (0x0048 - 0x0028)
-	class UTslStreamer : public UObject
-	{
+	class UTslStreamer : public UObject {
 	public:
 		unsigned char                                      UnknownData00[0x20];                                      // 0x0028(0x0020) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x1f3065e0);
 			return ptr;
@@ -7890,8 +7433,7 @@ namespace Classes
 
 	// Class TslGame.FoliageCollisionStreamer
 	// 0x0068 (0x00B0 - 0x0048)
-	class UFoliageCollisionStreamer : public UTslStreamer
-	{
+	class UFoliageCollisionStreamer : public UTslStreamer {
 	public:
 		bool                                               bEnabled;                                                 // 0x0048(0x0001) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x3];                                       // 0x0049(0x0003) MISSED OFFSET
@@ -7901,8 +7443,7 @@ namespace Classes
 		bool                                               bUseOnlyQueryAndPhysics;                                  // 0x0058(0x0001) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData01[0x57];                                      // 0x0059(0x0057) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xbba5ab5a);
 			return ptr;
@@ -7913,8 +7454,7 @@ namespace Classes
 
 	// Class TslGame.LODActorStreamer
 	// 0x0038 (0x0080 - 0x0048)
-	class ULODActorStreamer : public UTslStreamer
-	{
+	class ULODActorStreamer : public UTslStreamer {
 	public:
 		bool                                               bEnabled;                                                 // 0x0048(0x0001) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x3];                                       // 0x0049(0x0003) MISSED OFFSET
@@ -7924,8 +7464,7 @@ namespace Classes
 		TArray<struct FFloatRange>                         MinDrawDistanceOverride;                                  // 0x0058(0x0010) (CPF_ZeroConstructor, CPF_Config)
 		unsigned char                                      UnknownData01[0x18];                                      // 0x0068(0x0018) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x2a953841);
 			return ptr;
@@ -7936,16 +7475,14 @@ namespace Classes
 
 	// Class TslGame.ParticleEnvrionmentStreamer
 	// 0x0018 (0x0060 - 0x0048)
-	class UParticleEnvrionmentStreamer : public UTslStreamer
-	{
+	class UParticleEnvrionmentStreamer : public UTslStreamer {
 	public:
 		bool                                               bEnabled;                                                 // 0x0048(0x0001) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x3];                                       // 0x0049(0x0003) MISSED OFFSET
 		float                                              ToleranceDeactiveDistance;                                // 0x004C(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData01[0x10];                                      // 0x0050(0x0010) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x18f2a842);
 			return ptr;
@@ -7956,15 +7493,13 @@ namespace Classes
 
 	// Class TslGame.TslStreamerManager
 	// 0x0028 (0x03C8 - 0x03A0)
-	class ATslStreamerManager : public AActor
-	{
+	class ATslStreamerManager : public AActor {
 	public:
 		unsigned char                                      UnknownData00[0x8];                                       // 0x03A0(0x0008) MISSED OFFSET
 		TArray<class UClass*>                              StreamerClasses;                                          // 0x03A8(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
 		TArray<class UTslStreamer*>                        TslStreamers;                                             // 0x03B8(0x0010) (CPF_ZeroConstructor, CPF_Transient)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xcadab1ed);
 			return ptr;
@@ -7975,8 +7510,7 @@ namespace Classes
 
 	// Class TslGame.TslThrowableTrajectoryViewComponent
 	// 0x00D0 (0x0880 - 0x07B0)
-	class UTslThrowableTrajectoryViewComponent : public USplineComponent
-	{
+	class UTslThrowableTrajectoryViewComponent : public USplineComponent {
 	public:
 		class UStaticMesh*                                 SplineSegmentMesh;                                        // 0x07B0(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		class UMaterialInterface*                          SplineSegmentMeshMaterial;                                // 0x07B8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
@@ -7996,8 +7530,7 @@ namespace Classes
 		TArray<class USplineMeshComponent*>                SplineMeshArray;                                          // 0x0868(0x0010) (CPF_ExportObject, CPF_ZeroConstructor)
 		class UMaterialInstanceDynamic*                    SplineSegmentMeshMaterialDynamic;                         // 0x0878(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xbe574df4);
 			return ptr;
@@ -8010,16 +7543,14 @@ namespace Classes
 
 	// Class TslGame.TslUserWidget
 	// 0x0020 (0x0260 - 0x0240)
-	class UTslUserWidget : public UUserWidget
-	{
+	class UTslUserWidget : public UUserWidget {
 	public:
 		class UInputComponent*                             InputComponentAxis;                                       // 0x0240(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_Transient, CPF_InstancedReference, CPF_DuplicateTransient, CPF_IsPlainOldData)
 		class ATslCharacter*                               CachedTslCharacter;                                       // 0x0248(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 		class ATslGameState*                               CachedTslGameState;                                       // 0x0250(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 		class ATslCharacter*                               CachedViewTargetTslCharacter;                             // 0x0258(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x9c724fac);
 			return ptr;
@@ -8036,8 +7567,7 @@ namespace Classes
 
 	// Class TslGame.BlockInputUserWidget
 	// 0x0030 (0x0290 - 0x0260)
-	class UBlockInputUserWidget : public UTslUserWidget
-	{
+	class UBlockInputUserWidget : public UTslUserWidget {
 	public:
 		bool                                               bWhiteList;                                               // 0x0260(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0261(0x0007) MISSED OFFSET
@@ -8046,8 +7576,7 @@ namespace Classes
 		bool                                               bGenerateEventOnOpen;                                     // 0x0288(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData01[0x7];                                       // 0x0289(0x0007) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xd0fa1050);
 			return ptr;
@@ -8058,13 +7587,11 @@ namespace Classes
 
 	// Class TslGame.UmgBaseWidget
 	// 0x0018 (0x0278 - 0x0260)
-	class UUmgBaseWidget : public UTslUserWidget
-	{
+	class UUmgBaseWidget : public UTslUserWidget {
 	public:
 		unsigned char                                      UnknownData00[0x18];                                      // 0x0260(0x0018) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xf1d678ee);
 			return ptr;
@@ -8078,8 +7605,7 @@ namespace Classes
 
 	// Class TslGame.BluezoneGpsBaseWidget
 	// 0x0370 (0x05E8 - 0x0278)
-	class UBluezoneGpsBaseWidget : public UUmgBaseWidget
-	{
+	class UBluezoneGpsBaseWidget : public UUmgBaseWidget {
 	public:
 		struct FUmgWidgetBinder_Image                      BluezoneGaugeImageBinder;                                 // 0x0278(0x0028) (CPF_Edit, CPF_BlueprintVisible)
 		struct FUmgWidgetBinder_TextBlock                  BluezoneTimeTextBinder;                                   // 0x02A0(0x0020) (CPF_Edit, CPF_BlueprintVisible)
@@ -8102,8 +7628,7 @@ namespace Classes
 		struct FSequence_Float                             PlayerIconResetSequence;                                  // 0x0540(0x00A0) (CPF_Edit, CPF_BlueprintVisible)
 		unsigned char                                      UnknownData00[0x8];                                       // 0x05E0(0x0008) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xcad3204d);
 			return ptr;
@@ -8116,14 +7641,12 @@ namespace Classes
 
 	// Class TslGame.CharacterStanceBaseWidget
 	// 0x0030 (0x02A8 - 0x0278)
-	class UCharacterStanceBaseWidget : public UUmgBaseWidget
-	{
+	class UCharacterStanceBaseWidget : public UUmgBaseWidget {
 	public:
 		struct FUmgWidgetBinder_Image                      StanceIconImageBinder;                                    // 0x0278(0x0028) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
 		struct FName                                       IconStateParamName;                                       // 0x02A0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x29c73546);
 			return ptr;
@@ -8134,8 +7657,7 @@ namespace Classes
 
 	// Class TslGame.EquipableItemIconBaseWidget
 	// 0x00B0 (0x0328 - 0x0278)
-	class UEquipableItemIconBaseWidget : public UUmgBaseWidget
-	{
+	class UEquipableItemIconBaseWidget : public UUmgBaseWidget {
 	public:
 		TEnumAsByte<EEquipSlotID>                          EquipSlotID;                                              // 0x0278(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0279(0x0007) MISSED OFFSET
@@ -8152,8 +7674,7 @@ namespace Classes
 		struct FUmgWidgetBinder_Animation                  WarningAnimBinder;                                        // 0x02E8(0x0020) (CPF_Edit, CPF_BlueprintVisible)
 		struct FUmgWidgetBinder_Animation                  NoBagSpaceAnimBinder;                                     // 0x0308(0x0020) (CPF_Edit, CPF_BlueprintVisible)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x8540affd);
 			return ptr;
@@ -8166,12 +7687,10 @@ namespace Classes
 
 	// Class TslGame.EquipableItemIconHudBaseWidget
 	// 0x0000 (0x0278 - 0x0278)
-	class UEquipableItemIconHudBaseWidget : public UUmgBaseWidget
-	{
+	class UEquipableItemIconHudBaseWidget : public UUmgBaseWidget {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x8a277742);
 			return ptr;
@@ -8182,12 +7701,10 @@ namespace Classes
 
 	// Class TslGame.FppWeaponSlotHudBaseWidget
 	// 0x0000 (0x0278 - 0x0278)
-	class UFppWeaponSlotHudBaseWidget : public UUmgBaseWidget
-	{
+	class UFppWeaponSlotHudBaseWidget : public UUmgBaseWidget {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x30f22536);
 			return ptr;
@@ -8198,8 +7715,7 @@ namespace Classes
 
 	// Class TslGame.InteractionBaseWidget
 	// 0x01B8 (0x0430 - 0x0278)
-	class UInteractionBaseWidget : public UUmgBaseWidget
-	{
+	class UInteractionBaseWidget : public UUmgBaseWidget {
 	public:
 		struct FUmgWidgetBinder_Border                     MainLayer;                                                // 0x0278(0x0020) (CPF_Edit, CPF_BlueprintVisible)
 		struct FUmgWidgetBinder_TextBlock                  InteractionMessageTextBinder;                             // 0x0298(0x0020) (CPF_Edit, CPF_BlueprintVisible)
@@ -8218,8 +7734,7 @@ namespace Classes
 		struct FName                                       InteractionKeyName;                                       // 0x0410(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData01[0x18];                                      // 0x0418(0x0018) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x5bbbd7af);
 			return ptr;
@@ -8230,8 +7745,7 @@ namespace Classes
 
 	// Class TslGame.KillCountBaseWidget
 	// 0x0090 (0x0308 - 0x0278)
-	class UKillCountBaseWidget : public UUmgBaseWidget
-	{
+	class UKillCountBaseWidget : public UUmgBaseWidget {
 	public:
 		struct FUmgWidgetBinder_TextBlock                  KillCountTextBinder;                                      // 0x0278(0x0020) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
 		struct FUmgWidgetBinder_Animation                  KillCountEmergingAnimBinder;                              // 0x0298(0x0020) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
@@ -8243,8 +7757,7 @@ namespace Classes
 		unsigned char                                      UnknownData00[0x3];                                       // 0x0301(0x0003) MISSED OFFSET
 		float                                              IncreasingKillCountDisplayStartTime;                      // 0x0304(0x0004) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x584354f2);
 			return ptr;
@@ -8258,8 +7771,7 @@ namespace Classes
 
 	// Class TslGame.LifeGaugeBaseWidget
 	// 0x0120 (0x0398 - 0x0278)
-	class ULifeGaugeBaseWidget : public UUmgBaseWidget
-	{
+	class ULifeGaugeBaseWidget : public UUmgBaseWidget {
 	public:
 		class UTslHealthGaugeData*                         LifeGaugeColorData;                                       // 0x0278(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		struct FUmgWidgetBinder_Image                      LifeGaugeImageBinder;                                     // 0x0280(0x0028) (CPF_Edit, CPF_BlueprintVisible)
@@ -8279,8 +7791,7 @@ namespace Classes
 		struct FUmgWidgetBinder_Animation                  GroggyAnimationBinder;                                    // 0x0360(0x0020) (CPF_Edit, CPF_BlueprintVisible)
 		unsigned char                                      UnknownData00[0x18];                                      // 0x0380(0x0018) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x5696a728);
 			return ptr;
@@ -8294,8 +7805,7 @@ namespace Classes
 
 	// Class TslGame.LifeGaugeHitEffectBaseWidget
 	// 0x0098 (0x0310 - 0x0278)
-	class ULifeGaugeHitEffectBaseWidget : public UUmgBaseWidget
-	{
+	class ULifeGaugeHitEffectBaseWidget : public UUmgBaseWidget {
 	public:
 		TArray<struct FGaugeAlphaCurveType>                AlphaCurveList;                                           // 0x0278(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor)
 		struct FUmgWidgetBinder_Image                      HitEffectImage;                                           // 0x0288(0x0028) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
@@ -8307,8 +7817,7 @@ namespace Classes
 		struct FName                                       HitEffectEndParamName;                                    // 0x02D8(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x30];                                      // 0x02E0(0x0030) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x59f2b946);
 			return ptr;
@@ -8319,8 +7828,7 @@ namespace Classes
 
 	// Class TslGame.LifeGaugeTemplateBaseWidget
 	// 0x0098 (0x0310 - 0x0278)
-	class ULifeGaugeTemplateBaseWidget : public UUmgBaseWidget
-	{
+	class ULifeGaugeTemplateBaseWidget : public UUmgBaseWidget {
 	public:
 		class UTslHealthGaugeData*                         LifeGaugeColorData;                                       // 0x0278(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		struct FUmgWidgetBinder_Image                      LifeGaugeImageBinder;                                     // 0x0280(0x0028) (CPF_Edit, CPF_BlueprintVisible)
@@ -8330,8 +7838,7 @@ namespace Classes
 		struct FUmgWidgetBinder_Image                      BackgroundImageBinder;                                    // 0x02D8(0x0028) (CPF_Edit, CPF_BlueprintVisible)
 		unsigned char                                      UnknownData00[0x10];                                      // 0x0300(0x0010) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xda3f408a);
 			return ptr;
@@ -8342,8 +7849,7 @@ namespace Classes
 
 	// Class TslGame.MapCarePackageItemIconBaseWidget
 	// 0x0070 (0x02E8 - 0x0278)
-	class UMapCarePackageItemIconBaseWidget : public UUmgBaseWidget
-	{
+	class UMapCarePackageItemIconBaseWidget : public UUmgBaseWidget {
 	public:
 		struct FUmgWidgetBinder_Border                     IconImageBorderBinder;                                    // 0x0278(0x0020) (CPF_Edit, CPF_BlueprintVisible)
 		struct FUmgWidgetBinder_Image                      IconImageBinder;                                          // 0x0298(0x0028) (CPF_Edit, CPF_BlueprintVisible)
@@ -8351,8 +7857,7 @@ namespace Classes
 		struct FName                                       IconColorParamName;                                       // 0x02C8(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x18];                                      // 0x02D0(0x0018) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xdb0698f6);
 			return ptr;
@@ -8365,8 +7870,7 @@ namespace Classes
 
 	// Class TslGame.MapCharacterIconBaseWidget
 	// 0x01C8 (0x0440 - 0x0278)
-	class UMapCharacterIconBaseWidget : public UUmgBaseWidget
-	{
+	class UMapCharacterIconBaseWidget : public UUmgBaseWidget {
 	public:
 		struct FUmgWidgetBinder_Border                     IconImageBorderBinder;                                    // 0x0278(0x0020) (CPF_Edit, CPF_BlueprintVisible)
 		struct FUmgWidgetBinder_Image                      IconImageBinder;                                          // 0x0298(0x0028) (CPF_Edit, CPF_BlueprintVisible)
@@ -8386,8 +7890,7 @@ namespace Classes
 		unsigned char                                      UnknownData00[0x20];                                      // 0x0418(0x0020) MISSED OFFSET
 		class UMaterialInterface*                          PendingIconMaterial;                                      // 0x0438(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xd1df967b);
 			return ptr;
@@ -8400,8 +7903,7 @@ namespace Classes
 
 	// Class TslGame.MapGridWidget
 	// 0x03C8 (0x0640 - 0x0278)
-	class UMapGridWidget : public UUmgBaseWidget
-	{
+	class UMapGridWidget : public UUmgBaseWidget {
 	public:
 		struct FUmgWidgetBinder_Image                      MapImageBinder;                                           // 0x0278(0x0028) (CPF_Edit, CPF_BlueprintVisible)
 		struct FUmgWidgetBinder_CanvasPanel                MyMarkerLayerBinder;                                      // 0x02A0(0x0020) (CPF_Edit, CPF_BlueprintVisible)
@@ -8461,8 +7963,7 @@ namespace Classes
 		struct FScriptMulticastDelegate                    CloseMySelf;                                              // 0x0620(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 		struct FScriptMulticastDelegate                    OnHideOwner;                                              // 0x0630(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x9fea3a2e);
 			return ptr;
@@ -8504,16 +8005,14 @@ namespace Classes
 
 	// Class TslGame.MapMarkerBaseWidget
 	// 0x0060 (0x02D8 - 0x0278)
-	class UMapMarkerBaseWidget : public UUmgBaseWidget
-	{
+	class UMapMarkerBaseWidget : public UUmgBaseWidget {
 	public:
 		struct FUmgWidgetBinder_Image                      MarkerImageBinder;                                        // 0x0278(0x0028) (CPF_Edit, CPF_BlueprintVisible)
 		struct FName                                       MarkerColorParmName;                                      // 0x02A0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		struct FUmgWidgetBinder_Animation                  MarkerEmergingAnimBinder;                                 // 0x02A8(0x0020) (CPF_Edit, CPF_BlueprintVisible)
 		unsigned char                                      UnknownData00[0x10];                                      // 0x02C8(0x0010) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x13c1b65b);
 			return ptr;
@@ -8524,14 +8023,12 @@ namespace Classes
 
 	// Class TslGame.MiniMapBaseWidget
 	// 0x0028 (0x02A0 - 0x0278)
-	class UMiniMapBaseWidget : public UUmgBaseWidget
-	{
+	class UMiniMapBaseWidget : public UUmgBaseWidget {
 	public:
 		struct FUmgWidgetBinder_UserWidget                 MapWidgetBinder;                                          // 0x0278(0x0020) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0298(0x0008) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x7662f6c2);
 			return ptr;
@@ -8542,8 +8039,7 @@ namespace Classes
 
 	// Class TslGame.TeamMarkWidget
 	// 0x01D0 (0x0448 - 0x0278)
-	class UTeamMarkWidget : public UUmgBaseWidget
-	{
+	class UTeamMarkWidget : public UUmgBaseWidget {
 	public:
 		class ATeam*                                       TeamMember;                                               // 0x0278(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		float                                              OffsetZ;                                                  // 0x0280(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -8577,8 +8073,7 @@ namespace Classes
 		class UCameraComponent*                            Camera;                                                   // 0x0438(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_InstancedReference, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData02[0x8];                                       // 0x0440(0x0008) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xe0a597e8);
 			return ptr;
@@ -8591,8 +8086,7 @@ namespace Classes
 
 	// Class TslGame.TslAdaptiveCrosshairWidget
 	// 0x03C8 (0x0640 - 0x0278)
-	class UTslAdaptiveCrosshairWidget : public UUmgBaseWidget
-	{
+	class UTslAdaptiveCrosshairWidget : public UUmgBaseWidget {
 	public:
 		TEnumAsByte<EWeaponClass>                          WeaponClass;                                              // 0x0278(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		bool                                               bIsShowWidget;                                            // 0x0279(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -8624,8 +8118,7 @@ namespace Classes
 		struct FUmgWidgetBinder_Image                      Shotgun_R_Binder;                                         // 0x05F0(0x0028) (CPF_Edit, CPF_DisableEditOnInstance)
 		struct FUmgWidgetBinder_Image                      Shotgun_U_Binder;                                         // 0x0618(0x0028) (CPF_Edit, CPF_DisableEditOnInstance)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xd74a0be9);
 			return ptr;
@@ -8645,8 +8138,7 @@ namespace Classes
 
 	// Class TslGame.TslAlivePlayerInfoWidget
 	// 0x00F8 (0x0370 - 0x0278)
-	class UTslAlivePlayerInfoWidget : public UUmgBaseWidget
-	{
+	class UTslAlivePlayerInfoWidget : public UUmgBaseWidget {
 	public:
 		class ATslGameState*                               CachedTslGS;                                              // 0x0278(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		struct FUmgWidgetBinder_Border                     ColorOverlay_Binder;                                      // 0x0280(0x0020) (CPF_Edit, CPF_DisableEditOnInstance)
@@ -8663,8 +8155,7 @@ namespace Classes
 		int                                                DisplayCount;                                             // 0x0368(0x0004) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		int                                                WhileAnimCount;                                           // 0x036C(0x0004) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x729871c3);
 			return ptr;
@@ -8675,12 +8166,10 @@ namespace Classes
 
 	// Class TslGame.TslBaseOptionWidget
 	// 0x0000 (0x0278 - 0x0278)
-	class UTslBaseOptionWidget : public UUmgBaseWidget
-	{
+	class UTslBaseOptionWidget : public UUmgBaseWidget {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xfba901d1);
 			return ptr;
@@ -8698,8 +8187,7 @@ namespace Classes
 
 	// Class TslGame.TslKeyDisplayWidget
 	// 0x0060 (0x02D8 - 0x0278)
-	class UTslKeyDisplayWidget : public UTslBaseOptionWidget
-	{
+	class UTslKeyDisplayWidget : public UTslBaseOptionWidget {
 	public:
 		struct FScriptMulticastDelegate                    OnKeyInputed;                                             // 0x0278(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 		TArray<class UTslKeyReceiverWidget*>               KeyReceiverWidgets;                                       // 0x0288(0x0010) (CPF_ZeroConstructor)
@@ -8712,8 +8200,7 @@ namespace Classes
 		unsigned char                                      UnknownData00[0x2];                                       // 0x02D2(0x0002) MISSED OFFSET
 		float                                              AxisScale;                                                // 0x02D4(0x0004) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xbe2f3c3c);
 			return ptr;
@@ -8729,8 +8216,7 @@ namespace Classes
 
 	// Class TslGame.TslKeyOptionWidget
 	// 0x0058 (0x02D0 - 0x0278)
-	class UTslKeyOptionWidget : public UTslBaseOptionWidget
-	{
+	class UTslKeyOptionWidget : public UTslBaseOptionWidget {
 	public:
 		struct FUmgWidgetBinder_Gerneral                   ScrollBox_Binder;                                         // 0x0278(0x0020) (CPF_Edit)
 		TArray<class UTslKeySettingWidget*>                KeySettingWidgets;                                        // 0x0298(0x0010) (CPF_BlueprintVisible, CPF_ZeroConstructor)
@@ -8739,8 +8225,7 @@ namespace Classes
 		class UClass*                                      KeySettingWidgetClass;                                    // 0x02B8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		TArray<struct FName>                               CategoryOrder;                                            // 0x02C0(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x98773d3d);
 			return ptr;
@@ -8754,8 +8239,7 @@ namespace Classes
 
 	// Class TslGame.TslKeySettingWidget
 	// 0x0068 (0x02E0 - 0x0278)
-	class UTslKeySettingWidget : public UTslBaseOptionWidget
-	{
+	class UTslKeySettingWidget : public UTslBaseOptionWidget {
 	public:
 		struct FScriptMulticastDelegate                    OnKeyChanged;                                             // 0x0278(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 		class UClass*                                      KeyDisplayWidgetClass;                                    // 0x0288(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
@@ -8764,8 +8248,7 @@ namespace Classes
 		struct FText                                       DisplayText;                                              // 0x02C0(0x0018) (CPF_BlueprintVisible)
 		struct FName                                       CategoryName;                                             // 0x02D8(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xc2c8ffc6);
 			return ptr;
@@ -8781,8 +8264,7 @@ namespace Classes
 
 	// Class TslGame.TslBoostGaugeWidget
 	// 0x0108 (0x0380 - 0x0278)
-	class UTslBoostGaugeWidget : public UUmgBaseWidget
-	{
+	class UTslBoostGaugeWidget : public UUmgBaseWidget {
 	public:
 		class UMaterialInstanceDynamic*                    MID_Gauge0_21;                                            // 0x0278(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class UMaterialInstanceDynamic*                    MID_Gauge20_61;                                           // 0x0280(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -8800,8 +8282,7 @@ namespace Classes
 		bool                                               bIsVanished;                                              // 0x037D(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x2];                                       // 0x037E(0x0002) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xa46b7f0f);
 			return ptr;
@@ -8812,8 +8293,7 @@ namespace Classes
 
 	// Class TslGame.TslBreatheBarWidget
 	// 0x0140 (0x03B8 - 0x0278)
-	class UTslBreatheBarWidget : public UUmgBaseWidget
-	{
+	class UTslBreatheBarWidget : public UUmgBaseWidget {
 	public:
 		class ATslHUD*                                     TslHudCached;                                             // 0x0278(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class ATslPlayerController*                        TslPlayerControllerCached;                                // 0x0280(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -8836,8 +8316,7 @@ namespace Classes
 		bool                                               bIsCooldown;                                              // 0x03B2(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x5];                                       // 0x03B3(0x0005) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x80e6c4ef);
 			return ptr;
@@ -8850,8 +8329,7 @@ namespace Classes
 
 	// Class TslGame.TslBuffIconListWidget
 	// 0x00A8 (0x0320 - 0x0278)
-	class UTslBuffIconListWidget : public UUmgBaseWidget
-	{
+	class UTslBuffIconListWidget : public UUmgBaseWidget {
 	public:
 		struct FUmgWidgetBinder_SizeBox                    RunBuffIconBlock_Binder;                                  // 0x0278(0x0020) (CPF_Edit, CPF_DisableEditOnInstance)
 		struct FUmgWidgetBinder_Image                      RunBuffIcon_Binder;                                       // 0x0298(0x0028) (CPF_Edit, CPF_DisableEditOnInstance)
@@ -8864,8 +8342,7 @@ namespace Classes
 		bool                                               bSpeedUp80;                                               // 0x031A(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x5];                                       // 0x031B(0x0005) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xe1e35961);
 			return ptr;
@@ -8887,8 +8364,7 @@ namespace Classes
 
 	// Class TslGame.TslCompassMarkerWidget
 	// 0x0038 (0x02B0 - 0x0278)
-	class UTslCompassMarkerWidget : public UUmgBaseWidget
-	{
+	class UTslCompassMarkerWidget : public UUmgBaseWidget {
 	public:
 		struct FUmgWidgetBinder_Image                      CompassMarkerImageBinder;                                 // 0x0278(0x0028) (CPF_Edit, CPF_DisableEditOnInstance)
 		int                                                MarkerNumber;                                             // 0x02A0(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -8896,8 +8372,7 @@ namespace Classes
 		bool                                               bShow;                                                    // 0x02A8(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x7];                                       // 0x02A9(0x0007) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x6b0d59f9);
 			return ptr;
@@ -8908,8 +8383,7 @@ namespace Classes
 
 	// Class TslGame.TslCompassWidget
 	// 0x00D8 (0x0350 - 0x0278)
-	class UTslCompassWidget : public UUmgBaseWidget
-	{
+	class UTslCompassWidget : public UUmgBaseWidget {
 	public:
 		class UMaterialInterface*                          MI_Compass;                                               // 0x0278(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		class UMaterialInstanceDynamic*                    MID_Compass;                                              // 0x0280(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -8928,8 +8402,7 @@ namespace Classes
 		bool                                               bIsInitilzed;                                             // 0x0348(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData01[0x7];                                       // 0x0349(0x0007) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x325510ab);
 			return ptr;
@@ -8940,16 +8413,14 @@ namespace Classes
 
 	// Class TslGame.TslGroggyCircleWidget
 	// 0x0060 (0x02D8 - 0x0278)
-	class UTslGroggyCircleWidget : public UUmgBaseWidget
-	{
+	class UTslGroggyCircleWidget : public UUmgBaseWidget {
 	public:
 		class UMaterialInstanceDynamic*                    MID_ProgressCircle;                                       // 0x0278(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		class UMaterialInterface*                          MI_ProgressCircle;                                        // 0x0280(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		struct FUmgWidgetBinder_Image                      CircleImageBinder;                                        // 0x0288(0x0028) (CPF_Edit, CPF_DisableEditOnInstance)
 		struct FUmgWidgetBinder_Image                      CrossImageBinder;                                         // 0x02B0(0x0028) (CPF_Edit, CPF_DisableEditOnInstance)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x4b23583c);
 			return ptr;
@@ -8960,8 +8431,7 @@ namespace Classes
 
 	// Class TslGame.TslKeyReceiverWidget
 	// 0x00A0 (0x0318 - 0x0278)
-	class UTslKeyReceiverWidget : public UUmgBaseWidget
-	{
+	class UTslKeyReceiverWidget : public UUmgBaseWidget {
 	public:
 		struct FScriptMulticastDelegate                    OnKeyReceived;                                            // 0x0278(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 		struct FTslInputKey                                OriginKey;                                                // 0x0288(0x0020) (CPF_BlueprintVisible)
@@ -8975,8 +8445,7 @@ namespace Classes
 		float                                              AxisScale;                                                // 0x0304(0x0004) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		TArray<struct FKey>                                MouseButtons;                                             // 0x0308(0x0010) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x27a18985);
 			return ptr;
@@ -8994,15 +8463,13 @@ namespace Classes
 
 	// Class TslGame.TslTeamInfoListWidget
 	// 0x0038 (0x02B0 - 0x0278)
-	class UTslTeamInfoListWidget : public UUmgBaseWidget
-	{
+	class UTslTeamInfoListWidget : public UUmgBaseWidget {
 	public:
 		TArray<class UTslTeamInfoWidget*>                  TeamInfoWidgetList;                                       // 0x0278(0x0010) (CPF_ZeroConstructor)
 		class UClass*                                      TeamInfoWidgetClass;                                      // 0x0288(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		struct FUmgWidgetBinder_VerticalBox                VerticalBoxBinder;                                        // 0x0290(0x0020) (CPF_Edit, CPF_DisableEditOnInstance)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x1fa164de);
 			return ptr;
@@ -9013,8 +8480,7 @@ namespace Classes
 
 	// Class TslGame.TslTeamInfoWidget
 	// 0x0170 (0x03E8 - 0x0278)
-	class UTslTeamInfoWidget : public UUmgBaseWidget
-	{
+	class UTslTeamInfoWidget : public UUmgBaseWidget {
 	public:
 		bool                                               bBindVoiceChatEvent;                                      // 0x0278(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		bool                                               bSpeaking;                                                // 0x0279(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -9033,8 +8499,7 @@ namespace Classes
 		struct FUmgWidgetBinder_Image                      TeamMemberColorBinder;                                    // 0x03B8(0x0028) (CPF_Edit, CPF_DisableEditOnInstance)
 		class ATeam*                                       Team;                                                     // 0x03E0(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xb9639c22);
 			return ptr;
@@ -9057,15 +8522,13 @@ namespace Classes
 
 	// Class TslGame.TslTeamWidget
 	// 0x0038 (0x02B0 - 0x0278)
-	class UTslTeamWidget : public UUmgBaseWidget
-	{
+	class UTslTeamWidget : public UUmgBaseWidget {
 	public:
 		TArray<class UTeamMarkWidget*>                     TeamMarkWidgets;                                          // 0x0278(0x0010) (CPF_ZeroConstructor)
 		class UClass*                                      TeamMarkWidgetClass;                                      // 0x0288(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		struct FUmgWidgetBinder_CanvasPanel                TeamMarkerLayerBinder;                                    // 0x0290(0x0020) (CPF_Edit, CPF_DisableEditOnInstance)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xf7dd68aa);
 			return ptr;
@@ -9076,8 +8539,7 @@ namespace Classes
 
 	// Class TslGame.VehicleFuelBaseWidget
 	// 0x00C0 (0x0338 - 0x0278)
-	class UVehicleFuelBaseWidget : public UUmgBaseWidget
-	{
+	class UVehicleFuelBaseWidget : public UUmgBaseWidget {
 	public:
 		struct FUmgWidgetBinder_Image                      OilGaugeImageBinder;                                      // 0x0278(0x0028) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
 		struct FUmgWidgetBinder_Image                      OilGaugeBgImageBinder;                                    // 0x02A0(0x0028) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
@@ -9087,8 +8549,7 @@ namespace Classes
 		struct FLinearColor                                FuelEmptyColor;                                           // 0x0320(0x0010) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		struct FName                                       GaugePramName;                                            // 0x0330(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x637730a3);
 			return ptr;
@@ -9099,8 +8560,7 @@ namespace Classes
 
 	// Class TslGame.VehicleSeatInfoBaseWidget
 	// 0x0048 (0x02C0 - 0x0278)
-	class UVehicleSeatInfoBaseWidget : public UUmgBaseWidget
-	{
+	class UVehicleSeatInfoBaseWidget : public UUmgBaseWidget {
 	public:
 		int                                                SeatIndex;                                                // 0x0278(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x4];                                       // 0x027C(0x0004) MISSED OFFSET
@@ -9109,8 +8569,7 @@ namespace Classes
 		class APawn*                                       CachedVehiclePawn;                                        // 0x02B0(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 		class UTslVehicleSeatComponent*                    CachedSeatComponent;                                      // 0x02B8(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_Transient, CPF_InstancedReference, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x8414c220);
 			return ptr;
@@ -9121,8 +8580,7 @@ namespace Classes
 
 	// Class TslGame.VehicleStanceBaseWidget
 	// 0x0090 (0x0308 - 0x0278)
-	class UVehicleStanceBaseWidget : public UUmgBaseWidget
-	{
+	class UVehicleStanceBaseWidget : public UUmgBaseWidget {
 	public:
 		struct FUmgWidgetBinder_VerticalBox                VehicleIconAreaBinder;                                    // 0x0278(0x0020) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
 		struct FUmgWidgetBinder_TextBlock                  SpeedTextBinder;                                          // 0x0298(0x0020) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
@@ -9131,8 +8589,7 @@ namespace Classes
 		class APawn*                                       CachedVehiclePawn;                                        // 0x02F8(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 		class UUserWidget*                                 CachedVehicleIconWidget;                                  // 0x0300(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x8c2fb9f7);
 			return ptr;
@@ -9143,8 +8600,7 @@ namespace Classes
 
 	// Class TslGame.VehicleWheelInfoBaseWidget
 	// 0x0068 (0x02E0 - 0x0278)
-	class UVehicleWheelInfoBaseWidget : public UUmgBaseWidget
-	{
+	class UVehicleWheelInfoBaseWidget : public UUmgBaseWidget {
 	public:
 		int                                                WheelIndex;                                               // 0x0278(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x4];                                       // 0x027C(0x0004) MISSED OFFSET
@@ -9153,8 +8609,7 @@ namespace Classes
 		class ATslWheeledVehicle*                          CachedVehiclePawn;                                        // 0x02D0(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 		class UTslWheeledVehicleMovement*                  CachedVehicleMovement;                                    // 0x02D8(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_Transient, CPF_InstancedReference, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x95b72a66);
 			return ptr;
@@ -9165,15 +8620,13 @@ namespace Classes
 
 	// Class TslGame.VersionInfoBaseWidget
 	// 0x0050 (0x02C8 - 0x0278)
-	class UVersionInfoBaseWidget : public UUmgBaseWidget
-	{
+	class UVersionInfoBaseWidget : public UUmgBaseWidget {
 	public:
 		struct FText                                       WithNickNameFormat;                                       // 0x0278(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
 		struct FText                                       WithOutNickNameFormat;                                    // 0x0290(0x0018) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
 		struct FUmgWidgetBinder_TextBlock                  VersionInfoTextBinder;                                    // 0x02A8(0x0020) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x2af7fe47);
 			return ptr;
@@ -9184,8 +8637,7 @@ namespace Classes
 
 	// Class TslGame.WeaponSlotBaseWidget
 	// 0x02F0 (0x0568 - 0x0278)
-	class UWeaponSlotBaseWidget : public UUmgBaseWidget
-	{
+	class UWeaponSlotBaseWidget : public UUmgBaseWidget {
 	public:
 		unsigned char                                      bListInSlot : 1;                                          // 0x0278(0x0001) (CPF_Edit, CPF_BlueprintVisible)
 		unsigned char                                      UnknownData00[0x3];                                       // 0x0279(0x0003) MISSED OFFSET
@@ -9228,8 +8680,7 @@ namespace Classes
 		struct FText                                       ZeroingNA;                                                // 0x0538(0x0018) (CPF_Edit, CPF_BlueprintVisible)
 		unsigned char                                      UnknownData06[0x18];                                      // 0x0550(0x0018) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x2abc294f);
 			return ptr;
@@ -9240,8 +8691,7 @@ namespace Classes
 
 	// Class TslGame.WeaponSlotHudBaseWidget
 	// 0x01F8 (0x0470 - 0x0278)
-	class UWeaponSlotHudBaseWidget : public UUmgBaseWidget
-	{
+	class UWeaponSlotHudBaseWidget : public UUmgBaseWidget {
 	public:
 		struct FUmgWidgetBinder_UserWidget                 CurrentWeaponSlotWidgetBinder;                            // 0x0278(0x0020) (CPF_Edit, CPF_BlueprintVisible)
 		struct FUmgWidgetBinder_Animation                  FadeInWeaponSlotAnimBinder;                               // 0x0298(0x0020) (CPF_Edit, CPF_BlueprintVisible)
@@ -9259,8 +8709,7 @@ namespace Classes
 		struct FTimerHandle                                FinishTimer;                                              // 0x0460(0x0008) (CPF_Transient)
 		unsigned char                                      UnknownData01[0x8];                                       // 0x0468(0x0008) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xec8748a8);
 			return ptr;
@@ -9277,8 +8726,7 @@ namespace Classes
 
 	// Class TslGame.TslVehicleCommonComponent
 	// 0x00B0 (0x01A8 - 0x00F8)
-	class UTslVehicleCommonComponent : public UActorComponent
-	{
+	class UTslVehicleCommonComponent : public UActorComponent {
 	public:
 		struct FScriptMulticastDelegate                    OnBreak;                                                  // 0x00F8(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 		struct FScriptMulticastDelegate                    OnRepair;                                                 // 0x0108(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
@@ -9301,8 +8749,7 @@ namespace Classes
 		TArray<TEnumAsByte<EDamageTypeCategory>>           CharacterDamageIgnores;                                   // 0x0190(0x0010) (CPF_Edit, CPF_ZeroConstructor)
 		class UClass*                                      VehicleUI;                                                // 0x01A0(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xa940e91d);
 			return ptr;
@@ -9334,14 +8781,12 @@ namespace Classes
 
 	// Class TslGame.VehicleSurfaceAudioData
 	// 0x0010 (0x0038 - 0x0028)
-	class UVehicleSurfaceAudioData : public UDataAsset
-	{
+	class UVehicleSurfaceAudioData : public UDataAsset {
 	public:
 		class UAkAudioEvent*                               EventIn;                                                  // 0x0028(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		class UAkAudioEvent*                               EventOut;                                                 // 0x0030(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xf3265185);
 			return ptr;
@@ -9352,8 +8797,7 @@ namespace Classes
 
 	// Class TslGame.TslVehicleEffectComponent
 	// 0x0310 (0x0408 - 0x00F8)
-	class UTslVehicleEffectComponent : public UActorComponent
-	{
+	class UTslVehicleEffectComponent : public UActorComponent {
 	public:
 		unsigned char                                      UnknownData00[0x8];                                       // 0x00F8(0x0008) MISSED OFFSET
 		class UMeshComponent*                              MeshComponent;                                            // 0x0100(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_Transient, CPF_InstancedReference, CPF_IsPlainOldData)
@@ -9397,8 +8841,7 @@ namespace Classes
 		float                                              ApplyDestroyedMaterialDelay;                              // 0x0400(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData05[0x4];                                       // 0x0404(0x0004) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x77d7814d);
 			return ptr;
@@ -9418,8 +8861,7 @@ namespace Classes
 
 	// Class TslGame.TslVehicleHitComponent
 	// 0x0130 (0x0228 - 0x00F8)
-	class UTslVehicleHitComponent : public UActorComponent
-	{
+	class UTslVehicleHitComponent : public UActorComponent {
 	public:
 		struct FScriptMulticastDelegate                    OnCharacterHit;                                           // 0x00F8(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference)
 		class UMeshComponent*                              MeshComponent;                                            // 0x0108(0x0008) (CPF_ExportObject, CPF_ZeroConstructor, CPF_Transient, CPF_InstancedReference, CPF_IsPlainOldData)
@@ -9460,8 +8902,7 @@ namespace Classes
 		TArray<struct FVehicleDebugHit>                    DebugHitHistory;                                          // 0x0210(0x0010) (CPF_Net, CPF_ZeroConstructor)
 		unsigned char                                      UnknownData04[0x8];                                       // 0x0220(0x0008) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xc6e64e77);
 			return ptr;
@@ -9476,12 +8917,10 @@ namespace Classes
 
 	// Class TslGame.TslVehicleReactionInterface
 	// 0x0000 (0x0028 - 0x0028)
-	class UTslVehicleReactionInterface : public UInterface
-	{
+	class UTslVehicleReactionInterface : public UInterface {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x370ba3bf);
 			return ptr;
@@ -9494,8 +8933,7 @@ namespace Classes
 
 	// Class TslGame.TslVehicleSeatComponent
 	// 0x0100 (0x01F8 - 0x00F8)
-	class UTslVehicleSeatComponent : public UActorComponent
-	{
+	class UTslVehicleSeatComponent : public UActorComponent {
 	public:
 		struct FScriptMulticastDelegate                    OnRide;                                                   // 0x00F8(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 		struct FScriptMulticastDelegate                    OnLeave;                                                  // 0x0108(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
@@ -9520,8 +8958,7 @@ namespace Classes
 		TWeakObjectPtr<class ATslCharacter>                LastDriver;                                               // 0x0194(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData04[0x5C];                                      // 0x019C(0x005C) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x4948f5e1);
 			return ptr;
@@ -9549,8 +8986,7 @@ namespace Classes
 
 	// Class TslGame.TslVehicleSyncComponent
 	// 0x0050 (0x0148 - 0x00F8)
-	class UTslVehicleSyncComponent : public UActorComponent
-	{
+	class UTslVehicleSyncComponent : public UActorComponent {
 	public:
 		struct FScriptMulticastDelegate                    OnSyncHit;                                                // 0x00F8(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
 		unsigned char                                      UnknownData00[0x4];                                       // 0x0108(0x0004) MISSED OFFSET
@@ -9567,8 +9003,7 @@ namespace Classes
 		float                                              StationaryCorrectionThresholdDistanceSq;                  // 0x0138(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData05[0xC];                                       // 0x013C(0x000C) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xd7ac907f);
 			return ptr;
@@ -9588,14 +9023,12 @@ namespace Classes
 
 	// Class TslGame.TslVehicleTempComponent
 	// 0x0008 (0x0100 - 0x00F8)
-	class UTslVehicleTempComponent : public UActorComponent
-	{
+	class UTslVehicleTempComponent : public UActorComponent {
 	public:
 		float                                              TickInterval;                                             // 0x00F8(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x4];                                       // 0x00FC(0x0004) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x6fe561a);
 			return ptr;
@@ -9606,14 +9039,12 @@ namespace Classes
 
 	// Class TslGame.TslViewTargetTempComponent
 	// 0x0018 (0x0110 - 0x00F8)
-	class UTslViewTargetTempComponent : public UActorComponent
-	{
+	class UTslViewTargetTempComponent : public UActorComponent {
 	public:
 		TArray<struct FTempComponentInfo>                  ComponentInfos;                                           // 0x00F8(0x0010) (CPF_ZeroConstructor)
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0108(0x0008) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xa3b46fc);
 			return ptr;
@@ -9627,8 +9058,7 @@ namespace Classes
 
 	// Class TslGame.TslWeapon_Trajectory
 	// 0x0188 (0x0BA8 - 0x0A20)
-	class ATslWeapon_Trajectory : public ATslWeapon_Gun
-	{
+	class ATslWeapon_Trajectory : public ATslWeapon_Gun {
 	public:
 		float                                              TrajectoryGravityZ;                                       // 0x0A20(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 		float                                              RecoilSpreadScale;                                        // 0x0A24(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
@@ -9655,8 +9085,7 @@ namespace Classes
 		float                                              VerticalRecoilMax;                                        // 0x0B54(0x0004) (CPF_Net, CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData03[0x50];                                      // 0x0B58(0x0050) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x98242c3f);
 			return ptr;
@@ -9665,7 +9094,7 @@ namespace Classes
 
 		void SimulateHit_UnReliable(const struct FHitResult& Impact, const struct FVector& RelLocation);
 		void SimulateHit_Reliable(const struct FHitResult& Impact, const struct FVector& RelLocation);
-		void ServerNotifyHit(const struct FHitResult& Impact, TArray<float> AimSpeeds, const struct FVector_NetQuantize& Origin, const struct FVector& TraceStart, const struct FVector& PreLocation, const struct FVector_NetQuantizeNormal& ShootDir, float TravelDistance, const struct FAttackId& AttackId, uint32_t HitSeq, const struct FVector& RelLocation);
+		void ServerNotifyHit(float HandOffsetValue, const struct FHitResult& Impact, TArray<float> AimSpeeds, const struct FVector_NetQuantize& Origin, const struct FVector& TraceStart, const struct FVector& PreLocation, const struct FVector_NetQuantizeNormal& ShootDir, float TravelDistance, const struct FAttackId& AttackId, uint32_t HitSeq, const struct FVector& RelLocation);
 		void ServerNotifyCrack(class ATslCharacter* TargetCharacter, const struct FVector_NetQuantize& LocationRelative, float BulletVelocity);
 		void OnRep_WeaponSpread(float LastWeaponSpread);
 		bool IsBulletInAir();
@@ -9682,8 +9111,7 @@ namespace Classes
 
 	// Class TslGame.TslWeapon_Melee
 	// 0x00B8 (0x0860 - 0x07A8)
-	class ATslWeapon_Melee : public ATslWeapon
-	{
+	class ATslWeapon_Melee : public ATslWeapon {
 	public:
 		class UAkAudioEvent*                               AttackSoundAk;                                            // 0x07A8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		TArray<struct FMeleeWeaponAnim>                    AttackAnims;                                              // 0x07B0(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
@@ -9697,8 +9125,7 @@ namespace Classes
 		class UCapsuleComponent*                           HitCapsuleComponent;                                      // 0x07E0(0x0008) (CPF_Edit, CPF_BlueprintVisible, CPF_ExportObject, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_InstancedReference, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData01[0x78];                                      // 0x07E8(0x0078) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x4065c538);
 			return ptr;
@@ -9716,8 +9143,7 @@ namespace Classes
 
 	// Class TslGame.TslWeapon_Throwable
 	// 0x00E0 (0x0888 - 0x07A8)
-	class ATslWeapon_Throwable : public ATslWeapon
-	{
+	class ATslWeapon_Throwable : public ATslWeapon {
 	public:
 		struct FThrowableWeaponData                        ThrowableConfig;                                          // 0x07A8(0x0098) (CPF_Edit, CPF_DisableEditOnInstance)
 		unsigned char                                      UnknownData00[0x18];                                      // 0x0840(0x0018) MISSED OFFSET
@@ -9729,8 +9155,7 @@ namespace Classes
 		class ATslParticle*                                PinOffEffect;                                             // 0x0878(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 		class AActor*                                      RingAttachment;                                           // 0x0880(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xa4a0cf4);
 			return ptr;
@@ -9753,12 +9178,10 @@ namespace Classes
 
 	// Class TslGame.TslWebPopupInterface
 	// 0x0000 (0x0028 - 0x0028)
-	class UTslWebPopupInterface : public UInterface
-	{
+	class UTslWebPopupInterface : public UInterface {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x31adc7de);
 			return ptr;
@@ -9771,8 +9194,7 @@ namespace Classes
 
 	// Class TslGame.TslMotorbikeVehicle
 	// 0x0198 (0x0868 - 0x06D0)
-	class ATslMotorbikeVehicle : public ATslWheeledVehicle
-	{
+	class ATslMotorbikeVehicle : public ATslWheeledVehicle {
 	public:
 		bool                                               bUseKickstandStabilize;                                   // 0x06D0(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x3];                                       // 0x06D1(0x0003) MISSED OFFSET
@@ -9837,8 +9259,7 @@ namespace Classes
 		bool                                               bKickstandStabilize;                                      // 0x0865(0x0001) (CPF_Net, CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData07[0x2];                                       // 0x0866(0x0002) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xb3fdd71d);
 			return ptr;
@@ -9866,16 +9287,14 @@ namespace Classes
 
 	// Class TslGame.TslMotorbikeVehicle_Sidecar
 	// 0x0018 (0x0880 - 0x0868)
-	class ATslMotorbikeVehicle_Sidecar : public ATslMotorbikeVehicle
-	{
+	class ATslMotorbikeVehicle_Sidecar : public ATslMotorbikeVehicle {
 	public:
 		float                                              Sidecar_COM_Y_Left;                                       // 0x0868(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		float                                              Sidecar_COM_Y_Right;                                      // 0x086C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		struct FVector                                     Sidecar_StabilizerHigh_StaticCOM;                         // 0x0870(0x000C) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x4];                                       // 0x087C(0x0004) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x93b601e1);
 			return ptr;
@@ -9886,12 +9305,10 @@ namespace Classes
 
 	// Class TslGame.TslMotorbikeVehicle_Standalone
 	// 0x0000 (0x0868 - 0x0868)
-	class ATslMotorbikeVehicle_Standalone : public ATslMotorbikeVehicle
-	{
+	class ATslMotorbikeVehicle_Standalone : public ATslMotorbikeVehicle {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x7c297405);
 			return ptr;
@@ -9902,8 +9319,7 @@ namespace Classes
 
 	// Class TslGame.TslWheelEffectType
 	// 0x0080 (0x00A8 - 0x0028)
-	class UTslWheelEffectType : public UDataAsset
-	{
+	class UTslWheelEffectType : public UDataAsset {
 	public:
 		class UAkAudioEvent*                               Sound;                                                    // 0x0028(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		class UClass*                                      DefaultFxClass;                                           // 0x0030(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
@@ -9927,8 +9343,7 @@ namespace Classes
 		float                                              RockMinSpeed;                                             // 0x00A0(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		float                                              SandMinSpeed;                                             // 0x00A4(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xa6eedfcd);
 			return ptr;
@@ -9939,12 +9354,10 @@ namespace Classes
 
 	// Class TslGame.UiHelperFunctions
 	// 0x0000 (0x0028 - 0x0028)
-	class UUiHelperFunctions : public UBlueprintFunctionLibrary
-	{
+	class UUiHelperFunctions : public UBlueprintFunctionLibrary {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x5af8ea29);
 			return ptr;
@@ -10003,8 +9416,7 @@ namespace Classes
 
 	// Class TslGame.VehicleRiderComponent
 	// 0x0058 (0x0150 - 0x00F8)
-	class UVehicleRiderComponent : public UActorComponent
-	{
+	class UVehicleRiderComponent : public UActorComponent {
 	public:
 		unsigned char                                      UnknownData00[0x8];                                       // 0x00F8(0x0008) MISSED OFFSET
 		int                                                SeatIndex;                                                // 0x0100(0x0004) (CPF_Net, CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -10012,8 +9424,7 @@ namespace Classes
 		class APawn*                                       LastVehiclePawn;                                          // 0x0140(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData02[0x8];                                       // 0x0148(0x0008) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xab152e7d);
 			return ptr;
@@ -10024,12 +9435,10 @@ namespace Classes
 
 	// Class TslGame.ParachuteVehicleSeatActor
 	// 0x0000 (0x0428 - 0x0428)
-	class AParachuteVehicleSeatActor : public AVehicleSeatActor
-	{
+	class AParachuteVehicleSeatActor : public AVehicleSeatActor {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x97212af7);
 			return ptr;
@@ -10040,14 +9449,12 @@ namespace Classes
 
 	// Class TslGame.TslVehicleSeatActor
 	// 0x0008 (0x0430 - 0x0428)
-	class ATslVehicleSeatActor : public AVehicleSeatActor
-	{
+	class ATslVehicleSeatActor : public AVehicleSeatActor {
 	public:
 		TEnumAsByte<ERiderType>                            RiderType;                                                // 0x0428(0x0001) (CPF_Edit, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x7];                                       // 0x0429(0x0007) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xf6a83eef);
 			return ptr;
@@ -10058,12 +9465,10 @@ namespace Classes
 
 	// Class TslGame.TslMotoSeatActor
 	// 0x0000 (0x0430 - 0x0430)
-	class ATslMotoSeatActor : public ATslVehicleSeatActor
-	{
+	class ATslMotoSeatActor : public ATslVehicleSeatActor {
 	public:
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xa6795f8c);
 			return ptr;
@@ -10077,13 +9482,11 @@ namespace Classes
 
 	// Class TslGame.VivoxResponse
 	// 0x0070 (0x0098 - 0x0028)
-	class UVivoxResponse : public UObject
-	{
+	class UVivoxResponse : public UObject {
 	public:
 		unsigned char                                      UnknownData00[0x70];                                      // 0x0028(0x0070) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x3da83677);
 			return ptr;
@@ -10094,13 +9497,11 @@ namespace Classes
 
 	// Class TslGame.SignInResponse
 	// 0x0030 (0x00C8 - 0x0098)
-	class USignInResponse : public UVivoxResponse
-	{
+	class USignInResponse : public UVivoxResponse {
 	public:
 		unsigned char                                      UnknownData00[0x30];                                      // 0x0098(0x0030) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xa9af0317);
 			return ptr;
@@ -10111,13 +9512,11 @@ namespace Classes
 
 	// Class TslGame.ChannelResponse
 	// 0x0050 (0x00E8 - 0x0098)
-	class UChannelResponse : public UVivoxResponse
-	{
+	class UChannelResponse : public UVivoxResponse {
 	public:
 		unsigned char                                      UnknownData00[0x50];                                      // 0x0098(0x0050) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x38e1250);
 			return ptr;
@@ -10128,13 +9527,11 @@ namespace Classes
 
 	// Class TslGame.KeyRevokeResponse
 	// 0x0020 (0x00B8 - 0x0098)
-	class UKeyRevokeResponse : public UVivoxResponse
-	{
+	class UKeyRevokeResponse : public UVivoxResponse {
 	public:
 		unsigned char                                      UnknownData00[0x20];                                      // 0x0098(0x0020) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x98623282);
 			return ptr;
@@ -10145,13 +9542,11 @@ namespace Classes
 
 	// Class TslGame.KeyAddResponse
 	// 0x0030 (0x00C8 - 0x0098)
-	class UKeyAddResponse : public UVivoxResponse
-	{
+	class UKeyAddResponse : public UVivoxResponse {
 	public:
 		unsigned char                                      UnknownData00[0x30];                                      // 0x0098(0x0030) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xe0c4bcf);
 			return ptr;
@@ -10162,8 +9557,7 @@ namespace Classes
 
 	// Class TslGame.VivoxBaseComponent
 	// 0x00A0 (0x0198 - 0x00F8)
-	class UVivoxBaseComponent : public UActorComponent
-	{
+	class UVivoxBaseComponent : public UActorComponent {
 	public:
 		unsigned char                                      UnknownData00[0x8];                                       // 0x00F8(0x0008) MISSED OFFSET
 		struct FScriptMulticastDelegate                    OnVoiceChatUpdated;                                       // 0x0100(0x0010) (CPF_ZeroConstructor, CPF_InstancedReference, CPF_BlueprintAssignable)
@@ -10179,8 +9573,7 @@ namespace Classes
 		float                                              UserInputVolumeModifier;                                  // 0x0190(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		float                                              UserOutputVolumeModifier;                                 // 0x0194(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x8ef3b556);
 			return ptr;
@@ -10218,8 +9611,7 @@ namespace Classes
 
 	// Class TslGame.VivoxComponent
 	// 0x0048 (0x01E0 - 0x0198)
-	class UVivoxComponent : public UVivoxBaseComponent
-	{
+	class UVivoxComponent : public UVivoxBaseComponent {
 	public:
 		unsigned char                                      UnknownData00[0x2C];                                      // 0x0198(0x002C) MISSED OFFSET
 		float                                              SuddenMovementDistance;                                   // 0x01C4(0x0004) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
@@ -10230,8 +9622,7 @@ namespace Classes
 		bool                                               bEnableObserverTeamChat;                                  // 0x01D8(0x0001) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData02[0x7];                                       // 0x01D9(0x0007) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x8ac53a9b);
 			return ptr;
@@ -10246,13 +9637,11 @@ namespace Classes
 
 	// Class TslGame.VivoxLobbyComponent
 	// 0x0038 (0x01D0 - 0x0198)
-	class UVivoxLobbyComponent : public UVivoxBaseComponent
-	{
+	class UVivoxLobbyComponent : public UVivoxBaseComponent {
 	public:
 		unsigned char                                      UnknownData00[0x38];                                      // 0x0198(0x0038) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xd6d98b2b);
 			return ptr;
@@ -10263,8 +9652,7 @@ namespace Classes
 
 	// Class TslGame.VivoxManager
 	// 0x00F0 (0x0118 - 0x0028)
-	class UVivoxManager : public UObject
-	{
+	class UVivoxManager : public UObject {
 	public:
 		class UWorld*                                      World;                                                    // 0x0028(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0030(0x0008) MISSED OFFSET
@@ -10288,8 +9676,7 @@ namespace Classes
 		int                                                ProximalDistanceModel;                                    // 0x0108(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData04[0xC];                                       // 0x010C(0x000C) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x509d00f3);
 			return ptr;
@@ -10307,8 +9694,7 @@ namespace Classes
 
 	// Class TslGame.WeaponAnimInfoComponent
 	// 0x0060 (0x0158 - 0x00F8)
-	class UWeaponAnimInfoComponent : public UActorComponent
-	{
+	class UWeaponAnimInfoComponent : public UActorComponent {
 	public:
 		struct FName                                       WeaponAttachPointPistol;                                  // 0x00F8(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		struct FName                                       WeaponAttachPointRifle;                                   // 0x0100(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
@@ -10323,8 +9709,7 @@ namespace Classes
 		struct FName                                       WeaponLeftHandIKAttachPoint;                              // 0x0148(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x8];                                       // 0x0150(0x0008) MISSED OFFSET
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0xa863acac);
 			return ptr;
@@ -10343,8 +9728,7 @@ namespace Classes
 
 	// Class TslGame.CharacterWeaponAnimInfoComponent
 	// 0x0038 (0x0190 - 0x0158)
-	class UCharacterWeaponAnimInfoComponent : public UWeaponAnimInfoComponent
-	{
+	class UCharacterWeaponAnimInfoComponent : public UWeaponAnimInfoComponent {
 	public:
 		struct FName                                       WeaponAttachPointPistolDriving;                           // 0x0158(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		struct FName                                       WeaponAttachPointPistolSitting;                           // 0x0160(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
@@ -10354,8 +9738,7 @@ namespace Classes
 		struct FName                                       WeaponAttachPointThrowableDriving;                        // 0x0180(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 		struct FName                                       WeaponAttachPointMeleeDriving;                            // 0x0188(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x79377);
 			return ptr;
@@ -10366,14 +9749,12 @@ namespace Classes
 
 	// Class TslGame.WeaponClone
 	// 0x0018 (0x0040 - 0x0028)
-	class UWeaponClone : public UObject
-	{
+	class UWeaponClone : public UObject {
 	public:
 		unsigned char                                      UnknownData00[0x10];                                      // 0x0028(0x0010) MISSED OFFSET
 		class ATslWeapon*                                  ClonedWeapon;                                             // 0x0038(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-		static UClass* StaticClass()
-		{
+		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
 			if (!ptr) ptr = UObject::FindClass(0x6eb1e9e3);
 			return ptr;

@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.5.39.19) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -20,7 +20,8 @@ namespace Classes
 
 bool UItem_Heal_Bandage_C::IsCastable(class ATslCharacter** Character)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Item_Heal_Bandage.Item_Heal_Bandage_C.IsCastable");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x9b843642);
 
 	UItem_Heal_Bandage_C_IsCastable_Params params;
 	params.Character = Character;
@@ -40,7 +41,8 @@ bool UItem_Heal_Bandage_C::IsCastable(class ATslCharacter** Character)
 
 void UItem_Heal_Bandage_C::PrintCastingTime()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Item_Heal_Bandage.Item_Heal_Bandage_C.PrintCastingTime");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x11f383ec);
 
 	UItem_Heal_Bandage_C_PrintCastingTime_Params params;
 
@@ -60,7 +62,8 @@ void UItem_Heal_Bandage_C::PrintCastingTime()
 
 bool UItem_Heal_Bandage_C::UseBy(class ATslCharacter** Character)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Item_Heal_Bandage.Item_Heal_Bandage_C.UseBy");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xa1353b6f);
 
 	UItem_Heal_Bandage_C_UseBy_Params params;
 	params.Character = Character;

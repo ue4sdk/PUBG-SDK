@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.5.39.19) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,7 +17,8 @@ namespace Classes
 
 void UItem_Boost_PainKiller_C::BoostGaugeUp()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Item_Boost_PainKiller.Item_Boost_PainKiller_C.BoostGaugeUp");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xbf501cee);
 
 	UItem_Boost_PainKiller_C_BoostGaugeUp_Params params;
 
@@ -37,7 +38,8 @@ void UItem_Boost_PainKiller_C::BoostGaugeUp()
 
 bool UItem_Boost_PainKiller_C::IsCastable(class ATslCharacter** Character)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Item_Boost_PainKiller.Item_Boost_PainKiller_C.IsCastable");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xc1c37e7e);
 
 	UItem_Boost_PainKiller_C_IsCastable_Params params;
 	params.Character = Character;
@@ -57,7 +59,8 @@ bool UItem_Boost_PainKiller_C::IsCastable(class ATslCharacter** Character)
 
 void UItem_Boost_PainKiller_C::PrintCastingTime()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Item_Boost_PainKiller.Item_Boost_PainKiller_C.PrintCastingTime");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x8a1e3710);
 
 	UItem_Boost_PainKiller_C_PrintCastingTime_Params params;
 
@@ -77,7 +80,8 @@ void UItem_Boost_PainKiller_C::PrintCastingTime()
 
 bool UItem_Boost_PainKiller_C::UseBy(class ATslCharacter** Character)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Item_Boost_PainKiller.Item_Boost_PainKiller_C.UseBy");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0xd8ceb31b);
 
 	UItem_Boost_PainKiller_C_UseBy_Params params;
 	params.Character = Character;

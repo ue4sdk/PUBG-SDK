@@ -8,15 +8,13 @@
 
 #include "../SDK.hpp"
 
-namespace Classes
-{
+namespace Classes {
 	//---------------------------------------------------------------------------
 	//Parameters
 	//---------------------------------------------------------------------------
 
 	// Function Uaz.Uaz_C.UserConstructionScript
-	struct AUaz_C_UserConstructionScript_Params
-	{
+	struct AUaz_C_UserConstructionScript_Params {
 	};
 
 }

@@ -8,15 +8,13 @@
 
 #include "../SDK.hpp"
 
-namespace Classes
-{
+namespace Classes {
 	//---------------------------------------------------------------------------
 	//Parameters
 	//---------------------------------------------------------------------------
 
 	// Function ParachuteVehicle_Seat.ParachuteVehicle_Seat_C.UserConstructionScript
-	struct AParachuteVehicle_Seat_C_UserConstructionScript_Params
-	{
+	struct AParachuteVehicle_Seat_C_UserConstructionScript_Params {
 	};
 
 }

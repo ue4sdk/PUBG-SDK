@@ -1,6 +1,6 @@
 #pragma once
 
-// PlayerUnknown's Battlegrounds (2.5.39.19) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,20 +13,18 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass WeapVSS.WeapVSS_C
-// 0x0008 (0x0C00 - 0x0BF8)
+// 0x0000 (0x0D68 - 0x0D68)
 class AWeapVSS_C : public ADefaultRifleSetting_C
 {
 public:
-	class UArrowComponent*                             ZeroArrow;                                                // 0x0BF8(0x0008) (CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass WeapVSS.WeapVSS_C");
+		static UClass* ptr = nullptr;
+		if (!ptr) ptr = UObject::FindClass(0x5d65f965);
 		return ptr;
 	}
 
-
-	void UserConstructionScript();
 };
 
 

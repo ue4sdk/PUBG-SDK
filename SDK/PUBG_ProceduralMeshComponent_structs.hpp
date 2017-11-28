@@ -6,15 +6,13 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes
-{
+namespace Classes {
 	//---------------------------------------------------------------------------
 	//Enums
 	//---------------------------------------------------------------------------
 
 	// Enum ProceduralMeshComponent.EProcMeshSliceCapOption
-	enum class EProcMeshSliceCapOption : uint8_t
-	{
+	enum class EProcMeshSliceCapOption : uint8_t {
 		EProcMeshSliceCapOption__NoCap = 0,
 		EProcMeshSliceCapOption__CreateNewSectionForCap = 1,
 		EProcMeshSliceCapOption__UseLastSectionForCap = 2,
@@ -29,8 +27,7 @@ namespace Classes
 
 	// ScriptStruct ProceduralMeshComponent.ProcMeshTangent
 	// 0x0010
-	struct FProcMeshTangent
-	{
+	struct FProcMeshTangent {
 		struct FVector                                     TangentX;                                                 // 0x0000(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		bool                                               bFlipTangentY;                                            // 0x000C(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x3];                                       // 0x000D(0x0003) MISSED OFFSET
@@ -38,8 +35,7 @@ namespace Classes
 
 	// ScriptStruct ProceduralMeshComponent.ProcMeshVertex
 	// 0x0034
-	struct FProcMeshVertex
-	{
+	struct FProcMeshVertex {
 		struct FVector                                     Position;                                                 // 0x0000(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		struct FVector                                     Normal;                                                   // 0x000C(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		struct FProcMeshTangent                            Tangent;                                                  // 0x0018(0x0010) (CPF_Edit, CPF_BlueprintVisible)
@@ -49,8 +45,7 @@ namespace Classes
 
 	// ScriptStruct ProceduralMeshComponent.ProcMeshSection
 	// 0x0040
-	struct FProcMeshSection
-	{
+	struct FProcMeshSection {
 		TArray<struct FProcMeshVertex>                     ProcVertexBuffer;                                         // 0x0000(0x0010) (CPF_ZeroConstructor)
 		TArray<int>                                        ProcIndexBuffer;                                          // 0x0010(0x0010) (CPF_ZeroConstructor)
 		struct FBox                                        SectionLocalBox;                                          // 0x0020(0x001C) (CPF_ZeroConstructor, CPF_IsPlainOldData)

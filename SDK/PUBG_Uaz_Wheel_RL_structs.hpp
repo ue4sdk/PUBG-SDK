@@ -6,8 +6,7 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes
-{
+namespace Classes {
 }
 
 #ifdef _MSC_VER

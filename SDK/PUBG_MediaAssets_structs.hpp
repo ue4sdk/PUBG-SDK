@@ -6,15 +6,13 @@
 #pragma pack(push, 0x8)
 #endif
 
-namespace Classes
-{
+namespace Classes {
 	//---------------------------------------------------------------------------
 	//Enums
 	//---------------------------------------------------------------------------
 
 	// Enum MediaAssets.EMediaPlayerTrack
-	enum class EMediaPlayerTrack : uint8_t
-	{
+	enum class EMediaPlayerTrack : uint8_t {
 		EMediaPlayerTrack__Audio = 0,
 		EMediaPlayerTrack__Binary = 1,
 		EMediaPlayerTrack__Caption = 2,
@@ -33,8 +31,7 @@ namespace Classes
 
 	// ScriptStruct MediaAssets.MediaPlayerOverlay
 	// 0x0028
-	struct FMediaPlayerOverlay
-	{
+	struct FMediaPlayerOverlay {
 		bool                                               HasPosition;                                              // 0x0000(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
 		unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
 		struct FVector2D                                   Position;                                                 // 0x0004(0x0008) (CPF_ZeroConstructor, CPF_IsPlainOldData)
@@ -44,8 +41,7 @@ namespace Classes
 
 	// ScriptStruct MediaAssets.MediaSubtitle
 	// 0x0030
-	struct FMediaSubtitle
-	{
+	struct FMediaSubtitle {
 		unsigned char                                      UnknownData00[0x30];                                      // 0x0000(0x0030) MISSED OFFSET
 	};
 

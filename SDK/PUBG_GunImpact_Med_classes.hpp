@@ -1,6 +1,6 @@
 #pragma once
 
-// PlayerUnknown's Battlegrounds (2.5.39.19) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,17 +13,20 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass GunImpact_Med.GunImpact_Med_C
-// 0x0000 (0x05F0 - 0x05F0)
+// 0x0000 (0x0600 - 0x0600)
 class AGunImpact_Med_C : public ATslImpactEffect
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass GunImpact_Med.GunImpact_Med_C");
+		static UClass* ptr = nullptr;
+		if (!ptr) ptr = UObject::FindClass(0xa8ad587d);
 		return ptr;
 	}
 
+
+	void UserConstructionScript();
 };
 
 

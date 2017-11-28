@@ -8,15 +8,13 @@
 
 #include "../SDK.hpp"
 
-namespace Classes
-{
+namespace Classes {
 	//---------------------------------------------------------------------------
 	//Parameters
 	//---------------------------------------------------------------------------
 
 	// Function BP_Church.BP_Church_C.UserConstructionScript
-	struct ABP_Church_C_UserConstructionScript_Params
-	{
+	struct ABP_Church_C_UserConstructionScript_Params {
 	};
 
 }

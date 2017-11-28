@@ -1,6 +1,6 @@
 #pragma once
 
-// PlayerUnknown's Battlegrounds (2.5.39.19) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,14 +13,15 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Item_Ammo_Bolt.Item_Ammo_Bolt_C
-// 0x0000 (0x0198 - 0x0198)
+// 0x0000 (0x01D0 - 0x01D0)
 class UItem_Ammo_Bolt_C : public UAmmoItem
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass Item_Ammo_Bolt.Item_Ammo_Bolt_C");
+		static UClass* ptr = nullptr;
+		if (!ptr) ptr = UObject::FindClass(0xd9aa12d5);
 		return ptr;
 	}
 

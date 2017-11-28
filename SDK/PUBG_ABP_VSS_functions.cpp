@@ -1,4 +1,4 @@
-// PlayerUnknown's Battlegrounds (2.5.39.19) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -17,7 +17,8 @@ namespace Classes
 
 void UABP_VSS_C::HandleFireSelect()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ABP_VSS.ABP_VSS_C.HandleFireSelect");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x449c30d5);
 
 	UABP_VSS_C_HandleFireSelect_Params params;
 
@@ -34,7 +35,8 @@ void UABP_VSS_C::HandleFireSelect()
 
 void UABP_VSS_C::BlueprintInitializeAnimation()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ABP_VSS.ABP_VSS_C.BlueprintInitializeAnimation");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x587044d4);
 
 	UABP_VSS_C_BlueprintInitializeAnimation_Params params;
 
@@ -51,7 +53,8 @@ void UABP_VSS_C::BlueprintInitializeAnimation()
 
 void UABP_VSS_C::Reload2_Event_1()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ABP_VSS.ABP_VSS_C.Reload2_Event_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x99031137);
 
 	UABP_VSS_C_Reload2_Event_1_Params params;
 
@@ -68,7 +71,8 @@ void UABP_VSS_C::Reload2_Event_1()
 
 void UABP_VSS_C::FireSelect_Event_1()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ABP_VSS.ABP_VSS_C.FireSelect_Event_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x946849c2);
 
 	UABP_VSS_C_FireSelect_Event_1_Params params;
 
@@ -85,7 +89,8 @@ void UABP_VSS_C::FireSelect_Event_1()
 
 void UABP_VSS_C::WeaponFire_Event_1()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ABP_VSS.ABP_VSS_C.WeaponFire_Event_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x8fa74926);
 
 	UABP_VSS_C_WeaponFire_Event_1_Params params;
 
@@ -102,7 +107,8 @@ void UABP_VSS_C::WeaponFire_Event_1()
 
 void UABP_VSS_C::CancelReload_Event_1()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ABP_VSS.ABP_VSS_C.CancelReload_Event_1");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x1640408f);
 
 	UABP_VSS_C_CancelReload_Event_1_Params params;
 
@@ -121,7 +127,8 @@ void UABP_VSS_C::CancelReload_Event_1()
 
 void UABP_VSS_C::ExecuteUbergraph_ABP_VSS(int EntryPoint)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function ABP_VSS.ABP_VSS_C.ExecuteUbergraph_ABP_VSS");
+	static UFunction* fn = nullptr;
+	if (!fn) fn = UObject::FindObject<UFunction>(0x44a80647);
 
 	UABP_VSS_C_ExecuteUbergraph_ABP_VSS_Params params;
 	params.EntryPoint = EntryPoint;

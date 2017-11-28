@@ -1,6 +1,6 @@
 #pragma once
 
-// PlayerUnknown's Battlegrounds (2.5.39.19) SDK
+// PlayerUnknown's Battlegrounds SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,14 +13,15 @@ namespace Classes
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass DefaultPistolSetting.DefaultPistolSetting_C
-// 0x0000 (0x0B68 - 0x0B68)
+// 0x0000 (0x0CD8 - 0x0CD8)
 class ADefaultPistolSetting_C : public ATslWeapon_Trajectory
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("BlueprintGeneratedClass DefaultPistolSetting.DefaultPistolSetting_C");
+		static UClass* ptr = nullptr;
+		if (!ptr) ptr = UObject::FindClass(0x238f9029);
 		return ptr;
 	}
 
