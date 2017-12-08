@@ -5711,13 +5711,15 @@ namespace Classes {
 	// Function TslGame.HackReporterComponent.ServerOnWallHackDetected
 	// (FUNC_Final, FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Private, FUNC_NetServer, FUNC_NetValidate)
 	// Parameters:
+	// class ATslCharacter*           Victim                         (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// float                          Distance                       (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void UHackReporterComponent::ServerOnWallHackDetected(float Distance) {
+	void UHackReporterComponent::ServerOnWallHackDetected(class ATslCharacter* Victim, float Distance) {
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0xfc81b8d0);
 
 		UHackReporterComponent_ServerOnWallHackDetected_Params params;
+		params.Victim = Victim;
 		params.Distance = Distance;
 
 		auto flags = fn->FunctionFlags;
@@ -36615,6 +36617,7 @@ namespace Classes {
 	// Function TslGame.TslWeapon_Trajectory.ServerNotifyHit
 	// (FUNC_Net, FUNC_NetReliable, FUNC_Native, FUNC_Event, FUNC_Protected, FUNC_NetServer, FUNC_HasDefaults, FUNC_NetValidate)
 	// Parameters:
+	// struct FVector                 RelativeImpact                 (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 	// float                          HandOffsetValue                (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FHitResult              Impact                         (CPF_ConstParm, CPF_Parm, CPF_ReferenceParm, CPF_IsPlainOldData)
 	// TArray<float>                  AimSpeeds                      (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_ReferenceParm)
@@ -36627,11 +36630,12 @@ namespace Classes {
 	// uint32_t                       HitSeq                         (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	// struct FVector                 RelLocation                    (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 
-	void ATslWeapon_Trajectory::ServerNotifyHit(float HandOffsetValue, const struct FHitResult& Impact, TArray<float> AimSpeeds, const struct FVector_NetQuantize& Origin, const struct FVector& TraceStart, const struct FVector& PreLocation, const struct FVector_NetQuantizeNormal& ShootDir, float TravelDistance, const struct FAttackId& AttackId, uint32_t HitSeq, const struct FVector& RelLocation) {
+	void ATslWeapon_Trajectory::ServerNotifyHit(const struct FVector& RelativeImpact, float HandOffsetValue, const struct FHitResult& Impact, TArray<float> AimSpeeds, const struct FVector_NetQuantize& Origin, const struct FVector& TraceStart, const struct FVector& PreLocation, const struct FVector_NetQuantizeNormal& ShootDir, float TravelDistance, const struct FAttackId& AttackId, uint32_t HitSeq, const struct FVector& RelLocation) {
 		static UFunction* fn = nullptr;
 		if (!fn) fn = UObject::FindObject<UFunction>(0x60909602);
 
 		ATslWeapon_Trajectory_ServerNotifyHit_Params params;
+		params.RelativeImpact = RelativeImpact;
 		params.HandOffsetValue = HandOffsetValue;
 		params.Impact = Impact;
 		params.AimSpeeds = AimSpeeds;

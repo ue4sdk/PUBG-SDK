@@ -1164,7 +1164,10 @@ namespace Classes {
 		bool IsPlayingRootMotion();
 		bool IsPlayingNetworkedRootMotionMontage();
 		bool IsJumpProvidingForce();
+		class USkeletalMeshComponent* GetMesh();
 		class UAnimMontage* GetCurrentMontage();
+		class UCharacterMovementComponent* GetCharacterMovement();
+		class UCapsuleComponent* GetCapsuleComponent();
 		struct FVector GetBaseTranslationOffset();
 		struct FRotator GetBaseRotationOffsetRotator();
 		float GetAnimRootMotionTranslationScale();
@@ -1555,7 +1558,7 @@ namespace Classes {
 
 
 	// Class Engine.CharacterMovementComponent
-	// 0x05D0 (0x0750 - 0x0180)
+	// 0x0880 (0x0A00 - 0x0180)
 	class UCharacterMovementComponent : public UPawnMovementComponent {
 	public:
 		unsigned char                                      UnknownData00[0x10];                                      // 0x0180(0x0010) MISSED OFFSET
@@ -1634,93 +1637,92 @@ namespace Classes {
 		float                                              CrouchedSpeedMultiplier;                                  // 0x0290(0x0004) (CPF_ZeroConstructor, CPF_Deprecated, CPF_IsPlainOldData)
 		float                                              UpperImpactNormalScale;                                   // 0x0294(0x0004) (CPF_ZeroConstructor, CPF_Deprecated, CPF_IsPlainOldData)
 		struct FVector                                     Acceleration;                                             // 0x0298(0x000C) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-		struct FVector                                     LastUpdateLocation;                                       // 0x02A4(0x000C) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-		struct FQuat                                       LastUpdateRotation;                                       // 0x02B0(0x0010) (CPF_IsPlainOldData)
-		struct FVector                                     LastUpdateVelocity;                                       // 0x02C0(0x000C) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-		float                                              ServerLastTransformUpdateTimeStamp;                       // 0x02CC(0x0004) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-		struct FVector                                     PendingImpulseToApply;                                    // 0x02D0(0x000C) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-		struct FVector                                     PendingForceToApply;                                      // 0x02DC(0x000C) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-		float                                              AnalogInputModifier;                                      // 0x02E8(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-		unsigned char                                      UnknownData08[0x8];                                       // 0x02EC(0x0008) MISSED OFFSET
-		float                                              MaxSimulationTimeStep;                                    // 0x02F4(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		int                                                MaxSimulationIterations;                                  // 0x02F8(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		float                                              MaxDepenetrationWithGeometry;                             // 0x02FC(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		float                                              MaxDepenetrationWithGeometryAsProxy;                      // 0x0300(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		float                                              MaxDepenetrationWithPawn;                                 // 0x0304(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		float                                              MaxDepenetrationWithPawnAsProxy;                          // 0x0308(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		float                                              NetworkSimulatedSmoothLocationTime;                       // 0x030C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-		float                                              NetworkSimulatedSmoothRotationTime;                       // 0x0310(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-		float                                              ListenServerNetworkSimulatedSmoothLocationTime;           // 0x0314(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-		float                                              ListenServerNetworkSimulatedSmoothRotationTime;           // 0x0318(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-		float                                              NetworkMaxSmoothUpdateDistance;                           // 0x031C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-		float                                              NetworkNoSmoothUpdateDistance;                            // 0x0320(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-		TEnumAsByte<ENetworkSmoothingMode>                 NetworkSmoothingMode;                                     // 0x0324(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		unsigned char                                      UnknownData09[0x3];                                       // 0x0325(0x0003) MISSED OFFSET
-		float                                              LedgeCheckThreshold;                                      // 0x0328(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		float                                              JumpOutOfWaterPitch;                                      // 0x032C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		struct FFindFloorResult                            CurrentFloor;                                             // 0x0330(0x0098) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_DisableEditOnTemplate, CPF_EditConst)
-		TEnumAsByte<EMovementMode>                         DefaultLandMovementMode;                                  // 0x03C8(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		TEnumAsByte<EMovementMode>                         DefaultWaterMovementMode;                                 // 0x03C9(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		TEnumAsByte<EMovementMode>                         GroundMovementMode;                                       // 0x03CA(0x0001) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-		unsigned char                                      UnknownData10[0x1];                                       // 0x03CB(0x0001) MISSED OFFSET
-		unsigned char                                      bMaintainHorizontalGroundVelocity : 1;                    // 0x03CC(0x0001) (CPF_Edit, CPF_BlueprintVisible)
-		unsigned char                                      bImpartBaseVelocityX : 1;                                 // 0x03CC(0x0001) (CPF_Edit, CPF_BlueprintVisible)
-		unsigned char                                      bImpartBaseVelocityY : 1;                                 // 0x03CC(0x0001) (CPF_Edit, CPF_BlueprintVisible)
-		unsigned char                                      bImpartBaseVelocityZ : 1;                                 // 0x03CC(0x0001) (CPF_Edit, CPF_BlueprintVisible)
-		unsigned char                                      bImpartBaseAngularVelocity : 1;                           // 0x03CC(0x0001) (CPF_Edit, CPF_BlueprintVisible)
-		unsigned char                                      bJustTeleported : 1;                                      // 0x03CC(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnTemplate, CPF_Transient, CPF_EditConst)
-		unsigned char                                      bNetworkUpdateReceived : 1;                               // 0x03CC(0x0001) (CPF_Transient)
-		unsigned char                                      bNetworkMovementModeChanged : 1;                          // 0x03CC(0x0001) (CPF_Transient)
-		unsigned char                                      bIgnoreClientMovementErrorChecksAndCorrection : 1;        // 0x03CD(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_Transient)
-		unsigned char                                      bNotifyApex : 1;                                          // 0x03CD(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_EditConst)
-		unsigned char                                      bCheatFlying : 1;                                         // 0x03CD(0x0001)
-		unsigned char                                      bWantsToCrouch : 1;                                       // 0x03CD(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_DisableEditOnTemplate, CPF_EditConst)
-		unsigned char                                      bCrouchMaintainsBaseLocation : 1;                         // 0x03CD(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnTemplate, CPF_EditConst)
-		unsigned char                                      UnknownData11[0x2];                                       // 0x03CE(0x0002) MISSED OFFSET
-		TEnumAsByte<EStanceMode>                           StanceMode;                                               // 0x03D0(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-		TEnumAsByte<EStanceMode>                           WantsToStanceMode;                                        // 0x03D1(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnTemplate, CPF_EditConst, CPF_IsPlainOldData)
-		unsigned char                                      UnknownData12[0x2];                                       // 0x03D2(0x0002) MISSED OFFSET
-		unsigned char                                      bIgnoreBaseRotation : 1;                                  // 0x03D4(0x0001) (CPF_Edit, CPF_BlueprintVisible)
-		unsigned char                                      bFastAttachedMove : 1;                                    // 0x03D4(0x0001)
-		unsigned char                                      bAlwaysCheckFloor : 1;                                    // 0x03D4(0x0001) (CPF_Edit, CPF_BlueprintVisible)
-		unsigned char                                      bUseFlatBaseForFloorChecks : 1;                           // 0x03D4(0x0001) (CPF_Edit, CPF_BlueprintVisible)
-		unsigned char                                      bPerformingJumpOff : 1;                                   // 0x03D4(0x0001)
-		unsigned char                                      bWantsToLeaveNavWalking : 1;                              // 0x03D4(0x0001)
-		unsigned char                                      bUseRVOAvoidance : 1;                                     // 0x03D4(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
-		unsigned char                                      bRequestedMoveUseAcceleration : 1;                        // 0x03D4(0x0001) (CPF_Edit, CPF_BlueprintVisible)
-		unsigned char                                      UnknownData13[0xB];                                       // 0x03D5(0x000B) MISSED OFFSET
-		unsigned char                                      bHasRequestedVelocity : 1;                                // 0x03E0(0x0001) (CPF_Transient)
-		unsigned char                                      bRequestedMoveWithMaxSpeed : 1;                           // 0x03E0(0x0001) (CPF_Transient)
-		unsigned char                                      bWasAvoidanceUpdated : 1;                                 // 0x03E0(0x0001) (CPF_Transient)
-		unsigned char                                      UnknownData14 : 2;                                        // 0x03E0(0x0001)
-		unsigned char                                      bProjectNavMeshWalking : 1;                               // 0x03E0(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
-		unsigned char                                      bProjectNavMeshOnBothWorldChannels : 1;                   // 0x03E0(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
-		unsigned char                                      UnknownData15[0x13];                                      // 0x03E1(0x0013) MISSED OFFSET
-		float                                              AvoidanceConsiderationRadius;                             // 0x03F4(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		struct FVector                                     RequestedVelocity;                                        // 0x03F8(0x000C) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-		int                                                AvoidanceUID;                                             // 0x0404(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
-		struct FNavAvoidanceMask                           AvoidanceGroup;                                           // 0x0408(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		struct FNavAvoidanceMask                           GroupsToAvoid;                                            // 0x040C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		struct FNavAvoidanceMask                           GroupsToIgnore;                                           // 0x0410(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		float                                              AvoidanceWeight;                                          // 0x0414(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		struct FVector                                     PendingLaunchVelocity;                                    // 0x0418(0x000C) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-		unsigned char                                      UnknownData16[0xA4];                                      // 0x0424(0x00A4) MISSED OFFSET
-		float                                              NavMeshProjectionInterval;                                // 0x04C8(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		float                                              NavMeshProjectionTimer;                                   // 0x04CC(0x0004) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-		float                                              NavMeshProjectionInterpSpeed;                             // 0x04D0(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		float                                              NavMeshProjectionHeightScaleUp;                           // 0x04D4(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		float                                              NavMeshProjectionHeightScaleDown;                         // 0x04D8(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		unsigned char                                      UnknownData17[0x1C];                                      // 0x04DC(0x001C) MISSED OFFSET
-		struct FCharacterMovementComponentPostPhysicsTickFunction PostPhysicsTickFunction;                                  // 0x04F8(0x0058)
-		unsigned char                                      UnknownData18[0x10];                                      // 0x0550(0x0010) MISSED OFFSET
-		float                                              MinTimeBetweenTimeStampResets;                            // 0x0560(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
-		unsigned char                                      UnknownData19[0x4];                                       // 0x0564(0x0004) MISSED OFFSET
-		struct FRootMotionSourceGroup                      CurrentRootMotion;                                        // 0x0568(0x0100) (CPF_Transient)
-		unsigned char                                      UnknownData20[0x98];                                      // 0x0668(0x0098) MISSED OFFSET
-		struct FRootMotionMovementParams                   RootMotionParams;                                         // 0x0700(0x0040) (CPF_Transient)
-		struct FVector                                     AnimRootMotionVelocity;                                   // 0x0740(0x000C) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-		bool                                               bWasSimulatingRootMotion;                                 // 0x074C(0x0001) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-		unsigned char                                      UnknownData21[0x3];                                       // 0x074D(0x0003) MISSED OFFSET
+		unsigned char                                      UnknownData08[0x2D4];                                     // 0x02A4(0x02D4) MISSED OFFSET
+		struct FVector                                     LastUpdateVelocity;                                       // 0x0578(0x000C) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+		float                                              ServerLastTransformUpdateTimeStamp;                       // 0x0584(0x0004) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+		struct FVector                                     PendingImpulseToApply;                                    // 0x0588(0x000C) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+		struct FVector                                     PendingForceToApply;                                      // 0x0594(0x000C) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+		float                                              AnalogInputModifier;                                      // 0x05A0(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+		unsigned char                                      UnknownData09[0x8];                                       // 0x05A4(0x0008) MISSED OFFSET
+		float                                              MaxSimulationTimeStep;                                    // 0x05AC(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		int                                                MaxSimulationIterations;                                  // 0x05B0(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		float                                              MaxDepenetrationWithGeometry;                             // 0x05B4(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		float                                              MaxDepenetrationWithGeometryAsProxy;                      // 0x05B8(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		float                                              MaxDepenetrationWithPawn;                                 // 0x05BC(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		float                                              MaxDepenetrationWithPawnAsProxy;                          // 0x05C0(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		float                                              NetworkSimulatedSmoothLocationTime;                       // 0x05C4(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+		float                                              NetworkSimulatedSmoothRotationTime;                       // 0x05C8(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+		float                                              ListenServerNetworkSimulatedSmoothLocationTime;           // 0x05CC(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+		float                                              ListenServerNetworkSimulatedSmoothRotationTime;           // 0x05D0(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+		float                                              NetworkMaxSmoothUpdateDistance;                           // 0x05D4(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+		float                                              NetworkNoSmoothUpdateDistance;                            // 0x05D8(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+		TEnumAsByte<ENetworkSmoothingMode>                 NetworkSmoothingMode;                                     // 0x05DC(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		unsigned char                                      UnknownData10[0x3];                                       // 0x05DD(0x0003) MISSED OFFSET
+		float                                              LedgeCheckThreshold;                                      // 0x05E0(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		float                                              JumpOutOfWaterPitch;                                      // 0x05E4(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		struct FFindFloorResult                            CurrentFloor;                                             // 0x05E8(0x0098) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_DisableEditOnTemplate, CPF_EditConst)
+		TEnumAsByte<EMovementMode>                         DefaultLandMovementMode;                                  // 0x0680(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		TEnumAsByte<EMovementMode>                         DefaultWaterMovementMode;                                 // 0x0681(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		TEnumAsByte<EMovementMode>                         GroundMovementMode;                                       // 0x0682(0x0001) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+		unsigned char                                      UnknownData11[0x1];                                       // 0x0683(0x0001) MISSED OFFSET
+		unsigned char                                      bMaintainHorizontalGroundVelocity : 1;                    // 0x0684(0x0001) (CPF_Edit, CPF_BlueprintVisible)
+		unsigned char                                      bImpartBaseVelocityX : 1;                                 // 0x0684(0x0001) (CPF_Edit, CPF_BlueprintVisible)
+		unsigned char                                      bImpartBaseVelocityY : 1;                                 // 0x0684(0x0001) (CPF_Edit, CPF_BlueprintVisible)
+		unsigned char                                      bImpartBaseVelocityZ : 1;                                 // 0x0684(0x0001) (CPF_Edit, CPF_BlueprintVisible)
+		unsigned char                                      bImpartBaseAngularVelocity : 1;                           // 0x0684(0x0001) (CPF_Edit, CPF_BlueprintVisible)
+		unsigned char                                      bJustTeleported : 1;                                      // 0x0684(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnTemplate, CPF_Transient, CPF_EditConst)
+		unsigned char                                      bNetworkUpdateReceived : 1;                               // 0x0684(0x0001) (CPF_Transient)
+		unsigned char                                      bNetworkMovementModeChanged : 1;                          // 0x0684(0x0001) (CPF_Transient)
+		unsigned char                                      bIgnoreClientMovementErrorChecksAndCorrection : 1;        // 0x0685(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_Transient)
+		unsigned char                                      bNotifyApex : 1;                                          // 0x0685(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_EditConst)
+		unsigned char                                      bCheatFlying : 1;                                         // 0x0685(0x0001)
+		unsigned char                                      bWantsToCrouch : 1;                                       // 0x0685(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_DisableEditOnTemplate, CPF_EditConst)
+		unsigned char                                      bCrouchMaintainsBaseLocation : 1;                         // 0x0685(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_DisableEditOnTemplate, CPF_EditConst)
+		unsigned char                                      UnknownData12[0x2];                                       // 0x0686(0x0002) MISSED OFFSET
+		TEnumAsByte<EStanceMode>                           StanceMode;                                               // 0x0688(0x0001) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+		TEnumAsByte<EStanceMode>                           WantsToStanceMode;                                        // 0x0689(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnTemplate, CPF_EditConst, CPF_IsPlainOldData)
+		unsigned char                                      UnknownData13[0x2];                                       // 0x068A(0x0002) MISSED OFFSET
+		unsigned char                                      bIgnoreBaseRotation : 1;                                  // 0x068C(0x0001) (CPF_Edit, CPF_BlueprintVisible)
+		unsigned char                                      bFastAttachedMove : 1;                                    // 0x068C(0x0001)
+		unsigned char                                      bAlwaysCheckFloor : 1;                                    // 0x068C(0x0001) (CPF_Edit, CPF_BlueprintVisible)
+		unsigned char                                      bUseFlatBaseForFloorChecks : 1;                           // 0x068C(0x0001) (CPF_Edit, CPF_BlueprintVisible)
+		unsigned char                                      bPerformingJumpOff : 1;                                   // 0x068C(0x0001)
+		unsigned char                                      bWantsToLeaveNavWalking : 1;                              // 0x068C(0x0001)
+		unsigned char                                      bUseRVOAvoidance : 1;                                     // 0x068C(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
+		unsigned char                                      bRequestedMoveUseAcceleration : 1;                        // 0x068C(0x0001) (CPF_Edit, CPF_BlueprintVisible)
+		unsigned char                                      UnknownData14[0xB];                                       // 0x068D(0x000B) MISSED OFFSET
+		unsigned char                                      bHasRequestedVelocity : 1;                                // 0x0698(0x0001) (CPF_Transient)
+		unsigned char                                      bRequestedMoveWithMaxSpeed : 1;                           // 0x0698(0x0001) (CPF_Transient)
+		unsigned char                                      bWasAvoidanceUpdated : 1;                                 // 0x0698(0x0001) (CPF_Transient)
+		unsigned char                                      UnknownData15 : 2;                                        // 0x0698(0x0001)
+		unsigned char                                      bProjectNavMeshWalking : 1;                               // 0x0698(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
+		unsigned char                                      bProjectNavMeshOnBothWorldChannels : 1;                   // 0x0698(0x0001) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly)
+		unsigned char                                      UnknownData16[0x13];                                      // 0x0699(0x0013) MISSED OFFSET
+		float                                              AvoidanceConsiderationRadius;                             // 0x06AC(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		struct FVector                                     RequestedVelocity;                                        // 0x06B0(0x000C) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+		int                                                AvoidanceUID;                                             // 0x06BC(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_EditConst, CPF_IsPlainOldData)
+		struct FNavAvoidanceMask                           AvoidanceGroup;                                           // 0x06C0(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		struct FNavAvoidanceMask                           GroupsToAvoid;                                            // 0x06C4(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		struct FNavAvoidanceMask                           GroupsToIgnore;                                           // 0x06C8(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		float                                              AvoidanceWeight;                                          // 0x06CC(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		struct FVector                                     PendingLaunchVelocity;                                    // 0x06D0(0x000C) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+		unsigned char                                      UnknownData17[0xA4];                                      // 0x06DC(0x00A4) MISSED OFFSET
+		float                                              NavMeshProjectionInterval;                                // 0x0780(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		float                                              NavMeshProjectionTimer;                                   // 0x0784(0x0004) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+		float                                              NavMeshProjectionInterpSpeed;                             // 0x0788(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		float                                              NavMeshProjectionHeightScaleUp;                           // 0x078C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		float                                              NavMeshProjectionHeightScaleDown;                         // 0x0790(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		unsigned char                                      UnknownData18[0x1C];                                      // 0x0794(0x001C) MISSED OFFSET
+		struct FCharacterMovementComponentPostPhysicsTickFunction PostPhysicsTickFunction;                                  // 0x07B0(0x0058)
+		unsigned char                                      UnknownData19[0x10];                                      // 0x0808(0x0010) MISSED OFFSET
+		float                                              MinTimeBetweenTimeStampResets;                            // 0x0818(0x0004) (CPF_ZeroConstructor, CPF_IsPlainOldData)
+		unsigned char                                      UnknownData20[0x4];                                       // 0x081C(0x0004) MISSED OFFSET
+		struct FRootMotionSourceGroup                      CurrentRootMotion;                                        // 0x0820(0x0100) (CPF_Transient)
+		unsigned char                                      UnknownData21[0x90];                                      // 0x0920(0x0090) MISSED OFFSET
+		struct FRootMotionMovementParams                   RootMotionParams;                                         // 0x09B0(0x0040) (CPF_Transient)
+		struct FVector                                     AnimRootMotionVelocity;                                   // 0x09F0(0x000C) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+		bool                                               bWasSimulatingRootMotion;                                 // 0x09FC(0x0001) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+		unsigned char                                      UnknownData22[0x3];                                       // 0x09FD(0x0003) MISSED OFFSET
 
 		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;

@@ -12064,6 +12064,28 @@ namespace Classes {
 	}
 
 
+	// Function Engine.Character.GetMesh
+	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+	// Parameters:
+	// class USkeletalMeshComponent*  ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
+
+	class USkeletalMeshComponent* ACharacter::GetMesh() {
+		static UFunction* fn = nullptr;
+		if (!fn) fn = UObject::FindObject<UFunction>(0x82e758b9);
+
+		ACharacter_GetMesh_Params params;
+
+		auto flags = fn->FunctionFlags;
+		fn->FunctionFlags |= 0x400;
+
+		UObject::ProcessEvent(fn, &params);
+
+		fn->FunctionFlags = flags;
+
+		return params.ReturnValue;
+	}
+
+
 	// Function Engine.Character.GetCurrentMontage
 	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable)
 	// Parameters:
@@ -12074,6 +12096,50 @@ namespace Classes {
 		if (!fn) fn = UObject::FindObject<UFunction>(0xd0aed2ac);
 
 		ACharacter_GetCurrentMontage_Params params;
+
+		auto flags = fn->FunctionFlags;
+		fn->FunctionFlags |= 0x400;
+
+		UObject::ProcessEvent(fn, &params);
+
+		fn->FunctionFlags = flags;
+
+		return params.ReturnValue;
+	}
+
+
+	// Function Engine.Character.GetCharacterMovement
+	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+	// Parameters:
+	// class UCharacterMovementComponent* ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
+
+	class UCharacterMovementComponent* ACharacter::GetCharacterMovement() {
+		static UFunction* fn = nullptr;
+		if (!fn) fn = UObject::FindObject<UFunction>(0x72c767c0);
+
+		ACharacter_GetCharacterMovement_Params params;
+
+		auto flags = fn->FunctionFlags;
+		fn->FunctionFlags |= 0x400;
+
+		UObject::ProcessEvent(fn, &params);
+
+		fn->FunctionFlags = flags;
+
+		return params.ReturnValue;
+	}
+
+
+	// Function Engine.Character.GetCapsuleComponent
+	// (FUNC_Final, FUNC_Native, FUNC_Public, FUNC_BlueprintCallable, FUNC_BlueprintPure, FUNC_Const)
+	// Parameters:
+	// class UCapsuleComponent*       ReturnValue                    (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
+
+	class UCapsuleComponent* ACharacter::GetCapsuleComponent() {
+		static UFunction* fn = nullptr;
+		if (!fn) fn = UObject::FindObject<UFunction>(0xcf41c120);
+
+		ACharacter_GetCapsuleComponent_Params params;
 
 		auto flags = fn->FunctionFlags;
 		fn->FunctionFlags |= 0x400;

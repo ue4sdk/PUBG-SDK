@@ -1390,6 +1390,7 @@ namespace Classes {
 
 	// Function TslGame.HackReporterComponent.ServerOnWallHackDetected
 	struct UHackReporterComponent_ServerOnWallHackDetected_Params {
+		class ATslCharacter*                               Victim;                                                   // (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		float                                              Distance;                                                 // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 	};
 
@@ -8844,6 +8845,7 @@ namespace Classes {
 
 	// Function TslGame.TslWeapon_Trajectory.ServerNotifyHit
 	struct ATslWeapon_Trajectory_ServerNotifyHit_Params {
+		struct FVector                                     RelativeImpact;                                           // (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_ReferenceParm, CPF_IsPlainOldData)
 		float                                              HandOffsetValue;                                          // (CPF_Parm, CPF_ZeroConstructor, CPF_IsPlainOldData)
 		struct FHitResult                                  Impact;                                                   // (CPF_ConstParm, CPF_Parm, CPF_ReferenceParm, CPF_IsPlainOldData)
 		TArray<float>                                      AimSpeeds;                                                // (CPF_ConstParm, CPF_Parm, CPF_ZeroConstructor, CPF_ReferenceParm)

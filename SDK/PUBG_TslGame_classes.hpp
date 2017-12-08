@@ -1257,10 +1257,10 @@ namespace Classes {
 
 
 	// Class TslGame.HackReporterComponent
-	// 0x0188 (0x0280 - 0x00F8)
+	// 0x01C8 (0x02C0 - 0x00F8)
 	class UHackReporterComponent : public UActorComponent {
 	public:
-		unsigned char                                      UnknownData00[0x188];                                     // 0x00F8(0x0188) MISSED OFFSET
+		unsigned char                                      UnknownData00[0x1C8];                                     // 0x00F8(0x01C8) MISSED OFFSET
 
 		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
@@ -1269,7 +1269,7 @@ namespace Classes {
 		}
 
 
-		void ServerOnWallHackDetected(float Distance);
+		void ServerOnWallHackDetected(class ATslCharacter* Victim, float Distance);
 	};
 
 
@@ -4702,78 +4702,78 @@ namespace Classes {
 
 
 	// Class TslGame.TslCharacterMovement
-	// 0x0230 (0x0980 - 0x0750)
+	// 0x0230 (0x0C30 - 0x0A00)
 	class UTslCharacterMovement : public UCharacterMovementComponent {
 	public:
-		unsigned char                                      UnknownData00[0x8];                                       // 0x0750(0x0008) MISSED OFFSET
-		float                                              MaxProneSpeed;                                            // 0x0758(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		float                                              MaxGroggySpeed;                                           // 0x075C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		float                                              JumpedHalfHeight;                                         // 0x0760(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		float                                              SpeedToJumpModifier;                                      // 0x0764(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		float                                              MinJumpZVelocity;                                         // 0x0768(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		float                                              MaxJumpZVelocity;                                         // 0x076C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		float                                              LandingJumpDecreaseModifier;                              // 0x0770(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		float                                              RecoveryWalkSpeedRatePerSec;                              // 0x0774(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		float                                              MinWalkSpeedModifier;                                     // 0x0778(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		float                                              WalkSpeedModifierUnit;                                    // 0x077C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		float                                              MinStandingJumpXYSpeed;                                   // 0x0780(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		float                                              SpeedInWaterModifier;                                     // 0x0784(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		TMap<TEnumAsByte<EVaultAnimType>, class UVaultingData*> VaultingDataMap;                                          // 0x0788(0x0050) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
-		int                                                HeightFor200;                                             // 0x07D8(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-		int                                                HeightFor160;                                             // 0x07DC(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-		int                                                HeightFor120;                                             // 0x07E0(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-		int                                                HeightFor90;                                              // 0x07E4(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-		float                                              SizeForNarrow;                                            // 0x07E8(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-		int                                                SizeForSlide;                                             // 0x07EC(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-		float                                              VelocityForMobile;                                        // 0x07F0(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-		float                                              GlobalVaultScale;                                         // 0x07F4(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-		float                                              VaultCancelDTScalar;                                      // 0x07F8(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-		float                                              MinVelocityForStaticVaultCheck;                           // 0x07FC(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-		struct FVaultingTask                               CurrentVaultingTask;                                      // 0x0800(0x0040) (CPF_BlueprintVisible, CPF_BlueprintReadOnly)
-		class UVaultingData*                               CurrentVaultingData;                                      // 0x0840(0x0008) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		float                                              V_Timer_CP;                                               // 0x0848(0x0004) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		float                                              AnimMultiplierPreApex;                                    // 0x084C(0x0004) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		float                                              AnimMultiplierPostApex;                                   // 0x0850(0x0004) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		bool                                               bIsVaulting_CP;                                           // 0x0854(0x0001) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		unsigned char                                      UnknownData01[0x3];                                       // 0x0855(0x0003) MISSED OFFSET
-		struct FVector                                     CharacterRelLocation;                                     // 0x0858(0x000C) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		struct FVector                                     LastVaultLocation;                                        // 0x0864(0x000C) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		struct FVector                                     AveragedVelocity;                                         // 0x0870(0x000C) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		float                                              LastVaultTime;                                            // 0x087C(0x0004) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		float                                              VaultCancelAnimSpeed;                                     // 0x0880(0x0004) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		bool                                               bWantsToCancelVault;                                      // 0x0884(0x0001) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		unsigned char                                      UnknownData02[0x4F];                                      // 0x0885(0x004F) MISSED OFFSET
-		float                                              MaxSwimAcceleration;                                      // 0x08D4(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		float                                              MaxZSpeedOutOfWaterModifier;                              // 0x08D8(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		struct FRotator                                    MaxSwimmingRotationRate;                                  // 0x08DC(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		struct FRotator                                    SwimmingRotationAcceleration;                             // 0x08E8(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		float                                              MaxZSpeedOutOfWaterModifierForStandingSwimming;           // 0x08F4(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		float                                              WaveRidingModifier;                                       // 0x08F8(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		float                                              WaveRidingSmoothingFactor;                                // 0x08FC(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		float                                              WaveRidingModifierUnderWater;                             // 0x0900(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		float                                              StayingUnderWaterDepthBand;                               // 0x0904(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		unsigned char                                      UnknownData03[0x4];                                       // 0x0908(0x0004) MISSED OFFSET
-		float                                              MaxUnderwaterSwimSpeed;                                   // 0x090C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		float                                              MaxUnderwaterSwimAcceleration;                            // 0x0910(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		float                                              BrakingDecelerationUnderwaterSwimming;                    // 0x0914(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		struct FRotator                                    MaxUnderwaterSwimmingRotationRate;                        // 0x0918(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		struct FRotator                                    UnderwaterSwimmingRotationAcceleration;                   // 0x0924(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
-		float                                              MinimumHighAltitude;                                      // 0x0930(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-		unsigned char                                      UnknownData04[0x4];                                       // 0x0934(0x0004) MISSED OFFSET
-		float                                              MaxFallLateralSpeedAtHighAltitude;                        // 0x0938(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-		float                                              TerminalVelocityAtHighAltitude;                           // 0x093C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-		float                                              DecreaseTerminalVelocityAtHighAltitude;                   // 0x0940(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-		float                                              MaxFallAccelerationAtHighAltitude;                        // 0x0944(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-		struct FRotator                                    FallRotationRateAtHighAltitude;                           // 0x0948(0x000C) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-		float                                              AirControlAtHighAltitude;                                 // 0x0954(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-		float                                              AirControlBoostMultiplierAtHighAltitude;                  // 0x0958(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-		float                                              AirControlBoostVelocityThresholdAtHighAltitude;           // 0x095C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-		class UClass*                                      FallingDamageType;                                        // 0x0960(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-		class UCurveFloat*                                 EjectDamageCurve;                                         // 0x0968(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-		float                                              FallingDamageMinZCut;                                     // 0x0970(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-		float                                              FallingDamageVDampingZ;                                   // 0x0974(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-		float                                              FallingDamageFactor;                                      // 0x0978(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
-		unsigned char                                      UnknownData05[0x4];                                       // 0x097C(0x0004) MISSED OFFSET
+		unsigned char                                      UnknownData00[0x8];                                       // 0x0A00(0x0008) MISSED OFFSET
+		float                                              MaxProneSpeed;                                            // 0x0A08(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		float                                              MaxGroggySpeed;                                           // 0x0A0C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		float                                              JumpedHalfHeight;                                         // 0x0A10(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		float                                              SpeedToJumpModifier;                                      // 0x0A14(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		float                                              MinJumpZVelocity;                                         // 0x0A18(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		float                                              MaxJumpZVelocity;                                         // 0x0A1C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		float                                              LandingJumpDecreaseModifier;                              // 0x0A20(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		float                                              RecoveryWalkSpeedRatePerSec;                              // 0x0A24(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		float                                              MinWalkSpeedModifier;                                     // 0x0A28(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		float                                              WalkSpeedModifierUnit;                                    // 0x0A2C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		float                                              MinStandingJumpXYSpeed;                                   // 0x0A30(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		float                                              SpeedInWaterModifier;                                     // 0x0A34(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		TMap<TEnumAsByte<EVaultAnimType>, class UVaultingData*> VaultingDataMap;                                          // 0x0A38(0x0050) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance)
+		int                                                HeightFor200;                                             // 0x0A88(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+		int                                                HeightFor160;                                             // 0x0A8C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+		int                                                HeightFor120;                                             // 0x0A90(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+		int                                                HeightFor90;                                              // 0x0A94(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+		float                                              SizeForNarrow;                                            // 0x0A98(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+		int                                                SizeForSlide;                                             // 0x0A9C(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+		float                                              VelocityForMobile;                                        // 0x0AA0(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+		float                                              GlobalVaultScale;                                         // 0x0AA4(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+		float                                              VaultCancelDTScalar;                                      // 0x0AA8(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+		float                                              MinVelocityForStaticVaultCheck;                           // 0x0AAC(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+		struct FVaultingTask                               CurrentVaultingTask;                                      // 0x0AB0(0x0040) (CPF_BlueprintVisible, CPF_BlueprintReadOnly)
+		class UVaultingData*                               CurrentVaultingData;                                      // 0x0AF0(0x0008) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		float                                              V_Timer_CP;                                               // 0x0AF8(0x0004) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		float                                              AnimMultiplierPreApex;                                    // 0x0AFC(0x0004) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		float                                              AnimMultiplierPostApex;                                   // 0x0B00(0x0004) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		bool                                               bIsVaulting_CP;                                           // 0x0B04(0x0001) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		unsigned char                                      UnknownData01[0x3];                                       // 0x0B05(0x0003) MISSED OFFSET
+		struct FVector                                     CharacterRelLocation;                                     // 0x0B08(0x000C) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		struct FVector                                     LastVaultLocation;                                        // 0x0B14(0x000C) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		struct FVector                                     AveragedVelocity;                                         // 0x0B20(0x000C) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		float                                              LastVaultTime;                                            // 0x0B2C(0x0004) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		float                                              VaultCancelAnimSpeed;                                     // 0x0B30(0x0004) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		bool                                               bWantsToCancelVault;                                      // 0x0B34(0x0001) (CPF_BlueprintVisible, CPF_BlueprintReadOnly, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		unsigned char                                      UnknownData02[0x4F];                                      // 0x0B35(0x004F) MISSED OFFSET
+		float                                              MaxSwimAcceleration;                                      // 0x0B84(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		float                                              MaxZSpeedOutOfWaterModifier;                              // 0x0B88(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		struct FRotator                                    MaxSwimmingRotationRate;                                  // 0x0B8C(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		struct FRotator                                    SwimmingRotationAcceleration;                             // 0x0B98(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		float                                              MaxZSpeedOutOfWaterModifierForStandingSwimming;           // 0x0BA4(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		float                                              WaveRidingModifier;                                       // 0x0BA8(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		float                                              WaveRidingSmoothingFactor;                                // 0x0BAC(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		float                                              WaveRidingModifierUnderWater;                             // 0x0BB0(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		float                                              StayingUnderWaterDepthBand;                               // 0x0BB4(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		unsigned char                                      UnknownData03[0x4];                                       // 0x0BB8(0x0004) MISSED OFFSET
+		float                                              MaxUnderwaterSwimSpeed;                                   // 0x0BBC(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		float                                              MaxUnderwaterSwimAcceleration;                            // 0x0BC0(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		float                                              BrakingDecelerationUnderwaterSwimming;                    // 0x0BC4(0x0004) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		struct FRotator                                    MaxUnderwaterSwimmingRotationRate;                        // 0x0BC8(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		struct FRotator                                    UnderwaterSwimmingRotationAcceleration;                   // 0x0BD4(0x000C) (CPF_Edit, CPF_BlueprintVisible, CPF_ZeroConstructor, CPF_IsPlainOldData)
+		float                                              MinimumHighAltitude;                                      // 0x0BE0(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+		unsigned char                                      UnknownData04[0x4];                                       // 0x0BE4(0x0004) MISSED OFFSET
+		float                                              MaxFallLateralSpeedAtHighAltitude;                        // 0x0BE8(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+		float                                              TerminalVelocityAtHighAltitude;                           // 0x0BEC(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+		float                                              DecreaseTerminalVelocityAtHighAltitude;                   // 0x0BF0(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+		float                                              MaxFallAccelerationAtHighAltitude;                        // 0x0BF4(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+		struct FRotator                                    FallRotationRateAtHighAltitude;                           // 0x0BF8(0x000C) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+		float                                              AirControlAtHighAltitude;                                 // 0x0C04(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+		float                                              AirControlBoostMultiplierAtHighAltitude;                  // 0x0C08(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+		float                                              AirControlBoostVelocityThresholdAtHighAltitude;           // 0x0C0C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+		class UClass*                                      FallingDamageType;                                        // 0x0C10(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+		class UCurveFloat*                                 EjectDamageCurve;                                         // 0x0C18(0x0008) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+		float                                              FallingDamageMinZCut;                                     // 0x0C20(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+		float                                              FallingDamageVDampingZ;                                   // 0x0C24(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+		float                                              FallingDamageFactor;                                      // 0x0C28(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_DisableEditOnInstance, CPF_IsPlainOldData)
+		unsigned char                                      UnknownData05[0x4];                                       // 0x0C2C(0x0004) MISSED OFFSET
 
 		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
@@ -5952,7 +5952,7 @@ namespace Classes {
 
 
 	// Class TslGame.TslSettings
-	// 0x0388 (0x03B0 - 0x0028)
+	// 0x0390 (0x03B8 - 0x0028)
 	class UTslSettings : public UObject {
 	public:
 		float                                              RepDistance_Item;                                         // 0x0028(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
@@ -6038,29 +6038,31 @@ namespace Classes {
 		TArray<struct FColorBlindColorSet>                 OverrideMarkerColors;                                     // 0x0270(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
 		float                                              PunchClientHitLeeway_Attacker;                            // 0x0280(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
 		float                                              PunchClientHitLeeway_Victim;                              // 0x0284(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-		float                                              ClientSideHitLeeway;                                      // 0x0288(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-		float                                              LogClientSideHitLeeway;                                   // 0x028C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-		float                                              ClientSideOriginDistanceLeeway;                           // 0x0290(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-		float                                              ClientSideOriginDistanceLeewayInPlace;                    // 0x0294(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-		float                                              ClientSideOriginDistanceMax;                              // 0x0298(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-		float                                              TravelDistanceLeeway;                                     // 0x029C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-		float                                              AllowedHitLag;                                            // 0x02A0(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-		float                                              LogMinHitLag;                                             // 0x02A4(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-		float                                              HackDetectionSpeed;                                       // 0x02A8(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-		unsigned char                                      UnknownData07[0x4];                                       // 0x02AC(0x0004) MISSED OFFSET
-		TArray<struct FOverrideScalability>                OverrideScalabilities;                                    // 0x02B0(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
-		float                                              FakeDoorBlockMaxY;                                        // 0x02C0(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-		unsigned char                                      UnknownData08[0x4];                                       // 0x02C4(0x0004) MISSED OFFSET
-		TArray<struct FReportCauseData>                    ReportCauses;                                             // 0x02C8(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
-		TArray<struct FSubjectToReport>                    SubjectToReport;                                          // 0x02D8(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
-		float                                              FreelookRecoveryInterpSpeed;                              // 0x02E8(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-		unsigned char                                      UnknownData09[0x4];                                       // 0x02EC(0x0004) MISSED OFFSET
-		TMap<struct FName, float>                          GamepadSensitiveMultiplier;                               // 0x02F0(0x0050) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
-		bool                                               bIsESports;                                               // 0x0340(0x0001) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
-		unsigned char                                      UnknownData10[0x57];                                      // 0x0341(0x0057) MISSED OFFSET
-		class UCurveFloat*                                 LoadedMouseSensitivityCurve;                              // 0x0398(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-		class UCurveFloat*                                 LoadedGammaCurve;                                         // 0x03A0(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
-		class UTextureRenderTarget2D*                      CharacterStudioRenderTarget;                              // 0x03A8(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+		float                                              PunchClientHitLeeway_VictimInPlace;                       // 0x0288(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+		float                                              ClientSideHitLeeway;                                      // 0x028C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+		float                                              ClientSideHitLeewayInPlace;                               // 0x0290(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+		float                                              LogClientSideHitLeeway;                                   // 0x0294(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+		float                                              ClientSideOriginDistanceLeeway;                           // 0x0298(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+		float                                              ClientSideOriginDistanceLeewayInPlace;                    // 0x029C(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+		float                                              ClientSideOriginDistanceMax;                              // 0x02A0(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+		float                                              TravelDistanceLeeway;                                     // 0x02A4(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+		float                                              AllowedHitLag;                                            // 0x02A8(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+		float                                              LogMinHitLag;                                             // 0x02AC(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+		float                                              HackDetectionSpeed;                                       // 0x02B0(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+		unsigned char                                      UnknownData07[0x4];                                       // 0x02B4(0x0004) MISSED OFFSET
+		TArray<struct FOverrideScalability>                OverrideScalabilities;                                    // 0x02B8(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
+		float                                              FakeDoorBlockMaxY;                                        // 0x02C8(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+		unsigned char                                      UnknownData08[0x4];                                       // 0x02CC(0x0004) MISSED OFFSET
+		TArray<struct FReportCauseData>                    ReportCauses;                                             // 0x02D0(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
+		TArray<struct FSubjectToReport>                    SubjectToReport;                                          // 0x02E0(0x0010) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
+		float                                              FreelookRecoveryInterpSpeed;                              // 0x02F0(0x0004) (CPF_Edit, CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+		unsigned char                                      UnknownData09[0x4];                                       // 0x02F4(0x0004) MISSED OFFSET
+		TMap<struct FName, float>                          GamepadSensitiveMultiplier;                               // 0x02F8(0x0050) (CPF_Edit, CPF_ZeroConstructor, CPF_Config)
+		bool                                               bIsESports;                                               // 0x0348(0x0001) (CPF_ZeroConstructor, CPF_Config, CPF_IsPlainOldData)
+		unsigned char                                      UnknownData10[0x57];                                      // 0x0349(0x0057) MISSED OFFSET
+		class UCurveFloat*                                 LoadedMouseSensitivityCurve;                              // 0x03A0(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+		class UCurveFloat*                                 LoadedGammaCurve;                                         // 0x03A8(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
+		class UTextureRenderTarget2D*                      CharacterStudioRenderTarget;                              // 0x03B0(0x0008) (CPF_ZeroConstructor, CPF_Transient, CPF_IsPlainOldData)
 
 		static UClass* StaticClass() {
 			static UClass* ptr = nullptr;
@@ -9094,7 +9096,7 @@ namespace Classes {
 
 		void SimulateHit_UnReliable(const struct FHitResult& Impact, const struct FVector& RelLocation);
 		void SimulateHit_Reliable(const struct FHitResult& Impact, const struct FVector& RelLocation);
-		void ServerNotifyHit(float HandOffsetValue, const struct FHitResult& Impact, TArray<float> AimSpeeds, const struct FVector_NetQuantize& Origin, const struct FVector& TraceStart, const struct FVector& PreLocation, const struct FVector_NetQuantizeNormal& ShootDir, float TravelDistance, const struct FAttackId& AttackId, uint32_t HitSeq, const struct FVector& RelLocation);
+		void ServerNotifyHit(const struct FVector& RelativeImpact, float HandOffsetValue, const struct FHitResult& Impact, TArray<float> AimSpeeds, const struct FVector_NetQuantize& Origin, const struct FVector& TraceStart, const struct FVector& PreLocation, const struct FVector_NetQuantizeNormal& ShootDir, float TravelDistance, const struct FAttackId& AttackId, uint32_t HitSeq, const struct FVector& RelLocation);
 		void ServerNotifyCrack(class ATslCharacter* TargetCharacter, const struct FVector_NetQuantize& LocationRelative, float BulletVelocity);
 		void OnRep_WeaponSpread(float LastWeaponSpread);
 		bool IsBulletInAir();

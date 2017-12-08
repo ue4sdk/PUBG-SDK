@@ -3075,9 +3075,24 @@ namespace Classes {
 		bool                                               ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
 	};
 
+	// Function Engine.Character.GetMesh
+	struct ACharacter_GetMesh_Params {
+		class USkeletalMeshComponent*                      ReturnValue;                                              // (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
+	};
+
 	// Function Engine.Character.GetCurrentMontage
 	struct ACharacter_GetCurrentMontage_Params {
 		class UAnimMontage*                                ReturnValue;                                              // (CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_IsPlainOldData)
+	};
+
+	// Function Engine.Character.GetCharacterMovement
+	struct ACharacter_GetCharacterMovement_Params {
+		class UCharacterMovementComponent*                 ReturnValue;                                              // (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
+	};
+
+	// Function Engine.Character.GetCapsuleComponent
+	struct ACharacter_GetCapsuleComponent_Params {
+		class UCapsuleComponent*                           ReturnValue;                                              // (CPF_ExportObject, CPF_Parm, CPF_OutParm, CPF_ZeroConstructor, CPF_ReturnParm, CPF_InstancedReference, CPF_IsPlainOldData)
 	};
 
 	// Function Engine.Character.GetBaseTranslationOffset
